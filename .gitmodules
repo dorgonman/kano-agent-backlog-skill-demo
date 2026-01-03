@@ -1,0 +1,3 @@
+[submodule "skills/kano-agent-backlog-skill"]
+	path = skills/kano-agent-backlog-skill
+	url = https://github.com/dorgonman/kano-agent-backlog-skill.git
