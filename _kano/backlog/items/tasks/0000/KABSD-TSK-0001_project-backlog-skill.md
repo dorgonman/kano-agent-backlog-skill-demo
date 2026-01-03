@@ -1,0 +1,87 @@
+---
+id: KABSD-TSK-0001
+type: Task
+title: "Create project-backlog skill"
+state: Active
+priority: P2
+parent: KABSD-USR-0001
+area: infra
+iteration: null
+tags: ["backlog", "skill"]
+created: 2026-01-02
+updated: 2026-01-03
+owner: null
+external:
+  azure_id: null
+  jira_key: null
+links:
+  relates: []
+  blocks: []
+  blocked_by: []
+decisions: [ADR-0001]
+---
+
+# Context
+
+We want a local-first backlog system so Codex can plan before coding and keep
+project evolution history beyond git log.
+
+# Goal
+
+Create the `project-backlog` skill definition and supporting references so the
+agent workflow enforces planning and Ready gate rules.
+
+# Non-Goals
+
+- Implement external sync (Azure Boards/Jira).
+- Build UI; rely on file-based views.
+
+# Approach
+
+- Add `skills/kano-agent-backlog-skill/SKILL.md`.
+- Add references for schema, templates, workflow, and views.
+- Add initial backlog folder structure and views in `_kano/backlog/`.
+
+# Links
+
+- UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
+- ADR: [[_kano/backlog/decisions/ADR-0001_backlog-structure-and-moc|ADR-0001 Backlog structure and MOC]]
+
+# Alternatives
+
+- Keep rules only in `AGENTS.md` (less structured, harder to query).
+- Use a dedicated external PM tool now (requires network and setup).
+
+# Acceptance Criteria
+
+- Skill and references exist and are consistent.
+- `_kano/backlog/` structure exists with `_meta`, `items`, `decisions`, `views`.
+- Dataview examples render in Obsidian.
+
+# Risks / Dependencies
+
+- Requires Obsidian Dataview for views to render.
+- Users must follow Ready gate manually until automation exists.
+
+# Worklog
+
+2026-01-02 10:00 [agent=codex] Created task and set state to InProgress per request.
+2026-01-02 10:16 [agent=codex] Linked task to KABSD-USR-0001 for hierarchy alignment.
+2026-01-02 10:30 [agent=codex] Decided to use per-type item folders and Obsidian-style MOC links with Dataview as a supplemental view.
+2026-01-02 10:40 [agent=codex] Added _kano/backlog/tools/update_state.py to standardize state transitions and Worklog updates.
+2026-01-02 10:52 [agent=codex] Kept update_state.py under _kano/backlog/tools as the project tool; skill references it instead of relocating into skills/scripts.
+2026-01-02 10:56 [agent=codex] Added backlog volume control rules to SKILL.md and AGENTS.md to prevent ticket sprawl.
+2026-01-02 11:02 [agent=codex] Created ADR-0001 for per-type folders and Obsidian MOC approach.
+2026-01-02 11:06 [agent=codex] Added _kano/backlog/_meta/indexes.md to track index files per type.
+2026-01-02 11:12 [agent=codex] Added Obsidian wikilink "Links" sections to items and ADR to enable Graph/backlinks.
+2026-01-02 11:32 [agent=codex] Logged backlog-wide discussion decisions into Epic/Feature/UserStory Worklogs per request.
+2026-01-03 01:15 [agent=codex] Simplified indexes to Epic-only MOC files to reduce file count; updated rules and ADR-0001.
+2026-01-03 01:42 [agent=codex] Documented per-100 bucket folders for backlog items in the skill and conventions.
+2026-01-03 01:45 [agent=codex] Updated ADR-0001 to include per-100 bucket folders for item storage.
+2026-01-03 01:53 [agent=codex] Aligned index registry and conventions examples with bucketed item paths.
+2026-01-03 01:19 [agent=codex] Closed per user request; backlog system established and ADR recorded.
+2026-01-03 02:14 [agent=codex] Added Active view generator for New/InProgress items (_kano/backlog/views/Active.md).
+2026-01-03 02:22 [agent=codex] Generalized view generator and added Active/New wrapper scripts.
+2026-01-03 02:31 [agent=codex] Resolved generate_view.py paths relative to repo root to avoid empty outputs.
+2026-01-03 12:41 [agent=codex] Renamed backlog ID prefix from BL to QB derived from PROJECT_NAME=Quboto; updated item IDs, links, and views.
+
