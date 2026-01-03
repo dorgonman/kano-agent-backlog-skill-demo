@@ -84,4 +84,5 @@ agent workflow enforces planning and Ready gate rules.
 2026-01-03 02:22 [agent=codex] Generalized view generator and added Active/New wrapper scripts.
 2026-01-03 02:31 [agent=codex] Resolved generate_view.py paths relative to repo root to avoid empty outputs.
 2026-01-03 12:41 [agent=codex] Renamed backlog ID prefix from BL to QB derived from PROJECT_NAME=Quboto; updated item IDs, links, and views.
+2026-01-03 21:56 [agent=codex] Renamed generated views from Active.md/New.md to ActiveWork.md/NewWork.md for demo clarity.
 

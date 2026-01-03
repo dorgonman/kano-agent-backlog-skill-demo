@@ -1,57 +1,26 @@
-# Dashboard
+# Dashboard (Demo index)
 
-Done/Dropped items are hidden by default (view-level archive).
+This folder demos three ways to view the same local-first backlog data under `_kano/backlog/items/**`.
 
-## Epics
+## 1) Obsidian Dataview (plugin)
 
-```dataview
-table id, state, priority, iteration
-from "_kano/backlog/items"
-where type = "Epic" and state != "Done" and state != "Dropped"
-sort created asc
-```
+- File: `Dashboard_ObsidianDataview.md`
+- Requires: Dataview plugin
+- Best for: rich queries, “table per section” dashboards
 
-## Features
+## 2) Obsidian Bases (core feature, no plugin)
 
-```dataview
-table id, state, priority, parent
-from "_kano/backlog/items"
-where type = "Feature" and state != "Done" and state != "Dropped"
-sort priority asc
-```
+- File: `Dashboard_ObsidianBase.md`
+- Requires: Obsidian Bases (core feature)
+- Best for: table-style browsing/filtering without extra plugins
 
-## UserStories
+## 3) Plain Markdown (no plugin)
 
-```dataview
-table id, state, priority, parent
-from "_kano/backlog/items"
-where type = "UserStory" and state != "Done" and state != "Dropped"
-sort priority asc
-```
+- File: `Dashboard_PlainMarkdown.md`
+- Requires: none
+- Best for: shareable, deterministic views (can be generated in CI)
 
-## Tasks / Bugs
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where (type = "Task" or type = "Bug") and state != "Done" and state != "Dropped"
-sort type asc, priority asc
-```
-
-## Ready / InProgress
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where state = "Ready" or state = "InProgress"
-sort type asc, priority asc
-```
-
-## Blocked
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where state = "Blocked"
-sort priority asc
-```
+Refresh the plain Markdown views:
+- `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+- `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+- `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`

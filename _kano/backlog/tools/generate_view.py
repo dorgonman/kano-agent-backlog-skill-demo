@@ -16,6 +16,8 @@ STATE_GROUPS = {
     "InProgress": "InProgress",
     "Review": "InProgress",
     "Blocked": "InProgress",
+    "Done": "Done",
+    "Dropped": "Done",
 }
 
 TYPE_ORDER = ["Epic", "Feature", "UserStory", "Task", "Bug"]

@@ -7,10 +7,11 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 cmd=(
   python
   "$REPO_ROOT/_kano/backlog/tools/generate_view.py"
-  --groups "New,InProgress"
-  --title "Active Work"
-  --output "$REPO_ROOT/_kano/backlog/views/Dashboard_PlainMarkdown_Active.md"
+  --groups "Done"
+  --title "Done Work"
+  --output "$REPO_ROOT/_kano/backlog/views/Dashboard_PlainMarkdown_Done.md"
 )
 
 echo "[CMD] ${cmd[*]}"
 "${cmd[@]}"
+

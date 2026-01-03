@@ -34,8 +34,9 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 ## Views (human-friendly)
 - Obsidian Dataview dashboards live under `_kano/backlog/views/` (e.g. `_kano/backlog/views/Dashboard.md`).
 - Generate plain Markdown views (no Dataview required):
-  - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Active.md`
-  - `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/New.md`
+  - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+  - `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+  - `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
   - Note: `_kano/backlog/tools/*.sh` are bash scripts; on Windows prefer the `python` commands above.
 
 ## Demo principles

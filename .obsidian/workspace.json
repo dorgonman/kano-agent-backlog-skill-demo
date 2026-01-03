@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_kano/backlog/views/New.md",
+                "file": "_kano/backlog/views/Dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "New"
+              "title": "Dashboard"
             }
           }
         ]
@@ -183,15 +183,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "2da931f35c2f7676",
+  "active": "033fee5e9ba09c9b",
   "lastOpenFiles": [
+    "skills/kano-agent-backlog-skill/REFERENCE.md",
+    "skills/kano-agent-backlog-skill/references/REFERENCE.md",
+    "}",
+    "    }",
+    "          },",
+    "  },",
+    "      }",
+    "          }",
+    "            }",
+    "              },",
+    "          {",
+    "      {",
     "_kano/backlog/views/Iteration.md",
+    "_kano/backlog/views/Area.md",
+    "_kano/backlog/views/New.md",
+    "_kano/backlog/views/Active.md",
+    "_kano/backlog/views/Dashboard_PlainMarkdown_Done.md",
+    "_kano/backlog/views/Dashboard_PlainMarkdown_New.md",
+    "_kano/backlog/views/Dashboard_PlainMarkdown_Active.md",
+    "_kano/backlog/views/NewWork.md",
+    "_kano/backlog/views/ActiveWork.md",
+    "_kano/backlog/views/Dashboard_PlainMarkdown.md",
+    "_kano/backlog/views/Dashboard_ObsidianBase.md",
+    "_kano/backlog/views/Dashboard_ObsidianDataview.md",
+    "skills/kano-agent-backlog-skill/references/bases.md",
     "_kano/backlog/views/Dashboard.md",
     "_kano/backlog/_meta/conventions.md",
     "_kano/backlog/decisions/ADR-0001_backlog-structure-and-moc.md",
-    "_kano/backlog/views/Active.md",
-    "_kano/backlog/views/Area.md",
-    "_kano/backlog/views/New.md",
     "AGENTS.md",
     "README.md"
   ]

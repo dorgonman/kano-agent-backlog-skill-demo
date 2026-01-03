@@ -9,7 +9,7 @@ cmd=(
   "$REPO_ROOT/_kano/backlog/tools/generate_view.py"
   --groups "New"
   --title "New Work"
-  --output "$REPO_ROOT/_kano/backlog/views/New.md"
+  --output "$REPO_ROOT/_kano/backlog/views/Dashboard_PlainMarkdown_New.md"
 )
 
 echo "[CMD] ${cmd[*]}"
