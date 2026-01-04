@@ -2,7 +2,7 @@
 id: KABSD-TSK-0010
 type: Task
 title: "Generate tool wrappers from skill scripts"
-state: Proposed
+state: Dropped
 priority: P3
 parent: KABSD-USR-0004
 area: skill
@@ -60,3 +60,4 @@ Create a script that generates wrapper scripts pointing to skill automation.
 
 2026-01-04 13:51 [agent=codex] Created task for generating tool wrappers.
 2026-01-04 13:55 [agent=codex] Added scope and acceptance criteria for wrapper generation.
+2026-01-04 14:24 [agent=codex] Deferring wrapper generation; use skill scripts directly until hooks are needed.

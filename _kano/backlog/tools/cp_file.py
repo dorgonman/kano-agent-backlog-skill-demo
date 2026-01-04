@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import runpy
-from pathlib import Path
+import sys
 
 
 def main() -> int:
-    script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parents[3]
-    target = repo_root / "skills/kano-agent-backlog-skill/scripts/fs/cp_file.py"
-    if not target.exists():
-        raise SystemExit(f"Script not found: {target}")
-    runpy.run_path(str(target), run_name="__main__")
-    return 0
+    print("Deprecated: use skills/kano-agent-backlog-skill/scripts/fs/cp_file.py")
+    return 1
 
 
 if __name__ == "__main__":

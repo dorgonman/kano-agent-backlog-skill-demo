@@ -1,16 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-
-cmd=(
-  python
-  "$REPO_ROOT/_kano/backlog/tools/generate_view.py"
-  --groups "New,InProgress"
-  --title "Active Work"
-  --output "$REPO_ROOT/_kano/backlog/views/Dashboard_PlainMarkdown_Active.md"
-)
-
-echo "[CMD] ${cmd[*]}"
-"${cmd[@]}"
+echo "Deprecated: use python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py"
+exit 1

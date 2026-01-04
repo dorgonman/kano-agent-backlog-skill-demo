@@ -12,7 +12,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - Items: `_kano/backlog/items/`
   - ADRs: `_kano/backlog/decisions/`
   - Views: `_kano/backlog/views/`
-  - Tools: `_kano/backlog/tools/`
+  - Tools (deprecated stubs): `_kano/backlog/tools/` (use skill scripts directly)
 
 ## Backlog discipline (this repo)
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
@@ -23,7 +23,9 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - an item state changes,
   - scope/approach changes,
   - or an ADR is created/linked.
-- Use `_kano/backlog/tools/update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
+- Use `skills/kano-agent-backlog-skill/scripts/backlog/update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
+- For backlog/skill file operations, use `skills/kano-agent-backlog-skill/scripts/backlog/*` or `scripts/fs/*` so audit logs capture the action.
+- Skill scripts refuse paths outside `_kano/backlog/`; confirm your target path is under that root.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.
 - Ticketing threshold (agent-decided):
   - Open a new Task/Bug when you will change code/docs/views/scripts.
@@ -39,10 +41,10 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 ## Views (human-friendly)
 - Obsidian Dataview dashboards live under `_kano/backlog/views/` (e.g. `_kano/backlog/views/Dashboard.md`).
 - Generate plain Markdown views (no Dataview required):
-  - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-  - `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-  - `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
-  - Note: `_kano/backlog/tools/*.sh` are bash scripts; on Windows prefer the `python` commands above.
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+  - Note: `_kano/backlog/tools/*.sh` are deprecated.
 
 ## Demo principles
 - Keep the demo backlog small and traceable; avoid ticket spam.
@@ -50,7 +52,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - If you change the skill itself, commit inside the submodule `skills/kano-agent-backlog-skill/` and update the parent repo submodule pointer.
 - Self-contained skill stance (this demo repo):
   - Prefer implementing automation as skill scripts (`skills/kano-agent-backlog-skill/scripts/`) so the skill is usable without manual setup.
-  - Keep `_kano/backlog/tools/` as generated wrappers pointing to the skill scripts, not a forked implementation.
+  - Avoid wrapper scripts in `_kano/backlog/tools/`; reserve wrappers only when hook points are needed.
   - Other projects may choose override-only usage; this repo does not. Treat the skill as the source of truth.
 
 ## Tests

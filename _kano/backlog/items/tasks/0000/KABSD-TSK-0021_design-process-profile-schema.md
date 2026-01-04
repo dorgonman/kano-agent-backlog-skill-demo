@@ -1,0 +1,58 @@
+---
+id: KABSD-TSK-0021
+type: Task
+title: "Design process profile schema"
+state: Proposed
+priority: P3
+parent: KABSD-USR-0008
+area: process
+iteration: null
+tags: ["process", "config"]
+created: 2026-01-04
+updated: 2026-01-04
+owner: null
+external:
+  azure_id: null
+  jira_key: null
+links:
+  relates: []
+  blocks: []
+  blocked_by: []
+decisions: []
+---
+
+# Context
+
+We need a schema that can represent work item types and transitions for
+different process models.
+
+# Goal
+
+Define a process profile schema suitable for agent-oriented backlogs.
+
+# Non-Goals
+
+- Full compatibility with every external board system.
+
+# Approach
+
+- Specify fields for work item types, allowed states, and transitions.
+- Include optional metadata (e.g., default state, terminal states).
+
+# Alternatives
+
+- Keep process rules undocumented and implicit.
+
+# Acceptance Criteria
+
+- Schema draft covers item types and transitions.
+- Example structure is included for review.
+
+# Risks / Dependencies
+
+- Overly rigid schema may not fit agent workflows.
+
+# Worklog
+
+2026-01-04 18:23 [agent=codex] Created task to design process profile schema.
+2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for process schema.

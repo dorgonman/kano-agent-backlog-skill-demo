@@ -1,0 +1,68 @@
+---
+id: KABSD-USR-0010
+type: UserStory
+title: "Introduce backlog sandbox path for tests"
+state: Proposed
+priority: P2
+parent: KABSD-FTR-0004
+area: testing
+iteration: null
+tags: ["sandbox", "tests"]
+created: 2026-01-04
+updated: 2026-01-04
+owner: null
+external:
+  azure_id: null
+  jira_key: null
+links:
+  relates: []
+  blocks: []
+  blocked_by: []
+decisions: []
+---
+
+# Context
+
+Tests should not write into the live backlog. We need a sandbox path for
+test data to keep audit logs clean and avoid accidental pollution.
+
+# Goal
+
+As a maintainer, I want a dedicated backlog sandbox path so tests run in
+isolation without touching `_kano/backlog/` data.
+
+# Non-Goals
+
+- Full test harness or CI integration.
+- Removing all manual test usage.
+
+# Approach
+
+- Define a sandbox root path (e.g., `_kano/backlog_sandbox`).
+- Update scripts/tests to use the sandbox when running in test mode.
+- Adjust path guards to allow the sandbox explicitly.
+
+# Links
+
+- Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
+- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0025_define-backlog-sandbox-path-and-guardrails|KABSD-TSK-0025 Define backlog sandbox path and guardrails]]
+- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0026_update-test-scripts-to-use-backlog-sandbox|KABSD-TSK-0026 Update test scripts to use backlog sandbox]]
+
+# Alternatives
+
+- Continue using temp folders inside `_kano/backlog/`.
+
+# Acceptance Criteria
+
+- Sandbox root is defined and documented.
+- Tests can run without touching the main backlog items.
+- Guards prevent non-sandbox tests from leaking into `_kano/backlog/`.
+
+# Risks / Dependencies
+
+- Path guards must be updated to allow the sandbox safely.
+
+# Worklog
+
+2026-01-04 18:19 [agent=codex] Created story for a backlog sandbox path for tests.
+2026-01-04 18:36 [agent=codex] Added scope, approach, and linked tasks for sandboxed tests.
