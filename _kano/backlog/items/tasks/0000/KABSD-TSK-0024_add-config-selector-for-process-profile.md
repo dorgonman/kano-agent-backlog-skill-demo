@@ -2,7 +2,7 @@
 id: KABSD-TSK-0024
 type: Task
 title: "Add config selector for process profile"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0009
 area: process
@@ -55,3 +55,5 @@ Add a config field that selects a built-in process profile or custom path.
 
 2026-01-04 18:23 [agent=codex] Created task to add config selector for process profile.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for profile selection.
+2026-01-04 20:13 [agent=codex] State -> InProgress.
+2026-01-04 20:13 [agent=codex] Documented process.profile selection and built-in profile IDs.

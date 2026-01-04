@@ -2,7 +2,7 @@
 id: KABSD-TSK-0026
 type: Task
 title: "Update test scripts to use backlog sandbox"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0010
 area: testing
@@ -56,3 +56,5 @@ Update test scripts to use the backlog sandbox path for all test data.
 
 2026-01-04 18:23 [agent=codex] Created task to update test scripts to use sandbox.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for sandboxed tests.
+2026-01-04 19:05 [agent=codex] State -> InProgress.
+2026-01-04 19:06 [agent=codex] Defaulted test script temp root to _kano/backlog_sandbox.

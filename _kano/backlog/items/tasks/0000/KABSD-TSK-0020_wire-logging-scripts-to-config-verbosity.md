@@ -2,7 +2,7 @@
 id: KABSD-TSK-0020
 type: Task
 title: "Wire logging scripts to config verbosity"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0007
 area: infra
@@ -55,3 +55,5 @@ Read log verbosity/debug settings from config in the logging scripts.
 
 2026-01-04 18:23 [agent=codex] Created task to wire logging scripts to config verbosity settings.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for logging config wiring.
+2026-01-04 20:07 [agent=codex] State -> InProgress.
+2026-01-04 20:08 [agent=codex] Audit runner now reads config verbosity/debug settings with env override precedence.

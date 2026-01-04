@@ -2,7 +2,7 @@
 id: KABSD-TSK-0018
 type: Task
 title: "Add config loader for skill scripts"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0006
 area: infra
@@ -56,3 +56,6 @@ Provide a shared config loader utility that other scripts can use.
 
 2026-01-04 18:23 [agent=codex] Created task to add a config loader utility for skill scripts.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for config loader.
+2026-01-04 20:05 [agent=codex] State -> InProgress.
+2026-01-04 20:07 [agent=codex] Added shared config loader module.
+2026-01-04 20:08 [agent=codex] Added shared config loader module and wiring for logging.

@@ -2,7 +2,7 @@
 id: KABSD-TSK-0022
 type: Task
 title: "Draft initial process profiles (Agile/Scrum/CMMI)"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0008
 area: process
@@ -55,3 +55,5 @@ Draft starter profiles for Agile, Scrum, and CMMI.
 
 2026-01-04 18:23 [agent=codex] Created task to draft initial process profiles.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for initial profiles.
+2026-01-04 20:12 [agent=codex] State -> InProgress.
+2026-01-04 20:13 [agent=codex] Drafted initial Agile/Scrum/CMMI process profiles under references/processes.

@@ -2,7 +2,7 @@
 id: KABSD-TSK-0025
 type: Task
 title: "Define backlog sandbox path and guardrails"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0010
 area: testing
@@ -57,3 +57,4 @@ Define the sandbox root path and update guardrails to allow it explicitly.
 
 2026-01-04 18:23 [agent=codex] Created task to define sandbox path and guardrails.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for sandbox guardrails.
+2026-01-04 18:43 [agent=codex] Added path guard allowlist for _kano/backlog and _kano/backlog_sandbox.

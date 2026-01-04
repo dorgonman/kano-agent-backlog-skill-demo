@@ -1,0 +1,14 @@
+{
+  "_comment": "Baseline config for kano-agent-backlog-skill.",
+  "log": {
+    "verbosity": "info",
+    "debug": false
+  },
+  "process": {
+    "profile": "builtin/azure-boards-agile",
+    "path": null
+  },
+  "sandbox": {
+    "root": "_kano/backlog_sandbox"
+  }
+}

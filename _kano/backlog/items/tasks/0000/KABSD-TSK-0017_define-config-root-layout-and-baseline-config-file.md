@@ -2,7 +2,7 @@
 id: KABSD-TSK-0017
 type: Task
 title: "Define config root layout and baseline config file"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0006
 area: infra
@@ -57,3 +57,6 @@ Define the config root layout and create a minimal baseline config file.
 
 2026-01-04 18:22 [agent=codex] Created task to define config layout and baseline config file.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for config layout.
+2026-01-04 19:08 [agent=codex] State -> InProgress.
+2026-01-04 19:09 [agent=codex] State -> InProgress.
+2026-01-04 19:09 [agent=codex] Created _kano/backlog/_config/config.json baseline.

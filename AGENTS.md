@@ -25,7 +25,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - or an ADR is created/linked.
 - Use `skills/kano-agent-backlog-skill/scripts/backlog/update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
 - For backlog/skill file operations, use `skills/kano-agent-backlog-skill/scripts/backlog/*` or `scripts/fs/*` so audit logs capture the action.
-- Skill scripts refuse paths outside `_kano/backlog/`; confirm your target path is under that root.
+- Skill scripts refuse paths outside `_kano/backlog/` or `_kano/backlog_sandbox/`.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.
 - Ticketing threshold (agent-decided):
   - Open a new Task/Bug when you will change code/docs/views/scripts.

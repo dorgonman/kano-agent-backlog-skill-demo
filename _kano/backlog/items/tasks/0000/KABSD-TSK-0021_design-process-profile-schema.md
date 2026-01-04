@@ -2,7 +2,7 @@
 id: KABSD-TSK-0021
 type: Task
 title: "Design process profile schema"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0008
 area: process
@@ -56,3 +56,5 @@ Define a process profile schema suitable for agent-oriented backlogs.
 
 2026-01-04 18:23 [agent=codex] Created task to design process profile schema.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for process schema.
+2026-01-04 20:11 [agent=codex] State -> InProgress.
+2026-01-04 20:11 [agent=codex] Documented process profile schema in references/processes.md.

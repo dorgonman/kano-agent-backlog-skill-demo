@@ -2,7 +2,7 @@
 id: KABSD-TSK-0023
 type: Task
 title: "Ship built-in process definition files"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0009
 area: process
@@ -55,3 +55,5 @@ Ship built-in process definition files in the skill repo.
 
 2026-01-04 18:23 [agent=codex] Created task to ship built-in process definition files.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for built-in profiles.
+2026-01-04 20:12 [agent=codex] State -> InProgress.
+2026-01-04 20:13 [agent=codex] Added built-in process definition files for Agile/Scrum/CMMI.

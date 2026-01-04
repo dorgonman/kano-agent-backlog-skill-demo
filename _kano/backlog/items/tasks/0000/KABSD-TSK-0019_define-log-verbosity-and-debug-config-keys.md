@@ -2,7 +2,7 @@
 id: KABSD-TSK-0019
 type: Task
 title: "Define log verbosity and debug config keys"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-USR-0007
 area: infra
@@ -55,3 +55,5 @@ Define the config fields for log verbosity and debug mode.
 
 2026-01-04 18:23 [agent=codex] Created task to define logging verbosity/debug config keys.
 2026-01-04 18:40 [agent=codex] Added scope and acceptance criteria for logging config keys.
+2026-01-04 20:07 [agent=codex] State -> InProgress.
+2026-01-04 20:08 [agent=codex] Defined log verbosity/debug keys in baseline config and logging docs.

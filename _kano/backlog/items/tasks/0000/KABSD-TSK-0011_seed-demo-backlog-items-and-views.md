@@ -2,7 +2,7 @@
 id: KABSD-TSK-0011
 type: Task
 title: "Seed demo backlog items and views"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0005
 area: demo
@@ -60,3 +60,4 @@ Implement a script that seeds minimal demo items and view files.
 
 2026-01-04 13:51 [agent=codex] Created task for demo seeding script.
 2026-01-04 13:55 [agent=codex] Added scope and acceptance criteria for demo seeding.
+2026-01-04 21:21 [agent=codex] Implemented seed_demo.py to create demo items and views.
