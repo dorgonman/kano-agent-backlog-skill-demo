@@ -1,0 +1,188 @@
+sources:
+  - path: _kano/backlog/items
+views:
+  - type: table
+    name: New Work
+    filters:
+      or:
+        - state == "Proposed"
+        - state == "Planned"
+        - state == "Ready"
+    sort:
+      - property: priority
+        direction: ASC
+      - property: updated
+        direction: DESC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: area
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Active Work
+    filters:
+      or:
+        - state == "InProgress"
+        - state == "Review"
+        - state == "Blocked"
+    sort:
+      - property: priority
+        direction: ASC
+      - property: updated
+        direction: DESC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: area
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Done Work
+    filters:
+      or:
+        - state == "Done"
+        - state == "Dropped"
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: updated
+        direction: DESC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: area
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Epics
+    filters:
+      and:
+        - type == "Epic"
+        - state != "Done"
+        - state != "Dropped"
+    sort:
+      - property: created
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: title
+      - property: state
+      - property: priority
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Features
+    filters:
+      and:
+        - type == "Feature"
+        - state != "Done"
+        - state != "Dropped"
+    sort:
+      - property: priority
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: iteration
+      - property: updated
+  - type: table
+    name: UserStories
+    filters:
+      and:
+        - type == "UserStory"
+        - state != "Done"
+        - state != "Dropped"
+    sort:
+      - property: priority
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Tasks + Bugs
+    filters:
+      and:
+        - state != "Done"
+        - state != "Dropped"
+        - type == "Task" or type == "Bug"
+    sort:
+      - property: type
+        direction: ASC
+      - property: priority
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Ready + InProgress
+    filters:
+      or:
+        - state == "Ready"
+        - state == "InProgress"
+    sort:
+      - property: type
+        direction: ASC
+      - property: priority
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: iteration
+      - property: updated
+  - type: table
+    name: Blocked
+    filters:
+      and:
+        - state == "Blocked"
+    sort:
+      - property: priority
+        direction: ASC
+    columns:
+      - property: file.link
+      - property: id
+      - property: type
+      - property: title
+      - property: state
+      - property: priority
+      - property: parent
+      - property: iteration
+      - property: updated

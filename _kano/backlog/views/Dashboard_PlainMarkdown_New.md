@@ -1,21 +1,17 @@
 # New Work
 
-Generated: 2026-01-03 21:59
+Generated: 2026-01-04 09:13
 Source: _kano/backlog/items
 
 ## New
 
 ### Epics
 
-- [KABSD-EPIC-0001 Quboto_MVP](../items/epics/0000/KABSD-EPIC-0001_quboto-mvp.md)
+- [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epics/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
 
 ### Features
 
 - [KABSD-FTR-0001 Local-first backlog system](../items/features/0000/KABSD-FTR-0001_local-backlog-system.md)
-- [KABSD-FTR-0002 TTS service operations](../items/features/0000/KABSD-FTR-0002_tts-service-ops.md)
-- [KABSD-FTR-0003 STT service operations](../items/features/0000/KABSD-FTR-0003_stt-service-ops.md)
-- [KABSD-FTR-0004 Secret provider workflow](../items/features/0000/KABSD-FTR-0004_secret-provider-workflow.md)
-- [KABSD-FTR-0005 vLLM + LiteLLM operations](../items/features/0000/KABSD-FTR-0005_vllm-litellm-ops.md)
 
 ### UserStories
 

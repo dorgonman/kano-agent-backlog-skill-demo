@@ -9,7 +9,7 @@ area: infra
 iteration: null
 tags: ["backlog", "planning"]
 created: 2026-01-02
-updated: 2026-01-02
+updated: 2026-01-04
 owner: null
 external:
   azure_id: null
@@ -23,7 +23,7 @@ decisions: []
 
 # Context
 
-We want each change to have a clear plan and traceable rationale.
+We want each change in this demo to have a clear plan and traceable rationale.
 
 # Goal
 
@@ -42,6 +42,8 @@ Create tasks that follow the Ready gate and link them to this story.
 
 - Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
 - Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
+- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0002_create-obsidian-base-demo-views|KABSD-TSK-0002 Create Obsidian Base demo views]]
+- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0003_normalize-migrated-backlog-items-for-demo|KABSD-TSK-0003 Normalize migrated backlog items for demo]]
 
 # Alternatives
 
@@ -61,4 +63,5 @@ Create tasks that follow the Ready gate and link them to this story.
 2026-01-02 10:14 [agent=codex] Created user story under KABSD-FTR-0001.
 2026-01-02 11:29 [agent=codex] Clarified state transitions should be automated via update_state.py and the Ready gate enforced before coding.
 2026-01-02 11:30 [agent=codex] Confirmed Worklog entries must record key discussion decisions and be reported back to the user.
+2026-01-04 00:44 [agent=codex] Added demo task links for Base views and backlog normalization.
 

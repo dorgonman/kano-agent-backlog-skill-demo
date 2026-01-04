@@ -2,14 +2,14 @@
 id: KABSD-TSK-0001
 type: Task
 title: "Create project-backlog skill"
-state: Active
+state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: infra
 iteration: null
 tags: ["backlog", "skill"]
 created: 2026-01-02
-updated: 2026-01-03
+updated: 2026-01-04
 owner: null
 external:
   azure_id: null
@@ -23,13 +23,13 @@ decisions: [ADR-0001]
 
 # Context
 
-We want a local-first backlog system so Codex can plan before coding and keep
-project evolution history beyond git log.
+We want a local-first backlog system so the demo can show planning before coding
+and preserve decision history beyond git log.
 
 # Goal
 
 Create the `project-backlog` skill definition and supporting references so the
-agent workflow enforces planning and Ready gate rules.
+agent workflow enforces planning and Ready gate rules in this demo repo.
 
 # Non-Goals
 
@@ -85,4 +85,6 @@ agent workflow enforces planning and Ready gate rules.
 2026-01-03 02:31 [agent=codex] Resolved generate_view.py paths relative to repo root to avoid empty outputs.
 2026-01-03 12:41 [agent=codex] Renamed backlog ID prefix from BL to QB derived from PROJECT_NAME=Quboto; updated item IDs, links, and views.
 2026-01-03 21:56 [agent=codex] Renamed generated views from Active.md/New.md to ActiveWork.md/NewWork.md for demo clarity.
+2026-01-04 00:45 [agent=codex] Aligned task narrative with the kano-agent-backlog-skill demo scope.
 
+2026-01-04 00:46 [agent=codex] Marked Done after demo backlog rebuild.

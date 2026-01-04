@@ -25,6 +25,11 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - or an ADR is created/linked.
 - Use `_kano/backlog/tools/update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.
+- Ticketing threshold (agent-decided):
+  - Open a new Task/Bug when you will change code/docs/views/scripts.
+  - Open an ADR (and link it) when a real trade-off or direction change is decided.
+  - Otherwise, record the discussion in an existing Worklog; ask if unsure.
+- State ownership: the agent decides when to move items to InProgress or Done; humans observe and can add context.
 
 ## Naming and storage rules (short)
 - Store items under `_kano/backlog/items/<type>/<bucket>/` and bucket per 100 (`0000`, `0100`, ...).
@@ -43,6 +48,10 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - Keep the demo backlog small and traceable; avoid ticket spam.
 - Avoid unrelated refactors; every meaningful change should be explainable via a backlog item or ADR (with verification steps).
 - If you change the skill itself, commit inside the submodule `skills/kano-agent-backlog-skill/` and update the parent repo submodule pointer.
+- Self-contained skill stance (this demo repo):
+  - Prefer implementing automation as skill scripts (`skills/kano-agent-backlog-skill/scripts/`) so the skill is usable without manual setup.
+  - Keep `_kano/backlog/tools/` as generated wrappers pointing to the skill scripts, not a forked implementation.
+  - Other projects may choose override-only usage; this repo does not. Treat the skill as the source of truth.
 
 ## Tests
 No tests or build steps are defined yet.

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e43c8a6f0df57c39",
+        "id": "8e49a3a89c16b06f",
         "type": "tabs",
         "children": [
           {
-            "id": "033fee5e9ba09c9b",
+            "id": "10d44e413d68e20f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_kano/backlog/views/Dashboard.md",
+                "file": "_kano/backlog/items/epics/0000/KABSD-EPIC-0001_quboto-mvp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "KABSD-EPIC-0001_quboto-mvp"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 579.5
   },
   "right": {
     "id": "4e10bcb2867e25ce",
@@ -183,37 +183,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "033fee5e9ba09c9b",
+  "active": "10d44e413d68e20f",
   "lastOpenFiles": [
-    "skills/kano-agent-backlog-skill/REFERENCE.md",
-    "skills/kano-agent-backlog-skill/references/REFERENCE.md",
-    "}",
-    "    }",
-    "          },",
-    "  },",
-    "      }",
-    "          }",
-    "            }",
-    "              },",
-    "          {",
-    "      {",
-    "_kano/backlog/views/Iteration.md",
-    "_kano/backlog/views/Area.md",
-    "_kano/backlog/views/New.md",
-    "_kano/backlog/views/Active.md",
+    "_kano/backlog/items/tasks/0000/KABSD-TSK-0003_normalize-migrated-backlog-items-for-demo.md",
+    "_kano/backlog/views/Dashboard_ObsidianBase.base",
+    "_kano/backlog/views/Dashboard_ObsidianBase_Readme.md",
+    "_kano/backlog/items/tasks/0000/KABSD-TSK-0002_create-obsidian-base-demo-views.md",
+    "_kano/backlog/views/Dashboard_ObsidianDataview.md",
+    "_kano/backlog/views/Untitled.base",
+    "_kano/backlog/views/Dashboard_PlainMarkdown.md",
+    "_kano/backlog/views/Dashboard_PlainMarkdown_Active.md",
+    "Test.md",
+    "tE.md",
+    "Untitled.md",
     "_kano/backlog/views/Dashboard_PlainMarkdown_Done.md",
     "_kano/backlog/views/Dashboard_PlainMarkdown_New.md",
-    "_kano/backlog/views/Dashboard_PlainMarkdown_Active.md",
-    "_kano/backlog/views/NewWork.md",
-    "_kano/backlog/views/ActiveWork.md",
-    "_kano/backlog/views/Dashboard_PlainMarkdown.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/foo",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/views/done.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/views/new.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/views",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/tasks/0000/DM-TSK-0001_demo-task.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/tasks/0000",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/tasks",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/epics/0000/DM-EPIC-0001_demo-epic.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/epics/0000/DM-EPIC-0001_demo-epic.index.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/epics/0000",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items/epics",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/items",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/_meta/indexes.md",
+    "_tmp_tests/script_tests_20260103_225532_9dcf01/backlog/_meta",
     "_kano/backlog/views/Dashboard_ObsidianBase.md",
-    "_kano/backlog/views/Dashboard_ObsidianDataview.md",
-    "skills/kano-agent-backlog-skill/references/bases.md",
-    "_kano/backlog/views/Dashboard.md",
-    "_kano/backlog/_meta/conventions.md",
-    "_kano/backlog/decisions/ADR-0001_backlog-structure-and-moc.md",
-    "AGENTS.md",
-    "README.md"
+    "_tmp_tests/script_tests_20260103_225110/backlog/views/done.md",
+    "_tmp_tests/script_tests_20260103_225110/backlog/views/new.md",
+    "_tmp_tests/script_tests_20260103_225110/backlog/items/tasks/0000/DM-TSK-0001_demo-task.md",
+    "_tmp_tests/script_tests_20260103_225110/backlog/items/epics/0000/DM-EPIC-0001_demo-epic.md",
+    "_tmp_tests/script_tests_20260103_225110/backlog/items/epics/0000/DM-EPIC-0001_demo-epic.index.md",
+    "_tmp_tests/script_tests_20260103_225110/backlog/_meta/indexes.md",
+    "_tmp_tests/script_tests_20260103_224943/backlog/views/done.md",
+    "_tmp_tests/script_tests_20260103_224943/backlog/views/new.md"
   ]
 }

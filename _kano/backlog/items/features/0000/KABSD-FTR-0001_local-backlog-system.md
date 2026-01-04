@@ -10,7 +10,7 @@ iteration:
 tags:
   - backlog
 created: 2026-01-02
-updated: 2026-01-02
+updated: 2026-01-04
 owner:
 external:
   azure_id:
@@ -29,7 +29,7 @@ evolution beyond git log.
 
 # Goal
 
-Provide a file-based backlog system with clear hierarchy, Ready gate, and views.
+Provide a file-based backlog system with clear hierarchy, Ready gate, and demo views.
 
 # Non-Goals
 
@@ -38,11 +38,11 @@ Provide a file-based backlog system with clear hierarchy, Ready gate, and views.
 
 # Approach
 
-Create backlog structure, views, and a project-backlog skill.
+Create backlog structure, views, and the kano-agent-backlog-skill demo.
 
 # Links
 
-- Epic: [[KABSD-EPIC-0001_quboto-mvp 1|KABSD-EPIC-0001 Quboto_MVP]]
+- Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
 - UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
 
 # Alternatives
@@ -67,4 +67,5 @@ Create backlog structure, views, and a project-backlog skill.
 2026-01-02 11:27 [agent=codex] Agreed Worklog must capture key discussion decisions and the agent must report which items were updated.
 2026-01-03 01:16 [agent=codex] Reduced index files to Epic-only to avoid MOC file sprawl.
 2026-01-03 01:35 [agent=codex] Adopted view-level archiving by hiding Done/Dropped items in dashboard and views.
+2026-01-04 00:43 [agent=codex] Rebuilt feature text to align with the kano-agent-backlog-skill demo scope.
 

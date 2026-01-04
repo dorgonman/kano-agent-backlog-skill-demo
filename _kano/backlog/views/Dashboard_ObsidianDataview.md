@@ -4,16 +4,6 @@ This is the Dataview-based dashboard example. It requires the Obsidian Dataview 
 
 Done/Dropped items are hidden by default (view-level archive).
 
-## Generated views (embedded)
-
-Obsidian supports note embeds using wikilinks (not standard Markdown). These will expand in Obsidian Preview/Reading view:
-
-![[Dashboard_PlainMarkdown_Active.md]]
-
-![[Dashboard_PlainMarkdown_New.md]]
-
-![[Dashboard_PlainMarkdown_Done.md]]
-
 ## Epics
 
 ```dataview

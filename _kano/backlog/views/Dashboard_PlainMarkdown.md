@@ -8,6 +8,13 @@ This is the “no plugin” dashboard: pure Markdown links that work in any edit
 - New work: `Dashboard_PlainMarkdown_New.md` (New only)
 - Done work: `Dashboard_PlainMarkdown_Done.md` (Done + Dropped)
 
+![[Dashboard_PlainMarkdown_Active.md]]
+
+![[Dashboard_PlainMarkdown_New.md]]
+
+![[Dashboard_PlainMarkdown_Done.md]]
+
+
 To refresh:
 - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
 - `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
@@ -26,3 +33,5 @@ To refresh:
 - ADRs: `../decisions/`
 
 For hierarchy navigation, open an Epic MOC file (`*.index.md`) under `../items/epics/**/`.
+
+
