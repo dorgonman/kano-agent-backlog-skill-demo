@@ -2,14 +2,14 @@
 id: KABSD-EPIC-0001
 type: Epic
 title: "Kano Agent Backlog Skill Demo"
-state: Proposed
+state: Planned
 priority: P1
 parent: null
 area: demo
 iteration: null
 tags: ["demo", "backlog", "skill"]
 created: 2026-01-02
-updated: 2026-01-04
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -67,3 +67,4 @@ Create and link the demo Feature/UserStory/Tasks under this Epic.
 2026-01-04 00:56 [agent=codex] Created demo-named epic file and deprecated the legacy filename.
 2026-01-04 13:55 [agent=codex] Added feature for self-contained skill bootstrap and automation.
 
+2026-01-05 01:25 [agent=codex] Auto-sync from child KABSD-TSK-0037 -> Planned.

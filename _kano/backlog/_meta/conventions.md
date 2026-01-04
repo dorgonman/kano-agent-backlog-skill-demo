@@ -24,8 +24,10 @@
 ## Worklog (append-only)
 
 ```
-YYYY-MM-DD HH:MM [agent=codex] <message>
+YYYY-MM-DD HH:MM [agent=<agent-id>] <message>
 ```
+
+> **Important**: Always use your real agent identity (e.g. `antigravity`, `claude`), do not use `codex` unless that is your name.
 
 ## Obsidian links (recommended)
 

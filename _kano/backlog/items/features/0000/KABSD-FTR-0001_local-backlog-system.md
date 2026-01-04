@@ -19,7 +19,7 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: []
+decisions: [ADR-0002]
 ---
 
 # Context
@@ -42,6 +42,8 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 
 # Links
 
+
+- ADR: [[_kano/backlog/decisions/ADR-0002_decisions-as-adr-links|ADR-0002 Decision handling: ADRs stay in decisions/ with item links]]
 - Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
 - UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
 
@@ -69,3 +71,4 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 2026-01-03 01:35 [agent=codex] Adopted view-level archiving by hiding Done/Dropped items in dashboard and views.
 2026-01-04 00:43 [agent=codex] Rebuilt feature text to align with the kano-agent-backlog-skill demo scope.
 
+2026-01-05 01:12 [agent=codex] Linked ADR-0002 for decision handling approach.
