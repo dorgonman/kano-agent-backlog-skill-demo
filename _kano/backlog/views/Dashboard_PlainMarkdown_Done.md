@@ -1,6 +1,6 @@
 # Done Work
 
-Generated: 2026-01-06 01:36
+Generated: 2026-01-06 01:59
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## Done
@@ -16,6 +16,7 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-USR-0011 Enforce Agent Identity in Skill](../items/userstories/0000/KABSD-USR-0011_enforce-agent-identity-in-skill.md)
 - [KABSD-USR-0012 Index file-based backlog into SQLite (rebuildable)](../items/userstories/0000/KABSD-USR-0012_index-file-based-backlog-into-sqlite-rebuildable.md)
 - [KABSD-USR-0014 Configurable process: choose file-only vs DB index backend](../items/userstories/0000/KABSD-USR-0014_configurable-process-choose-file-only-vs-db-index-backend.md)
+- [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstories/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstories/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 
 ### Tasks
@@ -72,6 +73,12 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0052 Default SQLite index artifacts to _kano/backlog/_index and gitignore](../items/tasks/0000/KABSD-TSK-0052_default-sqlite-index-artifacts-to-kano-backlog-index-and-gitignore.md)
 - [KABSD-TSK-0053 Support sandbox backlog-root mode in SQLite indexer config resolution](../items/tasks/0000/KABSD-TSK-0053_support-sandbox-backlog-root-mode-in-sqlite-indexer-config-resolution.md)
 - [KABSD-TSK-0054 Add sqlite index query CLI with presets and safe --sql](../items/tasks/0000/KABSD-TSK-0054_add-sqlite-index-query-cli-with-presets-and-safe-sql.md)
+- [KABSD-TSK-0055 Generate Markdown views from SQLite index queries](../items/tasks/0000/KABSD-TSK-0055_generate-markdown-views-from-sqlite-index-queries.md)
 - [KABSD-TSK-0058 agent compliance test](../items/tasks/0000/KABSD-TSK-0058_agent-compliance-test.md)
 - [KABSD-TSK-0059 ULID vs UUIDv7 comparison document](../items/tasks/0000/KABSD-TSK-0059_ulid-vs-uuidv7-comparison.md)
+- [KABSD-TSK-0060 Migration plan: add uid to existing items](../items/tasks/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
+- [KABSD-TSK-0061 ID resolver spec and design](../items/tasks/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
+- [KABSD-TSK-0062 Collision report and resolver CLI](../items/tasks/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
+- [KABSD-TSK-0063 Make generate_view use SQLite index when available (fallback to file scan)](../items/tasks/0000/KABSD-TSK-0063_make-generate-view-use-sqlite-index-when-available-fallback-to-file-scan.md)
+- [KABSD-TSK-0064 Unify dashboard generation: auto use SQLite index with file-scan fallback](../items/tasks/0000/KABSD-TSK-0064_unify-dashboard-generation-auto-use-sqlite-index-with-file-scan-fallback.md)
 

@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0042
+uid: 019b8f52-9faa-77a0-b6ce-cd1dd9da9911
 type: Task
-title: "Add process profile template and document built-ins"
+title: Add process profile template and document built-ins
 state: Done
 priority: P2
 parent: KABSD-USR-0009
 area: process
 iteration: null
-tags: ["process", "config", "docs"]
+tags:
+- process
+- config
+- docs
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

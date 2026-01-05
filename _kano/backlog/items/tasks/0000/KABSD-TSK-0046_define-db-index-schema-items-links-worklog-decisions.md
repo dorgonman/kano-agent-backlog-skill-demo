@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0046
+uid: 019b8f52-9fb2-74e1-86c2-31ec952cb7ae
 type: Task
-title: "Define DB index schema (items, links, worklog, decisions)"
+title: Define DB index schema (items, links, worklog, decisions)
 state: Done
 priority: P3
 parent: KABSD-USR-0012
 area: storage
 iteration: null
-tags: ["db", "schema", "index"]
+tags:
+- db
+- schema
+- index
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

@@ -1,15 +1,20 @@
 ---
 id: KABSD-USR-0017
+uid: 019b8f52-9f4f-7b35-9d37-9f9114beefa4
 type: UserStory
-title: "Query the SQLite index via skill scripts (read-only)"
+title: Query the SQLite index via skill scripts (read-only)
 state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: indexing
 iteration: null
-tags: ["sqlite", "index", "query", "script"]
+tags:
+- sqlite
+- index
+- query
+- script
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0005
+uid: 019b8f52-9f5a-7769-a3de-8292cd240f21
 type: Task
-title: "Add fs wrappers for demo tools"
+title: Add fs wrappers for demo tools
 state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: backlog
 iteration: null
-tags: ["tools", "fs"]
+tags:
+- tools
+- fs
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

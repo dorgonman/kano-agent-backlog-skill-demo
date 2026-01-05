@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0010
+uid: 019b8f52-9f65-706a-90b0-f8b454282981
 type: Task
-title: "Generate tool wrappers from skill scripts"
+title: Generate tool wrappers from skill scripts
 state: Dropped
 priority: P3
 parent: KABSD-USR-0004
 area: skill
 iteration: null
-tags: ["scripts", "tools"]
+tags:
+- scripts
+- tools
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

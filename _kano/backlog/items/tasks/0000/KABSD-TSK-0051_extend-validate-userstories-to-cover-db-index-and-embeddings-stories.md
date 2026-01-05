@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0051
+uid: 019b8f52-9fbd-7c8c-bd11-3722bb280ac5
 type: Task
-title: "Extend validate_userstories to cover DB index and embeddings stories"
+title: Extend validate_userstories to cover DB index and embeddings stories
 state: Done
 priority: P4
 parent: KABSD-FTR-0007
 area: tests
 iteration: null
-tags: ["tests", "index", "rag"]
+tags:
+- tests
+- index
+- rag
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

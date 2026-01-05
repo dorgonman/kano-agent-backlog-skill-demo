@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0034
+uid: 019b8f52-9f98-7821-b140-9fe16ab03083
 type: Task
-title: "Show state labels for all index items and drop epic aliases"
+title: Show state labels for all index items and drop epic aliases
 state: Done
 priority: P2
 parent: KABSD-FTR-0001
 area: views
 iteration: null
-tags: ["index", "views"]
+tags:
+- index
+- views
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

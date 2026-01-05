@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0053
+uid: 019b8f52-9fc1-7f4f-adb4-4644ba36fef7
 type: Task
-title: "Support sandbox backlog-root mode in SQLite indexer config resolution"
+title: Support sandbox backlog-root mode in SQLite indexer config resolution
 state: Done
 priority: P4
 parent: KABSD-USR-0012
 area: storage
 iteration: null
-tags: ["sqlite", "index", "sandbox", "config"]
+tags:
+- sqlite
+- index
+- sandbox
+- config
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

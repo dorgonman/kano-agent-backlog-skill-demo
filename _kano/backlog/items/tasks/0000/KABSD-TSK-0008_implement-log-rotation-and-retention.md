@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0008
+uid: 019b8f52-9f61-784f-b2b7-6dd42aefa6d5
 type: Task
-title: "Implement log rotation and retention"
+title: Implement log rotation and retention
 state: Done
 priority: P2
 parent: KABSD-USR-0003
 area: infra
 iteration: null
-tags: ["logging", "rotation"]
+tags:
+- logging
+- rotation
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,24 +1,31 @@
 ---
 id: KABSD-TSK-0061
+uid: 019b8f52-9fd2-7cb5-b172-73748a976830
 type: Task
-title: "ID resolver spec and design"
+title: ID resolver spec and design
 state: Done
 priority: P3
 parent: KABSD-FTR-0001
 area: infra
 iteration: null
-tags: ["resolver", "uid", "adr-0003"]
+tags:
+- resolver
+- uid
+- adr-0003
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
   jira_key: null
 links:
-  relates: [ADR-0003]
-  blocks: [KABSD-TSK-0062]
+  relates:
+  - ADR-0003
+  blocks:
+  - KABSD-TSK-0062
   blocked_by: []
-decisions: [ADR-0003]
+decisions:
+- ADR-0003
 ---
 
 # Context

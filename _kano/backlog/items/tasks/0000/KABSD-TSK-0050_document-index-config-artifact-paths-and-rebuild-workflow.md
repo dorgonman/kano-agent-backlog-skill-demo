@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0050
+uid: 019b8f52-9fbb-7fc2-a389-8d0d0692b152
 type: Task
-title: "Document index config, artifact paths, and rebuild workflow"
+title: Document index config, artifact paths, and rebuild workflow
 state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: docs
 iteration: null
-tags: ["docs", "index", "config"]
+tags:
+- docs
+- index
+- config
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

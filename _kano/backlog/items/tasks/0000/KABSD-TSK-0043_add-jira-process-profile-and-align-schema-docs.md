@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0043
+uid: 019b8f52-9fac-7f6a-8031-d3e146da45bd
 type: Task
-title: "Add Jira process profile and align schema docs"
+title: Add Jira process profile and align schema docs
 state: Done
 priority: P2
 parent: KABSD-USR-0009
 area: process
 iteration: null
-tags: ["process", "docs", "jira"]
+tags:
+- process
+- docs
+- jira
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

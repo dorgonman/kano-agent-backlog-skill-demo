@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0056
+uid: 019b8f52-9fc8-7c94-aa2d-806cacdd9086
 type: Task
-title: "Define embedding chunking + metadata schema for backlog items"
+title: Define embedding chunking + metadata schema for backlog items
 state: Proposed
 priority: P4
 parent: KABSD-USR-0015
 area: rag
 iteration: null
-tags: ["embedding", "rag", "schema"]
+tags:
+- embedding
+- rag
+- schema
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

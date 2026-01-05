@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0027
+uid: 019b8f52-9f89-7d9f-b0a2-cbe47d92dd8a
 type: Task
-title: "Add user story validation test script"
+title: Add user story validation test script
 state: Done
 priority: P3
 parent: KABSD-USR-0010
 area: testing
 iteration: null
-tags: ["tests", "validation"]
+tags:
+- tests
+- validation
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

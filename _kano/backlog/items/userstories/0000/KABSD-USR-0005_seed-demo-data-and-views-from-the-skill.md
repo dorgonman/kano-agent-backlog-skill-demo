@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0005
+uid: 019b8f52-9f36-7ee6-9961-fd3ccffcd218
 type: UserStory
-title: "Seed demo data and views from the skill"
+title: Seed demo data and views from the skill
 state: Done
 priority: P3
 parent: KABSD-FTR-0003
 area: demo
 iteration: null
-tags: ["self-contained", "demo", "seed"]
+tags:
+- self-contained
+- demo
+- seed
 created: 2026-01-04
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

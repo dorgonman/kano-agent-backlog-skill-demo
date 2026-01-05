@@ -1,7 +1,8 @@
 ---
 id: KABSD-TSK-0058
+uid: 019b8f52-9fcc-787b-a7a5-16eeb2daf112
 type: Task
-title: "agent compliance test"
+title: agent compliance test
 state: Done
 priority: P2
 parent: null
@@ -9,7 +10,7 @@ area: general
 iteration: null
 tags: []
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: copilot
 external:
   azure_id: null

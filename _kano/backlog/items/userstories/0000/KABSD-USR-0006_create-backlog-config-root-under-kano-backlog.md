@@ -1,15 +1,17 @@
 ---
 id: KABSD-USR-0006
+uid: 019b8f52-9f38-76ed-a6a2-6260eeb06ff6
 type: UserStory
-title: "Create backlog config root under _kano/backlog"
+title: Create backlog config root under _kano/backlog
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0004
 area: infra
 iteration: null
-tags: ["config"]
+tags:
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

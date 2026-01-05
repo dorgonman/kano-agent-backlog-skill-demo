@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0064
+uid: 019b8f52-9fd9-717e-834e-888720a41975
 type: Task
-title: "Unify dashboard generation: auto use SQLite index with file-scan fallback"
-state: Ready
+title: 'Unify dashboard generation: auto use SQLite index with file-scan fallback'
+state: Done
 priority: P3
 parent: KABSD-USR-0016
 area: views
 iteration: null
-tags: ["views", "sqlite", "index", "refresh"]
+tags:
+- views
+- sqlite
+- index
+- refresh
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
@@ -62,3 +67,4 @@ Provide a unified, reproducible dashboard generation flow that is data-source ag
 
 2026-01-06 01:38 [agent=codex] Created from template.
 2026-01-06 01:39 [agent=codex] State -> Ready. Ready gate validated for unified dashboard refresh flow.
+2026-01-06 01:59 [agent=codex-cli] State -> Done. Unified view generation via generate_view --source auto + refresh_dashboards; deprecated Dashboard_DBIndex_* stubs now point to canonical Dashboard_PlainMarkdown_* dashboards; refreshed dashboards using SQLite index.

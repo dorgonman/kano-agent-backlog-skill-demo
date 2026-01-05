@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0008
+uid: 019b8f52-9f3c-7a46-a5c7-4f845eb97bf9
 type: UserStory
-title: "Define board process profiles for work item types and transitions"
+title: Define board process profiles for work item types and transitions
 state: Proposed
 priority: P3
 parent: KABSD-FTR-0004
 area: process
 iteration: null
-tags: ["config", "process"]
+tags:
+- config
+- process
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

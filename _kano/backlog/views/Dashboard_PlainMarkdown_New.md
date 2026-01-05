@@ -1,6 +1,6 @@
 # New Work
 
-Generated: 2026-01-06 01:45
+Generated: 2026-01-06 01:59
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## New
@@ -30,7 +30,4 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0049 Document file-first + DB index architecture and trade-offs](../items/tasks/0000/KABSD-TSK-0049_document-file-first-db-index-architecture-and-trade-offs.md)
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../items/tasks/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
-- [KABSD-TSK-0060 Migration plan: add uid to existing items](../items/tasks/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
-- [KABSD-TSK-0061 ID resolver spec and design](../items/tasks/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
-- [KABSD-TSK-0062 Collision report and resolver CLI](../items/tasks/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 

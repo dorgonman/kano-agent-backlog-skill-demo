@@ -1,6 +1,6 @@
-# Active Work
+# InProgress Work
 
-Generated: 2026-01-06 01:45
+Generated: 2026-01-06 01:59
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## New
@@ -30,9 +30,6 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0049 Document file-first + DB index architecture and trade-offs](../items/tasks/0000/KABSD-TSK-0049_document-file-first-db-index-architecture-and-trade-offs.md)
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../items/tasks/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
-- [KABSD-TSK-0060 Migration plan: add uid to existing items](../items/tasks/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
-- [KABSD-TSK-0061 ID resolver spec and design](../items/tasks/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
-- [KABSD-TSK-0062 Collision report and resolver CLI](../items/tasks/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 
 ## InProgress
 
@@ -45,12 +42,4 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-FTR-0003 Self-contained skill bootstrap and automation](../items/features/0000/KABSD-FTR-0003_self-contained-skill-bootstrap-and-automation.md)
 - [KABSD-FTR-0004 Backlog config system and process profiles](../items/features/0000/KABSD-FTR-0004_backlog-config-system-and-process-profiles.md)
 - [KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline](../items/features/0000/KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline.md)
-
-### UserStories
-
-- [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstories/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
-
-### Tasks
-
-- [KABSD-TSK-0055 Generate Markdown views from SQLite index queries](../items/tasks/0000/KABSD-TSK-0055_generate-markdown-views-from-sqlite-index-queries.md)
 

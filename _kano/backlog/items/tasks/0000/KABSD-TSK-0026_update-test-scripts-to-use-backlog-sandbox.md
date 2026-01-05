@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0026
+uid: 019b8f52-9f87-7e62-8c30-c917d0f777e7
 type: Task
-title: "Update test scripts to use backlog sandbox"
+title: Update test scripts to use backlog sandbox
 state: Done
 priority: P2
 parent: KABSD-USR-0010
 area: testing
 iteration: null
-tags: ["sandbox", "tests"]
+tags:
+- sandbox
+- tests
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0014
+uid: 019b8f52-9f6e-7ae1-a6d3-b9233dd123cd
 type: Task
-title: "Enhance audit logging config and wrapper coverage"
+title: Enhance audit logging config and wrapper coverage
 state: Done
 priority: P2
 parent: KABSD-USR-0002
 area: infra
 iteration: null
-tags: ["logging", "config"]
+tags:
+- logging
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

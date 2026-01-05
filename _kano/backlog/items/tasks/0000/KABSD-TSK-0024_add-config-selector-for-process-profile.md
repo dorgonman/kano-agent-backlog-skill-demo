@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0024
+uid: 019b8f52-9f83-7412-869c-aaf0370634fc
 type: Task
-title: "Add config selector for process profile"
+title: Add config selector for process profile
 state: Done
 priority: P3
 parent: KABSD-USR-0009
 area: process
 iteration: null
-tags: ["process", "config"]
+tags:
+- process
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

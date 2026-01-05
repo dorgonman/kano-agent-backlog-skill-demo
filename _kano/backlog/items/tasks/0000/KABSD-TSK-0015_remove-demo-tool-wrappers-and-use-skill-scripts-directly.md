@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0015
+uid: 019b8f52-9f70-7610-9a4a-01d6d2553267
 type: Task
-title: "Remove demo tool wrappers and use skill scripts directly"
+title: Remove demo tool wrappers and use skill scripts directly
 state: Done
 priority: P3
 parent: KABSD-USR-0004
 area: demo
 iteration: null
-tags: ["tools", "cleanup"]
+tags:
+- tools
+- cleanup
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

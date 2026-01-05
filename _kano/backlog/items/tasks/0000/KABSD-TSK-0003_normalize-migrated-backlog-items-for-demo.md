@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0003
+uid: 019b8f52-9f56-7d82-b906-58ac048d6a39
 type: Task
-title: "Normalize migrated backlog items for demo"
+title: Normalize migrated backlog items for demo
 state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: backlog
 iteration: null
-tags: ["cleanup", "backlog", "docs"]
+tags:
+- cleanup
+- backlog
+- docs
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

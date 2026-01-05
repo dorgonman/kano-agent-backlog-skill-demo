@@ -1,7 +1,8 @@
 ---
 id: KABSD-FTR-0005
+uid: 019b8f52-9fe5-7fbd-afb9-4a03d9dc8d5c
 type: Feature
-title: "Verify agent compliance"
+title: Verify agent compliance
 state: Done
 priority: P1
 parent: KABSD-EPIC-0001
@@ -9,7 +10,7 @@ area: general
 iteration: null
 tags: []
 created: 2026-01-04
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

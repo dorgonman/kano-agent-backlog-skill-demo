@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0012
+uid: 019b8f52-9f6a-79e2-b5e4-14d38b92b9c4
 type: Task
-title: "Document self-contained setup and bootstrap scripts"
+title: Document self-contained setup and bootstrap scripts
 state: Done
 priority: P3
 parent: KABSD-USR-0005
 area: docs
 iteration: null
-tags: ["docs", "self-contained"]
+tags:
+- docs
+- self-contained
 created: 2026-01-04
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

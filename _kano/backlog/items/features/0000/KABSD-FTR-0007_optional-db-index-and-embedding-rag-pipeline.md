@@ -1,15 +1,22 @@
 ---
 id: KABSD-FTR-0007
+uid: 019b8f52-9fe9-77b5-8c14-aa03c2501d0f
 type: Feature
-title: "Optional DB index and embedding/RAG pipeline"
+title: Optional DB index and embedding/RAG pipeline
 state: InProgress
 priority: P3
 parent: KABSD-EPIC-0001
 area: storage
 iteration: null
-tags: ["db", "index", "sqlite", "postgres", "embedding", "rag"]
+tags:
+- db
+- index
+- sqlite
+- postgres
+- embedding
+- rag
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

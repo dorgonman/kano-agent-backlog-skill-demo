@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0001
+uid: 019b8f52-9f51-76ed-a15e-59745b9b235f
 type: Task
-title: "Create project-backlog skill"
+title: Create project-backlog skill
 state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: infra
 iteration: null
-tags: ["backlog", "skill"]
+tags:
+- backlog
+- skill
 created: 2026-01-02
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
@@ -18,7 +21,8 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: [ADR-0001]
+decisions:
+- ADR-0001
 ---
 
 # Context

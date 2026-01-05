@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0011
+uid: 019b8f52-9f67-7609-928c-87dc5814a802
 type: Task
-title: "Seed demo backlog items and views"
+title: Seed demo backlog items and views
 state: Done
 priority: P3
 parent: KABSD-USR-0005
 area: demo
 iteration: null
-tags: ["demo", "seed"]
+tags:
+- demo
+- seed
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

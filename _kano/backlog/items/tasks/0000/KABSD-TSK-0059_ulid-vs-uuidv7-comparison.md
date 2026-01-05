@@ -1,24 +1,33 @@
 ---
 id: KABSD-TSK-0059
+uid: 019b8f52-9fce-7a88-8aa4-e565207669f8
 type: Task
-title: "ULID vs UUIDv7 comparison document"
+title: ULID vs UUIDv7 comparison document
 state: Done
 priority: P3
 parent: KABSD-FTR-0001
 area: docs
 iteration: null
-tags: ["docs", "uid", "ulid", "uuidv7", "adr-0003"]
+tags:
+- docs
+- uid
+- ulid
+- uuidv7
+- adr-0003
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
   jira_key: null
 links:
-  relates: [ADR-0003]
-  blocks: [KABSD-TSK-0060]
+  relates:
+  - ADR-0003
+  blocks:
+  - KABSD-TSK-0060
   blocked_by: []
-decisions: [ADR-0003]
+decisions:
+- ADR-0003
 ---
 
 # Context

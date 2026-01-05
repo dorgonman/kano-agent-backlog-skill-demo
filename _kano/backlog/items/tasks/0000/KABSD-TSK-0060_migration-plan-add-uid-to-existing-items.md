@@ -1,24 +1,31 @@
 ---
 id: KABSD-TSK-0060
+uid: 019b8f52-9fd0-7c50-9d2b-46aa5e89d346
 type: Task
-title: "Migration plan: add uid to existing items"
+title: 'Migration plan: add uid to existing items'
 state: Done
 priority: P3
 parent: KABSD-FTR-0001
 area: infra
 iteration: null
-tags: ["migration", "uid", "adr-0003"]
+tags:
+- migration
+- uid
+- adr-0003
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
   jira_key: null
 links:
-  relates: [ADR-0003]
+  relates:
+  - ADR-0003
   blocks: []
-  blocked_by: [KABSD-TSK-0059]
-decisions: [ADR-0003]
+  blocked_by:
+  - KABSD-TSK-0059
+decisions:
+- ADR-0003
 ---
 
 # Context

@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0036
+uid: 019b8f52-9f9d-76cc-98bc-bcd947dfe229
 type: Task
-title: "Sync parent state from child status changes"
+title: Sync parent state from child status changes
 state: Done
 priority: P2
 parent: KABSD-FTR-0001
 area: workflow
 iteration: null
-tags: ["state", "sync"]
+tags:
+- state
+- sync
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

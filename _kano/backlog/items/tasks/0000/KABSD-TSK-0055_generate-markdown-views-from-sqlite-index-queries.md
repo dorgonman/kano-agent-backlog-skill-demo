@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0055
+uid: 019b8f52-9fc6-7a10-ab99-a0d51b2962c9
 type: Task
-title: "Generate Markdown views from SQLite index queries"
+title: Generate Markdown views from SQLite index queries
 state: Done
 priority: P4
 parent: KABSD-USR-0016
 area: views
 iteration: null
-tags: ["sqlite", "index", "views", "markdown"]
+tags:
+- sqlite
+- index
+- views
+- markdown
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

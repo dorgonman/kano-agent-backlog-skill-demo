@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0025
+uid: 019b8f52-9f85-7083-9dc7-5084782a4185
 type: Task
-title: "Define backlog sandbox path and guardrails"
+title: Define backlog sandbox path and guardrails
 state: Done
 priority: P2
 parent: KABSD-USR-0010
 area: testing
 iteration: null
-tags: ["sandbox", "tests"]
+tags:
+- sandbox
+- tests
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

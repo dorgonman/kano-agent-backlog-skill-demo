@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0013
+uid: 019b8f52-9f6c-75c0-930c-0de2f20f6587
 type: Task
-title: "Integrate audit logging into skill scripts"
+title: Integrate audit logging into skill scripts
 state: Done
 priority: P2
 parent: KABSD-USR-0002
 area: infra
 iteration: null
-tags: ["logging", "automation"]
+tags:
+- logging
+- automation
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

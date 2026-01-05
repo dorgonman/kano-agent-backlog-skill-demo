@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0009
+uid: 019b8f52-9f3e-783d-a12f-197dffb71908
 type: UserStory
-title: "Ship built-in process definitions and select via config"
+title: Ship built-in process definitions and select via config
 state: Done
 priority: P3
 parent: KABSD-FTR-0004
 area: process
 iteration: null
-tags: ["config", "process"]
+tags:
+- config
+- process
 created: 2026-01-04
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

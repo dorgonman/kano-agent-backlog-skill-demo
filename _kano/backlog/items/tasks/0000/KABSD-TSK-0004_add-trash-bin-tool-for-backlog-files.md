@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0004
+uid: 019b8f52-9f58-785b-8485-7786aa4fa054
 type: Task
-title: "Add trash bin tool for backlog files"
+title: Add trash bin tool for backlog files
 state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: backlog
 iteration: null
-tags: ["tools", "cleanup"]
+tags:
+- tools
+- cleanup
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

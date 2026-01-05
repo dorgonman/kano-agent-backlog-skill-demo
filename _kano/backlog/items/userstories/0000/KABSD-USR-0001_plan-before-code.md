@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0001
+uid: 019b8f52-9f2d-7fc1-a293-42bf91f4ed5c
 type: UserStory
-title: "Plan work before coding"
+title: Plan work before coding
 state: Proposed
 priority: P1
 parent: KABSD-FTR-0001
 area: infra
 iteration: null
-tags: ["backlog", "planning"]
+tags:
+- backlog
+- planning
 created: 2026-01-02
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

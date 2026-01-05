@@ -1,15 +1,17 @@
 ---
 id: KABSD-TSK-0017
+uid: 019b8f52-9f74-7cde-98db-6388bdbb6e38
 type: Task
-title: "Define config root layout and baseline config file"
+title: Define config root layout and baseline config file
 state: Done
 priority: P2
 parent: KABSD-USR-0006
 area: infra
 iteration: null
-tags: ["config"]
+tags:
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

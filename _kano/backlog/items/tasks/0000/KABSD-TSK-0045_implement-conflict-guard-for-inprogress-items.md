@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0045
+uid: 019b8f52-9fb0-791f-a209-83346da71484
 type: Task
-title: "Implement conflict guard for InProgress items"
+title: Implement conflict guard for InProgress items
 state: Done
 priority: P2
 parent: KABSD-FTR-0006
 area: workflow
 iteration: null
-tags: ["conflict", "guard"]
+tags:
+- conflict
+- guard
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: antigravity
 external:
   azure_id: null

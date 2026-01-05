@@ -1,7 +1,8 @@
 ---
 id: KABSD-FTR-0006
+uid: 019b8f52-9fe7-7758-a833-be10f436ce64
 type: Feature
-title: "Conflict Prevention Mechanism"
+title: Conflict Prevention Mechanism
 state: Proposed
 priority: P2
 parent: KABSD-EPIC-0001
@@ -9,7 +10,7 @@ area: general
 iteration: null
 tags: []
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

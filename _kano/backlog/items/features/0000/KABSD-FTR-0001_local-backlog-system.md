@@ -1,25 +1,28 @@
 ---
 id: KABSD-FTR-0001
+uid: 019b8f52-9fdc-7676-ac2a-0212eed7d168
 type: Feature
 title: Local-first backlog system
 state: Proposed
 priority: P1
 parent: KABSD-EPIC-0001
 area: infra
-iteration:
+iteration: null
 tags:
-  - backlog
+- backlog
 created: 2026-01-02
-updated: 2026-01-04
-owner:
+updated: '2026-01-06'
+owner: null
 external:
-  azure_id:
-  jira_key:
+  azure_id: null
+  jira_key: null
 links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: [ADR-0002, ADR-0003]
+decisions:
+- ADR-0002
+- ADR-0003
 ---
 
 # Context

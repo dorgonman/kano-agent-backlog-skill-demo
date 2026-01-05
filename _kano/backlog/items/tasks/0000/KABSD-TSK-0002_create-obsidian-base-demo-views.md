@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0002
+uid: 019b8f52-9f53-70c2-be2c-a81af61ac4ec
 type: Task
-title: "Create Obsidian Base demo views"
+title: Create Obsidian Base demo views
 state: Done
 priority: P2
 parent: KABSD-USR-0001
 area: backlog
 iteration: null
-tags: ["views", "obsidian", "bases"]
+tags:
+- views
+- obsidian
+- bases
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0019
+uid: 019b8f52-9f78-78ea-8141-58e429de7b20
 type: Task
-title: "Define log verbosity and debug config keys"
+title: Define log verbosity and debug config keys
 state: Done
 priority: P2
 parent: KABSD-USR-0007
 area: infra
 iteration: null
-tags: ["config", "logging"]
+tags:
+- config
+- logging
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

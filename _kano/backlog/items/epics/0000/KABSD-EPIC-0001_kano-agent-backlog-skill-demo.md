@@ -1,15 +1,19 @@
 ---
 id: KABSD-EPIC-0001
+uid: 019b8f52-9feb-7b9d-a6a2-e52dcd90ff5a
 type: Epic
-title: "Kano Agent Backlog Skill Demo"
+title: Kano Agent Backlog Skill Demo
 state: InProgress
 priority: P1
 parent: null
 area: demo
 iteration: null
-tags: ["demo", "backlog", "skill"]
+tags:
+- demo
+- backlog
+- skill
 created: 2026-01-02
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,7 +1,8 @@
 ---
 id: KABSD-USR-0011
+uid: 019b8f52-9f42-7e1e-a23f-d61218f54169
 type: UserStory
-title: "Enforce Agent Identity in Skill"
+title: Enforce Agent Identity in Skill
 state: Done
 priority: P1
 parent: KABSD-FTR-0005
@@ -9,7 +10,7 @@ area: general
 iteration: null
 tags: []
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

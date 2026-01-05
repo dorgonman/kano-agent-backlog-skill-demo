@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0041
+uid: 019b8f52-9fa8-7c5e-a031-35ea9e57c080
 type: Task
-title: "Add lightweight config validation"
+title: Add lightweight config validation
 state: Done
 priority: P2
 parent: KABSD-FTR-0004
 area: infra
 iteration: null
-tags: ["config", "validation"]
+tags:
+- config
+- validation
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

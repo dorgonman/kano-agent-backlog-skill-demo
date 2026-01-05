@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0007
+uid: 019b8f52-9f5f-7471-bb12-b4b8522e4a92
 type: Task
-title: "Prototype tool invocation logger with redaction"
+title: Prototype tool invocation logger with redaction
 state: Done
 priority: P2
 parent: KABSD-USR-0002
 area: infra
 iteration: null
-tags: ["logging", "redaction", "tools"]
+tags:
+- logging
+- redaction
+- tools
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

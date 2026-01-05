@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0052
+uid: 019b8f52-9fbf-7945-b68c-fb780e1a27c5
 type: Task
-title: "Default SQLite index artifacts to _kano/backlog/_index and gitignore"
+title: Default SQLite index artifacts to _kano/backlog/_index and gitignore
 state: Done
 priority: P3
 parent: KABSD-USR-0012
 area: storage
 iteration: null
-tags: ["sqlite", "index", "gitignore"]
+tags:
+- sqlite
+- index
+- gitignore
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0049
+uid: 019b8f52-9fb9-7575-bfe5-0afbe14543ad
 type: Task
-title: "Document file-first + DB index architecture and trade-offs"
+title: Document file-first + DB index architecture and trade-offs
 state: Proposed
 priority: P3
 parent: KABSD-FTR-0007
 area: docs
 iteration: null
-tags: ["docs", "db", "index", "adr"]
+tags:
+- docs
+- db
+- index
+- adr
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

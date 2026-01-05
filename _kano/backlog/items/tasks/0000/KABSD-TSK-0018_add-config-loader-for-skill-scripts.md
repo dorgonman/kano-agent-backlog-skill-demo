@@ -1,15 +1,17 @@
 ---
 id: KABSD-TSK-0018
+uid: 019b8f52-9f76-75bf-b10e-1925a20a308e
 type: Task
-title: "Add config loader for skill scripts"
+title: Add config loader for skill scripts
 state: Done
 priority: P2
 parent: KABSD-USR-0006
 area: infra
 iteration: null
-tags: ["config"]
+tags:
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

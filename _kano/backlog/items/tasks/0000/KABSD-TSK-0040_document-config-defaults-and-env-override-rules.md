@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0040
+uid: 019b8f52-9fa5-75ff-a81c-f3043dd1d2d8
 type: Task
-title: "Document config defaults and env override rules"
+title: Document config defaults and env override rules
 state: Done
 priority: P2
 parent: KABSD-FTR-0004
 area: docs
 iteration: null
-tags: ["config", "docs"]
+tags:
+- config
+- docs
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

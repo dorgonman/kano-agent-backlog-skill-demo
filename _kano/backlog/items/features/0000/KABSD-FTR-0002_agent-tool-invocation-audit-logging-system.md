@@ -1,15 +1,19 @@
 ---
 id: KABSD-FTR-0002
+uid: 019b8f52-9fde-7162-bd19-e9b8310526fc
 type: Feature
-title: "Agent tool invocation audit logging system"
+title: Agent tool invocation audit logging system
 state: Planned
 priority: P2
 parent: KABSD-EPIC-0001
 area: infra
 iteration: null
-tags: ["logging", "audit", "security"]
+tags:
+- logging
+- audit
+- security
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

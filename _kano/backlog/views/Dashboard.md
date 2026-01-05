@@ -2,6 +2,9 @@
 
 This folder demos three ways to view the same local-first backlog data under `_kano/backlog/items/**`.
 
+Optional: maintain a derived SQLite index under `_kano/backlog/_index/backlog.sqlite3` to speed up queries and
+enable faster dashboard generation. The Markdown files remain the source of truth.
+
 ## 1) Obsidian Dataview (plugin)
 
 - File: `Dashboard_ObsidianDataview.md`
@@ -10,7 +13,7 @@ This folder demos three ways to view the same local-first backlog data under `_k
 
 ## 2) Obsidian Bases (core feature, no plugin)
 
-- File: `Dashboard_ObsidianBase.md`
+- Files: `Dashboard_ObsidianBase.base`, `Dashboard_ObsidianBase_Readme.md`
 - Requires: Obsidian Bases (core feature)
 - Best for: table-style browsing/filtering without extra plugins
 
@@ -20,7 +23,10 @@ This folder demos three ways to view the same local-first backlog data under `_k
 - Requires: none
 - Best for: shareable, deterministic views (can be generated in CI)
 
-Refresh the plain Markdown views:
-- `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-- `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-- `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+Refresh the generated Markdown dashboards (recommended):
+
+- `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+
+This uses `--source auto` by default:
+- prefers SQLite when `index.enabled=true` and the DB exists
+- otherwise falls back to scanning files

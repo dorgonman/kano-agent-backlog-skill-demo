@@ -1,24 +1,32 @@
 ---
 id: KABSD-TSK-0062
+uid: 019b8f52-9fd5-72cf-a484-a9b43d381511
 type: Task
-title: "Collision report and resolver CLI"
+title: Collision report and resolver CLI
 state: Done
 priority: P3
 parent: KABSD-FTR-0001
 area: tooling
 iteration: null
-tags: ["cli", "resolver", "collision", "adr-0003"]
+tags:
+- cli
+- resolver
+- collision
+- adr-0003
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
   jira_key: null
 links:
-  relates: [ADR-0003]
+  relates:
+  - ADR-0003
   blocks: []
-  blocked_by: [KABSD-TSK-0061]
-decisions: [ADR-0003]
+  blocked_by:
+  - KABSD-TSK-0061
+decisions:
+- ADR-0003
 ---
 
 # Context

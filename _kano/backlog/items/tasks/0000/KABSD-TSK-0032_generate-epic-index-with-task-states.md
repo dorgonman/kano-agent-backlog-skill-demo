@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0032
+uid: 019b8f52-9f94-7b88-86ad-cb23ea25bd80
 type: Task
-title: "Generate epic index with task states"
+title: Generate epic index with task states
 state: Done
 priority: P2
 parent: KABSD-FTR-0001
 area: views
 iteration: null
-tags: ["moc", "index"]
+tags:
+- moc
+- index
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

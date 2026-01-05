@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0048
+uid: 019b8f52-9fb6-7a8b-aeda-445ec5ec0eea
 type: Task
-title: "Add config keys for DB index backend selection"
+title: Add config keys for DB index backend selection
 state: Done
 priority: P3
 parent: KABSD-USR-0014
 area: config
 iteration: null
-tags: ["config", "db", "index"]
+tags:
+- config
+- db
+- index
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

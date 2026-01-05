@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0015
+uid: 019b8f52-9f4a-754d-8d3a-81c5e41c131a
 type: UserStory
-title: "Generate embeddings for backlog items (derivative index)"
+title: Generate embeddings for backlog items (derivative index)
 state: Proposed
 priority: P4
 parent: KABSD-FTR-0007
 area: rag
 iteration: null
-tags: ["embedding", "rag", "index"]
+tags:
+- embedding
+- rag
+- index
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

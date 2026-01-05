@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0054
+uid: 019b8f52-9fc3-7523-b50f-66cd321a1865
 type: Task
-title: "Add sqlite index query CLI with presets and safe --sql"
+title: Add sqlite index query CLI with presets and safe --sql
 state: Done
 priority: P3
 parent: KABSD-USR-0017
 area: indexing
 iteration: null
-tags: ["sqlite", "index", "query", "cli"]
+tags:
+- sqlite
+- index
+- query
+- cli
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

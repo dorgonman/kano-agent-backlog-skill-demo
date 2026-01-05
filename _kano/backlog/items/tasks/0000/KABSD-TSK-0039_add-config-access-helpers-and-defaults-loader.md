@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0039
+uid: 019b8f52-9fa3-7ad2-810f-61308dd8166f
 type: Task
-title: "Add config access helpers and defaults loader"
+title: Add config access helpers and defaults loader
 state: Done
 priority: P2
 parent: KABSD-FTR-0004
 area: infra
 iteration: null
-tags: ["config", "helpers"]
+tags:
+- config
+- helpers
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

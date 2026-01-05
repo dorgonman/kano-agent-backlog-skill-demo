@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0003
+uid: 019b8f52-9f32-7f54-9da0-1b2cc09767a2
 type: UserStory
-title: "Log storage, rotation, and retention policy"
+title: Log storage, rotation, and retention policy
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0002
 area: infra
 iteration: null
-tags: ["logging", "rotation"]
+tags:
+- logging
+- rotation
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

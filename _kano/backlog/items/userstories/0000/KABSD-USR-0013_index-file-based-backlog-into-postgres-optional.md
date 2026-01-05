@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0013
+uid: 019b8f52-9f46-7db6-9a2a-f45bdee6beed
 type: UserStory
-title: "Index file-based backlog into Postgres (optional)"
+title: Index file-based backlog into Postgres (optional)
 state: Proposed
 priority: P4
 parent: KABSD-FTR-0007
 area: storage
 iteration: null
-tags: ["db", "index", "postgres"]
+tags:
+- db
+- index
+- postgres
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

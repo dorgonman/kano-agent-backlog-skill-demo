@@ -1,15 +1,20 @@
 ---
 id: KABSD-TSK-0063
+uid: 019b8f52-9fd7-7177-87fd-fe017ba70fd6
 type: Task
-title: "Make generate_view use SQLite index when available (fallback to file scan)"
+title: Make generate_view use SQLite index when available (fallback to file scan)
 state: Done
 priority: P3
 parent: KABSD-USR-0016
 area: views
 iteration: null
-tags: ["views", "sqlite", "index", "auto"]
+tags:
+- views
+- sqlite
+- index
+- auto
 created: 2026-01-06
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

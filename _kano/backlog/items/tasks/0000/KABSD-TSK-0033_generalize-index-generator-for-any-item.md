@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0033
+uid: 019b8f52-9f97-7ac0-ac03-fec58a4f7e10
 type: Task
-title: "Generalize index generator for any item"
+title: Generalize index generator for any item
 state: Done
 priority: P2
 parent: KABSD-FTR-0001
 area: views
 iteration: null
-tags: ["moc", "index"]
+tags:
+- moc
+- index
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

@@ -1,6 +1,6 @@
 # Dashboard (Plain Markdown)
 
-This is the “no plugin” dashboard: pure Markdown links that work in any editor and render in Obsidian without Dataview/Bases.
+This is the "no plugin" dashboard: pure Markdown links that work in any editor and render in Obsidian without Dataview/Bases.
 
 ## Generated views
 
@@ -16,9 +16,13 @@ This is the “no plugin” dashboard: pure Markdown links that work in any edit
 
 
 To refresh:
-- `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-- `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-- `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+- Recommended (refresh all standard dashboards; uses SQLite index when available, otherwise scans files):
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+
+- Or generate a single dashboard file:
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --source auto --groups "New,InProgress" --title "InProgress Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --source auto --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --source auto --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
 
 ## Browse by type (folders)
 
@@ -33,5 +37,4 @@ To refresh:
 - ADRs: `../decisions/`
 
 For hierarchy navigation, open an Epic MOC file (`*.index.md`) under `../items/epics/**/`.
-
 

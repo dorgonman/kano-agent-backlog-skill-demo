@@ -1,15 +1,17 @@
 ---
 id: KABSD-TSK-0028
+uid: 019b8f52-9f8b-78a3-b89d-e59f91395077
 type: Task
-title: "Ignore demo artifacts in git"
+title: Ignore demo artifacts in git
 state: Done
 priority: P2
 parent: KABSD-FTR-0003
 area: repo
 iteration: null
-tags: ["gitignore"]
+tags:
+- gitignore
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

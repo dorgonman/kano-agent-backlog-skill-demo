@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0009
+uid: 019b8f52-9f63-7f6b-aeb4-1fdd6f55214c
 type: Task
-title: "Implement backlog scaffold initializer script"
+title: Implement backlog scaffold initializer script
 state: Done
 priority: P2
 parent: KABSD-USR-0004
 area: skill
 iteration: null
-tags: ["scripts", "bootstrap"]
+tags:
+- scripts
+- bootstrap
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

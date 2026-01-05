@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0030
+uid: 019b8f52-9f90-7fa8-8c10-f155177d08c1
 type: Task
-title: "Require explicit agent identity in script worklogs"
+title: Require explicit agent identity in script worklogs
 state: Done
 priority: P2
 parent: KABSD-FTR-0005
 area: compliance
 iteration: null
-tags: ["agent", "identity"]
+tags:
+- agent
+- identity
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

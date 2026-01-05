@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0007
+uid: 019b8f52-9f3a-70c5-909a-5cc44939b75a
 type: UserStory
-title: "Support log verbosity and debug flags in config"
+title: Support log verbosity and debug flags in config
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0004
 area: infra
 iteration: null
-tags: ["config", "logging"]
+tags:
+- config
+- logging
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

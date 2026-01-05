@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0022
+uid: 019b8f52-9f7e-7ac3-8cc3-ba3ee1518522
 type: Task
-title: "Draft initial process profiles (Agile/Scrum/CMMI)"
+title: Draft initial process profiles (Agile/Scrum/CMMI)
 state: Done
 priority: P3
 parent: KABSD-USR-0008
 area: process
 iteration: null
-tags: ["process", "config"]
+tags:
+- process
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

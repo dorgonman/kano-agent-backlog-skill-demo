@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0002
+uid: 019b8f52-9f30-7015-8bcc-ab97922d4dfb
 type: UserStory
-title: "Capture tool invocations with redaction and replayable commands"
+title: Capture tool invocations with redaction and replayable commands
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0002
 area: infra
 iteration: null
-tags: ["logging", "audit", "redaction"]
+tags:
+- logging
+- audit
+- redaction
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

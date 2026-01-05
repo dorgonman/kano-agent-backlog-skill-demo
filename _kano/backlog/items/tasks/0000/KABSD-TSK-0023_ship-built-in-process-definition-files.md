@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0023
+uid: 019b8f52-9f81-7735-9b7d-464d6f39a59f
 type: Task
-title: "Ship built-in process definition files"
+title: Ship built-in process definition files
 state: Done
 priority: P3
 parent: KABSD-USR-0009
 area: process
 iteration: null
-tags: ["process", "config"]
+tags:
+- process
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

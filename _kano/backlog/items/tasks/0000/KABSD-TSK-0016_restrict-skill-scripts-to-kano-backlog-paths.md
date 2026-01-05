@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0016
+uid: 019b8f52-9f72-7fb7-889f-fc1e745096dd
 type: Task
-title: "Restrict skill scripts to _kano/backlog paths"
+title: Restrict skill scripts to _kano/backlog paths
 state: Done
 priority: P2
 parent: KABSD-USR-0002
 area: infra
 iteration: null
-tags: ["logging", "guardrails"]
+tags:
+- logging
+- guardrails
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

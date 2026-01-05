@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0047
+uid: 019b8f52-9fb4-7a61-ba45-ece0baae7d58
 type: Task
-title: "Implement sqlite indexer (import + rebuild + incremental)"
+title: Implement sqlite indexer (import + rebuild + incremental)
 state: Done
 priority: P3
 parent: KABSD-USR-0012
 area: storage
 iteration: null
-tags: ["sqlite", "db", "index"]
+tags:
+- sqlite
+- db
+- index
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: codex
 external:
   azure_id: null

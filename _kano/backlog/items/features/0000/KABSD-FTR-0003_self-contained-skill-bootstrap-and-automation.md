@@ -1,15 +1,19 @@
 ---
 id: KABSD-FTR-0003
+uid: 019b8f52-9fe0-7c6c-84da-bda8855e540b
 type: Feature
-title: "Self-contained skill bootstrap and automation"
+title: Self-contained skill bootstrap and automation
 state: InProgress
 priority: P2
 parent: KABSD-EPIC-0001
 area: skill
 iteration: null
-tags: ["self-contained", "bootstrap", "scripts"]
+tags:
+- self-contained
+- bootstrap
+- scripts
 created: 2026-01-04
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

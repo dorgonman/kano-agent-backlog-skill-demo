@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0006
+uid: 019b8f52-9f5c-7619-8679-db8ed0d5ccc4
 type: Task
-title: "Define audit log schema and redaction rules"
+title: Define audit log schema and redaction rules
 state: Done
 priority: P2
 parent: KABSD-USR-0002
 area: infra
 iteration: null
-tags: ["logging", "redaction", "schema"]
+tags:
+- logging
+- redaction
+- schema
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

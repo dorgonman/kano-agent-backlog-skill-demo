@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0035
+uid: 019b8f52-9f9b-7e7b-ab99-aa92296ce695
 type: Task
-title: "Verify agent compliance with skill workflow"
+title: Verify agent compliance with skill workflow
 state: Ready
 priority: P1
 parent: KABSD-FTR-0005
 area: compliance
 iteration: null
-tags: ["verification", "compliance"]
+tags:
+- verification
+- compliance
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

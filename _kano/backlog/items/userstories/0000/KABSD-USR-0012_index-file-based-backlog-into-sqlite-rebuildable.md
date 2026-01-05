@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0012
+uid: 019b8f52-9f44-74fb-a294-f102b5795be2
 type: UserStory
-title: "Index file-based backlog into SQLite (rebuildable)"
+title: Index file-based backlog into SQLite (rebuildable)
 state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: storage
 iteration: null
-tags: ["db", "index", "sqlite"]
+tags:
+- db
+- index
+- sqlite
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

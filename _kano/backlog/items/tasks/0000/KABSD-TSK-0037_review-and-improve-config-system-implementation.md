@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0037
+uid: 019b8f52-9f9f-767e-9ebd-d5eb78471a26
 type: Task
-title: "Review and improve config system implementation"
+title: Review and improve config system implementation
 state: Dropped
 priority: P2
 parent: KABSD-FTR-0004
 area: infra
 iteration: null
-tags: ["config", "review", "improvement"]
+tags:
+- config
+- review
+- improvement
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

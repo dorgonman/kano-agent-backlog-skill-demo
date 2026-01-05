@@ -1,15 +1,19 @@
 ---
 id: KABSD-TSK-0057
+uid: 019b8f52-9fca-7342-b937-49a5fe135f04
 type: Task
-title: "Prototype local embedding index writer (no provider dependency)"
+title: Prototype local embedding index writer (no provider dependency)
 state: Proposed
 priority: P4
 parent: KABSD-USR-0015
 area: rag
 iteration: null
-tags: ["embedding", "rag", "local"]
+tags:
+- embedding
+- rag
+- local
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

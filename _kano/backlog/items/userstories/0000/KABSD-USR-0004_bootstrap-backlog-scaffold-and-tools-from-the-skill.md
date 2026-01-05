@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0004
+uid: 019b8f52-9f34-7f5c-9722-6de907b1fc86
 type: UserStory
-title: "Bootstrap backlog scaffold and tools from the skill"
+title: Bootstrap backlog scaffold and tools from the skill
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0003
 area: skill
 iteration: null
-tags: ["self-contained", "bootstrap"]
+tags:
+- self-contained
+- bootstrap
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

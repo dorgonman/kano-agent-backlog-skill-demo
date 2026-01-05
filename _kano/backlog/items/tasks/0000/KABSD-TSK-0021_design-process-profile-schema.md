@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0021
+uid: 019b8f52-9f7c-72fb-a59c-3383c588edf2
 type: Task
-title: "Design process profile schema"
+title: Design process profile schema
 state: Done
 priority: P3
 parent: KABSD-USR-0008
 area: process
 iteration: null
-tags: ["process", "config"]
+tags:
+- process
+- config
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

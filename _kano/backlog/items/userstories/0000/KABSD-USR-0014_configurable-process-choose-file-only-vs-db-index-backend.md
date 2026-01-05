@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0014
+uid: 019b8f52-9f48-76b8-9dc8-4f30158a09f7
 type: UserStory
-title: "Configurable process: choose file-only vs DB index backend"
+title: 'Configurable process: choose file-only vs DB index backend'
 state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: storage
 iteration: null
-tags: ["config", "db", "index"]
+tags:
+- config
+- db
+- index
 created: 2026-01-05
-updated: 2026-01-05
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

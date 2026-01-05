@@ -101,7 +101,11 @@ Sort:
 ## Notes
 
 - If nested filters are not supported in your Bases version (e.g. `Tasks + Bugs`), split it into two views: `Tasks` and `Bugs`.
-- If you want a zero-UI, shareable artifact, use the generator:
-  - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+- If you want a zero-UI, shareable artifact, generate Markdown dashboards via skill scripts (index-aware):
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+- In Obsidian, you can embed the generated dashboards in any note:
+  - `![[Dashboard_PlainMarkdown_New.md]]`
+  - `![[Dashboard_PlainMarkdown_Active.md]]`
+  - `![[Dashboard_PlainMarkdown_Done.md]]`
 - For hierarchy browsing, use the Epic MOC:
   - `_kano/backlog/items/epics/**/<ID>_<slug>.index.md`

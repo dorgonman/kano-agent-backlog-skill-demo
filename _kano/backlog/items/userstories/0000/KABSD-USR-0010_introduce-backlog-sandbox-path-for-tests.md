@@ -1,15 +1,18 @@
 ---
 id: KABSD-USR-0010
+uid: 019b8f52-9f40-7400-ac72-b640f7a14995
 type: UserStory
-title: "Introduce backlog sandbox path for tests"
+title: Introduce backlog sandbox path for tests
 state: Proposed
 priority: P2
 parent: KABSD-FTR-0004
 area: testing
 iteration: null
-tags: ["sandbox", "tests"]
+tags:
+- sandbox
+- tests
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

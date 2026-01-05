@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0029
+uid: 019b8f52-9f8e-7e4d-9da4-efa68a841408
 type: Task
-title: "Refresh demo dashboard views"
+title: Refresh demo dashboard views
 state: Done
 priority: P2
 parent: KABSD-USR-0005
 area: views
 iteration: null
-tags: ["views", "dashboard"]
+tags:
+- views
+- dashboard
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

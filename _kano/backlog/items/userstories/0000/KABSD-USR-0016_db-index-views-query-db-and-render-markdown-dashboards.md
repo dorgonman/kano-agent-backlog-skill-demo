@@ -1,15 +1,19 @@
 ---
 id: KABSD-USR-0016
+uid: 019b8f52-9f4d-76e3-9943-5fe43d030141
 type: UserStory
-title: "DB-index views: query DB and render Markdown dashboards"
+title: 'DB-index views: query DB and render Markdown dashboards'
 state: Done
 priority: P4
 parent: KABSD-FTR-0007
 area: views
 iteration: null
-tags: ["db", "views", "markdown"]
+tags:
+- db
+- views
+- markdown
 created: 2026-01-05
-updated: 2026-01-06
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null

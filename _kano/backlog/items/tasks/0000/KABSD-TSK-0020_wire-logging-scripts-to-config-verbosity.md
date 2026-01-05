@@ -1,15 +1,18 @@
 ---
 id: KABSD-TSK-0020
+uid: 019b8f52-9f7a-74c1-944d-cda92ab56997
 type: Task
-title: "Wire logging scripts to config verbosity"
+title: Wire logging scripts to config verbosity
 state: Done
 priority: P2
 parent: KABSD-USR-0007
 area: infra
 iteration: null
-tags: ["config", "logging"]
+tags:
+- config
+- logging
 created: 2026-01-04
-updated: 2026-01-04
+updated: '2026-01-06'
 owner: null
 external:
   azure_id: null
