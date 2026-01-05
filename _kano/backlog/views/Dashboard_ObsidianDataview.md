@@ -4,6 +4,19 @@ This is the Dataview-based dashboard example. It requires the Obsidian Dataview 
 
 Done/Dropped items are hidden by default (view-level archive).
 
+## Index-aware generated dashboards (optional)
+
+If you maintain a SQLite index, prefer generating Markdown dashboards via skill scripts so they are
+auditable and can fall back to file scan when the DB is missing/stale:
+
+- `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+
+In Obsidian, you can embed the generated dashboards:
+
+- ![[Dashboard_PlainMarkdown_New.md]]
+- ![[Dashboard_PlainMarkdown_Active.md]]
+- ![[Dashboard_PlainMarkdown_Done.md]]
+
 ## Epics
 
 ```dataview

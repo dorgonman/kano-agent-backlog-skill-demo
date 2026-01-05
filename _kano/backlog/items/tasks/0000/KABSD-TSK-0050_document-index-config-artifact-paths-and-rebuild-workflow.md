@@ -2,15 +2,15 @@
 id: KABSD-TSK-0050
 type: Task
 title: "Document index config, artifact paths, and rebuild workflow"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: docs
 iteration: null
 tags: ["docs", "index", "config"]
 created: 2026-01-05
-updated: 2026-01-05
-owner: null
+updated: 2026-01-06
+owner: codex
 external:
   azure_id: null
   jira_key: null
@@ -56,3 +56,6 @@ Document how to enable the optional index layer and how to manage its artifacts 
 # Worklog
 
 2026-01-05 13:22 [agent=codex] Created from template.
+2026-01-06 01:00 [agent=codex] State -> Ready. Ready gate validated for indexing documentation.
+2026-01-06 01:01 [agent=codex] State -> InProgress. Writing references/indexing.md and updating REFERENCE.md.
+2026-01-06 01:01 [agent=codex] State -> Done. Added references/indexing.md and updated REFERENCE.md with indexing layer docs (file-first default, artifacts, config, rebuild).

@@ -1,16 +1,22 @@
 # Done Work
 
-Generated: 2026-01-05 23:50
-Source: _kano/backlog/items
+Generated: 2026-01-06 01:36
+Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## Done
+
+### Features
+
+- [KABSD-FTR-0005 Verify agent compliance](../items/features/0000/KABSD-FTR-0005_verify-agent-compliance.md)
 
 ### UserStories
 
 - [KABSD-USR-0005 Seed demo data and views from the skill](../items/userstories/0000/KABSD-USR-0005_seed-demo-data-and-views-from-the-skill.md)
 - [KABSD-USR-0009 Ship built-in process definitions and select via config](../items/userstories/0000/KABSD-USR-0009_ship-built-in-process-definitions-and-select-via-config.md)
+- [KABSD-USR-0011 Enforce Agent Identity in Skill](../items/userstories/0000/KABSD-USR-0011_enforce-agent-identity-in-skill.md)
 - [KABSD-USR-0012 Index file-based backlog into SQLite (rebuildable)](../items/userstories/0000/KABSD-USR-0012_index-file-based-backlog-into-sqlite-rebuildable.md)
 - [KABSD-USR-0014 Configurable process: choose file-only vs DB index backend](../items/userstories/0000/KABSD-USR-0014_configurable-process-choose-file-only-vs-db-index-backend.md)
+- [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstories/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 
 ### Tasks
 
@@ -42,6 +48,13 @@ Source: _kano/backlog/items
 - [KABSD-TSK-0026 Update test scripts to use backlog sandbox](../items/tasks/0000/KABSD-TSK-0026_update-test-scripts-to-use-backlog-sandbox.md)
 - [KABSD-TSK-0027 Add user story validation test script](../items/tasks/0000/KABSD-TSK-0027_add-user-story-validation-test-script.md)
 - [KABSD-TSK-0028 Ignore demo artifacts in git](../items/tasks/0000/KABSD-TSK-0028_ignore-demo-artifacts-in-git.md)
+- [KABSD-TSK-0029 Refresh demo dashboard views](../items/tasks/0000/KABSD-TSK-0029_refresh-demo-dashboard-views.md)
+- [KABSD-TSK-0030 Require explicit agent identity in script worklogs](../items/tasks/0000/KABSD-TSK-0030_require-explicit-agent-identity-in-script-worklogs.md)
+- [KABSD-TSK-0031 Update documentation files](../items/tasks/0000/KABSD-TSK-0031_update-documentation-files.md)
+- [KABSD-TSK-0032 Generate epic index with task states](../items/tasks/0000/KABSD-TSK-0032_generate-epic-index-with-task-states.md)
+- [KABSD-TSK-0033 Generalize index generator for any item](../items/tasks/0000/KABSD-TSK-0033_generalize-index-generator-for-any-item.md)
+- [KABSD-TSK-0034 Show state labels for all index items and drop epic aliases](../items/tasks/0000/KABSD-TSK-0034_show-state-labels-for-all-index-items-and-drop-epic-aliases.md)
+- [KABSD-TSK-0036 Sync parent state from child status changes](../items/tasks/0000/KABSD-TSK-0036_sync-parent-state-from-child-status-changes.md)
 - [KABSD-TSK-0037 Review and improve config system implementation](../items/tasks/0000/KABSD-TSK-0037_review-and-improve-config-system-implementation.md)
 - [KABSD-TSK-0038 Review and improve config system implementation](../items/tasks/0000/KABSD-TSK-0038_review-and-improve-config-system-implementation.md)
 - [KABSD-TSK-0039 Add config access helpers and defaults loader](../items/tasks/0000/KABSD-TSK-0039_add-config-access-helpers-and-defaults-loader.md)
@@ -54,6 +67,11 @@ Source: _kano/backlog/items
 - [KABSD-TSK-0046 Define DB index schema (items, links, worklog, decisions)](../items/tasks/0000/KABSD-TSK-0046_define-db-index-schema-items-links-worklog-decisions.md)
 - [KABSD-TSK-0047 Implement sqlite indexer (import + rebuild + incremental)](../items/tasks/0000/KABSD-TSK-0047_implement-sqlite-indexer-import-rebuild-incremental.md)
 - [KABSD-TSK-0048 Add config keys for DB index backend selection](../items/tasks/0000/KABSD-TSK-0048_add-config-keys-for-db-index-backend-selection.md)
+- [KABSD-TSK-0050 Document index config, artifact paths, and rebuild workflow](../items/tasks/0000/KABSD-TSK-0050_document-index-config-artifact-paths-and-rebuild-workflow.md)
+- [KABSD-TSK-0051 Extend validate_userstories to cover DB index and embeddings stories](../items/tasks/0000/KABSD-TSK-0051_extend-validate-userstories-to-cover-db-index-and-embeddings-stories.md)
 - [KABSD-TSK-0052 Default SQLite index artifacts to _kano/backlog/_index and gitignore](../items/tasks/0000/KABSD-TSK-0052_default-sqlite-index-artifacts-to-kano-backlog-index-and-gitignore.md)
 - [KABSD-TSK-0053 Support sandbox backlog-root mode in SQLite indexer config resolution](../items/tasks/0000/KABSD-TSK-0053_support-sandbox-backlog-root-mode-in-sqlite-indexer-config-resolution.md)
+- [KABSD-TSK-0054 Add sqlite index query CLI with presets and safe --sql](../items/tasks/0000/KABSD-TSK-0054_add-sqlite-index-query-cli-with-presets-and-safe-sql.md)
+- [KABSD-TSK-0058 agent compliance test](../items/tasks/0000/KABSD-TSK-0058_agent-compliance-test.md)
+- [KABSD-TSK-0059 ULID vs UUIDv7 comparison document](../items/tasks/0000/KABSD-TSK-0059_ulid-vs-uuidv7-comparison.md)
 

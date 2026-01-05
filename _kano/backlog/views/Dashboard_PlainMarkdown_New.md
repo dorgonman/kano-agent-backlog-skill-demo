@@ -1,7 +1,7 @@
 # New Work
 
-Generated: 2026-01-05 23:50
-Source: _kano/backlog/items
+Generated: 2026-01-06 01:45
+Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## New
 
@@ -9,6 +9,7 @@ Source: _kano/backlog/items
 
 - [KABSD-FTR-0001 Local-first backlog system](../items/features/0000/KABSD-FTR-0001_local-backlog-system.md)
 - [KABSD-FTR-0002 Agent tool invocation audit logging system](../items/features/0000/KABSD-FTR-0002_agent-tool-invocation-audit-logging-system.md)
+- [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/features/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
 
 ### UserStories
 
@@ -22,16 +23,14 @@ Source: _kano/backlog/items
 - [KABSD-USR-0010 Introduce backlog sandbox path for tests](../items/userstories/0000/KABSD-USR-0010_introduce-backlog-sandbox-path-for-tests.md)
 - [KABSD-USR-0013 Index file-based backlog into Postgres (optional)](../items/userstories/0000/KABSD-USR-0013_index-file-based-backlog-into-postgres-optional.md)
 - [KABSD-USR-0015 Generate embeddings for backlog items (derivative index)](../items/userstories/0000/KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md)
-- [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstories/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
-- [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstories/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 
 ### Tasks
 
+- [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/tasks/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
 - [KABSD-TSK-0049 Document file-first + DB index architecture and trade-offs](../items/tasks/0000/KABSD-TSK-0049_document-file-first-db-index-architecture-and-trade-offs.md)
-- [KABSD-TSK-0050 Document index config, artifact paths, and rebuild workflow](../items/tasks/0000/KABSD-TSK-0050_document-index-config-artifact-paths-and-rebuild-workflow.md)
-- [KABSD-TSK-0051 Extend validate_userstories to cover DB index and embeddings stories](../items/tasks/0000/KABSD-TSK-0051_extend-validate-userstories-to-cover-db-index-and-embeddings-stories.md)
-- [KABSD-TSK-0054 Add sqlite index query CLI with presets and safe --sql](../items/tasks/0000/KABSD-TSK-0054_add-sqlite-index-query-cli-with-presets-and-safe-sql.md)
-- [KABSD-TSK-0055 Generate Markdown views from SQLite index queries](../items/tasks/0000/KABSD-TSK-0055_generate-markdown-views-from-sqlite-index-queries.md)
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../items/tasks/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
+- [KABSD-TSK-0060 Migration plan: add uid to existing items](../items/tasks/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
+- [KABSD-TSK-0061 ID resolver spec and design](../items/tasks/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
+- [KABSD-TSK-0062 Collision report and resolver CLI](../items/tasks/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 

@@ -2,14 +2,14 @@
 id: KABSD-USR-0016
 type: UserStory
 title: "DB-index views: query DB and render Markdown dashboards"
-state: Proposed
+state: Done
 priority: P4
 parent: KABSD-FTR-0007
 area: views
 iteration: null
 tags: ["db", "views", "markdown"]
 created: 2026-01-05
-updated: 2026-01-05
+updated: 2026-01-06
 owner: null
 external:
   azure_id: null
@@ -48,3 +48,6 @@ As a user, I want to generate Markdown dashboards from DB queries so I can revie
 # Worklog
 
 2026-01-05 08:30 [agent=codex] Created from template.
+2026-01-06 01:20 [agent=codex] Auto-sync from child KABSD-TSK-0055 -> Planned.
+2026-01-06 01:20 [agent=codex] Auto-sync from child KABSD-TSK-0055 -> InProgress.
+2026-01-06 01:22 [agent=codex] Auto-sync from child KABSD-TSK-0055 -> Done.

@@ -2,14 +2,14 @@
 id: KABSD-USR-0017
 type: UserStory
 title: "Query the SQLite index via skill scripts (read-only)"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-FTR-0007
 area: indexing
 iteration: null
 tags: ["sqlite", "index", "query", "script"]
 created: 2026-01-05
-updated: 2026-01-05
+updated: 2026-01-06
 owner: null
 external:
   azure_id: null
@@ -51,3 +51,6 @@ As an agent/user, I want a read-only query script (with presets) so I can quickl
 # Worklog
 
 2026-01-05 16:21 [agent=codex] Created from template.
+2026-01-06 01:02 [agent=codex] Auto-sync from child KABSD-TSK-0054 -> Planned.
+2026-01-06 01:02 [agent=codex] Auto-sync from child KABSD-TSK-0054 -> InProgress.
+2026-01-06 01:04 [agent=codex] Auto-sync from child KABSD-TSK-0054 -> Done.

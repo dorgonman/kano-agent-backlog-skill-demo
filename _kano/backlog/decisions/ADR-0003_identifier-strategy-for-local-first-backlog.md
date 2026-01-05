@@ -3,7 +3,7 @@ id: ADR-0003
 title: "Identifier strategy: sortable IDs without centralized allocation"
 status: Accepted
 date: 2026-01-05
-related_items: [KABSD-FTR-0001, KABSD-FTR-0007]
+related_items: [KABSD-FTR-0001, KABSD-FTR-0007, KABSD-TSK-0059, KABSD-TSK-0060, KABSD-TSK-0061, KABSD-TSK-0062]
 supersedes: null
 superseded_by: null
 ---
@@ -15,7 +15,7 @@ centralized server for identifier allocation.
 
 Adopt a **hybrid identifier strategy**:
 
-- `uid` is the immutable primary key (globally unique). Pick **one**: ULID or UUIDv7 (TBD).
+- `uid` is the immutable primary key (globally unique). **Format: UUIDv7** (36 chars, hex, 48-bit timestamp + 74-bit random, RFC 9562).
 - `id` is a human-readable display ID (sortable, short), and **may collide** across machines/branches.
 - Filenames must include `uidshort` to avoid git `add/add` conflicts when `id` collides.
 - Any reference resolution using `id` must go through a resolver that can disambiguate.
@@ -71,15 +71,23 @@ This is the target schema for distributed-safe identifiers (migration required; 
 
 ## Filename and path
 
-To avoid git `add/add` conflicts when two branches create the same display `id`, filenames must be unique:
+To avoid git `add/add` conflicts when two branches create the same display `id`, filenames should be unique.
 
-- Recommended format: `<id>__<uidshort>_<slug>.md`
-- Example: `KANO-000123__01KE72EH4N_implement-backlog-indexing.md`
+**Current format** (sufficient for most cases):
+- `<id>_<slug>.md`
+- Example: `KABSD-TSK-0100_implement-backlog-indexing.md`
+
+Since the slug is derived from the title and describes the item's purpose, collision risk is minimal in practice. Two items would need identical `id` AND identical slug to conflict.
+
+**Optional extended format** (for high-concurrency scenarios):
+- `<id>__<uidshort>_<slug>.md`
+- Example: `KABSD-TSK-0100__01KE72EH4N_implement-backlog-indexing.md`
 
 `uidshort` is a stable prefix (fixed length) derived from `uid`:
-
 - ULID: prefix of the ULID (timestamp portion is convenient)
 - UUIDv7: prefix of the hex string (length TBD, e.g. 8-12)
+
+**Decision (2026-01-06)**: Filename format remains unchanged (`<id>_<slug>.md`). The `uid` field is added to frontmatter only; renaming existing files is not required.
 
 ## Resolver semantics (reference handling)
 
@@ -113,7 +121,10 @@ When asked "next / what to do next":
 
 # Open Questions / Follow-ups
 
-- Choose ULID vs UUIDv7 (sorting, readability, library support, collision safety, short-prefix length).
-- Migration plan for existing `id`-only items (add `uid`, update filenames, update parent/link references).
+- ~~Choose ULID vs UUIDv7 (sorting, readability, library support, collision safety, short-prefix length).~~
+  - **Resolved (2026-01-06)**: Use UUIDv7. See [[ADR-0003-appendix_ulid-vs-uuidv7-comparison|Comparison Document]].
+  - Rationale: IETF standardized (RFC 9562), native Python 3.12+ support planned, compatible with existing UUID infrastructure.
+  - uidshort length: 8 characters (hex prefix) recommended.
+- Migration plan for existing `id`-only items (add `uid` to frontmatter, filenames unchanged).
 - Should we store both `parent` (id) and `parent_uid` during migration, or hard cutover to `uid`?
 - Add a collision report (group by display `id`) and a resolver UI/CLI for disambiguation.

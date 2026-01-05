@@ -47,6 +47,10 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 - ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy: sortable IDs without centralized allocation]]
 - Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
 - UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
+- Task: [[KABSD-TSK-0059_ulid-vs-uuidv7-comparison|KABSD-TSK-0059 ULID vs UUIDv7 comparison]]
+- Task: [[KABSD-TSK-0060_migration-plan-add-uid-to-existing-items|KABSD-TSK-0060 Migration plan: add uid to existing items]]
+- Task: [[KABSD-TSK-0061_id-resolver-spec-and-design|KABSD-TSK-0061 ID resolver spec and design]]
+- Task: [[KABSD-TSK-0062_collision-report-and-resolver-cli|KABSD-TSK-0062 Collision report and resolver CLI]]
 
 # Alternatives
 
@@ -75,3 +79,5 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 2026-01-05 01:12 [agent=codex] Linked ADR-0002 for decision handling approach.
 
 2026-01-05 13:55 [agent=codex] Linked ADR-0003 to capture ID/uid strategy trade-offs for local-first collaboration.
+
+2026-01-06 00:36 [agent=antigravity] Added TSK-0059/0060/0061/0062 for ADR-0003 follow-ups: ULID vs UUIDv7 comparison, migration plan (frontmatter uid only), ID resolver spec, collision report CLI.

@@ -2,15 +2,15 @@
 id: KABSD-TSK-0051
 type: Task
 title: "Extend validate_userstories to cover DB index and embeddings stories"
-state: Proposed
+state: Done
 priority: P4
 parent: KABSD-FTR-0007
 area: tests
 iteration: null
 tags: ["tests", "index", "rag"]
 created: 2026-01-05
-updated: 2026-01-05
-owner: null
+updated: 2026-01-06
+owner: codex
 external:
   azure_id: null
   jira_key: null
@@ -53,3 +53,6 @@ Extend script-level validation so the repo can detect missing artifacts/docs for
 # Worklog
 
 2026-01-05 13:22 [agent=codex] Created from template.
+2026-01-06 01:04 [agent=codex] State -> Ready. Ready gate validated for extending validate_userstories.
+2026-01-06 01:04 [agent=codex] State -> InProgress. Updating validate_userstories.py to cover USR-0012~0017 baseline artifacts.
+2026-01-06 01:05 [agent=codex] State -> Done. Extended validate_userstories.py to cover indexing docs/scripts and index config keys; script passes on demo repo.
