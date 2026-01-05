@@ -2,7 +2,7 @@
 id: KABSD-EPIC-0001
 type: Epic
 title: "Kano Agent Backlog Skill Demo"
-state: Planned
+state: InProgress
 priority: P1
 parent: null
 area: demo
@@ -68,3 +68,4 @@ Create and link the demo Feature/UserStory/Tasks under this Epic.
 2026-01-04 13:55 [agent=codex] Added feature for self-contained skill bootstrap and automation.
 
 2026-01-05 01:25 [agent=codex] Auto-sync from child KABSD-TSK-0037 -> Planned.
+2026-01-05 01:39 [agent=codex] Auto-sync from child KABSD-TSK-0039 -> InProgress.

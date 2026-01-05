@@ -2,14 +2,14 @@
 id: KABSD-USR-0009
 type: UserStory
 title: "Ship built-in process definitions and select via config"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-FTR-0004
 area: process
 iteration: null
 tags: ["config", "process"]
 created: 2026-01-04
-updated: 2026-01-04
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -65,3 +65,6 @@ teams can adopt a profile quickly.
 
 2026-01-04 18:18 [agent=codex] Created story for built-in process definitions selection.
 2026-01-04 18:36 [agent=codex] Added scope, approach, and linked tasks for built-in profiles.
+2026-01-05 02:06 [agent=codex] Auto-sync from child KABSD-TSK-0042 -> Planned.
+2026-01-05 02:07 [agent=codex] Auto-sync from child KABSD-TSK-0042 -> InProgress.
+2026-01-05 02:07 [agent=codex] Auto-sync from child KABSD-TSK-0042 -> Done.

@@ -2,14 +2,14 @@
 id: KABSD-USR-0005
 type: UserStory
 title: "Seed demo data and views from the skill"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-FTR-0003
 area: demo
 iteration: null
 tags: ["self-contained", "demo", "seed"]
 created: 2026-01-04
-updated: 2026-01-04
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -66,3 +66,6 @@ so the demo can be reset quickly.
 
 2026-01-04 13:51 [agent=codex] Created user story for seeding demo data and views.
 2026-01-04 13:55 [agent=codex] Added scope, approach, and linked tasks for demo seeding.
+2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> Planned.
+2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> InProgress.
+2026-01-05 01:50 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> Done.

@@ -19,7 +19,7 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: [ADR-0002]
+decisions: [ADR-0002, ADR-0003]
 ---
 
 # Context
@@ -44,6 +44,7 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 
 
 - ADR: [[_kano/backlog/decisions/ADR-0002_decisions-as-adr-links|ADR-0002 Decision handling: ADRs stay in decisions/ with item links]]
+- ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy: sortable IDs without centralized allocation]]
 - Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
 - UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
 
@@ -72,3 +73,5 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 2026-01-04 00:43 [agent=codex] Rebuilt feature text to align with the kano-agent-backlog-skill demo scope.
 
 2026-01-05 01:12 [agent=codex] Linked ADR-0002 for decision handling approach.
+
+2026-01-05 13:55 [agent=codex] Linked ADR-0003 to capture ID/uid strategy trade-offs for local-first collaboration.

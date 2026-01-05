@@ -2,14 +2,14 @@
 id: KABSD-TSK-0012
 type: Task
 title: "Document self-contained setup and bootstrap scripts"
-state: Proposed
+state: Done
 priority: P3
 parent: KABSD-USR-0005
 area: docs
 iteration: null
 tags: ["docs", "self-contained"]
 created: 2026-01-04
-updated: 2026-01-04
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -59,3 +59,6 @@ Document the self-contained setup flow and the new scripts in the skill docs.
 
 2026-01-04 13:51 [agent=codex] Created task for documenting self-contained setup.
 2026-01-04 13:55 [agent=codex] Added scope and acceptance criteria for documentation updates.
+2026-01-05 01:47 [agent=codex] State -> Ready. Ready gate validated for doc updates.
+2026-01-05 01:47 [agent=codex] State -> InProgress. Updating README and references for self-contained setup.
+2026-01-05 01:50 [agent=codex] State -> Done. Added self-contained bootstrap/seed quickstart to README.md and README.en.md; documented outputs in REFERENCE.md.

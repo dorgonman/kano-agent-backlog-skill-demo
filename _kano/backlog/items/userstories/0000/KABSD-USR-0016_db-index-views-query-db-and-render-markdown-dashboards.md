@@ -1,0 +1,50 @@
+---
+id: KABSD-USR-0016
+type: UserStory
+title: "DB-index views: query DB and render Markdown dashboards"
+state: Proposed
+priority: P4
+parent: KABSD-FTR-0007
+area: views
+iteration: null
+tags: ["db", "views", "markdown"]
+created: 2026-01-05
+updated: 2026-01-05
+owner: null
+external:
+  azure_id: null
+  jira_key: null
+links:
+  relates: []
+  blocks: []
+  blocked_by: []
+decisions: []
+---
+
+# Context
+
+If teams want DB-style querying but still want Markdown dashboards, we can render views from queries.
+
+# Goal
+
+As a user, I want to generate Markdown dashboards from DB queries so I can review work without Obsidian plugins.
+
+# Non-Goals
+
+# Approach
+
+- Add a view generator that queries the DB index and renders stable Markdown files under `_kano/backlog/views/`.
+- Keep the existing file-based `generate_view.py` as the default.
+
+# Alternatives
+
+# Acceptance Criteria
+
+- A script can generate a Markdown dashboard from DB query results.
+- Outputs are reproducible and safe to commit.
+
+# Risks / Dependencies
+
+# Worklog
+
+2026-01-05 08:30 [agent=codex] Created from template.

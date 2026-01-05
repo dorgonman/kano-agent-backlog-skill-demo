@@ -25,7 +25,7 @@ views:
       - property: iteration
       - property: updated
   - type: table
-    name: InProgress Work
+    name: Active Work
     filters:
       or:
         - state == "InProgress"
@@ -129,11 +129,9 @@ views:
     name: Tasks + Bugs
     filters:
       and:
-        - or:
-            - type == "Task"
-            - type == "Bug"
         - state != "Done"
         - state != "Dropped"
+        - type == "Task" or type == "Bug"
     sort:
       - property: type
         direction: ASC
@@ -173,7 +171,7 @@ views:
   - type: table
     name: Blocked
     filters:
-      or:
+      and:
         - state == "Blocked"
     sort:
       - property: priority

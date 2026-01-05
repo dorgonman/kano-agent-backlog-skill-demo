@@ -2,7 +2,7 @@
 id: KABSD-FTR-0004
 type: Feature
 title: "Backlog config system and process profiles"
-state: Planned
+state: InProgress
 priority: P2
 parent: KABSD-EPIC-0001
 area: infra
@@ -71,3 +71,4 @@ toggle logging verbosity/debug behavior, and define a sandbox path for tests.
 2026-01-04 18:18 [agent=codex] Created feature for backlog config system and process profiles.
 2026-01-04 18:26 [agent=codex] Added feature scope and linked user stories for config, process, and sandbox needs.
 2026-01-05 01:26 [agent=codex] Auto-sync from child KABSD-TSK-0038 -> Planned.
+2026-01-05 01:39 [agent=codex] Auto-sync from child KABSD-TSK-0039 -> InProgress.

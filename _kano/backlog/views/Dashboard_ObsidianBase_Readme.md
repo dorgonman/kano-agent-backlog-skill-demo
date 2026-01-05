@@ -27,7 +27,7 @@ Goal: cover the same "table-style" dashboard use cases as Dataview, while keepin
 ## View mapping (for the demo)
 
 - New Work: `Proposed`, `Planned`, `Ready`
-- InProgress Work: `InProgress`, `Review`, `Blocked`
+- Active Work: `InProgress`, `Review`, `Blocked`
 - Done Work: `Done`, `Dropped`
 - Epics/Features/UserStories/Tasks + Bugs: hide `Done` and `Dropped`
 - Ready + InProgress: `Ready`, `InProgress`
@@ -102,6 +102,6 @@ Sort:
 
 - If nested filters are not supported in your Bases version (e.g. `Tasks + Bugs`), split it into two views: `Tasks` and `Bugs`.
 - If you want a zero-UI, shareable artifact, use the generator:
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New,InProgress" --title "InProgress Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+  - `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
 - For hierarchy browsing, use the Epic MOC:
   - `_kano/backlog/items/epics/**/<ID>_<slug>.index.md`

@@ -1,7 +1,9 @@
 _kano/backlog/_logs/
 _kano/backlog/_tmp_tests/
+_kano/backlog/_index/
 _kano/backlog_sandbox/
 _kano/backlog/_trash/
 __pycache__/
 *.py[cod]
 /.obsidian/workspace.json
+.venv

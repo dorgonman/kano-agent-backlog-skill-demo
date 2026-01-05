@@ -2,14 +2,14 @@
 id: KABSD-FTR-0003
 type: Feature
 title: "Self-contained skill bootstrap and automation"
-state: Proposed
+state: InProgress
 priority: P2
 parent: KABSD-EPIC-0001
 area: skill
 iteration: null
 tags: ["self-contained", "bootstrap", "scripts"]
 created: 2026-01-04
-updated: 2026-01-04
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -69,3 +69,5 @@ layout, install tool wrappers, and optionally seed demo views/items.
 
 2026-01-04 13:51 [agent=codex] Created feature for self-contained skill bootstrap and automation.
 2026-01-04 13:55 [agent=codex] Added scope, approach, and linked user stories for self-contained automation.
+2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> Planned.
+2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> InProgress.

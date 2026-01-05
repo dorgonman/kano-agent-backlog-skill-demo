@@ -2,34 +2,7 @@
 
 This is the Dataview-based dashboard example. It requires the Obsidian Dataview plugin.
 
-Done/Dropped items are hidden by default except in the Done Work section.
-
-## New Work
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where (state = "Proposed" or state = "Planned" or state = "Ready")
-sort priority asc, updated desc
-```
-
-## InProgress Work
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where (state = "InProgress" or state = "Review" or state = "Blocked")
-sort priority asc, updated desc
-```
-
-## Done Work
-
-```dataview
-table id, type, state, priority, parent
-from "_kano/backlog/items"
-where (state = "Done" or state = "Dropped")
-sort updated desc
-```
+Done/Dropped items are hidden by default (view-level archive).
 
 ## Epics
 

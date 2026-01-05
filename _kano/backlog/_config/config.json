@@ -10,5 +10,11 @@
   },
   "sandbox": {
     "root": "_kano/backlog_sandbox"
+  },
+  "index": {
+    "enabled": true,
+    "backend": "sqlite",
+    "path": null,
+    "mode": "rebuild"
   }
 }

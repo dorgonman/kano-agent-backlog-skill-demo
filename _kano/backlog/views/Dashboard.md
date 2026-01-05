@@ -10,7 +10,7 @@ This folder demos three ways to view the same local-first backlog data under `_k
 
 ## 2) Obsidian Bases (core feature, no plugin)
 
-- File: `Dashboard_ObsidianBase.base`
+- File: `Dashboard_ObsidianBase.md`
 - Requires: Obsidian Bases (core feature)
 - Best for: table-style browsing/filtering without extra plugins
 
@@ -21,6 +21,6 @@ This folder demos three ways to view the same local-first backlog data under `_k
 - Best for: shareable, deterministic views (can be generated in CI)
 
 Refresh the plain Markdown views:
-- `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New,InProgress" --title "InProgress Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-- `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-- `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+- `python _kano/backlog/tools/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+- `python _kano/backlog/tools/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+- `python _kano/backlog/tools/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
