@@ -3,7 +3,7 @@ id: KABSD-TSK-0079
 uid: 019b93ba-db8a-7965-b77c-a45fac6f7bf7
 type: Task
 title: Create context.py for product-aware path resolution
-state: New
+state: InProgress
 priority: P1
 parent: KABSD-FTR-0010
 area: architecture
@@ -50,15 +50,27 @@ Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a singl
 
 # Acceptance Criteria
 
-- `context.py` exists and is importable: `from scripts.common.context import ...`
-- `find_repo_root()` correctly locates the workspace root.
-- `find_platform_root()` correctly locates `_kano/backlog`.
-- `resolve_product_name(product_arg="test")` returns `"test"`.
-- `resolve_product_name()` with no args returns the default product from `_shared/defaults.json`.
-- `get_product_root("kano-agent-backlog-skill")` returns `<platform_root>/products/kano-agent-backlog-skill`.
-- `get_sandbox_root("test-product")` returns `<platform_root>/sandboxes/test-product`.
-- `load_shared_defaults()` correctly parses JSON and returns a dict.
+- [x] `context.py` exists and is importable: `from scripts.common.context import ...`
+- [x] `find_repo_root()` correctly locates the workspace root.
+- [x] `find_platform_root()` correctly locates `_kano/backlog`.
+- [x] `resolve_product_name(product_arg="test")` returns `"test"`.
+- [x] `resolve_product_name()` with no args returns the default product from `_shared/defaults.json`.
+- [x] `get_product_root("kano-agent-backlog-skill")` returns `<platform_root>/products/kano-agent-backlog-skill`.
+- [x] `get_sandbox_root("test-product")` returns `<platform_root>/sandboxes/test-product`.
+- [x] `load_shared_defaults()` correctly parses JSON and returns a dict.
 
 # Worklog
 
 2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. This is the foundational task for monorepo architecture; blocks TSK-0080, TSK-0082, and TSK-0084.
+
+2026-01-06 21:25 [agent=copilot] **IMPLEMENTATION COMPLETE**: Replaced context.py with comprehensive version including:
+  - `find_repo_root()` with .git search
+  - `find_platform_root()` with validation
+  - `load_shared_defaults()` for JSON parsing
+  - `resolve_product_name()` with 4-tier priority chain
+  - `get_product_root()`, `get_sandbox_root()`, and optional _or_none() variants
+  - Helper functions for items/, decisions/, views/, _config/, _config/config.json
+  - Convenience `get_context()` for single-call resolution
+  - Comprehensive docstrings and type hints
+  - Smoke tested: all functions import and resolve correctly
+  - Marked as InProgress; ready to unblock dependent tasks (TSK-0080, TSK-0082, TSK-0084)
