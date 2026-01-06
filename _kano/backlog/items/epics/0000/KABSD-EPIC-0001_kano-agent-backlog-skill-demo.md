@@ -3,7 +3,7 @@ id: KABSD-EPIC-0001
 uid: 019b8f52-9feb-7b9d-a6a2-e52dcd90ff5a
 type: Epic
 title: Kano Agent Backlog Skill Demo
-state: InProgress
+state: Done
 priority: P1
 parent: null
 area: demo
@@ -13,7 +13,7 @@ tags:
 - backlog
 - skill
 created: 2026-01-02
-updated: '2026-01-06'
+updated: 2026-01-06
 owner: null
 external:
   azure_id: null
@@ -41,12 +41,12 @@ Define the demo scope and track the backlog items that support the workflow.
 
 # Approach
 
-Create and link the demo Feature/UserStory/Tasks under this Epic.
+Track the demo milestones as Epics, and group Features under milestone Epics.
 
 # Links
 
-- Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
-- Feature: [[KABSD-FTR-0003_self-contained-skill-bootstrap-and-automation|KABSD-FTR-0003 Self-contained skill bootstrap and automation]]
+- Epic: [[KABSD-EPIC-0002_milestone-0-0-1-core-demo|KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)]]
+- Epic: [[KABSD-EPIC-0003_milestone-0-0-2-indexing-resolver|KABSD-EPIC-0003 Milestone 0.0.2 (Indexing + Resolver)]]
 
 # Alternatives
 
@@ -73,3 +73,5 @@ Create and link the demo Feature/UserStory/Tasks under this Epic.
 
 2026-01-05 01:25 [agent=codex] Auto-sync from child KABSD-TSK-0037 -> Planned.
 2026-01-05 01:39 [agent=codex] Auto-sync from child KABSD-TSK-0039 -> InProgress.
+2026-01-06 08:34 [agent=codex-cli] Added milestone epics (0.0.1/0.0.2) and regrouped Features under them.
+2026-01-06 08:43 [agent=codex-cli] State -> Done. MVP epic superseded by milestone epics: KABSD-EPIC-0002 (v0.0.1) and KABSD-EPIC-0003 (v0.0.2).

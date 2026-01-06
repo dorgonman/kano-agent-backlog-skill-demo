@@ -5,7 +5,7 @@ type: Feature
 title: Backlog config system and process profiles
 state: InProgress
 priority: P2
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: infra
 iteration: null
 tags:
@@ -75,3 +75,4 @@ toggle logging verbosity/debug behavior, and define a sandbox path for tests.
 2026-01-04 18:26 [agent=codex] Added feature scope and linked user stories for config, process, and sandbox needs.
 2026-01-05 01:26 [agent=codex] Auto-sync from child KABSD-TSK-0038 -> Planned.
 2026-01-05 01:39 [agent=codex] Auto-sync from child KABSD-TSK-0039 -> InProgress.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.

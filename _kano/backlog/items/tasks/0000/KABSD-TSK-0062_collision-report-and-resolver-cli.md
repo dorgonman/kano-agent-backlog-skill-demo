@@ -5,7 +5,7 @@ type: Task
 title: Collision report and resolver CLI
 state: Done
 priority: P3
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0008
 area: tooling
 iteration: null
 tags:
@@ -55,7 +55,7 @@ Implement tooling for collision detection and resolution:
 # Links
 
 - ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy]]
-- Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
+- Feature: [[KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003|KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)]]
 - Blocked by: [[KABSD-TSK-0061_id-resolver-spec-and-design|KABSD-TSK-0061 ID resolver spec]]
 
 # Alternatives
@@ -75,3 +75,4 @@ Implement tooling for collision detection and resolution:
 
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 Open Question #4.
 2026-01-06 01:44 [agent=antigravity] Created collision report and resolver CLI spec: ADR-0003-appendix_collision-report-cli-spec.md
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

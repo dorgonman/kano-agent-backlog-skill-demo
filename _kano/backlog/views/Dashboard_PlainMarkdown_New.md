@@ -1,15 +1,15 @@
 # New Work
 
-Generated: 2026-01-06 02:06
+Generated: 2026-01-06 12:07
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## New
 
 ### Features
 
-- [KABSD-FTR-0001 Local-first backlog system](../items/features/0000/KABSD-FTR-0001_local-backlog-system.md)
 - [KABSD-FTR-0002 Agent tool invocation audit logging system](../items/features/0000/KABSD-FTR-0002_agent-tool-invocation-audit-logging-system.md)
 - [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/features/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
+- [KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)](../items/features/0000/KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003.md)
 
 ### UserStories
 
@@ -27,7 +27,8 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 ### Tasks
 
 - [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/tasks/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
-- [KABSD-TSK-0049 Document file-first + DB index architecture and trade-offs](../items/tasks/0000/KABSD-TSK-0049_document-file-first-db-index-architecture-and-trade-offs.md)
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../items/tasks/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
+- [KABSD-TSK-0070 Implement attach_artifact.py](../items/tasks/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
+- [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/tasks/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
 

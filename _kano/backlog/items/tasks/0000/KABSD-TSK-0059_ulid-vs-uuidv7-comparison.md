@@ -5,7 +5,7 @@ type: Task
 title: ULID vs UUIDv7 comparison document
 state: Done
 priority: P3
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0008
 area: docs
 iteration: null
 tags:
@@ -15,7 +15,7 @@ tags:
 - uuidv7
 - adr-0003
 created: 2026-01-06
-updated: '2026-01-06'
+updated: 2026-01-06
 owner: null
 external:
   azure_id: null
@@ -57,7 +57,7 @@ Write a comparison document evaluating ULID vs UUIDv7 for use as the `uid` field
 # Links
 
 - ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy]]
-- Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
+- Feature: [[KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003|KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)]]
 
 # Alternatives
 
@@ -75,3 +75,5 @@ Write a comparison document evaluating ULID vs UUIDv7 for use as the `uid` field
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 Open Question #1.
 2026-01-06 01:19 [agent=antigravity] Completed ULID vs UUIDv7 comparison. Recommendation: use ULID.
 2026-01-06 01:28 [agent=antigravity] Completed comparison. User chose UUIDv7 (RFC 9562 standardized, future Python native support).
+2026-01-06 02:09 [agent=antigravity] Verified ID resolution integration in update_state.py.
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

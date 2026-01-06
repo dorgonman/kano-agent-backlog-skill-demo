@@ -5,7 +5,7 @@ type: Feature
 title: Self-contained skill bootstrap and automation
 state: InProgress
 priority: P2
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: skill
 iteration: null
 tags:
@@ -49,7 +49,7 @@ layout, install tool wrappers, and optionally seed demo views/items.
 
 # Links
 
-- Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
+- Epic: [[KABSD-EPIC-0002_milestone-0-0-1-core-demo|KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)]]
 - UserStory: [[KABSD-USR-0004_bootstrap-backlog-scaffold-and-tools-from-the-skill|KABSD-USR-0004 Bootstrap backlog scaffold and tools from the skill]]
 - UserStory: [[KABSD-USR-0005_seed-demo-data-and-views-from-the-skill|KABSD-USR-0005 Seed demo data and views from the skill]]
 
@@ -75,3 +75,4 @@ layout, install tool wrappers, and optionally seed demo views/items.
 2026-01-04 13:55 [agent=codex] Added scope, approach, and linked user stories for self-contained automation.
 2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> Planned.
 2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> InProgress.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.

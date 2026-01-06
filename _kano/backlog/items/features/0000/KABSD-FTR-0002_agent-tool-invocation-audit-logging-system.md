@@ -5,7 +5,7 @@ type: Feature
 title: Agent tool invocation audit logging system
 state: Planned
 priority: P2
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: infra
 iteration: null
 tags:
@@ -70,7 +70,7 @@ replay-ready commands, plus configurable rotation/retention.
 
 # Links
 
-- Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
+- Epic: [[KABSD-EPIC-0002_milestone-0-0-1-core-demo|KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)]]
 - UserStory: [[KABSD-USR-0002_capture-tool-invocations-with-redaction-and-replayable-commands|KABSD-USR-0002 Capture tool invocations with redaction and replayable commands]]
 - UserStory: [[KABSD-USR-0003_log-storage-rotation-and-retention-policy|KABSD-USR-0003 Log storage, rotation, and retention policy]]
 # Worklog
@@ -80,3 +80,4 @@ replay-ready commands, plus configurable rotation/retention.
 2026-01-04 10:45 [agent=codex] Planned feature scope and created user stories/tasks.
 2026-01-04 10:48 [agent=codex] Documented default log path `_kano/backlog/_logs/agent_tools/`.
 2026-01-04 11:22 [agent=codex] Added logging schema reference and prototype logger scripts.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.

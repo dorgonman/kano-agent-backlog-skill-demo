@@ -5,7 +5,7 @@ type: Task
 title: ID resolver spec and design
 state: Done
 priority: P3
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0008
 area: infra
 iteration: null
 tags:
@@ -56,7 +56,7 @@ Design and document the ID resolver specification:
 # Links
 
 - ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy]]
-- Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
+- Feature: [[KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003|KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)]]
 
 # Alternatives
 
@@ -74,3 +74,4 @@ Design and document the ID resolver specification:
 
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 resolver semantics design.
 2026-01-06 01:40 [agent=antigravity] Created ID Resolver spec: ADR-0003-appendix_id-resolver-spec.md with ResolveRef() function, index requirements, disambiguation logic.
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

@@ -1,9 +1,13 @@
 # Done Work
 
-Generated: 2026-01-06 01:59
+Generated: 2026-01-06 12:07
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## Done
+
+### Epics
+
+- [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epics/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
 
 ### Features
 
@@ -68,6 +72,7 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0046 Define DB index schema (items, links, worklog, decisions)](../items/tasks/0000/KABSD-TSK-0046_define-db-index-schema-items-links-worklog-decisions.md)
 - [KABSD-TSK-0047 Implement sqlite indexer (import + rebuild + incremental)](../items/tasks/0000/KABSD-TSK-0047_implement-sqlite-indexer-import-rebuild-incremental.md)
 - [KABSD-TSK-0048 Add config keys for DB index backend selection](../items/tasks/0000/KABSD-TSK-0048_add-config-keys-for-db-index-backend-selection.md)
+- [KABSD-TSK-0049 Document file-first + DB index architecture and trade-offs](../items/tasks/0000/KABSD-TSK-0049_document-file-first-db-index-architecture-and-trade-offs.md)
 - [KABSD-TSK-0050 Document index config, artifact paths, and rebuild workflow](../items/tasks/0000/KABSD-TSK-0050_document-index-config-artifact-paths-and-rebuild-workflow.md)
 - [KABSD-TSK-0051 Extend validate_userstories to cover DB index and embeddings stories](../items/tasks/0000/KABSD-TSK-0051_extend-validate-userstories-to-cover-db-index-and-embeddings-stories.md)
 - [KABSD-TSK-0052 Default SQLite index artifacts to _kano/backlog/_index and gitignore](../items/tasks/0000/KABSD-TSK-0052_default-sqlite-index-artifacts-to-kano-backlog-index-and-gitignore.md)
@@ -81,4 +86,11 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0062 Collision report and resolver CLI](../items/tasks/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 - [KABSD-TSK-0063 Make generate_view use SQLite index when available (fallback to file scan)](../items/tasks/0000/KABSD-TSK-0063_make-generate-view-use-sqlite-index-when-available-fallback-to-file-scan.md)
 - [KABSD-TSK-0064 Unify dashboard generation: auto use SQLite index with file-scan fallback](../items/tasks/0000/KABSD-TSK-0064_unify-dashboard-generation-auto-use-sqlite-index-with-file-scan-fallback.md)
+- [KABSD-TSK-0065 Replace deprecated DBIndex dashboards with demo DBIndex/NoDBIndex generators and docs](../items/tasks/0000/KABSD-TSK-0065_replace-deprecated-dbindex-dashboards-with-demo-dbindex-nodbindex-generators-and-docs.md)
+- [KABSD-TSK-0066 Introduce milestone epics 0.0.1/0.0.2 and regroup backlog items](../items/tasks/0000/KABSD-TSK-0066_introduce-milestone-epics-0-0-1-0-0-2-and-regroup-backlog-items.md)
+- [KABSD-TSK-0067 Define skill versioning policy (ADR) and close MVP epic](../items/tasks/0000/KABSD-TSK-0067_define-skill-versioning-policy-adr-and-close-mvp-epic.md)
+- [KABSD-TSK-0068 Add skill version command and changelog](../items/tasks/0000/KABSD-TSK-0068_add-skill-version-command-and-changelog.md)
+- [KABSD-TSK-0069 Move demo view generator out of skill scripts](../items/tasks/0000/KABSD-TSK-0069_move-demo-view-generator-out-of-skill-scripts.md)
+- [KABSD-TSK-0072 Restore generate_demo_views as self-contained skill script](../items/tasks/0000/KABSD-TSK-0072_restore-generate-demo-views-as-self-contained-skill-script.md)
+- [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/tasks/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
 

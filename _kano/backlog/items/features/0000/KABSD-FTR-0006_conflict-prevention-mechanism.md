@@ -5,7 +5,7 @@ type: Feature
 title: Conflict Prevention Mechanism
 state: Proposed
 priority: P2
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: general
 iteration: null
 tags: []
@@ -53,3 +53,4 @@ Prevent race conditions and double-handling of work by enforcing "Item Ownership
 # Worklog
 
 2026-01-05 00:03 [agent=antigravity] Created from template.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.

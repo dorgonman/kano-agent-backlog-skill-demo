@@ -3,15 +3,15 @@ id: KABSD-FTR-0001
 uid: 019b8f52-9fdc-7676-ac2a-0212eed7d168
 type: Feature
 title: Local-first backlog system
-state: Proposed
+state: InProgress
 priority: P1
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: infra
 iteration: null
 tags:
 - backlog
 created: 2026-01-02
-updated: '2026-01-06'
+updated: 2026-01-06
 owner: null
 external:
   azure_id: null
@@ -48,12 +48,9 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 
 - ADR: [[_kano/backlog/decisions/ADR-0002_decisions-as-adr-links|ADR-0002 Decision handling: ADRs stay in decisions/ with item links]]
 - ADR: [[_kano/backlog/decisions/ADR-0003_identifier-strategy-for-local-first-backlog|ADR-0003 Identifier strategy: sortable IDs without centralized allocation]]
-- Epic: [[KABSD-EPIC-0001_kano-agent-backlog-skill-demo|KABSD-EPIC-0001 Kano Agent Backlog Skill Demo]]
+- Epic: [[KABSD-EPIC-0002_milestone-0-0-1-core-demo|KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)]]
 - UserStory: [[KABSD-USR-0001_plan-before-code|KABSD-USR-0001 Plan work before coding]]
-- Task: [[KABSD-TSK-0059_ulid-vs-uuidv7-comparison|KABSD-TSK-0059 ULID vs UUIDv7 comparison]]
-- Task: [[KABSD-TSK-0060_migration-plan-add-uid-to-existing-items|KABSD-TSK-0060 Migration plan: add uid to existing items]]
-- Task: [[KABSD-TSK-0061_id-resolver-spec-and-design|KABSD-TSK-0061 ID resolver spec and design]]
-- Task: [[KABSD-TSK-0062_collision-report-and-resolver-cli|KABSD-TSK-0062 Collision report and resolver CLI]]
+- Feature: [[KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003|KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)]]
 
 # Alternatives
 
@@ -84,3 +81,5 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 2026-01-05 13:55 [agent=codex] Linked ADR-0003 to capture ID/uid strategy trade-offs for local-first collaboration.
 
 2026-01-06 00:36 [agent=antigravity] Added TSK-0059/0060/0061/0062 for ADR-0003 follow-ups: ULID vs UUIDv7 comparison, migration plan (frontmatter uid only), ID resolver spec, collision report CLI.
+2026-01-06 07:39 [agent=codex-cli] Auto-sync from child KABSD-TSK-0065 -> InProgress.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.

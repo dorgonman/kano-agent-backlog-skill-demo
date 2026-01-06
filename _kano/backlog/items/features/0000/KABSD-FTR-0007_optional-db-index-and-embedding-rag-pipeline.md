@@ -5,7 +5,7 @@ type: Feature
 title: Optional DB index and embedding/RAG pipeline
 state: InProgress
 priority: P3
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0003
 area: storage
 iteration: null
 tags:
@@ -97,3 +97,4 @@ Note: DB-first (DB as source of truth) is explicitly out of scope for this featu
 2026-01-05 08:42 [agent=codex] Auto-sync from child KABSD-TSK-0048 -> InProgress.
 
 2026-01-05 08:45 [agent=codex] Clarified direction: file-first is the default source of truth; DB index and embeddings are opt-in via config; DB-first is out of scope.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0003 for milestone 0.0.2.

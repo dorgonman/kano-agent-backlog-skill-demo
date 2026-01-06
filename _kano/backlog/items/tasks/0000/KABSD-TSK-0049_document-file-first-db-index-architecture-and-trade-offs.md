@@ -3,19 +3,17 @@ id: KABSD-TSK-0049
 uid: 019b8f52-9fb9-7575-bfe5-0afbe14543ad
 type: Task
 title: Document file-first + DB index architecture and trade-offs
-state: Proposed
-priority: P3
+state: Done
+priority: P2
 parent: KABSD-FTR-0007
-area: docs
+area: infra
 iteration: null
 tags:
-- docs
-- db
-- index
-- adr
-created: 2026-01-05
-updated: '2026-01-06'
-owner: null
+- doc
+- architecture
+created: 2026-01-02
+updated: 2026-01-06
+owner: antigravity
 external:
   azure_id: null
   jira_key: null
@@ -54,3 +52,5 @@ Document the architecture choices and when to use file-only vs file+DB index vs 
 # Worklog
 
 2026-01-05 08:31 [agent=codex] Created from template.
+2026-01-06 08:19 [agent=antigravity] Starting ADR-0004 documentation.
+2026-01-06 08:36 [agent=antigravity] Created ADR-0004: File-First Architecture with SQLite Index.

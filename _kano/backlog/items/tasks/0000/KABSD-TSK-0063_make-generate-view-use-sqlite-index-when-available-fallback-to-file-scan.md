@@ -14,7 +14,7 @@ tags:
 - index
 - auto
 created: 2026-01-06
-updated: '2026-01-06'
+updated: 2026-01-06
 owner: codex
 external:
   azure_id: null
@@ -69,3 +69,4 @@ Unify generated Markdown dashboards so the same output files can be produced fro
 2026-01-06 01:30 [agent=codex] State -> Ready. Ready gate validated for unified view generator changes.
 2026-01-06 01:30 [agent=codex] State -> InProgress. Extending generate_view.py to auto-use SQLite index when enabled, fallback to file scan.
 2026-01-06 01:35 [agent=codex] State -> Done. generate_view.py now supports --source auto|files|sqlite, preferring SQLite when index.enabled=true and DB exists, otherwise falling back to file scan; updated docs.
+2026-01-06 11:59 [agent=antigravity] Implemented and verified attach_artifact.py with relative path support.

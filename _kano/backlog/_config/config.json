@@ -1,7 +1,10 @@
 {
-  "_comment": "Baseline config for kano-agent-backlog-skill.",
+  "project": {
+    "name": "kano-agent-backlog-skill-demo",
+    "prefix": "KABSD"
+  },
   "log": {
-    "verbosity": "info",
+    "verbosity": "warning",
     "debug": false
   },
   "process": {
@@ -16,5 +19,6 @@
     "backend": "sqlite",
     "path": null,
     "mode": "rebuild"
-  }
+  },
+  "_comment": "Baseline config for kano-agent-backlog-skill."
 }

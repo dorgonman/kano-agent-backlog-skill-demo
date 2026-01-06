@@ -12,7 +12,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - Items: `_kano/backlog/items/`
   - ADRs: `_kano/backlog/decisions/`
   - Views: `_kano/backlog/views/`
-  - Tools (deprecated stubs): `_kano/backlog/tools/` (use skill scripts directly)
+  - Tools (project-specific): `_kano/backlog/tools/` (project-only views/dashboards)
 
 ## Backlog discipline (this repo)
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
@@ -44,7 +44,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
   - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
   - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
-  - Note: `_kano/backlog/tools/*.sh` are deprecated.
+  - Note: `_kano/backlog/tools/*.sh` are deprecated; use Python tools instead when needed (e.g. `generate_demo_views.py`, `generate_focus_view.py`).
 
 ## Demo principles
 - Keep the demo backlog small and traceable; avoid ticket spam.
@@ -52,7 +52,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - If you change the skill itself, commit inside the submodule `skills/kano-agent-backlog-skill/` and update the parent repo submodule pointer.
 - Self-contained skill stance (this demo repo):
   - Prefer implementing automation as skill scripts (`skills/kano-agent-backlog-skill/scripts/`) so the skill is usable without manual setup.
-  - Avoid wrapper scripts in `_kano/backlog/tools/`; reserve wrappers only when hook points are needed.
+  - Keep `_kano/backlog/tools/` for project-only dashboards/demos (wrapping skill scripts is OK when the behavior is demo-specific).
   - Other projects may choose override-only usage; this repo does not. Treat the skill as the source of truth.
 
 ## Tests

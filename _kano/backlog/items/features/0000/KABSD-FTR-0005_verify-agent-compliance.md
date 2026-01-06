@@ -5,7 +5,7 @@ type: Feature
 title: Verify agent compliance
 state: Done
 priority: P1
-parent: KABSD-EPIC-0001
+parent: KABSD-EPIC-0002
 area: general
 iteration: null
 tags: []
@@ -63,3 +63,4 @@ Prove that the agent can effectively:
 2026-01-04 23:15 [agent=antigravity] Populated details for verification.
 2026-01-04 23:33 [agent=antigravity] State -> Done.
 2026-01-06 00:04 [agent=copilot] Validated agent compliance: created KABSD-TSK-0058 passed Ready gate.
+2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
