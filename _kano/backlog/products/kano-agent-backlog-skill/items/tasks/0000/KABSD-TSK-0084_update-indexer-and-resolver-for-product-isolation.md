@@ -62,7 +62,11 @@ The SQLite index currently assumes a single backlog and does not distinguish bet
 - [x] `extract_product_from_path()` function created and tested.
 - [x] IndexedItem dataclass updated with product field.
 - [x] build_sqlite_index.py upsert_item() updated to handle product column.
-- [ ] `id_resolver.py` updated to accept and filter by product.
+- [x] BacklogItem dataclass includes product field.
+- [x] BacklogIndex._load_from_db() reads product column from SQLite.
+- [x] BacklogIndex._scan_files() extracts product from file paths.
+- [x] BacklogIndex.get_by_id() accepts optional product parameter for filtering.
+- [x] resolve_ref() accepts optional product parameter for product-scoped resolution.
 - [ ] End-to-end test: items indexed with correct product tags.
 
 # Worklog
@@ -86,3 +90,15 @@ The SQLite index currently assumes a single backlog and does not distinguish bet
   - Updated INSERT with ON CONFLICT(product, id) logic
   - All indexer changes in place; ready for build_sqlite_index execution
   - Remaining: id_resolver.py updates and end-to-end testing
+
+2026-01-07 01:45 [agent=copilot] **PRODUCT-AWARE RESOLVER COMPLETE (12/13 AC met)**:
+  - Updated BacklogItem dataclass with product field
+  - Updated BacklogIndex._load_from_db() to read product column from SQLite
+  - Updated BacklogIndex._scan_files() to extract product from file paths using _extract_product_from_path()
+  - Added BacklogIndex.get_by_id(display_id, product=None) with optional product filtering
+  - Updated resolve_ref(ref, index, product=None) in lib/resolver.py for product-scoped resolution
+  - Fixed extract_product_from_path() to handle _kano/backlog/products/ and _kano/backlog/sandboxes/ prefixes
+  - Tested: 5 different path formats correctly extract product names ✓
+  - All library functions compile successfully ✓
+  - Committed: 7c11b25 (resolver), 0cc4dde (path fix)
+  - Remaining: End-to-end indexing test with actual multi-product data

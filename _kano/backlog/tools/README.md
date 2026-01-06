@@ -21,11 +21,8 @@ The tool prefers SQLite index when enabled/available, otherwise falls back to sc
 
 ## Demo: DBIndex vs NoDBIndex dashboards
 
-Preferred (self-contained in the skill):
+Run the demo generator from the skill scripts:
 - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate_demo.py --backlog-root _kano/backlog --agent <agent-name>`
-
-Convenience wrapper (this demo repo only):
-- `python _kano/backlog/tools/view_generate_demo.py --backlog-root _kano/backlog --agent <agent-name>`
 
 Outputs:
 - `_kano/backlog/views/_demo/Dashboard_Demo_DBIndex_{Active,New,Done}.md`
