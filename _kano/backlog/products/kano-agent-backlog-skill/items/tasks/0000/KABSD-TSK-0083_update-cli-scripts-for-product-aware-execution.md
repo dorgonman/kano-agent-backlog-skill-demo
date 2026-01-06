@@ -3,7 +3,7 @@ id: KABSD-TSK-0083
 uid: 019b93bb-3c9e-7e6d-b5a7-904ee79191f9
 type: Task
 title: Update CLI scripts for product-aware execution
-state: Done
+state: InProgress
 priority: P1
 parent: KABSD-FTR-0010
 area: architecture
@@ -50,10 +50,11 @@ Update CLI argument parsers and execution paths in `scripts/backlog/` and `scrip
 
 - [x] Shared module `scripts/common/product_args.py` created with `add_product_arguments()` helper.
 - [x] Helper provides consistent `--product` and `--sandbox` flags across all CLI scripts.
-- [ ] CLI scripts import and use `add_product_arguments()` in their argument parsers.
+- [x] Major CLI scripts updated: workitem_create.py, workitem_update_state.py, view_generate.py, workitem_attach_artifact.py, workitem_validate_ready.py
+- [ ] All remaining CLI scripts import and use `add_product_arguments()` in their argument parsers.
 - [ ] Each script passes product_name to context functions for directory resolution.
 - [ ] `--help` for each script mentions `--product` and `--sandbox` options.
-- [ ] Default behavior (no `--product` flag) uses the default product from config.
+- [x] Default behavior (no `--product` flag) uses the default product from config.
 
 # Worklog
 
@@ -65,3 +66,12 @@ Update CLI argument parsers and execution paths in `scripts/backlog/` and `scrip
   - Provides get_product_and_sandbox_flags(args) for extracting parsed values
   - Remaining work: Update individual CLI scripts to import and use the helper
   - This enables consistent product support across all CLI tools
+
+2026-01-07 00:30 [agent=copilot] **MAJOR CLI SCRIPTS UPDATED**:
+  - workitem_create.py: Added product_args import and add_product_arguments()
+  - workitem_update_state.py: Added product_args import and add_product_arguments()
+  - view_generate.py: Added product_args import and add_product_arguments()
+  - workitem_attach_artifact.py: Added product_args import and add_product_arguments()
+  - workitem_validate_ready.py: Added product_args import and add_product_arguments()
+  - All 5 scripts now accept --product and --sandbox flags
+  - Ready for integration with context.py for directory resolution
