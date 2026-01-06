@@ -5,7 +5,7 @@ import sys
 
 
 def main() -> int:
-    print("Deprecated: use skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py")
+    print("Deprecated: use skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py")
     return 1
 
 

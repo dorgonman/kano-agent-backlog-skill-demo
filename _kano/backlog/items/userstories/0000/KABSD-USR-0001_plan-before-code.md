@@ -64,7 +64,7 @@ Create tasks that follow the Ready gate and link them to this story.
 # Worklog
 
 2026-01-02 10:14 [agent=codex] Created user story under KABSD-FTR-0001.
-2026-01-02 11:29 [agent=codex] Clarified state transitions should be automated via update_state.py and the Ready gate enforced before coding.
+2026-01-02 11:29 [agent=codex] Clarified state transitions should be automated via workitem_update_state.py and the Ready gate enforced before coding.
 2026-01-02 11:30 [agent=codex] Confirmed Worklog entries must record key discussion decisions and be reported back to the user.
 2026-01-04 00:44 [agent=codex] Added demo task links for Base views and backlog normalization.
 

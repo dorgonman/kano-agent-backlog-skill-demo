@@ -36,7 +36,7 @@ Generate Markdown dashboards from SQLite index query results under `_kano/backlo
 
 # Non-Goals
 
-- Replace the file-based views (`scripts/backlog/generate_view.py`).
+- Replace the file-based views (`scripts/backlog/view_generate.py`).
 - Require DB indexing for normal backlog usage.
 - Implement a full UI (keep outputs as Markdown).
 
@@ -44,7 +44,7 @@ Generate Markdown dashboards from SQLite index query results under `_kano/backlo
 
 - Add `scripts/indexing/render_db_view.py` that runs a preset query and writes a Markdown view file.
 - Keep outputs stable and safe to commit (but DB itself remains gitignored).
-- This complements, not replaces, `scripts/backlog/generate_view.py`.
+- This complements, not replaces, `scripts/backlog/view_generate.py`.
 
 # Alternatives
 

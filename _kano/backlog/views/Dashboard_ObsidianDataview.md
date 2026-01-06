@@ -9,7 +9,7 @@ Done/Dropped items are hidden by default (view-level archive).
 If you maintain a SQLite index, prefer generating Markdown dashboards via skill scripts so they are
 auditable and can fall back to file scan when the DB is missing/stale:
 
-- `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+- `python skills/kano-agent-backlog-skill/scripts/backlog/view_refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
 
 In Obsidian, you can embed the generated dashboards:
 

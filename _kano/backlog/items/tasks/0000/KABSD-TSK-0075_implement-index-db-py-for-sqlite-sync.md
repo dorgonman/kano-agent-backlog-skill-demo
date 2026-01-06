@@ -1,11 +1,11 @@
 ---
-id: KABSD-TSK-0070
-uid: 019b916b-4989-71c1-8a98-df77ee857d4a
+id: KABSD-TSK-0075
+uid: 019b91ae-617b-7851-ba8c-58ff644871c0
 type: Task
-title: "Implement workitem_attach_artifact.py"
+title: "Implement index_db.py for SQLite sync"
 state: Proposed
 priority: P2
-parent: KABSD-FTR-0009
+parent: KABSD-FTR-0007
 area: infra
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-06 11:48 [agent=antigravity] Task for implementing the artifact attachment tool.
+2026-01-06 13:01 [agent=antigravity] Task for implementing the database indexer.

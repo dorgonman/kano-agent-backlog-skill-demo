@@ -41,7 +41,7 @@ meta files in a safe, idempotent way.
 
 # Approach
 
-- Add `scripts/backlog/init_backlog.py`.
+- Add `scripts/backlog/bootstrap_init_backlog.py`.
 - Create folders: `_kano/backlog/{items,decisions,views,_meta,tools}`.
 - Write baseline files (`_meta/indexes.md`, README.md) if missing.
 - Provide flags for root path and dry-run behavior.
@@ -64,4 +64,4 @@ meta files in a safe, idempotent way.
 
 2026-01-04 13:51 [agent=codex] Created task for backlog scaffold initializer script.
 2026-01-04 13:55 [agent=codex] Added scope and acceptance criteria for the initializer script.
-2026-01-04 21:20 [agent=codex] Implemented init_backlog.py scaffold script.
+2026-01-04 21:20 [agent=codex] Implemented bootstrap_init_backlog.py scaffold script.

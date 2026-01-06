@@ -75,5 +75,5 @@ Write a comparison document evaluating ULID vs UUIDv7 for use as the `uid` field
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 Open Question #1.
 2026-01-06 01:19 [agent=antigravity] Completed ULID vs UUIDv7 comparison. Recommendation: use ULID.
 2026-01-06 01:28 [agent=antigravity] Completed comparison. User chose UUIDv7 (RFC 9562 standardized, future Python native support).
-2026-01-06 02:09 [agent=antigravity] Verified ID resolution integration in update_state.py.
+2026-01-06 02:09 [agent=antigravity] Verified ID resolution integration in workitem_update_state.py.
 2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

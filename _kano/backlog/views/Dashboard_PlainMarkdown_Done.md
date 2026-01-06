@@ -1,6 +1,6 @@
 # Done Work
 
-Generated: 2026-01-06 12:07
+Generated: 2026-01-06 13:10
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## Done
@@ -92,5 +92,6 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0068 Add skill version command and changelog](../items/tasks/0000/KABSD-TSK-0068_add-skill-version-command-and-changelog.md)
 - [KABSD-TSK-0069 Move demo view generator out of skill scripts](../items/tasks/0000/KABSD-TSK-0069_move-demo-view-generator-out-of-skill-scripts.md)
 - [KABSD-TSK-0072 Restore generate_demo_views as self-contained skill script](../items/tasks/0000/KABSD-TSK-0072_restore-generate-demo-views-as-self-contained-skill-script.md)
-- [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/tasks/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
+- [KABSD-TSK-0074 Organize skill scripts into grouped CLI wrappers and clarify terminology](../items/tasks/0000/KABSD-TSK-0074_organize-skill-scripts-into-grouped-cli-wrappers-and-clarify-terminology.md)
+- [KABSD-TSK-0076 Rename backlog scripts to prefixed names and update references](../items/tasks/0000/KABSD-TSK-0076_rename-backlog-scripts-to-prefixed-names-and-update-references.md)
 

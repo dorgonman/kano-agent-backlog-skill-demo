@@ -43,8 +43,8 @@ Provide a unified, reproducible dashboard generation flow that is data-source ag
 
 # Approach
 
-- Keep `scripts/backlog/generate_view.py` as the single dashboard renderer; use `--source auto` (already implemented).
-- Add `scripts/backlog/refresh_dashboards.py` to (optionally) rebuild the index (incremental) then regenerate the standard dashboard files.
+- Keep `scripts/backlog/view_generate.py` as the single dashboard renderer; use `--source auto` (already implemented).
+- Add `scripts/backlog/view_refresh_dashboards.py` to (optionally) rebuild the index (incremental) then regenerate the standard dashboard files.
 - Deprecate `Dashboard_DBIndex_*.md` outputs (keep as optional demo or make them link to the unified dashboards).
 - Update docs and REFERENCE to point to the unified flow.
 

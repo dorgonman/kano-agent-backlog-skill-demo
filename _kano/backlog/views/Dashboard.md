@@ -25,7 +25,7 @@ enable faster dashboard generation. The Markdown files remain the source of trut
 
 ### Canonical generated dashboards (recommended)
 
-- `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+- `python skills/kano-agent-backlog-skill/scripts/backlog/view_refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
 
 This uses `--source auto` by default:
 - prefers SQLite when `index.enabled=true` and the DB exists
@@ -40,8 +40,8 @@ Outputs (canonical):
 
 To make the data source explicit in the filename, generate both variants under `views/_demo/`:
 
-- (preferred) `python skills/kano-agent-backlog-skill/scripts/backlog/generate_demo_views.py --backlog-root _kano/backlog --agent <agent-name>`
-- (demo repo wrapper) `python _kano/backlog/tools/generate_demo_views.py --backlog-root _kano/backlog --agent <agent-name>`
+- (preferred) `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate_demo.py --backlog-root _kano/backlog --agent <agent-name>`
+- (demo repo wrapper) `python _kano/backlog/tools/view_generate_demo.py --backlog-root _kano/backlog --agent <agent-name>`
 
 Outputs (demo):
 - DBIndex (forced SQLite): `views/_demo/Dashboard_Demo_DBIndex_{Active,New,Done}.md`

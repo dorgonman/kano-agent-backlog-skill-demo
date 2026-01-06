@@ -3,6 +3,9 @@
     "name": "kano-agent-backlog-skill-demo",
     "prefix": "KABSD"
   },
+  "views": {
+    "auto_refresh": true
+  },
   "log": {
     "verbosity": "warning",
     "debug": false

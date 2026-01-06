@@ -3,7 +3,7 @@ id: KABSD-FTR-0007
 uid: 019b8f52-9fe9-77b5-8c14-aa03c2501d0f
 type: Feature
 title: Optional DB index and embedding/RAG pipeline
-state: InProgress
+state: Done
 priority: P3
 parent: KABSD-EPIC-0003
 area: storage
@@ -16,8 +16,8 @@ tags:
 - embedding
 - rag
 created: 2026-01-05
-updated: '2026-01-06'
-owner: null
+updated: 2026-01-06
+owner: antigravity
 external:
   azure_id: null
   jira_key: null
@@ -98,3 +98,5 @@ Note: DB-first (DB as source of truth) is explicitly out of scope for this featu
 
 2026-01-05 08:45 [agent=codex] Clarified direction: file-first is the default source of truth; DB index and embeddings are opt-in via config; DB-first is out of scope.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0003 for milestone 0.0.2.
+2026-01-06 13:01 [agent=antigravity] Starting SQLite index implementation.
+2026-01-06 20:58 [agent=antigravity] Implemented index_db.py and integrated SQLite with lib.index.

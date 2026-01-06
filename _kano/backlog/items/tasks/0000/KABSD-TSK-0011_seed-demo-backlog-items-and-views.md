@@ -40,7 +40,7 @@ Implement a script that seeds minimal demo items and view files.
 
 # Approach
 
-- Add `scripts/backlog/seed_demo.py`.
+- Add `scripts/backlog/bootstrap_seed_demo.py`.
 - Create a minimal Epic/Feature/UserStory/Task set with links.
 - Generate demo views (Dataview/Base/Plain Markdown) in `_kano/backlog/views`.
 - Provide a `--force` flag for rebuilds.
@@ -63,4 +63,4 @@ Implement a script that seeds minimal demo items and view files.
 
 2026-01-04 13:51 [agent=codex] Created task for demo seeding script.
 2026-01-04 13:55 [agent=codex] Added scope and acceptance criteria for demo seeding.
-2026-01-04 21:21 [agent=codex] Implemented seed_demo.py to create demo items and views.
+2026-01-04 21:21 [agent=codex] Implemented bootstrap_seed_demo.py to create demo items and views.

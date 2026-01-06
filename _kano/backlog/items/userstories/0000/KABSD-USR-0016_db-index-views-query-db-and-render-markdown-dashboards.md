@@ -38,7 +38,7 @@ As a user, I want to generate Markdown dashboards from DB queries so I can revie
 # Approach
 
 - Add a view generator that queries the DB index and renders stable Markdown files under `_kano/backlog/views/`.
-- Keep the existing file-based `generate_view.py` as the default.
+- Keep the existing file-based `view_generate.py` as the default.
 
 # Alternatives
 

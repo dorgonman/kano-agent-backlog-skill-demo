@@ -23,7 +23,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - an item state changes,
   - scope/approach changes,
   - or an ADR is created/linked.
-- Use `skills/kano-agent-backlog-skill/scripts/backlog/update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
+- Use `skills/kano-agent-backlog-skill/scripts/backlog/workitem_update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
 - For backlog/skill file operations, use `skills/kano-agent-backlog-skill/scripts/backlog/*` or `scripts/fs/*` so audit logs capture the action.
 - Skill scripts refuse paths outside `_kano/backlog/` or `_kano/backlog_sandbox/`.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.
@@ -41,9 +41,9 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 ## Views (human-friendly)
 - Obsidian Dataview dashboards live under `_kano/backlog/views/` (e.g. `_kano/backlog/views/Dashboard.md`).
 - Generate plain Markdown views (no Dataview required):
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/generate_view.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
   - Note: `_kano/backlog/tools/*.sh` are deprecated; use Python tools instead when needed (e.g. `generate_demo_views.py`, `generate_focus_view.py`).
 
 ## Demo principles

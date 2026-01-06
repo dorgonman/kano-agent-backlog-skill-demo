@@ -29,6 +29,6 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0035 Verify agent compliance with skill workflow](../../items/tasks/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../../items/tasks/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
-- [KABSD-TSK-0070 Implement attach_artifact.py](../../items/tasks/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
+- [KABSD-TSK-0070 Implement workitem_attach_artifact.py](../../items/tasks/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
 - [KABSD-TSK-0071 Setup artifacts directory and gitignore](../../items/tasks/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
 

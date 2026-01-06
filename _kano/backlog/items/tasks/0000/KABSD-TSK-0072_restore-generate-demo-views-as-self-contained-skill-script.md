@@ -38,6 +38,6 @@ decisions: []
 
 # Worklog
 
-2026-01-06 11:50 [agent=codex-cli] Create task to restore generate_demo_views.py as a generic skill script and update demo repo docs accordingly.
-2026-01-06 11:50 [agent=codex-cli] Start: restore generate_demo_views.py into skill (self-contained) and update demo repo wrapper/docs.
-2026-01-06 11:55 [agent=codex-cli] Done: restored self-contained skill script scripts/backlog/generate_demo_views.py; demo repo tool is now a thin wrapper; docs updated to prefer skill script.
+2026-01-06 11:50 [agent=codex-cli] Create task to restore view_generate_demo.py as a generic skill script and update demo repo docs accordingly.
+2026-01-06 11:50 [agent=codex-cli] Start: restore view_generate_demo.py into skill (self-contained) and update demo repo wrapper/docs.
+2026-01-06 11:55 [agent=codex-cli] Done: restored self-contained skill script scripts/backlog/view_generate_demo.py; demo repo tool is now a thin wrapper; docs updated to prefer skill script.

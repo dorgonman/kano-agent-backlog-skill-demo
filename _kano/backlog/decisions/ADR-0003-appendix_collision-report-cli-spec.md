@@ -5,10 +5,10 @@
 ## 概述
 
 提供兩個工具：
-1. **collision_report.py** - 掃描並報告 display ID 碰撞
-2. **resolve_ref.py** - 互動式引用解析
+1. **workitem_collision_report.py** - 掃描並報告 display ID 碰撞
+2. **workitem_resolve_ref.py** - 互動式引用解析
 
-## collision_report.py
+## workitem_collision_report.py
 
 ### 功能
 
@@ -18,16 +18,16 @@
 
 ```bash
 # 基本報告
-python scripts/backlog/collision_report.py
+python scripts/backlog/workitem_collision_report.py
 
 # JSON 輸出
-python scripts/backlog/collision_report.py --format json
+python scripts/backlog/workitem_collision_report.py --format json
 
 # 只顯示有碰撞的
-python scripts/backlog/collision_report.py --collisions-only
+python scripts/backlog/workitem_collision_report.py --collisions-only
 
 # 指定 backlog 路徑
-python scripts/backlog/collision_report.py --backlog-root _kano/backlog
+python scripts/backlog/workitem_collision_report.py --backlog-root _kano/backlog
 ```
 
 ### 輸出範例
@@ -81,7 +81,7 @@ No other collisions found.
 }
 ```
 
-## resolve_ref.py
+## workitem_resolve_ref.py
 
 ### 功能
 
@@ -91,18 +91,18 @@ No other collisions found.
 
 ```bash
 # 解析引用
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059
 
 # 使用 uidshort 精確匹配
-python scripts/backlog/resolve_ref.py KABSD-TSK-0100@019473f2
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100@019473f2
 
 # 互動模式
-python scripts/backlog/resolve_ref.py KABSD-TSK-0100 --interactive
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100 --interactive
 
 # 輸出格式
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059 --format path   # 只輸出路徑
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059 --format json   # JSON 格式
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059 --format uid    # 只輸出 uid
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format path   # 只輸出路徑
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format json   # JSON 格式
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format uid    # 只輸出 uid
 ```
 
 ### 輸出範例
@@ -158,13 +158,13 @@ class BacklogIndex:
 
 | 現有腳本 | 整合方式 |
 |----------|----------|
-| `update_state.py` | 使用 resolve_ref 允許 id@uidshort 參數 |
-| `create_item.py` | 自動生成 UUIDv7 uid |
-| `generate_view.py` | 可選顯示 uidshort |
+| `workitem_update_state.py` | 使用 resolve_ref 允許 id@uidshort 參數 |
+| `workitem_create.py` | 自動生成 UUIDv7 uid |
+| `view_generate.py` | 可選顯示 uidshort |
 
 ## 交付物
 
-- [ ] `scripts/backlog/collision_report.py`
-- [ ] `scripts/backlog/resolve_ref.py`
+- [ ] `scripts/backlog/workitem_collision_report.py`
+- [ ] `scripts/backlog/workitem_resolve_ref.py`
 - [ ] `scripts/backlog/lib/index.py` (共用模組)
 - [ ] 單元測試

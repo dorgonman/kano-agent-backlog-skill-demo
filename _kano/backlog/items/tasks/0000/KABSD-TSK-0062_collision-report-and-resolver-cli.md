@@ -47,8 +47,8 @@ Implement tooling for collision detection and resolution:
 
 # Approach
 
-- Add `collision_report.py` script to list id collisions
-- Add resolver functionality to existing scripts or new `resolve_ref.py`
+- Add `workitem_collision_report.py` script to list id collisions
+- Add resolver functionality to existing scripts or new `workitem_resolve_ref.py`
 - Output format: `id`, `uid`, `uidshort`, `type`, `state`, `title`, `path`
 - Interactive mode for disambiguation
 
@@ -62,7 +62,7 @@ Implement tooling for collision detection and resolution:
 
 # Acceptance Criteria
 
-- `collision_report.py` exists and outputs grouped duplicates
+- `workitem_collision_report.py` exists and outputs grouped duplicates
 - Resolver CLI can take ambiguous ref and prompt for selection
 - Scripts integrated into skill `scripts/backlog/`
 

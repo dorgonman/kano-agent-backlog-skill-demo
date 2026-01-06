@@ -40,4 +40,4 @@ decisions: []
 
 2026-01-06 08:51 [agent=codex-cli] Created task to add VERSION/CHANGELOG and a script to print skill version info.
 2026-01-06 08:52 [agent=codex-cli] State -> InProgress. Adding VERSION/CHANGELOG and a script to display skill version/build info.
-2026-01-06 08:54 [agent=codex-cli] State -> Done. Added VERSION and CHANGELOG.md, documented versioning pointers, and added scripts/backlog/show_version.py to display version/build info.
+2026-01-06 08:54 [agent=codex-cli] State -> Done. Added VERSION and CHANGELOG.md, documented versioning pointers, and added scripts/backlog/version_show.py to display version/build info.

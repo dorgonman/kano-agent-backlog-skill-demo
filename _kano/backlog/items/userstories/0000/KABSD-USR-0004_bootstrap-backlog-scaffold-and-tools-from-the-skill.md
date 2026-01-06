@@ -41,7 +41,7 @@ from the skill so setup is repeatable and script-driven.
 
 # Approach
 
-- Add `init_backlog.py` to create `_kano/backlog/` + `_meta` scaffolding.
+- Add `bootstrap_init_backlog.py` to create `_kano/backlog/` + `_meta` scaffolding.
 - Add `install_tools.py` to generate `_kano/backlog/tools` wrappers.
 - Keep scripts idempotent and avoid overwriting existing data.
 

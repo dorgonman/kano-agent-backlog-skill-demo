@@ -5,7 +5,7 @@ import sys
 
 
 def main() -> int:
-    print("Deprecated: use skills/kano-agent-backlog-skill/scripts/backlog/update_state.py")
+    print("Deprecated: use skills/kano-agent-backlog-skill/scripts/backlog/workitem_update_state.py")
     return 1
 
 

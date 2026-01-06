@@ -39,7 +39,7 @@ Ensure all demo dashboard views (Plain Markdown, Dataview, Bases) show the corre
 
 # Approach
 
-- Regenerate the Plain Markdown views using `scripts/backlog/generate_view.py`.
+- Regenerate the Plain Markdown views using `scripts/backlog/view_generate.py`.
 - Fix Base filter syntax for Tasks + Bugs and align view groupings.
 - Update the Dataview dashboard sections to match the New/Active/Done grouping.
 

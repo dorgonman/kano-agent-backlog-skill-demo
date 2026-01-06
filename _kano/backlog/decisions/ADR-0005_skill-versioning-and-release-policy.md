@@ -50,9 +50,9 @@ For each release tag:
 
 - Update the skill docs (README/REFERENCE) to match reality.
 - Ensure canonical scripts work end-to-end:
-  - `scripts/backlog/refresh_dashboards.py`
-  - `scripts/backlog/generate_demo_views.py` (demo dashboards)
-  - `scripts/backlog/update_state.py`
+  - `scripts/backlog/view_refresh_dashboards.py`
+  - `scripts/backlog/view_generate_demo.py` (demo dashboards)
+  - `scripts/backlog/workitem_update_state.py`
 - Ensure demo views are regenerated.
 
 Optional (recommended as we approach 0.1.0+):

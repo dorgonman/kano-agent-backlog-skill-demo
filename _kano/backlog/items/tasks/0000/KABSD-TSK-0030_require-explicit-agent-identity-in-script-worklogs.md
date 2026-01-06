@@ -49,7 +49,7 @@ Keep a default agent name (rejected: leads to misattribution).
 
 # Acceptance Criteria
 
-- `create_item.py` and `update_state.py` fail without `--agent`.
+- `workitem_create.py` and `workitem_update_state.py` fail without `--agent`.
 - Test scripts pass by supplying explicit agent values.
 - Skill docs state that agent identity must be provided.
 

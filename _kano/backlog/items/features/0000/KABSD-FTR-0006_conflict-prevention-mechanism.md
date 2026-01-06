@@ -37,13 +37,13 @@ Prevent race conditions and double-handling of work by enforcing "Item Ownership
 
 # Approach
 
-1.  **Auto-assign Owner**: When an agent moves an item to `InProgress` via `update_state.py`, automatically set the `owner` frontmatter to that agent.
-2.  **Conflict Guard**: If an agent tries to `update_state.py` on an item that is already `InProgress` and owned by someone else, reject the operation with a helpful error.
+1.  **Auto-assign Owner**: When an agent moves an item to `InProgress` via `workitem_update_state.py`, automatically set the `owner` frontmatter to that agent.
+2.  **Conflict Guard**: If an agent tries to `workitem_update_state.py` on an item that is already `InProgress` and owned by someone else, reject the operation with a helpful error.
 
 # Acceptance Criteria
 
-- [ ] `update_state.py --actions start` sets `owner: <agent>`.
-- [ ] `update_state.py` blocks updates if `owner` mismatches and state is `InProgress`.
+- [ ] `workitem_update_state.py --actions start` sets `owner: <agent>`.
+- [ ] `workitem_update_state.py` blocks updates if `owner` mismatches and state is `InProgress`.
 - [ ] Error message clearly indicates who owns the item.
 
 # Risks / Dependencies

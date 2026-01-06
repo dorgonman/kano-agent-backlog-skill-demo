@@ -39,4 +39,4 @@ decisions: []
 # Worklog
 
 2026-01-06 11:27 [agent=codex-cli] Created task to move demo-only view generator from skill scripts into demo host repo tools and update docs.
-2026-01-06 11:38 [agent=codex-cli] Moved demo view generation to _kano/backlog/tools/generate_demo_views.py; deprecated skill script; updated docs and regenerated demo outputs.
+2026-01-06 11:38 [agent=codex-cli] Moved demo view generation to _kano/backlog/tools/view_generate_demo.py; deprecated skill script; updated docs and regenerated demo outputs.

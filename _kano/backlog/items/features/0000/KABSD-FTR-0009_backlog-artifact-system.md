@@ -44,7 +44,7 @@ Currently, items are flat Markdown files. We need a strategy for managing these 
 
 1. **Standardize Path**: All artifacts for a given item `ID` reside in `_kano/backlog/artifacts/<ID>/`.
 2. **Helper Scripts**:
-   - `attach_artifact.py`: Copy file to artifact folder and append link to item worklog/body.
+   - `workitem_attach_artifact.py`: Copy file to artifact folder and append link to item worklog/body.
    - `open_artifacts.py`: Open the artifact folder for an item.
 3. **Link Format**: Use relative links in Markdown: `[Design](.../../../artifacts/KABSD-FTR-0009/design.png)` or define a sweet path alias if possible (complexity). For now, standard relative links.
 

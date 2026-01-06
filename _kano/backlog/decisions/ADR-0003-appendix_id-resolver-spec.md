@@ -153,17 +153,17 @@ Enter number to select, or use: KABSD-TSK-0100@019473f2
 
 ```bash
 # Resolve and show item details
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059
 
 # Resolve with uidshort hint
-python scripts/backlog/resolve_ref.py KABSD-TSK-0100@019473f2
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100@019473f2
 
 # Interactive mode
-python scripts/backlog/resolve_ref.py KABSD-TSK-0100 --interactive
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100 --interactive
 
 # Output format
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059 --format json
-python scripts/backlog/resolve_ref.py KABSD-TSK-0059 --format path
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format json
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format path
 ```
 
 ## 錯誤處理

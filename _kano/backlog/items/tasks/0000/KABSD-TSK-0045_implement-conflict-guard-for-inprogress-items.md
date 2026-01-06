@@ -30,7 +30,7 @@ To prevent race conditions, we need to block updates to InProgress items when th
 
 # Goal
 
-Add conflict guard logic to `update_state.py` that rejects updates to InProgress items when the owner doesn't match the current agent.
+Add conflict guard logic to `workitem_update_state.py` that rejects updates to InProgress items when the owner doesn't match the current agent.
 
 # Non-Goals
 
@@ -51,7 +51,7 @@ Add conflict guard logic to `update_state.py` that rejects updates to InProgress
 
 # Acceptance Criteria
 
-- [x] `update_state.py` blocks updates if `owner` mismatches and state is `InProgress`.
+- [x] `workitem_update_state.py` blocks updates if `owner` mismatches and state is `InProgress`.
 - [x] Error message clearly indicates who owns the item.
 - [x] Owner can still update their own InProgress items.
 - [x] Items in other states can be updated by any agent.

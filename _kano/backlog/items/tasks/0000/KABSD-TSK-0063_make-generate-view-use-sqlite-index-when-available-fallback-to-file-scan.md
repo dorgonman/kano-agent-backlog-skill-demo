@@ -28,7 +28,7 @@ decisions: []
 
 # Context
 
-We have two Markdown dashboard generators: file-scan (`scripts/backlog/generate_view.py`) and DB-index (`scripts/indexing/render_db_view.py`).
+We have two Markdown dashboard generators: file-scan (`scripts/backlog/view_generate.py`) and DB-index (`scripts/indexing/render_db_view.py`).
 This causes overlap and confusion. We want a single view generator that can use the SQLite index when available/enabled, and fall back to scanning files otherwise.
 
 # Goal
@@ -43,7 +43,7 @@ Unify generated Markdown dashboards so the same output files can be produced fro
 
 # Approach
 
-- Extend `scripts/backlog/generate_view.py` to support `--source auto|files|sqlite` (default: auto).
+- Extend `scripts/backlog/view_generate.py` to support `--source auto|files|sqlite` (default: auto).
 - In `auto` mode, prefer SQLite when `index.enabled=true` and the DB exists; otherwise scan files.
 - Keep output format identical between sources (links + group/type sections).
 - Update docs: `references/views.md` and `references/indexing.md` to explain the behavior.
@@ -54,7 +54,7 @@ Unify generated Markdown dashboards so the same output files can be produced fro
 
 # Acceptance Criteria
 
-- `generate_view.py --source auto` produces a view even when the DB does not exist (file scan fallback).
+- `view_generate.py --source auto` produces a view even when the DB does not exist (file scan fallback).
 - When DB exists and `index.enabled=true`, it uses the DB as source.
 - Docs explain how Dataview/Base differ and how generated Markdown views can use DB.
 - Plain views are regenerated after changes.
@@ -67,6 +67,6 @@ Unify generated Markdown dashboards so the same output files can be produced fro
 
 2026-01-06 01:29 [agent=codex] Created from template.
 2026-01-06 01:30 [agent=codex] State -> Ready. Ready gate validated for unified view generator changes.
-2026-01-06 01:30 [agent=codex] State -> InProgress. Extending generate_view.py to auto-use SQLite index when enabled, fallback to file scan.
-2026-01-06 01:35 [agent=codex] State -> Done. generate_view.py now supports --source auto|files|sqlite, preferring SQLite when index.enabled=true and DB exists, otherwise falling back to file scan; updated docs.
-2026-01-06 11:59 [agent=antigravity] Implemented and verified attach_artifact.py with relative path support.
+2026-01-06 01:30 [agent=codex] State -> InProgress. Extending view_generate.py to auto-use SQLite index when enabled, fallback to file scan.
+2026-01-06 01:35 [agent=codex] State -> Done. view_generate.py now supports --source auto|files|sqlite, preferring SQLite when index.enabled=true and DB exists, otherwise falling back to file scan; updated docs.
+2026-01-06 11:59 [agent=antigravity] Implemented and verified workitem_attach_artifact.py with relative path support.

@@ -1,6 +1,6 @@
 # New Work
 
-Generated: 2026-01-06 12:07
+Generated: 2026-01-06 13:10
 Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
 
 ## New
@@ -31,4 +31,6 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/tasks/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
 - [KABSD-TSK-0070 Implement attach_artifact.py](../items/tasks/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
 - [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/tasks/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
+- [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/tasks/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
+- [KABSD-TSK-0075 Implement index_db.py for SQLite sync](../items/tasks/0000/KABSD-TSK-0075_implement-index-db-py-for-sqlite-sync.md)
 

@@ -72,8 +72,8 @@ agent workflow enforces planning and Ready gate rules in this demo repo.
 2026-01-02 10:00 [agent=codex] Created task and set state to InProgress per request.
 2026-01-02 10:16 [agent=codex] Linked task to KABSD-USR-0001 for hierarchy alignment.
 2026-01-02 10:30 [agent=codex] Decided to use per-type item folders and Obsidian-style MOC links with Dataview as a supplemental view.
-2026-01-02 10:40 [agent=codex] Added _kano/backlog/tools/update_state.py to standardize state transitions and Worklog updates.
-2026-01-02 10:52 [agent=codex] Kept update_state.py under _kano/backlog/tools as the project tool; skill references it instead of relocating into skills/scripts.
+2026-01-02 10:40 [agent=codex] Added _kano/backlog/tools/workitem_update_state.py to standardize state transitions and Worklog updates.
+2026-01-02 10:52 [agent=codex] Kept workitem_update_state.py under _kano/backlog/tools as the project tool; skill references it instead of relocating into skills/scripts.
 2026-01-02 10:56 [agent=codex] Added backlog volume control rules to SKILL.md and AGENTS.md to prevent ticket sprawl.
 2026-01-02 11:02 [agent=codex] Created ADR-0001 for per-type folders and Obsidian MOC approach.
 2026-01-02 11:06 [agent=codex] Added _kano/backlog/_meta/indexes.md to track index files per type.
@@ -86,7 +86,7 @@ agent workflow enforces planning and Ready gate rules in this demo repo.
 2026-01-03 01:19 [agent=codex] Closed per user request; backlog system established and ADR recorded.
 2026-01-03 02:14 [agent=codex] Added Active view generator for New/InProgress items (_kano/backlog/views/Active.md).
 2026-01-03 02:22 [agent=codex] Generalized view generator and added Active/New wrapper scripts.
-2026-01-03 02:31 [agent=codex] Resolved generate_view.py paths relative to repo root to avoid empty outputs.
+2026-01-03 02:31 [agent=codex] Resolved view_generate.py paths relative to repo root to avoid empty outputs.
 2026-01-03 12:41 [agent=codex] Renamed backlog ID prefix from BL to QB derived from PROJECT_NAME=Quboto; updated item IDs, links, and views.
 2026-01-03 21:56 [agent=codex] Renamed generated views from Active.md/New.md to ActiveWork.md/NewWork.md for demo clarity.
 2026-01-04 00:45 [agent=codex] Aligned task narrative with the kano-agent-backlog-skill demo scope.

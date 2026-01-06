@@ -26,7 +26,7 @@
 
 ### Phase 2: 遷移腳本
 
-建立 `scripts/backlog/migrate_add_uid.py`:
+建立 `scripts/backlog/migration_add_uid.py`:
 
 ```python
 #!/usr/bin/env python3
@@ -34,8 +34,8 @@
 Add uid (UUIDv7) to existing backlog items.
 
 Usage:
-    python migrate_add_uid.py --dry-run  # Preview changes
-    python migrate_add_uid.py --apply    # Apply changes
+    python migration_add_uid.py --dry-run  # Preview changes
+    python migration_add_uid.py --apply    # Apply changes
 """
 import uuid6  # or uuid (Python 3.12+)
 
@@ -123,7 +123,7 @@ parent_uid: 019473e8-1234-7abc-5678-def012345678  # optional
 
 ## 實作順序
 
-1. [ ] 建立 `migrate_add_uid.py` 腳本
+1. [ ] 建立 `migration_add_uid.py` 腳本
 2. [ ] 在 sandbox 測試
 3. [ ] Dry-run 預覽
 4. [ ] 備份並執行遷移

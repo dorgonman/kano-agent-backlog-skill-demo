@@ -29,7 +29,7 @@ The user has requested a verification of the agent's ability to create a backlog
 # Goal
 
 Prove that the agent can effectively:
-1. Use the `create_item.py` script to generate a new item.
+1. Use the `workitem_create.py` script to generate a new item.
 2. Fill in the required fields to pass the "Ready" gate.
 
 # Non-Goals
@@ -38,9 +38,9 @@ Prove that the agent can effectively:
 
 # Approach
 
-1. Run `create_item.py` to generate the file.
+1. Run `workitem_create.py` to generate the file.
 2. Populate specific sections (Context, Goal, Approach, Acceptance Criteria, Risks).
-3. Run `validate_ready.py` to confirm compliance.
+3. Run `workitem_validate_ready.py` to confirm compliance.
 
 # Alternatives
 
@@ -51,7 +51,7 @@ Prove that the agent can effectively:
 
 - [x] Item `KABSD-FTR-0005` exists.
 - [x] Meaningful content is present in all required sections.
-- [x] `validate_ready.py` returns success for this item.
+- [x] `workitem_validate_ready.py` returns success for this item.
 
 # Risks / Dependencies
 

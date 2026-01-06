@@ -102,7 +102,7 @@ Sort:
 
 - If nested filters are not supported in your Bases version (e.g. `Tasks + Bugs`), split it into two views: `Tasks` and `Bugs`.
 - If you want a zero-UI, shareable artifact, generate Markdown dashboards via skill scripts (index-aware):
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
+  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
 - In Obsidian, you can embed the generated dashboards in any note:
   - `![[Dashboard_PlainMarkdown_New.md]]`
   - `![[Dashboard_PlainMarkdown_Active.md]]`

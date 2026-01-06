@@ -42,7 +42,7 @@ so the demo can be reset quickly.
 
 # Approach
 
-- Add a `seed_demo.py` script that creates a small, representative dataset.
+- Add a `bootstrap_seed_demo.py` script that creates a small, representative dataset.
 - Generate demo views (Dataview/Base/Plain Markdown) alongside the items.
 - Default to safe, non-destructive behavior unless explicitly forced.
 
