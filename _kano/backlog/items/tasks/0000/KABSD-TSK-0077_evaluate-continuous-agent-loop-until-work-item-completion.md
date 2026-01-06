@@ -5,7 +5,7 @@ type: Task
 title: "Evaluate continuous agent loop until work item completion"
 state: Proposed
 priority: P2
-parent: null
+parent: KABSD-EPIC-0001
 area: workflow
 iteration: null
 tags: ["agent-loop", "feasibility", "autonomy", "workflow"]
