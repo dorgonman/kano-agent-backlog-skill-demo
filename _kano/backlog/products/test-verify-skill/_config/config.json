@@ -1,0 +1,26 @@
+{
+  "project": {
+    "name": "test-verify-skill",
+    "prefix": null
+  },
+  "views": {
+    "auto_refresh": true
+  },
+  "log": {
+    "verbosity": "info",
+    "debug": false
+  },
+  "process": {
+    "profile": "builtin/azure-boards-agile",
+    "path": null
+  },
+  "sandbox": {
+    "root": "_kano/backlog_sandbox"
+  },
+  "index": {
+    "enabled": false,
+    "backend": "sqlite",
+    "path": null,
+    "mode": "rebuild"
+  }
+}
