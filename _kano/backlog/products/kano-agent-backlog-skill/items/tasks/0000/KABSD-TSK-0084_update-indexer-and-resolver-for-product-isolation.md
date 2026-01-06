@@ -3,7 +3,7 @@ id: KABSD-TSK-0084
 uid: 019b93bb-4eaf-7e6d-b5a7-904ee79191f9
 type: Task
 title: Update Indexer and Resolver for product isolation
-state: InProgress
+state: Done
 priority: P1
 parent: KABSD-FTR-0010
 area: architecture
@@ -67,7 +67,7 @@ The SQLite index currently assumes a single backlog and does not distinguish bet
 - [x] BacklogIndex._scan_files() extracts product from file paths.
 - [x] BacklogIndex.get_by_id() accepts optional product parameter for filtering.
 - [x] resolve_ref() accepts optional product parameter for product-scoped resolution.
-- [ ] End-to-end test: items indexed with correct product tags.
+- [x] End-to-end test: items indexed with correct product tags (KABSD: 116 items, KCCS: 1 test item verified).
 
 # Worklog
 
@@ -102,3 +102,17 @@ The SQLite index currently assumes a single backlog and does not distinguish bet
   - All library functions compile successfully ✓
   - Committed: 7c11b25 (resolver), 0cc4dde (path fix)
   - Remaining: End-to-end indexing test with actual multi-product data
+
+2026-01-07 02:15 [agent=copilot] **TASK COMPLETE - ALL AC MET (13/13)**:
+  - Fixed SQLite schema: all foreign keys updated to composite (product, id) keys
+    - item_tags, item_links, item_decisions, worklog_entries all use (product, item_id)
+    - Removed parent_id foreign key constraint (cross-product parents not supported yet)
+  - Updated build_sqlite_index.py: all INSERT/DELETE statements include product field
+  - End-to-end test successful:
+    - Rebuilt KABSD index: 116 items, all tagged product="kano-agent-backlog-skill" ✓
+    - Created KCCS test item KCCS-TSK-0001
+    - Built KCCS index: 1 item, tagged product="kano-commit-convention-skill" ✓
+    - Verified isolation: KCCS items not visible in KABSD index ✓
+    - Both indexes coexist independently ✓
+  - Committed: 9156a15 (schema fixes), 6753f00 (test data)
+  - Result: Full product isolation achieved at SQLite layer
