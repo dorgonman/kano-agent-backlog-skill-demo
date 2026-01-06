@@ -12,7 +12,7 @@ tags:
 - migration
 created: 2026-01-06
 updated: 2026-01-06
-owner: antigravity
+owner: copilot
 external:
   azure_id: null
   jira_key: null
@@ -26,15 +26,40 @@ decisions: []
 
 # Context
 
-To move to the platform model, we must move existing data into the `products/` namespace.
+With `context.py` and updated bootstrap scripts in place, we must execute the one-time data migration to move the existing backlog into the new monorepo structure. This is a critical step that preserves all historical data while establishing the new layout.
 
 # Goal
 
-1.  Move `_kano/backlog/items`, `decisions`, `views`, `_config`, `_meta` into `_kano/backlog/products/kano-agent-backlog-skill/`.
-2.  Move current sandbox data into `_kano/backlog/sandboxes/kano-agent-backlog-skill/`.
-3.  Ensure `_shared/defaults.json` exists.
+1. Back up current `_kano/backlog` to `_kano/backlog.archive_<timestamp>` (for rollback if needed).
+2. Move the following from `_kano/backlog/` into `_kano/backlog/products/kano-agent-backlog-skill/`:
+   - `items/` → `products/kano-agent-backlog-skill/items/`
+   - `decisions/` → `products/kano-agent-backlog-skill/decisions/`
+   - `views/` → `products/kano-agent-backlog-skill/views/`
+   - `_config/` → `products/kano-agent-backlog-skill/_config/`
+   - `_meta/` (move or keep at platform level, pending decision)
+   - `_index/` (keep at platform level or move; decision pending)
+3. Create `_kano/backlog/sandboxes/kano-agent-backlog-skill/` with test sandbox structure.
+4. Create `_kano/backlog/_shared/defaults.json` with `{ "default_product": "kano-agent-backlog-skill" }`.
+5. Verify no data is lost; Git status should show moved/renamed files (not deletions).
+
+# Approach
+
+1. Use shell or Python script (`scripts/fs/mv_file.py` or `mv` commands) to move directories.
+2. Preserve `.git` history: commit the move as a single logical changeset.
+3. Validate by checking file counts and verifying samples of frontmatter/content.
+4. Run a quick smoke test: load a sample item from the new location and verify UID/ID integrity.
+5. Update Git index if needed to reflect renames.
 
 # Acceptance Criteria
 
-- `_kano/backlog/products/kano-agent-backlog-skill` contains the original backlog data.
-- Scripts can still find this data (once updated).
+- `_kano/backlog/products/kano-agent-backlog-skill/items/` contains all original items (by file count and sample validation).
+- `_kano/backlog/products/kano-agent-backlog-skill/decisions/` contains all ADRs.
+- `_kano/backlog/products/kano-agent-backlog-skill/views/` contains all views.
+- `_kano/backlog/sandboxes/kano-agent-backlog-skill/` exists and is ready for test data.
+- `_kano/backlog/_shared/defaults.json` exists with correct content.
+- Git log shows the migration as a clean commit (no orphaned "delete" then "add" commits).
+- All file UIDs and metadata remain intact.
+
+# Worklog
+
+2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. Depends on TSK-0080 (bootstrap script update).

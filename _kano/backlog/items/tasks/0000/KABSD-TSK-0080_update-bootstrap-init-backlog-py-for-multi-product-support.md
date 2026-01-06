@@ -13,7 +13,7 @@ tags:
 - bootstrap
 created: 2026-01-06
 updated: 2026-01-06
-owner: antigravity
+owner: copilot
 external:
   azure_id: null
   jira_key: null
@@ -28,16 +28,36 @@ decisions: []
 
 # Context
 
-The current bootstrap script assumes a single `_kano/backlog` root. It needs to support creating backlogs under `products/<name>`.
+The current `bootstrap_init_backlog.py` assumes a single `_kano/backlog` root. To support the multi-product architecture, it must accept a product name and initialize the correct subfolder structure.
 
 # Goal
 
-Update `bootstrap_init_backlog.py` to:
-- Use `context.py` to resolve the target directory.
-- Accept `--product` and `--sandbox` flags.
-- Default to the product name for `config.json` baseline.
+Update `scripts/backlog/bootstrap_init_backlog.py` to:
+
+1. Accept `--product <name>` and `--sandbox <path>` (optional) command-line arguments.
+2. Use `context.py` to resolve the platform root and then determine the product root.
+3. Initialize folder structure under the resolved product root: `_config/`, `items/`, `decisions/`, `views/`.
+4. Write `config.json` with correct metadata for the product (name, prefix, etc.).
+5. Provide helpful error messages if the product already exists.
+
+# Approach
+
+1. Import `context.resolve_product_name()` and `get_product_root()`.
+2. Add argument parser entries for `--product`, `--sandbox`, and `--agent`.
+3. Resolve target product directory using `context.get_product_root(product_name)`.
+4. Check if target directory already exists; warn or error if it does.
+5. Create folder structure: items/{epics,features,userstories,tasks,bugs}, decisions/, views/, _config/.
+6. Generate `config.json` with proper `project.name` and `project.prefix` derived from the product name.
+7. Write Worklog entry if the backlog scaffold already logs agent activities.
 
 # Acceptance Criteria
 
-- `python .../bootstrap_init_backlog.py --product test-skill` creates `_kano/backlog/products/test-skill/`.
-- Correctly initializes `config.json` with the product name.
+- `python scripts/backlog/bootstrap_init_backlog.py --product test-skill --agent copilot` creates `_kano/backlog/products/test-skill/`.
+- `_config/config.json` is initialized with correct product name and default settings.
+- Folders structure (items/*, decisions/, views/) exists under the product root.
+- Running the script twice on the same product either skips gracefully or raises a clear error.
+- `--help` mentions multi-product support.
+
+# Worklog
+
+2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. Depends on TSK-0079 (context.py); unblocks TSK-0085.

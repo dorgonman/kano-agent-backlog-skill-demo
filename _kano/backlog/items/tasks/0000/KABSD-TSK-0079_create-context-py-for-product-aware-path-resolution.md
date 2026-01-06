@@ -12,7 +12,7 @@ tags:
 - architecture
 created: 2026-01-06
 updated: 2026-01-06
-owner: antigravity
+owner: copilot
 external:
   azure_id: null
   jira_key: null
@@ -27,18 +27,38 @@ decisions: []
 
 # Context
 
-We need a centralized way to resolve paths in the new monorepo structure, taking into account the current product context and sandbox settings.
+We need a centralized way to resolve paths in the new monorepo structure, taking into account the current product context and sandbox settings. Currently, path resolution is hardcoded or scattered across scripts, making it difficult to support multiple products.
 
 # Goal
 
-Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` with helpers for:
-- Finding repo root.
-- Resolving product name (arg -> env -> defaults -> fallback).
-- Getting product root and sandbox root.
-- Loading shared defaults.
+Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a single source of truth for path resolution. The module should provide:
+
+1. `find_repo_root()` — locate the workspace root (where `.git` exists).
+2. `find_platform_root(repo_root)` — locate `_kano/backlog` (platform root).
+3. `resolve_product_name(product_arg=None, env_var=None, defaults_file=None)` — resolve product name via arg → environment variable → `_shared/defaults.json` → fallback to `"kano-agent-backlog-skill"`.
+4. `get_product_root(product_name)` — return `_kano/backlog/products/<product_name>`.
+5. `get_sandbox_root(product_name)` — return `_kano/backlog/sandboxes/<product_name>`.
+6. `load_shared_defaults()` — parse `_kano/backlog/_shared/defaults.json` and return a dict.
+
+# Approach
+
+1. Define helper functions for directory discovery (repo root, platform root).
+2. Implement product name resolution with clear priority: argument → environment → defaults file → hardcoded fallback.
+3. Ensure paths are returned as `pathlib.Path` objects (or strings as needed by callers).
+4. Add minimal error handling (raise informative exceptions if paths do not exist).
+5. Write docstrings explaining fallback behavior.
 
 # Acceptance Criteria
 
-- `context.py` exists and is importable by other scripts.
-- Correctly resolves paths for `kano-agent-backlog-skill`.
-- Correctly resolves paths for new products.
+- `context.py` exists and is importable: `from scripts.common.context import ...`
+- `find_repo_root()` correctly locates the workspace root.
+- `find_platform_root()` correctly locates `_kano/backlog`.
+- `resolve_product_name(product_arg="test")` returns `"test"`.
+- `resolve_product_name()` with no args returns the default product from `_shared/defaults.json`.
+- `get_product_root("kano-agent-backlog-skill")` returns `<platform_root>/products/kano-agent-backlog-skill`.
+- `get_sandbox_root("test-product")` returns `<platform_root>/sandboxes/test-product`.
+- `load_shared_defaults()` correctly parses JSON and returns a dict.
+
+# Worklog
+
+2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. This is the foundational task for monorepo architecture; blocks TSK-0080, TSK-0082, and TSK-0084.
