@@ -3,7 +3,7 @@ id: KCCS-TSK-0001
 uid: 019c0001-0000-7000-8000-000000000001
 type: Task
 title: Test KCCS product isolation
-state: New
+state: Done
 priority: P2
 parent: null
 area: testing
@@ -34,7 +34,8 @@ Create item, rebuild index, query to verify product field.
 
 # Acceptance Criteria
 - [x] Item created in KCCS product directory.
-- [ ] Index query shows product="kano-commit-convention-skill".
+- [x] Index query shows product="kano-commit-convention-skill".
 
 # Worklog
 2026-01-07 02:00 [agent=copilot] Created test item for product isolation verification.
+2026-01-07 02:20 [agent=copilot] Verified: SQLite index shows product="kano-commit-convention-skill". Test complete ✓
