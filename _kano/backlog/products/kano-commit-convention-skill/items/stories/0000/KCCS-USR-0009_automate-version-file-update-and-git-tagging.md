@@ -1,11 +1,11 @@
 ---
-id: KCCS-USR-0006
-uid: 019b9866-bc35-7735-8980-f4e03aa3f3f1
-type: UserStory
-title: "Group and filter changelog entries"
+id: KCCS-USR-0009
+uid: 019b986b-61f8-75ed-811c-d62e4490fd1a
+type: Story
+title: "Automate version file update and git tagging"
 state: Proposed
 priority: P2
-parent: KCCS-FTR-0003
+parent: KCCS-FTR-0004
 area: general
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-07 20:20 [agent=antigravity] Created from template.
+2026-01-07 20:25 [agent=antigravity] Created from template.

@@ -1,8 +1,8 @@
 ---
-id: KCCS-USR-0007
-uid: 019b9866-c145-7f68-a017-3594d21d02b6
-type: UserStory
-title: "Support Markdown and JSON changelog formats"
+id: KCCS-USR-0005
+uid: 019b9866-b72f-7de5-8f06-7ce4a259558c
+type: Story
+title: "Implement generate_changelog.py"
 state: Proposed
 priority: P2
 parent: KCCS-FTR-0003

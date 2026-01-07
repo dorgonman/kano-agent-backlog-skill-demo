@@ -1,11 +1,11 @@
 ---
-id: KCCS-USR-0008
-uid: 019b986b-5cee-7f89-b862-e3f1d4027c8c
-type: UserStory
-title: "Implement bump_version.py for semantic versioning"
+id: KCCS-USR-0006
+uid: 019b9866-bc35-7735-8980-f4e03aa3f3f1
+type: Story
+title: "Group and filter changelog entries"
 state: Proposed
 priority: P2
-parent: KCCS-FTR-0004
+parent: KCCS-FTR-0003
 area: general
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-07 20:25 [agent=antigravity] Created from template.
+2026-01-07 20:20 [agent=antigravity] Created from template.

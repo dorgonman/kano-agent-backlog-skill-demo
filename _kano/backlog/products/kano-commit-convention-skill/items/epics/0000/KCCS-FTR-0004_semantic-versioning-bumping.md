@@ -1,11 +1,11 @@
 ---
-id: KCCS-USR-0004
-uid: 019b9866-b239-76ca-85e5-923483da19fe
-type: UserStory
-title: "Verify ticket existence in commit linter"
+id: KCCS-FTR-0004
+uid: 019b985c-d945-7e35-bc6e-7553d7fb4566
+type: Epic
+title: "Semantic Versioning & Bumping"
 state: Proposed
 priority: P2
-parent: KCCS-FTR-0002
+parent: KCCS-EPIC-0001
 area: general
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-07 20:20 [agent=antigravity] Created from template.
+2026-01-07 20:09 [agent=antigravity] Created from template.

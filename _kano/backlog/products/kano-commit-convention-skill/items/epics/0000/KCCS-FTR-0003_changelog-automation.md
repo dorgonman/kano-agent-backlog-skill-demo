@@ -1,7 +1,7 @@
 ---
 id: KCCS-FTR-0003
 uid: 019b985c-d448-76c2-9d7b-db409f33b4b0
-type: Feature
+type: Epic
 title: "Changelog Automation"
 state: Proposed
 priority: P2
