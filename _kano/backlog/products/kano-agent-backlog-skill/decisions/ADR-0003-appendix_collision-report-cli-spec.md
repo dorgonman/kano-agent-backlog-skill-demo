@@ -1,36 +1,36 @@
 # Collision Report & Resolver CLI
 
-**ID 碰撞報告與解析器 CLI 工具規格**
+**ID collision reporting and resolver CLI tool specifications**
 
-## 概述
+## Overview
 
-提供兩個工具：
-1. **workitem_collision_report.py** - 掃描並報告 display ID 碰撞
-2. **workitem_resolve_ref.py** - 互動式引用解析
+Provides two tools:
+1. **workitem_collision_report.py** - Scan and report display ID collisions
+2. **workitem_resolve_ref.py** - Interactive reference resolution
 
 ## workitem_collision_report.py
 
-### 功能
+### Features
 
-掃描 `_kano/backlog/items/` 下所有項目，找出 display `id` 重複的情況。
+Scans all items under `_kano/backlog/items/` to find duplicate display `id` cases.
 
-### 使用方式
+### Usage
 
 ```bash
-# 基本報告
+# Basic report
 python scripts/backlog/workitem_collision_report.py
 
-# JSON 輸出
+# JSON output
 python scripts/backlog/workitem_collision_report.py --format json
 
-# 只顯示有碰撞的
+# Show collisions only
 python scripts/backlog/workitem_collision_report.py --collisions-only
 
-# 指定 backlog 路徑
+# Specify backlog path
 python scripts/backlog/workitem_collision_report.py --backlog-root _kano/backlog
 ```
 
-### 輸出範例
+### Output example
 
 ```
 ID Collision Report
@@ -48,7 +48,7 @@ ID: KABSD-TSK-0100 (2 items)
 No other collisions found.
 ```
 
-### JSON 輸出格式
+### JSON output format
 
 ```json
 {
@@ -83,31 +83,31 @@ No other collisions found.
 
 ## workitem_resolve_ref.py
 
-### 功能
+### Features
 
-解析引用字串，支援互動式消歧義。
+Resolves reference strings with interactive disambiguation support.
 
-### 使用方式
+### Usage
 
 ```bash
-# 解析引用
+# Resolve reference
 python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059
 
-# 使用 uidshort 精確匹配
+# Use uidshort for exact match
 python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100@019473f2
 
-# 互動模式
+# Interactive mode
 python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0100 --interactive
 
-# 輸出格式
-python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format path   # 只輸出路徑
-python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format json   # JSON 格式
-python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format uid    # 只輸出 uid
+# Output format
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format path   # path only
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format json   # JSON format
+python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format uid    # uid only
 ```
 
-### 輸出範例
+### Output examples
 
-**唯一匹配:**
+**Unique match:**
 ```
 Resolved: KABSD-TSK-0059
 
@@ -121,7 +121,7 @@ Resolved: KABSD-TSK-0059
   Updated:  2026-01-06
 ```
 
-**多筆匹配 (互動模式):**
+**Multiple matches (interactive mode):**
 ```
 Ambiguous: 2 items match "KABSD-TSK-0100"
 
@@ -136,9 +136,9 @@ Selected: KABSD-TSK-0100@019473f2
 Path: items/tasks/0000/KABSD-TSK-0100_first-impl.md
 ```
 
-## 實作要點
+## Implementation notes
 
-### 共用模組
+### Shared module
 
 ```python
 # scripts/backlog/lib/index.py
@@ -154,17 +154,17 @@ class BacklogIndex:
     def get_collisions(self) -> Dict[str, List[BacklogItem]]: ...
 ```
 
-### 整合至現有 skill scripts
+### Integration with existing skill scripts
 
-| 現有腳本 | 整合方式 |
-|----------|----------|
-| `workitem_update_state.py` | 使用 resolve_ref 允許 id@uidshort 參數 |
-| `workitem_create.py` | 自動生成 UUIDv7 uid |
-| `view_generate.py` | 可選顯示 uidshort |
+| Existing script | Integration approach |
+|-----------------|----------------------|
+| `workitem_update_state.py` | Use resolve_ref to allow id@uidshort parameters |
+| `workitem_create.py` | Auto-generate UUIDv7 uid |
+| `view_generate.py` | Optionally display uidshort |
 
-## 交付物
+## Deliverables
 
 - [ ] `scripts/backlog/workitem_collision_report.py`
 - [ ] `scripts/backlog/workitem_resolve_ref.py`
-- [ ] `scripts/backlog/lib/index.py` (共用模組)
-- [ ] 單元測試
+- [ ] `scripts/backlog/lib/index.py` (shared module)
+- [ ] Unit tests

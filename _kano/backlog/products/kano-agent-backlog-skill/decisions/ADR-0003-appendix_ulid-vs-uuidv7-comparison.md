@@ -1,22 +1,22 @@
 # ULID vs UUIDv7 Comparison
 
-**為 ADR-0003 的 uid 格式選擇提供技術比較**
+Technical comparison to inform ADR-0003 uid format choice
 
-## 摘要
+## Summary
 
-| 特性 | ULID | UUIDv7 |
-|------|------|--------|
-| **總長度** | 128 bits | 128 bits |
-| **字串長度** | 26 字元 (Base32) | 36 字元 (hex + hyphens) |
-| **時間戳** | 48 bits (ms) | 48 bits (ms) |
-| **隨機部分** | 80 bits | 74 bits (扣除 version/variant) |
-| **標準化** | 社群規範 | IETF RFC 9562 |
-| **排序** | 字典序可排序 | 字典序可排序 |
-| **可讀性** | 較短、無連字號 | 標準 UUID 格式 |
+| Characteristic | ULID | UUIDv7 |
+|----------------|------|--------|
+| Length | 128 bits | 128 bits |
+| String length | 26 chars (Base32) | 36 chars (hex + hyphens) |
+| Timestamp | 48 bits (ms) | 48 bits (ms) |
+| Random part | 80 bits | 74 bits (minus version/variant) |
+| Standardization | Community convention | IETF RFC 9562 |
+| Ordering | Lexicographically sortable | Lexicographically sortable |
+| Readability | Shorter, no hyphens | Standard UUID format |
 
-## 詳細比較
+## Detailed comparison
 
-### 1. 格式與可讀性
+### 1. Format and readability
 
 **ULID**
 ```
@@ -25,9 +25,9 @@
  Timestamp    Randomness
   (10 ch)      (16 ch)
 ```
-- 使用 Crockford's Base32 (排除 I, L, O, U 避免混淆)
-- 全大寫，無連字號
-- **26 字元**
+- Uses Crockford's Base32 (excludes I, L, O, U to avoid confusion)
+- Uppercase, no hyphens
+- 26 characters
 
 **UUIDv7**
 ```
@@ -35,89 +35,89 @@
 |-------|    |  |    |
   time  ver  var  random
 ```
-- 標準 UUID 格式 (8-4-4-4-12)
-- 十六進位，含連字號
-- **36 字元**
+- Standard UUID format (8-4-4-4-12)
+- Hexadecimal with hyphens
+- 36 characters
 
-### 2. 排序特性
+### 2. Ordering characteristics
 
-| 方面 | ULID | UUIDv7 |
-|------|------|--------|
-| 字典序排序 | ✅ 完全支援 | ✅ 完全支援 |
-| 同毫秒內排序 | 透過單調遞增 | 透過 counter/random |
-| 跨機器排序 | 僅時間精度 | 僅時間精度 |
+| Aspect | ULID | UUIDv7 |
+|--------|------|--------|
+| Lexicographic ordering | ✅ Fully supported | ✅ Fully supported |
+| Same-millisecond ordering | Monotonic increment | Counter/random |
+| Cross-machine ordering | Time precision only | Time precision only |
 
-兩者在**字典序排序**都能正確反映時間順序。
+Both reflect time order correctly under lexicographic sort.
 
-### 3. 碰撞安全性
+### 3. Collision safety
 
-| 方面 | ULID | UUIDv7 |
-|------|------|--------|
-| 隨機熵 | 80 bits | ~74 bits |
-| 同毫秒碰撞率 | 2^-80 | 2^-74 |
-| 理論安全性 | 極高 | 極高 |
+| Aspect | ULID | UUIDv7 |
+|--------|------|--------|
+| Random entropy | 80 bits | ~74 bits |
+| Same-ms collision rate | 2^-80 | 2^-74 |
+| Theoretical security | Extremely high | Extremely high |
 
-兩者在實際應用中**碰撞機率都可忽略**。
+In practice, both have negligible collision probability.
 
-### 4. Library 支援
+### 4. Library support
 
 **ULID**
 - Python: `python-ulid`, `ulid-py`
 - JavaScript: `ulid` (official)
 - Go: `oklog/ulid`
-- 社群驅動，多語言覆蓋良好
+- Community-driven, broad multi-language coverage
 
 **UUIDv7**
-- Python: `uuid6` (backport for <3.x), Python 3.12+ 內建計畫中
+- Python: `uuid6` (backport for <3.x), built-in planned in Python 3.12+
 - JavaScript: `uuid@9+`
 - Go: `google/uuid`
-- **IETF 標準化** (RFC 9562)，主流 UUID 庫正在加入支援
+- **IETF standardized** (RFC 9562); mainstream UUID libraries are adding support
 
-### 5. uidshort 前綴長度建議
+### 5. uidshort prefix length guidance
 
 **ULID**
-- 前 10 字元 = 時間戳部分
-- 建議 uidshort: **8-10 字元** (涵蓋時間 + 部分隨機)
-- 範例: `01AN4Z07BY` → 8 字元 `01AN4Z07`
+- First 10 characters = timestamp part
+- Recommended uidshort: 8-10 characters (covers time + partial randomness)
+- Example: `01AN4Z07BY` → 8 characters `01AN4Z07`
 
 **UUIDv7**
-- 前 8 字元 (不含連字號) = 時間戳高位
-- 建議 uidshort: **8-12 字元** (hex)
-- 範例: `017f22e2-79b0-7...` → 8 字元 `017f22e2`
+- First 8 characters (no hyphens) = high bits of timestamp
+- Recommended uidshort: 8-12 characters (hex)
+- Example: `017f22e2-79b0-7...` → 8 characters `017f22e2`
 
-## 建議
+## Recommendation
 
-### 初始分析建議：ULID
+### Initial analysis recommendation: ULID
 
-| 優勢 | 說明 |
-|------|------|
-| **更短** | 26 vs 36 字元，檔名更簡潔 |
-| **更易讀** | 無連字號，視覺上更乾淨 |
-| **充足熵** | 80 bits 隨機，碰撞風險極低 |
-| **成熟生態** | 多年使用，庫支援穩定 |
-| **適合檔名** | 無特殊字元，所有檔案系統相容 |
+| Advantage | Notes |
+|-----------|-------|
+| Shorter | 26 vs 36 characters; cleaner filenames |
+| More readable | No hyphens; visually cleaner |
+| Sufficient entropy | 80-bit randomness; extremely low collision risk |
+| Mature ecosystem | Years of use; stable library support |
+| Filename-friendly | No special characters; compatible across filesystems |
 
-### UUIDv7 的優勢
+### Advantages of UUIDv7
 
-- **標準化**: IETF RFC 9562，長期穩定性有保障
-- **相容性**: 與現有 UUID 基礎設施相容 (如資料庫 UUID 欄位)
-- **未來性**: Python 3.12+、主流庫原生支援
+- Standardization: IETF RFC 9562; strong long-term stability
+- Compatibility: Works with existing UUID infrastructure (e.g., database UUID columns)
+- Future-proofing: Python 3.12+ and mainstream libraries add native support
 
 ---
 
-## 最終決策 (2026-01-06)
+## Final decision (2026-01-06)
 
-**採用 UUIDv7**
+**Adopt UUIDv7**
 
-使用者選擇 UUIDv7，基於以下考量：
-1. IETF 標準化，長期穩定性更有保障
-2. 與現有 UUID 生態系統相容
-3. 主流語言未來原生支援
+Choose UUIDv7 for these reasons:
+1. IETF standardization provides stronger long-term stability
+2. Compatible with existing UUID ecosystems
+3. Native support in mainstream languages is arriving
 
-**uidshort 長度：8 字元 (hex prefix)**
-- 範例：`017f22e2-79b0-7...` → `017f22e2`
+**uidshort length: 8 characters (hex prefix)**
+- Example: `017f22e2-79b0-7...` → `017f22e2`
 
-## 參考資料
+## References
 
 - [ULID Spec](https://github.com/ulid/spec)
 - [RFC 9562 - UUIDv7](https://www.rfc-editor.org/rfc/rfc9562)

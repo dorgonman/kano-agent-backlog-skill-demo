@@ -1,17 +1,17 @@
 # ID Resolver Specification
 
-**ResolveRef() 函數規格設計 - 用於解析 backlog 項目引用**
+**ResolveRef() function specification - for resolving backlog item references**
 
-## 概述
+## Overview
 
-根據 ADR-0003，所有引用解析必須經過 Resolver 處理，以支援：
-- 完整 `uid` 精確匹配
-- `uidshort` 前綴匹配
-- Display `id` 匹配 (可能多筆)
+Per ADR-0003, all reference resolution must go through the Resolver to support:
+- Full `uid` exact match
+- `uidshort` prefix match
+- Display `id` match (may return multiple items)
 
-## ResolveRef() 函數規格
+## ResolveRef() function specification
 
-### 簽名
+### Signature
 
 ```python
 def resolve_ref(
@@ -32,16 +32,16 @@ def resolve_ref(
     """
 ```
 
-### 輸入格式
+### Input formats
 
-| 格式 | 範例 | 說明 |
-|------|------|------|
+| Format | Example | Description |
+|--------|---------|-------------|
 | Full uid | `019473f2-79b0-7cc3-98c4-dc0c0c07398f` | 36 chars, hyphens |
 | uidshort | `019473f2` | 8 hex chars |
 | Display id | `KABSD-TSK-0059` | Project prefix + type + number |
-| id@uidshort | `KABSD-TSK-0059@019473f2` | 人類友善格式 |
+| id@uidshort | `KABSD-TSK-0059@019473f2` | Human-friendly format |
 
-### 解析邏輯
+### Resolution logic
 
 ```python
 def resolve_ref(ref: str, index: BacklogIndex) -> ResolveResult:
@@ -83,7 +83,7 @@ def resolve_ref(ref: str, index: BacklogIndex) -> ResolveResult:
     return ResolveResult(error=f"ID not found: {ref}")
 ```
 
-### 輸出結構
+### Output structure
 
 ```python
 @dataclass
@@ -105,15 +105,15 @@ class BacklogItem:
     updated: str
 ```
 
-## Index 需求
+## Index requirements
 
-Resolver 需要以下 index 查詢能力：
+Resolver requires the following index query capabilities:
 
-| 查詢 | 方法 | 說明 |
-|------|------|------|
-| `uid -> item` | `get_by_uid(uid)` | 唯一匹配 |
-| `uidshort -> [items]` | `get_by_uidshort(prefix)` | 前綴匹配 |
-| `id -> [items]` | `get_by_id(id)` | 可能多筆 |
+| Query | Method | Description |
+|-------|--------|-------------|
+| `uid -> item` | `get_by_uid(uid)` | Unique match |
+| `uidshort -> [items]` | `get_by_uidshort(prefix)` | Prefix match |
+| `id -> [items]` | `get_by_id(id)` | May return multiple items |
 
 ### Index Schema (SQLite)
 
@@ -134,9 +134,9 @@ CREATE INDEX idx_id ON items(id);
 CREATE INDEX idx_uidshort ON items(uidshort);
 ```
 
-## 消歧義 (Disambiguation)
+## Disambiguation
 
-當 `exact=False` 且有多個匹配時，輸出候選清單：
+When `exact=False` and multiple matches exist, output candidate list:
 
 ```
 Multiple matches for "KABSD-TSK-0100":
@@ -149,7 +149,7 @@ Multiple matches for "KABSD-TSK-0100":
 Enter number to select, or use: KABSD-TSK-0100@019473f2
 ```
 
-## CLI 整合
+## CLI integration
 
 ```bash
 # Resolve and show item details
@@ -166,10 +166,10 @@ python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format json
 python scripts/backlog/workitem_resolve_ref.py KABSD-TSK-0059 --format path
 ```
 
-## 錯誤處理
+## Error handling
 
-| 情況 | 錯誤訊息 |
-|------|----------|
+| Case | Error message |
+|------|---------------|
 | UID not found | `Error: UID not found: {uid}` |
 | ID not found | `Error: ID not found: {id}` |
 | Multiple matches | `Ambiguous: {count} items match "{ref}". Use id@uidshort format.` |
