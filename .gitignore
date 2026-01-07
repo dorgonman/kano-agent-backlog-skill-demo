@@ -1,11 +1,39 @@
+
+# Kano Backlog Skill .gitignore (2026-01-07)
+# Only ignore derived/cache/logs/sandbox, never canonical data
+
+# Logs, temp, trash, sandbox
 _kano/backlog/_logs/
 _kano/backlog/_tmp_tests/
-_kano/backlog/_index/
-_kano/backlog_sandbox/
 _kano/backlog/_trash/
 _kano/.cache/
-_kano/backlog/sandboxes/.cache/
+_kano/backlog/sandboxes/
+_kano/backlog_sandbox/
+
+# Derived index/cache (never ignore canonical.db)
+_kano/backlog/**/_index/
+_kano/backlog/**/.cache/
+
+# Python build artifacts
 __pycache__/
 *.py[cod]
+
+# Test/type caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# Obsidian workspace
 /.obsidian/workspace.json
+
+# Python venv
 .venv
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+/_kano/backlog/_index/backlog.sqlite3
+/_kano/backlog/_index/backlog.sqlite3

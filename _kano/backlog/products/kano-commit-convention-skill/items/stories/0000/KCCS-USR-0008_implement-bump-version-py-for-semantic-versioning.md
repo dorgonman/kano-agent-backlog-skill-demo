@@ -1,11 +1,11 @@
 ---
-id: KCCS-FTR-0001
-uid: 019b95a1-4d25-714b-ba8c-06be1a9a03c5
-type: Feature
-title: "Product infrastructure and testing"
+id: KCCS-USR-0008
+uid: 019b986b-5cee-7f89-b862-e3f1d4027c8c
+type: Story
+title: "Implement bump_version.py for semantic versioning"
 state: Proposed
 priority: P2
-parent: KCCS-EPIC-0001
+parent: KCCS-FTR-0004
 area: general
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-07 07:25 [agent=antigravity] Created from template.
+2026-01-07 20:25 [agent=antigravity] Created from template.

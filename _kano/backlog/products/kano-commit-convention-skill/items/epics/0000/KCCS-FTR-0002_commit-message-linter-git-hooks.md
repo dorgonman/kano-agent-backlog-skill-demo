@@ -1,8 +1,8 @@
 ---
-id: KCCS-FTR-0004
-uid: 019b985c-d945-7e35-bc6e-7553d7fb4566
-type: Feature
-title: "Semantic Versioning & Bumping"
+id: KCCS-FTR-0002
+uid: 019b985c-cf4d-7d13-a0e4-87cbabed0fd9
+type: Epic
+title: "Commit Message Linter (Git Hooks)"
 state: Proposed
 priority: P2
 parent: KCCS-EPIC-0001

@@ -1,8 +1,8 @@
 ---
-id: KCCS-USR-0003
-uid: 019b9866-ad77-7e9b-880b-a7c194270500
-type: UserStory
-title: "Config-based linter types/scopes"
+id: KCCS-USR-0004
+uid: 019b9866-b239-76ca-85e5-923483da19fe
+type: Story
+title: "Verify ticket existence in commit linter"
 state: Proposed
 priority: P2
 parent: KCCS-FTR-0002

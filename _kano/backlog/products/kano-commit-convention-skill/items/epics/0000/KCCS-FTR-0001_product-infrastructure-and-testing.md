@@ -1,11 +1,11 @@
 ---
-id: KCCS-USR-0005
-uid: 019b9866-b72f-7de5-8f06-7ce4a259558c
-type: UserStory
-title: "Implement generate_changelog.py"
+id: KCCS-FTR-0001
+uid: 019b95a1-4d25-714b-ba8c-06be1a9a03c5
+type: Epic
+title: "Product infrastructure and testing"
 state: Proposed
 priority: P2
-parent: KCCS-FTR-0003
+parent: KCCS-EPIC-0001
 area: general
 iteration: null
 tags: []
@@ -38,4 +38,4 @@ decisions: []
 
 # Worklog
 
-2026-01-07 20:20 [agent=antigravity] Created from template.
+2026-01-07 07:25 [agent=antigravity] Created from template.
