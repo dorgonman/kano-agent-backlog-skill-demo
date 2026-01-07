@@ -1,13 +1,13 @@
-# InProgress Work
+# Active and Completed Work
 
-Generated: 2026-01-07 21:48
-Source: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\items
+Generated: 2026-01-08 02:00
+Source: _kano/backlog/items
 
-## New
+## InProgress
 
 _No items._
 
-## InProgress
+## Done
 
 _No items._
 
