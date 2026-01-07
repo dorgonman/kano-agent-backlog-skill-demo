@@ -3,7 +3,7 @@ id: KABSD-FTR-0004
 uid: 019b8f52-9fe3-7b51-87f9-4909db22938f
 type: Feature
 title: Backlog config system and process profiles
-state: InProgress
+state: Done
 priority: P2
 parent: KABSD-EPIC-0002
 area: infra
@@ -12,7 +12,7 @@ tags:
 - config
 - process
 created: 2026-01-04
-updated: '2026-01-06'
+updated: 2026-01-07
 owner: null
 external:
   azure_id: null
@@ -76,3 +76,4 @@ toggle logging verbosity/debug behavior, and define a sandbox path for tests.
 2026-01-05 01:26 [agent=codex] Auto-sync from child KABSD-TSK-0038 -> Planned.
 2026-01-05 01:39 [agent=codex] Auto-sync from child KABSD-TSK-0039 -> InProgress.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
+2026-01-07 07:25 [agent=copilot] Config root, process profiles, logging verbosity, and sandbox support shipped for 0.0.1.

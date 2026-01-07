@@ -5,7 +5,7 @@ type: Feature
 title: Monorepo Platform Migration
 state: Done
 priority: P1
-parent: null
+parent: KABSD-EPIC-0001
 area: architecture
 iteration: null
 tags:

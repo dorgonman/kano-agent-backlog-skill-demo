@@ -3,7 +3,7 @@ id: KABSD-FTR-0003
 uid: 019b8f52-9fe0-7c6c-84da-bda8855e540b
 type: Feature
 title: Self-contained skill bootstrap and automation
-state: InProgress
+state: Done
 priority: P2
 parent: KABSD-EPIC-0002
 area: skill
@@ -13,7 +13,7 @@ tags:
 - bootstrap
 - scripts
 created: 2026-01-04
-updated: '2026-01-06'
+updated: 2026-01-07
 owner: null
 external:
   azure_id: null
@@ -76,3 +76,4 @@ layout, install tool wrappers, and optionally seed demo views/items.
 2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> Planned.
 2026-01-05 01:47 [agent=codex] Auto-sync from child KABSD-TSK-0012 -> InProgress.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
+2026-01-07 07:25 [agent=copilot] Bootstrap + seed scripts delivered from skill; backlog scaffold and demo views are automated.

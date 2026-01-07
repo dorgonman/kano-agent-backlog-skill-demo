@@ -5,7 +5,7 @@ type: Task
 title: "Implement global full-text search index for cross-product queries"
 state: Proposed
 priority: P3
-parent: null
+parent: KABSD-FTR-0011
 area: feature
 iteration: 0.0.2
 tags: ["search", "index", "cross-product"]

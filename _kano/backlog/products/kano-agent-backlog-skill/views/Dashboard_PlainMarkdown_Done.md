@@ -1,17 +1,26 @@
 # Done Work
 
-Generated: 2026-01-06 13:10
-Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index/backlog.sqlite3
+Generated: 2026-01-07 20:50
+Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/products/kano-agent-backlog-skill/_index/backlog.sqlite3
 
 ## Done
 
 ### Epics
 
 - [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epics/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
+- [KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)](../items/epics/0000/KABSD-EPIC-0002_milestone-0-0-1-core-demo.md)
 
 ### Features
 
+- [KABSD-FTR-0001 Local-first backlog system](../items/features/0000/KABSD-FTR-0001_local-backlog-system.md)
+- [KABSD-FTR-0002 Agent tool invocation audit logging system](../items/features/0000/KABSD-FTR-0002_agent-tool-invocation-audit-logging-system.md)
+- [KABSD-FTR-0003 Self-contained skill bootstrap and automation](../items/features/0000/KABSD-FTR-0003_self-contained-skill-bootstrap-and-automation.md)
+- [KABSD-FTR-0004 Backlog config system and process profiles](../items/features/0000/KABSD-FTR-0004_backlog-config-system-and-process-profiles.md)
 - [KABSD-FTR-0005 Verify agent compliance](../items/features/0000/KABSD-FTR-0005_verify-agent-compliance.md)
+- [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/features/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
+- [KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline](../items/features/0000/KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline.md)
+- [KABSD-FTR-0010 Monorepo Platform Migration](../items/features/0000/KABSD-FTR-0010_monorepo-platform-migration.md)
+- [KABSD-FTR-0017 Traceability: Commit Refs → Worklog Backfill](../items/features/0000/KABSD-FTR-0017_traceability-commit-refs-worklog-backfill.md)
 
 ### UserStories
 
@@ -22,6 +31,7 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-USR-0014 Configurable process: choose file-only vs DB index backend](../items/userstories/0000/KABSD-USR-0014_configurable-process-choose-file-only-vs-db-index-backend.md)
 - [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstories/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstories/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
+- [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstories/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
 
 ### Tasks
 
@@ -94,4 +104,21 @@ Source: sqlite:D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/_index
 - [KABSD-TSK-0072 Restore generate_demo_views as self-contained skill script](../items/tasks/0000/KABSD-TSK-0072_restore-generate-demo-views-as-self-contained-skill-script.md)
 - [KABSD-TSK-0074 Organize skill scripts into grouped CLI wrappers and clarify terminology](../items/tasks/0000/KABSD-TSK-0074_organize-skill-scripts-into-grouped-cli-wrappers-and-clarify-terminology.md)
 - [KABSD-TSK-0076 Rename backlog scripts to prefixed names and update references](../items/tasks/0000/KABSD-TSK-0076_rename-backlog-scripts-to-prefixed-names-and-update-references.md)
+- [KABSD-TSK-0079 Create context.py for product-aware path resolution](../items/tasks/0000/KABSD-TSK-0079_create-context-py-for-product-aware-path-resolution.md)
+- [KABSD-TSK-0080 Update bootstrap_init_backlog.py for multi-product support](../items/tasks/0000/KABSD-TSK-0080_update-bootstrap-init-backlog-py-for-multi-product-support.md)
+- [KABSD-TSK-0081 Execute directory restructuring for monorepo platform](../items/tasks/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md)
+- [KABSD-TSK-0082 Update config_loader.py for multi-product roots](../items/tasks/0000/KABSD-TSK-0082_update-config-loader-py-for-multi-product-roots.md)
+- [KABSD-TSK-0084 Update Indexer and Resolver for product isolation](../items/tasks/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md)
+- [KABSD-TSK-0085 Initialize kano-commit-convention-skill and verify](../items/tasks/0000/KABSD-TSK-0085_initialize-kano-commit-convention-skill-and-verify.md)
+- [KABSD-TSK-0086 Implement functional task dependency validation in workitem_update_state.py](../items/tasks/0000/KABSD-TSK-0086_implement-functional-task-dependency-validation-in-workitem-update-state-py.md)
+- [KABSD-TSK-0087 Initialize backlog scaffold from active process profile](../items/tasks/0000/KABSD-TSK-0087_initialize-backlog-scaffold-from-active-process-profile.md)
+- [KABSD-TSK-0088 Add process_linter to validate profile-based folder scaffolds](../items/tasks/0000/KABSD-TSK-0088_add-process-linter-to-validate-profile-based-folder-scaffolds.md)
+- [KABSD-TSK-0104 Evaluate integrating working memory on disk into Kano Backlog](../items/tasks/0100/KABSD-TSK-0104_evaluate-integrating-working-memory-on-disk-into-kano-backlog.md)
+- [KABSD-TSK-0105 Implement Git VCS Adapter](../items/tasks/0100/KABSD-TSK-0105_implement-git-vcs-adapter.md)
+- [KABSD-TSK-0106 Implement Perforce VCS Adapter](../items/tasks/0100/KABSD-TSK-0106_implement-perforce-vcs-adapter.md)
+- [KABSD-TSK-0107 Implement SVN VCS Adapter](../items/tasks/0100/KABSD-TSK-0107_implement-svn-vcs-adapter.md)
+- [KABSD-TSK-0108 Implement query_commits.py Query Tool](../items/tasks/0100/KABSD-TSK-0108_implement-query-commits-py-query-tool.md)
+- [KABSD-TSK-0109 Implement Commit Timeline View Generator](../items/tasks/0100/KABSD-TSK-0109_implement-commit-timeline-view-generator.md)
+- [KABSD-TSK-0111 Implement SQLite Schema Migration Framework](../items/tasks/0100/KABSD-TSK-0111_implement-sqlite-schema-migration-framework.md)
+- [KCCS-TSK-0001 Test KCCS product isolation](../../kano-commit-convention-skill/items/tasks/0000/KCCS-TSK-0001_test-product-isolation.md)
 

@@ -3,9 +3,9 @@ id: KABSD-TSK-0096
 uid: null
 type: Task
 title: Document multi-product architecture and best practices
-state: Proposed
+state: Planned
 priority: P2
-parent: null
+parent: KABSD-FTR-0011
 area: documentation
 iteration: "0.0.2"
 tags: ["documentation", "architecture", "guide"]
@@ -60,3 +60,4 @@ None
 # Worklog
 
 2026-01-07 01:55 [agent=copilot] Task created to document multi-product architecture and rationale for future developers.
+2026-01-07 08:32 [agent=copilot] Smoke-test blocked_by/product-aware resolution.

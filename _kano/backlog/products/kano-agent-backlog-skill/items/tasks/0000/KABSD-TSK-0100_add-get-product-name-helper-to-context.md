@@ -5,7 +5,7 @@ type: Task
 title: Add get_product_name() helper function to context.py
 state: Proposed
 priority: P3
-parent: null
+parent: KABSD-FTR-0010
 area: refactoring
 iteration: "0.0.2"
 tags: ["context", "product", "refactoring"]

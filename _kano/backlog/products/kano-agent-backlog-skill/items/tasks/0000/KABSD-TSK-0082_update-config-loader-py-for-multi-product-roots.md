@@ -19,9 +19,9 @@ external:
 links:
   relates: []
   blocks:
-  - KABSD-TSK-0083
+  - KABSD-TSK-0083@019b93bb
   blocked_by:
-  - KABSD-TSK-0079
+  - KABSD-TSK-0079@019b93ba
 decisions: []
 ---
 

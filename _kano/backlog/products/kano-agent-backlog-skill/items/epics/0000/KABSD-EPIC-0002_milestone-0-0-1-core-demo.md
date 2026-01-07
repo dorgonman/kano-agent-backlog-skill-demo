@@ -2,14 +2,14 @@
 id: KABSD-EPIC-0002
 type: Epic
 title: "Milestone 0.0.1 (Core demo)"
-state: InProgress
+state: Done
 priority: P1
 parent: null
 area: release
 iteration: null
 tags: ["milestone", "release", "0.0.1"]
 created: 2026-01-06
-updated: 2026-01-06
+updated: 2026-01-07
 owner: codex-cli
 external:
   azure_id: null
@@ -70,3 +70,5 @@ Deliver a usable demo that can be opened in Obsidian and used by multiple agents
 2026-01-06 08:26 [agent=codex-cli] Created milestone epic for v0.0.1.
 2026-01-06 08:34 [agent=codex-cli] Populated milestone scope and linked the core Features.
 2026-01-06 08:33 [agent=codex-cli] State -> InProgress. Milestone 0.0.1 is the active scope for core demo work.
+2026-01-07 07:25 [agent=copilot] Auto-sync from child KABSD-FTR-0006 -> Done.
+2026-01-07 07:25 [agent=copilot] Milestone 0.0.1 delivered; features 0001-0005 done, 0006 dropped to later; docs, ADRs, and dashboards refreshed.

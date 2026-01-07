@@ -17,6 +17,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 ## Backlog discipline (this repo)
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
 - Before any code change, create/update items in `_kano/backlog/items/` (Epic -> Feature -> UserStory -> Task/Bug).
+- Use English for all backlog item content (Context, Goal, Approach, etc.) and Worklog entries.
 - Enforce the Ready gate on Task/Bug (required, non-empty): `Context`, `Goal`, `Approach`, `Acceptance Criteria`, `Risks / Dependencies`.
 - Worklog is append-only; never rewrite history. Append a Worklog line whenever:
   - a load-bearing decision is made,

@@ -5,7 +5,7 @@ type: Task
 title: "Build cross-product analytics and reporting tools"
 state: Proposed
 priority: P3
-parent: null
+parent: KABSD-FTR-0011
 area: feature
 iteration: 0.0.2
 tags: ["analytics", "reporting", "cross-product"]

@@ -3,7 +3,7 @@ id: KABSD-FTR-0001
 uid: 019b8f52-9fdc-7676-ac2a-0212eed7d168
 type: Feature
 title: Local-first backlog system
-state: InProgress
+state: Done
 priority: P1
 parent: KABSD-EPIC-0002
 area: infra
@@ -11,7 +11,7 @@ iteration: null
 tags:
 - backlog
 created: 2026-01-02
-updated: 2026-01-06
+updated: 2026-01-07
 owner: null
 external:
   azure_id: null
@@ -83,3 +83,4 @@ Create backlog structure, views, and the kano-agent-backlog-skill demo.
 2026-01-06 00:36 [agent=antigravity] Added TSK-0059/0060/0061/0062 for ADR-0003 follow-ups: ULID vs UUIDv7 comparison, migration plan (frontmatter uid only), ID resolver spec, collision report CLI.
 2026-01-06 07:39 [agent=codex-cli] Auto-sync from child KABSD-TSK-0065 -> InProgress.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
+2026-01-07 07:25 [agent=copilot] 0.0.1 scope complete: backlog structure, views, and ADR links delivered.

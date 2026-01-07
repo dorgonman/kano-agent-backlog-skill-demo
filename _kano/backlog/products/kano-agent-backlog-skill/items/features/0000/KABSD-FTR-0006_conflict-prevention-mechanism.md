@@ -3,14 +3,14 @@ id: KABSD-FTR-0006
 uid: 019b8f52-9fe7-7758-a833-be10f436ce64
 type: Feature
 title: Conflict Prevention Mechanism
-state: Proposed
+state: Dropped
 priority: P2
 parent: KABSD-EPIC-0002
 area: general
 iteration: null
 tags: []
 created: 2026-01-05
-updated: '2026-01-06'
+updated: 2026-01-07
 owner: null
 external:
   azure_id: null
@@ -54,3 +54,4 @@ Prevent race conditions and double-handling of work by enforcing "Item Ownership
 
 2026-01-05 00:03 [agent=antigravity] Created from template.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
+2026-01-07 07:25 [agent=copilot] Descoped from 0.0.1; conflict guard deferred to next iteration after audit/logging shipped.

@@ -3,9 +3,9 @@ id: KABSD-TSK-0098
 uid: null
 type: Task
 title: Create ADR for multi-product architecture decisions
-state: Proposed
+state: Planned
 priority: P2
-parent: null
+parent: KABSD-FTR-0010
 area: documentation
 iteration: "0.0.2"
 tags: ["adr", "architecture", "documentation", "cross-product"]
@@ -63,3 +63,5 @@ None
 # Worklog
 
 2026-01-07 02:10 [agent=copilot] Created task to document architectural decisions made in FTR-0010 multi-product implementation.
+2026-01-07 08:23 [agent=copilot] Validate parent resolution: moving task to Ready.
+2026-01-07 08:23 [agent=copilot] Smoke-test parent validation with same-product parent.

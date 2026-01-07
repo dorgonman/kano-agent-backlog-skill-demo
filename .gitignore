@@ -3,6 +3,8 @@ _kano/backlog/_tmp_tests/
 _kano/backlog/_index/
 _kano/backlog_sandbox/
 _kano/backlog/_trash/
+_kano/.cache/
+_kano/backlog/sandboxes/.cache/
 __pycache__/
 *.py[cod]
 /.obsidian/workspace.json

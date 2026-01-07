@@ -5,7 +5,7 @@ type: Task
 title: Verify all CLI tools use product-aware paths
 state: Proposed
 priority: P4
-parent: null
+parent: KABSD-FTR-0010
 area: quality
 iteration: "0.0.2"
 tags: ["audit", "cli", "paths", "quality"]

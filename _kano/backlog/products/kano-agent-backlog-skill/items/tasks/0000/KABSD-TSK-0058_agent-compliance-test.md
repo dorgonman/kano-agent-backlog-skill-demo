@@ -5,7 +5,7 @@ type: Task
 title: agent compliance test
 state: Done
 priority: P2
-parent: null
+parent: KABSD-FTR-0005
 area: general
 iteration: null
 tags: []

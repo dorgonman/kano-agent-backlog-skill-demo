@@ -5,7 +5,7 @@ type: Task
 title: "Implement global embedding database for cross-product semantic search"
 state: Proposed
 priority: P3
-parent: null
+parent: KABSD-FTR-0011
 area: feature
 iteration: 0.0.2
 tags: ["embedding", "search", "cross-product"]

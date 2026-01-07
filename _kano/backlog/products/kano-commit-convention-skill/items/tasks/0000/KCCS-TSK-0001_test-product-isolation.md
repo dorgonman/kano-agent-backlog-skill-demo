@@ -5,7 +5,7 @@ type: Task
 title: Test KCCS product isolation
 state: Done
 priority: P2
-parent: null
+parent: KCCS-FTR-0001
 area: testing
 iteration: null
 tags:

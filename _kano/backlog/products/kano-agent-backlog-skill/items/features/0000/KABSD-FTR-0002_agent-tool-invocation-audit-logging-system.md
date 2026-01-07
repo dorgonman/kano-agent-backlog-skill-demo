@@ -3,7 +3,7 @@ id: KABSD-FTR-0002
 uid: 019b8f52-9fde-7162-bd19-e9b8310526fc
 type: Feature
 title: Agent tool invocation audit logging system
-state: Planned
+state: Done
 priority: P2
 parent: KABSD-EPIC-0002
 area: infra
@@ -13,7 +13,7 @@ tags:
 - audit
 - security
 created: 2026-01-04
-updated: '2026-01-06'
+updated: 2026-01-07
 owner: null
 external:
   azure_id: null
@@ -81,3 +81,4 @@ replay-ready commands, plus configurable rotation/retention.
 2026-01-04 10:48 [agent=codex] Documented default log path `_kano/backlog/_logs/agent_tools/`.
 2026-01-04 11:22 [agent=codex] Added logging schema reference and prototype logger scripts.
 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1.
+2026-01-07 07:25 [agent=copilot] Audit logging shipped: redacted JSONL logs with rotation at _kano/backlog/_logs/agent_tools/.

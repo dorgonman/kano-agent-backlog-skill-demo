@@ -24,7 +24,7 @@ links:
   relates:
   - ADR-0003
   blocks:
-  - KABSD-TSK-0060
+  - KABSD-TSK-0060@019b8f52
   blocked_by: []
 decisions:
 - ADR-0003
