@@ -66,7 +66,7 @@ This repository demonstrates how to use the `kano-agent-backlog-skill` to transf
 
 Before making any code changes, agents should:
 
-1. **Create/update backlog items** in `_kano/backlog/items/`
+1. **Create/update backlog items** in `_kano/backlog/products/<product-name>/items/`
 2. **Meet the Ready gate** for Tasks/Bugs (Context, Goal, Approach, Acceptance Criteria, Risks/Dependencies must be non-empty)
 3. **Record decisions** in the append-only Worklog
 4. **Link ADRs** when architectural trade-offs are made
@@ -105,6 +105,7 @@ This demo follows these principles:
 ### Plain Markdown Views
 
 Generated views are in `_kano/backlog/views/`:
+
 - `Dashboard_PlainMarkdown_Active.md` - New and InProgress work
 - `Dashboard_PlainMarkdown_New.md` - New work items
 - `Dashboard_PlainMarkdown_Done.md` - Completed work
