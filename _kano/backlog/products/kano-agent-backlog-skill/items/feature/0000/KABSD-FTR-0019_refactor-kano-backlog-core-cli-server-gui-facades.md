@@ -1,26 +1,29 @@
 ---
-id: KABSD-FTR-0019
-uid: 019b9853-3e84-7ee9-b9cc-5b82b10d8de5
-type: Feature
-title: "Refactor: kano-backlog-core + CLI/Server/GUI facades"
-state: InProgress
-priority: P1
-parent: KABSD-EPIC-0004
 area: architecture
-iteration: null
-tags: ["refactor", "core", "facade", "modularization"]
-created: 2026-01-07
-updated: 2026-01-07
-owner: null
+created: '2026-01-07'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-FTR-0019
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
-original_type: Feature
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-EPIC-0004
+priority: P1
+state: Done
+tags:
+- refactor
+- core
+- facade
+- modularization
+title: 'Refactor: kano-backlog-core + CLI/Server/GUI facades'
+type: Feature
+uid: 019b9853-3e84-7ee9-b9cc-5b82b10d8de5
+updated: '2026-01-08'
 ---
 
 # Context
@@ -74,3 +77,6 @@ Before proceeding with Cloud-related work, we need a cohesive modular architectu
 
 2026-01-07 19:59 [agent=copilot] Opened to plan modularization before cloud work; define core lib + facades.
 2026-01-07 23:30 [agent=copilot] Auto-sync from child KABSD-TSK-0115 -> InProgress.
+2026-01-08 07:20 [agent=copilot] Feature complete: core interface specifications (TSK-0115), CLI migration plan (TSK-0116), and server facade design (TSK-0117) all documented
+2026-01-08 07:21 [agent=copilot] Completed design tasks for CLI migration (TSK-0116) and server facade layering (TSK-0117); core interfaces already defined (TSK-0115)
+2026-01-08 16:26 [agent=cli-test] Testing CLI worklog append

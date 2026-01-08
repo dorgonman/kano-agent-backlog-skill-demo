@@ -122,6 +122,103 @@ errors = store.validate_schema(item)
 if errors:
     for error in errors:
         print(f"Validation error: {error}")
+```
+
+## State Machine
+
+Enforce valid state transitions and Ready gate validation for Task/Bug items:
+
+```python
+from kano_backlog_core import StateMachine, StateAction, ReadyValidator
+from kano_backlog_core.models import ItemType, ItemState
+
+# Check if transition is allowed
+allowed = StateMachine.can_transition(ItemState.NEW, StateAction.START)
+# True
+
+# Perform transition (modifies item in-place)
+item.state = ItemState.NEW
+item.context = "Test context"
+item.goal = "Test goal"
+item.approach = "Test approach"
+item.acceptance_criteria = "Test criteria"
+item.risks = "Test risks"
+
+result = StateMachine.transition(item, StateAction.READY, agent="copilot")
+# item.state is now ItemState.READY
+# Worklog entry appended with timestamp and agent
+
+# Ready gate validation (Task/Bug only)
+errors = ReadyValidator.check(item)
+if errors:
+    print(f"Not ready: {errors}")  # ['context', 'goal', ...]
+else:
+    print("Item is ready to work on")
+```
+
+### State Transitions
+
+Valid transitions:
+- **NEW** → PROPOSED, READY, START (InProgress), BLOCK, DROP
+- **PROPOSED** → READY, BLOCK, DROP
+- **READY** → START (InProgress), DONE, BLOCK, DROP
+- **IN_PROGRESS** → REVIEW, DONE, BLOCK, DROP
+- **REVIEW** → DONE, BLOCK, DROP
+- **BLOCKED** → START (InProgress), DROP
+
+### Ready Gate
+
+Task and Bug items require these sections before transitioning to READY:
+- **context**: Background and motivation
+- **goal**: What this item aims to achieve
+- **approach**: Implementation strategy
+- **acceptance_criteria**: Definition of done
+- **risks**: Blockers and concerns
+
+Epic/Feature/UserStory items skip Ready gate validation.
+
+## Audit Logging
+
+Track worklog entries and file operations:
+
+```python
+from kano_backlog_core import AuditLog, WorklogEntry
+
+# Append worklog to item
+item = store.read(item_path)
+AuditLog.append_worklog(item, "Started implementation", agent="copilot")
+# Worklog: "2024-01-15 14:30 [agent=copilot] Started implementation"
+
+# Parse existing worklog
+entries = AuditLog.parse_worklog(item)
+for entry in entries:
+    print(f"{entry.timestamp} [{entry.agent}] {entry.message}")
+
+# Log file operations to JSONL audit trail
+from pathlib import Path
+log_path = Path("_kano/backlog/_logs/agent_tools/tool_invocations.jsonl")
+AuditLog.log_file_operation(
+    operation="create",
+    path="items/tasks/0000/KABSD-TSK-0001.md",
+    tool="backlog_tool",
+    agent="copilot",
+    metadata={"reason": "New feature request"},
+    log_path=log_path
+)
+
+# Read audit trail
+records = AuditLog.read_file_operations(log_path, operation_filter="create")
+for record in records:
+    print(f"{record['timestamp']}: {record['operation']} {record['path']}")
+```
+
+### Worklog Format
+
+Standard format: `YYYY-MM-DD HH:MM [agent=name] Message`
+
+### File Operation Audit Log
+
+JSONL format for audit trail with timestamp, agent, operation, path, and metadata.
 
 ### Derived Queries
 

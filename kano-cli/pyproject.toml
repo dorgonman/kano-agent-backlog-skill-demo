@@ -1,0 +1,22 @@
+[project]
+name = "kano-cli"
+version = "0.0.1"
+description = "CLI facade for kano-backlog-core"
+authors = [ { name = "copilot" } ]
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.12",
+  "rich>=13",
+  # Installed in editable mode locally, or resolved if published
+]
+
+[project.scripts]
+kano = "kano_cli.cli:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["kano_cli", "kano_cli.commands"]
