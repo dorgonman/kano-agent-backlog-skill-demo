@@ -58,3 +58,34 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 
 ## Tests
 No tests or build steps are defined yet.
+
+## Temporary Clause: Local-first First, No Server Implementation Yet
+
+**Effective immediately**, this project prioritizes **local-first** completion and hardening.
+
+### Allowed (Encouraged)
+- Any work that improves local-first workflows and quality, including:
+  - File-based canonical data design, schema refinement, validation, and migration tooling
+  - Local indexing/search (e.g., SQLite/FTS/sidecar ANN), ingest pipelines, and performance work
+  - CLI scripts, automation scripts, and developer tooling
+  - Documentation, ADRs, threat models, and evaluations for future cloud/server support
+  - Designing server interfaces (API/MCP schemas) **as documentation/spec only**
+
+### Not Allowed (Hard Stop)
+- **Do not implement any server runtime** or deployable server component, including but not limited to:
+  - HTTP server, REST API service, gRPC service
+  - MCP server (any transport)
+  - Web UI that depends on a running server
+  - Docker/K8s deployment for a server component
+  - Authentication/authorization implementation **as runnable server code**
+- Do not add runtime dependencies whose primary purpose is server hosting (unless explicitly approved).
+
+### Re-enabling Condition
+- This clause remains in effect **until a human explicitly removes or disables it**.
+- Any request that appears to require server implementation must be treated as **"spec-only"** and should produce:
+  1) an ADR and/or design doc,
+  2) a roadmap ticket proposal,
+  3) a clear note that implementation is deferred due to this clause.
+
+### Rationale
+- Keep the project focused on local-first stability and usability before expanding to cloud/multi-remote deployments.

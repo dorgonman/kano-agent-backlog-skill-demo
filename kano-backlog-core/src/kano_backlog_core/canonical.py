@@ -74,6 +74,14 @@ class CanonicalStore:
             fm = post.metadata
             body_sections = self._parse_body(post.content)
 
+            # Convert date objects to ISO strings if needed
+            created = fm["created"]
+            if hasattr(created, "isoformat"):
+                created = created.isoformat()
+            updated = fm["updated"]
+            if hasattr(updated, "isoformat"):
+                updated = updated.isoformat()
+
             item = BacklogItem(
                 id=fm["id"],
                 uid=fm["uid"],
@@ -84,8 +92,8 @@ class CanonicalStore:
                 parent=fm.get("parent"),
                 owner=fm.get("owner"),
                 tags=fm.get("tags", []),
-                created=fm["created"],
-                updated=fm["updated"],
+                created=created,
+                updated=updated,
                 area=fm.get("area"),
                 iteration=fm.get("iteration"),
                 external=fm.get("external", {}),

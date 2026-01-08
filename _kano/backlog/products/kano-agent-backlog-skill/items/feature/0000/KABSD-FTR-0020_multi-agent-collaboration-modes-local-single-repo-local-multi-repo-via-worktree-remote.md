@@ -3,14 +3,14 @@ id: KABSD-FTR-0020
 uid: 019b985a-c5fe-7707-b445-0047686f84dc
 type: Feature
 title: "Multi-agent collaboration modes (local single repo / local multi repo via worktree / remote)"
-state: Proposed
+state: Done
 priority: P1
 parent: KABSD-EPIC-0006
 area: collaboration
 iteration: null
 tags: ["multi-agent", "collaboration", "worktree", "remote"]
 created: 2026-01-07
-updated: 2026-01-07
+updated: 2026-01-08
 owner: null
 external:
   azure_id: null
@@ -71,3 +71,5 @@ Each mode impacts workflows (claim/lease), conflict avoidance, consistency guara
 # Worklog
 
 2026-01-07 20:07 [agent=copilot] Opened to define collaboration modes and architecture before implementation.
+2026-01-08 07:24 [agent=copilot] Auto-sync from child KABSD-TSK-0120 -> Done.
+2026-01-08 07:24 [agent=copilot] Defined collaboration modes via tasks: single-repo (TSK-0118), worktree-based parallelism (TSK-0119), and remote (TSK-0120) with workflows, invariants, and conflict/consistency rules

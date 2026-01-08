@@ -3,14 +3,14 @@ id: KABSD-TSK-0117
 uid: 019b9853-86ed-7ac4-80af-e9bb0fcf0c50
 type: Task
 title: "Design server facade layering (HTTP/MCP)"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-FTR-0019
 area: architecture
 iteration: null
 tags: ["server", "facade", "http", "mcp"]
 created: 2026-01-07
-updated: 2026-01-07
+updated: 2026-01-08
 owner: null
 external:
   azure_id: null
@@ -62,3 +62,4 @@ Server facades (HTTP via FastAPI, MCP server) must share an internal service lay
 # Worklog
 
 2026-01-07 19:59 [agent=copilot] Define request→validate→core→response path and cross-cutting concerns (auth, rate-limit, logging).
+2026-01-08 02:26 [agent=copilot] Server facade design documented with layered architecture, request flow, HTTP/MCP adapters, and cross-cutting concerns

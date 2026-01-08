@@ -1,9 +1,15 @@
 # New Work
 
-Generated: 2026-01-08 02:00
+Generated: 2026-01-08 07:24
 Source: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\items
 
 ## New
 
-_No items._
+### Features
+
+- [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/features/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
+
+### Tasks
+
+- [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/tasks/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
 

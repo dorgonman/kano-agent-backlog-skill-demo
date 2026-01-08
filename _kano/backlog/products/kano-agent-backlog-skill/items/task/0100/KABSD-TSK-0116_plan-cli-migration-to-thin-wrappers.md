@@ -3,14 +3,14 @@ id: KABSD-TSK-0116
 uid: 019b9853-73ad-7ba4-bf3e-1c5e5e6218e5
 type: Task
 title: "Plan CLI migration to thin wrappers"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-FTR-0019
 area: architecture
 iteration: null
 tags: ["cli", "facade", "wrapper"]
 created: 2026-01-07
-updated: 2026-01-07
+updated: 2026-01-08
 owner: null
 external:
   azure_id: null
@@ -62,3 +62,4 @@ Current scripts mix domain logic and arg parsing/output formatting. Post-refacto
 # Worklog
 
 2026-01-07 19:59 [agent=copilot] Outline CLI facade package entry points and migrate legacy scripts incrementally.
+2026-01-08 02:26 [agent=copilot] CLI migration plan documented with command hierarchy, output formatting, and migration strategy
