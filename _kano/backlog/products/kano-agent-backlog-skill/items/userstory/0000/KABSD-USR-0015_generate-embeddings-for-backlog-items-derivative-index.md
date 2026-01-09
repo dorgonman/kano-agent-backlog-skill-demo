@@ -3,7 +3,7 @@ id: KABSD-USR-0015
 uid: 019b8f52-9f4a-754d-8d3a-81c5e41c131a
 type: UserStory
 title: Generate embeddings for backlog items (derivative index)
-state: Proposed
+state: Done
 priority: P4
 parent: KABSD-FTR-0007
 area: rag
@@ -13,7 +13,7 @@ tags:
 - rag
 - index
 created: 2026-01-05
-updated: '2026-01-09'
+updated: 2026-01-09
 owner: null
 external:
   azure_id: null
@@ -57,3 +57,5 @@ As a user, I want a hybrid retrieval pipeline that combines semantic search (emb
 
 2026-01-05 08:30 [agent=codex] Created from template.
 2026-01-09 11:20 [agent=codex] Linked embeddings pipeline to Graph-assisted retrieval (Context Graph) planning.
+2026-01-09 17:37 [agent=copilot] Auto-sync from child KABSD-TSK-0056 -> InProgress.
+2026-01-09 20:46 [agent=copilot] Auto-sync from child KABSD-TSK-0124 -> Done.

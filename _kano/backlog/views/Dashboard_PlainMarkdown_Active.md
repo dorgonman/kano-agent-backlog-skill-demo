@@ -1,6 +1,6 @@
 # InProgress Work
 
-Generated: 2026-01-09 09:48
+Generated: 2026-01-09 20:46
 Source: _kano/backlog/items
 Command:
 
@@ -10,13 +10,7 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 
 ## New
 
-### Features
-
-- [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/features/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
-
-### Tasks
-
-- [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/tasks/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
+_No items._
 
 ## InProgress
 

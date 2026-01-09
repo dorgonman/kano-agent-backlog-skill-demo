@@ -1,11 +1,11 @@
 ---
-id: KABSD-FTR-0020
+id: KABSD-FTR-0025
 uid: 019b9a5d-0000-0000-0000-000000000020
 type: Feature
 title: "Unified CLI for All Backlog Operations"
 state: New
 priority: P1
-parent: null
+parent: KABSD-EPIC-0004
 area: tooling
 iteration: null
 tags: ["cli", "automation", "skill-hardening"]
