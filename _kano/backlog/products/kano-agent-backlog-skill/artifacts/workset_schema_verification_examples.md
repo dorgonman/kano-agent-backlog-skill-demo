@@ -159,6 +159,7 @@ for canonical_row in canonical_items_in_workset:
 **Verification**:
 ```python
 # Simulate workset rebuild
+import json
 from datetime import datetime
 
 # Get workset manifest
