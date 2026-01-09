@@ -25,12 +25,30 @@ This repository demonstrates how to use the `kano-agent-backlog-skill` to transf
 │   ├── views/                  # Generated dashboard views
 │   ├── artifacts/              # Work artifacts and reports
 │   └── tools/                  # Project-specific tools
-├── skills/                     # Git submodules for reusable skills
-│   ├── kano-agent-backlog-skill/         # The backlog skill (submodule)
-│   └── kano-commit-convention-skill/     # Commit convention skill (submodule)
+├── skills/                     # Reusable skills (git submodules or local)
+│   ├── kano-agent-backlog-skill/         # **SELF-CONTAINED** backlog skill
+│   │   ├── src/                # All Python source code (unified)
+│   │   │   ├── kano_backlog_core/   # Domain library
+│   │   │   └── kano_cli/            # CLI facade
+│   │   ├── scripts/            # Automation and tooling
+│   │   ├── templates/          # Item and ADR templates
+│   │   ├── references/         # Reference documentation
+│   │   └── pyproject.toml      # Unified project config
+│   └── kano-commit-convention-skill/
 ├── AGENTS.md                   # Guidelines for AI agents
 └── CLAUDE.md                   # Quick reference for backlog workflow
 ```
+
+## Skill Architecture: Self-Contained Design
+
+As of Jan 2026, `kano-agent-backlog-skill` has been **consolidated into a self-contained package**:
+
+- All source code (domain library + CLI) lives under `src/` 
+- All dependencies are unified in `pyproject.toml`
+- The entire `skills/kano-agent-backlog-skill/` directory can be copied to any project (or used as a git submodule)
+- No external dependencies on `kano-backlog-core` or `kano-cli` projects
+
+This follows the "Self-contained skill stance" principle defined in [AGENTS.md](AGENTS.md): keep all automation and tools needed to use the skill within the skill directory itself, avoiding scattered dependencies.
 
 ## Getting Started
 
