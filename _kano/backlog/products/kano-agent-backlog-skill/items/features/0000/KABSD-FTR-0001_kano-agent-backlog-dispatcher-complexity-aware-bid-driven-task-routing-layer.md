@@ -1,9 +1,9 @@
 ---
-id: KABSD-FTR-0001
+id: KABSD-FTR-0000
 uid: 019ba3a2-d5a7-72dd-bd97-01f3bb28bff0
 type: Feature
-title: "kano-agent-backlog-dispatcher: complexity-aware, bid-driven task routing layer"
-state: Proposed
+title: "DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher"
+state: Dropped
 priority: P1
 parent: KABSD-EPIC-0004
 area: dispatch
@@ -24,6 +24,9 @@ decisions: []
 
 # Context
 
+This file is a **deprecated duplicate** created during folder-layout migration.
+Use the canonical Feature `KABSD-FTR-0026` instead.
+
 # Goal
 
 # Non-Goals
@@ -39,3 +42,5 @@ decisions: []
 # Worklog
 
 2026-01-10 00:41 [agent=codex] Created to plan a dispatcher/routing layer for assigning backlog work items to suitable agents/models.
+2026-01-10 01:01 [agent=codex] Marked as deprecated duplicate; canonical feature is KABSD-FTR-0026. Pending manual deletion due to WinError 5 on delete/rename.
+2026-01-10 01:03 [agent=codex] Adjusted deprecated id to KABSD-FTR-0000 to avoid bumping future feature numbering.

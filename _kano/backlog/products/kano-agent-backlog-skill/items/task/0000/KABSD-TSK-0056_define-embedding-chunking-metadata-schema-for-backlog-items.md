@@ -78,3 +78,7 @@ Define chunking rules and metadata schema for turning backlog items into embeddi
 2026-01-10 00:52 [agent=copilot] Workset initialized: _kano/backlog/sandboxes/.cache/019b8f52-9fc8-7c94-aa2d-806cacdd9086
 
 2026-01-10 00:53 [agent=copilot] Workset refreshed: _kano/backlog/sandboxes/.cache/019b8f52-9fc8-7c94-aa2d-806cacdd9086
+
+2026-01-10 01:07 [agent=copilot] [model=claude-sonnet-4.5] Workset initialized: _kano/backlog/sandboxes/.cache/019b8f52-9fc8-7c94-aa2d-806cacdd9086
+
+2026-01-10 01:07 [agent=copilot] [model=gemini-3.0-high] Workset refreshed: _kano/backlog/sandboxes/.cache/019b8f52-9fc8-7c94-aa2d-806cacdd9086
