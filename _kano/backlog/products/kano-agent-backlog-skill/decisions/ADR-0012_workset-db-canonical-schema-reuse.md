@@ -153,7 +153,7 @@ CREATE TABLE workset_manifest (
   seed_items TEXT,  -- JSON array of seed UIDs
   expansion_params TEXT,  -- JSON: {k_hop: 2, edge_types: [...]}
   source_commit_hash TEXT,  -- Git commit of canonical files
-  canonical_index_version TEXT  -- Schema version of source index
+  canonical_index_version TEXT NOT NULL CHECK (canonical_index_version <> '')  -- Schema version of source index
 );
 ```
 
