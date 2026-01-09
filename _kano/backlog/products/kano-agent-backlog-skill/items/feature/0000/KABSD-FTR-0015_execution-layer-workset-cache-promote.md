@@ -10,7 +10,7 @@ area: general
 iteration: null
 tags: ["roadmap", "execution", "workset"]
 created: 2026-01-07
-updated: 2026-01-07
+updated: 2026-01-09
 owner: null
 external:
   azure_id: null
@@ -19,11 +19,19 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: []
+decisions: [ADR-0011]
 original_type: Feature
 ---
 
 # Context
+
+**Architecture**: See [ADR-0011](../../decisions/ADR-0011_workset-graphrag-context-graph-separation-of-responsibilities.md) for the complete specification of Workset responsibilities and how it relates to GraphRAG/Context Graph.
+
+Workset provides per-agent/per-task execution memory and cache. Key properties:
+- Materialized cache bundle (SQLite + optional filesystem)
+- Derived and rebuildable from canonical files + repo-level index
+- Ephemeral (TTL-based cleanup)
+- Local (not source of truth; promotes back to canonical on important updates)
 
 # Goal
 
