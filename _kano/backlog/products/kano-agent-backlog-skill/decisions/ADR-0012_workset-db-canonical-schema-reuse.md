@@ -162,9 +162,10 @@ CREATE TABLE workset_manifest (
 ```sql
 CREATE TABLE workset_provenance (
   item_uid TEXT PRIMARY KEY,
-  selection_reason TEXT,  -- "seed", "parent_expansion", "dependency_expansion"
-  distance_from_seed INTEGER,  -- Hop count from nearest seed
-  included_at TEXT  -- ISO 8601 timestamp
+  selection_reason TEXT NOT NULL,  -- "seed", "parent_expansion", "dependency_expansion", "manual"
+  distance_from_seed INTEGER,  -- Hop count from nearest seed (0 for seeds)
+  included_at TEXT NOT NULL,  -- ISO 8601 timestamp when item was added
+  FOREIGN KEY (item_uid) REFERENCES items(uid) ON DELETE CASCADE
 );
 ```
 
