@@ -35,5 +35,6 @@ coverage.xml
 .DS_Store
 Thumbs.db
 *.swp
-/_kano/backlog/_index/backlog.sqlite3
-/_kano/backlog/_index/backlog.sqlite3
+
+# Kiro specs (development artifacts)
+.kiro/
