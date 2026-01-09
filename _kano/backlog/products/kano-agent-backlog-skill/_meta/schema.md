@@ -1,5 +1,14 @@
 # Backlog Schema
 
+## Overview
+
+This document describes the frontmatter schema for backlog items (Markdown files).
+
+For the canonical **database schema** (SQLite/workset), see:
+- **SQL Schema**: [canonical_schema.sql](./canonical_schema.sql)
+- **JSON Schema**: [canonical_schema.json](./canonical_schema.json)
+- **ADR-0012**: [Workset DB Canonical Schema Reuse](../decisions/ADR-0012_workset-db-canonical-schema-reuse.md)
+
 ## Item types
 
 - Epic
