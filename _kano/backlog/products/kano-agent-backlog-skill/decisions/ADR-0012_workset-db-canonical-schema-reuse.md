@@ -244,8 +244,11 @@ Per ADR-0008, schema migrations apply uniformly:
 - [x] Content storage strategy is documented (full/pointer/hybrid)
 - [x] Schema migration compatibility is specified (workset follows canonical migrations)
 - [x] Guidelines for adding workset metadata are documented (DO/DO NOT rules)
-- [ ] Implementation validates schema compatibility at workset build time
-- [ ] Tools that read canonical schema can read workset DB without special-case mapping
+- [x] SQL schema definition created ([canonical_schema.sql](../_meta/canonical_schema.sql))
+- [x] JSON schema definition created ([canonical_schema.json](../_meta/canonical_schema.json))
+- [x] Verification examples documented ([workset_schema_verification_examples.md](../artifacts/workset_schema_verification_examples.md))
+- [ ] Implementation validates schema compatibility at workset build time (future work)
+- [ ] Tools that read canonical schema can read workset DB without special-case mapping (verified via examples)
 
 # Non-Goals
 
@@ -317,6 +320,16 @@ Per ADR-0008, schema migrations apply uniformly:
 - Implement schema version compatibility checker for workset loading
 - Add workset content strategy configuration (full/pointer/hybrid)
 - Create workset rebuild automation on schema migration
+
+# Verification
+
+See [Workset Schema Verification Examples](../artifacts/workset_schema_verification_examples.md) for test cases demonstrating:
+- Schema compatibility checks
+- Schema version tracking
+- Core table consistency
+- Workset-specific table validation
+- Subset semantics verification
+- Deterministic rebuild testing
 
 # Status
 
