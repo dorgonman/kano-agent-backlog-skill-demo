@@ -6,7 +6,7 @@ title: "SQLite Schema Migration Framework"
 state: Accepted
 created: 2026-01-07
 updated: 2026-01-07
-related_items: ["KABSD-TSK-0111", "KABSD-TSK-0110", "ADR-0004"]
+related_items: ["KABSD-TSK-0111", "KABSD-TSK-0110", "ADR-0004", "ADR-0012"]
 tags: ["architecture", "database", "migration", "schema-evolution"]
 ---
 
@@ -223,8 +223,21 @@ if "target_uid" not in cols:
 
 - Task: [KABSD-TSK-0111](../items/tasks/0100/KABSD-TSK-0111_implement-sqlite-schema-migration-framework.md)
 - Related ADR: [ADR-0004](ADR-0004_file-first-architecture-with-sqlite-index.md) (SQLite Index Architecture)
+- Related ADR: [ADR-0012](ADR-0012_workset-db-canonical-schema-reuse.md) (Workset DB Schema - migrations apply to worksets too)
 - Future Work: [KABSD-TSK-0110](../items/tasks/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md) (VCS Cache - first migration user)
 - Dependency: None (standalone framework)
+
+# Workset DB Migration
+
+Per [ADR-0012](ADR-0012_workset-db-canonical-schema-reuse.md), workset DBs MUST reuse the canonical schema and apply the same migrations.
+
+**Workset Migration Strategy**:
+1. When building a workset, detect canonical index schema version
+2. Apply same migrations to workset DB in order
+3. Store `canonical_index_version` in `workset_manifest` table
+4. If canonical schema is upgraded, worksets MUST be rebuilt or auto-migrated
+
+**Constraint**: Workset schema_version MUST NOT exceed canonical schema_version.
 
 # Appendix: Migration File Template
 

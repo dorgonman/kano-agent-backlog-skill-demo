@@ -19,13 +19,13 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: [ADR-0011]
+decisions: [ADR-0011, ADR-0012]
 original_type: Feature
 ---
 
 # Context
 
-**Architecture**: See [ADR-0011](../../decisions/ADR-0011_workset-graphrag-context-graph-separation-of-responsibilities.md) for the complete specification of Workset responsibilities and how it relates to GraphRAG/Context Graph.
+**Architecture**: See [ADR-0011](../../decisions/ADR-0011_workset-graphrag-context-graph-separation-of-responsibilities.md) for the complete specification of Workset responsibilities and how it relates to GraphRAG/Context Graph. See [ADR-0012](../../decisions/ADR-0012_workset-db-canonical-schema-reuse.md) for schema requirements.
 
 Workset provides per-agent/per-task execution memory and cache. Key properties:
 - Materialized cache bundle (SQLite + optional filesystem)
