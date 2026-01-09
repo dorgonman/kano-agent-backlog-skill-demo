@@ -1,11 +1,11 @@
 # InProgress Work
 
-Generated: 2026-01-09 08:26
+Generated: 2026-01-09 09:48
 Source: _kano/backlog/items
 Command:
 
 ```bash
-python --source auto --items-root _kano/backlog/items --backlog-root _kano/backlog --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md --groups New,InProgress --title InProgress Work
+python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/items --backlog-root _kano/backlog --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md --groups New,InProgress --title InProgress Work
 ```
 
 ## New

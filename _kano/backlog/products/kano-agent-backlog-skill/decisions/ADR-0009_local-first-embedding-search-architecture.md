@@ -99,3 +99,19 @@ Chosen option: **Route B (Sidecar ANN Index)** for local-first environments, wit
 
 - [KABSD-USR-0015: Generate embeddings for backlog items](KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md)
 - [ADR-0004: File-first architecture with SQLite index](ADR-0004_file-first-architecture-with-sqlite-index.md)
+
+
+## Graph-assisted retrieval (Context Graph)
+
+In addition to keyword/semantic retrieval, we can improve precision and traceability by expanding the seed set
+via a derived Context Graph (parent chain, ADR refs, dependency links).
+
+Minimal strategy:
+- Retrieve seeds via FTS/ANN
+- Expand k-hop over allowlisted edges
+- Re-rank and pack context (seed + neighbors)
+
+See:
+- [[ADR-0011_graph-assisted-retrieval-and-context-graph.md|ADR-0011 Graph-assisted retrieval with a derived Context Graph]]
+- [[../items/feature/0000/KABSD-FTR-0023_graph-assisted-rag-planning-and-minimal-implementation.md|KABSD-FTR-0023 Graph-assisted RAG planning]]
+
