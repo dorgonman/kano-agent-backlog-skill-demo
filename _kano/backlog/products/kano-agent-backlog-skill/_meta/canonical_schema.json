@@ -266,8 +266,9 @@
           "examples": ["Context", "Goal"]
         },
         "embedding": {
-          "type": "binary",
-          "description": "Float32 vector array for semantic search (optional)",
+          "type": "string",
+          "contentEncoding": "base64",
+          "description": "Float32 vector array for semantic search (optional, binary data encoded as base64)",
           "required": false
         }
       },

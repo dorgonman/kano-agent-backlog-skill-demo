@@ -145,7 +145,8 @@ CREATE TABLE IF NOT EXISTS workset_manifest (
   seed_items TEXT,                   -- JSON array of seed UIDs
   expansion_params TEXT,             -- JSON: {k_hop: 2, edge_types: [...]}
   source_commit_hash TEXT,           -- Git commit of canonical files
-  canonical_index_version TEXT       -- Schema version of source index
+  canonical_index_version TEXT NOT NULL,  -- Schema version of source index
+  CHECK (length(canonical_index_version) > 0)  -- Ensure version is not empty
 );
 
 -- Workset Provenance: Track how items were selected into this workset
