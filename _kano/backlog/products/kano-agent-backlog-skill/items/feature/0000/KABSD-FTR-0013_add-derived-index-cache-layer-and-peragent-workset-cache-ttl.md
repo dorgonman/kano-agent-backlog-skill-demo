@@ -19,7 +19,7 @@ links:
   relates: []
   blocks: []
   blocked_by: []
-decisions: [ADR-0011]
+decisions: [ADR-0011, ADR-0012]
 original_type: Feature
 ---
 
@@ -27,7 +27,7 @@ original_type: Feature
 
 As the number of backlog items increases, relying solely on file system traversal impacts performance. Additionally, agents need "Working Memory" (Workset) during task execution; storing this information directly in permanent records can clutter them. These transient records require a TTL (Time-To-Live) mechanism for automatic cleanup.
 
-**Architecture Clarification**: See [ADR-0011](../../decisions/ADR-0011_workset-graphrag-context-graph-separation-of-responsibilities.md) for the specification of how Workset relates to GraphRAG and the repo-level derived index. Key points:
+**Architecture Clarification**: See [ADR-0011](../../decisions/ADR-0011_workset-graphrag-context-graph-separation-of-responsibilities.md) for the specification of how Workset relates to GraphRAG and the repo-level derived index. See [ADR-0012](../../decisions/ADR-0012_workset-db-canonical-schema-reuse.md) for schema compatibility requirements (workset DB must reuse canonical schema). Key points:
 - Workset is a per-agent/per-task cache bundle (ephemeral, local)
 - Repo-level derived index (including graph) is the shared, authoritative derived data
 - Both are rebuildable from canonical files (source of truth)

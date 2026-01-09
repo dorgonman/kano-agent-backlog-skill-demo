@@ -3,7 +3,7 @@ id: ADR-0004
 title: "File-First Architecture with SQLite Index"
 status: Proposed
 date: 2026-01-06
-related_items: [KABSD-FTR-0007, KABSD-TSK-0049, ADR-0003]
+related_items: [KABSD-FTR-0007, KABSD-TSK-0049, ADR-0003, ADR-0012]
 supersedes: null
 superseded_by: null
 ---
@@ -100,3 +100,9 @@ A sync script (e.g., `update_index.py`) runs:
 - **Tooling Update**: All queries (Dashboard generation, Reference resolution) should migrate to use SQLite for reads.
 - **Gitignore**: Ensure `*.sqlite3` is ignored.
 - **Resilience**: Tools must degrade gracefully if DB is corrupt or missing (fallback to file scan or auto-rebuild).
+- **Schema Reuse**: Per [ADR-0012](ADR-0012_workset-db-canonical-schema-reuse.md), this canonical schema is reused by workset DBs to avoid schema drift and maintain portable context.
+
+# Related
+
+- **Canonical Schema**: See [_meta/canonical_schema.sql](../_meta/canonical_schema.sql) and [_meta/canonical_schema.json](../_meta/canonical_schema.json) for the complete schema definition.
+- **Workset Schema**: See [ADR-0012](ADR-0012_workset-db-canonical-schema-reuse.md) for how workset DBs reuse this canonical schema.
