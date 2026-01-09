@@ -122,8 +122,8 @@ Each product has identical internal structure:
 ## 4. Backward Compatibility
 
 Existing KABSD backlog migrates as:
-- Old: `_kano/backlog/items/tasks/0000/KABSD-TSK-0007.md`
-- New: `_kano/backlog/products/kano-agent-backlog-skill/items/tasks/0000/KABSD-TSK-0007.md`
+- Old: `_kano/backlog/items/task/0000/KABSD-TSK-0007.md`
+- New: `_kano/backlog/products/kano-agent-backlog-skill/items/task/0000/KABSD-TSK-0007.md`
 
 Path change is clean; no file modifications required. Git correctly tracks as renames.
 

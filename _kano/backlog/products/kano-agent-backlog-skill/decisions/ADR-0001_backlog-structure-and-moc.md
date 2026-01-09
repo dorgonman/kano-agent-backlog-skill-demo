@@ -22,7 +22,7 @@ clearly in Obsidian. DataviewJS was not reliable in the current setup.
 
 # Links
 
-- Related: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
+- Related: [[_kano/backlog/items/task/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
 
 # Options Considered
 

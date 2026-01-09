@@ -1,10 +1,33 @@
 # kano-agent-backlog-skill-demo
 
-A demonstration repository showcasing the **kano-agent-backlog-skill** - a local-first, file-based backlog management system designed for AI agent collaboration.
+⚠️ **PRE-ALPHA SOFTWARE - EXPERIMENTAL STAGE** ⚠️
+
+This is a **pre-alpha demonstration** of the **kano-agent-backlog-skill** - an experimental local-first, file-based backlog management system for AI agent collaboration.
+
+**IMPORTANT DISCLAIMERS:**
+- 🚧 **Rapid Development**: System architecture is changing frequently
+- ⚡ **Breaking Changes**: APIs, file formats, and workflows may change without notice
+- 🔬 **Experimental**: Many features are incomplete or unstable
+- ❌ **No Guarantees**: No stability, compatibility, or support guarantees
+- 📝 **Documentation Lag**: Documentation may not reflect current implementation
 
 ## Overview
 
-This repository demonstrates how to use the `kano-agent-backlog-skill` to transform agent collaboration into a durable, auditable backlog system. Instead of losing context in chat conversations, all planning, decisions, and work items are persisted as structured markdown files with an optional SQLite index for querying.
+**Current Status: Pre-Alpha Experimentation**
+
+This repository demonstrates an evolving approach to transform agent collaboration into a durable, auditable backlog system. The core concept is to persist planning, decisions, and work items as structured markdown files rather than losing context in chat conversations.
+
+**What's Working (Subject to Change):**
+- Basic markdown-based work item storage
+- Simple CLI scripts for item creation
+- Plain markdown dashboard generation
+
+**What's Unstable/Incomplete:**
+- File formats and schemas
+- CLI interfaces and commands
+- Configuration system
+- Integration workflows
+- Documentation accuracy
 
 ## Key Features
 
@@ -50,62 +73,92 @@ As of Jan 2026, `kano-agent-backlog-skill` has been **consolidated into a self-c
 
 This follows the "Self-contained skill stance" principle defined in [AGENTS.md](AGENTS.md): keep all automation and tools needed to use the skill within the skill directory itself, avoiding scattered dependencies.
 
-## Getting Started
+## Getting Started (Experimental)
+
+⚠️ **WARNING**: This is designed for AI agent automation, not manual operation.
 
 ### Prerequisites
 
+- AI agent with file system access (Claude, ChatGPT, etc.)
 - Python 3.8+ (for skill scripts)
-- Git (for version control and submodules)
-- Optional: Obsidian (for Dataview dashboards)
+- Git (for version control)
+- **Patience**: Expect things to break or change
 
-### Installation
+### Agent-First Setup
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/dorgonman/kano-agent-backlog-skill-demo.git
-   cd kano-agent-backlog-skill-demo
-   ```
+**Instead of manual installation, ask your AI agent to:**
 
-2. **Initialize submodules**:
-   ```bash
-   git submodule update --init --recursive
-   ```
-
-3. **Explore the backlog**:
-   ```bash
-   # View work items
-   ls _kano/backlog/products/kano-agent-backlog-skill/items/
-   
-   # View generated dashboards
-   cat _kano/backlog/views/Dashboard_PlainMarkdown_Active.md
-   ```
-
-## Backlog Workflow
-
-Before making any code changes, agents should:
-
-1. **Create/update backlog items** in `_kano/backlog/products/<product-name>/items/`
-2. **Meet the Ready gate** for Tasks/Bugs (Context, Goal, Approach, Acceptance Criteria, Risks/Dependencies must be non-empty)
-3. **Record decisions** in the append-only Worklog
-4. **Link ADRs** when architectural trade-offs are made
-
-### Using Skill Scripts
-
-The skill provides scripts for backlog management:
-
-```bash
-# Create a new work item
-python skills/kano-agent-backlog-skill/scripts/backlog/create_item.py \
-  --agent <agent-name> --type task --title "Your task title"
-
-# Update item state
-python skills/kano-agent-backlog-skill/scripts/backlog/update_state.py \
-  --agent <agent-name> --item-id KABSD-TSK-0001 --state InProgress
-
-# Refresh dashboards
-python skills/kano-agent-backlog-skill/scripts/backlog/refresh_dashboards.py \
-  --agent <agent-name> --backlog-root _kano/backlog
 ```
+"Please help me set up the kano-agent-backlog-skill demo. Clone the repo, 
+initialize the backlog structure, and show me what work items exist."
+```
+
+**The agent should automatically:**
+1. Clone the repository
+2. Initialize submodules if needed
+3. Explore the backlog structure
+4. Show you available work items
+5. Generate current dashboard views
+
+**If something breaks, just ask:**
+```
+"The backlog setup failed. Please check what went wrong and fix it."
+```
+
+## Agent Workflow (Chat-Driven)
+
+**This system is designed for conversational agent interaction, not manual commands.**
+
+### Starting a New Work Session
+
+**Ask your agent:**
+```
+"Please check the backlog and pick a ready task for me to work on. 
+Create the work item if needed and start working on it."
+```
+
+**The agent should:**
+1. Scan available work items
+2. Find or create a suitable task
+3. Update the item to "InProgress"
+4. Begin implementation
+5. Log decisions in the worklog
+
+### Creating New Work Items
+
+**Instead of manual scripts, just say:**
+```
+"I need to add a new feature for user authentication. 
+Please create the appropriate backlog items and start planning."
+```
+
+**Or for bugs:**
+```
+"There's a bug in the login system - users can't reset passwords. 
+Please create a bug item and investigate the issue."
+```
+
+### Checking Progress
+
+**Ask for status updates:**
+```
+"Show me the current backlog status and what's in progress."
+```
+
+**Or:**
+```
+"What work items are ready to be picked up?"
+```
+
+### Completing Work
+
+**When done:**
+```
+"I've finished the authentication feature. Please update the backlog 
+and mark the work item as complete."
+```
+
+⚠️ **Note**: Script interfaces change frequently. Let the agent handle the technical details.
 
 ## Backlog Discipline
 
@@ -120,20 +173,33 @@ This demo follows these principles:
 
 ## Viewing the Backlog
 
-### Plain Markdown Views
+**Ask your agent to show you the current state:**
 
-Generated views are in `_kano/backlog/views/`:
+```
+"Please show me the current backlog dashboard and highlight 
+what needs attention."
+```
 
-- `Dashboard_PlainMarkdown_Active.md` - New and InProgress work
-- `Dashboard_PlainMarkdown_New.md` - New work items
-- `Dashboard_PlainMarkdown_Done.md` - Completed work
+**Or for specific views:**
+```
+"What work items are currently in progress?"
+"Show me all completed work from this week."
+"What new tasks are ready to be picked up?"
+```
 
-### Obsidian Dataview (Optional)
+### Generated Views (Agent-Managed)
 
-If you use Obsidian:
-1. Open this repository as a vault
-2. Install the Dataview plugin
-3. View dynamic dashboards in `_kano/backlog/views/`
+The agent automatically maintains views in `_kano/backlog/views/`:
+- Active work dashboard
+- New items queue  
+- Completed work history
+
+### Obsidian Integration (Optional)
+
+**If you use Obsidian, ask:**
+```
+"Please set up this backlog for Obsidian Dataview integration."
+```
 
 ## Work Item Types
 
@@ -147,9 +213,23 @@ If you use Obsidian:
 
 Backlog configuration is in `_kano/backlog/_config/` (product-specific) or `_kano/backlog/_shared/` (shared settings).
 
-## Contributing
+## Contributing (Pre-Alpha)
 
-This is a demo repository. For contributions to the skill itself, please see the [kano-agent-backlog-skill](https://github.com/dorgonman/kano-agent-backlog-skill) repository.
+**Current Status**: This is an experimental demo repository in rapid development.
+
+**Before Contributing:**
+- Expect frequent breaking changes
+- Check recent commits for current state
+- Understand this is pre-alpha software
+- No stability guarantees
+
+**How to Contribute:**
+1. Open issues for bugs/suggestions
+2. Discuss major changes before implementing
+3. Expect your contributions may be refactored heavily
+4. Focus on core concepts rather than implementation details
+
+For the main skill development, see [kano-agent-backlog-skill](https://github.com/dorgonman/kano-agent-backlog-skill) (also pre-alpha).
 
 ## License
 
@@ -162,11 +242,13 @@ See the individual skill repositories for license information.
 - **Quick Reference**: [CLAUDE.md](CLAUDE.md)
 - **Example Backlogs**: Explore `_kano/backlog/products/` for real-world examples
 
-## Philosophy
+## Philosophy (Evolving)
 
-This demo embodies a "backlog-first" approach where:
-- Planning happens before coding
-- Decisions are recorded and auditable
-- Context is preserved in files, not lost in chat
-- Human-readable markdown is the source of truth
-- Optional indexes enable powerful queries without lock-in
+This experimental demo explores a "backlog-first" approach where:
+- Planning happens before coding (when it works)
+- Decisions are recorded and auditable (format changing)
+- Context is preserved in files, not lost in chat (structure evolving)
+- Human-readable markdown is the source of truth (schema unstable)
+- Optional indexes enable powerful queries without lock-in (implementation changing)
+
+**Note**: These principles are being tested and refined. Implementation may not always match the philosophy during this experimental phase.

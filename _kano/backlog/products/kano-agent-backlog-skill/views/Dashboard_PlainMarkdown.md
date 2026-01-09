@@ -36,14 +36,14 @@ Outputs:
 
 ## Browse by type (folders)
 
-- Epics: `../items/epics/`
-- Features: `../items/features/`
-- UserStories: `../items/userstories/`
-- Tasks: `../items/tasks/`
-- Bugs: `../items/bugs/`
+- Epics: `../items/epic/`
+- Features: `../items/feature/`
+- UserStories: `../items/userstory/`
+- Tasks: `../items/task/`
+- Bugs: `../items/bug/`
 
 ## Decisions (ADRs)
 
 - ADRs: `../decisions/`
 
-For hierarchy navigation, open an Epic MOC file (`*.index.md`) under `../items/epics/**/`.
+For hierarchy navigation, open an Epic MOC file (`*.index.md`) under `../items/epic/**/`.

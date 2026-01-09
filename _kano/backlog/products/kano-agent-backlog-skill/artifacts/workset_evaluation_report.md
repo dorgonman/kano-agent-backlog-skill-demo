@@ -1,6 +1,6 @@
 # Workset 整合評估報告
 
-> **工單**: [KABSD-TSK-0104](file:///d:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/products/kano-agent-backlog-skill/items/tasks/0100/KABSD-TSK-0104_evaluate-integrating-working-memory-on-disk-into-kano-backlog.md)
+> **工單**: [KABSD-TSK-0104](file:///d:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/products/kano-agent-backlog-skill/items/task/0100/KABSD-TSK-0104_evaluate-integrating-working-memory-on-disk-into-kano-backlog.md)
 > **日期**: 2026-01-07
 
 ---

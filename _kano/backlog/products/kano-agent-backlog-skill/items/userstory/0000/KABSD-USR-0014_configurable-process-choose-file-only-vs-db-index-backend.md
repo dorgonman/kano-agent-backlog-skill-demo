@@ -45,7 +45,7 @@ As a user, I want config to enable/disable DB indexing and choose the backend so
 # Links
 
 - Feature: [[KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline|KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0048_add-config-keys-for-db-index-backend-selection|KABSD-TSK-0048 Add config keys for DB index backend selection]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0048_add-config-keys-for-db-index-backend-selection|KABSD-TSK-0048 Add config keys for DB index backend selection]]
 
 # Alternatives
 

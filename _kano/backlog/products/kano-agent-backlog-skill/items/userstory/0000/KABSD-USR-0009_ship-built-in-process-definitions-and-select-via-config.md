@@ -49,8 +49,8 @@ teams can adopt a profile quickly.
 # Links
 
 - Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0023_ship-built-in-process-definition-files|KABSD-TSK-0023 Ship built-in process definition files]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0024_add-config-selector-for-process-profile|KABSD-TSK-0024 Add config selector for process profile]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0023_ship-built-in-process-definition-files|KABSD-TSK-0023 Ship built-in process definition files]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0024_add-config-selector-for-process-profile|KABSD-TSK-0024 Add config selector for process profile]]
 
 # Alternatives
 

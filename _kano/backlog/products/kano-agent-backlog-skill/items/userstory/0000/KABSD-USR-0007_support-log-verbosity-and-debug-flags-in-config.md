@@ -49,8 +49,8 @@ increase detail only when needed.
 # Links
 
 - Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0019_define-log-verbosity-and-debug-config-keys|KABSD-TSK-0019 Define log verbosity and debug config keys]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0020_wire-logging-scripts-to-config-verbosity|KABSD-TSK-0020 Wire logging scripts to config verbosity]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0019_define-log-verbosity-and-debug-config-keys|KABSD-TSK-0019 Define log verbosity and debug config keys]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0020_wire-logging-scripts-to-config-verbosity|KABSD-TSK-0020 Wire logging scripts to config verbosity]]
 
 # Alternatives
 

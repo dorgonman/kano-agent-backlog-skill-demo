@@ -107,9 +107,9 @@ See full details in task file. Includes: config path resolution, missing config 
 
 # Links
 
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0039_add-config-access-helpers-and-defaults-loader|KABSD-TSK-0039 Add config access helpers and defaults loader]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0040_document-config-defaults-and-env-override-rules|KABSD-TSK-0040 Document config defaults and env override rules]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0041_add-lightweight-config-validation|KABSD-TSK-0041 Add lightweight config validation]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0039_add-config-access-helpers-and-defaults-loader|KABSD-TSK-0039 Add config access helpers and defaults loader]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0040_document-config-defaults-and-env-override-rules|KABSD-TSK-0040 Document config defaults and env override rules]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0041_add-lightweight-config-validation|KABSD-TSK-0041 Add lightweight config validation]]
 2026-01-05 01:26 [agent=codex] Split config improvements into follow-up tasks (0039-0041); agent.name excluded.
 2026-01-05 01:26 [agent=codex] State -> Ready.
 2026-01-05 01:27 [agent=codex] Review complete; follow-up tasks 0039-0041 created (agent.name excluded).

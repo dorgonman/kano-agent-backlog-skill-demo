@@ -22,7 +22,7 @@ workflow tickets. We want to preserve clarity while avoiding ticket sprawl.
 
 # Links
 
-- Related: [[_kano/backlog/items/features/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
+- Related: [[_kano/backlog/items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
 
 # Options Considered
 

@@ -108,4 +108,4 @@ Sort:
   - `![[Dashboard_PlainMarkdown_Active.md]]`
   - `![[Dashboard_PlainMarkdown_Done.md]]`
 - For hierarchy browsing, use the Epic MOC:
-  - `_kano/backlog/items/epics/**/<ID>_<slug>.index.md`
+  - `_kano/backlog/items/epic/**/<ID>_<slug>.index.md`

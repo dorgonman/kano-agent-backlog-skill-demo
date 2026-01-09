@@ -46,8 +46,8 @@ As a user, I want a rebuildable SQLite index for backlog items so I can query/fi
 # Links
 
 - Feature: [[KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline|KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0046_define-db-index-schema-items-links-worklog-decisions|KABSD-TSK-0046 Define DB index schema]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0047_implement-sqlite-indexer-import-rebuild-incremental|KABSD-TSK-0047 Implement sqlite indexer]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0046_define-db-index-schema-items-links-worklog-decisions|KABSD-TSK-0046 Define DB index schema]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0047_implement-sqlite-indexer-import-rebuild-incremental|KABSD-TSK-0047 Implement sqlite indexer]]
 
 # Alternatives
 

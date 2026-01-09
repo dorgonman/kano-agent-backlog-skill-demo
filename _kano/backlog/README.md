@@ -5,11 +5,11 @@ Local-first project backlog (file-based). Use this before code changes.
 ## Structure
 
 - `_meta/`: schema and conventions
-- `items/epics/`
-- `items/features/`
-- `items/userstories/`
-- `items/tasks/`
-- `items/bugs/`
+- `items/epic/`
+- `items/feature/`
+- `items/userstory/`
+- `items/task/`
+- `items/bug/`
 - `decisions/`: ADRs
 - `views/`: Obsidian Dataview dashboards
 

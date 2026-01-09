@@ -154,10 +154,10 @@ None. This is a new capability; existing backlog items are unaffected.
 
 # References
 
-- Feature: [KABSD-FTR-0017](../items/features/0000/KABSD-FTR-0017_traceability-commit-refs-worklog-backfill.md)
-- UserStory: [KABSD-USR-0018](../items/userstories/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
+- Feature: [KABSD-FTR-0017](../items/feature/0000/KABSD-FTR-0017_traceability-commit-refs-worklog-backfill.md)
+- UserStory: [KABSD-USR-0018](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
 - Tasks: KABSD-TSK-0105 (Git), KABSD-TSK-0106 (Perforce), KABSD-TSK-0107 (SVN), KABSD-TSK-0108 (query_commits.py), KABSD-TSK-0109 (view_generate_commits.py)
-- Future Work: [KABSD-TSK-0110](../items/tasks/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md) (VCS Query Cache Evaluation)
+- Future Work: [KABSD-TSK-0110](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md) (VCS Query Cache Evaluation)
 - Depends On: None (standalone capability)
 
 # Appendix: Example Usage

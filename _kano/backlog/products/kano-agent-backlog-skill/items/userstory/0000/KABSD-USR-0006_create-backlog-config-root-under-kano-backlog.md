@@ -48,8 +48,8 @@ system can load settings from a predictable location.
 # Links
 
 - Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0017_define-config-root-layout-and-baseline-config-file|KABSD-TSK-0017 Define config root layout and baseline config file]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0018_add-config-loader-for-skill-scripts|KABSD-TSK-0018 Add config loader for skill scripts]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0017_define-config-root-layout-and-baseline-config-file|KABSD-TSK-0017 Define config root layout and baseline config file]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0018_add-config-loader-for-skill-scripts|KABSD-TSK-0018 Add config loader for skill scripts]]
 
 # Alternatives
 

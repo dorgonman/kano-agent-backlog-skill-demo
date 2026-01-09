@@ -37,8 +37,8 @@ Example:
 
 ```
 ## Links
-- Parent: [[_kano/backlog/items/userstories/0000/KABSD-USR-0001_plan-before-code|KABSD-USR-0001]]
-- Relates: [[_kano/backlog/items/features/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001]]
+- Parent: [[_kano/backlog/items/userstory/0000/KABSD-USR-0001_plan-before-code|KABSD-USR-0001]]
+- Relates: [[_kano/backlog/items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001]]
 - Decision: [[_kano/backlog/decisions/ADR-0001_backlog-structure-and-moc|ADR-0001]]
 ```
 

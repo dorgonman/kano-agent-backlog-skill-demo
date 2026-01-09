@@ -49,7 +49,7 @@ and still keep enough history for review.
 # Links
 
 - Feature: [[KABSD-FTR-0002_agent-tool-invocation-audit-logging-system|KABSD-FTR-0002 Agent tool invocation audit logging system]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0008_implement-log-rotation-and-retention|KABSD-TSK-0008 Implement log rotation and retention]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0008_implement-log-rotation-and-retention|KABSD-TSK-0008 Implement log rotation and retention]]
 
 # Alternatives
 

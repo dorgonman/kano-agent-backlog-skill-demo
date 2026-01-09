@@ -7,7 +7,7 @@
 
 ## Feature & Parent Epic
 
-- **[KABSD-FTR-0010](../items/features/0000/KABSD-FTR-0010_monorepo-platform-migration.md)** — Monorepo Platform Migration  
+- **[KABSD-FTR-0010](../items/feature/0000/KABSD-FTR-0010_monorepo-platform-migration.md)** — Monorepo Platform Migration  
   - State: `New`  
   - Owner: `copilot`  
   - Priority: P1  
@@ -19,7 +19,7 @@
 
 ### ✅ COMPLETE (In Progress)
 
-- **[KABSD-TSK-0079](../items/tasks/0000/KABSD-TSK-0079_create-context-py-for-product-aware-path-resolution.md)** — Create context.py for product-aware path resolution  
+- **[KABSD-TSK-0079](../items/task/0000/KABSD-TSK-0079_create-context-py-for-product-aware-path-resolution.md)** — Create context.py for product-aware path resolution  
   - State: `InProgress` ✓  
   - Owner: `copilot`  
   - Ready Gate: **COMPLETE** (all criteria ✓)  
@@ -36,28 +36,28 @@
 
 ### Blocked Sequence
 
-1. **[KABSD-TSK-0080](../items/tasks/0000/KABSD-TSK-0080_update-bootstrap-init-backlog-py-for-multi-product-support.md)** — Update bootstrap_init_backlog.py  
+1. **[KABSD-TSK-0080](../items/task/0000/KABSD-TSK-0080_update-bootstrap-init-backlog-py-for-multi-product-support.md)** — Update bootstrap_init_backlog.py  
    - State: `New`  
    - Owner: `copilot`  
    - Ready Gate: **COMPLETE** ✓  
    - Blocked by: TSK-0079 ✓ (now unblocked)  
    - Unblocks: TSK-0085
 
-2. **[KABSD-TSK-0082](../items/tasks/0000/KABSD-TSK-0082_update-config-loader-py-for-multi-product-roots.md)** — Update config_loader.py  
+2. **[KABSD-TSK-0082](../items/task/0000/KABSD-TSK-0082_update-config-loader-py-for-multi-product-roots.md)** — Update config_loader.py  
    - State: `New`  
    - Owner: `copilot`  
    - Ready Gate: **COMPLETE** ✓  
    - Blocked by: TSK-0079 ✓ (now unblocked)  
    - Unblocks: TSK-0083
 
-3. **[KABSD-TSK-0084](../items/tasks/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md)** — Update Indexer and Resolver  
+3. **[KABSD-TSK-0084](../items/task/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md)** — Update Indexer and Resolver  
    - State: `New`  
    - Owner: `copilot`  
    - Ready Gate: **COMPLETE** ✓  
    - Blocked by: TSK-0079 ✓ (now unblocked)  
    - Note: Parallel with TSK-0080/0082/0083
 
-4. **[KABSD-TSK-0083](../items/tasks/0000/KABSD-TSK-0083_update-cli-scripts-for-product-aware-execution.md)** — Update CLI scripts  
+4. **[KABSD-TSK-0083](../items/task/0000/KABSD-TSK-0083_update-cli-scripts-for-product-aware-execution.md)** — Update CLI scripts  
    - State: `New`  
    - Owner: `copilot`  
    - Ready Gate: **COMPLETE** ✓  
@@ -68,7 +68,7 @@
 
 ## Phase 3: Directory Migration (Ready to Plan)
 
-- **[KABSD-TSK-0081](../items/tasks/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md)** — Execute directory restructuring  
+- **[KABSD-TSK-0081](../items/task/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md)** — Execute directory restructuring  
   - State: `New`  
   - Owner: `copilot`  
   - Ready Gate: **COMPLETE** ✓  
@@ -79,7 +79,7 @@
 
 ## Phase 4: Verification & New Product
 
-- **[KABSD-TSK-0085](../items/tasks/0000/KABSD-TSK-0085_initialize-kano-commit-convention-skill-and-verify.md)** — Initialize KCCS and verify isolation  
+- **[KABSD-TSK-0085](../items/task/0000/KABSD-TSK-0085_initialize-kano-commit-convention-skill-and-verify.md)** — Initialize KCCS and verify isolation  
   - State: `New`  
   - Owner: `copilot`  
   - Ready Gate: **COMPLETE** ✓  

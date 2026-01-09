@@ -38,3 +38,4 @@ Thumbs.db
 
 # Kiro specs (development artifacts)
 .kiro/
+/.hypothesis

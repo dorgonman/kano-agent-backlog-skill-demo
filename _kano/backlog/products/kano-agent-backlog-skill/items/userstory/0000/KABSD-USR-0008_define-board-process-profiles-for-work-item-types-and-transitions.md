@@ -49,8 +49,8 @@ types and transitions in a consistent, configurable way.
 # Links
 
 - Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0021_design-process-profile-schema|KABSD-TSK-0021 Design process profile schema]]
-- Task: [[_kano/backlog/items/tasks/0000/KABSD-TSK-0022_draft-initial-process-profiles-agile-scrum-cmmi|KABSD-TSK-0022 Draft initial process profiles (Agile/Scrum/CMMI)]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0021_design-process-profile-schema|KABSD-TSK-0021 Design process profile schema]]
+- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0022_draft-initial-process-profiles-agile-scrum-cmmi|KABSD-TSK-0022 Draft initial process profiles (Agile/Scrum/CMMI)]]
 
 # Alternatives
 

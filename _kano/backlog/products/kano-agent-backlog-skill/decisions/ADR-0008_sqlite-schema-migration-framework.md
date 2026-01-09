@@ -221,10 +221,10 @@ if "target_uid" not in cols:
 
 # References
 
-- Task: [KABSD-TSK-0111](../items/tasks/0100/KABSD-TSK-0111_implement-sqlite-schema-migration-framework.md)
+- Task: [KABSD-TSK-0111](../items/task/0100/KABSD-TSK-0111_implement-sqlite-schema-migration-framework.md)
 - Related ADR: [ADR-0004](ADR-0004_file-first-architecture-with-sqlite-index.md) (SQLite Index Architecture)
 - Related ADR: [ADR-0012](ADR-0012_workset-db-canonical-schema-reuse.md) (Workset DB Schema - migrations apply to worksets too)
-- Future Work: [KABSD-TSK-0110](../items/tasks/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md) (VCS Cache - first migration user)
+- Future Work: [KABSD-TSK-0110](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md) (VCS Cache - first migration user)
 - Dependency: None (standalone framework)
 
 # Workset DB Migration

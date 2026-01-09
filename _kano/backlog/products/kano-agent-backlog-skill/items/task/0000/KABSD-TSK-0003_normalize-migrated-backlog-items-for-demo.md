@@ -49,8 +49,8 @@ no stale links or unrelated project scope.
 
 # Links
 
-- [[_kano/backlog/items/epics/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md]]
-- [[_kano/backlog/items/epics/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.index.md]]
+- [[_kano/backlog/items/epic/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md]]
+- [[_kano/backlog/items/epic/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.index.md]]
 
 # Alternatives
 
