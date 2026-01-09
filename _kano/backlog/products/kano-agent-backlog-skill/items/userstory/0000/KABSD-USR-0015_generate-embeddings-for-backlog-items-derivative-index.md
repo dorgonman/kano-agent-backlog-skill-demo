@@ -13,7 +13,7 @@ tags:
 - rag
 - index
 created: 2026-01-05
-updated: '2026-01-06'
+updated: '2026-01-09'
 owner: null
 external:
   azure_id: null
@@ -43,6 +43,7 @@ As a user, I want a hybrid retrieval pipeline that combines semantic search (emb
 - Implement **Hybrid Ranking** that fuses keyword, semantic, and metadata weights (recency, doctype).
 - Support **Incremental Updates** via content hashing to minimize API costs.
 
+- Optionally expand via a derived Context Graph (seed + neighbors) for traceability; see ADR-0011 / KABSD-FTR-0023.
 # Alternatives
 
 # Acceptance Criteria
@@ -55,3 +56,4 @@ As a user, I want a hybrid retrieval pipeline that combines semantic search (emb
 # Worklog
 
 2026-01-05 08:30 [agent=codex] Created from template.
+2026-01-09 11:20 [agent=codex] Linked embeddings pipeline to Graph-assisted retrieval (Context Graph) planning.

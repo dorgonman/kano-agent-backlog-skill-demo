@@ -1,18 +1,15 @@
 ---
 id: KABSD-TSK-0035
-uid: 019b8f52-9f9b-7e7b-ab99-aa92296ce695
 type: Task
-title: Verify agent compliance with skill workflow
-state: Done
+title: "Verify agent compliance with skill workflow"
+state: Ready
 priority: P1
 parent: KABSD-FTR-0005
 area: compliance
 iteration: null
-tags:
-- verification
-- compliance
+tags: ["verification", "compliance"]
 created: 2026-01-05
-updated: 2026-01-09
+updated: 2026-01-05
 owner: null
 external:
   azure_id: null
@@ -31,9 +28,9 @@ This task is created as part of verifying KABSD-FTR-0005, which aims to prove th
 # Goal
 
 Demonstrate compliance with the skill workflow by:
-1. Successfully creating a backlog item using `workitem_create.py` script.
+1. Successfully creating a backlog item using `create_item.py` script.
 2. Populating all required Ready gate sections (Context, Goal, Approach, Acceptance Criteria, Risks / Dependencies) with meaningful content.
-3. Passing the `workitem_validate_ready.py` validation check.
+3. Passing the `validate_ready.py` validation check.
 
 # Non-Goals
 
@@ -42,9 +39,9 @@ Demonstrate compliance with the skill workflow by:
 
 # Approach
 
-1. Use `workitem_create.py` script to generate a new Task item under KABSD-FTR-0005.
+1. Use `create_item.py` script to generate a new Task item under KABSD-FTR-0005.
 2. Fill in all required Ready gate sections with meaningful, relevant content.
-3. Run `workitem_validate_ready.py` to confirm the item passes validation.
+3. Run `validate_ready.py` to confirm the item passes validation.
 4. Document the verification process in the Worklog.
 
 # Alternatives
@@ -54,9 +51,9 @@ Demonstrate compliance with the skill workflow by:
 
 # Acceptance Criteria
 
-- [x] Item `KABSD-TSK-0035` exists and was created using `workitem_create.py`.
+- [x] Item `KABSD-TSK-0035` exists and was created using `create_item.py`.
 - [x] All required Ready gate sections contain meaningful content.
-- [x] `workitem_validate_ready.py` returns success for this item.
+- [x] `validate_ready.py` returns success for this item.
 
 # Risks / Dependencies
 
@@ -66,6 +63,5 @@ Demonstrate compliance with the skill workflow by:
 
 2026-01-05 00:15 [agent=cursor] Created for KABSD-FTR-0005 verification.
 2026-01-05 00:16 [agent=cursor] Populated all required Ready gate sections (Context, Goal, Approach, Acceptance Criteria, Risks / Dependencies).
-2026-01-05 00:17 [agent=cursor] Ran workitem_validate_ready.py: Ready gate OK. All acceptance criteria met.
+2026-01-05 00:17 [agent=cursor] Ran validate_ready.py: Ready gate OK. All acceptance criteria met.
 2026-01-05 00:16 [agent=cursor] State -> Ready. Verification complete: all Ready gate sections validated successfully.
-2026-01-09 08:26 [agent=codex] State -> Done. Verified Ready gate with workitem_validate_ready.py; closing task.

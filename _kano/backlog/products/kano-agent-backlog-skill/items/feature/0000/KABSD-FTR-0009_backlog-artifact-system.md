@@ -36,6 +36,12 @@ Currently, items are flat Markdown files. We need a strategy for managing these 
 - **Structure**: `_kano/backlog/artifacts/<ItemID>/`
 - **Example**: `_kano/backlog/artifacts/KABSD-FTR-0009/design-mockup.png`
 
+Addendum (2026-01-09): Shared artifacts for cross-product
+
+- **Shared Root Path**: `_kano/backlog/_shared/artifacts/`
+- **Structure**: `_kano/backlog/_shared/artifacts/<ItemID>/`
+- **Rationale**: Cross-product artifacts should not belong to a single product; `_shared/` is the platform-level shared namespace (see ADR-0006).
+
 **Rationale**:
 - Keeps `items` directory focused on text/metadata.
 - Allows separate Git Large File Storage (LFS) policy for `artifacts/`.
@@ -67,3 +73,4 @@ Define a standard folder structure and naming convention for item artifacts.
 2026-01-06 11:59 [agent=antigravity] Retrying artifact attachment with relative path fix.
 - Artifact: [test_artifact.txt](../../../artifacts/KABSD-FTR-0009/test_artifact.txt)
 2026-01-06 12:14 [agent=antigravity] Configured Git LFS for artifacts directory.
+2026-01-09 11:33 [agent=windsurf] Added shared artifacts addendum: cross-product artifacts should live under `_kano/backlog/_shared/artifacts/<ItemID>/`.
