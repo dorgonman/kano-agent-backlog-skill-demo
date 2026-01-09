@@ -216,7 +216,12 @@ def test_workset_canonical_schema_compliance():
     from pathlib import Path
     
     # Step 1: Load canonical schema
-    canonical_schema_sql = Path('_kano/backlog/products/kano-agent-backlog-skill/_meta/canonical_schema.sql').read_text()
+    # Note: In production, use a configurable path or locate schema relative to skill directory
+    schema_path = Path(__file__).parent.parent / '_meta' / 'canonical_schema.sql'
+    if not schema_path.exists():
+        # Fallback to absolute path for demo
+        schema_path = Path('_kano/backlog/products/kano-agent-backlog-skill/_meta/canonical_schema.sql')
+    canonical_schema_sql = schema_path.read_text()
     
     # Step 2: Create test workset DB
     test_workset_path = '/tmp/test_workset.sqlite3'
