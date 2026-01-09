@@ -1,0 +1,473 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kano Backlog Canonical Schema",
+  "description": "Canonical data model for Kano backlog system. Used by repo-level derived index and workset DBs. Per ADR-0012, workset DBs MUST reuse this schema.",
+  "version": "0",
+  "related": ["ADR-0004", "ADR-0008", "ADR-0012"],
+  "lastUpdated": "2026-01-09",
+  
+  "entities": {
+    "item": {
+      "description": "Work item (Epic/Feature/Story/Task/Bug) or ADR",
+      "table": "items",
+      "primaryKey": "uid",
+      "fields": {
+        "uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UUIDv7 globally unique identifier",
+          "required": true,
+          "immutable": true
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z]+-[A-Z]+-[0-9]+$",
+          "description": "Display ID (e.g., KABSD-TSK-0049)",
+          "required": true,
+          "examples": ["KABSD-TSK-0049", "KABSD-FTR-0013", "KABSD-EPIC-0001"]
+        },
+        "type": {
+          "type": "string",
+          "enum": ["Epic", "Feature", "UserStory", "Task", "Bug", "ADR"],
+          "description": "Work item type",
+          "required": true
+        },
+        "state": {
+          "type": "string",
+          "enum": ["Proposed", "Planned", "Ready", "InProgress", "Blocked", "Review", "Done", "Dropped"],
+          "description": "Current state",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Item title",
+          "required": true
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path to canonical file",
+          "required": true,
+          "unique": true,
+          "examples": ["items/task/0000/KABSD-TSK-0049_example-task.md"]
+        },
+        "mtime": {
+          "type": "number",
+          "description": "File modification timestamp (Unix epoch seconds)",
+          "required": true
+        },
+        "content_hash": {
+          "type": "string",
+          "description": "Hash of content (SHA-256 hex) for change detection",
+          "pattern": "^[a-f0-9]{64}$",
+          "required": false
+        },
+        "frontmatter": {
+          "type": "object",
+          "description": "Full frontmatter blob (JSON representation)",
+          "required": false
+        },
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (ISO 8601)",
+          "required": true,
+          "examples": ["2026-01-09", "2025-12-15"]
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last updated date (ISO 8601)",
+          "required": true,
+          "examples": ["2026-01-09", "2025-12-15"]
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["P0", "P1", "P2", "P3", "P4"],
+          "description": "Priority level",
+          "required": false,
+          "default": "P3"
+        },
+        "parent_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UID of parent item (null if root)",
+          "required": false
+        },
+        "owner": {
+          "type": "string",
+          "description": "Current owner/assignee",
+          "required": false,
+          "examples": ["copilot", "human", "antigravity"]
+        },
+        "area": {
+          "type": "string",
+          "description": "Functional area",
+          "required": false,
+          "examples": ["architecture", "storage", "retrieval", "ui"]
+        },
+        "iteration": {
+          "type": "string",
+          "description": "Iteration/sprint identifier",
+          "required": false,
+          "examples": ["2026-01", "sprint-5"]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of tags",
+          "required": false,
+          "examples": [["db", "schema"], ["workset", "cache"]]
+        }
+      },
+      "indexes": [
+        {"fields": ["type"], "name": "idx_items_type"},
+        {"fields": ["state"], "name": "idx_items_state"},
+        {"fields": ["parent_uid"], "name": "idx_items_parent_uid"},
+        {"fields": ["priority"], "name": "idx_items_priority"},
+        {"fields": ["area"], "name": "idx_items_area"},
+        {"fields": ["mtime"], "name": "idx_items_mtime"},
+        {"fields": ["id"], "name": "idx_items_id"}
+      ]
+    },
+    
+    "link": {
+      "description": "Typed relationship between items (graph edge)",
+      "table": "links",
+      "primaryKey": ["source_uid", "target_uid", "type"],
+      "fields": {
+        "source_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Link source (referencing item)",
+          "required": true,
+          "foreignKey": {
+            "table": "items",
+            "field": "uid",
+            "onDelete": "CASCADE"
+          }
+        },
+        "target_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Link target (referenced item)",
+          "required": true,
+          "foreignKey": {
+            "table": "items",
+            "field": "uid",
+            "onDelete": "CASCADE"
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": ["parent", "relates_to", "blocks", "blocked_by", "decision_ref"],
+          "description": "Link type (semantic relationship)",
+          "required": true
+        }
+      },
+      "indexes": [
+        {"fields": ["source_uid"], "name": "idx_links_source"},
+        {"fields": ["target_uid"], "name": "idx_links_target"},
+        {"fields": ["type"], "name": "idx_links_type"}
+      ]
+    },
+    
+    "worklog_entry": {
+      "description": "Append-only audit trail entry for work items",
+      "table": "worklog",
+      "primaryKey": "uid",
+      "fields": {
+        "uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique worklog entry ID (UUIDv7)",
+          "required": true,
+          "immutable": true
+        },
+        "item_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UID of parent item",
+          "required": true,
+          "foreignKey": {
+            "table": "items",
+            "field": "uid",
+            "onDelete": "CASCADE"
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp",
+          "required": true,
+          "examples": ["2026-01-09T05:42:45.053Z"]
+        },
+        "agent": {
+          "type": "string",
+          "description": "Agent/user who created entry",
+          "required": true,
+          "examples": ["copilot", "human", "antigravity"]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Worklog entry text",
+          "required": true
+        }
+      },
+      "indexes": [
+        {"fields": ["item_uid"], "name": "idx_worklog_item_uid"},
+        {"fields": ["timestamp"], "name": "idx_worklog_timestamp"}
+      ]
+    },
+    
+    "chunk": {
+      "description": "Content chunk for semantic search and FTS",
+      "table": "chunks",
+      "primaryKey": "chunk_id",
+      "fields": {
+        "chunk_id": {
+          "type": "string",
+          "description": "Unique chunk identifier (UUIDv7 or <item_uid>_<index>)",
+          "required": true,
+          "immutable": true
+        },
+        "parent_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UID of parent item",
+          "required": true,
+          "foreignKey": {
+            "table": "items",
+            "field": "uid",
+            "onDelete": "CASCADE"
+          }
+        },
+        "chunk_index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Sequence number within parent (0-based)",
+          "required": true
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Chunk text content",
+          "required": true
+        },
+        "section": {
+          "type": "string",
+          "description": "Section type",
+          "required": false,
+          "enum": ["Context", "Goal", "Approach", "Acceptance Criteria", "Risks / Dependencies", "Worklog", "Decision", "Rationale"],
+          "examples": ["Context", "Goal"]
+        },
+        "embedding": {
+          "type": "binary",
+          "description": "Float32 vector array for semantic search (optional)",
+          "required": false
+        }
+      },
+      "indexes": [
+        {"fields": ["parent_uid"], "name": "idx_chunks_parent_uid"},
+        {"fields": ["section"], "name": "idx_chunks_section"}
+      ],
+      "unique": [
+        {"fields": ["parent_uid", "chunk_index"]}
+      ]
+    },
+    
+    "schema_meta": {
+      "description": "Schema metadata (version tracking per ADR-0008)",
+      "table": "schema_meta",
+      "primaryKey": "key",
+      "fields": {
+        "key": {
+          "type": "string",
+          "description": "Metadata key",
+          "required": true,
+          "examples": ["schema_version", "migration_history"]
+        },
+        "value": {
+          "type": "string",
+          "description": "Metadata value",
+          "required": true,
+          "examples": ["0", "1", "2"]
+        }
+      }
+    }
+  },
+  
+  "worksetExtensions": {
+    "description": "Workset-specific tables (additive only, prefixed with 'workset_'). Per ADR-0012, these are allowed in workset DBs but MUST NOT modify core entity schemas.",
+    
+    "workset_manifest": {
+      "description": "Metadata about the workset bundle",
+      "table": "workset_manifest",
+      "primaryKey": "workset_id",
+      "fields": {
+        "workset_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique workset identifier (UUIDv7)",
+          "required": true
+        },
+        "agent": {
+          "type": "string",
+          "description": "Agent who created this workset",
+          "required": true
+        },
+        "task_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Associated task UID (optional)",
+          "required": false
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp",
+          "required": true
+        },
+        "ttl_hours": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Time-to-live in hours (null = no expiry)",
+          "required": false
+        },
+        "seed_items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "JSON array of seed UIDs",
+          "required": false
+        },
+        "expansion_params": {
+          "type": "object",
+          "description": "JSON: {k_hop: 2, edge_types: [...]}",
+          "required": false,
+          "properties": {
+            "k_hop": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "edge_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "source_commit_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$",
+          "description": "Git commit of canonical files",
+          "required": false
+        },
+        "canonical_index_version": {
+          "type": "string",
+          "description": "Schema version of source index",
+          "required": true
+        }
+      }
+    },
+    
+    "workset_provenance": {
+      "description": "Track how items were selected into this workset",
+      "table": "workset_provenance",
+      "primaryKey": "item_uid",
+      "fields": {
+        "item_uid": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UID of item in this workset",
+          "required": true,
+          "foreignKey": {
+            "table": "items",
+            "field": "uid",
+            "onDelete": "CASCADE"
+          }
+        },
+        "selection_reason": {
+          "type": "string",
+          "enum": ["seed", "parent_expansion", "dependency_expansion", "manual"],
+          "description": "How this item was selected",
+          "required": true
+        },
+        "distance_from_seed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Hop count from nearest seed (0 for seeds)",
+          "required": false
+        },
+        "included_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when item was added",
+          "required": true
+        }
+      },
+      "indexes": [
+        {"fields": ["selection_reason"], "name": "idx_workset_provenance_reason"},
+        {"fields": ["distance_from_seed"], "name": "idx_workset_provenance_distance"}
+      ]
+    }
+  },
+  
+  "compatibility": {
+    "description": "Schema compatibility rules per ADR-0012",
+    "rules": [
+      "Workset DB MUST reuse canonical schema for items, links, chunks, worklog, schema_meta tables",
+      "Workset DB MAY add workset-specific tables prefixed with 'workset_'",
+      "Workset DB MUST NOT modify core table schemas (no column additions, removals, or renames)",
+      "Workset DB schema_version MUST NOT exceed canonical schema_version",
+      "Workset DB MUST be rebuildable from canonical files + repo-level index"
+    ],
+    "guidelines": {
+      "do": [
+        "Add workset-specific tables (prefixed with 'workset_')",
+        "Subset core tables (fewer rows via filtering)",
+        "Preserve field semantics (uid, state, type, etc.)",
+        "Version compatibility checks at workset build/load time"
+      ],
+      "doNot": [
+        "Modify items, links, chunks, worklog, or schema_meta table definitions",
+        "Add columns to core tables specific to worksets",
+        "Rename or remove columns from canonical schema",
+        "Change field semantics or value vocabularies"
+      ]
+    }
+  },
+  
+  "contentStrategies": {
+    "description": "Content storage strategies for workset DBs",
+    "options": [
+      {
+        "name": "full",
+        "description": "Store complete item content in workset DB (portable, larger)",
+        "pros": ["Portable", "Offline-capable", "Self-contained"],
+        "cons": ["Larger DB size", "Content duplication"]
+      },
+      {
+        "name": "pointer",
+        "description": "Store only uid, path, content_hash (smaller, requires file access)",
+        "pros": ["Smaller DB size", "No duplication"],
+        "cons": ["Not portable", "Requires canonical file access"]
+      },
+      {
+        "name": "hybrid",
+        "description": "Store summaries + pointers, optionally full content for hot items (recommended)",
+        "pros": ["Balanced size vs portability", "Flexible"],
+        "cons": ["More complex logic"]
+      }
+    ],
+    "default": "hybrid"
+  }
+}
