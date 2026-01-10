@@ -1,6 +1,6 @@
 # InProgress Work
 
-Generated: 2026-01-10 11:39
+Generated: 2026-01-11 01:38
 Source: _kano/backlog/products/kano-agent-backlog-skill/items
 Command:
 
@@ -12,6 +12,8 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 
 ### Epics
 
+- [DM-EPIC-0001 Demo Epic](../items/epic/0000/DM-EPIC-0001_demo-epic.md)
+- [DM-EPIC-0002 Demo Epic](../items/epic/0000/DM-EPIC-0002_demo-epic.md)
 - [KABSD-EPIC-0005 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
@@ -21,9 +23,9 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/feature/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
 - [KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)](../items/feature/0000/KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003.md)
 - [KABSD-FTR-0012 Optional cloud acceleration (PostgreSQL/MySQL + FastAPI + OpenAPI/Swagger UI)](../items/feature/0000/KABSD-FTR-0012_optional-cloud-acceleration-postgresql-mysql-fastapi-openapi-swagger-ui.md)
-- [KABSD-FTR-0013 Add derived index/cache layer and per‑Agent workset cache (TTL)](../items/feature/0000/KABSD-FTR-0013_add-derived-index-cache-layer-and-peragent-workset-cache-ttl.md)
+- [KABSD-FTR-0013 Add derived index/cache layer and per‑Agent workset cache (TTL) [⛓️ Blocks: KABSD-FTR-0015]](../items/feature/0000/KABSD-FTR-0013_add-derived-index-cache-layer-and-peragent-workset-cache-ttl.md)
 - [KABSD-FTR-0014 Maintain Git/files as the single source of truth and sync cloud cache](../items/feature/0000/KABSD-FTR-0014_maintain-git-files-as-the-single-source-of-truth-and-sync-cloud-cache.md)
-- [KABSD-FTR-0015 Execution Layer: Workset Cache + Promote](../items/feature/0000/KABSD-FTR-0015_execution-layer-workset-cache-promote.md)
+- [KABSD-FTR-0015 Execution Layer: Workset Cache + Promote [🔴 Blocked by: KABSD-FTR-0013]](../items/feature/0000/KABSD-FTR-0015_execution-layer-workset-cache-promote.md)
 - [KABSD-FTR-0016 Coordination Layer: Claim/Lease for Multi-Agent](../items/feature/0000/KABSD-FTR-0016_coordination-layer-claim-lease-for-multi-agent.md)
 - [KABSD-FTR-0018 Server mode (MCP/HTTP) + Docker + data backend separation](../items/feature/0000/KABSD-FTR-0018_server-mode-mcp-http-docker-data-backend-separation.md)
 - [KABSD-FTR-0021 VCS merge workflows and conflict resolution (Git/SVN/Perforce)](../items/feature/0000/KABSD-FTR-0021_vcs-merge-workflows-and-conflict-resolution-git-svn-perforce.md)
@@ -95,6 +97,9 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0142 Design enforcement policy to prevent low-tier agents touching high-risk items](../items/task/0100/KABSD-TSK-0142_design-enforcement-policy-to-prevent-low-tier-agents-touching-high-risk-items.md)
 - [KABSD-TSK-0143 Define outcome metrics schema and reporting for dispatch decisions](../items/task/0100/KABSD-TSK-0143_define-outcome-metrics-schema-and-reporting-for-dispatch-decisions.md)
 - [KABSD-TSK-0144 Evaluate external benchmark priors and local posterior update rules](../items/task/0100/KABSD-TSK-0144_evaluate-external-benchmark-priors-and-local-posterior-update-rules.md)
+- [KABSD-TSK-0154 Implement canonical SQLite index builder](../items/task/0100/KABSD-TSK-0154_implement-canonical-sqlite-index-builder.md)
+- [KABSD-TSK-0155 Implement workset init/refresh/promote automation [🔴 Blocked by: KABSD-FTR-0013]](../items/task/0100/KABSD-TSK-0155_implement-workset-execution-scripts.md)
+- [KABSD-TSK-0156 Add kano doctor command for prereqs and init checks](../items/task/0100/KABSD-TSK-0156_add-kano-doctor-command-for-prereqs-and-init-checks.md)
 
 ## InProgress
 

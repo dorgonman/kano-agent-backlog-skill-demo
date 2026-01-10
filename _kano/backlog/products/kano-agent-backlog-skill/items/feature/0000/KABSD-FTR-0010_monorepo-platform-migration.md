@@ -29,6 +29,15 @@ original_type: Feature
 
 The current repository is built around a single backlog root (`_kano/backlog`). We want to support multiple independent products/skills (e.g., `kano-agent-backlog-skill`, `kano-commit-convention-skill`) within the same "monorepo", while keeping their backlogs and configurations isolated.
 
+**Agent-Era Monorepo Advantages**: Recent developments in AI agent tooling (e.g., GitHub Mobile's "New Agent Session" feature, Dec 2025) have revealed a critical limitation: **agent sessions are repo-scoped**. This means:
+
+- Cross-repo changes require multiple separate agent sessions and PRs
+- Context and decision continuity is lost between repos
+- Atomic changes spanning multiple components become fragmented
+- Agent collaboration becomes significantly more complex in polyrepo setups
+
+Monorepo architecture provides **agent-native atomicity**: one session, one PR, one acceptance gate for changes that span multiple modules.
+
 Key constraints:
 - Existing backlog data (items, decisions, views, configs) must migrate without data loss.
 - Scripts must discover product context via `--product` flag, environment variable, or defaults.

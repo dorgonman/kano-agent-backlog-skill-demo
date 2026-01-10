@@ -27,5 +27,10 @@
     "path": null,
     "mode": "rebuild"
   },
+  "analysis": {
+    "llm": {
+      "enabled": false
+    }
+  },
   "_comment": "Baseline config for kano-agent-backlog-skill."
 }

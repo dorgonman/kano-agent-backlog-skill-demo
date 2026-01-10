@@ -1,13 +1,14 @@
 # Project Summary (developer)
 
-- Generated: 2026-01-10 03:39 UTC
+- Generated: 2026-01-10 17:38 UTC
 - Source: `sqlite:_kano\backlog\products\kano-agent-backlog-skill\_index\backlog.sqlite3`
+- Product: `kano-agent-backlog-skill`
 
 ## Snapshot
 
-- New: **93**
+- New: **100**
 - InProgress: **8**
-- Done: **131**
+- Done: **148**
 
 ## InProgress (continue)
 

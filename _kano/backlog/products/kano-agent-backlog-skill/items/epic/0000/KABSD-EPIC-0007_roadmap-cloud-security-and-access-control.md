@@ -26,6 +26,22 @@ decisions: []
 
 Moving from local-first usage to cloud deployment introduces security as a critical concern. Running without any safeguards may be acceptable for a private LAN / trusted environment, but becomes a serious risk when exposed to the public internet.
 
+**Multi-Repo Coordination Challenge**: The rise of AI agent tooling has revealed a fundamental limitation in distributed repository architectures. Agent sessions (e.g., GitHub Mobile's "New Agent Session") are inherently **repo-scoped**, creating coordination friction:
+
+- Cross-repo work requires multiple agent sessions and separate PRs
+- Decision context and planning artifacts get scattered across repositories
+- Atomic changes spanning multiple services become fragmented workflows
+- Agent collaboration requires complex orchestration protocols
+
+**Cloud Backlog as Coordination Layer**: A shared cloud backlog system can serve as the **coordination substrate** for multi-repo agent collaboration, providing:
+
+- Unified planning and decision artifacts across repository boundaries
+- Cross-repo dependency tracking and atomic work item management
+- Shared context graphs for agent handoffs and collaboration
+- Centralized audit trail for distributed changes
+
+This Epic addresses both the security requirements for cloud deployment AND the architectural foundation for multi-repo agent coordination.
+
 We want to keep onboarding friction low (e.g., an explicit "no auth" mode for local networks), while ensuring that any public exposure is intentionally protected and that users are warned when protections are not enabled.
 
 # Goal

@@ -1,7 +1,8 @@
 ---
 id: ADR-0011
 title: "Workset vs GraphRAG / Context Graph — Separation of Responsibilities"
-status: Proposed
+status: Accepted
+decision_date: 2026-01-10
 date: 2026-01-09
 related_items: [KABSD-TSK-0132, KABSD-FTR-0013, KABSD-FTR-0015, ADR-0004, ADR-0009]
 supersedes: null
@@ -45,7 +46,7 @@ This ADR prevents these failure modes by establishing hard constraints and data 
 **What it is**:
 - A **materialized bundle** (typically a SQLite file + optional filesystem cache) containing a selected subset of items, chunks, and summaries.
 - Usually **per-agent** or **per-task**, scoped to a specific time window or work session.
-- Stored in `.cache/worksets/<agent_or_task>/` and **NOT tracked in Git**.
+- Stored in `_kano/backlog/.cache/worksets/<item-id>/` (one directory per backlog item; agent recorded in manifest) and **NOT tracked in Git**.
 
 **Purpose**:
 - Maximize context relevance and reduce repeated retrieval cost during task execution.
@@ -210,6 +211,18 @@ CREATE TABLE cached_chunks (
 -- Optional: execution memory (plan, notes, deliverable)
 -- per workset_evaluation_report.md
 ```
+
+### Workset Filesystem Layout (Decision 2026-01-10)
+
+- **Base Path**: `_kano/backlog/.cache/worksets/<item-id>/`
+- **Contents**:
+   - `workset.db` — SQLite cache that reuses the canonical schema (ADR-0012)
+   - `plan.md` — Execution checklist (three-file pattern)
+   - `notes.md` — Research notes / scratchpad
+   - `deliverable.md` — Draft output waiting for promotion
+- **Agent Attribution**: `workset_manifest.agent` records who initialized the workset; directory naming stays per item to keep TTL cleanup simple.
+- **Rationale**: Local-first workflows typically have a single active agent per backlog item. Owner locking (KABSD-TSK-0036) prevents concurrent edits; adding agent IDs to the filesystem path would duplicate manifest data and complicate cleanup.
+- **Future Extension**: If multiple agents must share a task concurrently, we can add optional `<agent_id>` suffixes, but the default is per-item directories for deterministic paths.
 
 ## 3. Query Path
 

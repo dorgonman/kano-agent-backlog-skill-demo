@@ -12,3 +12,5 @@ Epic-level index only; lower-level items rely on the Epic MOC tree.
 | Epic | KABSD-EPIC-0005 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.index.md | 2026-01-08 | Roadmap: Multi-Agent OS Evolution (Q1 2026) |
 | Epic | KABSD-EPIC-0006 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.index.md | 2026-01-08 | Roadmap: Multi-Agent OS Evolution (Q1 2026) |
 | Epic | KABSD-EPIC-0007 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.index.md | 2026-01-08 | Roadmap: Cloud security & access control |
+| Epic | DM-EPIC-0001 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/DM-EPIC-0001_demo-epic.index.md | 2026-01-10 | Demo Epic |
+| Epic | DM-EPIC-0002 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/DM-EPIC-0002_demo-epic.index.md | 2026-01-10 | Demo Epic |

@@ -1,6 +1,6 @@
 # Done Work
 
-Generated: 2026-01-10 11:39
+Generated: 2026-01-11 01:38
 Source: _kano/backlog/products/kano-agent-backlog-skill/items
 Command:
 
@@ -30,6 +30,7 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-FTR-0020 Multi-agent collaboration modes (local single repo / local multi repo via worktree / remote)](../items/feature/0000/KABSD-FTR-0020_multi-agent-collaboration-modes-local-single-repo-local-multi-repo-via-worktree-remote.md)
 - [KABSD-FTR-0022 Backlog Quality Linter (Agent Discipline)](../items/feature/0000/KABSD-FTR-0022_backlog-quality-linter-agent-discipline.md)
 - [KABSD-FTR-0026 DEPRECATED duplicate (layout migration): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0026_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0028 Refactor kano-agent-backlog-skill scripts into a single CLI entry + library modules](../items/feature/0000/KABSD-FTR-0028_refactor-kano-agent-backlog-skill-scripts-into-a-single-cli-entry-library-modules.md)
 
 ### UserStories
 
@@ -151,8 +152,24 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0145 Add prerequisite install script for Python deps (self-contained skill)](../items/task/0100/KABSD-TSK-0145_add-prerequisite-install-script-for-python-deps-self-contained-skill.md)
 - [KABSD-TSK-0146 Clarify config: replace mode.role with mode.skill_developer + persona](../items/task/0100/KABSD-TSK-0146_clarify-config-replace-mode-role-with-mode-skill-developer-persona.md)
 - [KABSD-TSK-0147 Persona-aware project summary generation in view_refresh_dashboards](../items/task/0100/KABSD-TSK-0147_persona-aware-project-summary-generation-in-view-refresh-dashboards.md)
+- [KABSD-TSK-0148 Deterministic persona reports (developer/pm/qa) for project status](../items/task/0100/KABSD-TSK-0148_deterministic-persona-reports-developer-pm-qa-for-project-status.md)
+- [KABSD-TSK-0149 Optional LLM analysis appended to deterministic persona reports](../items/task/0100/KABSD-TSK-0149_optional-llm-analysis-appended-to-deterministic-persona-reports.md)
+- [KABSD-TSK-0150 Add --all-personas to view_refresh_dashboards](../items/task/0100/KABSD-TSK-0150_add-all-personas-to-view-refresh-dashboards.md)
+- [KABSD-TSK-0151 Accept ADR-0011 and ADR-0012 for Workset Architecture](../items/task/0100/KABSD-TSK-0151_accept-adr-0011-and-adr-0012-for-workset-architecture.md)
+- [KABSD-TSK-0152 Resolve workset directory layout inconsistency](../items/task/0100/KABSD-TSK-0152_resolve-workset-directory-layout-inconsistency.md)
+- [KABSD-TSK-0153 Verify canonical_schema.sql existence and consistency](../items/task/0100/KABSD-TSK-0153_verify-canonical-schema-sql-existence-and-consistency.md)
+- [KABSD-TSK-0157 Add kano doctor command for prereqs and init checks](../items/task/0100/KABSD-TSK-0157_add-kano-doctor-command-for-prereqs-and-init-checks.md)
+- [KABSD-TSK-0158 Add kano item create command](../items/task/0100/KABSD-TSK-0158_add-kano-item-create-command.md)
+- [KABSD-TSK-0159 Add kano item update-state command](../items/task/0100/KABSD-TSK-0159_add-kano-item-update-state-command.md)
+- [KABSD-TSK-0160 Add kano item validate command for Ready gate](../items/task/0100/KABSD-TSK-0160_add-kano-item-validate-command-for-ready-gate.md)
+- [KABSD-TSK-0161 Add kano view refresh command](../items/task/0100/KABSD-TSK-0161_add-kano-view-refresh-command.md)
+- [KABSD-TSK-0162 Create kano_backlog_ops package with use-case stubs](../items/task/0100/KABSD-TSK-0162_create-kano-backlog-ops-package-with-use-case-stubs.md)
+- [KABSD-TSK-0163 Implement kano_backlog_ops.workitem functions](../items/task/0100/KABSD-TSK-0163_implement-kano-backlog-ops-workitem-functions.md)
+- [KABSD-TSK-0164 Implement kano_backlog_ops.view functions](../items/task/0100/KABSD-TSK-0164_implement-kano-backlog-ops-view-functions.md)
+- [KABSD-TSK-0165 Add deprecation warnings to scripts/backlog/*.py](../items/task/0100/KABSD-TSK-0165_add-deprecation-warnings-to-scripts-backlog-py.md)
 
 ### Bugs
 
 - [KABSD-BUG-0001 workitem_update_state crashes: args.model attribute missing](../items/bug/0000/KABSD-BUG-0001_workitem-update-state-crashes-args-model-attribute-missing.md)
+- [KABSD-BUG-0002 Add dependency links between FTR-0013 and FTR-0015](../items/bug/0000/KABSD-BUG-0002_add-dependency-links-between-ftr-0013-and-ftr-0015.md)
 

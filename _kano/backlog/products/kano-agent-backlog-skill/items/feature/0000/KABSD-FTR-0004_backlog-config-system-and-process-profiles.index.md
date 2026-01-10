@@ -35,7 +35,10 @@ updated: 2026-01-10
 - [[KABSD-TSK-0088_add-process-linter-to-validate-profile-based-folder-scaffolds|KABSD-TSK-0088 Add process_linter to validate profile-based folder scaffolds]] (state: Done)
 - [[KABSD-TSK-0126_improve-process-profile-migration-with-original-type-preservation|KABSD-TSK-0126 Improve process profile migration with original type preservation]] (state: Done)
 - [[KABSD-TSK-0146_clarify-config-replace-mode-role-with-mode-skill-developer-persona|KABSD-TSK-0146 Clarify config: replace mode.role with mode.skill_developer + persona]] (state: Done)
-- [[KABSD-TSK-0147_persona-aware-project-summary-generation-in-view-refresh-dashboards|KABSD-TSK-0147 Persona-aware project summary generation in view_refresh_dashboards]] (state: Proposed)
+- [[KABSD-TSK-0147_persona-aware-project-summary-generation-in-view-refresh-dashboards|KABSD-TSK-0147 Persona-aware project summary generation in view_refresh_dashboards]] (state: Done)
+- [[KABSD-TSK-0148_deterministic-persona-reports-developer-pm-qa-for-project-status|KABSD-TSK-0148 Deterministic persona reports (developer/pm/qa) for project status]] (state: Done)
+- [[KABSD-TSK-0149_optional-llm-analysis-appended-to-deterministic-persona-reports|KABSD-TSK-0149 Optional LLM analysis appended to deterministic persona reports]] (state: Done)
+- [[KABSD-TSK-0150_add-all-personas-to-view-refresh-dashboards|KABSD-TSK-0150 Add --all-personas to view_refresh_dashboards]] (state: Proposed)
 
 ## Auto list (Dataview)
 
