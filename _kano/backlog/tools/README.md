@@ -12,14 +12,18 @@ Generate (and refresh) the standard dashboards via the skill scripts:
 
 - `python skills/kano-agent-backlog-skill/scripts/backlog/view_refresh_dashboards.py --backlog-root _kano/backlog --agent <agent-name>`
 
-## Demo: focus view (last N days / iteration)
+## 🚧 WIP: Demo focus view (last N days / iteration)
+
+**Status**: Partially implemented, may not work reliably
 
 - `python _kano/backlog/tools/generate_focus_view.py --backlog-root _kano/backlog --days 14 --agent <agent-name>`
 - `python _kano/backlog/tools/generate_focus_view.py --backlog-root _kano/backlog --iteration \"Sprint 1\" --agent <agent-name>`
 
 The tool prefers SQLite index when enabled/available, otherwise falls back to scanning files.
 
-## Demo: DBIndex vs NoDBIndex dashboards
+## 🚧 WIP: Demo DBIndex vs NoDBIndex dashboards
+
+**Status**: Experimental, interfaces may change
 
 Run the demo generator from the skill scripts:
 - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate_demo.py --backlog-root _kano/backlog --agent <agent-name>`

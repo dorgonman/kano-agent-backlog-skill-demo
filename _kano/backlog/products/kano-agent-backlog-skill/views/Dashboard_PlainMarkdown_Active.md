@@ -1,11 +1,11 @@
 # InProgress Work
 
-Generated: 2026-01-10 02:05
-Source: sqlite:_kano/backlog/products/kano-agent-backlog-skill/_index/backlog.sqlite3
+Generated: 2026-01-10 11:39
+Source: _kano/backlog/products/kano-agent-backlog-skill/items
 Command:
 
 ```bash
-python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Active.md --groups New,InProgress --title InProgress Work --config _kano/backlog/products/kano-agent-backlog-skill/_config/config.json
+python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Active.md --groups New,InProgress --title InProgress Work
 ```
 
 ## New
@@ -15,11 +15,6 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-EPIC-0005 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
-- [KCCS-EPIC-0001 Kano Commit Convention Skill](../../kano-commit-convention-skill/items/epic/0000/KCCS-EPIC-0001_kano-commit-convention-skill.md)
-- [KCCS-FTR-0001 Product infrastructure and testing](../../kano-commit-convention-skill/items/epic/0000/KCCS-FTR-0001_product-infrastructure-and-testing.md)
-- [KCCS-FTR-0002 Commit Message Linter (Git Hooks)](../../kano-commit-convention-skill/items/epic/0000/KCCS-FTR-0002_commit-message-linter-git-hooks.md)
-- [KCCS-FTR-0003 Changelog Automation](../../kano-commit-convention-skill/items/epic/0000/KCCS-FTR-0003_changelog-automation.md)
-- [KCCS-FTR-0004 Semantic Versioning & Bumping](../../kano-commit-convention-skill/items/epic/0000/KCCS-FTR-0004_semantic-versioning-bumping.md)
 
 ### Features
 
@@ -67,7 +62,7 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0089 Design process migration plan and mapping for profile changes](../items/task/0000/KABSD-TSK-0089_design-process-migration-plan-and-mapping-for-profile-changes.md)
 - [KABSD-TSK-0090 Complete CLI scripts product_name parameter passing](../items/task/0000/KABSD-TSK-0090_complete-cli-scripts-product-name-parameter-passing.md)
 - [KABSD-TSK-0091 Remove legacy platform-level index file](../items/task/0000/KABSD-TSK-0091_remove-legacy-platform-level-index-file.md)
-- [KABSD-TSK-0092 Implement global embedding database for cross-product semantic search](../items/task/0000/KABSD-TSK-0092_implement-global-embedding-database-for-cross-product-semantic-search.md)
+- [KABSD-TSK-0092 Implement global embedding database for cross-product semantic search [🔴 Blocked by: KABSD-TSK-0124]](../items/task/0000/KABSD-TSK-0092_implement-global-embedding-database-for-cross-product-semantic-search.md)
 - [KABSD-TSK-0093 Implement global full-text search index for cross-product queries](../items/task/0000/KABSD-TSK-0093_implement-global-full-text-search-index-for-cross-product-queries.md)
 - [KABSD-TSK-0094 Build cross-product analytics and reporting tools](../items/task/0000/KABSD-TSK-0094_build-cross-product-analytics-and-reporting-tools.md)
 - [KABSD-TSK-0095 Create index consistency validation tool](../items/task/0000/KABSD-TSK-0095_create-index-consistency-validation-tool.md)
@@ -88,6 +83,7 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0129 Clarify Project vs Product terminology and boundaries (cloud / cross-repo)](../items/task/0100/KABSD-TSK-0129_clarify-project-vs-product-terminology-and-boundaries.md)
 - [KABSD-TSK-0131 Plan cloud security posture, auth options, and no-auth warnings](../items/task/0100/KABSD-TSK-0131_plan-cloud-security-auth-options-and-no-auth-warnings.md)
 - [KABSD-TSK-0132 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0133 Implement `kano item update-state` subcommand](../items/task/0100/KABSD-TSK-0133_implement-kano-item-update-state-subcommand.md)
 - [KABSD-TSK-0134 Implement `kano item validate` subcommand](../items/task/0100/KABSD-TSK-0134_implement-kano-item-validate-subcommand.md)
 - [KABSD-TSK-0135 Implement `kano view refresh` subcommand](../items/task/0100/KABSD-TSK-0135_implement-kano-view-refresh-subcommand.md)
@@ -99,25 +95,6 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0142 Design enforcement policy to prevent low-tier agents touching high-risk items](../items/task/0100/KABSD-TSK-0142_design-enforcement-policy-to-prevent-low-tier-agents-touching-high-risk-items.md)
 - [KABSD-TSK-0143 Define outcome metrics schema and reporting for dispatch decisions](../items/task/0100/KABSD-TSK-0143_define-outcome-metrics-schema-and-reporting-for-dispatch-decisions.md)
 - [KABSD-TSK-0144 Evaluate external benchmark priors and local posterior update rules](../items/task/0100/KABSD-TSK-0144_evaluate-external-benchmark-priors-and-local-posterior-update-rules.md)
-- [KABSD-TSK-0145 Add prerequisite install script for Python deps (self-contained skill)](../items/task/0100/KABSD-TSK-0145_add-prerequisite-install-script-for-python-deps-self-contained-skill.md)
-
-### Storys
-
-- [KCCS-USR-0001 Implement KCC-STCC commit-msg hook](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0001_implement-kcc-stcc-commit-msg-hook.md)
-- [KCCS-USR-0002 Develop install_hooks.py script](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0002_develop-install-hooks-py-script.md)
-- [KCCS-USR-0003 Config-based linter types/scopes](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0003_config-based-linter-types-scopes.md)
-- [KCCS-USR-0004 Verify ticket existence in commit linter](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0004_verify-ticket-existence-in-commit-linter.md)
-- [KCCS-USR-0005 Implement generate_changelog.py](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0005_implement-generate-changelog-py.md)
-- [KCCS-USR-0006 Group and filter changelog entries](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0006_group-and-filter-changelog-entries.md)
-- [KCCS-USR-0007 Support Markdown and JSON changelog formats](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0007_support-markdown-and-json-changelog-formats.md)
-- [KCCS-USR-0008 Implement bump_version.py for semantic versioning](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0008_implement-bump-version-py-for-semantic-versioning.md)
-- [KCCS-USR-0009 Automate version file update and git tagging](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0009_automate-version-file-update-and-git-tagging.md)
-- [KCCS-USR-0011 CI/CD Pipeline Integration Templates](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0011_ci-cd-pipeline-integration-templates.md)
-- [KCCS-USR-0012 Integration with pre-commit framework](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0012_integration-with-pre-commit-framework.md)
-- [KCCS-USR-0013 Strict Validation for Breaking Change footer](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0013_strict-validation-breaking-change-footer.md)
-- [KCCS-USR-0015 Interactive Commit Assistant](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0015_interactive-commit-assistant.md)
-- [KCCS-USR-0017 Multi-language support for linter messages](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0017_multi-language-support-for-linter.md)
-- [KCCS-USR-0018 Perforce (P4) Adapter implementation](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0018_perforce-p4-adapter-implementation.md)
 
 ## InProgress
 
@@ -137,10 +114,6 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 
 ### Tasks
 
-- [KABSD-TSK-0083 Update CLI scripts for product-aware execution](../items/task/0000/KABSD-TSK-0083_update-cli-scripts-for-product-aware-execution.md)
+- [KABSD-TSK-0083 Update CLI scripts for product-aware execution [🔴 Blocked by: KABSD-TSK-0082@019b93bb]](../items/task/0000/KABSD-TSK-0083_update-cli-scripts-for-product-aware-execution.md)
 - [KABSD-TSK-0110 Evaluate VCS Query Cache Layer](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md)
-
-### Storys
-
-- [KCCS-USR-0010 Implement Multi-VCS Adapter architecture](../../kano-commit-convention-skill/items/story/0000/KCCS-USR-0010_multi-vcs-adapter-architecture.md)
 

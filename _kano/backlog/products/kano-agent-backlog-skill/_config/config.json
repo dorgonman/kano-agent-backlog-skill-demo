@@ -1,4 +1,8 @@
 {
+  "mode": {
+    "skill_developer": true,
+    "persona": "developer"
+  },
   "project": {
     "name": "kano-agent-backlog-skill-demo",
     "prefix": "KABSD"

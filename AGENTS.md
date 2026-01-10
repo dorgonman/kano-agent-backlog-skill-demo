@@ -16,6 +16,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 
 ## Backlog discipline (this repo)
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
+- If Python deps are missing, install them first with `python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py` (add `--dev` when developing the skill itself).
 - Before any code change, create/update items in `_kano/backlog/items/` (Epic -> Feature -> UserStory -> Task/Bug).
 - Use English for all backlog item content (Context, Goal, Approach, etc.) and Worklog entries.
 - Enforce the Ready gate on Task/Bug (required, non-empty): `Context`, `Goal`, `Approach`, `Acceptance Criteria`, `Risks / Dependencies`.
@@ -25,6 +26,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - scope/approach changes,
   - or an ADR is created/linked.
 - Use `skills/kano-agent-backlog-skill/scripts/backlog/workitem_update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
+- ⚠️ **Script names change frequently in pre-alpha** - check current names in `skills/kano-agent-backlog-skill/scripts/backlog/`
 - For backlog/skill file operations, use `skills/kano-agent-backlog-skill/scripts/backlog/*` or `scripts/fs/*` so audit logs capture the action.
 - Skill scripts refuse paths outside `_kano/backlog/` or `_kano/backlog_sandbox/`.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.

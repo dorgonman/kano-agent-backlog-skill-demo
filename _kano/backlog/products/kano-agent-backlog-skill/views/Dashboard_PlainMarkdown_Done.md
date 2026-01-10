@@ -1,11 +1,11 @@
 # Done Work
 
-Generated: 2026-01-10 02:05
-Source: sqlite:_kano/backlog/products/kano-agent-backlog-skill/_index/backlog.sqlite3
+Generated: 2026-01-10 11:39
+Source: _kano/backlog/products/kano-agent-backlog-skill/items
 Command:
 
 ```bash
-python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Done.md --groups Done --title Done Work --config _kano/backlog/products/kano-agent-backlog-skill/_config/config.json
+python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Done.md --groups Done --title Done Work
 ```
 
 ## Done
@@ -103,10 +103,10 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0056 Define embedding chunking + metadata schema for backlog items](../items/task/0000/KABSD-TSK-0056_define-embedding-chunking-metadata-schema-for-backlog-items.md)
 - [KABSD-TSK-0057 Prototype local embedding index writer (no provider dependency)](../items/task/0000/KABSD-TSK-0057_prototype-local-embedding-index-writer-no-provider-dependency.md)
 - [KABSD-TSK-0058 agent compliance test](../items/task/0000/KABSD-TSK-0058_agent-compliance-test.md)
-- [KABSD-TSK-0059 ULID vs UUIDv7 comparison document](../items/task/0000/KABSD-TSK-0059_ulid-vs-uuidv7-comparison.md)
-- [KABSD-TSK-0060 Migration plan: add uid to existing items](../items/task/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
-- [KABSD-TSK-0061 ID resolver spec and design](../items/task/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
-- [KABSD-TSK-0062 Collision report and resolver CLI](../items/task/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
+- [KABSD-TSK-0059 ULID vs UUIDv7 comparison document [⛓️ Blocks: KABSD-TSK-0060@019b8f52]](../items/task/0000/KABSD-TSK-0059_ulid-vs-uuidv7-comparison.md)
+- [KABSD-TSK-0060 Migration plan: add uid to existing items [🔴 Blocked by: KABSD-TSK-0059@019b8f52]](../items/task/0000/KABSD-TSK-0060_migration-plan-add-uid-to-existing-items.md)
+- [KABSD-TSK-0061 ID resolver spec and design [⛓️ Blocks: KABSD-TSK-0062@019b8f52]](../items/task/0000/KABSD-TSK-0061_id-resolver-spec-and-design.md)
+- [KABSD-TSK-0062 Collision report and resolver CLI [🔴 Blocked by: KABSD-TSK-0061@019b8f52]](../items/task/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 - [KABSD-TSK-0063 Make generate_view use SQLite index when available (fallback to file scan)](../items/task/0000/KABSD-TSK-0063_make-generate-view-use-sqlite-index-when-available-fallback-to-file-scan.md)
 - [KABSD-TSK-0064 Unify dashboard generation: auto use SQLite index with file-scan fallback](../items/task/0000/KABSD-TSK-0064_unify-dashboard-generation-auto-use-sqlite-index-with-file-scan-fallback.md)
 - [KABSD-TSK-0065 Replace deprecated DBIndex dashboards with demo DBIndex/NoDBIndex generators and docs](../items/task/0000/KABSD-TSK-0065_replace-deprecated-dbindex-dashboards-with-demo-dbindex-nodbindex-generators-and-docs.md)
@@ -118,12 +118,12 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0074 Organize skill scripts into grouped CLI wrappers and clarify terminology](../items/task/0000/KABSD-TSK-0074_organize-skill-scripts-into-grouped-cli-wrappers-and-clarify-terminology.md)
 - [KABSD-TSK-0076 Rename backlog scripts to prefixed names and update references](../items/task/0000/KABSD-TSK-0076_rename-backlog-scripts-to-prefixed-names-and-update-references.md)
 - [KABSD-TSK-0078 Fix SQLite index schema mismatch (missing source_path)](../items/task/0000/KABSD-TSK-0078_fix-sqlite-index-schema-mismatch-missing-source-path.md)
-- [KABSD-TSK-0079 Create context.py for product-aware path resolution](../items/task/0000/KABSD-TSK-0079_create-context-py-for-product-aware-path-resolution.md)
-- [KABSD-TSK-0080 Update bootstrap_init_backlog.py for multi-product support](../items/task/0000/KABSD-TSK-0080_update-bootstrap-init-backlog-py-for-multi-product-support.md)
-- [KABSD-TSK-0081 Execute directory restructuring for monorepo platform](../items/task/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md)
-- [KABSD-TSK-0082 Update config_loader.py for multi-product roots](../items/task/0000/KABSD-TSK-0082_update-config-loader-py-for-multi-product-roots.md)
-- [KABSD-TSK-0084 Update Indexer and Resolver for product isolation](../items/task/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md)
-- [KABSD-TSK-0085 Initialize kano-commit-convention-skill and verify](../items/task/0000/KABSD-TSK-0085_initialize-kano-commit-convention-skill-and-verify.md)
+- [KABSD-TSK-0079 Create context.py for product-aware path resolution [⛓️ Blocks: KABSD-TSK-0080@019b93bb, KABSD-TSK-0082@019b93bb]](../items/task/0000/KABSD-TSK-0079_create-context-py-for-product-aware-path-resolution.md)
+- [KABSD-TSK-0080 Update bootstrap_init_backlog.py for multi-product support [🔴 Blocked by: KABSD-TSK-0079@019b93ba | ⛓️ Blocks: KABSD-TSK-0085@019b93bb]](../items/task/0000/KABSD-TSK-0080_update-bootstrap-init-backlog-py-for-multi-product-support.md)
+- [KABSD-TSK-0081 Execute directory restructuring for monorepo platform [🔴 Blocked by: KABSD-TSK-0080@019b93bb]](../items/task/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md)
+- [KABSD-TSK-0082 Update config_loader.py for multi-product roots [🔴 Blocked by: KABSD-TSK-0079@019b93ba | ⛓️ Blocks: KABSD-TSK-0083@019b93bb]](../items/task/0000/KABSD-TSK-0082_update-config-loader-py-for-multi-product-roots.md)
+- [KABSD-TSK-0084 Update Indexer and Resolver for product isolation [🔴 Blocked by: KABSD-TSK-0079@019b93ba]](../items/task/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md)
+- [KABSD-TSK-0085 Initialize kano-commit-convention-skill and verify [🔴 Blocked by: KABSD-TSK-0080@019b93bb, KABSD-TSK-0083@019b93bb]](../items/task/0000/KABSD-TSK-0085_initialize-kano-commit-convention-skill-and-verify.md)
 - [KABSD-TSK-0086 Implement functional task dependency validation in workitem_update_state.py](../items/task/0000/KABSD-TSK-0086_implement-functional-task-dependency-validation-in-workitem-update-state-py.md)
 - [KABSD-TSK-0087 Initialize backlog scaffold from active process profile](../items/task/0000/KABSD-TSK-0087_initialize-backlog-scaffold-from-active-process-profile.md)
 - [KABSD-TSK-0088 Add process_linter to validate profile-based folder scaffolds](../items/task/0000/KABSD-TSK-0088_add-process-linter-to-validate-profile-based-folder-scaffolds.md)
@@ -141,11 +141,18 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-TSK-0119 Design local multi-agent collaboration: multi repo via Git worktree](../items/task/0100/KABSD-TSK-0119_design-local-multi-agent-collaboration-multi-repo-via-git-worktree.md)
 - [KABSD-TSK-0120 Design remote multi-agent collaboration](../items/task/0100/KABSD-TSK-0120_design-remote-multi-agent-collaboration.md)
 - [KABSD-TSK-0123 Remediate non-English content in backlog (ADRs/items) to English](../items/task/0100/KABSD-TSK-0123_remediate-non-english-content-in-backlog-adrs-items-to-english.md)
-- [KABSD-TSK-0124 'Research: Comparative Performance and Deployment of SQLite-Vec vs FAISS vs](../items/task/0100/KABSD-TSK-0124_research-embedding-search-options-performance-and-deployment.md)
+- [KABSD-TSK-0124 Research: Comparative Performance and Deployment of SQLite-Vec vs FAISS vs HNSWlib [⛓️ Blocks: KABSD-TSK-0092@019b9473]](../items/task/0100/KABSD-TSK-0124_research-embedding-search-options-performance-and-deployment.md)
 - [KABSD-TSK-0125 Implement kano-backlog-core: Config and Canonical modules](../items/task/0100/KABSD-TSK-0125_implement-kano-backlog-core-config-and-canonical-modules.md)
 - [KABSD-TSK-0126 Improve process profile migration with original type preservation](../items/task/0100/KABSD-TSK-0126_improve-process-profile-migration-with-original-type-preservation.md)
 - [KABSD-TSK-0127 Implement kano-backlog-core Phase 2: Derived and Refs modules](../items/task/0100/KABSD-TSK-0127_implement-kano-backlog-core-phase-2-derived-and-refs-modules.md)
 - [KABSD-TSK-0130 Consider Mermaid diagrams as context-engineering artifacts for agent attention](../items/task/0100/KABSD-TSK-0130_use-mermaid-diagrams-as-context-engineering-artifacts.md)
+- [KABSD-TSK-0132 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 - [KABSD-TSK-0136 Fix gitignore for derived data compliance](../items/task/0100/KABSD-TSK-0136_fix-gitignore-for-derived-data-compliance.md)
-- [KCCS-TSK-0001 Test KCCS product isolation](../../kano-commit-convention-skill/items/task/0000/KCCS-TSK-0001_test-product-isolation.md)
+- [KABSD-TSK-0145 Add prerequisite install script for Python deps (self-contained skill)](../items/task/0100/KABSD-TSK-0145_add-prerequisite-install-script-for-python-deps-self-contained-skill.md)
+- [KABSD-TSK-0146 Clarify config: replace mode.role with mode.skill_developer + persona](../items/task/0100/KABSD-TSK-0146_clarify-config-replace-mode-role-with-mode-skill-developer-persona.md)
+- [KABSD-TSK-0147 Persona-aware project summary generation in view_refresh_dashboards](../items/task/0100/KABSD-TSK-0147_persona-aware-project-summary-generation-in-view-refresh-dashboards.md)
+
+### Bugs
+
+- [KABSD-BUG-0001 workitem_update_state crashes: args.model attribute missing](../items/bug/0000/KABSD-BUG-0001_workitem-update-state-crashes-args-model-attribute-missing.md)
 

@@ -37,6 +37,8 @@ This repository demonstrates an evolving approach to transform agent collaborati
 - **Architecture Decision Records (ADRs)**: Capture significant technical decisions
 - **Multiple views**: Obsidian Dataview dashboards and plain markdown reports
 - **Multi-product support**: Organize backlogs for different products/projects
+- **🚧 WIP: Optional SQLite index** - Fast queries while keeping files as source of truth
+- **🚧 WIP: Embedding search** - Local semantic search for backlog items (experimental)
 
 ## Repository Structure
 
@@ -80,9 +82,23 @@ This follows the "Self-contained skill stance" principle defined in [AGENTS.md](
 ### Prerequisites
 
 - AI agent with file system access (Claude, ChatGPT, etc.)
-- Python 3.8+ (for skill scripts)
+- Python 3.10+ (required by `skills/kano-agent-backlog-skill/pyproject.toml`)
 - Git (for version control)
 - **Patience**: Expect things to break or change
+
+### Prerequisite install (recommended)
+
+To avoid wasting tokens on ad-hoc installs when a script fails, run the repo bootstrap installer once:
+
+```powershell
+python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py
+```
+
+Optional (heavy / platform-dependent) embedding search deps:
+
+```powershell
+python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py --with-embeddings
+```
 
 ### Agent-First Setup
 
