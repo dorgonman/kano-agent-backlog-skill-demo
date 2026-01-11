@@ -128,7 +128,7 @@ flowchart TB
 ### Phase 1 — Introduce `scripts/kano` skeleton (no big moves yet)
 - Implement CLI framework (Typer/argparse) with subcommands matching existing scripts:
   - `kano doctor` (prereqs + initialized checks)
-  - `kano init backlog`
+  - `kano backlog init`
   - `kano workitem create/update/list`
   - `kano adr create/list`
   - `kano index build/refresh`
@@ -151,6 +151,34 @@ flowchart TB
 ### Phase 4 — Future (optional) plugin/hook system
 - Only write ADR now; do not implement until a concrete need appears.
 - Hooks are external project integrations (pre/post process), not part of skill core.
+
+# Backlog namespace roadmap (post-init)
+
+Now that `kano backlog init` is live, the remaining legacy bootstrap/ops scripts should migrate under the same namespace. Candidate subcommands:
+
+1. `kano backlog index build|refresh`
+  - Wraps `kano_backlog_ops.index.build_index` / `refresh_index` (requires implementing those ops first).
+  - Args: `--product`, `--backlog-root`, `--force`, `--since` (for refresh).
+  - Output: index path, stats (items scanned, duration) in plain/JSON.
+  - Blocks removal of `scripts/backlog/index_db.py`.
+2. `kano backlog demo seed`
+  - Replaces `bootstrap_seed_demo.py`; optionally installs persona sample items under `_kano/backlog/products/<product>/items/...`.
+  - Args: `--persona-pack developer|pm|qa`, `--max-items`, `--dry-run`.
+  - Emits created IDs + file paths for audit.
+3. `kano backlog persona summary|report`
+  - Consolidates `view_generate_summary.py` / `view_generate_report.py` logic with runtime-configurable persona sets.
+  - Args: `--persona`, `--format plain|markdown`, `--output views/<file>.md`.
+  - Should reuse existing `kano view` plumbing for refresh scheduling.
+4. `kano backlog sandbox init`
+  - Convenience wrapper for creating `_kano/backlog_sandbox/<name>` workspaces with sample config + symlinked shared defaults.
+  - Helps run integration tests without touching `_kano/backlog/`.
+
+Each subcommand needs:
+- Ops-layer backing functions (in `kano_backlog_ops.{index,view,init}`) with deterministic outputs.
+- CLI tests / golden fixtures once test harness exists.
+- Documentation updates (SKILL.md, README.md, AGENTS.md) mirroring the init flow instructions.
+
+Track these as follow-up tasks under this feature so Phase 3.6 has a clear definition of done.
 
 # Alternatives
 

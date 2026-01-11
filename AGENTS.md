@@ -16,7 +16,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 
 ## Backlog discipline (this repo)
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
-- If Python deps are missing, install them first with `python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py` (add `--dev` when developing the skill itself).
+- If Python deps are missing, install them with `python -m pip install -e skills/kano-agent-backlog-skill` (add `[dev]` when developing the skill itself).
 - Before any code change, create/update items in `_kano/backlog/items/` (Epic -> Feature -> UserStory -> Task/Bug).
 - Use English for all backlog item content (Context, Goal, Approach, etc.) and Worklog entries.
 - Enforce the Ready gate on Task/Bug (required, non-empty): `Context`, `Goal`, `Approach`, `Acceptance Criteria`, `Risks / Dependencies`.
@@ -25,9 +25,9 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - an item state changes,
   - scope/approach changes,
   - or an ADR is created/linked.
-- Use `skills/kano-agent-backlog-skill/scripts/backlog/workitem_update_state.py` for state transitions so `state`, `updated`, and Worklog stay consistent.
-- ⚠️ **Script names change frequently in pre-alpha** - check current names in `skills/kano-agent-backlog-skill/scripts/backlog/`
-- For backlog/skill file operations, use `skills/kano-agent-backlog-skill/scripts/backlog/*` or `scripts/fs/*` so audit logs capture the action.
+- Use `python skills/kano-agent-backlog-skill/scripts/kano item update-state ...` for state transitions so `state`, `updated`, and Worklog stay consistent.
+- Need a new backlog product? Run `python skills/kano-agent-backlog-skill/scripts/kano backlog init --product <name> --agent <id>` to scaffold `_kano/backlog/products/<name>/` before creating items.
+- For backlog/skill file operations, go through the `kano` CLI so audit logs capture the action (no ad-hoc file edits).
 - Skill scripts refuse paths outside `_kano/backlog/` or `_kano/backlog_sandbox/`.
 - Keep backlog volume under control: only open new items for code/design changes; keep Tasks/Bugs sized to one focused session; avoid ADRs unless there is a real architectural trade-off.
 - Ticketing threshold (agent-decided):
@@ -43,10 +43,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 
 ## Views (human-friendly)
 - Obsidian Dataview dashboards live under `_kano/backlog/views/` (e.g. `_kano/backlog/views/Dashboard.md`).
-- Generate plain Markdown views (no Dataview required):
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "New,InProgress" --title "Active Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Active.md`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "New" --title "New Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_New.md`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --groups "Done" --title "Done Work" --output _kano/backlog/views/Dashboard_PlainMarkdown_Done.md`
+- Generate the canonical dashboards via the CLI: `python skills/kano-agent-backlog-skill/scripts/kano view refresh --agent <id> --backlog-root _kano/backlog [--product <name>]`.
   - Note: `_kano/backlog/tools/*.sh` are deprecated; use Python tools instead when needed (e.g. `generate_demo_views.py`, `generate_focus_view.py`).
 
 ## Demo principles
@@ -54,7 +51,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - Avoid unrelated refactors; every meaningful change should be explainable via a backlog item or ADR (with verification steps).
 - If you change the skill itself, commit inside the submodule `skills/kano-agent-backlog-skill/` and update the parent repo submodule pointer.
 - Self-contained skill stance (this demo repo):
-  - Prefer implementing automation as skill scripts (`skills/kano-agent-backlog-skill/scripts/`) so the skill is usable without manual setup.
+  - Prefer adding automation as new `kano` subcommands so the skill is usable without manual setup.
   - Keep `_kano/backlog/tools/` for project-only dashboards/demos (wrapping skill scripts is OK when the behavior is demo-specific).
   - Other projects may choose override-only usage; this repo does not. Treat the skill as the source of truth.
 
@@ -91,3 +88,16 @@ No tests or build steps are defined yet.
 
 ### Rationale
 - Keep the project focused on local-first stability and usability before expanding to cloud/multi-remote deployments.
+
+<!-- kano-agent-backlog-skill:start -->
+## Project backlog discipline (kano-agent-backlog-skill)
+- Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
+- Backlog root is `_kano/backlog_sandbox/_tmp_tests/guide_test_backlog` (items are file-first; index/logs are derived).
+- Before any code change, create/update items in `_kano/backlog_sandbox/_tmp_tests/guide_test_backlog/items/` (Epic -> Feature -> UserStory -> Task/Bug).
+- Enforce the Ready gate on Task/Bug before starting; Worklog is append-only.
+- Use the `kano` CLI (not ad-hoc edits) so audit logs capture actions:
+  - Bootstrap: `python skills/kano-agent-backlog-skill/scripts/kano backlog init --product <name> --agent <agent-name>`
+  - Create/update: `python skills/kano-agent-backlog-skill/scripts/kano item create|update-state ... --agent <agent-name>`
+  - Views: `python skills/kano-agent-backlog-skill/scripts/kano view refresh --agent <agent-name> --product <name>`
+- Dashboards auto-refresh after item changes by default (`views.auto_refresh=true`); use `--no-refresh` or set it to `false` if needed.
+<!-- kano-agent-backlog-skill:end -->

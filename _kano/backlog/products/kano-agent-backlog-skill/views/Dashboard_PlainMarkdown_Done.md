@@ -1,12 +1,8 @@
 # Done Work
 
-Generated: 2026-01-11 01:38
-Source: _kano/backlog/products/kano-agent-backlog-skill/items
-Command:
-
-```bash
-python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Done.md --groups Done --title Done Work
-```
+Generated: 2026-01-11 14:43
+Source: items
+Agent: copilot
 
 ## Done
 

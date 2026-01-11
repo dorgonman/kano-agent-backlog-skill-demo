@@ -55,7 +55,7 @@ This repository demonstrates an evolving approach to transform agent collaborati
 │   │   ├── src/                # All Python source code (unified)
 │   │   │   ├── kano_backlog_core/   # Domain library
 │   │   │   └── kano_cli/            # CLI facade
-│   │   ├── scripts/            # Automation and tooling
+│   │   ├── scripts/            # Single entrypoint (`kano`) for all automation
 │   │   ├── templates/          # Item and ADR templates
 │   │   ├── references/         # Reference documentation
 │   │   └── pyproject.toml      # Unified project config
@@ -88,16 +88,17 @@ This follows the "Self-contained skill stance" principle defined in [AGENTS.md](
 
 ### Prerequisite install (recommended)
 
-To avoid wasting tokens on ad-hoc installs when a script fails, run the repo bootstrap installer once:
+Install the skill (and its CLI dependencies) into your environment once:
 
 ```powershell
-python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py
+python -m pip install -e skills/kano-agent-backlog-skill
 ```
 
-Optional (heavy / platform-dependent) embedding search deps:
+Optional dev/embedding dependencies can be added with extras:
 
 ```powershell
-python skills/kano-agent-backlog-skill/scripts/bootstrap/install_prereqs.py --with-embeddings
+python -m pip install -e "skills/kano-agent-backlog-skill[dev]"
+# Install FAISS / sentence-transformers manually per platform before running embedding workflows.
 ```
 
 ### Agent-First Setup

@@ -1,12 +1,8 @@
 # InProgress Work
 
-Generated: 2026-01-11 01:38
-Source: _kano/backlog/products/kano-agent-backlog-skill/items
-Command:
-
-```bash
-python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/products/kano-agent-backlog-skill/views/Dashboard_PlainMarkdown_Active.md --groups New,InProgress --title InProgress Work
-```
+Generated: 2026-01-11 14:43
+Source: items
+Agent: copilot
 
 ## New
 
@@ -33,6 +29,10 @@ python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source
 - [KABSD-FTR-0024 Global config layers and URI compilation](../items/feature/0000/KABSD-FTR-0024_global-config-layers-and-uri-compilation.md)
 - [KABSD-FTR-0025 Unified CLI for All Backlog Operations](../items/feature/0000/KABSD-FTR-0025_unified-cli-for-backlog-operations.md)
 - [KABSD-FTR-0027 kano-agent-backlog-dispatcher: complexity-aware, bid-driven task routing layer](../items/feature/0000/KABSD-FTR-0027_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0029 Configurable persona packs (beyond developer/pm/qa)](../items/features/0000/KABSD-FTR-0029_configurable-persona-packs-beyond-developer-pm-qa.md)
+- [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/features/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
+- [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/features/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
+- [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/features/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
 
 ### UserStories
 

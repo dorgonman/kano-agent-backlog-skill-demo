@@ -3,12 +3,13 @@
 <!-- kano-agent-backlog-skill:start -->
 ## Backlog workflow (kano-agent-backlog-skill)
 - Skill entrypoint: `skills/kano-agent-backlog-skill/SKILL.md`
-- Backlog root: `_kano/backlog`
+- Backlog root: `_kano/backlog_sandbox/_tmp_tests/guide_test_backlog`
 - Before coding, create/update backlog items and meet the Ready gate.
 - Worklog is append-only; record decisions and state changes.
-- ⚠️ **Script names may change frequently in pre-alpha**
-- Prefer running the skill scripts so actions are auditable (and dashboards stay current):
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/workitem_create.py --agent <agent-name> ...`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/workitem_update_state.py --agent <agent-name> ...`
-  - `python skills/kano-agent-backlog-skill/scripts/backlog/view_refresh_dashboards.py --agent <agent-name> --backlog-root _kano/backlog`
+- Prefer running the `kano` CLI so actions are auditable (and dashboards stay current):
+  - `python skills/kano-agent-backlog-skill/scripts/kano backlog init --product <name> --agent <agent-name>`
+  - `python skills/kano-agent-backlog-skill/scripts/kano item create|update-state ... --agent <agent-name> [--product <name>]`
+  - `python skills/kano-agent-backlog-skill/scripts/kano view refresh --agent <agent-name> --product <name>`
+- Dashboards auto-refresh after item changes by default (`views.auto_refresh=true`); use `--no-refresh` or set it to `false` if needed.
 <!-- kano-agent-backlog-skill:end -->
+

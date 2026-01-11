@@ -5,7 +5,7 @@ Source: _kano/backlog/products/kano-agent-backlog-skill/items
 Command:
 
 ```bash
-python skills/kano-agent-backlog-skill/scripts/backlog/view_generate.py --source auto --items-root _kano/backlog/products/kano-agent-backlog-skill/items --backlog-root _kano/backlog/products/kano-agent-backlog-skill --output _kano/backlog/views/temp_status_all.md --groups New,Planned,InProgress,Review,Done --title All Items Status
+python skills/kano-agent-backlog-skill/scripts/kano view refresh --agent <agent-name> --product kano-agent-backlog-skill --backlog-root _kano/backlog/products/kano-agent-backlog-skill
 ```
 
 ## New
