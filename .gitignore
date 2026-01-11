@@ -14,7 +14,7 @@ _kano/backlog_sandbox/
 _kano/backlog/**/_index/
 _kano/backlog/**/.cache/
 
-# Derived persona outputs (non-deterministic)
+# Derived analysis outputs (non-deterministic)
 _kano/backlog/**/views/_analysis/
 
 # Python build artifacts
