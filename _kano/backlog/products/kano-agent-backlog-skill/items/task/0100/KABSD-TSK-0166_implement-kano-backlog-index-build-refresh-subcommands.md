@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0166
-uid: 48653dc9-9bf3-4e22-a9f6-3d568acf2afb
+uid: 019bac45-bf58-719e-92d5-9534253c02a4
 type: Task
 title: "Implement kano backlog index build|refresh subcommands"
 state: Proposed

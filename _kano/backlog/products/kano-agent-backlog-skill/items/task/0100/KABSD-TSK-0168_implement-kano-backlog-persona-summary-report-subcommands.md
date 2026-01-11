@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0168
-uid: ce60eb45-18d2-49e5-a65a-322c9e6f35ea
+uid: 019bac45-bf58-719e-92d5-9535dacf735b
 type: Task
 title: "Implement kano backlog persona summary|report subcommands"
 state: Proposed

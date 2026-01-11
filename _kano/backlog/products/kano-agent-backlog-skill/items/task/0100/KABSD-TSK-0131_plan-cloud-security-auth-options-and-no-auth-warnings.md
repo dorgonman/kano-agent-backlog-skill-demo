@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0131
-uid: 4b987f66-2d10-4a1b-a4e7-0ad2bfc5e6c0
+uid: 019bac45-bf54-75a1-a87c-228d9140ad17
 type: Task
 title: "Plan cloud security posture, auth options, and no-auth warnings"
 state: New

@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0170
-uid: 3e7e96aa-532b-4b5f-8beb-dd3208c29e69
+uid: 019bac45-bf59-70fb-ac49-2a6c88d6b807
 type: Task
 title: "Demo Task: Implement file-based canonical storage"
 state: Proposed

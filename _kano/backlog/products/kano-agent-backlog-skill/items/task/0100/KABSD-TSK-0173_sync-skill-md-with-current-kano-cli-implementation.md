@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0173
-uid: 5b46f931-180d-44d9-8c73-bd1251b62d32
+uid: 019bac45-bf5a-774e-80bd-b4928b6b7e52
 type: Task
 title: "Sync SKILL.md with current kano CLI implementation"
 state: Done

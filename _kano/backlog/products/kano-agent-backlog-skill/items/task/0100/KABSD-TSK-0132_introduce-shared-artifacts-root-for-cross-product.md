@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0132
-uid: 1c62b5a6-80d7-4a51-a5dc-7002c793c646
+uid: 019bac45-bf55-72d5-af0c-bebbfcb44d31
 type: Task
 title: "Introduce _shared/artifacts root for cross-product artifacts"
 state: New

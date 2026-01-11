@@ -20,7 +20,7 @@ tags:
 - docs
 title: Define artifact retention policy (commit artifacts)
 type: Task
-uid: 888aa696-7fb8-47df-b273-8c392d856d71
+uid: 019bac45-bf5a-774e-80bd-b493000e632c
 updated: '2026-01-11'
 ---
 
@@ -28,3 +28,4 @@ updated: '2026-01-11'
 
 2026-01-11 16:48 [agent=copilot] Created item
 2026-01-11 16:51 [agent=copilot] Decision: commit artifacts/* outputs to git as durable implementation context; keep only derived LLM/analysis outputs under views/_analysis ignored by default.
+2026-01-11 16:57 [agent=copilot] Migrated all backlog items to UUIDv7 and enforced strict UUIDv7 validation/generation (no UUIDv4 allowed).

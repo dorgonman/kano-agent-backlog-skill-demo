@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0171
-uid: 665afe03-90b7-442e-8c7e-3b396e04a053
+uid: 019bac45-bf59-70fb-ac49-2a6d6cabd782
 type: Task
 title: "Demo Task: Add SQLite index builder"
 state: Proposed

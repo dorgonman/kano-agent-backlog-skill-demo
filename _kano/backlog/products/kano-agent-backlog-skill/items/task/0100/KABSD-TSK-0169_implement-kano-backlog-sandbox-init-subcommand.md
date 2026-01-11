@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0169
-uid: 35ed5fef-9c0c-45a5-8d09-c1c9830e72ed
+uid: 019bac45-bf59-70fb-ac49-2a6ba981f964
 type: Task
 title: "Implement kano backlog sandbox init subcommand"
 state: Proposed

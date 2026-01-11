@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0172
-uid: 1b0c209b-948b-4f52-b071-feb0d80fbfeb
+uid: 019bac45-bf5a-774e-80bd-b49156a44b3b
 type: Task
 title: "Demo Task: Create CLI facade with Typer"
 state: Proposed

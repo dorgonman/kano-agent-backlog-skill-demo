@@ -1,6 +1,6 @@
 ---
 id: KABSD-TSK-0130
-uid: 1a10c3ac-a806-4f12-8b27-5c5480a0f188
+uid: 019bac45-bf54-75a1-a87c-228cfcd7bd49
 type: Task
 title: "Consider Mermaid diagrams as context-engineering artifacts for agent attention"
 state: Done
