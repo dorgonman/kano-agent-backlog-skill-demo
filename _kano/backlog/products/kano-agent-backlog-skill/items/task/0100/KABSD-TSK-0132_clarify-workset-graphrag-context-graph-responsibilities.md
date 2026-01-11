@@ -28,7 +28,7 @@ tags:
 title: Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)
 type: Task
 uid: 019bac4a-683f-7576-93e4-157304876acc
-updated: 2026-01-09
+updated: 2026-01-12
 ---
 
 # Context
@@ -121,3 +121,5 @@ Create a specification document (ADR or architecture spec) that includes:
 2026-01-09 04:00 [agent=copilot] Created task based on problem statement. State -> InProgress.
 2026-01-09 04:10 [agent=copilot] Created ADR-0011 specification document covering all required aspects: definitions, non-goals, hard constraints, responsibilities, retrieval strategy, and data flow architecture.
 2026-01-09 04:15 [agent=copilot] Updated KABSD-FTR-0013 and KABSD-FTR-0015 to reference ADR-0011 in their decisions and context sections. All acceptance criteria met. State -> Done.
+2026-01-12 02:55 [agent=codex-cli] Start artifact migration: classify legacy _kano/backlog/artifacts and move into product or _shared as appropriate.
+2026-01-12 02:55 [agent=codex-cli] Correcting mistaken state flip caused by ID collision; item remains completed.

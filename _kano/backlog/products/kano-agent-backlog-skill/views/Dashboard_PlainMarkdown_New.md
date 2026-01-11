@@ -1,6 +1,6 @@
 # New Work
 
-Generated: 2026-01-11 14:43
+Generated: 2026-01-12 02:38
 Source: items
 Agent: copilot
 
@@ -8,14 +8,15 @@ Agent: copilot
 
 ### Epics
 
-- [DM-EPIC-0001 Demo Epic](../items/epic/0000/DM-EPIC-0001_demo-epic.md)
-- [DM-EPIC-0002 Demo Epic](../items/epic/0000/DM-EPIC-0002_demo-epic.md)
 - [KABSD-EPIC-0005 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
+- [KABSD-EPIC-0008 Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.md)
+- [KABSD-EPIC-0009 CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.md)
 
 ### Features
 
+- [DM-FTR-0001 Ops Layer Test Feature](../items/feature/0000/DM-FTR-0001_ops-layer-test-feature.md)
 - [KABSD-FTR-0006 Conflict Prevention Mechanism](../items/feature/0000/KABSD-FTR-0006_conflict-prevention-mechanism.md)
 - [KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)](../items/feature/0000/KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003.md)
 - [KABSD-FTR-0012 Optional cloud acceleration (PostgreSQL/MySQL + FastAPI + OpenAPI/Swagger UI)](../items/feature/0000/KABSD-FTR-0012_optional-cloud-acceleration-postgresql-mysql-fastapi-openapi-swagger-ui.md)
@@ -29,10 +30,14 @@ Agent: copilot
 - [KABSD-FTR-0024 Global config layers and URI compilation](../items/feature/0000/KABSD-FTR-0024_global-config-layers-and-uri-compilation.md)
 - [KABSD-FTR-0025 Unified CLI for All Backlog Operations](../items/feature/0000/KABSD-FTR-0025_unified-cli-for-backlog-operations.md)
 - [KABSD-FTR-0027 kano-agent-backlog-dispatcher: complexity-aware, bid-driven task routing layer](../items/feature/0000/KABSD-FTR-0027_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
-- [KABSD-FTR-0029 Configurable persona packs (beyond developer/pm/qa)](../items/features/0000/KABSD-FTR-0029_configurable-persona-packs-beyond-developer-pm-qa.md)
-- [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/features/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
-- [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/features/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
-- [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/features/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0029 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0029_configurable-persona-packs-beyond-developer-pm-qa.md)
+- [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
+- [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
+- [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0033 Demo Feature: Local-First Backlog Ops](../items/feature/0000/KABSD-FTR-0033_demo-feature-local-first-backlog-ops.md)
+- [KABSD-FTR-0034 Rename CLI and Python Packages to Skill-Scoped Names](../items/feature/0000/KABSD-FTR-0034_rename-cli-and-python-packages-to-skill-scoped-names.md)
+- [KABSD-FTR-0035 Restructure Command Tree with Consistent Domain Naming](../items/feature/0000/KABSD-FTR-0035_restructure-command-tree-with-consistent-domain-naming.md)
+- [KABSD-FTR-0036 Document Kano Namespace Reservation for Umbrella CLI](../items/feature/0000/KABSD-FTR-0036_document-kano-namespace-reservation-for-umbrella-cli.md)
 
 ### UserStories
 
@@ -55,6 +60,7 @@ Agent: copilot
 
 ### Tasks
 
+- [DM-TSK-0001 Phase 3.2 Test Item](../items/task/0000/DM-TSK-0001_phase-3-2-test-item.md)
 - [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/task/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
 - [KABSD-TSK-0070 Implement workitem_attach_artifact.py](../items/task/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
 - [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/task/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
@@ -100,4 +106,20 @@ Agent: copilot
 - [KABSD-TSK-0154 Implement canonical SQLite index builder](../items/task/0100/KABSD-TSK-0154_implement-canonical-sqlite-index-builder.md)
 - [KABSD-TSK-0155 Implement workset init/refresh/promote automation [🔴 Blocked by: KABSD-FTR-0013]](../items/task/0100/KABSD-TSK-0155_implement-workset-execution-scripts.md)
 - [KABSD-TSK-0156 Add kano doctor command for prereqs and init checks](../items/task/0100/KABSD-TSK-0156_add-kano-doctor-command-for-prereqs-and-init-checks.md)
+- [KABSD-TSK-0166 Implement kano backlog index build|refresh subcommands](../items/task/0100/KABSD-TSK-0166_implement-kano-backlog-index-build-refresh-subcommands.md)
+- [KABSD-TSK-0168 Implement kano backlog persona summary|report subcommands](../items/task/0100/KABSD-TSK-0168_implement-kano-backlog-persona-summary-report-subcommands.md)
+- [KABSD-TSK-0169 Implement kano backlog sandbox init subcommand](../items/task/0100/KABSD-TSK-0169_implement-kano-backlog-sandbox-init-subcommand.md)
+- [KABSD-TSK-0170 Demo Task: Implement file-based canonical storage](../items/task/0100/KABSD-TSK-0170_demo-task-implement-file-based-canonical-storage.md)
+- [KABSD-TSK-0171 Demo Task: Add SQLite index builder](../items/task/0100/KABSD-TSK-0171_demo-task-add-sqlite-index-builder.md)
+- [KABSD-TSK-0172 Demo Task: Create CLI facade with Typer](../items/task/0100/KABSD-TSK-0172_demo-task-create-cli-facade-with-typer.md)
+- [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
+- [KABSD-TSK-0176 Rename scripts/kano to scripts/kano-backlog](../items/task/0100/KABSD-TSK-0176_rename-scripts-kano-to-scripts-kano-backlog.md)
+- [KABSD-TSK-0177 Rename kano_cli package to kano_backlog_cli](../items/task/0100/KABSD-TSK-0177_rename-kano-cli-package-to-kano-backlog-cli.md)
+- [KABSD-TSK-0178 Update pyproject.toml entry points and package references](../items/task/0100/KABSD-TSK-0178_update-pyproject-toml-entry-points-and-package-references.md)
+- [KABSD-TSK-0179 Add deprecated kano wrapper script with migration warning](../items/task/0100/KABSD-TSK-0179_add-deprecated-kano-wrapper-script-with-migration-warning.md)
+- [KABSD-TSK-0180 Rename item command group to workitem](../items/task/0100/KABSD-TSK-0180_rename-item-command-group-to-workitem.md)
+- [KABSD-TSK-0181 Reorganize backlog subcommand to admin group](../items/task/0100/KABSD-TSK-0181_reorganize-backlog-subcommand-to-admin-group.md)
+- [KABSD-TSK-0182 Update all documentation and SKILL.md for new CLI structure](../items/task/0100/KABSD-TSK-0182_update-all-documentation-and-skill-md-for-new-cli-structure.md)
+- [KABSD-TSK-0183 Create ADR-0016 for Skill-Scoped CLI Namespace Convention](../items/task/0100/KABSD-TSK-0183_create-adr-0016-for-skill-scoped-cli-namespace-convention.md)
+- [KABSD-TSK-0184 Update ADR-0013 to reference skill-scoped CLI naming](../items/task/0100/KABSD-TSK-0184_update-adr-0013-to-reference-skill-scoped-cli-naming.md)
 

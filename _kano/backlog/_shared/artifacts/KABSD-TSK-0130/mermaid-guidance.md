@@ -1,4 +1,6 @@
 # Mermaid Diagram Guidance for Agent Context Engineering
+ 
+**NOTE**: Canonical location moved to `_kano/backlog/_shared/artifacts/KABSD-TSK-0130/mermaid-guidance.md`.
 
 **Version**: 1.0  
 **Date**: 2025-01-latest  
@@ -51,35 +53,32 @@ Mermaid diagrams serve as **visual context engineering artifacts** to help agent
 
 ### Placement Rules
 
-Use two artifact roots:
-
-- Product-local (default): `_kano/backlog/products/<product>/artifacts/<ItemID>/`
-- Cross-product shared: `_kano/backlog/_shared/artifacts/<ItemID>/`
-
-Example:
+Store Mermaid diagrams in **product-local artifact directories** under `_kano/backlog/artifacts/`:
 
 ```
-_kano/backlog/_shared/artifacts/
-├── KABSD-TSK-0130/                 # Task: Mermaid guidance (this task)
-│   ├── mermaid-guidance.md         # This file (policy + guidance)
-│   ├── template-architecture.md    # Architecture diagram template
-│   └── template-sequence.md        # Sequence diagram template
-└── KABSD-FTR-0019/                 # Feature: Refactor core + facades
-    ├── server-facade-design.md
-    └── cli-migration-plan.md
+_kano/backlog/artifacts/
+├── KABSD-FTR-0019/              # Feature: Refactor core + facades
+│   ├── server-facade-design.md   # Store architecture diagram here
+│   └── cli-migration-plan.md     # Store workflow diagrams here
+├── KABSD-TSK-0120/              # Task: Remote collaboration
+│   └── lease-conflict-flow.md    # Diagram of conflict resolution
+└── KABSD-TSK-0130/              # Task: Mermaid guidance (this task)
+    ├── mermaid-guidance.md       # This file (policy + guidance)
+    ├── template-architecture.md  # Architecture diagram template
+    └── template-sequence.md      # Sequence diagram template
 ```
 
 ### File Naming
 
 - **Inline diagrams**: Keep in the backlog item's associated design doc (e.g., `server-facade-design.md`)
 - **Standalone diagrams**: Create `<descriptive-name>.md` for complex visuals (e.g., `lease-conflict-flow.md`)
-- **Linked in backlog items**: Reference via a relative link to the chosen artifact root.
+- **Linked in backlog items**: Reference via `[Diagram: Name](../artifacts/ITEMID/file.md)` in the backlog item itself
 
 ### Update Strategy
 
 1. **Versioning**: Add diagrams incrementally; no need for version numbers—Markdown history via git tracks evolution
 2. **Deprecation**: When diagrams become stale, update them or mark with `⚠️ OUTDATED` banner
-3. **Cross-references**: If a diagram is referenced by multiple items, keep it under `_shared/artifacts/<ItemID>/`
+3. **Cross-references**: If a diagram is referenced by multiple items, keep it in a shared artifact (e.g., `KABSD-FTR-0019/`)
 
 ---
 
@@ -253,7 +252,7 @@ When writing design docs or backlog items:
 - [ ] **Diagram focus**: Does it answer one clear question about the system?
 - [ ] **Readability**: Can a new agent understand it in < 1 minute?
 - [ ] **Terminology**: Do node labels match code identifiers and existing docs?
-- [ ] **Storage**: Placed in product-local artifacts or `_kano/backlog/_shared/artifacts/<ITEMID>/`?
+- [ ] **Storage**: Placed in `_kano/backlog/artifacts/<ITEMID>/`?
 - [ ] **Linkage**: Backlog item references the diagram file?
 - [ ] **Maintenance plan**: Added to Worklog if diagram needs updates?
 
@@ -263,7 +262,7 @@ When writing design docs or backlog items:
 
 ### v1.0 (2025-01)
 - Established when/where/how to use Mermaid diagrams
-- Defined storage convention (product-local + shared artifacts)
+- Defined storage convention (product-local artifacts)
 - Created 2 canonical templates (architecture + sequence)
 - Clarified quality bars and scope limits
 - Provided implementation checklist for agents

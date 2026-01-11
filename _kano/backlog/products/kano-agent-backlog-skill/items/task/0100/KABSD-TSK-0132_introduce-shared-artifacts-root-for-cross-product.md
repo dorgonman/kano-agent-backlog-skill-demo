@@ -3,15 +3,15 @@ id: KABSD-TSK-0132
 uid: 019bac45-bf55-72d5-af0c-bebbfcb44d31
 type: Task
 title: "Introduce _shared/artifacts root for cross-product artifacts"
-state: New
+state: InProgress
 priority: P1
 parent: KABSD-FTR-0009
 area: infra
 iteration: null
 tags: ["artifacts", "shared", "multi-product", "structure"]
 created: 2026-01-09
-updated: 2026-01-09
-owner: null
+updated: 2026-01-12
+owner: codex-cli
 external:
   azure_id: null
   jira_key: null
@@ -73,3 +73,5 @@ This task focuses on folder conventions, migration strategy, and link/script adj
 2026-01-09 11:25 [agent=windsurf] Created to introduce `_kano/backlog/_shared/artifacts` for cross-product artifacts and plan migration from legacy `_kano/backlog/artifacts`.
 2026-01-09 11:38 [agent=windsurf] Created `_kano/backlog/_shared/artifacts/` and copied Mermaid guidance to `_kano/backlog/_shared/artifacts/KABSD-TSK-0130/mermaid-guidance.md` as the first cross-product shared artifact example.
 2026-01-09 11:56 [agent=windsurf] Decision: only truly cross-product artifacts should move into `_shared/artifacts`; product-specific artifacts should remain product-local.
+2026-01-12 02:56 [agent=codex-cli] Start migration: clean up legacy _kano/backlog/artifacts, move to product or _shared per convention.
+2026-01-12 03:00 [agent=codex-cli] Copied legacy _kano/backlog/artifacts into canonical locations (product artifacts + _shared/KABSD-TSK-0130). Deletion blocked by ACL (no delete permission); left README and placeholder noting removal once permitted.
