@@ -1,24 +1,28 @@
 ---
-id: KABSD-EPIC-0003
-type: Epic
-title: "Milestone 0.0.2 (Indexing + Resolver)"
-state: InProgress
-priority: P2
-parent: null
 area: release
-iteration: null
-tags: ["milestone", "release", "0.0.2"]
 created: 2026-01-06
-updated: 2026-01-06
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-EPIC-0003
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: null
+priority: P2
+state: InProgress
+tags:
+- milestone
+- release
+- 0.0.2
+title: Milestone 0.0.2 (Indexing + Resolver)
+type: Epic
+uid: 019bac4a-6857-7432-b43f-3082737ca786
+updated: 2026-01-06
 ---
 
 # Context

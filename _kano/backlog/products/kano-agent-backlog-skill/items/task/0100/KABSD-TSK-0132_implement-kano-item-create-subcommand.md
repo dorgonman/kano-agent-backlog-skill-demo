@@ -1,25 +1,27 @@
 ---
-id: KABSD-TSK-0132
-uid: null
-type: Task
-title: "Implement `kano item create` subcommand"
-state: Proposed
-priority: P1
-parent: KABSD-FTR-0025
 area: tooling
-iteration: null
-tags: ["cli", "implementation"]
 created: 2026-01-09
-updated: 2026-01-09
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0132
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0025
+priority: P1
+state: Proposed
+tags:
+- cli
+- implementation
+title: Implement `kano item create` subcommand
+type: Task
+uid: 019bac4a-6840-7074-91d2-e59c4a8cd392
+updated: 2026-01-09
 ---
 
 # Context

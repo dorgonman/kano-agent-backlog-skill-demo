@@ -1,3 +1,7 @@
+---
+uid: 019bac4a-6835-76ee-a48e-623abdce834d
+---
+
 # CLI Tools Product-Aware Paths Audit Report
 
 **Date**: 2026-01-07  

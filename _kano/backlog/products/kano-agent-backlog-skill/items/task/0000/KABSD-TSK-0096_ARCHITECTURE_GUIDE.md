@@ -1,3 +1,7 @@
+---
+uid: 019bac4a-6831-729e-b9cf-78e52a3bd947
+---
+
 # Multi-Product Architecture Guide
 
 ## Overview

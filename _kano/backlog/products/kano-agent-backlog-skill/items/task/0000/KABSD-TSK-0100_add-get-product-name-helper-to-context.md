@@ -1,25 +1,28 @@
 ---
-id: KABSD-TSK-0100
-uid: null
-type: Task
-title: Add get_product_name() helper function to context.py
-state: Proposed
-priority: P3
-parent: KABSD-FTR-0010
 area: refactoring
-iteration: "0.0.2"
-tags: ["context", "product", "refactoring"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0100
+iteration: 0.0.2
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0010
+priority: P3
+state: Proposed
+tags:
+- context
+- product
+- refactoring
+title: Add get_product_name() helper function to context.py
+type: Task
+uid: 019bac4a-6834-7703-b648-6e5947b20ddb
+updated: 2026-01-07
 ---
 
 # Context

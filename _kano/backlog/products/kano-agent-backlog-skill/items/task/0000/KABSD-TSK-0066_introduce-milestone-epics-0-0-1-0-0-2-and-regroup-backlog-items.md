@@ -1,24 +1,28 @@
 ---
-id: KABSD-TSK-0066
-type: Task
-title: "Introduce milestone epics 0.0.1/0.0.2 and regroup backlog items"
-state: Done
-priority: P2
-parent: KABSD-FTR-0001
 area: planning
-iteration: null
-tags: ["milestone", "planning", "roadmap"]
 created: 2026-01-06
-updated: 2026-01-06
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0066
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0001
+priority: P2
+state: Done
+tags:
+- milestone
+- planning
+- roadmap
+title: Introduce milestone epics 0.0.1/0.0.2 and regroup backlog items
+type: Task
+uid: 019bac4a-6829-7345-b21a-81b13e83eb55
+updated: 2026-01-06
 ---
 
 # Context

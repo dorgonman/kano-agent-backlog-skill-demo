@@ -1,25 +1,30 @@
 ---
-id: KABSD-FTR-0008
-type: Feature
-title: "Identifier strategy and ID resolver (ADR-0003)"
-state: Proposed
-priority: P3
-parent: KABSD-EPIC-0003
 area: infra
-iteration: null
-tags: ["id", "uid", "resolver", "adr-0003"]
 created: 2026-01-06
-updated: 2026-01-06
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-FTR-0008
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
 original_type: Feature
+owner: null
+parent: KABSD-EPIC-0003
+priority: P3
+state: Proposed
+tags:
+- id
+- uid
+- resolver
+- adr-0003
+title: Identifier strategy and ID resolver (ADR-0003)
+type: Feature
+uid: 019bac4a-6850-7226-b4df-93a61a429495
+updated: 2026-01-06
 ---
 
 # Context

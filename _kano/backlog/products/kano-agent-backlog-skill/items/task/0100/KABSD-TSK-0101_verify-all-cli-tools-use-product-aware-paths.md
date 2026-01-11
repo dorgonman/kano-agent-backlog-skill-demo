@@ -1,25 +1,29 @@
 ---
-id: KABSD-TSK-0101
-uid: null
-type: Task
-title: Verify all CLI tools use product-aware paths
-state: Proposed
-priority: P4
-parent: KABSD-FTR-0010
 area: quality
-iteration: "0.0.2"
-tags: ["audit", "cli", "paths", "quality"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0101
+iteration: 0.0.2
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0010
+priority: P4
+state: Proposed
+tags:
+- audit
+- cli
+- paths
+- quality
+title: Verify all CLI tools use product-aware paths
+type: Task
+uid: 019bac4a-6835-76ee-a48e-623b041408c9
+updated: 2026-01-07
 ---
 
 # Context

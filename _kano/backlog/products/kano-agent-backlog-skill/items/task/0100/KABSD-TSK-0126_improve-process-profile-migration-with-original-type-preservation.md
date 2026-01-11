@@ -1,28 +1,28 @@
 ---
-id: KABSD-TSK-0126
-uid: null
-type: Task
-title: Improve process profile migration with original type preservation
-state: Done
-priority: P2
-parent: KABSD-FTR-0004
 area: config
+created: 2026-01-08
+decisions: []
+external:
+  azure_id: null
+  jira_key: null
+id: KABSD-TSK-0126
 iteration: null
+links:
+  blocked_by: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0004
+priority: P2
+state: Done
 tags:
 - process-migration
 - realign
 - type-mapping
-created: 2026-01-08
+title: Improve process profile migration with original type preservation
+type: Task
+uid: 019bac4a-683d-72cc-a977-a50ff79e7289
 updated: 2026-01-08
-owner: null
-external:
-  azure_id: null
-  jira_key: null
-links:
-  relates: []
-  blocks: []
-  blocked_by: []
-decisions: []
 ---
 
 # Context

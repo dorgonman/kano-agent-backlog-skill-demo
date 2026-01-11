@@ -1,25 +1,29 @@
 ---
-id: KABSD-TSK-0098
-uid: null
-type: Task
-title: Create ADR for multi-product architecture decisions
-state: Planned
-priority: P2
-parent: KABSD-FTR-0010
 area: documentation
-iteration: "0.0.2"
-tags: ["adr", "architecture", "documentation", "cross-product"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0098
+iteration: 0.0.2
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0010
+priority: P2
+state: Planned
+tags:
+- adr
+- architecture
+- documentation
+- cross-product
+title: Create ADR for multi-product architecture decisions
+type: Task
+uid: 019bac4a-6833-74ff-ba8f-533b97372f59
+updated: 2026-01-07
 ---
 
 # Context

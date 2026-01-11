@@ -1,24 +1,25 @@
 ---
-id: KABSD-FTR-0006
-type: Feature
-title: "Conflict Prevention Mechanism"
-state: Proposed
-priority: P2
-parent: KABSD-EPIC-0001
 area: general
-iteration: null
-tags: []
 created: 2026-01-05
-updated: 2026-01-05
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-FTR-0006
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-EPIC-0001
+priority: P2
+state: Proposed
+tags: []
+title: Conflict Prevention Mechanism
+type: Feature
+uid: 019bac4a-684e-77f1-ac91-9f72da242359
+updated: 2026-01-05
 ---
 
 # Context

@@ -1,24 +1,27 @@
 ---
-id: KABSD-TSK-0044
-type: Task
-title: "Implement auto-assign owner when moving to InProgress"
-state: Done
-priority: P2
-parent: KABSD-FTR-0006
 area: workflow
-iteration: null
-tags: ["conflict", "owner"]
 created: 2026-01-05
-updated: 2026-01-05
-owner: cursor
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0044
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: cursor
+parent: KABSD-FTR-0006
+priority: P2
+state: Done
+tags:
+- conflict
+- owner
+title: Implement auto-assign owner when moving to InProgress
+type: Task
+uid: 019bac4a-6823-74e7-beea-1e65747f1577
+updated: 2026-01-05
 ---
 
 # Context

@@ -1,25 +1,28 @@
 ---
-id: KABSD-TSK-0097
-uid: null
-type: Task
-title: Update FTR-0010 acceptance criteria status
-state: Proposed
-priority: P1
-parent: KABSD-FTR-0010
 area: documentation
-iteration: "0.0.1"
-tags: ["documentation", "ftr-0010", "completion"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0097
+iteration: 0.0.1
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0010
+priority: P1
+state: Proposed
+tags:
+- documentation
+- ftr-0010
+- completion
+title: Update FTR-0010 acceptance criteria status
+type: Task
+uid: 019bac4a-6832-7097-bd93-e5fb85cb7620
+updated: 2026-01-07
 ---
 
 # Context

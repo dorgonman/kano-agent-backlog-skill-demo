@@ -1,25 +1,28 @@
 ---
-id: KABSD-TSK-0096
-uid: null
-type: Task
-title: Document multi-product architecture and best practices
-state: Planned
-priority: P2
-parent: KABSD-FTR-0011
 area: documentation
-iteration: "0.0.2"
-tags: ["documentation", "architecture", "guide"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0096
+iteration: 0.0.2
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0011
+priority: P2
+state: Planned
+tags:
+- documentation
+- architecture
+- guide
+title: Document multi-product architecture and best practices
+type: Task
+uid: 019bac4a-6832-7097-bd93-e5fa75324549
+updated: 2026-01-07
 ---
 
 # Context

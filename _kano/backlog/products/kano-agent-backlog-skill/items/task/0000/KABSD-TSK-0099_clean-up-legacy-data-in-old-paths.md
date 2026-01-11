@@ -1,25 +1,28 @@
 ---
-id: KABSD-TSK-0099
-uid: null
-type: Task
-title: Clean up legacy data in old paths
-state: Proposed
-priority: P3
-parent: KABSD-FTR-0010
 area: cleanup
-iteration: "0.0.2"
-tags: ["cleanup", "migration", "legacy"]
 created: 2026-01-07
-updated: 2026-01-07
-owner: null
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0099
+iteration: 0.0.2
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-FTR-0010
+priority: P3
+state: Proposed
+tags:
+- cleanup
+- migration
+- legacy
+title: Clean up legacy data in old paths
+type: Task
+uid: 019bac4a-6834-7703-b648-6e58ba392b03
+updated: 2026-01-07
 ---
 
 # Context

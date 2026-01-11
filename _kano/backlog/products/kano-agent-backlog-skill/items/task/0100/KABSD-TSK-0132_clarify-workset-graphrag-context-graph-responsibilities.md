@@ -1,24 +1,34 @@
 ---
-id: KABSD-TSK-0132
-type: Task
-title: "Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)"
-state: Done
-priority: P1
-parent: KABSD-FTR-0013
 area: architecture
-iteration: null
-tags: ["spec", "architecture", "workset", "graphrag", "documentation"]
 created: 2026-01-09
-updated: 2026-01-09
-owner: copilot
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0132
+iteration: null
 links:
-  relates: [KABSD-FTR-0013, KABSD-FTR-0015, ADR-0004, ADR-0009]
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates:
+  - KABSD-FTR-0013
+  - KABSD-FTR-0015
+  - ADR-0004
+  - ADR-0009
+owner: copilot
+parent: KABSD-FTR-0013
+priority: P1
+state: Done
+tags:
+- spec
+- architecture
+- workset
+- graphrag
+- documentation
+title: Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)
+type: Task
+uid: 019bac4a-683f-7576-93e4-157304876acc
+updated: 2026-01-09
 ---
 
 # Context

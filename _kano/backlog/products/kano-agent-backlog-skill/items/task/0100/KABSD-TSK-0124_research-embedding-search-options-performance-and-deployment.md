@@ -1,31 +1,31 @@
 ---
-id: KABSD-TSK-0124
-uid: 019b8f52-9f4a-754d-8d3a-0124-research
-type: Task
-title: 'Research: Comparative Performance and Deployment of SQLite-Vec vs FAISS vs
-  HNSWlib'
-state: Done
-priority: P3
-parent: KABSD-USR-0015
 area: research
+created: 2026-01-07
+decisions:
+- ADR-0009
+external:
+  azure_id: null
+  jira_key: null
+id: KABSD-TSK-0124
 iteration: 0.0.2
+links:
+  blocked_by: []
+  blocks:
+  - KABSD-TSK-0092@019b9473
+  relates: []
+owner: copilot
+parent: KABSD-USR-0015
+priority: P3
+state: Done
 tags:
 - embedding
 - research
 - benchmarking
-created: 2026-01-07
+title: 'Research: Comparative Performance and Deployment of SQLite-Vec vs FAISS vs
+  HNSWlib'
+type: Task
+uid: 019bac4a-683c-76c3-adc9-bf67e569e226
 updated: 2026-01-09
-owner: copilot
-external:
-  azure_id: null
-  jira_key: null
-links:
-  relates: []
-  blocks:
-  - KABSD-TSK-0092@019b9473
-  blocked_by: []
-decisions:
-- ADR-0009
 ---
 
 # Context
