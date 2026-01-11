@@ -5,7 +5,7 @@ decisions: []
 external:
   azure_id: null
   jira_key: null
-id: KABSD-TSK-0132
+id: KABSD-TSK-0187
 iteration: null
 links:
   blocked_by: []
@@ -123,3 +123,4 @@ Create a specification document (ADR or architecture spec) that includes:
 2026-01-09 04:15 [agent=copilot] Updated KABSD-FTR-0013 and KABSD-FTR-0015 to reference ADR-0011 in their decisions and context sections. All acceptance criteria met. State -> Done.
 2026-01-12 02:55 [agent=codex-cli] Start artifact migration: classify legacy _kano/backlog/artifacts and move into product or _shared as appropriate.
 2026-01-12 02:55 [agent=codex-cli] Correcting mistaken state flip caused by ID collision; item remains completed.
+2026-01-12 07:20 [agent=copilot] Done: Shared artifacts migration complete. _kano/backlog/_shared/artifacts/ established as cross-product artifact root. All legacy artifacts migrated to product or shared locations. Acceptance criteria verified.

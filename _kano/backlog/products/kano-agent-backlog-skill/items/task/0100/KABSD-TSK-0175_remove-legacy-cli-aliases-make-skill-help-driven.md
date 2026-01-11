@@ -14,14 +14,14 @@ links:
 owner: None
 parent: null
 priority: P2
-state: InProgress
+state: Done
 tags:
 - cli
 - docs
 title: Remove legacy CLI aliases; make SKILL help-driven
 type: Task
 uid: 019bacd2-2aa8-74d4-bd69-43c3cbcffac6
-updated: 2026-01-11
+updated: 2026-01-12
 ---
 
 # Context
@@ -49,3 +49,4 @@ We want to remove remaining legacy/compatibility CLI aliases and simplify docs s
 2026-01-11 19:30 [agent=copilot] Created item
 2026-01-11 19:35 [agent=copilot] Filled Ready-gate fields to begin implementation.
 2026-01-11 19:36 [agent=copilot] Started implementation: remove legacy aliases and simplify help docs.
+2026-01-12 07:03 [agent=copilot] Done: All legacy CLI aliases removed as part of EPIC-0009. CLI help shows clean command structure. All validations pass.

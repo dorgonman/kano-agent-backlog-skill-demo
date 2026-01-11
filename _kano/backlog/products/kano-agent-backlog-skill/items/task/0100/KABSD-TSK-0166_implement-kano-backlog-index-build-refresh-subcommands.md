@@ -3,14 +3,14 @@ id: KABSD-TSK-0166
 uid: 019bac45-bf58-719e-92d5-9534253c02a4
 type: Task
 title: "Implement kano backlog index build|refresh subcommands"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-FTR-0028
 area: cli
 iteration: active
 tags: ['cli', 'indexing', 'ops-layer']
 created: 2026-01-11
-updated: 2026-01-11
+updated: 2026-01-12
 owner: None
 external:
   azure_id: null
@@ -74,3 +74,5 @@ Both commands should:
 # Worklog
 
 2026-01-11 14:48 [agent=copilot] Created item
+2026-01-12 07:29 [agent=copilot] Started: implementing kano-backlog admin index build|refresh commands with ops-layer integration.
+2026-01-12 07:32 [agent=copilot] Done: kano-backlog admin index build|refresh fully functional. Fixed duplicate ID bugs (TSK-0187, TSK-0188) in backlog that were blocking index build. Both commands tested: build indexes 247 items in ~151ms, refresh does full rebuild. Acceptance criteria met.

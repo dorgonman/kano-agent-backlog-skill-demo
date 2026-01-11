@@ -1,12 +1,16 @@
 # Done Work
 
-Generated: 2026-01-12 02:38
+Generated: 2026-01-12 07:21
 Source: items
 Agent: copilot
 
 ## Done
 
-### Features
+### Epic
+
+- [KABSD-EPIC-0009 CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.md)
+
+### Feature
 
 - [KABSD-FTR-0000 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0001 Local-first backlog system](../items/feature/0000/KABSD-FTR-0001_local-backlog-system.md)
@@ -22,8 +26,10 @@ Agent: copilot
 - [KABSD-FTR-0022 Backlog Quality Linter (Agent Discipline)](../items/feature/0000/KABSD-FTR-0022_backlog-quality-linter-agent-discipline.md)
 - [KABSD-FTR-0026 DEPRECATED duplicate (layout migration): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0026_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0028 Refactor kano-agent-backlog-skill scripts into a single CLI entry + library modules](../items/feature/0000/KABSD-FTR-0028_refactor-kano-agent-backlog-skill-scripts-into-a-single-cli-entry-library-modules.md)
+- [KABSD-FTR-0035 Restructure Command Tree with Consistent Domain Naming](../items/feature/0000/KABSD-FTR-0035_restructure-command-tree-with-consistent-domain-naming.md)
+- [KABSD-FTR-0036 Document Kano Namespace Reservation for Umbrella CLI](../items/feature/0000/KABSD-FTR-0036_document-kano-namespace-reservation-for-umbrella-cli.md)
 
-### UserStories
+### UserStory
 
 - [KABSD-USR-0001 Plan work before coding](../items/userstory/0000/KABSD-USR-0001_plan-before-code.md)
 - [KABSD-USR-0009 Ship built-in process definitions and select via config](../items/userstory/0000/KABSD-USR-0009_ship-built-in-process-definitions-and-select-via-config.md)
@@ -35,7 +41,7 @@ Agent: copilot
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstory/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 - [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
 
-### Tasks
+### Task
 
 - [KABSD-TSK-0001 Create project-backlog skill](../items/task/0000/KABSD-TSK-0001_project-backlog-skill.md)
 - [KABSD-TSK-0004 Add trash bin tool for backlog files](../items/task/0000/KABSD-TSK-0004_add-trash-bin-tool-for-backlog-files.md)
@@ -64,6 +70,7 @@ Agent: copilot
 - [KABSD-TSK-0032 Generate epic index with task states](../items/task/0000/KABSD-TSK-0032_generate-epic-index-with-task-states.md)
 - [KABSD-TSK-0033 Generalize index generator for any item](../items/task/0000/KABSD-TSK-0033_generalize-index-generator-for-any-item.md)
 - [KABSD-TSK-0034 Show state labels for all index items and drop epic aliases](../items/task/0000/KABSD-TSK-0034_show-state-labels-for-all-index-items-and-drop-epic-aliases.md)
+- [KABSD-TSK-0035 Verify agent compliance with skill workflow](../items/task/0000/KABSD-TSK-0035_verify-agent-compliance-with-skill-workflow.md)
 - [KABSD-TSK-0036 Sync parent state from child status changes](../items/task/0000/KABSD-TSK-0036_sync-parent-state-from-child-status-changes.md)
 - [KABSD-TSK-0037 Review and improve config system implementation](../items/task/0000/KABSD-TSK-0037_review-and-improve-config-system-implementation.md)
 - [KABSD-TSK-0038 Review and improve config system implementation](../items/task/0000/KABSD-TSK-0038_review-and-improve-config-system-implementation.md)
@@ -148,8 +155,19 @@ Agent: copilot
 - [KABSD-TSK-0164 Implement kano_backlog_ops.view functions](../items/task/0100/KABSD-TSK-0164_implement-kano-backlog-ops-view-functions.md)
 - [KABSD-TSK-0165 Add deprecation warnings to scripts/backlog/*.py](../items/task/0100/KABSD-TSK-0165_add-deprecation-warnings-to-scripts-backlog-py.md)
 - [KABSD-TSK-0173 Sync SKILL.md with current kano CLI implementation](../items/task/0100/KABSD-TSK-0173_sync-skill-md-with-current-kano-cli-implementation.md)
+- [KABSD-TSK-0175 Remove legacy CLI aliases; make SKILL help-driven](../items/task/0100/KABSD-TSK-0175_remove-legacy-cli-aliases-make-skill-help-driven.md)
+- [KABSD-TSK-0176 Rename scripts/kano to scripts/kano-backlog](../items/task/0100/KABSD-TSK-0176_rename-scripts-kano-to-scripts-kano-backlog.md)
+- [KABSD-TSK-0177 Rename kano_cli package to kano_backlog_cli](../items/task/0100/KABSD-TSK-0177_rename-kano-cli-package-to-kano-backlog-cli.md)
+- [KABSD-TSK-0178 Update pyproject.toml entry points and package references](../items/task/0100/KABSD-TSK-0178_update-pyproject-toml-entry-points-and-package-references.md)
+- [KABSD-TSK-0179 Add deprecated kano wrapper script with migration warning](../items/task/0100/KABSD-TSK-0179_add-deprecated-kano-wrapper-script-with-migration-warning.md)
+- [KABSD-TSK-0180 Rename item command group to workitem](../items/task/0100/KABSD-TSK-0180_rename-item-command-group-to-workitem.md)
+- [KABSD-TSK-0181 Reorganize backlog subcommand to admin group](../items/task/0100/KABSD-TSK-0181_reorganize-backlog-subcommand-to-admin-group.md)
+- [KABSD-TSK-0182 Update all documentation and SKILL.md for new CLI structure](../items/task/0100/KABSD-TSK-0182_update-all-documentation-and-skill-md-for-new-cli-structure.md)
+- [KABSD-TSK-0183 Create ADR-0016 for Skill-Scoped CLI Namespace Convention](../items/task/0100/KABSD-TSK-0183_create-adr-0016-for-skill-scoped-cli-namespace-convention.md)
+- [KABSD-TSK-0184 Update ADR-0013 to reference skill-scoped CLI naming](../items/task/0100/KABSD-TSK-0184_update-adr-0013-to-reference-skill-scoped-cli-naming.md)
+- [KABSD-TSK-0185 Normalize work item type labels to singular](../items/task/0100/KABSD-TSK-0185_normalize-work-item-type-labels-to-singular.md)
 
-### Bugs
+### Bug
 
 - [KABSD-BUG-0001 workitem_update_state crashes: args.model attribute missing](../items/bug/0000/KABSD-BUG-0001_workitem-update-state-crashes-args-model-attribute-missing.md)
 - [KABSD-BUG-0002 Add dependency links between FTR-0013 and FTR-0015](../items/bug/0000/KABSD-BUG-0002_add-dependency-links-between-ftr-0013-and-ftr-0015.md)

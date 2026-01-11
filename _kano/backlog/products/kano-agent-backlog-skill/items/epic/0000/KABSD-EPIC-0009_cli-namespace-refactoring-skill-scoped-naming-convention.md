@@ -14,7 +14,7 @@ links:
 owner: None
 parent: null
 priority: P2
-state: Ready
+state: Done
 tags:
 - refactor
 - cli
@@ -49,3 +49,4 @@ Phase 1: Rename executable and packages. Phase 2: Restructure command tree. Phas
 
 2026-01-12 02:36 [agent=copilot] Created item
 2026-01-12 02:38 [agent=copilot] Epic planned with 3 Features and 9 Tasks for CLI namespace refactoring.
+2026-01-12 07:01 [agent=copilot] Done: CLI namespace refactoring complete. All 3 features finished (FTR-0034: package rename, FTR-0035: command tree restructure, FTR-0036: documentation updates). Skill now uses skill-scoped naming (kano-backlog, kano_backlog_cli) with reserved 'kano' for future umbrella CLI.

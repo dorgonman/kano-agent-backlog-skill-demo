@@ -58,9 +58,9 @@ This task focuses on folder conventions, migration strategy, and link/script adj
 # Acceptance Criteria
 
 - [x] `_kano/backlog/_shared/artifacts/` convention is documented and referenced from relevant docs.
-- [ ] A migration checklist exists for moving from `_kano/backlog/artifacts/` to `_shared/artifacts/`.
+- [x] A migration checklist exists for moving from `_kano/backlog/artifacts/` to `_shared/artifacts/`.
 - [x] At least one example item successfully links to a shared artifact under `_shared/artifacts/<ItemID>/`.
-- [ ] Follow-up changes needed in scripts/docs are listed (and opened as separate tasks if they require code changes beyond this session).
+- [x] Follow-up changes needed in scripts/docs are listed (and opened as separate tasks if they require code changes beyond this session).
 
 # Risks / Dependencies
 

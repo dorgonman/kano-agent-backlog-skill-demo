@@ -211,9 +211,10 @@ kano
 # Consequences
 
 1. **For skill developers**: Must read this ADR before adding code. New logic goes in `src/`, not `scripts/`.
-2. **For agents**: Call only `scripts/kano`. Direct script calls are deprecated.
+2. **For agents**: Call only `scripts/kano-backlog`. Direct script calls are deprecated. See [[ADR-0015]] for skill-scoped CLI naming convention.
 3. **For future facades**: HTTP/MCP/GUI can import `kano_backlog_ops` directly, no CLI dependency.
 4. **For testing**: Use-case functions in `src/` are easier to unit test than CLI scripts.
+5. **Naming convention**: This skill follows skill-scoped naming (`kano-backlog`, `kano_backlog_*`). The bare `kano` namespace is reserved for a future umbrella CLI. See [[ADR-0015]] for full rationale.
 
 # Related
 
@@ -221,3 +222,4 @@ kano
 - [[KABSD-FTR-0025]]: Unified CLI (subset of this work)
 - [[KABSD-FTR-0019]]: Core/CLI/Server/GUI facades separation
 - [[ADR-0004]]: File-first architecture (complements this ADR)
+- [[ADR-0015]]: Skill-scoped CLI namespace convention (naming strategy)

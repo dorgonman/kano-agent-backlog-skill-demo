@@ -5,7 +5,7 @@ decisions: []
 external:
   azure_id: null
   jira_key: null
-id: KABSD-TSK-0132
+id: KABSD-TSK-0188
 iteration: null
 links:
   blocked_by: []

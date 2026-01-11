@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-FTR-0036
 priority: P2
-state: InProgress
+state: Done
 tags:
 - adr
 - architecture
@@ -48,3 +48,4 @@ Produce ADR-0016 under the product decisions folder to codify naming, scope, and
 
 2026-01-12 02:37 [agent=copilot] Created item
 2026-01-12 02:42 [agent=copilot] Started: implement ADR creation command and author ADR-0016.
+2026-01-12 03:14 [agent=copilot] Completed: implemented kano backlog adr create command and authored ADR-0015 (Skill-Scoped CLI Namespace Convention) with full decision rationale.
