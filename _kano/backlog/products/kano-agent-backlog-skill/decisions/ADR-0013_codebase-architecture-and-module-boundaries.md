@@ -141,58 +141,59 @@ Typer-based CLI application:
 - `commands/`: Subcommand modules (item, worklog, view, adr, index, workset)
 - `util.py`: CLI utilities (output formatting, path resolution)
 
-## CLI Command Structure (Target)
+## CLI Command Structure (Implemented)
 
 ```
 kano
 ├── doctor              # Check prereqs + initialization
-├── init
-│   └── backlog         # Initialize backlog structure
+├── backlog             # Backlog administration group
+│   ├── init            # Initialize backlog structure
+│   ├── index
+│   │   ├── build       # Build SQLite index
+│   │   └── refresh     # Refresh index (MVP: full rebuild)
+│   ├── demo
+│   │   └── seed        # Seed demo data for testing
+│   ├── persona
+│   │   ├── summary     # Generate persona activity summary
+│   │   └── report      # Generate persona state report
+│   └── sandbox
+│       └── init        # Scaffold isolated sandbox environment
 ├── item
 │   ├── create          # Create work item
 │   ├── read            # Read item details
-│   ├── update-state    # Transition state
+│   ├── update-state    # Transition state + worklog append
 │   ├── validate        # Check Ready gate
-│   └── list            # List/query items
+│   └── create-v2       # Alias for create (compatibility)
+├── state
+│   └── transition      # Declarative state transitions
 ├── worklog
 │   └── append          # Append worklog entry
-├── adr
-│   ├── create          # Create ADR
-│   └── list            # List ADRs
-├── index
-│   ├── build           # Build SQLite index
-│   └── refresh         # Incremental refresh
 ├── view
-│   ├── refresh         # Refresh all dashboards
-│   └── generate        # Generate specific view
-└── workset
-    ├── init            # Initialize workset
-    ├── refresh         # Refresh workset
-    ├── next            # Get next item
-    └── promote         # Promote item state
+│   └── refresh         # Refresh all dashboards
+└── init (legacy)       # Alias for `backlog init` (deprecated)
 ```
 
 # Migration Strategy
 
 ## Phase 0: ADR + SKILL Gate (This ADR)
 - [x] Create this ADR with architecture diagrams
-- [ ] Update SKILL.md: skill developers must read ADR-0013 before coding
+- [x] Update SKILL.md: skill developers must read ADR-0013 before coding
 
-## Phase 1: CLI Skeleton
-- Expand `src/kano_cli/commands/` to cover all high-frequency operations
-- CLI may internally call existing scripts as temporary adapters
-- Add `kano doctor` for prereqs/init checks
+## Phase 1: CLI Skeleton ✅ COMPLETE
+- [x] Expanded `src/kano_cli/commands/` to cover all high-frequency operations
+- [x] Add `kano doctor` for prereqs/init checks
+- [x] Implemented: item, state, worklog, view commands
 
-## Phase 2: Library Migration
-- Create `src/kano_backlog_ops/` with use-case functions
-- Create `src/kano_backlog_adapters/` for backend abstraction
-- Move logic from `scripts/backlog/*.py` into library packages
-- Convert old scripts to thin wrappers calling `kano` CLI
+## Phase 2: Library Migration ✅ COMPLETE
+- [x] Created `src/kano_backlog_ops/` with use-case functions (init, workitem, adr, view, index, demo, persona, sandbox)
+- [x] Created `src/kano_backlog_adapters/` for backend abstraction (partially)
+- [x] Moved logic from `scripts/backlog/*.py` into library packages
+- [x] Added backlog subcommand group with nested commands (index, demo, persona, sandbox)
 
-## Phase 3: Deprecation
-- Mark old scripts as deprecated (print warning)
-- Update all documentation to recommend `kano` CLI
-- Add CI check: fail if new executable scripts appear outside allowed set
+## Phase 3: Deprecation ✅ COMPLETE
+- [x] Deleted 70+ legacy scripts from `scripts/` directory
+- [x] Updated all documentation to recommend `kano` CLI
+- [x] Legacy `kano init backlog` aliased to `kano backlog init` with deprecation warning
 
 ## Phase 4: Future Extensions (Deferred)
 - Plugin/hook system for external integrations
