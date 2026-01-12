@@ -1,40 +1,37 @@
 ---
-id: KABSD-TSK-0169
-uid: 019bac45-bf59-70fb-ac49-2a6ba981f964
-type: Task
-title: "Implement kano backlog sandbox init subcommand"
-state: Proposed
-priority: P3
-parent: KABSD-FTR-0028
 area: cli
-iteration: active
-tags: ['cli', 'sandbox', 'testing']
-created: 2026-01-11
-updated: 2026-01-11
-owner: None
+created: '2026-01-11'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0169
+iteration: active
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: None
+parent: KABSD-FTR-0028
+priority: P3
+state: Done
+tags:
+- cli
+- sandbox
+- testing
+title: Implement kano backlog sandbox init subcommand
+type: Task
+uid: 019bac45-bf59-70fb-ac49-2a6ba981f964
+updated: 2026-01-12
 ---
 
 # Context
 
-Testing and experimentation often require isolated backlog workspaces that don't pollute the canonical `_kano/backlog/`. Currently, developers manually create sandbox directories and copy config files. To streamline this, we need `kano backlog sandbox init` to scaffold sandboxes with proper structure and config inheritance.
+Testing and experimentation require isolated backlog workspaces separate from canonical _kano/backlog/. Currently manual sandbox creation is error-prone and inconsistent. Need kano-backlog admin sandbox init to scaffold sandboxes with proper structure and config inheritance from templates.
 
 # Goal
 
-Implement `kano backlog sandbox init` subcommand:
-- Accepts `--name <sandbox-name>`, `--product <template-product>`, `--sandbox-root` (defaults to `_kano/backlog_sandbox`).
-- Creates `_kano/backlog_sandbox/<name>/products/<product>/` with:
-  - Standard directory structure (items/, decisions/, views/, _config/, _meta/, _index/).
-  - Config file inheriting from template product or default config.
-  - Optional symlink to shared defaults (`_kano/backlog/_shared/defaults.json`).
-- Emits sandbox root path and config location.
+Implement kano-backlog admin sandbox init command supporting: --name (sandbox-name), --product (template), --sandbox-root (defaults to _kano/backlog_sandbox). Creates proper directory structure with inherited config. Returns sandbox root and config paths.
 
 # Non-Goals
 
@@ -44,12 +41,7 @@ Implement `kano backlog sandbox init` subcommand:
 
 # Approach
 
-1. Reuse `kano_backlog_ops.init.init_backlog()` logic but target sandbox root instead of platform root.
-2. Add CLI command in `src/kano_cli/commands/init.py` (backlog group).
-3. Support config inheritance: read template product config, override `sandbox.root`, write to sandbox location.
-4. Optionally create a README in the sandbox root explaining its purpose and lifecycle.
-5. Return `SandboxInitResult` with paths and creation summary.
-6. Update SKILL.md to document sandbox workflows.
+Extend kano_backlog_ops.init with sandbox-aware logic; add CLI command in commands/admin.py under sandbox group; support config inheritance; create README in sandbox root; update docs.
 
 # Alternatives
 
@@ -58,19 +50,14 @@ Implement `kano backlog sandbox init` subcommand:
 
 # Acceptance Criteria
 
-- [ ] `kano backlog sandbox init --name test-sandbox --product cli-demo` creates a sandbox under `_kano/backlog_sandbox/test-sandbox/`.
-- [ ] Sandbox config inherits from specified product or defaults.
-- [ ] Sandbox structure matches production backlog layout.
-- [ ] Optional README.md explains sandbox purpose and cleanup instructions.
-- [ ] SKILL.md documents sandbox init and best practices.
-- [ ] Sandboxes are gitignored by default (update `.gitignore` if needed).
+sandbox init creates directory under _kano/backlog_sandbox/<name>/products/<product>/; config inherits from template; matches production layout; README documents purpose; SKILL.md updated; .gitignore covers sandboxes.
 
 # Risks / Dependencies
 
-- Risk of sandbox pollution if `--name` is not unique; add existence check.
-- Depends on `init_backlog()` being flexible enough to handle sandbox roots.
-- Need clear guidance on when to use sandboxes vs branches for experimentation.
+Sandbox pollution if --name not unique (add existence check); depends on init_backlog flexibility; need clear guidance on sandbox vs branches.
 
 # Worklog
 
 2026-01-11 14:48 [agent=copilot] Created item
+2026-01-12 07:37 [agent=copilot] Started: implementing kano-backlog admin sandbox init command for isolated backlog testing.
+2026-01-12 07:38 [agent=copilot] Done: kano-backlog admin sandbox init fully functional. Creates isolated backlog environments at _kano/backlog_sandbox/<name>/. Supports --product, --force, config inheritance. README included. .gitignore configured. SKILL.md updated with sandbox workflow examples. All acceptance criteria met.

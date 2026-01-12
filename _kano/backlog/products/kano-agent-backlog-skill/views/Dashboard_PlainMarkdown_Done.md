@@ -1,6 +1,6 @@
 # Done Work
 
-Generated: 2026-01-12 07:21
+Generated: 2026-01-12 08:52
 Source: items
 Agent: copilot
 
@@ -19,6 +19,7 @@ Agent: copilot
 - [KABSD-FTR-0004 Backlog config system and process profiles](../items/feature/0000/KABSD-FTR-0004_backlog-config-system-and-process-profiles.md)
 - [KABSD-FTR-0005 Verify agent compliance](../items/feature/0000/KABSD-FTR-0005_verify-agent-compliance.md)
 - [KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline](../items/feature/0000/KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline.md)
+- [KABSD-FTR-0009 Backlog Artifact System](../items/feature/0000/KABSD-FTR-0009_backlog-artifact-system.md)
 - [KABSD-FTR-0010 Monorepo Platform Migration](../items/feature/0000/KABSD-FTR-0010_monorepo-platform-migration.md)
 - [KABSD-FTR-0017 Traceability: Commit Refs → Worklog Backfill](../items/feature/0000/KABSD-FTR-0017_traceability-commit-refs-worklog-backfill.md)
 - [KABSD-FTR-0019 Refactor: kano-backlog-core + CLI/Server/GUI facades](../items/feature/0000/KABSD-FTR-0019_refactor-kano-backlog-core-cli-server-gui-facades.md)
@@ -103,6 +104,8 @@ Agent: copilot
 - [KABSD-TSK-0066 Introduce milestone epics 0.0.1/0.0.2 and regroup backlog items](../items/task/0000/KABSD-TSK-0066_introduce-milestone-epics-0-0-1-0-0-2-and-regroup-backlog-items.md)
 - [KABSD-TSK-0067 Define skill versioning policy (ADR) and close MVP epic](../items/task/0000/KABSD-TSK-0067_define-skill-versioning-policy-adr-and-close-mvp-epic.md)
 - [KABSD-TSK-0068 Add skill version command and changelog](../items/task/0000/KABSD-TSK-0068_add-skill-version-command-and-changelog.md)
+- [KABSD-TSK-0070 Implement workitem_attach_artifact.py](../items/task/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
+- [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/task/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
 - [KABSD-TSK-0074 Organize skill scripts into grouped CLI wrappers and clarify terminology](../items/task/0000/KABSD-TSK-0074_organize-skill-scripts-into-grouped-cli-wrappers-and-clarify-terminology.md)
 - [KABSD-TSK-0076 Rename backlog scripts to prefixed names and update references](../items/task/0000/KABSD-TSK-0076_rename-backlog-scripts-to-prefixed-names-and-update-references.md)
 - [KABSD-TSK-0078 Fix SQLite index schema mismatch (missing source_path)](../items/task/0000/KABSD-TSK-0078_fix-sqlite-index-schema-mismatch-missing-source-path.md)
@@ -134,7 +137,6 @@ Agent: copilot
 - [KABSD-TSK-0126 Improve process profile migration with original type preservation](../items/task/0100/KABSD-TSK-0126_improve-process-profile-migration-with-original-type-preservation.md)
 - [KABSD-TSK-0127 Implement kano-backlog-core Phase 2: Derived and Refs modules](../items/task/0100/KABSD-TSK-0127_implement-kano-backlog-core-phase-2-derived-and-refs-modules.md)
 - [KABSD-TSK-0130 Consider Mermaid diagrams as context-engineering artifacts for agent attention](../items/task/0100/KABSD-TSK-0130_use-mermaid-diagrams-as-context-engineering-artifacts.md)
-- [KABSD-TSK-0132 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 - [KABSD-TSK-0136 Fix gitignore for derived data compliance](../items/task/0100/KABSD-TSK-0136_fix-gitignore-for-derived-data-compliance.md)
 - [KABSD-TSK-0145 Add prerequisite install script for Python deps (self-contained skill)](../items/task/0100/KABSD-TSK-0145_add-prerequisite-install-script-for-python-deps-self-contained-skill.md)
 - [KABSD-TSK-0146 Clarify config: replace mode.role with mode.skill_developer + persona](../items/task/0100/KABSD-TSK-0146_clarify-config-replace-mode-role-with-mode-skill-developer-persona.md)
@@ -154,6 +156,8 @@ Agent: copilot
 - [KABSD-TSK-0163 Implement kano_backlog_ops.workitem functions](../items/task/0100/KABSD-TSK-0163_implement-kano-backlog-ops-workitem-functions.md)
 - [KABSD-TSK-0164 Implement kano_backlog_ops.view functions](../items/task/0100/KABSD-TSK-0164_implement-kano-backlog-ops-view-functions.md)
 - [KABSD-TSK-0165 Add deprecation warnings to scripts/backlog/*.py](../items/task/0100/KABSD-TSK-0165_add-deprecation-warnings-to-scripts-backlog-py.md)
+- [KABSD-TSK-0166 Implement kano backlog index build|refresh subcommands](../items/task/0100/KABSD-TSK-0166_implement-kano-backlog-index-build-refresh-subcommands.md)
+- [KABSD-TSK-0169 Implement kano backlog sandbox init subcommand](../items/task/0100/KABSD-TSK-0169_implement-kano-backlog-sandbox-init-subcommand.md)
 - [KABSD-TSK-0173 Sync SKILL.md with current kano CLI implementation](../items/task/0100/KABSD-TSK-0173_sync-skill-md-with-current-kano-cli-implementation.md)
 - [KABSD-TSK-0175 Remove legacy CLI aliases; make SKILL help-driven](../items/task/0100/KABSD-TSK-0175_remove-legacy-cli-aliases-make-skill-help-driven.md)
 - [KABSD-TSK-0176 Rename scripts/kano to scripts/kano-backlog](../items/task/0100/KABSD-TSK-0176_rename-scripts-kano-to-scripts-kano-backlog.md)
@@ -166,6 +170,8 @@ Agent: copilot
 - [KABSD-TSK-0183 Create ADR-0016 for Skill-Scoped CLI Namespace Convention](../items/task/0100/KABSD-TSK-0183_create-adr-0016-for-skill-scoped-cli-namespace-convention.md)
 - [KABSD-TSK-0184 Update ADR-0013 to reference skill-scoped CLI naming](../items/task/0100/KABSD-TSK-0184_update-adr-0013-to-reference-skill-scoped-cli-naming.md)
 - [KABSD-TSK-0185 Normalize work item type labels to singular](../items/task/0100/KABSD-TSK-0185_normalize-work-item-type-labels-to-singular.md)
+- [KABSD-TSK-0186 Clean up legacy platform roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-platform-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
+- [KABSD-TSK-0187 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 
 ### Bug
 

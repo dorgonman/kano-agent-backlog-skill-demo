@@ -1,6 +1,6 @@
 # InProgress Work
 
-Generated: 2026-01-12 07:21
+Generated: 2026-01-12 08:52
 Source: items
 Agent: copilot
 
@@ -58,8 +58,6 @@ Agent: copilot
 ### Task
 
 - [DM-TSK-0001 Phase 3.2 Test Item](../items/task/0000/DM-TSK-0001_phase-3-2-test-item.md)
-- [KABSD-TSK-0070 Implement workitem_attach_artifact.py](../items/task/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
-- [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/task/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
 - [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/task/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
 - [KABSD-TSK-0075 Implement index_db.py for SQLite sync](../items/task/0000/KABSD-TSK-0075_implement-index-db-py-for-sqlite-sync.md)
 - [KABSD-TSK-0077 Evaluate continuous agent loop until work item completion](../items/task/0000/KABSD-TSK-0077_evaluate-continuous-agent-loop-until-work-item-completion.md)
@@ -86,7 +84,6 @@ Agent: copilot
 - [KABSD-TSK-0128 Dashboard LOD: product + multi-product aggregation dashboards](../items/task/0100/KABSD-TSK-0128_dashboard-lod-product-and-multi-product-dashboards.md)
 - [KABSD-TSK-0129 Clarify Project vs Product terminology and boundaries (cloud / cross-repo)](../items/task/0100/KABSD-TSK-0129_clarify-project-vs-product-terminology-and-boundaries.md)
 - [KABSD-TSK-0131 Plan cloud security posture, auth options, and no-auth warnings](../items/task/0100/KABSD-TSK-0131_plan-cloud-security-auth-options-and-no-auth-warnings.md)
-- [KABSD-TSK-0132 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0133 Implement `kano item update-state` subcommand](../items/task/0100/KABSD-TSK-0133_implement-kano-item-update-state-subcommand.md)
 - [KABSD-TSK-0134 Implement `kano item validate` subcommand](../items/task/0100/KABSD-TSK-0134_implement-kano-item-validate-subcommand.md)
 - [KABSD-TSK-0135 Implement `kano view refresh` subcommand](../items/task/0100/KABSD-TSK-0135_implement-kano-view-refresh-subcommand.md)
@@ -100,14 +97,12 @@ Agent: copilot
 - [KABSD-TSK-0144 Evaluate external benchmark priors and local posterior update rules](../items/task/0100/KABSD-TSK-0144_evaluate-external-benchmark-priors-and-local-posterior-update-rules.md)
 - [KABSD-TSK-0154 Implement canonical SQLite index builder](../items/task/0100/KABSD-TSK-0154_implement-canonical-sqlite-index-builder.md)
 - [KABSD-TSK-0155 Implement workset init/refresh/promote automation [🔴 Blocked by: KABSD-FTR-0013]](../items/task/0100/KABSD-TSK-0155_implement-workset-execution-scripts.md)
-- [KABSD-TSK-0156 Add kano doctor command for prereqs and init checks](../items/task/0100/KABSD-TSK-0156_add-kano-doctor-command-for-prereqs-and-init-checks.md)
-- [KABSD-TSK-0166 Implement kano backlog index build|refresh subcommands](../items/task/0100/KABSD-TSK-0166_implement-kano-backlog-index-build-refresh-subcommands.md)
 - [KABSD-TSK-0168 Implement kano backlog persona summary|report subcommands](../items/task/0100/KABSD-TSK-0168_implement-kano-backlog-persona-summary-report-subcommands.md)
-- [KABSD-TSK-0169 Implement kano backlog sandbox init subcommand](../items/task/0100/KABSD-TSK-0169_implement-kano-backlog-sandbox-init-subcommand.md)
 - [KABSD-TSK-0170 Demo Task: Implement file-based canonical storage](../items/task/0100/KABSD-TSK-0170_demo-task-implement-file-based-canonical-storage.md)
 - [KABSD-TSK-0171 Demo Task: Add SQLite index builder](../items/task/0100/KABSD-TSK-0171_demo-task-add-sqlite-index-builder.md)
 - [KABSD-TSK-0172 Demo Task: Create CLI facade with Typer](../items/task/0100/KABSD-TSK-0172_demo-task-create-cli-facade-with-typer.md)
 - [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
+- [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 
 ## InProgress
 
@@ -118,7 +113,6 @@ Agent: copilot
 
 ### Feature
 
-- [KABSD-FTR-0009 Backlog Artifact System](../items/feature/0000/KABSD-FTR-0009_backlog-artifact-system.md)
 - [KABSD-FTR-0011 Multi-product platform intelligence and governance](../items/feature/0000/KABSD-FTR-0011_multi-product-platform-intelligence-and-governance.md)
 
 ### UserStory

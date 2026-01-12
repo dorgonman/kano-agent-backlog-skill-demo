@@ -3,14 +3,14 @@ id: KABSD-FTR-0009
 uid: 019b90cc-9aaa-71f9-805d-38e9f86be842
 type: Feature
 title: "Backlog Artifact System"
-state: InProgress
+state: Done
 priority: P2
 parent: KABSD-EPIC-0001
 area: infra
 iteration: null
 tags: []
 created: 2026-01-06
-updated: 2026-01-06
+updated: 2026-01-12
 owner: antigravity
 external:
   azure_id: null
@@ -74,3 +74,4 @@ Define a standard folder structure and naming convention for item artifacts.
 - Artifact: [test_artifact.txt](../../../artifacts/KABSD-FTR-0009/test_artifact.txt)
 2026-01-06 12:14 [agent=antigravity] Configured Git LFS for artifacts directory.
 2026-01-09 11:33 [agent=windsurf] Added shared artifacts addendum: cross-product artifacts should live under `_kano/backlog/_shared/artifacts/<ItemID>/`.
+2026-01-12 08:52 [agent=copilot] Artifact System complete: attach-artifact CLI + ops implemented; artifacts policy documented; tasks TSK-0070 and TSK-0071 marked Done; dashboards refreshed.
