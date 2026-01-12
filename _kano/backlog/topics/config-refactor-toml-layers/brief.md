@@ -1,6 +1,6 @@
 # Topic Brief: config-refactor-toml-layers
 
-Generated: 2026-01-13 (Updated after KABSD-TSK-0191 completion)
+Generated: 2026-01-13 (Updated after KABSD-TSK-0192 completion)
 
 ## Facts
 
@@ -9,38 +9,47 @@ Generated: 2026-01-13 (Updated after KABSD-TSK-0191 completion)
 - [x] All design decisions resolved (merge semantics, compat duration, auth, registry)
 - [x] Example configs created for all 3 layers (global/repo/product)
 - [x] KABSD-TSK-0191 Done: Schema definition complete
+- [x] KABSD-TSK-0192 Done: TOML parser implemented with backward compat, 10/10 tests pass
+
+**Implementation Status**:
+- ✅ TOML precedence over JSON at same layer
+- ✅ Deep-merge works identically for TOML/JSON
+- ✅ Deprecation warnings for JSON configs
+- ✅ Python 3.11+ uses stdlib tomllib, <3.11 uses tomli
+- ✅ All existing config overlay tests pass (3/3)
+- ✅ New TOML tests pass (10/10)
 
 **References**:
 - [Complete Schema Spec](synthesis/toml-config-schema-v1.md)
 - [Example Global Config](synthesis/example-global-config.toml)
 - [Example Repo Config](synthesis/example-repo-config.toml)
 - [Example Product Config](synthesis/example-product-config.toml)
-- [Current JSON Config](../../../skills/kano-agent-backlog-skill/src/kano_backlog_core/config.py)
+- [Current Config Implementation](../../../skills/kano-agent-backlog-skill/src/kano_backlog_core/config.py)
 
 ## Unknowns / Risks
 
-- [ ] Parser choice for Python <3.11 (tomli vs tomllib backport) — minor, tomli is standard
+- [x] Parser choice for Python <3.11 (tomli vs tomllib backport) — RESOLVED: conditional import in code
 - [ ] Performance impact of 6 layers vs current 4 — likely negligible, config loads once
 - [ ] Migration tooling UX (ensure safe rollback) — TSK-0195 will address
 
 ## Proposed Actions
 
 - [x] Define schema (TSK-0191) ✅ **DONE**
-- [ ] Fill Ready gates for TSK-0192~0195 using schema v1.0 as spec
-- [ ] Implement TOML parser with deep-merge (TSK-0192)
+- [x] Implement TOML parser with deep-merge (TSK-0192) ✅ **DONE**
+- [ ] Fill Ready gates for TSK-0193~0195 using schema v1.0 as spec
 - [ ] Implement URI compiler (TSK-0193)
 - [ ] Add CLI: config show, validate (TSK-0194)
 - [ ] Build migration tool: JSON→TOML (TSK-0195)
-- [ ] Update tests and documentation
+- [ ] Update docs and finalize migration guide
 
 ## Decision Candidates
 
 All key decisions resolved in schema v1.0:
-- [x] Deep-merge strategy: recursive (same as JSON)
-- [x] Compat duration: 2 minor versions before TOML-only
-- [x] URI compilation: load-time, fail-fast
-- [x] Auth: env vars only for v1
-- [x] Registry: embedded in global config.toml
+- [x] Deep-merge strategy: recursive (same as JSON) ✅ implemented
+- [x] Compat duration: 2 minor versions before TOML-only ✅ documented
+- [x] URI compilation: load-time, fail-fast (deferred to TSK-0193)
+- [x] Auth: env vars only for v1 ✅ documented
+- [x] Registry: embedded in global config.toml (deferred to TSK-0193)
 
 ## Materials Index (Deterministic)
 
