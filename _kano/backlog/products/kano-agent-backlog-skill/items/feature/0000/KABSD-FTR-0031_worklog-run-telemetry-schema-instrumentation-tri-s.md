@@ -24,7 +24,7 @@ tags:
 title: Worklog run telemetry schema + instrumentation (tri-state tokens)
 type: Feature
 uid: 019baa90-dcaa-7096-8200-d40a2f2f5aac
-updated: '2026-01-11'
+updated: '2026-01-13'
 ---
 
 # Context
@@ -105,3 +105,6 @@ Validation/tooling:
 
 2026-01-11 08:59 [agent=codex-cli] Created Ticket A from request: define run telemetry schema + instrumentation requirements.
 2026-01-11 09:00 [agent=codex-cli] Linked dependencies: blocks KABSD-FTR-0032.
+2026-01-13 01:55 [agent=codex-cli] [model=unknown] Update: Implemented model attribution in Markdown Worklog write paths (task KABSD-TSK-0189 is Done). CLI records [model=VALUE] and defaults to [model=unknown] with a warning when neither --model nor env KANO_AGENT_MODEL/KANO_MODEL is available (do not guess). Verification (creates a temp task and cleans up): (1) python skills/kano-agent-backlog-skill/scripts/kano-backlog workitem create --product kano-agent-backlog-skill --type task --title "model tagging verification" --agent AGENT_ID --format json (capture NEW_ID) (2) python skills/kano-agent-backlog-skill/scripts/kano-backlog worklog append NEW_ID --product kano-agent-backlog-skill --agent AGENT_ID --message "check default" (expect warning + [model=unknown]) (3) set KANO_AGENT_MODEL=claude-sonnet-4.5 then run (2) again (expect [model=claude-sonnet-4.5], no warning) (4) python skills/kano-agent-backlog-skill/scripts/kano-backlog workitem update-state NEW_ID --state Done --agent AGENT_ID --product kano-agent-backlog-skill (expect worklog line includes [model=...]) (5) python skills/kano-agent-backlog-skill/scripts/kano-backlog state transition NEW_ID --action block --agent AGENT_ID --product kano-agent-backlog-skill (expect worklog line includes [model=...]) (6) cleanup: python skills/kano-agent-backlog-skill/scripts/kano-backlog workitem update-state NEW_ID --state Dropped --agent AGENT_ID --product kano-agent-backlog-skill
+2026-01-13 02:01 [agent=codex-cli] Artifact attached: [KABSD-FTR-0031_model-attribution-verification.md](..\..\..\..\..\_shared\artifacts\KABSD-FTR-0031\KABSD-FTR-0031_model-attribution-verification.md) — Moved model-attribution verification steps to a shared artifact (to keep Worklog concise).
+2026-01-13 02:02 [agent=codex-cli] [model=gpt-5.2] Correction: canonical model-attribution verification steps moved to the attached shared artifact (see latest Worklog link); the prior long inline command block is superseded.

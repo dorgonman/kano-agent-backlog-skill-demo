@@ -1,0 +1,37 @@
+# Global kano configuration
+# Location: ~/.kano/config.toml (Linux/Mac) or %USERPROFILE%\.kano\config.toml (Windows)
+# Optional; provides defaults across all repos
+
+[defaults]
+default_product = "kano-agent-backlog-skill"
+verbosity = "warning"
+
+[backends.default]
+type = "filesystem"
+
+# Example: Multi-repo registry for cross-repo search
+# [[registry]]
+# name = "work-projects"
+# uri = "file:///d:/work/backlogs"
+# products = ["product-a", "product-b"]
+
+# Example: Remote backlog server
+# [[registry]]
+# name = "team-backlog"
+# uri = "https://backlog.example.com/api/v1"
+# auth = "env:BACKLOG_API_TOKEN"
+# products = ["team-core", "team-platform"]
+
+# Example: Jira integration
+# [backends.jira]
+# type = "jira"
+# host = "company.atlassian.net"
+# project = "PROJ"
+# # Auth via env:JIRA_TOKEN or env:JIRA_USER + env:JIRA_PASSWORD
+
+# Example: Azure DevOps integration
+# [backends.azure]
+# type = "azure-devops"
+# organization = "myorg"
+# project = "MyProject"
+# # Auth via env:AZURE_DEVOPS_TOKEN

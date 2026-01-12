@@ -3,7 +3,7 @@ id: KABSD-FTR-0033
 uid: 019bac45-bf5f-7615-9f52-fc95aa37d908
 type: Feature
 title: "Demo Feature: Local-First Backlog Ops"
-state: Proposed
+state: Dropped
 priority: P1
 parent: KABSD-EPIC-0008
 area: demo
@@ -39,3 +39,4 @@ decisions: []
 # Worklog
 
 2026-01-11 15:29 [agent=copilot-test] Created item
+2026-01-13 02:00 [agent=antigravity] Dropped (Housekeeping: empty test item).

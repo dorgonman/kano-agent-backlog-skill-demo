@@ -1,0 +1,33 @@
+# Product configuration for kano-agent-backlog-skill
+# Location: _kano/backlog/products/kano-agent-backlog-skill/_config/config.toml
+# Replaces: _kano/backlog/products/kano-agent-backlog-skill/_config/config.json
+
+[mode]
+skill_developer = true
+persona = "developer"
+
+[project]
+name = "kano-agent-backlog-skill"
+prefix = "KABS"
+
+[views]
+auto_refresh = true
+
+[log]
+verbosity = "info"  # More verbose than repo default
+debug = false
+
+[process]
+profile = "builtin/azure-boards-agile"
+
+[sandbox]
+root = "_kano/backlog_sandbox"
+
+[index]
+enabled = true
+backend = "sqlite"
+path = "_kano/backlog/products/kano-agent-backlog-skill/_index/product.sqlite3"
+mode = "rebuild"
+
+[analysis.llm]
+enabled = false

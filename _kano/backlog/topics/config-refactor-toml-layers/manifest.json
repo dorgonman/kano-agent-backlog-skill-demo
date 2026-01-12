@@ -1,0 +1,78 @@
+{
+  "topic": "config-refactor-toml-layers",
+  "agent": "copilot",
+  "seed_items": [
+    "019ba071-1062-79ac-aacb-63abf3e61a73",
+    "019bb367-1f84-7681-85be-af23e82027ed",
+    "019bb368-cefc-76c7-ae4c-6d937da64d16",
+    "019bb368-d2d0-736d-b38c-4a0f2d43cdaf",
+    "019bb368-d5b8-754c-a0ed-2db82c029293",
+    "019bb368-f403-760c-93ef-b23e7915d16e",
+    "019bb1e9-3633-75f3-8d71-35000414ec90"
+  ],
+  "pinned_docs": [
+    "skills/kano-agent-backlog-skill/references/schema.md"
+  ],
+  "snippet_refs": [
+    {
+      "type": "snippet",
+      "repo": "local",
+      "revision": "a27d4858b6fd4922d511fe945790eae5164163a7",
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_core/config.py",
+      "lines": [
+        1,
+        317
+      ],
+      "hash": "sha256:a5d77de223bb439a328a41096a4c074498d777b9c446ffbded7eff9932b7201e",
+      "cached_text": null,
+      "collected_at": "2026-01-12T18:06:10.862238Z",
+      "collector": "copilot"
+    },
+    {
+      "type": "snippet",
+      "repo": "local",
+      "revision": "a27d4858b6fd4922d511fe945790eae5164163a7",
+      "file": "_kano/backlog/_shared/defaults.json",
+      "lines": [
+        1,
+        3
+      ],
+      "hash": "sha256:68f7a93420ca2f201291a5033551edd9609ac667bca243c08dc7c87f5665d848",
+      "cached_text": null,
+      "collected_at": "2026-01-12T18:06:22.506994Z",
+      "collector": "copilot"
+    },
+    {
+      "type": "snippet",
+      "repo": "local",
+      "revision": "a27d4858b6fd4922d511fe945790eae5164163a7",
+      "file": "_kano/backlog/products/kano-agent-backlog-skill/_config/config.json",
+      "lines": [
+        1,
+        36
+      ],
+      "hash": "sha256:e40176f0c11fbd6328f90144ecba3a3354ba7f0ef0057b64e162e3c1962b3190",
+      "cached_text": null,
+      "collected_at": "2026-01-12T18:06:29.109853Z",
+      "collector": "copilot"
+    },
+    {
+      "type": "snippet",
+      "repo": "local",
+      "revision": "a27d4858b6fd4922d511fe945790eae5164163a7",
+      "file": "skills/kano-agent-backlog-skill/tests/test_config_overlays.py",
+      "lines": [
+        1,
+        135
+      ],
+      "hash": "sha256:b93482827797a1f200f6769e5d5d2a391c91cc1977af0e586df5ebfa0ef262d1",
+      "cached_text": null,
+      "collected_at": "2026-01-12T18:19:22.342153Z",
+      "collector": "codex-cli"
+    }
+  ],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-01-12T18:05:47.033244Z",
+  "updated_at": "2026-01-12T18:19:30.570027Z"
+}

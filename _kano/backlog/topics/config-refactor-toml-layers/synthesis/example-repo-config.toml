@@ -1,0 +1,35 @@
+# TOML configuration for kano-agent-backlog-skill-demo
+# Location: _kano/backlog/_shared/config.toml
+# Replaces: _kano/backlog/_shared/defaults.json
+
+[project]
+name = "kano-agent-backlog-skill-demo"
+prefix = "KABSD"
+
+[defaults]
+default_product = "kano-agent-backlog-skill"
+
+[mode]
+skill_developer = true
+persona = "developer"
+
+[views]
+auto_refresh = true
+
+[log]
+verbosity = "warning"
+debug = false
+
+[process]
+profile = "builtin/azure-boards-agile"
+
+[sandbox]
+root = "_kano/backlog_sandbox"
+
+[index]
+enabled = true
+backend = "sqlite"
+mode = "rebuild"
+
+[analysis.llm]
+enabled = false

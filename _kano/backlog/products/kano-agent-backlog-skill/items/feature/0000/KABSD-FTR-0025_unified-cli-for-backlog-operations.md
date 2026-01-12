@@ -3,7 +3,7 @@ id: KABSD-FTR-0025
 uid: 019bac45-bf5e-7331-8762-674aae454b36
 type: Feature
 title: "Unified CLI for All Backlog Operations"
-state: New
+state: Done
 priority: P1
 parent: KABSD-EPIC-0004
 area: tooling
@@ -111,3 +111,4 @@ Then update SKILL.md, CLAUDE.md, and templates to guide agents through CLI inste
 # Worklog
 
 - 2026-01-09 10:30 [agent=copilot] Ticket created. Starting Phase 1: CLI expansion.
+- 2026-01-13 02:00 [agent=antigravity] Update state to Done. Implemented as `kano-backlog` CLI (per ADR-0015).
