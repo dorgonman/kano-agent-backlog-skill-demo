@@ -1,0 +1,30 @@
+{
+  "capabilities": [],
+  "cli_tree": [
+    {
+      "help": "Full CLI Help Output (Recursive parsing TODO)",
+      "name": "kano",
+      "subcommands": []
+    }
+  ],
+  "health": [
+    {
+      "details": null,
+      "message": "Python prerequisites check skipped (stub)",
+      "name": "prerequisites",
+      "passed": true
+    }
+  ],
+  "meta": {
+    "generator_version": "0.1.0",
+    "scope": "product:kano-commit-convention-skill",
+    "vcs": {
+      "dirty": "true",
+      "label": "19ae297c",
+      "provider": "git",
+      "ref": "main",
+      "revision": "19ae297c7c074aa739fdfd795fabecdf36c2211b"
+    }
+  },
+  "stub_inventory": []
+}

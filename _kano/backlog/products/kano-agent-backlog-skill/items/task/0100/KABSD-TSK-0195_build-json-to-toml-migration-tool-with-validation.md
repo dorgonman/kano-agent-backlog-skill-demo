@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-FTR-0024
 priority: P2
-state: Proposed
+state: Done
 tags: []
 title: Build JSON to TOML migration tool with validation
 type: Task
@@ -45,3 +45,4 @@ Schema mismatch for edge-case keys; keeping formatting stable for diffs; avoidin
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
+2026-01-13 23:45 [agent=antigravity] State -> Done. Verified migrate-json command in config_cmd.py and completed manual repo-wide migration.

@@ -1,0 +1,416 @@
+{
+  "capabilities": [
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-11 01:55 [agent=cli-test] Created item"
+      ],
+      "feature": "Ops Layer Test Feature",
+      "item_id": "DM-FTR-0001",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-10 01:03 [agent=codex] Adjusted deprecated id to KABSD-FTR-0000 to avoid bumping future feature numbering."
+      ],
+      "feature": "DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher",
+      "item_id": "KABSD-FTR-0000",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 07:25 [agent=copilot] 0.0.1 scope complete: backlog structure, views, and ADR links delivered."
+      ],
+      "feature": "Local-first backlog system",
+      "item_id": "KABSD-FTR-0001",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 07:25 [agent=copilot] Audit logging shipped: redacted JSONL logs with rotation at _kano/backlog/_logs/agent_tools/."
+      ],
+      "feature": "Agent tool invocation audit logging system",
+      "item_id": "KABSD-FTR-0002",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 07:25 [agent=copilot] Bootstrap + seed scripts delivered from skill; backlog scaffold and demo views are automated."
+      ],
+      "feature": "Self-contained skill bootstrap and automation",
+      "item_id": "KABSD-FTR-0003",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 07:25 [agent=copilot] Config root, process profiles, logging verbosity, and sandbox support shipped for 0.0.1."
+      ],
+      "feature": "Backlog config system and process profiles",
+      "item_id": "KABSD-FTR-0004",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-06 08:34 [agent=codex-cli] Re-parented Feature from KABSD-EPIC-0001 to KABSD-EPIC-0002 for milestone 0.0.1."
+      ],
+      "feature": "Verify agent compliance",
+      "item_id": "KABSD-FTR-0005",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-05 00:03 [agent=antigravity] Created from template."
+      ],
+      "feature": "Conflict Prevention Mechanism",
+      "item_id": "KABSD-FTR-0006",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-06 20:58 [agent=antigravity] Implemented index_db.py and integrated SQLite with lib.index."
+      ],
+      "feature": "Optional DB index and embedding/RAG pipeline",
+      "item_id": "KABSD-FTR-0007",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-06 08:42 [agent=codex-cli] Populated scope and re-parented ADR-0003 tasks (0059-0062) under this feature."
+      ],
+      "feature": "Identifier strategy and ID resolver (ADR-0003)",
+      "item_id": "KABSD-FTR-0008",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-12 08:52 [agent=copilot] Artifact System complete: attach-artifact CLI + ops implemented; artifacts policy documented; tasks TSK-0070 and TSK-0071 marked Done; dashboards refreshed."
+      ],
+      "feature": "Backlog Artifact System",
+      "item_id": "KABSD-FTR-0009",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: - FTR-0010 delivered and operational for 0.0.1 release"
+      ],
+      "feature": "Monorepo Platform Migration",
+      "item_id": "KABSD-FTR-0010",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 08:36 [agent=antigravity] Confirmed that all structure-violating (orphaned) items from the platform migration have been resolved and linked. Added intra-product parent constraints to prevent future drift."
+      ],
+      "feature": "Multi-product platform intelligence and governance",
+      "item_id": "KABSD-FTR-0011",
+      "status": "partial"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 10:25 [agent=antigravity] Created from template."
+      ],
+      "feature": "Optional cloud acceleration (PostgreSQL/MySQL + FastAPI + OpenAPI/Swagger UI)",
+      "item_id": "KABSD-FTR-0012",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 10:25 [agent=antigravity] Created from template."
+      ],
+      "feature": "Maintain Git/files as the single source of truth and sync cloud cache",
+      "item_id": "KABSD-FTR-0014",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 12:51 [agent=copilot] Seed minimal landing: add claimed_by + claim_until short leases; commands claim/release/steal with audit; default views show unclaimed or expired."
+      ],
+      "feature": "Coordination Layer: Claim/Lease for Multi-Agent",
+      "item_id": "KABSD-FTR-0016",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 14:13 [agent=copilot] Completed: VCS adapter abstraction (Git/Perforce/SVN), query_commits.py, and view_generate_commits.py are all implemented and tested."
+      ],
+      "feature": "Traceability: Commit Refs \u2192 Worklog Backfill",
+      "item_id": "KABSD-FTR-0017",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 18:43 [agent=copilot] Created to explore serverization options and end-to-end integration before implementation."
+      ],
+      "feature": "Server mode (MCP/HTTP) + Docker + data backend separation",
+      "item_id": "KABSD-FTR-0018",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-08 16:26 [agent=cli-test] Testing CLI worklog append"
+      ],
+      "feature": "Refactor: kano-backlog-core + CLI/Server/GUI facades",
+      "item_id": "KABSD-FTR-0019",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-08 07:24 [agent=copilot] Defined collaboration modes via tasks: single-repo (TSK-0118), worktree-based parallelism (TSK-0119), and remote (TSK-0120) with workflows, invariants, and conflict/consistency rules"
+      ],
+      "feature": "Multi-agent collaboration modes (local single repo / local multi repo via worktree / remote)",
+      "item_id": "KABSD-FTR-0020",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 20:28 [agent=copilot] Created to capture future merge/PR workflow needs; not core MVP; awaiting planning."
+      ],
+      "feature": "VCS merge workflows and conflict resolution (Git/SVN/Perforce)",
+      "item_id": "KABSD-FTR-0021",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-07 23:08 [agent=copilot] All child tasks completed, backlog is now fully English, linter passes. Feature complete."
+      ],
+      "feature": "Backlog Quality Linter (Agent Discipline)",
+      "item_id": "KABSD-FTR-0022",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-09 11:19 [agent=codex] Added Context Graph/Graph-assisted retrieval links and clarified weak-graph approach."
+      ],
+      "feature": "Graph-assisted RAG planning and minimal implementation",
+      "item_id": "KABSD-FTR-0023",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-09 09:49 [agent=codex] Drafted planning scope, config layers, and acceptance criteria."
+      ],
+      "feature": "Global config layers and URI compilation",
+      "item_id": "KABSD-FTR-0024",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: - 2026-01-13 02:00 [agent=antigravity] Update state to Done. Implemented as `kano-backlog` CLI (per ADR-0015)."
+      ],
+      "feature": "Unified CLI for All Backlog Operations",
+      "item_id": "KABSD-FTR-0025",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-10 01:17 [agent=codex] Marked as deprecated duplicate; canonical feature is KABSD-FTR-0027."
+      ],
+      "feature": "DEPRECATED duplicate (layout migration): kano-agent-backlog-dispatcher",
+      "item_id": "KABSD-FTR-0026",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-10 01:17 [agent=codex] Recreated under canonical product folder layout (items/feature/*)."
+      ],
+      "feature": "kano-agent-backlog-dispatcher: complexity-aware, bid-driven task routing layer",
+      "item_id": "KABSD-FTR-0027",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-11 02:00 [agent=copilot] Phase 2 complete: Implemented kano_backlog_ops functions (create_item, update_state, validate_ready, refresh_dashboards). Functions delegate to scripts with clean abstraction layer. Updated CLI commands to use ops layer (update-state, view refresh tested successfully). Created delegation pattern for future full refactoring."
+      ],
+      "feature": "Refactor kano-agent-backlog-skill scripts into a single CLI entry + library modules",
+      "item_id": "KABSD-FTR-0028",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-11 01:23 [agent=codex-cli] Created from CLI."
+      ],
+      "feature": "Configurable persona packs (beyond developer/pm/qa)",
+      "item_id": "KABSD-FTR-0029",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-11 01:30 [agent=codex-cli] Captured decision context for persona extensibility (config-driven enabled persona sets + optional persona packs); defer implementation until scheduled."
+      ],
+      "feature": "Configurable persona packs (beyond developer/pm/qa)",
+      "item_id": "KABSD-FTR-0030",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-13 02:02 [agent=codex-cli] [model=gpt-5.2] Correction: canonical model-attribution verification steps moved to the attached shared artifact (see latest Worklog link); the prior long inline command block is superseded."
+      ],
+      "feature": "Worklog run telemetry schema + instrumentation (tri-state tokens)",
+      "item_id": "KABSD-FTR-0031",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-11 09:00 [agent=codex-cli] Created Ticket B from request: dispatcher scoring/routing policy; blocked by KABSD-FTR-0031."
+      ],
+      "feature": "Dispatcher scoring + routing using worklog telemetry (capability vs observability)",
+      "item_id": "KABSD-FTR-0032",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-13 02:00 [agent=antigravity] Dropped (Housekeeping: empty test item)."
+      ],
+      "feature": "Demo Feature: Local-First Backlog Ops",
+      "item_id": "KABSD-FTR-0033",
+      "status": "missing"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-13 01:58 [agent=antigravity] Update state to Done (Reconciling Ghost Work: implementation verified in codebase)."
+      ],
+      "feature": "Rename CLI and Python Packages to Skill-Scoped Names",
+      "item_id": "KABSD-FTR-0034",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-12 06:56 [agent=copilot] Done: all command tree restructuring complete (item\u2192workitem, backlog\u2192admin). All tasks (TSK-0180, TSK-0181, TSK-0182) finished."
+      ],
+      "feature": "Restructure Command Tree with Consistent Domain Naming",
+      "item_id": "KABSD-FTR-0035",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-12 07:00 [agent=copilot] Done: all documentation updates complete. ADR-0013 now references ADR-0015 for skill-scoped naming strategy."
+      ],
+      "feature": "Document Kano Namespace Reservation for Umbrella CLI",
+      "item_id": "KABSD-FTR-0036",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-13 01:18 [agent=copilot] Filled Ready gate: Context, Goal, Approach, Acceptance Criteria, Risks"
+      ],
+      "feature": "Topic Lifecycle and Materials Buffer System",
+      "item_id": "KABSD-FTR-0037",
+      "status": "done"
+    },
+    {
+      "area": "backlog",
+      "evidence_refs": [
+        "Worklog: 2026-01-14 02:05 [agent=developer] [model=unknown] Auto parent sync: child KABSD-TSK-0202 -> InProgress; parent -> InProgress."
+      ],
+      "feature": "Reproducible docs metadata (VCS-agnostic; remove timestamps)",
+      "item_id": "KABSD-FTR-0039",
+      "status": "partial"
+    }
+  ],
+  "cli_tree": [
+    {
+      "help": "Full CLI Help Output (Recursive parsing TODO)",
+      "name": "kano",
+      "subcommands": []
+    }
+  ],
+  "health": [
+    {
+      "details": null,
+      "message": "Python prerequisites check skipped (stub)",
+      "name": "prerequisites",
+      "passed": true
+    }
+  ],
+  "meta": {
+    "generator_version": "0.1.0",
+    "scope": "product:kano-agent-backlog-skill",
+    "vcs": {
+      "dirty": "true",
+      "label": "19ae297c",
+      "provider": "git",
+      "ref": "main",
+      "revision": "19ae297c7c074aa739fdfd795fabecdf36c2211b"
+    }
+  },
+  "stub_inventory": [
+    {
+      "file": "tests/test_snapshot.py",
+      "line": 135,
+      "message": "oops')\", encoding=\"utf-8",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "src/kano_backlog_ops/adr.py",
+      "line": 183,
+      "message": "Implement",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "src/kano_backlog_ops/adr.py",
+      "line": 184,
+      "message": "list_adrs not yet implemented",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "src/kano_backlog_ops/snapshot.py",
+      "line": 257,
+      "message": "Integrate with doctor commands",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "src/kano_backlog_cli/commands/config_cmd.py",
+      "line": 53,
+      "message": "config export now requires explicit --out path",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "src/kano_backlog_cli/commands/snapshot.py",
+      "line": 198,
+      "message": "recursive print",
+      "ticket_ref": null,
+      "type": "TODO"
+    }
+  ]
+}

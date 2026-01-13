@@ -36,11 +36,11 @@ Generated: 2026-01-13 (Updated after KABSD-TSK-0192 completion)
 
 - [x] Define schema (TSK-0191) ✅ **DONE**
 - [x] Implement TOML parser with deep-merge (TSK-0192) ✅ **DONE**
-- [ ] Fill Ready gates for TSK-0193~0195 using schema v1.0 as spec
-- [ ] Implement URI compiler (TSK-0193)
-- [ ] Add CLI: config show, validate (TSK-0194)
-- [ ] Build migration tool: JSON→TOML (TSK-0195)
-- [ ] Update docs and finalize migration guide
+- [x] Fill Ready gates for TSK-0193~0195 using schema v1.0 as spec
+- [x] Implement URI compiler (TSK-0193) ✅ **DONE**
+- [x] Add CLI: config show, validate (TSK-0194) ✅ **DONE**
+- [x] Build migration tool: JSON→TOML (TSK-0195) ✅ **DONE**
+- [x] Update docs and finalize migration guide ✅ **DONE**
 
 ## Decision Candidates
 

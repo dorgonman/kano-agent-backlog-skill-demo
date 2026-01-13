@@ -2,12 +2,12 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 9620a822e9420a251a441fbf7116f51f69c046d2
+vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex-cli
+Agent: developer
 
 ## New
 
@@ -37,7 +37,6 @@ Agent: codex-cli
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
-- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 
@@ -107,7 +106,8 @@ Agent: codex-cli
 - [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
 - [KABSD-TSK-0187 Refactor config resolution using topic/workset overlays](../items/task/0100/KABSD-TSK-0187_refactor-config-resolution-using-topic-workset-overlays.md)
 - [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
-- [KABSD-TSK-0195 Build JSON to TOML migration tool with validation](../items/task/0100/KABSD-TSK-0195_build-json-to-toml-migration-tool-with-validation.md)
+- [KABSD-TSK-0200 Evaluate snapshot artifacts: folder-based packs, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0200_evaluate-snapshot-artifacts-folder-based-packs-vcs-metadata-no-timestamps.md)
+- [KABSD-TSK-0201 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0201_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
 
 ## InProgress
 
@@ -119,6 +119,7 @@ Agent: codex-cli
 ### Feature
 
 - [KABSD-FTR-0011 Multi-product platform intelligence and governance](../items/feature/0000/KABSD-FTR-0011_multi-product-platform-intelligence-and-governance.md)
+- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 
@@ -131,5 +132,4 @@ Agent: codex-cli
 - [KABSD-TSK-0110 Evaluate VCS Query Cache Layer](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md)
 - [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
-- [KABSD-TSK-0194 Add CLI commands: config show and config validate](../items/task/0100/KABSD-TSK-0194_add-cli-commands-config-show-and-config-validate.md)
 

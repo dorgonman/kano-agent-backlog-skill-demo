@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-FTR-0024
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: 'Add CLI commands: config show and config validate'
 type: Task
@@ -46,3 +46,4 @@ Need to avoid leaking secrets; output format should be stable enough for scripti
 
 2026-01-13 02:12 [agent=copilot] Created item
 2026-01-13 08:33 [agent=copilot-sonnet4] [model=unknown] State -> InProgress.
+2026-01-13 23:45 [agent=antigravity] State -> Done. Verified config show/validate commands exist in config_cmd.py.
