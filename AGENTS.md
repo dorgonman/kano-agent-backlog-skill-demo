@@ -18,7 +18,8 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - Use `skills/kano-agent-backlog-skill/SKILL.md` for any planning/backlog work.
 - If Python deps are missing, install them with `python -m pip install -e skills/kano-agent-backlog-skill` (add `[dev]` when developing the skill itself).
 - Before any code change, create/update items in `_kano/backlog/items/` (Epic -> Feature -> UserStory -> Task/Bug).
-- Use English for all backlog item content (Context, Goal, Approach, etc.) and Worklog entries.
+> [!IMPORTANT]
+> **Strictly English Only**: All backlog item content (Context, Goal, Approach, Worklog, etc.) MUST be written in English. This is a hard requirement for this demo to ensure accessibility for all agents.
 - Enforce the Ready gate on Task/Bug (required, non-empty): `Context`, `Goal`, `Approach`, `Acceptance Criteria`, `Risks / Dependencies`.
 - Worklog is append-only; never rewrite history. Append a Worklog line whenever:
   - a load-bearing decision is made,

@@ -1,40 +1,46 @@
 ---
-id: KABSD-TSK-0195
-uid: 019bb368-f403-760c-93ef-b23e7915d16e
-type: Task
-title: "Build JSON to TOML migration tool with validation"
-state: Proposed
-priority: P2
-parent: KABSD-FTR-0024
 area: general
-iteration: backlog
-tags: []
-created: 2026-01-13
-updated: 2026-01-13
-owner: None
+created: '2026-01-13'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0195
+iteration: backlog
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: None
+parent: KABSD-FTR-0024
+priority: P2
+state: Proposed
+tags: []
+title: Build JSON to TOML migration tool with validation
+type: Task
+uid: 019bb368-f403-760c-93ef-b23e7915d16e
+updated: '2026-01-13'
 ---
 
 # Context
 
+We are migrating the config system from JSON to TOML (schema v1.0). JSON is deprecated but must remain supported for two minor versions. We need a safe local-first migration tool to convert existing defaults/config.json files to TOML equivalents.
+
 # Goal
 
-# Non-Goals
+Implement a migration command that generates TOML configs from existing JSON layer files with minimal user effort and safe rollback.
 
 # Approach
 
-# Alternatives
+1) Add an admin command (e.g., ) that scans known config locations (shared/product/topic/workset) 2) For each JSON file found, parse + map keys to TOML tables per schema 3) Write TOML next to JSON (dry-run by default), optionally back up JSON 4) Emit a summary report and next-step guidance
 
 # Acceptance Criteria
 
+Migration tool runs in dry-run mode by default; writes TOML files that match schema sections; does not delete JSON by default; supports backing up originals; produces clear report; unit/integration tests cover mapping for representative configs
+
 # Risks / Dependencies
+
+Schema mismatch for edge-case keys; keeping formatting stable for diffs; avoiding secrets in output
 
 # Worklog
 

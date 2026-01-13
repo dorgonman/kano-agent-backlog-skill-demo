@@ -24,17 +24,40 @@ decisions: []
 
 # Context
 
+The initial CLI implementation had a flat or inconsistent command structure. As the skill grows, we need a logical domain-driven hierarchy for commands to improve discoverability and usability.
+Users were confused by overlapping commands or unclear entry points (e.g., mixing admin setup with daily item management).
+
 # Goal
 
-# Non-Goals
+1. Restructure the CLI into clear domain groups: `admin`, `item`, `view`, `topic`, `doctor`.
+2. Ensure consistent naming conventions for subcommands.
+3. Remove or alias legacy flat commands.
 
 # Approach
 
-# Alternatives
+1. **Define Command Groups**:
+   - `admin`: Setup, init, scaffolding (e.g., `admin init`).
+   - `item`: Work item management (create, update, list).
+   - `topic`: Topic & materials management (create, switch, add).
+   - `view`: Dashboard generation and refreshment.
+   - `doctor`: Health checks.
+
+2. **Refactor `kano_backlog_cli`**:
+   - Create `commands/` submodule.
+   - Move implementations into `commands/<domain>.py`.
+   - Use `typer` to compose groups.
 
 # Acceptance Criteria
 
+- [x] CLI supports `kano-backlog admin ...`
+- [x] CLI supports `kano-backlog item ...`
+- [x] CLI supports `kano-backlog topic ...`
+- [x] CLI help (`--help`) shows clear hierarchy.
+- [x] Legacy commands are removed or deprecated.
+
 # Risks / Dependencies
+
+- Users accustomed to old commands will need to learn new paths (mitigated by `--help` and docs).
 
 # Worklog
 

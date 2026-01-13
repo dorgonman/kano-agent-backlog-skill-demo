@@ -1,6 +1,6 @@
 # Done Work
 
-Generated: 2026-01-12 08:52
+Generated: 2026-01-13 19:20
 Source: items
 Agent: copilot
 
@@ -25,10 +25,15 @@ Agent: copilot
 - [KABSD-FTR-0019 Refactor: kano-backlog-core + CLI/Server/GUI facades](../items/feature/0000/KABSD-FTR-0019_refactor-kano-backlog-core-cli-server-gui-facades.md)
 - [KABSD-FTR-0020 Multi-agent collaboration modes (local single repo / local multi repo via worktree / remote)](../items/feature/0000/KABSD-FTR-0020_multi-agent-collaboration-modes-local-single-repo-local-multi-repo-via-worktree-remote.md)
 - [KABSD-FTR-0022 Backlog Quality Linter (Agent Discipline)](../items/feature/0000/KABSD-FTR-0022_backlog-quality-linter-agent-discipline.md)
+- [KABSD-FTR-0025 Unified CLI for All Backlog Operations](../items/feature/0000/KABSD-FTR-0025_unified-cli-for-backlog-operations.md)
 - [KABSD-FTR-0026 DEPRECATED duplicate (layout migration): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0026_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0028 Refactor kano-agent-backlog-skill scripts into a single CLI entry + library modules](../items/feature/0000/KABSD-FTR-0028_refactor-kano-agent-backlog-skill-scripts-into-a-single-cli-entry-library-modules.md)
+- [KABSD-FTR-0033 Demo Feature: Local-First Backlog Ops](../items/feature/0000/KABSD-FTR-0033_demo-feature-local-first-backlog-ops.md)
+- [KABSD-FTR-0034 Rename CLI and Python Packages to Skill-Scoped Names](../items/feature/0000/KABSD-FTR-0034_rename-cli-and-python-packages-to-skill-scoped-names.md)
 - [KABSD-FTR-0035 Restructure Command Tree with Consistent Domain Naming](../items/feature/0000/KABSD-FTR-0035_restructure-command-tree-with-consistent-domain-naming.md)
 - [KABSD-FTR-0036 Document Kano Namespace Reservation for Umbrella CLI](../items/feature/0000/KABSD-FTR-0036_document-kano-namespace-reservation-for-umbrella-cli.md)
+- [KABSD-FTR-0037 Topic Lifecycle and Materials Buffer System](../items/feature/0000/KABSD-FTR-0037_topic-lifecycle-and-materials-buffer-system.md)
+- [KABSD-FTR-0038 Repo Snapshot + Evidence-driven Reports](../items/feature/0000/KABSD-FTR-0038_repo-snapshot-evidence-driven-reports.md)
 
 ### UserStory
 
@@ -172,6 +177,13 @@ Agent: copilot
 - [KABSD-TSK-0185 Normalize work item type labels to singular](../items/task/0100/KABSD-TSK-0185_normalize-work-item-type-labels-to-singular.md)
 - [KABSD-TSK-0186 Clean up legacy platform roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-platform-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
 - [KABSD-TSK-0187 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0189 Ensure worklog entries record model (default unknown) and warn when missing](../items/task/0100/KABSD-TSK-0189_ensure-worklog-entries-record-model-default-unknown-and-warn-when-missing.md)
+- [KABSD-TSK-0190 Topic lifecycle + materials buffer (workset merge)](../items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md)
+- [KABSD-TSK-0191 Define TOML config schema and migration strategy](../items/task/0100/KABSD-TSK-0191_define-toml-config-schema-and-migration-strategy.md)
+- [KABSD-TSK-0192 Implement TOML parser with deep-merge and validation](../items/task/0100/KABSD-TSK-0192_implement-toml-parser-with-deep-merge-and-validation.md)
+- [KABSD-TSK-0193 Implement URI compilation from human-friendly config fields](../items/task/0100/KABSD-TSK-0193_implement-uri-compilation-from-human-friendly-config-fields.md)
+- [KABSD-TSK-0196 Auto-export effective config to _index](../items/task/0100/KABSD-TSK-0196_auto-export-effective-config-to-index.md)
+- [KABSD-TSK-0197 Flatten .cache and remove _index folder](../items/task/0100/KABSD-TSK-0197_flatten-cache-and-remove-index-folder.md)
 
 ### Bug
 

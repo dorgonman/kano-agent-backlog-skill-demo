@@ -1,6 +1,6 @@
 _comment = "Baseline config for kano-commit-convention-skill."
 
-[project]
+[product]
 name = "kano-commit-convention-skill"
 prefix = "KCCS"
 

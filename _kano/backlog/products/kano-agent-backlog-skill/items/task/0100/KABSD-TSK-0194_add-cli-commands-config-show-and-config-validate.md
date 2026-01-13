@@ -1,41 +1,48 @@
 ---
-id: KABSD-TSK-0194
-uid: 019bb368-d5b8-754c-a0ed-2db82c029293
-type: Task
-title: "Add CLI commands: config show and config validate"
-state: Proposed
-priority: P2
-parent: KABSD-FTR-0024
 area: general
-iteration: backlog
-tags: []
-created: 2026-01-13
-updated: 2026-01-13
-owner: None
+created: '2026-01-13'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0194
+iteration: backlog
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: None
+parent: KABSD-FTR-0024
+priority: P2
+state: InProgress
+tags: []
+title: 'Add CLI commands: config show and config validate'
+type: Task
+uid: 019bb368-d5b8-754c-a0ed-2db82c029293
+updated: 2026-01-13
 ---
 
 # Context
 
+After TOML loading (TSK-0192) and URI compilation (TSK-0193), users need CLI visibility and validation. Provide local-first commands to inspect the effective config across layers and validate config files without running any server.
+
 # Goal
 
-# Non-Goals
+Add CLI commands to show effective config and validate layered config (TOML preferred, JSON supported with deprecation warning).
 
 # Approach
 
-# Alternatives
+1) Add a new Typer command group (e.g., ) under kano-backlog CLI 2) Implement  (prints effective merged config as JSON or TOML-like pretty output) 3) Implement  (parses each layer, compiles URIs, checks validation rules; nonzero exit code on error) 4) Add tests with Typer CliRunner
 
 # Acceptance Criteria
 
+ prints effective config;  returns exit code 0 on valid config and 1 on invalid config; errors are actionable; no network calls; tests added and pass
+
 # Risks / Dependencies
+
+Need to avoid leaking secrets; output format should be stable enough for scripting; ensure CLI respects product/topic/workset selection flags
 
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
+2026-01-13 08:33 [agent=copilot-sonnet4] [model=unknown] State -> InProgress.

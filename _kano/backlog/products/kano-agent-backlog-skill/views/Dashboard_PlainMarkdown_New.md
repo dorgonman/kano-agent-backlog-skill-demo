@@ -1,6 +1,6 @@
 # New Work
 
-Generated: 2026-01-12 08:52
+Generated: 2026-01-13 19:20
 Source: items
 Agent: copilot
 
@@ -27,14 +27,11 @@ Agent: copilot
 - [KABSD-FTR-0021 VCS merge workflows and conflict resolution (Git/SVN/Perforce)](../items/feature/0000/KABSD-FTR-0021_vcs-merge-workflows-and-conflict-resolution-git-svn-perforce.md)
 - [KABSD-FTR-0023 Graph-assisted RAG planning and minimal implementation](../items/feature/0000/KABSD-FTR-0023_graph-assisted-rag-planning-and-minimal-implementation.md)
 - [KABSD-FTR-0024 Global config layers and URI compilation](../items/feature/0000/KABSD-FTR-0024_global-config-layers-and-uri-compilation.md)
-- [KABSD-FTR-0025 Unified CLI for All Backlog Operations](../items/feature/0000/KABSD-FTR-0025_unified-cli-for-backlog-operations.md)
 - [KABSD-FTR-0027 kano-agent-backlog-dispatcher: complexity-aware, bid-driven task routing layer](../items/feature/0000/KABSD-FTR-0027_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0029 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0029_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
-- [KABSD-FTR-0033 Demo Feature: Local-First Backlog Ops](../items/feature/0000/KABSD-FTR-0033_demo-feature-local-first-backlog-ops.md)
-- [KABSD-FTR-0034 Rename CLI and Python Packages to Skill-Scoped Names](../items/feature/0000/KABSD-FTR-0034_rename-cli-and-python-packages-to-skill-scoped-names.md)
 
 ### UserStory
 
@@ -102,5 +99,7 @@ Agent: copilot
 - [KABSD-TSK-0171 Demo Task: Add SQLite index builder](../items/task/0100/KABSD-TSK-0171_demo-task-add-sqlite-index-builder.md)
 - [KABSD-TSK-0172 Demo Task: Create CLI facade with Typer](../items/task/0100/KABSD-TSK-0172_demo-task-create-cli-facade-with-typer.md)
 - [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
+- [KABSD-TSK-0187 Refactor config resolution using topic/workset overlays](../items/task/0100/KABSD-TSK-0187_refactor-config-resolution-using-topic-workset-overlays.md)
 - [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0195 Build JSON to TOML migration tool with validation](../items/task/0100/KABSD-TSK-0195_build-json-to-toml-migration-tool-with-validation.md)
 
