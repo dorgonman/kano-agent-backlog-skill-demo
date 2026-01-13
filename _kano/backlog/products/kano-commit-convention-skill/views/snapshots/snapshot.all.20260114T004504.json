@@ -1,0 +1,124 @@
+{
+  "capabilities": [],
+  "cli_tree": [
+    {
+      "help": "Full CLI Help Output (Recursive parsing TODO)",
+      "name": "kano",
+      "subcommands": []
+    }
+  ],
+  "health": [
+    {
+      "details": null,
+      "message": "Python prerequisites check skipped (stub)",
+      "name": "prerequisites",
+      "passed": true
+    }
+  ],
+  "meta": {
+    "generator_version": "0.1.0",
+    "git_sha": "9620a822e9420a251a441fbf7116f51f69c046d2",
+    "scope": "product:kano-commit-convention-skill",
+    "timestamp": "2026-01-14T00:45:04.543665"
+  },
+  "stub_inventory": [
+    {
+      "file": "skills/kano-agent-backlog-skill/tests/test_snapshot.py",
+      "line": 101,
+      "message": "oops')\", encoding=\"utf-8",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/adr.py",
+      "line": 183,
+      "message": "Implement",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/adr.py",
+      "line": 184,
+      "message": "list_adrs not yet implemented",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/snapshot.py",
+      "line": 249,
+      "message": "Integrate with doctor commands",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 333,
+      "message": "Implement parent sync",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 334,
+      "message": "Implement dashboard refresh",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 464,
+      "message": "Implement",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 465,
+      "message": "list_items not yet implemented",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 489,
+      "message": "Implement - currently delegates to workitem_resolve_ref.py",
+      "ticket_ref": null,
+      "type": "TODO"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workitem.py",
+      "line": 490,
+      "message": "get_item not yet implemented - use workitem_resolve_ref.py",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workset.py",
+      "line": 1266,
+      "message": "get_next_item renamed to get_next_action",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_ops/workset.py",
+      "line": 1271,
+      "message": "promote_item renamed to promote_deliverables",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/config_cmd.py",
+      "line": 53,
+      "message": "config export now requires explicit --out path",
+      "ticket_ref": null,
+      "type": "NotImplementedError"
+    },
+    {
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/snapshot.py",
+      "line": 169,
+      "message": "recursive print",
+      "ticket_ref": null,
+      "type": "TODO"
+    }
+  ]
+}

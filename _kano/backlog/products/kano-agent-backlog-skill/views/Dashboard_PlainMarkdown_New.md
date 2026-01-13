@@ -1,6 +1,11 @@
 # New Work
 
-Generated: 2026-01-14 00:26
+<!-- kano:build
+vcs.provider: git
+vcs.revision: 9620a822e9420a251a441fbf7116f51f69c046d2
+vcs.dirty: true
+-->
+
 Source: items
 Agent: codex-cli
 

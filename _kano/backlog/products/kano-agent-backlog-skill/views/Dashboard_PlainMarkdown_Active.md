@@ -1,6 +1,11 @@
 # InProgress Work
 
-Generated: 2026-01-14 00:26
+<!-- kano:build
+vcs.provider: git
+vcs.revision: 9620a822e9420a251a441fbf7116f51f69c046d2
+vcs.dirty: true
+-->
+
 Source: items
 Agent: codex-cli
 
@@ -127,5 +132,4 @@ Agent: codex-cli
 - [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
 - [KABSD-TSK-0194 Add CLI commands: config show and config validate](../items/task/0100/KABSD-TSK-0194_add-cli-commands-config-show-and-config-validate.md)
-- [KABSD-TSK-0198 kano-backlog CLI: use TOML defaults for product resolution](../items/task/0100/KABSD-TSK-0198_kano-backlog-cli-use-toml-defaults-for-product-resolution.md)
 

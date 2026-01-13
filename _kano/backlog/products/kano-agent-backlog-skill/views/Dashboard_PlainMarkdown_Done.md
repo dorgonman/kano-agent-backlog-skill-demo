@@ -1,6 +1,11 @@
 # Done Work
 
-Generated: 2026-01-14 00:26
+<!-- kano:build
+vcs.provider: git
+vcs.revision: 9620a822e9420a251a441fbf7116f51f69c046d2
+vcs.dirty: true
+-->
+
 Source: items
 Agent: codex-cli
 
@@ -184,9 +189,11 @@ Agent: codex-cli
 - [KABSD-TSK-0193 Implement URI compilation from human-friendly config fields](../items/task/0100/KABSD-TSK-0193_implement-uri-compilation-from-human-friendly-config-fields.md)
 - [KABSD-TSK-0196 Auto-export effective config to _index](../items/task/0100/KABSD-TSK-0196_auto-export-effective-config-to-index.md)
 - [KABSD-TSK-0197 Flatten .cache and remove _index folder](../items/task/0100/KABSD-TSK-0197_flatten-cache-and-remove-index-folder.md)
+- [KABSD-TSK-0198 kano-backlog CLI: use TOML defaults for product resolution](../items/task/0100/KABSD-TSK-0198_kano-backlog-cli-use-toml-defaults-for-product-resolution.md)
 
 ### Bug
 
 - [KABSD-BUG-0001 workitem_update_state crashes: args.model attribute missing](../items/bug/0000/KABSD-BUG-0001_workitem-update-state-crashes-args-model-attribute-missing.md)
 - [KABSD-BUG-0002 Add dependency links between FTR-0013 and FTR-0015](../items/bug/0000/KABSD-BUG-0002_add-dependency-links-between-ftr-0013-and-ftr-0015.md)
+- [KABSD-BUG-0003 Snapshot reports render raw template blocks (nested each/if/unless)](../items/bug/0000/KABSD-BUG-0003_snapshot-reports-render-raw-template-blocks-nested-each-if-unless.md)
 
