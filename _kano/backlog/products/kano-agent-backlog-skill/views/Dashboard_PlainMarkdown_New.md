@@ -1,8 +1,8 @@
 # New Work
 
-Generated: 2026-01-13 19:20
+Generated: 2026-01-14 00:26
 Source: items
-Agent: copilot
+Agent: codex-cli
 
 ## New
 
@@ -32,6 +32,7 @@ Agent: copilot
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 

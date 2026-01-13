@@ -9,6 +9,7 @@ _kano/backlog/_trash/
 _kano/.cache/
 _kano/backlog/sandboxes/
 _kano/backlog_sandbox/
+logs/
 
 # Derived index/cache (never ignore canonical.db)
 _kano/backlog/**/_index/
@@ -29,8 +30,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.coverage
+.coverage*
 coverage.xml
+.tmp
 
 # Topic raw materials (cache, not source-of-truth)
 _kano/backlog/topics/**/materials/

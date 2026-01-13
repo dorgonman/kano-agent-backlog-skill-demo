@@ -1,8 +1,8 @@
 # InProgress Work
 
-Generated: 2026-01-13 19:20
+Generated: 2026-01-14 00:26
 Source: items
-Agent: copilot
+Agent: codex-cli
 
 ## New
 
@@ -32,6 +32,7 @@ Agent: copilot
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 
@@ -126,4 +127,5 @@ Agent: copilot
 - [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
 - [KABSD-TSK-0194 Add CLI commands: config show and config validate](../items/task/0100/KABSD-TSK-0194_add-cli-commands-config-show-and-config-validate.md)
+- [KABSD-TSK-0198 kano-backlog CLI: use TOML defaults for product resolution](../items/task/0100/KABSD-TSK-0198_kano-backlog-cli-use-toml-defaults-for-product-resolution.md)
 

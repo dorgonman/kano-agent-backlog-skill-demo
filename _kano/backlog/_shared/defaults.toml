@@ -1,1 +1,3 @@
+# Fallback only: used when the product cannot be inferred from the working path
+# and `--product` is not provided.
 default_product = "kano-agent-backlog-skill"
