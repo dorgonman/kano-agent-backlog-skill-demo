@@ -1,0 +1,36 @@
+{
+  "mode": {
+    "skill_developer": true,
+    "persona": "developer"
+  },
+  "project": {
+    "name": "kano-agent-backlog-skill-demo",
+    "prefix": "KABSD"
+  },
+  "views": {
+    "auto_refresh": true
+  },
+  "log": {
+    "verbosity": "warning",
+    "debug": false
+  },
+  "process": {
+    "profile": "builtin/azure-boards-agile",
+    "path": null
+  },
+  "sandbox": {
+    "root": "_kano/backlog_sandbox"
+  },
+  "index": {
+    "enabled": true,
+    "backend": "sqlite",
+    "path": null,
+    "mode": "rebuild"
+  },
+  "analysis": {
+    "llm": {
+      "enabled": false
+    }
+  },
+  "_comment": "Baseline config for kano-agent-backlog-skill."
+}

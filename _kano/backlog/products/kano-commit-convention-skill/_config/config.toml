@@ -1,0 +1,23 @@
+_comment = "Baseline config for kano-commit-convention-skill."
+
+[project]
+name = "kano-commit-convention-skill"
+prefix = "KCCS"
+
+[views]
+auto_refresh = true
+
+[log]
+verbosity = "info"
+debug = false
+
+[process]
+path = "skills/kano-agent-backlog-skill/references/processes/jira-default.json"
+
+[sandbox]
+root = "_kano/backlog/sandboxes/kano-commit-convention-skill"
+
+[index]
+enabled = false
+backend = "sqlite"
+mode = "rebuild"
