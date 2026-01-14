@@ -1,8 +1,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 89
-vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.revno: 91
+vcs.hash: c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
 vcs.dirty: true
 -->
 
@@ -10,8 +10,8 @@ vcs.dirty: true
 
 **Scope:** product:kano-agent-backlog-skill
 **VCS Branch:** main
-**VCS RevNo:** 89
-**VCS Hash:** 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+**VCS RevNo:** 91
+**VCS Hash:** c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
 **VCS Dirty:** true
 
 ## Capabilities
@@ -54,7 +54,7 @@ vcs.dirty: true
 - **backlog.Document Kano Namespace Reservation for Umbrella CLI**: done
 - **backlog.Topic Lifecycle and Materials Buffer System**: done
 - **backlog.Repo Snapshot + Evidence-driven Reports**: done
-- **backlog.Reproducible docs metadata (VCS-agnostic; remove timestamps)**: partial
+- **backlog.Reproducible docs metadata (VCS-agnostic; remove timestamps)**: done
 
 ## Stubs & TODOs
 

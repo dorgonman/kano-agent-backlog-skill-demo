@@ -1,15 +1,15 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 89
-vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.revno: 91
+vcs.hash: c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
 vcs.dirty: true
 -->
 
 # QA Snapshot Report: product:kano-agent-backlog-skill
 
 **Scope:** product:kano-agent-backlog-skill
-**VCS:** branch=main, revno=89, hash=913cdfb1f70dc14512c06cc807f5dff2b9fdb511, dirty=true, provider=git
+**VCS:** branch=main, revno=91, hash=c6e4b2fc0aa4a2f4a09c542c588d80978235eea8, dirty=true, provider=git
 
 ## Testability & Evidence
 
@@ -321,10 +321,10 @@ Features that report "Done" status and their associated evidence.
   
 
 ### Reproducible docs metadata (VCS-agnostic; remove timestamps)
-- **Status:** partial
+- **Status:** done
 - **Test Evidence References:**
   
-  - `Worklog: 2026-01-14 02:05 [agent=developer] [model=unknown] Auto parent sync: child KABSD-TSK-0202 -> InProgress; parent -> InProgress.`
+  - `Worklog: 2026-01-14 22:48 [agent=github-copilot] [model=unknown] VCS metadata schema redesigned and implemented: branch/revno/hash model, no tags/label, multi-provider support, backward compatible`
   
   
 

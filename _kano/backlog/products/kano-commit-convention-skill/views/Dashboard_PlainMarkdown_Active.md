@@ -1,8 +1,15 @@
 # InProgress Work
 
-Generated: 2026-01-13 19:20
+<!-- kano:build
+vcs.provider: git
+vcs.branch: main
+vcs.revno: 91
+vcs.hash: c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
+vcs.dirty: true
+-->
+
 Source: items
-Agent: copilot
+Agent: github-copilot
 
 ## New
 
