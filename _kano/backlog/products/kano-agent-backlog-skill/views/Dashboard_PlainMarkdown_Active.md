@@ -2,12 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.branch: main
+vcs.revno: 90
+vcs.hash: 0ae87aaa5a712ff53d2e3eba16d4ff53c0803115
 vcs.dirty: true
 -->
 
 Source: items
-Agent: developer
+Agent: github-copilot
 
 ## New
 
@@ -119,7 +121,6 @@ Agent: developer
 ### Feature
 
 - [KABSD-FTR-0011 Multi-product platform intelligence and governance](../items/feature/0000/KABSD-FTR-0011_multi-product-platform-intelligence-and-governance.md)
-- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 

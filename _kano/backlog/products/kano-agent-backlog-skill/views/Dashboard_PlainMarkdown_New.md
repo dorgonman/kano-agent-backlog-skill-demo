@@ -2,12 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.branch: main
+vcs.revno: 90
+vcs.hash: 0ae87aaa5a712ff53d2e3eba16d4ff53c0803115
 vcs.dirty: true
 -->
 
 Source: items
-Agent: developer
+Agent: github-copilot
 
 ## New
 

@@ -2,12 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.branch: main
+vcs.revno: 90
+vcs.hash: 0ae87aaa5a712ff53d2e3eba16d4ff53c0803115
 vcs.dirty: true
 -->
 
 Source: items
-Agent: developer
+Agent: github-copilot
 
 ## Done
 
@@ -39,6 +41,7 @@ Agent: developer
 - [KABSD-FTR-0036 Document Kano Namespace Reservation for Umbrella CLI](../items/feature/0000/KABSD-FTR-0036_document-kano-namespace-reservation-for-umbrella-cli.md)
 - [KABSD-FTR-0037 Topic Lifecycle and Materials Buffer System](../items/feature/0000/KABSD-FTR-0037_topic-lifecycle-and-materials-buffer-system.md)
 - [KABSD-FTR-0038 Repo Snapshot + Evidence-driven Reports](../items/feature/0000/KABSD-FTR-0038_repo-snapshot-evidence-driven-reports.md)
+- [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 
 ### UserStory
 

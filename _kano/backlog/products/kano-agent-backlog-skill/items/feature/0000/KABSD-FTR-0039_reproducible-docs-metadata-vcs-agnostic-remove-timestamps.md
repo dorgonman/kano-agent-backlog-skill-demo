@@ -14,12 +14,12 @@ links:
 owner: None
 parent: null
 priority: P1
-state: InProgress
+state: Done
 tags: []
 title: Reproducible docs metadata (VCS-agnostic; remove timestamps)
 type: Feature
 uid: 019bb820-d303-773d-8b56-c31e7d4d0746
-updated: '2026-01-14'
+updated: 2026-01-14
 ---
 
 # Context
@@ -142,3 +142,4 @@ Default recommendations:
 
 2026-01-14 00:11 [agent=developer] Created item
 2026-01-14 02:05 [agent=developer] [model=unknown] Auto parent sync: child KABSD-TSK-0202 -> InProgress; parent -> InProgress.
+2026-01-14 22:48 [agent=github-copilot] [model=unknown] VCS metadata schema redesigned and implemented: branch/revno/hash model, no tags/label, multi-provider support, backward compatible
