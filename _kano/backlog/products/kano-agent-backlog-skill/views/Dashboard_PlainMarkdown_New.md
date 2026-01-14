@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 91
-vcs.hash: c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
+vcs.revno: 93
+vcs.hash: f87a88bc0ec86f244b532d1870ed903b5f7a3ce3
 vcs.dirty: true
 -->
 
 Source: items
-Agent: github-copilot
+Agent: copilot
 
 ## New
 

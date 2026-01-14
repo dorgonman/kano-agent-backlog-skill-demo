@@ -27,4 +27,4 @@ backend = "sqlite"
 mode = "rebuild"
 
 [analysis.llm]
-enabled = false
+enabled = true

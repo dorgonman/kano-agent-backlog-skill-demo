@@ -74,4 +74,5 @@ With LLM integration enabled, refresh additionally produces `views/_analysis/Rep
 2026-01-10 13:23 [agent=codex] Ready: fixed Risks/Dependencies section and prepared for implementation.
 2026-01-10 13:23 [agent=codex] Start: implement optional LLM analysis pipeline over deterministic reports.
 2026-01-10 13:26 [agent=codex] Done: added view_generate_report_analysis.py + config toggle analysis.llm.enabled; outputs go to views/_analysis and are gitignored.
-2026-01-10 14:38 [agent=codex-cli] Changed analysis generation to template-first (no external LLM CLI required). view_generate_report_analysis now writes prompt + analysis template when KANO_LLM_COMMAND is unset; refresh_dashboards can generate derived analysis artifacts.
+2026-01-10 14:38 [agent=codex-cli] Changed analysis generation to template-first (no external LLM CLI required). view_generate_report_analysis now writes prompt + analysis template; refresh_dashboards can generate derived analysis artifacts.
+2026-01-14 20:00 [agent=copilot] Note: KANO_LLM_COMMAND and view_generate_report_analysis.py were removed during CLI consolidation (commit f24d4c2). The analysis feature needs to be re-implemented in the new ops/CLI architecture with analysis.llm.enabled config support.

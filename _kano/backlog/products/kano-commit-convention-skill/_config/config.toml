@@ -21,3 +21,6 @@ root = "_kano/backlog/sandboxes/kano-commit-convention-skill"
 enabled = false
 backend = "sqlite"
 mode = "rebuild"
+
+[analysis.llm]
+enabled = true
