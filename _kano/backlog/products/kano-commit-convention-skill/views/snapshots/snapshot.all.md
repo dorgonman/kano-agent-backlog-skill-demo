@@ -1,8 +1,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 91
-vcs.hash: c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
+vcs.revno: 92
+vcs.hash: 8d7bd8d9591d105c6ac45f2feb5e9b33c7b20beb
 vcs.dirty: true
 -->
 
@@ -10,8 +10,8 @@ vcs.dirty: true
 
 **Scope:** product:kano-commit-convention-skill
 **VCS Branch:** main
-**VCS RevNo:** 91
-**VCS Hash:** c6e4b2fc0aa4a2f4a09c542c588d80978235eea8
+**VCS RevNo:** 92
+**VCS Hash:** 8d7bd8d9591d105c6ac45f2feb5e9b33c7b20beb
 **VCS Dirty:** true
 
 ## Capabilities
