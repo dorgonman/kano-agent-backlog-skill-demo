@@ -2,7 +2,7 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
+vcs.revision: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 vcs.dirty: true
 -->
 
@@ -194,6 +194,7 @@ Agent: developer
 - [KABSD-TSK-0198 kano-backlog CLI: use TOML defaults for product resolution](../items/task/0100/KABSD-TSK-0198_kano-backlog-cli-use-toml-defaults-for-product-resolution.md)
 - [KABSD-TSK-0199 Implement missing kano_backlog_ops.workitem functions (list/get/sync/refresh)](../items/task/0100/KABSD-TSK-0199_implement-missing-kano-backlog-ops-workitem-functions-list-get-sync-refresh.md)
 - [KABSD-TSK-0202 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0202_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
+- [KABSD-TSK-0203 Consolidate analysis and snapshots; remove legacy root views](../items/task/0200/KABSD-TSK-0203_consolidate-analysis-and-snapshots-remove-legacy-root-views.md)
 
 ### Bug
 

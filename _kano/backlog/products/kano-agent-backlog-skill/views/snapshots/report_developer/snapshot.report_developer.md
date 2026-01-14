@@ -1,13 +1,15 @@
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
+vcs.branch: main
+vcs.revno: 89
+vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 vcs.dirty: true
 -->
 
 # Developer Snapshot Report: product:kano-agent-backlog-skill
 
 **Scope:** product:kano-agent-backlog-skill
-**VCS Revision:** 19ae297c7c074aa739fdfd795fabecdf36c2211b (dirty=true, ref=main, provider=git, label=19ae297c)
+**VCS:** branch=main, revno=89, hash=913cdfb1f70dc14512c06cc807f5dff2b9fdb511, dirty=true, provider=git
 
 ## Implementation Status (Capabilities)
 
@@ -90,6 +92,8 @@ This section maps backlog features to their implementation evidence.
 
 | Topic Lifecycle and Materials Buffer System | done | <br>- `Worklog: 2026-01-13 01:18 [agent=copilot] Filled Ready gate: Context, Goal, Approach, Acceptance Criteria, Risks` |
 
+| Repo Snapshot + Evidence-driven Reports | done |  |
+
 | Reproducible docs metadata (VCS-agnostic; remove timestamps) | partial | <br>- `Worklog: 2026-01-14 02:05 [agent=developer] [model=unknown] Auto parent sync: child KABSD-TSK-0202 -> InProgress; parent -> InProgress.` |
 
 
@@ -101,17 +105,17 @@ This section lists known incomplete implementations (TODOs, FIXMEs, NotImplement
 | Type | Location | Message | Ticket |
 |------|----------|---------|--------|
 
-| NotImplementedError | `tests/test_snapshot.py:135` | oops')", encoding="utf-8 |  |
+| NotImplementedError | `tests/test_snapshot.py:136` | oops')", encoding="utf-8 |  |
 
 | TODO | `src/kano_backlog_ops/adr.py:183` | Implement |  |
 
 | NotImplementedError | `src/kano_backlog_ops/adr.py:184` | list_adrs not yet implemented |  |
 
-| TODO | `src/kano_backlog_ops/snapshot.py:257` | Integrate with doctor commands |  |
+| TODO | `src/kano_backlog_ops/snapshot.py:265` | Integrate with doctor commands |  |
 
 | NotImplementedError | `src/kano_backlog_cli/commands/config_cmd.py:53` | config export now requires explicit --out path |  |
 
-| TODO | `src/kano_backlog_cli/commands/snapshot.py:198` | recursive print |  |
+| TODO | `src/kano_backlog_cli/commands/snapshot.py:200` | recursive print |  |
 
 
 ## CLI Surface

@@ -1,13 +1,15 @@
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
+vcs.branch: main
+vcs.revno: 89
+vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 vcs.dirty: true
 -->
 
 # Product Manager Snapshot Report: repo
 
 **Scope:** repo
-**VCS Revision:** 19ae297c7c074aa739fdfd795fabecdf36c2211b (dirty=true, ref=main, provider=git, label=19ae297c)
+**VCS:** branch=main, revno=89, hash=913cdfb1f70dc14512c06cc807f5dff2b9fdb511, dirty=true, provider=git
 
 ## Feature Delivery Status
 

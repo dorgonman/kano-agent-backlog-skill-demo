@@ -10,7 +10,7 @@ Principle:
 
 Generate (and refresh) the standard dashboards via the CLI:
 
-- `python skills/kano-agent-backlog-skill/scripts/kano view refresh --backlog-root _kano/backlog --agent <agent-name>`
+- `python skills/kano-agent-backlog-skill/scripts/kano-backlog view refresh --backlog-root _kano/backlog --agent <agent-name> --product <product-name>`
 
 ## 🚧 WIP: Demo focus view (last N days / iteration)
 
@@ -28,6 +28,6 @@ The tool prefers SQLite index when enabled/available, otherwise falls back to sc
 The legacy demo generator script has been removed. Re-introduce it as a `kano view demo ...` subcommand (TBD) before relying on it again.
 
 Outputs:
-- `_kano/backlog/views/_demo/Dashboard_Demo_DBIndex_{Active,New,Done}.md`
-- `_kano/backlog/views/_demo/Dashboard_Demo_NoDBIndex_{Active,New,Done}.md`
-- `_kano/backlog/views/_demo/Dashboard_Demo_*_Tags_Versioning.md`
+- `_kano/backlog/products/<product-name>/views/_demo/Dashboard_Demo_DBIndex_{Active,New,Done}.md`
+- `_kano/backlog/products/<product-name>/views/_demo/Dashboard_Demo_NoDBIndex_{Active,New,Done}.md`
+- `_kano/backlog/products/<product-name>/views/_demo/Dashboard_Demo_*_Tags_Versioning.md`

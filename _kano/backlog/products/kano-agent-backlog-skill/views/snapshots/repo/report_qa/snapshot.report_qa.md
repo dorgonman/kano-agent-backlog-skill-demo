@@ -1,16 +1,21 @@
-# QA Snapshot Report: 
+<!-- kano:build
+vcs.provider: git
+vcs.branch: main
+vcs.revno: 89
+vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
+vcs.dirty: true
+-->
 
-**Generated:** 2026-01-14T00:45:19.710201
+# QA Snapshot Report: repo
+
+**Scope:** repo
+**VCS:** branch=main, revno=89, hash=913cdfb1f70dc14512c06cc807f5dff2b9fdb511, dirty=true, provider=git
 
 ## Testability & Evidence
 
 Features that report "Done" status and their associated evidence.
 
 
-  {{#unless evidence_refs}}
-  - _No specific evidence found._
-  {{/unless}}
-{{/each}}
 
 ## CLI Surface (Test Scope)
 The following command structure is exposed in the CLI and requires testing:

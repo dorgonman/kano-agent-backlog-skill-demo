@@ -15,8 +15,7 @@ logs/
 _kano/backlog/**/_index/
 _kano/backlog/**/.cache/
 
-# Derived analysis outputs (non-deterministic)
-_kano/backlog/**/views/_analysis/
+
 
 # Python build artifacts
 __pycache__/

@@ -206,7 +206,7 @@ what needs attention."
 
 ### Generated Views (Agent-Managed)
 
-The agent automatically maintains views in `_kano/backlog/views/`:
+The agent automatically maintains views under product roots (e.g. `_kano/backlog/products/<product>/views/`):
 - Active work dashboard
 - New items queue  
 - Completed work history

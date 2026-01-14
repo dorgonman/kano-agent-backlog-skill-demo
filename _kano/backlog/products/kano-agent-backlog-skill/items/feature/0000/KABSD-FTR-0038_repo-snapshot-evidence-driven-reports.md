@@ -1,6 +1,7 @@
 ---
 type: Feature
 id: KABSD-FTR-0038
+uid: 019bbc2e-a8bf-7807-8e57-5907f03272cf
 title: Repo Snapshot + Evidence-driven Reports
 state: Done
 created: 2026-01-13T08:50:00

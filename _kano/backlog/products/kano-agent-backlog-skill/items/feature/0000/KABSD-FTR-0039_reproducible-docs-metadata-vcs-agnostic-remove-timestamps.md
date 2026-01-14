@@ -1,25 +1,25 @@
 ---
-id: KABSD-FTR-0039
-uid: 019bb820-d303-773d-8b56-c31e7d4d0746
-type: Feature
-title: "Reproducible docs metadata (VCS-agnostic; remove timestamps)"
-state: InProgress
-priority: P1
-parent: null
 area: core
-iteration: backlog
-tags: []
-created: 2026-01-14
-updated: 2026-01-14
-owner: None
+created: '2026-01-14'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-FTR-0039
+iteration: backlog
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: None
+parent: null
+priority: P1
+state: InProgress
+tags: []
+title: Reproducible docs metadata (VCS-agnostic; remove timestamps)
+type: Feature
+uid: 019bb820-d303-773d-8b56-c31e7d4d0746
+updated: '2026-01-14'
 ---
 
 # Context
@@ -35,8 +35,8 @@ Goal: Remove timestamps, use version control state (VCS state) metadata instead,
 # Goal
 
 - In --reproducible mode (or by default), completely avoid writing timestamps to content
-- Use VCS abstract fields to record output corresponding version state: revision / ref / dirty / optional label
-- Same data state (same revision + same input) re-running generator → consistent output (avoid non-deterministic fields)
+- Use explicit VCS abstract fields to record version state: branch / revno / hash / dirty
+- Same data state (same hash + same inputs) re-running generator -> consistent output (avoid non-deterministic fields)
 
 # Non-Goals
 
@@ -47,53 +47,50 @@ Goal: Remove timestamps, use version control state (VCS state) metadata instead,
 
 ## Proposed Metadata Spec (VCS-agnostic)
 
-Add fixed-format metadata block to generated documents (recommend HTML comment, doesn't affect rendering; fixed order):
+Add fixed-format metadata block to generated documents (recommend HTML comment so it doesn't affect rendering; fixed order):
 
 ```html
 <!-- kano:build
 vcs.provider: <string|unknown>
-vcs.revision: <string|unknown>
-vcs.ref: <string|unknown>
-vcs.label: <string|optional>
+vcs.branch: <string|unknown>
+vcs.revno: <string|unknown>
+vcs.hash: <string|unknown>
 vcs.dirty: <true|false|unknown>
 -->
 ```
 
-Field definitions (abstract concepts):
-- `vcs.provider`: Currently detected VCS type (e.g., git / p4 / svn / none / unknown)
-- `vcs.revision`: canonical identity (value that can uniquely locate version state)
-  - Git: commit hash
-  - Perforce: changelist number (or changeset id)
-  - SVN: revision number
-- `vcs.ref`: Human context hint (mutable pointer, not used as identity)
+Field definitions (abstract concepts; avoid parsing/overloading):
+- `vcs.provider`: Detected VCS type (e.g., git / p4 / svn / none / unknown)
+- `vcs.branch`: Human context hint (mutable pointer; not used as identity)
   - Git: branch name or HEAD (detached)
-  - Perforce: stream/client/workspace (as you define)
-  - SVN: branch path
-- `vcs.label`: Optional readable label (e.g., tag/describe/version name)
-  - Git: describe (tag-based)
-  - P4: label / changelist annotation (if any)
+  - Perforce: stream (or client/workspace) as you define
+  - SVN: branch/path (e.g., relative URL)
+- `vcs.revno`: Human-friendly revision number
+  - Git: commit count on HEAD (monotonic-ish within the repo; not a tag)
+  - Perforce: changelist number
+  - SVN: revision number
+- `vcs.hash`: Collision-resistant identity
+  - Git: full commit hash
+  - Perforce/SVN: derived stable hash (e.g., sha1 of server+revno / uuid+revno)
 - `vcs.dirty`: Whether workspace is clean (true if uncommitted/unshelved/unadded changes; unknown if can't determine)
 
-Core rule: Prohibit using timestamp as fallback. No VCS means unknown, don't pretend to be deterministic.
+Core rule: Prohibit using timestamps as a fallback. No VCS means unknown; do not pretend to be deterministic.
 
 ## Implementation Architecture
 
 1) **VCS Abstraction Layer**
-   - New module: `kano_backlog_core/vcs/` (or `kano_backlog_ops/vcs/`)
-   - `base.py`: `class VcsAdapter(Protocol)` with `detect(repo_root) -> bool` and `get_metadata(repo_root) -> VcsMeta`
-   - `git_adapter.py` (implement Git first, others on roadmap)
-   - `null_adapter.py` (no VCS / unknown)
-   - `VcsMeta` (dataclass) fields corresponding to spec: provider, revision, ref, label, dirty
+   - Modules: `kano_backlog_ops/vcs.py` and `kano_backlog_core/vcs/*`
+   - `VcsMeta` fields: provider, branch, revno, hash, dirty
+   - Adapters/detection should be best-effort and never fail hard when tools are missing.
 
 2) **Generators Unified VCS Meta Usage**
    - Replace all places writing `generated_at` with:
-     - Get VcsMeta from VcsAdapter
+     - Get `VcsMeta`
      - Output block according to `--meta-mode`
      - `--reproducible` forces no timestamp
 
 3) **Reproducibility Details**
    - metadata block field order fixed
-   - value format fixed (e.g., revision allows shortening but fixed length; or always full)
    - newline/spacing fixed
    - don't write now/time/random in content
 
@@ -101,15 +98,15 @@ Core rule: Prohibit using timestamp as fallback. No VCS means unknown, don't pre
 
 Add (or reuse) modes for all commands generating README/Summary/View:
 
-- `--reproducible`: Prohibit writing runtime timestamp, metadata block only allows above VCS fields, if VCS unavailable: output unknown, don't substitute with time
-- `--meta-mode [none|min|full]` (optional but recommended):
+- `--reproducible`: Prohibit writing runtime timestamp; if VCS unavailable output unknown (no time substitute)
+- `--meta-mode [none|min|full]`:
   - `none`: Don't write metadata block
-  - `min`: Only write vcs.revision + vcs.dirty + vcs.provider
-  - `full`: Write all fields (revision/ref/label/dirty/provider)
+  - `min`: Write provider + branch + revno + hash + dirty
+  - `full`: Same as `min` for now (reserved for future provider-specific expansions)
 
 Default recommendations:
 - Default no timestamps (equivalent to reproducible)
-- Default meta-mode=min (less noise but still traceable)
+- Default meta-mode=min
 
 # Alternatives
 
@@ -121,12 +118,12 @@ Default recommendations:
 
 - [ ] All README/Summary/View generation output contains no timestamps under --reproducible
 - [ ] Output includes VCS-agnostic metadata block conforming to spec (vcs.* fields)
-- [ ] New VCS adapter abstraction layer (at least git + null)
+- [ ] VCS adapter abstraction layer exists (at least git + null; others best-effort)
 - [ ] Tests:
   - [ ] Non-VCS environment: fields are unknown and no timestamp introduced
-  - [ ] Git repo fixture: revision/ref/dirty correctly populated
-- [ ] Documentation updates (SKILL/README): Explain reproducible definition and metadata field semantics (don't mention Git-specific fields)
-- [ ] Same repo revision re-running generation → content has no meaningless diff
+  - [ ] Git repo fixture: branch/revno/hash/dirty correctly populated
+- [ ] Documentation updates (SKILL/README): Explain reproducible definition and metadata field semantics (don't mention Git-specific tags)
+- [ ] Same repo hash re-running generation -> content has no meaningless diff
 - [ ] metadata not tied to Git, extensible to P4/SVN
 - [ ] When no VCS, honestly output unknown, don't sneak in timestamps
 

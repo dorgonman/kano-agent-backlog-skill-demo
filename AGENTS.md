@@ -11,7 +11,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - Demo backlog (system of record): `_kano/backlog/`
   - Items: `_kano/backlog/items/`
   - ADRs: `_kano/backlog/decisions/`
-  - Views: `_kano/backlog/views/`
+  - Views: `_kano/backlog/products/<product>/views/`
   - Tools (project-specific): `_kano/backlog/tools/` (project-only views/dashboards)
 
 ## Backlog discipline (this repo)
@@ -43,8 +43,8 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - For Epics, create an adjacent `<ID>_<slug>.index.md` MOC and register it in `_kano/backlog/_meta/indexes.md`.
 
 ## Views (human-friendly)
-- Obsidian Dataview dashboards live under `_kano/backlog/views/` (e.g. `_kano/backlog/views/Dashboard.md`).
-- Generate the canonical dashboards via the CLI: `python skills/kano-agent-backlog-skill/scripts/kano view refresh --agent <id> --backlog-root _kano/backlog [--product <name>]`.
+- Obsidian Dataview dashboards live under product view roots (e.g. `_kano/backlog/products/<product>/views/Dashboard.md`).
+- Generate the canonical dashboards via the CLI: `python skills/kano-agent-backlog-skill/scripts/kano-backlog view refresh --agent <id> --backlog-root _kano/backlog --product <name>`.
   - Note: `_kano/backlog/tools/*.sh` are deprecated; use Python tools instead when needed (e.g. `generate_demo_views.py`, `generate_focus_view.py`).
 
 ## Demo principles

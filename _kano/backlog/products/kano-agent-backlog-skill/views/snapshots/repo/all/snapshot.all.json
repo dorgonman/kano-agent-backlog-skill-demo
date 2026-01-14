@@ -20,10 +20,10 @@
     "scope": "repo",
     "vcs": {
       "dirty": "true",
-      "label": "19ae297c",
+      "label": "913cdfb1",
       "provider": "git",
       "ref": "main",
-      "revision": "19ae297c7c074aa739fdfd795fabecdf36c2211b"
+      "revision": "913cdfb1f70dc14512c06cc807f5dff2b9fdb511"
     }
   },
   "stub_inventory": [
@@ -64,7 +64,7 @@
     },
     {
       "file": "skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/snapshot.py",
-      "line": 198,
+      "line": 199,
       "message": "recursive print",
       "ticket_ref": null,
       "type": "TODO"

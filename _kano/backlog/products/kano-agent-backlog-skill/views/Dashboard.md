@@ -56,4 +56,4 @@ They should call the skill scripts and follow the same source selection rule:
 - otherwise fall back to scanning files
 
 Example (demo tool):
-- `python _kano/backlog/tools/generate_focus_view.py --backlog-root _kano/backlog --days 14 --agent <agent-name> --output _kano/backlog/views/_demo/Dashboard_Demo_Focus_Last14Days.md`
+- `python _kano/backlog/tools/generate_focus_view.py --backlog-root _kano/backlog --days 14 --agent <agent-name> --output _kano/backlog/products/kano-agent-backlog-skill/views/_demo/Dashboard_Demo_Focus_Last14Days.md`

@@ -1,13 +1,15 @@
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
+vcs.branch: main
+vcs.revno: 89
+vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 vcs.dirty: true
 -->
 
 # Developer Snapshot Report: repo
 
 **Scope:** repo
-**VCS Revision:** 19ae297c7c074aa739fdfd795fabecdf36c2211b (dirty=true, ref=main, provider=git, label=19ae297c)
+**VCS:** branch=main, revno=89, hash=913cdfb1f70dc14512c06cc807f5dff2b9fdb511, dirty=true, provider=git
 
 ## Implementation Status (Capabilities)
 
@@ -25,17 +27,17 @@ This section lists known incomplete implementations (TODOs, FIXMEs, NotImplement
 | Type | Location | Message | Ticket |
 |------|----------|---------|--------|
 
-| NotImplementedError | `skills/kano-agent-backlog-skill/tests/test_snapshot.py:135` | oops')", encoding="utf-8 |  |
+| NotImplementedError | `skills/kano-agent-backlog-skill/tests/test_snapshot.py:136` | oops')", encoding="utf-8 |  |
 
 | TODO | `skills/kano-agent-backlog-skill/src/kano_backlog_ops/adr.py:183` | Implement |  |
 
 | NotImplementedError | `skills/kano-agent-backlog-skill/src/kano_backlog_ops/adr.py:184` | list_adrs not yet implemented |  |
 
-| TODO | `skills/kano-agent-backlog-skill/src/kano_backlog_ops/snapshot.py:257` | Integrate with doctor commands |  |
+| TODO | `skills/kano-agent-backlog-skill/src/kano_backlog_ops/snapshot.py:265` | Integrate with doctor commands |  |
 
 | NotImplementedError | `skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/config_cmd.py:53` | config export now requires explicit --out path |  |
 
-| TODO | `skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/snapshot.py:198` | recursive print |  |
+| TODO | `skills/kano-agent-backlog-skill/src/kano_backlog_cli/commands/snapshot.py:200` | recursive print |  |
 
 
 ## CLI Surface

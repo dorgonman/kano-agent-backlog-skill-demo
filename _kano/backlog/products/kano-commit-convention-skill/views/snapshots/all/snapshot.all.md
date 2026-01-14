@@ -1,13 +1,17 @@
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 19ae297c7c074aa739fdfd795fabecdf36c2211b
+vcs.branch: main
+vcs.revno: 89
+vcs.hash: 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 vcs.dirty: true
 -->
 
 # Snapshot Report: product:kano-commit-convention-skill
 
 **Scope:** product:kano-commit-convention-skill
-**VCS Revision:** 19ae297c7c074aa739fdfd795fabecdf36c2211b
+**VCS Branch:** main
+**VCS RevNo:** 89
+**VCS Hash:** 913cdfb1f70dc14512c06cc807f5dff2b9fdb511
 **VCS Dirty:** true
 
 ## Capabilities
