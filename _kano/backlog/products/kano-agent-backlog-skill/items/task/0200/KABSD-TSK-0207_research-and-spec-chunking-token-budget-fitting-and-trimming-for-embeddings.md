@@ -28,7 +28,7 @@ updated: '2026-01-15'
 
 # Context
 
-Requested item ID in brief: KABSD-TSK-XXXX_research-and-spec_chunking-token-budget-and-trimming-for-embedding. Current vector index research assumes chunks and token limits are already handled; without a deterministic preproce/skssing spec, downstream vector backends will index low-quality data. This task defines the canonical preprocessing layer before any embedding or index backend selection.
+Requested item ID in brief: KABSD-TSK-XXXX_research-and-spec_chunking-token-budget-and-trimming-for-embedding. Current vector index research assumes chunks and token limits are already handled; without a deterministic preprocessing spec, downstream vector backends will index low-quality data. This task defines the canonical preprocessing layer before any embedding or index backend selection.
 
 # Goal
 
@@ -49,3 +49,4 @@ Risk: tokenizer availability and cross-platform differences. Mitigation: allow e
 # Worklog
 
 2026-01-15 22:43 [agent=copilot] [model=Claude-Haiku-4.5] Created item and populated Ready gate (Context, Goal, Approach, Acceptance Criteria, Risks)
+2026-01-16 00:00 [agent=copilot] [model=GPT-5.2] Corrected model attribution (previous entry was inaccurate)

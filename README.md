@@ -627,6 +627,33 @@ This experimental demo explores a "backlog-first" approach where:
 
 **Version 0.0.1 Status**: These principles are being tested and refined. Implementation is evolving but demonstrates the core concepts in action. The `_kano/backlog/` directory contains real-world examples of this philosophy applied to the development of the system itself.
 
+### Dual-Readability Design (Topic & Snapshot)
+
+A key challenge in modern development is that **Humans struggle with focus** (hard to jump between contexts) while **Agents struggle with collaboration** (hard to share implicit context).
+
+This project checks every artifact against a **Dual-Readability Principle**:
+1. **Human-Readable**: High-level summaries, clear checklists, and "manager-friendly" reports (e.g., `brief.md`, `Report_pm.md`) so humans can make rapid decisions without reading code.
+2. **Agent-Readable**: Structural precision, file paths, line numbers, and explicit "Next Step" markers (e.g., `manifest.json`, `stub_inventory`) so agents can act without hallucinating.
+
+**Topics** and **Snapshots** are the concrete implementation of this philosophy:
+* **Topics**: Allow humans to "load" a focus area mentally in seconds, while giving Agents a precise list of files and snippets to load into their context window.
+* **Snapshots**: Give humans a trustable "State of the Union", while giving Agents a literal checklist of `TODO`s and `NotImplementedErrors` to attack next.
+
+### The Agent Semantic Memory Model
+
+To help Agents (and humans) navigate the complexity of software development, this project maps its features to the standard cognitive memory model:
+
+| Memory Type | Equivalent | Purpose | Lifespan | Analogy |
+|:---:|:---:|---|---|---|
+| **Short-Term**<br>(Working Memory) | **Workset** | **Execution State**<br>Prevents drift during a single task. Contains the immediate plan, scratchpad notes, and temp files. | **Hours**<br>(Task duration) | The "scratchpad" or "RAM" cleared after use. |
+| **Medium-Term**<br>(Contextual) | **Topic** | **Focus Scope**<br>Groups related files, specs, and definitions for a feature. Allows rapid context switching. | **Days/Weeks**<br>(Feature duration) | The "project folder" on your desk. |
+| **Long-Term**<br>(Semantic) | **ADR & Canonical** | **Institutional Knowledge**<br>Immutable decisions (ADRs) and the source code itself. The "Soul" of the project. | **Permanent**<br>(Project duration) | The "library archives" or "textbooks". |
+
+**Why this matters**:
+* Agents often "forget" instructions (Short-term failure). -> **Solution**: Worksets force them to read a `plan.md`.
+* Agents often "hallucinate" unrelated files (Medium-term failure). -> **Solution**: Topics bind them to a specific `manifest.json`.
+* Agents often "overwrite" architectural rules (Long-term failure). -> **Solution**: ADRs provide immutable constraints.
+
 ## Built with Multi-Agent Collaboration
 
 This project is itself a demonstration of multi-agent collaboration in action. The codebase has been developed through iterative collaboration with multiple AI coding assistants, each bringing unique strengths to the development process:

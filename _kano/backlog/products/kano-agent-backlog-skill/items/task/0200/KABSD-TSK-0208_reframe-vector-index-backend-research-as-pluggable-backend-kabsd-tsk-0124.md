@@ -48,3 +48,4 @@ Risk: platform-specific install friction or license constraints. Mitigation: doc
 # Worklog
 
 2026-01-15 22:43 [agent=copilot] [model=Claude-Haiku-4.5] Created item and populated Ready gate (Context, Goal, Approach, Acceptance Criteria, Risks)
+2026-01-16 00:00 [agent=copilot] [model=GPT-5.2] Corrected model attribution (previous entry was inaccurate)
