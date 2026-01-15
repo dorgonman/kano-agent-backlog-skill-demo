@@ -13,7 +13,7 @@ description: Local-first, multi-product backlog management with agent collaborat
 
 This skill provides **local-first, multi-product backlog management** with agent collaboration discipline.
 
-**📚 Canonical Documentation**: [`skills/kano-agent-backlog-skill/SKILL.md`](../../../skills/kano-agent-backlog-skill/SKILL.md)
+**📚 Canonical Documentation**: @skills/kano-agent-backlog-skill/SKILL.md
 
 > [!IMPORTANT]
 > **You MUST read the canonical SKILL.md** before using this skill. The sections below provide quick navigation to key topics.

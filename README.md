@@ -18,7 +18,8 @@ This is the **initial 0.0.1 release** of the **kano-agent-backlog-skill-demo** -
 - ✅ Code snippet collection in topic materials
 - ✅ Deterministic brief generation from materials
 - ✅ ADR (Architecture Decision Record) support
-- ✅ Multi-agent collaboration patterns
+- ✅ Multi-agent coordination (Canonical + Adapters architecture)
+- ✅ Native support for Copilot, Codex, Claude, and Goose
 - ✅ CLI commands for all core operations
 - ✅ Property-based testing with Hypothesis
 - 🚧 SQLite indexing (experimental)
@@ -61,7 +62,8 @@ This repository demonstrates an evolving approach to transform agent collaborati
 - **Deterministic distillation**: Generate briefs from collected materials for consistent context loading
 - **Multiple views**: Obsidian Dataview dashboards and plain markdown reports
 - **Multi-product support**: Organize backlogs for different products/projects
-- **Multi-agent coordination**: Shared backlog enables multiple agents to collaborate with durable context
+- **Multi-agent coordination**: Canonical + Adapters layout for shared backlog
+- **Broad compatibility**: Support for Copilot, Codex, Claude, Goose, and Antigravity
 - **🚧 WIP: Optional SQLite index** - Fast queries while keeping files as source of truth
 - **🚧 WIP: Embedding search** - Local semantic search for backlog items (experimental)
 
@@ -69,25 +71,31 @@ This repository demonstrates an evolving approach to transform agent collaborati
 
 ```
 ├── _kano/backlog/              # Main backlog directory (system of record)
-│   ├── products/               # Product-specific backlogs
-│   │   ├── kano-agent-backlog-skill/     # Demo backlog for the skill itself
-│   │   └── kano-commit-convention-skill/ # Demo backlog for commit conventions
-│   ├── views/                  # Generated dashboard views
-│   ├── artifacts/              # Work artifacts and reports
-│   └── tools/                  # Project-specific tools
-├── skills/                     # Reusable skills (git submodules or local)
-│   ├── kano-agent-backlog-skill/         # **SELF-CONTAINED** backlog skill
-│   │   ├── src/                # All Python source code (unified)
-│   │   │   ├── kano_backlog_core/   # Domain library
-│   │   │   └── kano_cli/            # CLI facade
-│   │   ├── scripts/            # Single entrypoint (`kano`) for all automation
-│   │   ├── templates/          # Item and ADR templates
-│   │   ├── references/         # Reference documentation
-│   │   └── pyproject.toml      # Unified project config
+├── skills/                     # Canonical sources (git submodules or local)
+│   ├── kano-agent-backlog-skill/         # **CANONICAL** (single source of truth)
 │   └── kano-commit-convention-skill/
-├── AGENTS.md                   # Guidelines for AI agents
-└── CLAUDE.md                   # Quick reference for backlog workflow
+├── .github/skills/             # GitHub Copilot adapters
+├── .codex/skills/              # OpenAI Codex adapters
+├── .claude/skills/             # Anthropic Claude adapters
+├── .goose/skills/              # Goose adapters
+├── .agent/skills/              # Google Antigravity adapters
+├── AGENTS.md                   # Universal guidelines and workflow rules
+├── CLAUDE.md                   # Claude Code root adapter (points to AGENTS.md)
+└── README.md                   # This file
 ```
+
+## Multi-Agent Architecture: Canonical + Adapters
+
+This repository uses a **"canonical source + adapters"** layout to maintain a single source of truth while supporting mission-critical directories for different agents.
+
+- **Canonical Source**: Full documentation and logic stay in `skills/<skill-name>/SKILL.md`.
+- **Adapters**: Lightweight "thin wrappers" exist in agent-specific folders (like `.github/skills/` or `.claude/skills/`) that point back to the canonical source via links or `@` references.
+- **Universal Rules**: [AGENTS.md](AGENTS.md) defines project-wide workflow rules and discipline for all agents.
+- **Entry Points**: 
+  - **Claude Code**: Uses [CLAUDE.md](CLAUDE.md) as a root entrance to [AGENTS.md](AGENTS.md).
+  - **Other Agents**: Use their respective `.folder/skills/` adapters.
+
+*See [AGENTS.md](AGENTS.md) for detailed workflow enforcement rules.*
 
 ## Skill Architecture: Self-Contained Design
 

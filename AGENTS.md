@@ -19,6 +19,7 @@ into a durable, local-first backlog with an auditable decision trail (instead of
 - **Anthropic Claude**: `.claude/skills/<skill-name>/SKILL.md` (compatible with Claude Code/Desktop)
 - **Goose**: `.goose/skills/<skill-name>/SKILL.md` (open-source agent compatible with Claude skills)
 - **Google Antigravity**: `.agent/skills/<skill-name>/SKILL.md` (native workspace skills)
+- **Claude Code**: `CLAUDE.md` (root wrapper pointing back to this file)
 - **Universal**: `AGENTS.md` (this file) enforces workflow rules
 - **Modular**: Skills are self-contained in `skills/` directory
 
@@ -43,6 +44,8 @@ into a durable, local-first backlog with an auditable decision trail (instead of
   - Claude adapter: `.claude/skills/kano-commit-convention-skill/SKILL.md`
   - Goose adapter: `.goose/skills/kano-commit-convention-skill/SKILL.md`
   - Antigravity adapter: `.agent/skills/kano-commit-convention-skill/SKILL.md`
+- **Universal Rules**: `AGENTS.md` (this file)
+- **Claude Code**: `CLAUDE.md` (root wrapper pointing to AGENTS.md)
 - Demo backlog (system of record): `_kano/backlog/`
   - Items: `_kano/backlog/items/`
   - ADRs: `_kano/backlog/decisions/`

@@ -13,7 +13,7 @@ description: Commit convention linting and changelog automation following the Ka
 
 This skill provides **commit convention linting and changelog automation** following the Kano commit format.
 
-**📚 Canonical Documentation**: [`skills/kano-commit-convention-skill/SKILL.md`](../../../skills/kano-commit-convention-skill/SKILL.md)
+**📚 Canonical Documentation**: @skills/kano-commit-convention-skill/SKILL.md
 
 > [!IMPORTANT]
 > **You MUST read the canonical SKILL.md** before using this skill. The sections below provide quick navigation to key topics.
