@@ -4,10 +4,45 @@
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).
 
+## Canonical + Adapters Architecture
+
+> [!IMPORTANT]
+> **This repo uses a "canonical source + adapters" layout** to support multiple AI coding agents.
+
+### Canonical Source (Single Source of Truth)
+- All skill documentation lives in: `skills/<skill-name>/SKILL.md`
+- **Always read the canonical SKILL.md** - adapters are just entry points
+
+### Adapters (Entry Points for Different Agents)
+- **GitHub Copilot**: `.github/skills/<skill-name>/SKILL.md` (thin wrapper with links to canonical)
+- **OpenAI Codex**: `.codex/skills/<skill-name>/SKILL.md` (thin wrapper with name/description and links)
+- **Anthropic Claude**: `.claude/skills/<skill-name>/SKILL.md` (compatible with Claude Code/Desktop)
+- **Goose**: `.goose/skills/<skill-name>/SKILL.md` (open-source agent compatible with Claude skills)
+- **Google Antigravity**: `.agent/skills/<skill-name>/SKILL.md` (native workspace skills)
+- **Universal**: `AGENTS.md` (this file) enforces workflow rules
+- **Modular**: Skills are self-contained in `skills/` directory
+
+### Workflow Enforcement
+1. **Before using any skill**: Open and read the canonical `skills/<skill-name>/SKILL.md`
+2. If you only see a summary/wrapper, **follow the links** to canonical sections
+3. Run `doctor` or verification commands mentioned in canonical docs
+
 ## Key paths
 - Skill (submodule): `skills/kano-agent-backlog-skill/`
-  - Rules entrypoint: `skills/kano-agent-backlog-skill/SKILL.md`
+  - **Canonical rules**: `skills/kano-agent-backlog-skill/SKILL.md` ← READ THIS
+  - Copilot adapter: `.github/skills/kano-agent-backlog-skill/SKILL.md`
+  - Codex adapter: `.codex/skills/kano-agent-backlog-skill/SKILL.md`
+  - Claude adapter: `.claude/skills/kano-agent-backlog-skill/SKILL.md`
+  - Goose adapter: `.goose/skills/kano-agent-backlog-skill/SKILL.md`
+  - Antigravity adapter: `.agent/skills/kano-agent-backlog-skill/SKILL.md`
   - References: `skills/kano-agent-backlog-skill/references/`
+- Skill: `skills/kano-commit-convention-skill/`
+  - **Canonical rules**: `skills/kano-commit-convention-skill/SKILL.md` ← READ THIS
+  - Copilot adapter: `.github/skills/kano-commit-convention-skill/SKILL.md`
+  - Codex adapter: `.codex/skills/kano-commit-convention-skill/SKILL.md`
+  - Claude adapter: `.claude/skills/kano-commit-convention-skill/SKILL.md`
+  - Goose adapter: `.goose/skills/kano-commit-convention-skill/SKILL.md`
+  - Antigravity adapter: `.agent/skills/kano-commit-convention-skill/SKILL.md`
 - Demo backlog (system of record): `_kano/backlog/`
   - Items: `_kano/backlog/items/`
   - ADRs: `_kano/backlog/decisions/`
