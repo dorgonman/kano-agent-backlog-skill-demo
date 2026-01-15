@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 93
-vcs.hash: f87a88bc0ec86f244b532d1870ed903b5f7a3ce3
+vcs.revno: 96
+vcs.hash: 667e9a61aff01c987a8fb5b6abce7676124e036e
 vcs.dirty: true
 -->
 
@@ -110,4 +110,6 @@ Agent: copilot
 - [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0200 Evaluate snapshot artifacts: folder-based packs, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0200_evaluate-snapshot-artifacts-folder-based-packs-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0201 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0201_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
+- [KABSD-TSK-0207 Research and spec chunking, token budget fitting, and trimming for embeddings](../items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md)
+- [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
 

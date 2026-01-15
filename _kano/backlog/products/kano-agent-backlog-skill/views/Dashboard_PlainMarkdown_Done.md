@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 93
-vcs.hash: f87a88bc0ec86f244b532d1870ed903b5f7a3ce3
+vcs.revno: 96
+vcs.hash: 667e9a61aff01c987a8fb5b6abce7676124e036e
 vcs.dirty: true
 -->
 
@@ -198,6 +198,9 @@ Agent: copilot
 - [KABSD-TSK-0199 Implement missing kano_backlog_ops.workitem functions (list/get/sync/refresh)](../items/task/0100/KABSD-TSK-0199_implement-missing-kano-backlog-ops-workitem-functions-list-get-sync-refresh.md)
 - [KABSD-TSK-0202 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0202_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0203 Consolidate analysis and snapshots; remove legacy root views](../items/task/0200/KABSD-TSK-0203_consolidate-analysis-and-snapshots-remove-legacy-root-views.md)
+- [KABSD-TSK-0204 Clarify 'kano workset next' purpose in README](../items/task/0200/KABSD-TSK-0204_clarify-kano-workset-next-purpose-in-readme.md)
+- [KABSD-TSK-0205 Make skill README standalone-focused](../items/task/0200/KABSD-TSK-0205_make-skill-readme-standalone-focused.md)
+- [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
 
 ### Bug
 

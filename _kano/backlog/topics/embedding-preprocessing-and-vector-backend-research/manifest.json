@@ -1,0 +1,16 @@
+{
+  "topic": "embedding-preprocessing-and-vector-backend-research",
+  "agent": "copilot",
+  "seed_items": [
+    "019bc21c-6e9c-765a-877f-994bacdf5002",
+    "019bc21c-ec25-70e2-84ec-d0042844af4d"
+  ],
+  "pinned_docs": [
+    "_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md"
+  ],
+  "snippet_refs": [],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-01-15T14:42:05.217983Z",
+  "updated_at": "2026-01-15T14:47:11.214909Z"
+}
