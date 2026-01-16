@@ -31,14 +31,14 @@ YYYY-MM-DD HH:MM [agent=codex] <message>
 
 Frontmatter `parent` maintains hierarchy, but Obsidian needs wikilinks in the
 body to build forward/back links and Graph edges. Use a simple `## Links`
-section and list related items with `[[...]]`.
+section and list related items with `[[schema.md]]`.
 
 Example:
 
 ```
 ## Links
-- Parent: [[_kano/backlog/items/userstory/0000/KABSD-USR-0001_plan-before-code|KABSD-USR-0001]]
-- Relates: [[_kano/backlog/items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001]]
+- Parent: [[../items/userstory/0000/KABSD-USR-0001_plan-before-code|KABSD-USR-0001]]
+- Relates: [[../items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001]]
 - Decision: [[_kano/backlog/decisions/ADR-0001_backlog-structure-and-moc|ADR-0001]]
 ```
 

@@ -45,9 +45,9 @@ Create tasks that follow the Ready gate and link them to this story.
 # Links
 
 - Feature: [[KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0002_create-obsidian-base-demo-views|KABSD-TSK-0002 Create Obsidian Base demo views]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0003_normalize-migrated-backlog-items-for-demo|KABSD-TSK-0003 Normalize migrated backlog items for demo]]
+- Task: [[../../task/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
+- Task: [[../../task/0200/KABSD-TSK-0225_create-obsidian-base-demo-views.md|KABSD-TSK-0002 Create Obsidian Base demo views]]
+- Task: [[../../task/0200/KABSD-TSK-0226_normalize-migrated-backlog-items-for-demo.md|KABSD-TSK-0003 Normalize migrated backlog items for demo]]
 
 # Alternatives
 

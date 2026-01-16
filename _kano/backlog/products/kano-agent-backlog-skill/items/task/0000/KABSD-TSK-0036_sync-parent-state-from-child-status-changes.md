@@ -5,7 +5,7 @@ type: Task
 title: Sync parent state from child status changes
 state: Done
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: workflow
 iteration: null
 tags:

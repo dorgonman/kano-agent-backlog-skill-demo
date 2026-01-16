@@ -1,11 +1,18 @@
 ---
-id: ADR-0003
-title: "Identifier strategy: sortable IDs without centralized allocation"
-status: Accepted
 date: 2026-01-05
-related_items: [KABSD-FTR-0001, KABSD-FTR-0007, KABSD-TSK-0059, KABSD-TSK-0060, KABSD-TSK-0061, KABSD-TSK-0062]
-supersedes: null
+id: ADR-0003
+related_items:
+- KABSD-FTR-0042
+- KABSD-FTR-0007
+- KABSD-TSK-0059
+- KABSD-TSK-0060
+- KABSD-TSK-0061
+- KABSD-TSK-0062
+status: Accepted
 superseded_by: null
+supersedes: null
+title: 'Identifier strategy: sortable IDs without centralized allocation'
+uid: 019bc5dc-68db-7581-953f-6347f27c6fb4
 ---
 
 # Decision

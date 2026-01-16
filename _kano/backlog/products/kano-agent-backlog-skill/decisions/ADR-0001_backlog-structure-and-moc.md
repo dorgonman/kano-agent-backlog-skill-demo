@@ -1,11 +1,13 @@
 ---
-id: ADR-0001
-title: "Backlog structure: per-type folders and Obsidian MOC"
-status: Proposed
 date: 2026-01-02
-related_items: [KABSD-TSK-0001]
-supersedes: null
+id: ADR-0001
+related_items:
+- KABSD-TSK-0001
+status: Proposed
 superseded_by: null
+supersedes: null
+title: 'Backlog structure: per-type folders and Obsidian MOC'
+uid: 019bc5dc-68d0-71b3-aedf-55e83a378ff5
 ---
 
 # Decision
@@ -22,7 +24,7 @@ clearly in Obsidian. DataviewJS was not reliable in the current setup.
 
 # Links
 
-- Related: [[_kano/backlog/items/task/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
+- Related: [[../items/task/0000/KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Create project-backlog skill]]
 
 # Options Considered
 
@@ -46,4 +48,3 @@ clearly in Obsidian. DataviewJS was not reliable in the current setup.
 # Follow-ups
 
 - Keep `skills/kano-agent-backlog-skill/SKILL.md` aligned with this structure.
-

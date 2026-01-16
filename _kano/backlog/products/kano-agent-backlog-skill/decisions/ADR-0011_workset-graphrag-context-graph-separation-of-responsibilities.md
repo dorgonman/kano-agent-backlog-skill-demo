@@ -1,14 +1,20 @@
 ---
-id: ADR-0011
-title: "Workset vs GraphRAG / Context Graph — Separation of Responsibilities"
-status: Accepted
-decision_date: 2026-01-10
 date: 2026-01-09
-related_items: [KABSD-TSK-0132, KABSD-FTR-0013, KABSD-FTR-0015, ADR-0004, ADR-0009]
-supersedes: null
-superseded_by: null
 deciders:
-  - agent=copilot
+- agent=copilot
+decision_date: 2026-01-10
+id: ADR-0011
+related_items:
+- KABSD-TSK-0217
+- KABSD-FTR-0013
+- KABSD-FTR-0015
+- ADR-0004
+- ADR-0009
+status: Accepted
+superseded_by: null
+supersedes: null
+title: Workset vs GraphRAG / Context Graph — Separation of Responsibilities
+uid: 019bc5dc-68e4-7435-b55f-e285e0f373d8
 ---
 
 # Decision
@@ -331,7 +337,7 @@ After fallback, agent MAY update workset:
 - [ADR-0004: File-First Architecture with SQLite Index](ADR-0004_file-first-architecture-with-sqlite-index.md)
 - [ADR-0009: Local-First Embedding Search Strategic Evaluation](ADR-0009_local-first-embedding-search-architecture.md)
 - [Workset Evaluation Report](../artifacts/workset_evaluation_report.md)
-- [KABSD-TSK-0132: Task tracking this specification](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0217: Task tracking this specification](../items/task/0200/KABSD-TSK-0217_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
 
 # Future Work
 
@@ -367,4 +373,4 @@ This ADR is proposed for review. Once accepted, it becomes the architectural con
 
 ---
 
-*This ADR was created as part of [KABSD-TSK-0132](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md) to prevent role confusion between Workset, GraphRAG, and Context Graph.*
+*This ADR was created as part of [KABSD-TSK-0217](../items/task/0200/KABSD-TSK-0217_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md) to prevent role confusion between Workset, GraphRAG, and Context Graph.*

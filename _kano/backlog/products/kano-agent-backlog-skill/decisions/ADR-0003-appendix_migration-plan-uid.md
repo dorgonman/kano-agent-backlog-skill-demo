@@ -1,3 +1,7 @@
+---
+uid: 019bc5dc-68d9-70ca-b86b-88b64de16d79
+---
+
 # Migration Plan: Add uid to Existing Items
 
 A migration plan to add a UUIDv7 `uid` field to existing backlog items.
@@ -65,10 +69,10 @@ def extract_uidshort(uid: str, length: int = 8) -> str:
 
 ```yaml
 # Before migration
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 
 # After migration (backward compatible)
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 parent_uid: 019473f2-79b0-7cc3-98c4-dc0c0c07398f  # optional
 ```
 
@@ -98,7 +102,7 @@ type: Task
 title: "ULID vs UUIDv7 comparison document"
 state: Done
 priority: P3
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 parent_uid: 019473e8-1234-7abc-5678-def012345678  # optional
 # ... rest of frontmatter
 ---

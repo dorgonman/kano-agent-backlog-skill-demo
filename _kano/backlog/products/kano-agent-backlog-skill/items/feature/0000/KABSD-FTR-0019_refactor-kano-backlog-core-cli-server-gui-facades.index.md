@@ -7,7 +7,7 @@ updated: 2026-01-08
 
 # MOC
 
-- [[KABSD-TSK-0001_implement-kano-backlog-core-phase-3-state-and-audit-modules|KABSD-TSK-0001 Implement kano-backlog-core Phase 3: State and Audit modules]] (state: Proposed)
+- [[KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Implement kano-backlog-core Phase 3: State and Audit modules]] (state: Proposed)
 - [[KABSD-TSK-0115_define-core-interfaces-and-module-boundaries|KABSD-TSK-0115 Define core interfaces and module boundaries]] (state: Done)
 - [[KABSD-TSK-0116_plan-cli-migration-to-thin-wrappers|KABSD-TSK-0116 Plan CLI migration to thin wrappers]] (state: Proposed)
 - [[KABSD-TSK-0117_design-server-facade-layering-http-mcp|KABSD-TSK-0117 Design server facade layering (HTTP/MCP)]] (state: Proposed)

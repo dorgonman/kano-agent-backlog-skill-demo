@@ -26,7 +26,7 @@ decisions: [ADR-0011, ADR-0012]
 
 - Workset flow (ADR-0011/ADR-0012) requires concrete scripts so agents can open a cache, refresh plan checkpoints, and promote deliverables back to canonical files.
 - Current `workset_init.py`, `workset_refresh.py`, `workset_promote.py`, and `workset_next.py` are placeholders: they write static templates, never read canonical sections, do not guard custom checklists, and ignore decision markers or state sync.
-- Feature [KABSD-FTR-0015](../../feature/0000/KABSD-FTR-0015_execution-layer-workset-cache-promote.md) lists these scripts as acceptance criteria, so we need an implementation that actually uses the canonical SQLite index (KABSD-FTR-0013) and enforces TTL/worklog discipline.
+- Feature [KABSD-FTR-0015](_kano/backlog/products/kano-agent-backlog-skill/items/feature/0000/KABSD-FTR-0015_execution-layer-workset-cache-promote.md) lists these scripts as acceptance criteria, so we need an implementation that actually uses the canonical SQLite index (KABSD-FTR-0013) and enforces TTL/worklog discipline.
 
 # Goal
 

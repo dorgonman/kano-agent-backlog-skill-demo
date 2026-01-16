@@ -74,4 +74,4 @@ Define and document the migration plan for adding `uid` to existing backlog item
 
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 Open Question #2. Scope adjusted: uid in frontmatter only, filename unchanged.
 2026-01-06 01:36 [agent=antigravity] Created migration plan document ADR-0003-appendix_migration-plan-uid.md with UUIDv7 schema, phases, and backward compatibility strategy.
-2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0042 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

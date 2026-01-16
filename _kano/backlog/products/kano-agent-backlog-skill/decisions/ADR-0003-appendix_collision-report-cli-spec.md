@@ -1,3 +1,7 @@
+---
+uid: 019bc5dc-68d7-74a5-ba60-d1a782ba21c6
+---
+
 # Collision Report & Resolver CLI
 
 **ID collision reporting and resolver CLI tool specifications**

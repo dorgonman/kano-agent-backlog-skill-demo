@@ -34,7 +34,7 @@ Cross-repo
 
 Within a repo (project boundary):
 
-- Platform root: `_kano/backlog/`
+- Project root: `_kano/backlog/`
 - Product roots: `_kano/backlog/products/<product_name>/`
   - Items: `_kano/backlog/products/<product_name>/items/`
   - Views: `_kano/backlog/products/<product_name>/views/`
@@ -50,7 +50,7 @@ Platform-level aggregation:
 Impacted scripts / concepts:
 
 - Product root discovery and resolution:
-  - `context.resolve_product_name`, `get_product_root`, `find_platform_root`
+  - `context.resolve_product_name`, `get_product_root`, `find_project_root`
 - View generation and refresh:
   - `view_generate.py`: `--product`, `--products`, `--all-products`
   - `view_refresh_dashboards.py`: same scoping rules + output routing
@@ -61,7 +61,7 @@ Potential follow-up engineering work:
 
 - Ensure all documentation consistently uses this model (Project vs Product terms).
 - Ensure any future server/API layer enforces:
-  - allowed-roots sandbox at the platform root and/or per product root
+  - allowed-roots sandbox at the project root and/or per product root
   - product-level ACL in authenticated mode (future)
 
 ## Examples

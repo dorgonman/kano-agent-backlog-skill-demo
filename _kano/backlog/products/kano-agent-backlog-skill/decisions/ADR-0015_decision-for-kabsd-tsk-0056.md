@@ -1,18 +1,18 @@
 ---
-id: ADR-0001
-uid: adr-0001-019b8f52
-type: Decision
-title: "Decision for KABSD-TSK-0056"
-state: Draft
 author: copilot
+blocked_by: []
 date: 2026-01-10
 decision_date: 2026-01-10
-status: Proposed
+id: ADR-0015
 relates:
-  - KABSD-TSK-0056
-blocked_by: []
+- KABSD-TSK-0056
 replaces: []
 replaces_decision: []
+state: Draft
+status: Proposed
+title: Decision for KABSD-TSK-0056
+type: Decision
+uid: 019bc5dc-68e7-75e2-b05c-fccdf636a0c4
 ---
 
 # Status

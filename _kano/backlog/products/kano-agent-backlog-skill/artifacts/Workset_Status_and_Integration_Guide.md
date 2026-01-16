@@ -57,7 +57,7 @@ Scope sketch:
 - `workset_init.py`, `workset_refresh.py`, `workset_promote.py`, `workset_cleanup.py`
 - Promote deliverables back to canonical items
 
-### 4) KABSD-TSK-0132 – Clarify: Workset vs GraphRAG vs Context Graph
+### 4) KABSD-TSK-0217 – Clarify: Workset vs GraphRAG vs Context Graph
 
 - State: Done
 - Priority: P2

@@ -1,14 +1,26 @@
 ---
-type: Feature
+area: general
+created: 2026-01-13 08:50:00
+decisions: []
+external:
+  azure_id: null
+  jira_key: null
 id: KABSD-FTR-0038
-uid: 019bbc2e-a8bf-7807-8e57-5907f03272cf
-title: Repo Snapshot + Evidence-driven Reports
-state: Done
-created: 2026-01-13T08:50:00
-updated: 2026-01-13T18:00:00
-priority: High
+iteration: backlog
+links:
+  blocked_by: []
+  blocks: []
+  relates: []
 owner: Antigravity
+parent: null
+priority: High
 product: kano-agent-backlog-skill
+state: Done
+tags: []
+title: Repo Snapshot + Evidence-driven Reports
+type: Feature
+uid: 019bbc2e-a8bf-7807-8e57-5907f03272cf
+updated: 2026-01-13 18:00:00
 ---
 
 # Feature: Repo Snapshot + Evidence-driven Reports
@@ -34,4 +46,8 @@ Implement a deterministic "Repo Snapshot" mechanism that produces an "evidence p
 - **Evidence Pack Generator**: Created `snapshot.py` and `kano snapshot create` command. Captures stubs, CLI tree, and maps feature capabilities to evidence.
 - **Templates**: Created Developer, PM, and QA report templates in `templates/` directory.
 - **Report Generator**: Implemented `kano snapshot report` command with a native zero-dependency template engine.
-- **Verification**: Verified end-to-end flow with product scope. 
+- **Verification**: Verified end-to-end flow with product scope.
+
+# Worklog
+
+2026-01-16 13:58 [agent=q-developer] [model=nova-pro] Auto-fixed missing fields: parent, tags, area, iteration, external, links, decisions

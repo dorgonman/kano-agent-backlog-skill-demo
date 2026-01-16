@@ -2,24 +2,23 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: main
-vcs.revno: 99
-vcs.hash: 2d40df5f08500c5808c81f5382010c278da4bebc
+vcs.revision: 39e2bc24b1e529777f2d5e5cd8e5986553770d89
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: codex
 
 ## Done
 
 ### Epic
 
+- [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epic/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
+- [KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)](../items/epic/0000/KABSD-EPIC-0002_milestone-0-0-1-core-demo.md)
 - [KABSD-EPIC-0009 CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.md)
 
 ### Feature
 
-- [KABSD-FTR-0000 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0001 Local-first backlog system](../items/feature/0000/KABSD-FTR-0001_local-backlog-system.md)
 - [KABSD-FTR-0002 Agent tool invocation audit logging system](../items/feature/0000/KABSD-FTR-0002_agent-tool-invocation-audit-logging-system.md)
 - [KABSD-FTR-0003 Self-contained skill bootstrap and automation](../items/feature/0000/KABSD-FTR-0003_self-contained-skill-bootstrap-and-automation.md)
@@ -42,6 +41,10 @@ Agent: copilot
 - [KABSD-FTR-0037 Topic Lifecycle and Materials Buffer System](../items/feature/0000/KABSD-FTR-0037_topic-lifecycle-and-materials-buffer-system.md)
 - [KABSD-FTR-0038 Repo Snapshot + Evidence-driven Reports](../items/feature/0000/KABSD-FTR-0038_repo-snapshot-evidence-driven-reports.md)
 - [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
+- [KABSD-FTR-0040 Topic Spec Support](../items/feature/0000/KABSD-FTR-0040_topic-spec-support.md)
+- [KABSD-FTR-0041 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0041_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0045 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 
 ### UserStory
 
@@ -183,8 +186,7 @@ Agent: copilot
 - [KABSD-TSK-0183 Create ADR-0016 for Skill-Scoped CLI Namespace Convention](../items/task/0100/KABSD-TSK-0183_create-adr-0016-for-skill-scoped-cli-namespace-convention.md)
 - [KABSD-TSK-0184 Update ADR-0013 to reference skill-scoped CLI naming](../items/task/0100/KABSD-TSK-0184_update-adr-0013-to-reference-skill-scoped-cli-naming.md)
 - [KABSD-TSK-0185 Normalize work item type labels to singular](../items/task/0100/KABSD-TSK-0185_normalize-work-item-type-labels-to-singular.md)
-- [KABSD-TSK-0186 Clean up legacy platform roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-platform-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
-- [KABSD-TSK-0187 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0186 Clean up legacy project roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-project-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
 - [KABSD-TSK-0189 Ensure worklog entries record model (default unknown) and warn when missing](../items/task/0100/KABSD-TSK-0189_ensure-worklog-entries-record-model-default-unknown-and-warn-when-missing.md)
 - [KABSD-TSK-0190 Topic lifecycle + materials buffer (workset merge)](../items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md)
 - [KABSD-TSK-0191 Define TOML config schema and migration strategy](../items/task/0100/KABSD-TSK-0191_define-toml-config-schema-and-migration-strategy.md)
@@ -201,6 +203,16 @@ Agent: copilot
 - [KABSD-TSK-0204 Clarify 'kano workset next' purpose in README](../items/task/0200/KABSD-TSK-0204_clarify-kano-workset-next-purpose-in-readme.md)
 - [KABSD-TSK-0205 Make skill README standalone-focused](../items/task/0200/KABSD-TSK-0205_make-skill-readme-standalone-focused.md)
 - [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
+- [KABSD-TSK-0209 Add link integrity validator for backlog refs](../items/task/0200/KABSD-TSK-0209_add-link-integrity-validator-for-backlog-refs.md)
+- [KABSD-TSK-0210 Relax model attribution warnings for worklog commands](../items/task/0200/KABSD-TSK-0210_relax-model-attribution-warnings-for-worklog-commands.md)
+- [KABSD-TSK-0212 Add backlog-root override flag for sandbox operations](../items/task/0200/KABSD-TSK-0212_add-backlog-root-override-flag-for-sandbox-operations.md)
+- [KABSD-TSK-0213 Fix view refresh VcsMeta branch mismatch](../items/task/0200/KABSD-TSK-0213_fix-view-refresh-vcsmeta-branch-mismatch.md)
+- [KABSD-TSK-0217 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0200/KABSD-TSK-0217_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
+- [KABSD-TSK-0221 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0200/KABSD-TSK-0221_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
+- [KABSD-TSK-0223 Add UID-based duplicate ID validator and auto-remap](../items/task/0200/KABSD-TSK-0223_add-uid-based-duplicate-id-validator-and-auto-remap.md)
+- [KABSD-TSK-0224 Add admin items trash command](../items/task/0200/KABSD-TSK-0224_add-admin-items-trash-command.md)
+- [KABSD-TSK-0225 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0232 Add conflict handling policy to config and skill](../items/task/0200/KABSD-TSK-0232_add-conflict-handling-policy-to-config-and-skill.md)
 
 ### Bug
 

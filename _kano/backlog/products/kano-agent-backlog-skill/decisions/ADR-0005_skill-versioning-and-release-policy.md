@@ -1,11 +1,15 @@
 ---
-id: ADR-0005
-title: "Skill Versioning and Release Policy"
-status: Proposed
 date: 2026-01-06
-related_items: [KABSD-EPIC-0002, KABSD-EPIC-0003, KABSD-TSK-0067]
-supersedes: null
+id: ADR-0005
+related_items:
+- KABSD-EPIC-0002
+- KABSD-EPIC-0003
+- KABSD-TSK-0067
+status: Proposed
 superseded_by: null
+supersedes: null
+title: Skill Versioning and Release Policy
+uid: 019bc5dc-68df-7758-bf32-3fa84d4657e9
 ---
 
 # Decision

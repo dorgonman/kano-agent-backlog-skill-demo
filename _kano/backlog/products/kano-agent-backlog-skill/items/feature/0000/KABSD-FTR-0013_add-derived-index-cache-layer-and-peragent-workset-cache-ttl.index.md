@@ -7,7 +7,7 @@ updated: 2026-01-10
 
 # MOC
 
-- [[KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities|KABSD-TSK-0132 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)]] (state: Done)
+- [[KABSD-TSK-0217_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict|KABSD-TSK-0217 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)]] (state: Done)
 - [[KABSD-TSK-0151_accept-adr-0011-and-adr-0012-for-workset-architecture|KABSD-TSK-0151 Accept ADR-0011 and ADR-0012 for Workset Architecture]] (state: Done)
 - [[KABSD-TSK-0152_resolve-workset-directory-layout-inconsistency|KABSD-TSK-0152 Resolve workset directory layout inconsistency]] (state: Done)
 - [[KABSD-TSK-0153_verify-canonical-schema-sql-existence-and-consistency|KABSD-TSK-0153 Verify canonical_schema.sql existence and consistency]] (state: Done)

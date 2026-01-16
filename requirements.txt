@@ -1,0 +1,15 @@
+# Core dependencies
+dataclasses-json>=0.6.0
+
+# Testing dependencies
+pytest>=7.0.0
+hypothesis>=6.0.0
+
+# Optional tokenizer backends
+tiktoken>=0.5.0
+transformers>=4.20.0
+
+# Development dependencies
+black>=22.0.0
+isort>=5.10.0
+mypy>=1.0.0

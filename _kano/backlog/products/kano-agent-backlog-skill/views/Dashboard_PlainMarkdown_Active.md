@@ -2,19 +2,19 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: main
-vcs.revno: 99
-vcs.hash: 2d40df5f08500c5808c81f5382010c278da4bebc
+vcs.revision: 39e2bc24b1e529777f2d5e5cd8e5986553770d89
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: codex
 
 ## New
 
 ### Epic
 
+- [DM-EPIC-0001 Demo Epic](../items/epic/0000/DM-EPIC-0001_demo-epic.md)
+- [DM-EPIC-0002 Demo Epic](../items/epic/0000/DM-EPIC-0002_demo-epic.md)
 - [KABSD-EPIC-0005 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
@@ -58,10 +58,13 @@ Agent: copilot
 - [KABSD-USR-0025 Bid gating protocol: submit plan before work starts](../items/userstory/0000/KABSD-USR-0025_bid-gating-protocol-submit-plan-before-work-starts.md)
 - [KABSD-USR-0026 Assignment record and conflict isolation for dispatched work](../items/userstory/0000/KABSD-USR-0026_assignment-record-and-conflict-isolation-for-dispatched-work.md)
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
+- [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
 
 ### Task
 
 - [DM-TSK-0001 Phase 3.2 Test Item](../items/task/0000/DM-TSK-0001_phase-3-2-test-item.md)
+- [KA-TSK-0001 Add guidance: record bug origin via git history](../items/task/0000/KA-TSK-0001_add-guidance-record-bug-origin-via-git-history.md)
+- [KA-TSK-0002 Add guidance: record bug origin via git history](../items/task/0000/KA-TSK-0002_add-guidance-record-bug-origin-via-git-history.md)
 - [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/task/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
 - [KABSD-TSK-0075 Implement index_db.py for SQLite sync](../items/task/0000/KABSD-TSK-0075_implement-index-db-py-for-sqlite-sync.md)
 - [KABSD-TSK-0077 Evaluate continuous agent loop until work item completion](../items/task/0000/KABSD-TSK-0077_evaluate-continuous-agent-loop-until-work-item-completion.md)
@@ -107,11 +110,28 @@ Agent: copilot
 - [KABSD-TSK-0172 Demo Task: Create CLI facade with Typer](../items/task/0100/KABSD-TSK-0172_demo-task-create-cli-facade-with-typer.md)
 - [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
 - [KABSD-TSK-0187 Refactor config resolution using topic/workset overlays](../items/task/0100/KABSD-TSK-0187_refactor-config-resolution-using-topic-workset-overlays.md)
-- [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0200 Evaluate snapshot artifacts: folder-based packs, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0200_evaluate-snapshot-artifacts-folder-based-packs-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0201 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0201_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0207 Research and spec chunking, token budget fitting, and trimming for embeddings](../items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md)
 - [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
+- [KABSD-TSK-0218 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0218_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0222 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0222_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0224 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0225 Create Obsidian Base demo views](../items/task/0200/KABSD-TSK-0225_create-obsidian-base-demo-views.md)
+- [KABSD-TSK-0226 Normalize migrated backlog items for demo](../items/task/0200/KABSD-TSK-0226_normalize-migrated-backlog-items-for-demo.md)
+- [KABSD-TSK-0227 Remove demo tool wrappers and use skill scripts directly](../items/task/0200/KABSD-TSK-0227_remove-demo-tool-wrappers-and-use-skill-scripts-directly.md)
+- [KABSD-TSK-0228 Seed demo backlog items and views](../items/task/0200/KABSD-TSK-0228_seed-demo-backlog-items-and-views.md)
+- [KABSD-TSK-0229 Refresh demo dashboard views](../items/task/0200/KABSD-TSK-0229_refresh-demo-dashboard-views.md)
+- [KABSD-TSK-0230 Ignore demo artifacts in git](../items/task/0200/KABSD-TSK-0230_ignore-demo-artifacts-in-git.md)
+- [KABSD-TSK-0231 Restore generate_demo_views as self-contained skill script](../items/task/0200/KABSD-TSK-0231_restore-generate-demo-views-as-self-contained-skill-script.md)
+
+### Nones
+
+- [None None](../items/task/0000/KABSD-TSK-0096_ARCHITECTURE_GUIDE.md)
+- [None None](../items/task/0100/KABSD-TSK-0101_CLI_AUDIT_REPORT.md)
+- [None None](../items/task/0200/KABSD-TSK-0214_architecture-guide.md)
+- [None None](../items/task/0200/KABSD-TSK-0215_architecture-guide.md)
+- [None None](../items/task/0200/KABSD-TSK-0216_cli-audit-report.md)
 
 ## InProgress
 
@@ -135,4 +155,5 @@ Agent: copilot
 - [KABSD-TSK-0110 Evaluate VCS Query Cache Layer](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md)
 - [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
+- [KABSD-TSK-0211 Clean up broken backlog links (missing/ambiguous targets)](../items/task/0200/KABSD-TSK-0211_clean-up-broken-backlog-links-missing-ambiguous-targets.md)
 

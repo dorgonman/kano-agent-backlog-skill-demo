@@ -5,7 +5,7 @@ decisions: []
 external:
   azure_id: null
   jira_key: null
-id: KABSD-TSK-0187
+id: KABSD-TSK-0225
 iteration: null
 links:
   blocked_by: []
@@ -99,7 +99,7 @@ Create a specification document (ADR or architecture spec) that includes:
 
 # Acceptance Criteria
 
-- [x] Created backlog task (KABSD-TSK-0132)
+- [x] Created backlog task (KABSD-TSK-0217)
 - [x] The doc/spec clearly states that workset and graph do not conflict and explains why
 - [x] Responsibilities are unambiguous:
   - Graph = selection/expansion structure
@@ -124,3 +124,5 @@ Create a specification document (ADR or architecture spec) that includes:
 2026-01-12 02:55 [agent=codex-cli] Start artifact migration: classify legacy _kano/backlog/artifacts and move into product or _shared as appropriate.
 2026-01-12 02:55 [agent=codex-cli] Correcting mistaken state flip caused by ID collision; item remains completed.
 2026-01-12 07:20 [agent=copilot] Done: Shared artifacts migration complete. _kano/backlog/_shared/artifacts/ established as cross-product artifact root. All legacy artifacts migrated to product or shared locations. Acceptance criteria verified.
+2026-01-16 11:42 [agent=codex] [model=GPT-5.2-Codex] Remapped ID: KABSD-TSK-0221 -> KABSD-TSK-0217.
+2026-01-16 13:34 [agent=codex] [model=unknown] Remapped ID: KABSD-TSK-0132 -> KABSD-TSK-0221.

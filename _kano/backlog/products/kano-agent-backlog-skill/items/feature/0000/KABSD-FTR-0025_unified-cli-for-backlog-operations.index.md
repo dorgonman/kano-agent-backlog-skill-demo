@@ -7,7 +7,7 @@ updated: 2026-01-10
 
 # MOC
 
-- [[KABSD-TSK-0132_implement-kano-item-create-subcommand|KABSD-TSK-0132 Implement `kano item create` subcommand]] (state: Proposed)
+- [[KABSD-TSK-0218_implement-kano-item-create-subcommand|KABSD-TSK-0218 Implement `kano item create` subcommand]] (state: Proposed)
 - [[KABSD-TSK-0133_implement-kano-item-update-state-subcommand|KABSD-TSK-0133 Implement `kano item update-state` subcommand]] (state: Proposed)
 - [[KABSD-TSK-0134_implement-kano-item-validate-subcommand|KABSD-TSK-0134 Implement `kano item validate` subcommand]] (state: Proposed)
 - [[KABSD-TSK-0135_implement-kano-view-refresh-subcommand|KABSD-TSK-0135 Implement `kano view refresh` subcommand]] (state: Proposed)

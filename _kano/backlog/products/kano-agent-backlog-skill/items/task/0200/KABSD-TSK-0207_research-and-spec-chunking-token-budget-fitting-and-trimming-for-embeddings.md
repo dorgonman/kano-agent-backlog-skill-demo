@@ -23,7 +23,7 @@ tags:
 title: Research and spec chunking, token budget fitting, and trimming for embeddings
 type: Task
 uid: 019bc21c-6e9c-765a-877f-994bacdf5002
-updated: '2026-01-15'
+updated: '2026-01-16'
 ---
 
 # Context
@@ -50,3 +50,4 @@ Risk: tokenizer availability and cross-platform differences. Mitigation: allow e
 
 2026-01-15 22:43 [agent=copilot] [model=Claude-Haiku-4.5] Created item and populated Ready gate (Context, Goal, Approach, Acceptance Criteria, Risks)
 2026-01-16 00:00 [agent=copilot] [model=GPT-5.2] Corrected model attribution (previous entry was inaccurate)
+2026-01-16 07:23 [agent=codex] [model=unknown] Implementation plan to make the spec implementable: (1) finalize deterministic chunking contract (inputs, chunk_id/chunk_hash rules, versioning, rebuild triggers) and align with TSK-0056 metadata schema + 2-3 worked examples; (2) migrate repo-level chunking package into skill architecture: core models/config -> src/kano_backlog_core, pipeline/use-cases -> src/kano_backlog_ops, tokenizer adapters -> src/kano_backlog_adapters; (3) expose CLI entrypoints via src/kano_backlog_cli/commands and scripts/kano-backlog; (4) port property-based tests under skills/kano-agent-backlog-skill/tests and verify deterministic outputs; (5) update README/REFERENCE with CLI usage and config. Scope remains local-first only; no server runtime.

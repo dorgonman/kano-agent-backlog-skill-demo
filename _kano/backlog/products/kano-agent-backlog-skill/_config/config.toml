@@ -28,3 +28,7 @@ mode = "rebuild"
 
 [analysis.llm]
 enabled = true
+
+[conflict_policy]
+id_conflict = "rename"
+uid_conflict = "trash_shorter"

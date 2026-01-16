@@ -33,6 +33,7 @@ __pycache__/
 coverage.xml
 .tmp
 .tmp*
+_trash
 
 # Topic raw materials (cache, not source-of-truth)
 _kano/backlog/topics/**/materials/

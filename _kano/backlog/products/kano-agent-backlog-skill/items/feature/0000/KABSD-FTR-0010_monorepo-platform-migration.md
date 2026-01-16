@@ -49,7 +49,7 @@ Key constraints:
 Refactor the architecture to a "Platform + Multi-Product" model with the following structure:
 
 ```
-_kano/backlog/                      # Platform root
+_kano/backlog/                      # Project root
   products/
     kano-agent-backlog-skill/       # First product (migrated from root)
       _config/
@@ -66,8 +66,8 @@ _kano/backlog/                      # Platform root
     kano-commit-convention-skill/
   _shared/
     defaults.json                   # { "default_product": "kano-agent-backlog-skill" }
-  _meta/                            # Platform-level metadata (shared)
-  _index/                           # Platform-level SQLite index (product-aware)
+  _meta/                            # Project-level metadata (shared)
+  _index/                           # Project-level SQLite index (product-aware)
 ```
 
 # Approach
@@ -140,9 +140,9 @@ _kano/backlog/                      # Platform root
   - TSK-0079: Done ✓ (context.py - all 8 AC met, used by all dependent tasks)
   - TSK-0080: Done ✓ (bootstrap_init_backlog.py multi-product support)
   - TSK-0081: Done ✓ (directory migration complete, 116 items moved)
-  - TSK-0082: Done ✓ (config_loader.py multi-product roots)
+  - TSK-0082: Done ✓ (config_loader.py project roots)
   - TSK-0083: InProgress (6/7 AC - CLI args done, internal integration pending)
-  - TSK-0084: Done ✓ (indexer + resolver product isolation, end-to-end tested)
+  - TSK-0084: Done ✓ (indexer + resolver project isolation, end-to-end tested)
   - TSK-0085: Done ✓ (KCCS initialized and verified)
   
   **Status Summary**: 6/7 tasks Done (86% complete)

@@ -5,7 +5,7 @@ type: Task
 title: Generate epic index with task states
 state: Done
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: views
 iteration: null
 tags:

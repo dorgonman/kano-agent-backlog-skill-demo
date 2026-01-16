@@ -1,11 +1,16 @@
 ---
-id: ADR-0014
-title: "Plugin and Hook System Architecture (Phase 4 - Deferred)"
-status: Proposed
 date: 2026-01-11
-tags: [architecture, extensibility, phase4, deferred]
+id: ADR-0014
 relates:
-  - ADR-0013_codebase-architecture-and-module-boundaries.md
+- ADR-0013_codebase-architecture-and-module-boundaries.md
+status: Proposed
+tags:
+- architecture
+- extensibility
+- phase4
+- deferred
+title: Plugin and Hook System Architecture (Phase 4 - Deferred)
+uid: 019bc5dc-68e6-72b9-b88e-37465fd00aa3
 ---
 
 # Plugin and Hook System Architecture (Phase 4 - Deferred)

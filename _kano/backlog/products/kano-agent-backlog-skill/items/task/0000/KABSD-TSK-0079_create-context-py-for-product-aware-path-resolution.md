@@ -34,7 +34,7 @@ We need a centralized way to resolve paths in the new monorepo structure, taking
 Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a single source of truth for path resolution. The module should provide:
 
 1. `find_repo_root()` — locate the workspace root (where `.git` exists).
-2. `find_platform_root(repo_root)` — locate `_kano/backlog` (platform root).
+2. `find_project_root(repo_root)` — locate `_kano/backlog` (project root).
 3. `resolve_product_name(product_arg=None, env_var=None, defaults_file=None)` — resolve product name via arg → environment variable → `_shared/defaults.json` → fallback to `"kano-agent-backlog-skill"`.
 4. `get_product_root(product_name)` — return `_kano/backlog/products/<product_name>`.
 5. `get_sandbox_root(product_name)` — return `_kano/backlog/sandboxes/<product_name>`.
@@ -42,7 +42,7 @@ Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a singl
 
 # Approach
 
-1. Define helper functions for directory discovery (repo root, platform root).
+1. Define helper functions for directory discovery (repo root, project root).
 2. Implement product name resolution with clear priority: argument → environment → defaults file → hardcoded fallback.
 3. Ensure paths are returned as `pathlib.Path` objects (or strings as needed by callers).
 4. Add minimal error handling (raise informative exceptions if paths do not exist).
@@ -52,11 +52,11 @@ Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a singl
 
 - [x] `context.py` exists and is importable: `from scripts.common.context import ...`
 - [x] `find_repo_root()` correctly locates the workspace root.
-- [x] `find_platform_root()` correctly locates `_kano/backlog`.
+- [x] `find_project_root()` correctly locates `_kano/backlog`.
 - [x] `resolve_product_name(product_arg="test")` returns `"test"`.
 - [x] `resolve_product_name()` with no args returns the default product from `_shared/defaults.json`.
-- [x] `get_product_root("kano-agent-backlog-skill")` returns `<platform_root>/products/kano-agent-backlog-skill`.
-- [x] `get_sandbox_root("test-product")` returns `<platform_root>/sandboxes/test-product`.
+- [x] `get_product_root("kano-agent-backlog-skill")` returns `<project_root>/products/kano-agent-backlog-skill`.
+- [x] `get_sandbox_root("test-product")` returns `<project_root>/sandboxes/test-product`.
 - [x] `load_shared_defaults()` correctly parses JSON and returns a dict.
 
 # Worklog
@@ -65,7 +65,7 @@ Implement `skills/kano-agent-backlog-skill/scripts/common/context.py` as a singl
 
 2026-01-06 21:25 [agent=copilot] **IMPLEMENTATION COMPLETE**: Replaced context.py with comprehensive version including:
   - `find_repo_root()` with .git search
-  - `find_platform_root()` with validation
+  - `find_project_root()` with validation
   - `load_shared_defaults()` for JSON parsing
   - `resolve_product_name()` with 4-tier priority chain
   - `get_product_root()`, `get_sandbox_root()`, and optional _or_none() variants

@@ -49,11 +49,11 @@ decisions: []
 
 # Links
 
-- ADR: [[../decisions/ADR-0011_graph-assisted-retrieval-and-context-graph.md|ADR-0011 Graph-assisted retrieval with a derived Context Graph]]
-- ADR: [[../decisions/ADR-0004_file-first-architecture-with-sqlite-index.md|ADR-0004 File-first + SQLite index]]
-- ADR: [[../decisions/ADR-0009_local-first-embedding-search-architecture.md|ADR-0009 Local-first embedding search]]
+- ADR: [[_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0011_graph-assisted-retrieval-and-context-graph.md|ADR-0011 Graph-assisted retrieval with a derived Context Graph]]
+- ADR: [[_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0004_file-first-architecture-with-sqlite-index.md|ADR-0004 File-first + SQLite index]]
+- ADR: [[_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md|ADR-0009 Local-first embedding search]]
 - Feature: [[KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline.md|KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline]]
-- UserStory: [[../userstory/0000/KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md|KABSD-USR-0015 Embeddings/RAG (derivative index)]]
+- UserStory: [[_kano/backlog/products/kano-agent-backlog-skill/items/userstory/0000/KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md|KABSD-USR-0015 Embeddings/RAG (derivative index)]]
 
 # Alternatives
 
