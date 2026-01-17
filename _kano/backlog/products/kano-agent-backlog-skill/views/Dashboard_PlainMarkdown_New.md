@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 103
-vcs.hash: db523302c5425282907b830eb25473eed0b39c4c
+vcs.revno: 104
+vcs.hash: f4e9c7ab40163ff253c13f52a0789328536521a2
 vcs.dirty: true
 -->
 
