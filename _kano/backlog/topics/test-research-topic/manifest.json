@@ -1,0 +1,12 @@
+{
+  "topic": "test-research-topic",
+  "agent": "kiro",
+  "seed_items": [],
+  "pinned_docs": [],
+  "snippet_refs": [],
+  "status": "closed",
+  "closed_at": "2026-01-17T16:11:17.115820Z",
+  "created_at": "2026-01-17T16:09:38.421844Z",
+  "updated_at": "2026-01-17T16:11:17.115820Z",
+  "has_spec": false
+}

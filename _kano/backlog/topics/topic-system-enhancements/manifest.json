@@ -1,0 +1,20 @@
+{
+  "topic": "topic-system-enhancements",
+  "agent": "amazonq",
+  "seed_items": [
+    "019bcc9c-0c0e-7702-ab4d-cba6586a9b58",
+    "019bcc9c-1be1-75a8-aa38-ec132a693c73",
+    "019bcc9c-2b8c-73ee-9aa7-9b7a78318819",
+    "019bcc9c-3b5a-7b8e-8b4c-d5e6f7a8b9c0",
+    "019bcc9c-4c6b-7c9f-9c5d-e6f7a8b9c0d1",
+    "019bcc9c-5c07-7390-b0a5-36a0e2bbdfcd"
+  ],
+  "pinned_docs": [],
+  "snippet_refs": [],
+  "related_topics": [],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-01-17T15:47:18.185640Z",
+  "updated_at": "2026-01-17T16:37:40.091341Z",
+  "has_spec": false
+}

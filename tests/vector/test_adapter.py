@@ -1,6 +1,6 @@
-from kano_backlog_cli.vector.adapter import VectorBackendAdapter
-from kano_backlog_cli.vector.factory import get_backend
-from kano_backlog_cli.vector.types import VectorChunk
+from kano_backlog_core.vector.adapter import VectorBackendAdapter
+from kano_backlog_core.vector.factory import get_backend
+from kano_backlog_core.vector.types import VectorChunk
 
 
 def test_factory_returns_noop():

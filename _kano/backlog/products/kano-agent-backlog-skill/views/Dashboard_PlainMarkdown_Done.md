@@ -2,12 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: e98ef30dc81d9ca536b2a4ba6e8f88476df20d1a
+vcs.branch: feature/embedding
+vcs.revno: 102
+vcs.hash: 247ae7354225892005c773ad3f4f684647093e28
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: kiro
 
 ## Done
 
@@ -43,7 +45,10 @@ Agent: copilot
 - [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 - [KABSD-FTR-0040 Topic Spec Support](../items/feature/0000/KABSD-FTR-0040_topic-spec-support.md)
 - [KABSD-FTR-0041 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0041_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0043 Topic Templates and Archetypes](../items/feature/0000/KABSD-FTR-0043_topic-templates-and-archetypes.md)
+- [KABSD-FTR-0044 Lightweight Topic Cross-References](../items/feature/0000/KABSD-FTR-0044_lightweight-topic-cross-references.md)
 - [KABSD-FTR-0045 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
 - [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 
 ### UserStory
@@ -57,6 +62,9 @@ Agent: copilot
 - [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstory/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstory/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 - [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
+- [KABSD-USR-0036 Implement Topic Template System with Predefined Archetypes](../items/userstory/0000/KABSD-USR-0036_implement-topic-template-system-with-predefined-archetypes.md)
+- [KABSD-USR-0037 Implement Lightweight Topic Cross-Reference System](../items/userstory/0000/KABSD-USR-0037_implement-lightweight-topic-cross-reference-system.md)
+- [KABSD-USR-0038 Implement Topic Snapshot System with Named Checkpoints](../items/userstory/0000/KABSD-USR-0038_implement-topic-snapshot-system-with-named-checkpoints.md)
 
 ### Task
 
@@ -217,6 +225,7 @@ Agent: copilot
 - [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
 - [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
 - [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
+- [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
 
 ### Bug
 
@@ -224,4 +233,5 @@ Agent: copilot
 - [KABSD-BUG-0002 Add dependency links between FTR-0013 and FTR-0015](../items/bug/0000/KABSD-BUG-0002_add-dependency-links-between-ftr-0013-and-ftr-0015.md)
 - [KABSD-BUG-0003 Snapshot reports render raw template blocks (nested each/if/unless)](../items/bug/0000/KABSD-BUG-0003_snapshot-reports-render-raw-template-blocks-nested-each-if-unless.md)
 - [KABSD-BUG-0004 Product snapshots include stubs from other skills](../items/bug/0000/KABSD-BUG-0004_product-snapshots-include-stubs-from-other-skills.md)
+- [KABSD-BUG-0005 Views: dashboards emit VCS metadata per FTR-0039](../items/bug/0000/KABSD-BUG-0005_views-dashboards-emit-vcs-metadata-per-ftr-0039.md)
 

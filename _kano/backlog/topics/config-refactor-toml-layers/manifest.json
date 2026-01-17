@@ -71,8 +71,9 @@
       "collector": "codex-cli"
     }
   ],
-  "status": "open",
-  "closed_at": null,
+  "status": "closed",
+  "closed_at": "2026-01-17T15:35:00.000000Z",
   "created_at": "2026-01-12T18:05:47.033244Z",
-  "updated_at": "2026-01-12T18:19:30.570027Z"
+  "updated_at": "2026-01-17T15:19:00.518119Z",
+  "has_spec": false
 }
