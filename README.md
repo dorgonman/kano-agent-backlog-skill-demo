@@ -1,5 +1,12 @@
 # kano-agent-backlog-skill-demo
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![AI Agent Skills](https://img.shields.io/badge/AI-Agent%20Skills-brightgreen.svg)](https://github.com/topics/ai-agent)
+[![Multi-Agent](https://img.shields.io/badge/Multi--Agent-Collaboration-orange.svg)](https://github.com/topics/multi-agent)
+
+> **AI Agent Skills** for **Spec-Driven Agentic Programming** | File-based backlog management | Multi-agent collaboration | Local-first architecture
+
 ⚠️ **VERSION 0.0.1 - INITIAL RELEASE** ⚠️
 
 This is the **initial 0.0.1 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.

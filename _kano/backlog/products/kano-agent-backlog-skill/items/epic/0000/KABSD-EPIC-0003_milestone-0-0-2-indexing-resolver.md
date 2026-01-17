@@ -1,6 +1,6 @@
 ---
 area: release
-created: 2026-01-06
+created: '2026-01-06'
 decisions: []
 external:
   azure_id: null
@@ -22,18 +22,16 @@ tags:
 title: Milestone 0.0.2 (Indexing + Resolver)
 type: Epic
 uid: 019bac4a-6857-7432-b43f-3082737ca786
-updated: 2026-01-06
+updated: '2026-01-16'
 ---
 
 # Context
 
-This milestone extends the file-first backlog with optional derived layers:
-- a rebuildable SQLite index for fast querying and view generation
-- an ID/uid resolver design for multi-agent, multi-branch item creation
+This epic delivers the end-to-end local-first DB embedding pipeline: deterministic chunking, embedding generation, and a pluggable vector backend for indexing and retrieval.
 
 # Goal
 
-Improve scalability (many items) and collaboration (cross-branch uniqueness) without turning DB into the source of truth.
+Complete the full DB embedding chain so that documents can be chunked, embedded, indexed, queried, and rebuilt locally.
 
 # Non-Goals
 
@@ -42,27 +40,20 @@ Improve scalability (many items) and collaboration (cross-branch uniqueness) wit
 
 # Approach
 
-- Keep Markdown files as source of truth.
-- Use SQLite as an optional index and query accelerator.
-- Specify and implement resolver + migration plan for `uid`/`id` usage.
-
-# Alternatives
+- Deliver chunking/token-budget MVP (USR-0029, TSK-0207, TSK-0233).
+- Deliver pluggable vector backend MVP (USR-0030, TSK-0208).
+- Ensure local-first constraints and rebuildable indexes.
 
 # Acceptance Criteria
 
-- Index can be rebuilt from scratch safely (no source file mutation).
-- Views can use index when available, otherwise fall back to file scan.
-- Resolver spec and migration plan are documented and implementable.
+- Chunking and token-budget pipeline is implemented and validated.
+- Vector backend adapter is implemented with local persistence and rebuild.
+- End-to-end indexing and retrieval works on a sample dataset.
 
 # Risks / Dependencies
 
-- Identifier strategy needs careful UX to avoid ambiguity and merge conflicts.
-- Local-only indexing must not leak secrets or become a new dependency.
-
-# Links
-
-- Feature: [[KABSD-FTR-0007_optional-db-index-and-embedding-rag-pipeline|KABSD-FTR-0007 Optional DB index and embedding/RAG pipeline]]
-- Feature: [[KABSD-FTR-0008_identifier-strategy-and-id-resolver-adr-0003|KABSD-FTR-0008 Identifier strategy and ID resolver (ADR-0003)]]
+- Tokenizer differences and model limits may require per-model handling.
+- Backend performance and storage constraints may require tuning.
 
 # Worklog
 
@@ -70,3 +61,4 @@ Improve scalability (many items) and collaboration (cross-branch uniqueness) wit
 2026-01-06 08:34 [agent=codex-cli] Populated milestone scope and linked the indexing/resolver Feature.
 2026-01-06 08:33 [agent=codex-cli] State -> Planned. Milestone 0.0.2 queued after 0.0.1 core demo; scope focuses on indexing + resolver.
 2026-01-06 08:36 [agent=antigravity] Auto-sync from child KABSD-TSK-0049 -> InProgress.
+2026-01-16 23:08 [agent=codex] [model=gpt-5.2-codex] Updated epic scope to cover the full local-first DB embedding chain (chunking -> embeddings -> vector backend) and mapped to new user stories.

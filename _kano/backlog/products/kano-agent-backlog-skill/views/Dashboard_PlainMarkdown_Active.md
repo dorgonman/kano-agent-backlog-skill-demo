@@ -2,12 +2,12 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 39e2bc24b1e529777f2d5e5cd8e5986553770d89
+vcs.revision: e98ef30dc81d9ca536b2a4ba6e8f88476df20d1a
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex
+Agent: copilot
 
 ## New
 
@@ -39,6 +39,7 @@ Agent: codex
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0042 Embedding providers, tokenizers, and benchmark harness](../items/feature/0000/KABSD-FTR-0042_embedding-providers-tokenizers-and-benchmark-harness.md)
 
 ### UserStory
 
@@ -59,6 +60,12 @@ Agent: codex
 - [KABSD-USR-0026 Assignment record and conflict isolation for dispatched work](../items/userstory/0000/KABSD-USR-0026_assignment-record-and-conflict-isolation-for-dispatched-work.md)
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
 - [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
+- [KABSD-USR-0030 Pluggable vector backend MVP for embeddings](../items/userstory/0000/KABSD-USR-0030_pluggable-vector-backend-mvp-for-embeddings.md)
+- [KABSD-USR-0031 Embedding adapter interface with token-counting telemetry](../items/userstory/0000/KABSD-USR-0031_embedding-adapter-interface-with-token-counting-telemetry.md)
+- [KABSD-USR-0032 Tokenizer adapters for accurate token counting (OpenAI and local)](../items/userstory/0000/KABSD-USR-0032_tokenizer-adapters-for-accurate-token-counting-openai-and-local.md)
+- [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
+- [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
+- [KABSD-USR-0035 Decide cross-lingual retrieval and index strategy via ADRs](../items/userstory/0000/KABSD-USR-0035_decide-cross-lingual-retrieval-and-index-strategy-via-adrs.md)
 
 ### Task
 
@@ -113,7 +120,6 @@ Agent: codex
 - [KABSD-TSK-0200 Evaluate snapshot artifacts: folder-based packs, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0200_evaluate-snapshot-artifacts-folder-based-packs-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0201 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0201_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0207 Research and spec chunking, token budget fitting, and trimming for embeddings](../items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md)
-- [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
 - [KABSD-TSK-0218 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0218_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0222 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0222_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0224 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
@@ -124,6 +130,20 @@ Agent: codex
 - [KABSD-TSK-0229 Refresh demo dashboard views](../items/task/0200/KABSD-TSK-0229_refresh-demo-dashboard-views.md)
 - [KABSD-TSK-0230 Ignore demo artifacts in git](../items/task/0200/KABSD-TSK-0230_ignore-demo-artifacts-in-git.md)
 - [KABSD-TSK-0231 Restore generate_demo_views as self-contained skill script](../items/task/0200/KABSD-TSK-0231_restore-generate-demo-views-as-self-contained-skill-script.md)
+- [KABSD-TSK-0241 Implement embedding adapter interface and result types](../items/task/0200/KABSD-TSK-0241_implement-embedding-adapter-interface-and-result-types.md)
+- [KABSD-TSK-0242 Add embedding adapter factory and config resolver](../items/task/0200/KABSD-TSK-0242_add-embedding-adapter-factory-and-config-resolver.md)
+- [KABSD-TSK-0243 Implement noop embedding adapter and telemetry tests](../items/task/0200/KABSD-TSK-0243_implement-noop-embedding-adapter-and-telemetry-tests.md)
+- [KABSD-TSK-0244 Implement tiktoken tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0244_implement-tiktoken-tokenizer-adapter-optional-dependency.md)
+- [KABSD-TSK-0245 Implement HuggingFace tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0245_implement-huggingface-tokenizer-adapter-optional-dependency.md)
+- [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
+- [KABSD-TSK-0247 Define embedding pipeline config schema (TOML) and validation](../items/task/0200/KABSD-TSK-0247_define-embedding-pipeline-config-schema-toml-and-validation.md)
+- [KABSD-TSK-0248 Add effective-config debug output for embedding pipeline](../items/task/0200/KABSD-TSK-0248_add-effective-config-debug-output-for-embedding-pipeline.md)
+- [KABSD-TSK-0249 Add topic-level config examples for embedding evaluation](../items/task/0200/KABSD-TSK-0249_add-topic-level-config-examples-for-embedding-evaluation.md)
+- [KABSD-TSK-0250 Define benchmark corpus and scripted query set (English + CJK)](../items/task/0200/KABSD-TSK-0250_define-benchmark-corpus-and-scripted-query-set-english-cjk.md)
+- [KABSD-TSK-0251 Implement benchmark runner and report format](../items/task/0200/KABSD-TSK-0251_implement-benchmark-runner-and-report-format.md)
+- [KABSD-TSK-0252 Document benchmark results and trade-offs in topic synthesis](../items/task/0200/KABSD-TSK-0252_document-benchmark-results-and-trade-offs-in-topic-synthesis.md)
+- [KABSD-TSK-0253 Draft ADR: default embedder policy (multilingual vs tiered)](../items/task/0200/KABSD-TSK-0253_draft-adr-default-embedder-policy-multilingual-vs-tiered.md)
+- [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
 
 ### Nones
 
@@ -147,6 +167,7 @@ Agent: codex
 ### UserStory
 
 - [KABSD-USR-0023 Automated backlog realignment tool](../items/userstory/0000/KABSD-USR-0023_automated-backlog-realign-tool.md)
+- [KABSD-USR-0029 Chunking and token-budget embedding pipeline MVP](../items/userstory/0000/KABSD-USR-0029_chunking-and-token-budget-embedding-pipeline-mvp.md)
 
 ### Task
 
@@ -156,4 +177,9 @@ Agent: codex
 - [KABSD-TSK-0132 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
 - [KABSD-TSK-0211 Clean up broken backlog links (missing/ambiguous targets)](../items/task/0200/KABSD-TSK-0211_clean-up-broken-backlog-links-missing-ambiguous-targets.md)
+- [KABSD-TSK-0233 Implement chunking MVP per token budget spec](../items/task/0200/KABSD-TSK-0233_implement-chunking-mvp-per-token-budget-spec.md)
+- [KABSD-TSK-0237 Implement tokenizer adapter and model token budget interface](../items/task/0200/KABSD-TSK-0237_implement-tokenizer-adapter-and-model-token-budget-interface.md)
+- [KABSD-TSK-0238 Implement deterministic chunking core (normalization, boundaries, overlap)](../items/task/0200/KABSD-TSK-0238_implement-deterministic-chunking-core-normalization-boundaries-overlap.md)
+- [KABSD-TSK-0239 Implement token-budget fitting and trimming policy](../items/task/0200/KABSD-TSK-0239_implement-token-budget-fitting-and-trimming-policy.md)
+- [KABSD-TSK-0240 Add MVP chunking tests (ASCII, long English, CJK)](../items/task/0200/KABSD-TSK-0240_add-mvp-chunking-tests-ascii-long-english-cjk.md)
 

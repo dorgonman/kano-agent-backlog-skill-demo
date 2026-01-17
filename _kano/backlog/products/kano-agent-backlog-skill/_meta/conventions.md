@@ -46,3 +46,10 @@ Example:
 
 - `id`, `type`, `created` must not be changed after creation.
 
+## Ticket type selection
+
+- Epic: multi-release or multi-team milestone spanning multiple Features.
+- Feature: a new capability that delivers multiple UserStories.
+- UserStory: a single user-facing outcome that requires multiple Tasks.
+- Task: a single focused implementation or doc change (typically one session).
+- Example: "End-to-end embedding pipeline" = Epic; "Pluggable vector backend" = Feature; "MVP chunking pipeline" = UserStory; "Implement tokenizer adapter" = Task.

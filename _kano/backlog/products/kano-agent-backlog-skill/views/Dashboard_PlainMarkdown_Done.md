@@ -2,12 +2,12 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.revision: 39e2bc24b1e529777f2d5e5cd8e5986553770d89
+vcs.revision: e98ef30dc81d9ca536b2a4ba6e8f88476df20d1a
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex
+Agent: copilot
 
 ## Done
 
@@ -203,6 +203,7 @@ Agent: codex
 - [KABSD-TSK-0204 Clarify 'kano workset next' purpose in README](../items/task/0200/KABSD-TSK-0204_clarify-kano-workset-next-purpose-in-readme.md)
 - [KABSD-TSK-0205 Make skill README standalone-focused](../items/task/0200/KABSD-TSK-0205_make-skill-readme-standalone-focused.md)
 - [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
+- [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
 - [KABSD-TSK-0209 Add link integrity validator for backlog refs](../items/task/0200/KABSD-TSK-0209_add-link-integrity-validator-for-backlog-refs.md)
 - [KABSD-TSK-0210 Relax model attribution warnings for worklog commands](../items/task/0200/KABSD-TSK-0210_relax-model-attribution-warnings-for-worklog-commands.md)
 - [KABSD-TSK-0212 Add backlog-root override flag for sandbox operations](../items/task/0200/KABSD-TSK-0212_add-backlog-root-override-flag-for-sandbox-operations.md)
@@ -213,6 +214,9 @@ Agent: codex
 - [KABSD-TSK-0224 Add admin items trash command](../items/task/0200/KABSD-TSK-0224_add-admin-items-trash-command.md)
 - [KABSD-TSK-0225 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 - [KABSD-TSK-0232 Add conflict handling policy to config and skill](../items/task/0200/KABSD-TSK-0232_add-conflict-handling-policy-to-config-and-skill.md)
+- [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
+- [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
+- [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
 
 ### Bug
 
