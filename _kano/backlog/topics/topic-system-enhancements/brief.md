@@ -1,6 +1,6 @@
 # Topic Brief: topic-system-enhancements
 
-**Status**: ✅ **PHASE 1 & 2 COMPLETE** | **Updated**: 2026-01-18 | **Agent**: kiro
+**Status**: 🔄 **PHASE 3 PARTIAL COMPLETE** | **Updated**: 2026-01-18 | **Agent**: kiro
 
 ## Completed Work - Phase 1: Topic Templates
 
@@ -38,23 +38,40 @@
 - ✅ Graceful handling of missing/deleted topics
 - ✅ Automatic bidirectional cleanup on removal
 
+## Completed Work - Phase 3: Advanced Management Features
+
+### ✅ KABSD-FTR-0045: Topic Snapshots and Checkpoints
+**Status**: Done | **Implementation**: Complete
+
+**Achievements**:
+- ✅ Topic snapshot system with named checkpoints
+- ✅ CLI commands `topic snapshot create/list/restore/cleanup`
+- ✅ Snapshot metadata with timestamps and descriptions
+- ✅ Selective restore options (manifest, brief, notes)
+- ✅ Automatic backup before restore operations
+- ✅ Snapshot compression and storage optimization
+- ✅ TTL-based cleanup with keep-latest protection
+- ✅ Atomic restore operations with error handling
+
 **Usage Examples**:
 ```bash
-# Add a reference between topics
-kano-backlog topic add-reference source-topic --to target-topic
+# Create a snapshot
+kano-backlog topic snapshot create my-topic milestone-1 --agent kiro --description "Major milestone reached"
 
-# Remove a reference
-kano-backlog topic remove-reference source-topic --to target-topic
+# List snapshots
+kano-backlog topic snapshot list my-topic
 
-# References appear automatically in brief.md
-kano-backlog topic distill source-topic
+# Restore from snapshot (with automatic backup)
+kano-backlog topic snapshot restore my-topic milestone-1 --agent kiro
+
+# Cleanup old snapshots
+kano-backlog topic snapshot cleanup my-topic --ttl-days 30 --keep-latest 5 --apply
 ```
 
 ## Next Phase Opportunities
 
-### 🔄 Phase 3: Advanced Management Features (Ready to Start)
-- **KABSD-FTR-0045**: Topic Snapshots and Checkpoints
-- **KABSD-FTR-0046**: Topic Merge and Split Operations
+### 🔄 Phase 3: Advanced Management Features (Partial Complete)
+- **KABSD-FTR-0046**: Topic Merge and Split Operations (Ready to Start)
 
 ### 🔄 Phase 4: Intelligence & Analytics Features (Future)
 - **KABSD-FTR-0047**: Topic Analytics and Usage Insights

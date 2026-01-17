@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 102
-vcs.hash: 247ae7354225892005c773ad3f4f684647093e28
+vcs.revno: 103
+vcs.hash: db523302c5425282907b830eb25473eed0b39c4c
 vcs.dirty: true
 -->
 
@@ -42,7 +42,6 @@ Agent: kiro
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
 - [KABSD-FTR-0042 Embedding providers, tokenizers, and benchmark harness](../items/feature/0000/KABSD-FTR-0042_embedding-providers-tokenizers-and-benchmark-harness.md)
-- [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 - [KABSD-FTR-0047 Topic Analytics and Usage Insights](../items/feature/0000/KABSD-FTR-0047_topic-analytics-and-usage-insights.md)
 - [KABSD-FTR-0048 Smart Topic Suggestions and Similarity Search](../items/feature/0000/KABSD-FTR-0048_smart-topic-suggestions-and-similarity-search.md)
 

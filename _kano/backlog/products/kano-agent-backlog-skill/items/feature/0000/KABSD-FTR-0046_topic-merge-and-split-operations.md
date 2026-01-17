@@ -11,15 +11,15 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: kiro
 parent: null
 priority: P2
-state: Proposed
+state: InProgress
 tags: []
 title: Topic Merge and Split Operations
 type: Feature
 uid: 019bcc9c-3beb-7183-98a3-9be0a6efea27
-updated: '2026-01-17'
+updated: 2026-01-18
 ---
 
 # Context
@@ -45,3 +45,4 @@ Complex operation with potential data loss - implement dry-run mode and comprehe
 # Worklog
 
 2026-01-17 23:39 [agent=amazonq] [model=unknown] Created item
+2026-01-18 00:52 [agent=kiro] [model=unknown] Starting Phase 3 Feature 2: Topic Merge and Split Operations implementation

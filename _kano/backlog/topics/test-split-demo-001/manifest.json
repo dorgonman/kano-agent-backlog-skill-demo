@@ -1,0 +1,13 @@
+{
+  "topic": "test-split-demo-001",
+  "agent": "kiro",
+  "seed_items": [],
+  "pinned_docs": [],
+  "snippet_refs": [],
+  "related_topics": [],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-01-17T16:55:50.352147Z",
+  "updated_at": "2026-01-17T16:56:20.730867Z",
+  "has_spec": false
+}
