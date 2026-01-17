@@ -14,7 +14,7 @@ links:
 owner: kiro
 parent: null
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Topic Merge and Split Operations
 type: Feature
@@ -46,3 +46,5 @@ Complex operation with potential data loss - implement dry-run mode and comprehe
 
 2026-01-17 23:39 [agent=amazonq] [model=unknown] Created item
 2026-01-18 00:52 [agent=kiro] [model=unknown] Starting Phase 3 Feature 2: Topic Merge and Split Operations implementation
+2026-01-18 00:56 [agent=kiro] [model=unknown] Auto parent sync: child KABSD-USR-0039 -> Done; parent -> Done.
+2026-01-18 00:57 [agent=kiro] [model=unknown] Phase 3 Feature 2 complete: Topic merge and split operations implemented with history preservation, cross-reference updates, and comprehensive testing

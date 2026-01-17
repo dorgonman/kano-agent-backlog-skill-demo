@@ -1,0 +1,25 @@
+{
+  "name": "before_merge_20260117T165639",
+  "topic": "templates",
+  "created_at": "2026-01-17T16:56:39.003220Z",
+  "created_by": "kiro",
+  "description": "Automatic snapshot before merge operation",
+  "manifest": {
+    "topic": "templates",
+    "agent": "kiro",
+    "seed_items": [
+      "019bcc9c-0c0e-7702-ab4d-cba6586a9b58"
+    ],
+    "pinned_docs": [],
+    "snippet_refs": [],
+    "related_topics": [],
+    "status": "open",
+    "closed_at": null,
+    "created_at": "2026-01-17T16:56:20.731853Z",
+    "updated_at": "2026-01-17T16:56:20.730867Z",
+    "has_spec": false
+  },
+  "brief_content": "# Topic Brief: templates\n\nGenerated: 2026-01-17T16:56:20.731853Z\n\n## Facts\n\n<!-- Verified facts with citations to materials/items/docs -->\n- [ ] {fact} — [source](ref)\n\n## Unknowns / Risks\n\n<!-- Open questions and potential blockers -->\n- [ ] {unknown or risk}\n\n## Proposed Actions\n\n<!-- Concrete next steps, linked to workitems -->\n- [ ] {action} → {workitem ref or \"new ticket needed\"}\n\n## Decision Candidates\n\n<!-- Tradeoffs requiring ADR -->\n- [ ] {decision} → {ADR ref or \"draft needed\"}\n\n---\n_This brief is auto-generated. Edit after distill to finalize._\n",
+  "notes_content": "# Topic Notes: templates\n\n## Overview\n\n{Brief description of this topic's focus area}\n\n## Related Items\n\n{Notes about the items in this topic}\n\n## Key Decisions\n\n{Important decisions related to this topic}\n\n## Open Questions\n\n- {questions to resolve}\n",
+  "materials_index": {}
+}

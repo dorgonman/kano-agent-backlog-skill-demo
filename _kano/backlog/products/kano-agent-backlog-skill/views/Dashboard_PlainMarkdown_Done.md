@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 103
-vcs.hash: db523302c5425282907b830eb25473eed0b39c4c
+vcs.revno: 104
+vcs.hash: f4e9c7ab40163ff253c13f52a0789328536521a2
 vcs.dirty: true
 -->
 
@@ -50,6 +50,7 @@ Agent: kiro
 - [KABSD-FTR-0045 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
 - [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 
 ### UserStory
 
@@ -65,6 +66,7 @@ Agent: kiro
 - [KABSD-USR-0036 Implement Topic Template System with Predefined Archetypes](../items/userstory/0000/KABSD-USR-0036_implement-topic-template-system-with-predefined-archetypes.md)
 - [KABSD-USR-0037 Implement Lightweight Topic Cross-Reference System](../items/userstory/0000/KABSD-USR-0037_implement-lightweight-topic-cross-reference-system.md)
 - [KABSD-USR-0038 Implement Topic Snapshot System with Named Checkpoints](../items/userstory/0000/KABSD-USR-0038_implement-topic-snapshot-system-with-named-checkpoints.md)
+- [KABSD-USR-0039 Implement Topic Merge and Split Operations with History Preservation](../items/userstory/0000/KABSD-USR-0039_implement-topic-merge-and-split-operations-with-history-preservation.md)
 
 ### Task
 

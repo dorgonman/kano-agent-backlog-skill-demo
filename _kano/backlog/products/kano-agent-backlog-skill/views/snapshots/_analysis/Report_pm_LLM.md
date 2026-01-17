@@ -1,6 +1,6 @@
 # Report + LLM Analysis (pm)
 
-- Generated: 2026-01-17 16:52 UTC
+- Generated: 2026-01-17 16:57 UTC
 - Source report: `D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/products/kano-agent-backlog-skill/views/snapshots/snapshot.report_pm.md`
 
 > This section is a **derived artifact** for persona `pm`.

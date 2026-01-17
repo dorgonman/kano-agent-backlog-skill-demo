@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 103
-vcs.hash: db523302c5425282907b830eb25473eed0b39c4c
+vcs.revno: 104
+vcs.hash: f4e9c7ab40163ff253c13f52a0789328536521a2
 vcs.dirty: true
 -->
 
@@ -167,13 +167,11 @@ Agent: kiro
 ### Feature
 
 - [KABSD-FTR-0011 Multi-product platform intelligence and governance](../items/feature/0000/KABSD-FTR-0011_multi-product-platform-intelligence-and-governance.md)
-- [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 
 ### UserStory
 
 - [KABSD-USR-0023 Automated backlog realignment tool](../items/userstory/0000/KABSD-USR-0023_automated-backlog-realign-tool.md)
 - [KABSD-USR-0029 Chunking and token-budget embedding pipeline MVP](../items/userstory/0000/KABSD-USR-0029_chunking-and-token-budget-embedding-pipeline-mvp.md)
-- [KABSD-USR-0039 Implement Topic Merge and Split Operations with History Preservation](../items/userstory/0000/KABSD-USR-0039_implement-topic-merge-and-split-operations-with-history-preservation.md)
 
 ### Task
 
