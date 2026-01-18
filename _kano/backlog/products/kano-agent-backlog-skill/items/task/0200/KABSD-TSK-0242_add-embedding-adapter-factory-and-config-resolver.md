@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-USR-0031
 priority: P1
-state: Proposed
+state: InProgress
 tags:
 - embedding
 - config
@@ -22,7 +22,7 @@ tags:
 title: Add embedding adapter factory and config resolver
 type: Task
 uid: 019bcbf5-44f9-725b-8b60-a858aa48e807
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -48,3 +48,4 @@ Config can become a dumping ground; keep the schema minimal and versioned. Optio
 # Worklog
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement embedding adapter factory/config resolver.

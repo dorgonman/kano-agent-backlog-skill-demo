@@ -2,25 +2,94 @@
 
 ## Overview
 
-Research and design notes for a local-first embedding pipeline (tokenization, deterministic chunking, model/provider adapters) and how those choices constrain a vector backend.
+This topic collects research and design notes for a local-first embedding pipeline:
+- deterministic chunking + token-budget fitting for embeddings
+- embedding provider + tokenizer adapter interfaces with telemetry
+- vector backend selection (portable, rebuildable, no server runtime)
 
-Key synthesis: `_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md`.
+This topic is meant to support human review and unblock decisions before and during
+implementation.
 
-## Related Items
+Key synthesis:
+- `_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md`
 
-Seed items are tracked in `manifest.json`. Future workitems will likely split into:
-- deterministic chunking spec + hashing/IDs
-- embedding adapter + token counting observability
-- vector backend evaluation (storage, indexing, search)
+## Current Status (What Exists)
 
-## Key Decisions
+Strategic direction (architecture):
+- ADR-0009: `_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md`
+  - Local-first, file-first canonical store (Markdown), derived store (SQLite)
+  - Semantic search via derived ANN sidecar; keyword search via SQLite FTS5
 
-- Whether cross-lingual retrieval is required (drives multilingual model selection and index design).
-- Whether the index is per-model (different chunk limits/dims) or model-agnostic (chunk to the smallest supported window).
-- Local-first default provider policy (local embeddings first vs cloud-first with fallback).
+Evidence for backend feasibility (Windows-focused):
+- KABSD-TSK-0124 artifact:
+  `_kano/backlog/products/kano-agent-backlog-skill/artifacts/KABSD-TSK-0124/embedding_search_library_evaluation.md`
+  - HNSWlib: build fails on Windows without a compiler toolchain
+  - FAISS-CPU: pre-built wheels work on Windows
+  - sqlite-vec: wheels exist but maturity risk (v0.1.6 in the report)
 
-## Open Questions
+Existing specs / contracts:
+- Chunking metadata schema draft (JSONL) from KABSD-TSK-0056:
+  `_kano/backlog/products/kano-agent-backlog-skill/artifacts/KABSD-TSK-0056/embedding_chunking_metadata.md`
+- Chunking + token budget fitting contract draft from KABSD-TSK-0207:
+  `_kano/backlog/products/kano-agent-backlog-skill/items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md`
+- Vector backend adapter contract from KABSD-TSK-0208:
+  `_kano/backlog/products/kano-agent-backlog-skill/items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md`
 
-- Which embedding family is the default for local-first (MiniLM-class vs multilingual GTE/BGE-class)?
-- What is the “versioned” deterministic chunking contract (rules, max size, overlap, normalization)?
-- How will we represent token counting + truncation events for observability and routing?
+Planned work items (seed set in manifest):
+- KABSD-EPIC-0003: Milestone 0.0.2 end-to-end chain (chunking -> embeddings -> vector backend)
+- KABSD-USR-0029: Chunking + token-budget MVP (InProgress)
+- KABSD-USR-0030: Pluggable vector backend MVP (Proposed)
+- KABSD-FTR-0042 + USR-0031/0034/0035: embedder/tokenizer adapters, telemetry, and benchmarks (Proposed)
+
+## Key Decisions (Pending / To Be Made)
+
+1) Cross-lingual retrieval requirement: YES
+- Implication: default embedding policy must be multilingual-capable and evaluation must include cross-lingual cases.
+- ADR: ADR-0035
+
+2) Index strategy baseline: per-model indexes by default
+- Rationale: vectors from different embedding models are not generally comparable; mixing them in one ANN index is unsafe.
+- We will route by an explicit `embedding_space_id` (model+revision+dims+preprocessing).
+- Future “sharing” is allowed only via explicit allowlisted aliasing (no automatic inference).
+- ADR: ADR-0036
+
+3) Default local-first embedder family (quality vs footprint)
+- Candidate families mentioned in synthesis: MiniLM-class vs multilingual GTE/BGE-class.
+- Work item: KABSD-FTR-0042 / KABSD-USR-0034
+
+4) Default vector backend library (portable, low-friction)
+- Based on current evidence, FAISS-CPU appears viable on Windows; HNSWlib is risky.
+- sqlite-vec is attractive for simplicity but maturity needs re-checking.
+- Work items: KABSD-TSK-0124 (evidence), KABSD-USR-0030 (implementation)
+
+## Decisions Already Made (Recorded)
+
+- Local-first strategic architecture: use a derived index and keep Markdown as the canonical store.
+  - Source: ADR-0009
+
+## Open Questions / Risks
+
+- Token inflation for CJK can shrink effective context windows and skew chunking/benchmarks.
+- Token counting accuracy varies by provider/tokenizer; telemetry must distinguish exact vs heuristic.
+- Deterministic chunk IDs must be versioned (to control rebuild triggers) and stable across runs.
+- Optional dependencies (tiktoken, transformers, sentence-transformers, faiss) must remain optional
+  or carefully gated to avoid breaking local-first setup.
+
+## Recommended Next Actions (Concrete)
+
+Short-term (to support human review and de-risk implementation):
+- Add snippet references for the current chunking implementation (if any) and vector backend adapter
+  implementation, so the topic has auditable code anchors.
+- Complete and review ADR-0035 and ADR-0036 (promote from Proposed once reviewed).
+- Define a minimal benchmark corpus + metrics schema, including cross-lingual queries (KABSD-USR-0034).
+
+Implementation sequencing (high-level):
+- Implement chunking/token-budget MVP (KABSD-USR-0029; spec in KABSD-TSK-0207).
+- Implement embedding adapter interface + telemetry (KABSD-USR-0031).
+- Connect embeddings -> vector backend adapter (KABSD-USR-0030; contract in KABSD-TSK-0208).
+- Add benchmark harness and iterate on defaults (KABSD-USR-0034 + ADR validation).
+
+## Notes on Topic Hygiene
+
+- `brief.md` is typically regenerated by `topic distill` and should remain deterministic; treat this
+  `notes.md` as the evolving working document and decision log for the topic.

@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 106
-vcs.hash: 1ca27cfb11a507ce3d9136bd9617de1bc3c64f51
+vcs.revno: 107
+vcs.hash: c318a6844fd27e2f569d2cd094cfe99e51c57e71
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex
+Agent: opencode
 
 ## Done
 
@@ -229,6 +229,8 @@ Agent: codex
 - [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
 - [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
 - [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
+- [KABSD-TSK-0258 Improve topic distill brief items listing](../items/task/0200/KABSD-TSK-0258_improve-topic-distill-brief-items-listing.md)
+- [KABSD-TSK-0259 Document topic snapshot retention policy (keep latest)](../items/task/0200/KABSD-TSK-0259_document-topic-snapshot-retention-policy-keep-latest.md)
 
 ### Bug
 

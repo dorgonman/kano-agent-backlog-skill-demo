@@ -20,9 +20,10 @@
     "_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md"
   ],
   "snippet_refs": [],
+  "related_topics": [],
   "status": "open",
   "closed_at": null,
   "created_at": "2026-01-15T14:42:05.217983Z",
-  "updated_at": "2026-01-17T15:26:04.431134Z",
+  "updated_at": "2026-01-18T18:09:24.954114Z",
   "has_spec": false
 }

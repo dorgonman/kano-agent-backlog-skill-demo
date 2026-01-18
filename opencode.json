@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["oh-my-opencode"],
+  "lsp": {
+    "pyright": {
+      "disabled": false,
+      "command": [],
+      "extensions": [".py", ".pyi"],
+      "env": {},
+      "initialization": {}
+    },
+    "typescript": {
+      "disabled": false,
+      "command": [],
+      "extensions": [".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts"],
+      "env": {},
+      "initialization": {}
+    },
+    "custom-lsp": {
+      "disabled": false,
+      "command": ["custom-lsp-server", "--stdio"],
+      "extensions": [".custom"],
+      "env": {},
+      "initialization": {}
+    }
+  }
+}

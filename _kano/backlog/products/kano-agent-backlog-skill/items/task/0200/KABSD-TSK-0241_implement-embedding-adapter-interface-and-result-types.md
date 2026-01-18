@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-USR-0031
 priority: P1
-state: Proposed
+state: InProgress
 tags:
 - embedding
 - adapter
@@ -22,7 +22,7 @@ tags:
 title: Implement embedding adapter interface and result types
 type: Task
 uid: 019bcbf5-154a-742c-b393-01c9b57827d2
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -48,3 +48,4 @@ If we place the interface in the wrong package boundary it will be hard to evolv
 # Worklog
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement embedding adapter interface and result types.

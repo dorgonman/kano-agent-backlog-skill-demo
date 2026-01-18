@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0042
 priority: P1
-state: Proposed
+state: InProgress
 tags:
 - embedding
 - adapter
@@ -22,7 +22,7 @@ tags:
 title: Embedding adapter interface with token-counting telemetry
 type: UserStory
 uid: 019bcbf0-58b4-7308-81e0-4aaed24cd43b
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -48,3 +48,4 @@ Embedding libraries are heavy and optional; keep dependencies optional and adapt
 # Worklog
 
 2026-01-17 20:31 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:00 [agent=opencode] [model=unknown] Start implementation: embedding adapter interface/factory/noop + telemetry.

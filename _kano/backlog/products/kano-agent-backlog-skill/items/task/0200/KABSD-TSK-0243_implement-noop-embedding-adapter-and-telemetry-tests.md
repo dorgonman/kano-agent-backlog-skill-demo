@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-USR-0031
 priority: P2
-state: Proposed
+state: InProgress
 tags:
 - embedding
 - tests
@@ -22,7 +22,7 @@ tags:
 title: Implement noop embedding adapter and telemetry tests
 type: Task
 uid: 019bcbf5-7073-70c0-a0c7-4d0f5a7c6c32
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -48,3 +48,4 @@ A hash-based pseudo-vector must be deterministic across platforms; if used, spec
 # Worklog
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement noop embedding adapter + telemetry tests.
