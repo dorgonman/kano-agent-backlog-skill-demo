@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 104
-vcs.hash: f4e9c7ab40163ff253c13f52a0789328536521a2
+vcs.revno: 106
+vcs.hash: 1ca27cfb11a507ce3d9136bd9617de1bc3c64f51
 vcs.dirty: true
 -->
 
 Source: items
-Agent: kiro
+Agent: codex
 
 ## Done
 
@@ -228,6 +228,7 @@ Agent: kiro
 - [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
 - [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
 - [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
+- [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
 
 ### Bug
 
@@ -236,4 +237,6 @@ Agent: kiro
 - [KABSD-BUG-0003 Snapshot reports render raw template blocks (nested each/if/unless)](../items/bug/0000/KABSD-BUG-0003_snapshot-reports-render-raw-template-blocks-nested-each-if-unless.md)
 - [KABSD-BUG-0004 Product snapshots include stubs from other skills](../items/bug/0000/KABSD-BUG-0004_product-snapshots-include-stubs-from-other-skills.md)
 - [KABSD-BUG-0005 Views: dashboards emit VCS metadata per FTR-0039](../items/bug/0000/KABSD-BUG-0005_views-dashboards-emit-vcs-metadata-per-ftr-0039.md)
+- [KABSD-BUG-0006 CLI: avoid Windows UnicodeEncodeError on non-UTF8 terminals](../items/bug/0000/KABSD-BUG-0006_cli-avoid-windows-unicodeencodeerror-on-non-utf8-terminals.md)
+- [KABSD-BUG-0007 Core: accept Planned as a valid ItemState](../items/bug/0000/KABSD-BUG-0007_core-accept-planned-as-a-valid-itemstate.md)
 

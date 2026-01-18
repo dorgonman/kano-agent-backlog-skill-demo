@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 104
-vcs.hash: f4e9c7ab40163ff253c13f52a0789328536521a2
+vcs.revno: 106
+vcs.hash: 1ca27cfb11a507ce3d9136bd9617de1bc3c64f51
 vcs.dirty: true
 -->
 
 Source: items
-Agent: kiro
+Agent: codex
 
 ## New
 
@@ -148,6 +148,7 @@ Agent: kiro
 - [KABSD-TSK-0252 Document benchmark results and trade-offs in topic synthesis](../items/task/0200/KABSD-TSK-0252_document-benchmark-results-and-trade-offs-in-topic-synthesis.md)
 - [KABSD-TSK-0253 Draft ADR: default embedder policy (multilingual vs tiered)](../items/task/0200/KABSD-TSK-0253_draft-adr-default-embedder-policy-multilingual-vs-tiered.md)
 - [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
+- [KABSD-TSK-0257 Implement repo-shared active topic state (lock-free)](../items/task/0200/KABSD-TSK-0257_implement-repo-shared-active-topic-state-lock-free.md)
 
 ### Nones
 
