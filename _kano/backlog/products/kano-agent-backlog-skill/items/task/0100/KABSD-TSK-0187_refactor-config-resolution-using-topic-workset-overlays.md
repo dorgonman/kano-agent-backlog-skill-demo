@@ -10,7 +10,7 @@ area: config
 iteration: backlog
 tags: []
 created: 2026-01-12
-updated: 2026-01-12
+updated: 2026-01-19
 owner: None
 external:
   azure_id: null
@@ -36,6 +36,11 @@ decisions: []
 
 # Risks / Dependencies
 
+
+## Decisions
+
+- Use topic/workset overrides as higher-precedence layers above product config. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-12 19:13 [agent=copilot] Created item
+2026-01-19 12:14 [agent=copilot] [model=unknown] Decision write-back added: Use topic/workset overrides as higher-precedence layers above product config. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

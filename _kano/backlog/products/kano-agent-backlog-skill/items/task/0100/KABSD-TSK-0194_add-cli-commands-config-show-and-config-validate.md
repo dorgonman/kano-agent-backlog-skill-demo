@@ -19,7 +19,7 @@ tags: []
 title: 'Add CLI commands: config show and config validate'
 type: Task
 uid: 019bb368-d5b8-754c-a0ed-2db82c029293
-updated: 2026-01-13
+updated: 2026-01-19
 ---
 
 # Context
@@ -42,8 +42,13 @@ Add CLI commands to show effective config and validate layered config (TOML pref
 
 Need to avoid leaking secrets; output format should be stable enough for scripting; ensure CLI respects product/topic/workset selection flags
 
+
+## Decisions
+
+- Show/validate CLI should respect layer precedence and TOML-over-JSON at the same layer with deprecation warnings. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
 2026-01-13 08:33 [agent=copilot-sonnet4] [model=unknown] State -> InProgress.
 2026-01-13 23:45 [agent=antigravity] State -> Done. Verified config show/validate commands exist in config_cmd.py.
+2026-01-19 12:15 [agent=copilot] [model=unknown] Decision write-back added: Show/validate CLI should respect layer precedence and TOML-over-JSON at the same layer with deprecation warnings. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

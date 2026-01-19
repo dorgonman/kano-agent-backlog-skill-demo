@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 108
-vcs.hash: e2662afdb53830a1596904e5cd0b3ebb2cbf1f65
+vcs.revno: 109
+vcs.hash: 0dde451375144070d124202a75a48bd0cf69cffe
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: opencode
 
 ## New
 
@@ -21,6 +21,7 @@ Agent: copilot
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
 - [KABSD-EPIC-0008 Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.md)
+- [KABSD-EPIC-0010 0.0.3 Archive semantics + topic evidence packs](../items/epic/0000/KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.md)
 
 ### Feature
 
@@ -43,6 +44,8 @@ Agent: copilot
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
 - [KABSD-FTR-0047 Topic Analytics and Usage Insights](../items/feature/0000/KABSD-FTR-0047_topic-analytics-and-usage-insights.md)
 - [KABSD-FTR-0048 Smart Topic Suggestions and Similarity Search](../items/feature/0000/KABSD-FTR-0048_smart-topic-suggestions-and-similarity-search.md)
+- [KABSD-FTR-0049 Dual-store archive semantics (human-hide, agent-searchable)](../items/feature/0000/KABSD-FTR-0049_dual-store-archive-semantics-human-hide-agent-searchable.md)
+- [KABSD-FTR-0050 Topic evidence pack gather pipeline (focus/sculpt)](../items/feature/0000/KABSD-FTR-0050_topic-evidence-pack-gather-pipeline-focus-sculpt.md)
 
 ### UserStory
 
@@ -64,6 +67,10 @@ Agent: copilot
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
 - [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
 - [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
+- [KABSD-USR-0040 Archive/unarchive work items with experimental gating](../items/userstory/0000/KABSD-USR-0040_archive-unarchive-work-items-with-experimental-gating.md)
+- [KABSD-USR-0041 Archive/unarchive topics and hide archived topics from default views](../items/userstory/0000/KABSD-USR-0041_archive-unarchive-topics-and-hide-archived-topics-from-default-views.md)
+- [KABSD-USR-0042 Search across hot + archived by default for agents (scope=all)](../items/userstory/0000/KABSD-USR-0042_search-across-hot-archived-by-default-for-agents-scope-all.md)
+- [KABSD-USR-0043 Generate deterministic topic evidence pack (brief/digest/evidence)](../items/userstory/0000/KABSD-USR-0043_generate-deterministic-topic-evidence-pack-brief-digest-evidence.md)
 
 ### Task
 
@@ -139,6 +146,7 @@ Agent: copilot
 - [KABSD-TSK-0253 Draft ADR: default embedder policy (multilingual vs tiered)](../items/task/0200/KABSD-TSK-0253_draft-adr-default-embedder-policy-multilingual-vs-tiered.md)
 - [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
 - [KABSD-TSK-0262 Implement topic merge function and merge embedding-preprocessing-and-vector-backend-research with phase-2](../items/task/0200/KABSD-TSK-0262_implement-topic-merge-function-and-merge-embedding-preprocessing-and-vector-backend-research-with-phase-2.md)
+- [KABSD-TSK-0266 Design: physical archive strategy (DB cold store vs directory move)](../items/task/0200/KABSD-TSK-0266_design-physical-archive-strategy-db-cold-store-vs-directory-move.md)
 
 ### Nones
 

@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 108
-vcs.hash: e2662afdb53830a1596904e5cd0b3ebb2cbf1f65
+vcs.revno: 109
+vcs.hash: 0dde451375144070d124202a75a48bd0cf69cffe
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: opencode
 
 ## Done
 
@@ -241,6 +241,8 @@ Agent: copilot
 - [KABSD-TSK-0260 Implement sqlite vector backend MVP wiring](../items/task/0200/KABSD-TSK-0260_implement-sqlite-vector-backend-mvp-wiring.md)
 - [KABSD-TSK-0261 Implement deterministic benchmark harness for chunking/embedding/vector](../items/task/0200/KABSD-TSK-0261_implement-deterministic-benchmark-harness-for-chunking-embedding-vector.md)
 - [KABSD-TSK-0263 Implement topic merge: merge embedding-preprocessing-and-vector-backend-research and phase-2](../items/task/0200/KABSD-TSK-0263_implement-topic-merge-merge-embedding-preprocessing-and-vector-backend-research-and-phase-2.md)
+- [KABSD-TSK-0264 Add decision audit report for topics](../items/task/0200/KABSD-TSK-0264_add-decision-audit-report-for-topics.md)
+- [KABSD-TSK-0265 Add decision write-back command for workitems](../items/task/0200/KABSD-TSK-0265_add-decision-write-back-command-for-workitems.md)
 
 ### Bug
 

@@ -10,7 +10,7 @@ area: config
 iteration: null
 tags: ["config", "global", "uri", "registry"]
 created: 2026-01-09
-updated: 2026-01-09
+updated: 2026-01-19
 owner: null
 external:
   azure_id: null
@@ -61,7 +61,12 @@ decisions: []
 - Precedence bugs can cause hard-to-debug mismatches.
 - Secrets must never be stored in repo files.
 
+
+## Decisions
+
+- Define config layer precedence: global -> repo -> product -> topic -> workset -> runtime (last wins). (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-09 09:48 [agent=codex] Created to plan global/repo/runtime config layers and URI compilation.
 2026-01-09 09:49 [agent=codex] Drafted planning scope, config layers, and acceptance criteria.
+2026-01-19 12:14 [agent=copilot] [model=unknown] Decision write-back added: Define config layer precedence: global -> repo -> product -> topic -> workset -> runtime (last wins). (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

@@ -4,6 +4,31 @@
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).
 
+## Conversational-first documentation (human-agent collaboration)
+
+This project’s primary value is **human + AI collaboration**, not just a CLI.
+Therefore, when writing or updating documentation (README, docs, SKILL.md, process notes), always include
+instructions for **how to drive the workflow through a conversation with an AI agent**, not only how to run commands.
+
+Rules:
+- Every workflow doc should contain both:
+  - **CLI commands** (for deterministic, auditable execution), and
+  - **Suggested chat prompts** (copy/paste) that a human can say to an agent.
+- Prompts must be specific about inputs the agent needs: topic/item IDs, product, agent identity, expected outputs.
+- Document the expected artifacts and paths the agent will produce/update (e.g., reports under `topic/publish/`).
+- Prefer a consistent pattern in docs:
+  1) “Say this to your agent”
+  2) “The agent will do” (explicit steps)
+  3) “Expected output” (files/paths + how to verify)
+
+Example (decision audit + decision write-back):
+- Say to agent: “Run a decision write-back audit for topic <topic-name> and show me which work items are missing decisions.”
+- Agent runs: `kano topic decision-audit <topic-name> --format plain`
+- Expected output: `_kano/backlog/topics/<topic-name>/publish/decision-audit.md`
+- Say to agent: “Write back this decision to <ITEM_ID> and include the synthesis file as source.”
+- Agent runs: `kano workitem add-decision <ITEM_ID> --decision "..." --source "..." --agent <agent-id> --product <product>`
+- Expected output: updated work item with a `## Decisions` section + appended Worklog entry.
+
 ## Agent roster (from README.md)
 - Codex
 - GitHub Copilot

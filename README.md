@@ -414,7 +414,8 @@ Topics provide a higher-level grouping mechanism for related items and documents
 Current implementation (see `_kano/backlog/products/kano-agent-backlog-skill/items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md`) stores topics in `_kano/backlog/topics/<topic>/` so the deterministic `brief.md` can be shared/reviewed in-repo, while keeping the per-agent active-topic pointer in cache.
 
 - **manifest.json**: Topic metadata, seed items, pinned documents
-- **brief.md**: Deterministic distilled summary (generated from manifest + materials index)
+- **brief.md**: Stable, human-maintained brief (do not overwrite automatically)
+- **brief.generated.md**: Deterministic distilled brief (generated/overwritten by `kano topic distill`)
 - **synthesis/**: Working outputs for distillation (derived)
 - **publish/**: Prepared write-backs / patch skeletons (derived)
 - **materials/**: Raw collected materials (snippets, links, extracts, logs)
@@ -453,6 +454,21 @@ kano topic add-snippet auth-refactor --file src/auth.py --start 10 --end 25
 **Distill materials into brief:**
 ```bash
 kano topic distill auth-refactor
+```
+
+**Audit decision write-back (writes a report into topic publish/):**
+```bash
+kano topic decision-audit auth-refactor
+kano topic decision-audit auth-refactor --format json
+```
+
+**Write back a decision to a work item:**
+```bash
+kano workitem add-decision KABSD-TSK-0001 \
+  --decision "Use X over Y because ..." \
+  --source "_kano/backlog/topics/auth-refactor/synthesis/decision-notes.md" \
+  --agent my-agent \
+  --product kano-agent-backlog-skill
 ```
 
 **Switch active topic:**

@@ -19,7 +19,7 @@ tags: []
 title: Define TOML config schema and migration strategy
 type: Task
 uid: 019bb367-1f84-7681-85be-af23e82027ed
-updated: 2026-01-13
+updated: 2026-01-19
 ---
 
 # Context
@@ -42,8 +42,13 @@ Schema doc covers all existing config fields; URI compilation rules defined; Mig
 
 Breaking changes if migration not carefully planned; Need to ensure deep-merge still works with TOML sections
 
+
+## Decisions
+
+- Use recursive deep-merge for TOML tables and keep JSON compatibility for two minor versions. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-13 02:10 [agent=copilot] Created item
 2026-01-13 02:14 [agent=copilot] [model=unknown] Starting schema definition work in topic config-refactor-toml-layers
 2026-01-13 02:15 [agent=copilot] [model=unknown] Schema v1.0 complete: defined TOML structure, URI compilation rules, migration strategy; resolved all open questions; created examples in topic synthesis/
+2026-01-19 12:11 [agent=copilot] [model=unknown] Decision write-back added: Use recursive deep-merge for TOML tables and keep JSON compatibility for two minor versions. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

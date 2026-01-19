@@ -19,7 +19,7 @@ tags: []
 title: Implement TOML parser with deep-merge and validation
 type: Task
 uid: 019bb368-cefc-76c7-ae4c-6d937da64d16
-updated: 2026-01-13
+updated: 2026-01-19
 ---
 
 # Context
@@ -42,8 +42,13 @@ TOML files load correctly; TOML precedence over JSON at same layer; Deep merge w
 
 Import compatibility for Python <3.11; Need to ensure TOML table semantics match JSON dict behavior in merge; Deprecation warnings might be noisy in logs
 
+
+## Decisions
+
+- Use recursive deep-merge for TOML tables matching existing JSON behavior. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
 2026-01-13 02:22 [agent=copilot-sonnet4] [model=unknown] State -> InProgress.
 2026-01-13 02:34 [agent=copilot-sonnet4] [model=unknown] State -> Done.
+2026-01-19 12:15 [agent=copilot] [model=unknown] Decision write-back added: Use recursive deep-merge for TOML tables matching existing JSON behavior. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
