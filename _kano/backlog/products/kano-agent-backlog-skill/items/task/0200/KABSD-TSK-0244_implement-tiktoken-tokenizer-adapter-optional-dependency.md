@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-USR-0032
 priority: P1
-state: Proposed
+state: Blocked
 tags:
 - tokenizer
 - tiktoken
@@ -22,7 +22,7 @@ tags:
 title: Implement tiktoken tokenizer adapter (optional dependency)
 type: Task
 uid: 019bcbf5-b9e5-74fc-b027-61c3682aa072
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -48,3 +48,4 @@ tiktoken availability varies by platform; keep it optional and do not break defa
 # Worklog
 
 2026-01-17 20:37 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:19 [agent=opencode] [model=unknown] Not started; tokenizer adapter already exists (kano_backlog_core.tokenizer.TiktokenAdapter). Evaluate whether this task is redundant or should be revised to cover HF adapter.

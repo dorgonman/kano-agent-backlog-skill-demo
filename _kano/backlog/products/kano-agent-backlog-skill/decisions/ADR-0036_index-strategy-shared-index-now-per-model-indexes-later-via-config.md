@@ -2,7 +2,7 @@
 id: ADR-0036
 uid: 019bd257-f874-70c9-a47d-10a950c90a23
 title: "Index strategy: shared index now, per-model indexes later via config"
-status: Proposed
+status: Accepted
 date: 2026-01-19
 related_items: ["KABSD-USR-0035"]
 supersedes: null

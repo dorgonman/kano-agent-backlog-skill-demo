@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0042
 priority: P1
-state: Proposed
+state: Done
 tags:
 - benchmark
 - embedding
@@ -25,7 +25,7 @@ title: Benchmark harness for chunking and embedding options (multilingual, windo
   limits)
 type: UserStory
 uid: 019bcbf4-71e9-7150-9498-889e8a1af8e9
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -51,3 +51,5 @@ Quality evaluation is subjective; start with deterministic metrics and small man
 # Worklog
 
 2026-01-17 20:35 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:19 [agent=opencode] [model=unknown] Start benchmark harness implementation (deterministic config snapshot + token/chunk/embedding/vector stats; chunk-only mode supported).
+2026-01-19 03:35 [agent=opencode] [model=unknown] Benchmark harness implemented and runnable locally via kano-backlog benchmark run. Produces deterministic report with effective config snapshot, token/chunk stats, embed latency/dims, truncation events, and vector sanity checks; full pytest run green.

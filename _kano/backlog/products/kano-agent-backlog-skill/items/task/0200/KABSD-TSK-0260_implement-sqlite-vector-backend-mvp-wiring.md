@@ -14,7 +14,7 @@ links:
 owner: opencode
 parent: null
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Implement sqlite vector backend MVP wiring
 type: Task
@@ -46,3 +46,4 @@ SQLite extension/vec maturity varies; keep MVP dependency-free using plain sqlit
 
 2026-01-19 02:59 [agent=opencode] [model=unknown] Created item
 2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement sqlite vector backend MVP wiring and tests.
+2026-01-19 03:18 [agent=opencode] [model=unknown] Implemented sqlite vector backend MVP with per-embedding_space_id DB separation, dims/metric validation, and persistence/query tests (pytest tests/test_vector_sqlite_backend.py).

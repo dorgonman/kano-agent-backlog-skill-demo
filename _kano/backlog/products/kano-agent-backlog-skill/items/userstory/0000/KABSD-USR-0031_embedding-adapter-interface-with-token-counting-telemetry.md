@@ -14,7 +14,7 @@ links:
 owner: opencode
 parent: KABSD-FTR-0042
 priority: P1
-state: InProgress
+state: Done
 tags:
 - embedding
 - adapter
@@ -49,3 +49,5 @@ Embedding libraries are heavy and optional; keep dependencies optional and adapt
 
 2026-01-17 20:31 [agent=copilot] [model=unknown] Created item
 2026-01-19 03:00 [agent=opencode] [model=unknown] Start implementation: embedding adapter interface/factory/noop + telemetry.
+2026-01-19 03:18 [agent=opencode] [model=unknown] Auto parent sync: child KABSD-TSK-0243 -> Done; parent -> Done.
+2026-01-19 03:18 [agent=opencode] [model=unknown] Embedding adapter interface with token-counting telemetry completed: telemetry uses TokenCount (exact vs heuristic) and includes budget fields; noop + openai adapters updated; full pytest run green.

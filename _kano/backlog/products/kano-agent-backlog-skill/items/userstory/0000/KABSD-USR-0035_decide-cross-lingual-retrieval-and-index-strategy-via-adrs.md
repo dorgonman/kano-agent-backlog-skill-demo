@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0042
 priority: P2
-state: Proposed
+state: Done
 tags:
 - adr
 - decision
@@ -23,7 +23,7 @@ tags:
 title: Decide cross-lingual retrieval and index strategy via ADRs
 type: UserStory
 uid: 019bcbf4-aed0-77ec-8d79-15407c5db49a
-updated: '2026-01-17'
+updated: 2026-01-19
 ---
 
 # Context
@@ -49,3 +49,5 @@ Decisions may need revisiting if requirements change; keep ADRs explicit about t
 # Worklog
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
+2026-01-19 03:35 [agent=opencode] [model=unknown] Review ADR-0035 and ADR-0036, ensure consequences and validation criteria align with implemented embedding_space_id and benchmark harness.
+2026-01-19 03:36 [agent=opencode] [model=unknown] ADR-0035 and ADR-0036 updated to Accepted. ADR-0035 states cross-lingual requirement and benchmark validation. ADR-0036 confirms per-model index strategy via embedding_space_id; implementation uses embedding_space_id in vector indexing and benchmark harness.

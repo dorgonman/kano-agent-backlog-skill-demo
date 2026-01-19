@@ -14,7 +14,7 @@ links:
 owner: opencode
 parent: KABSD-USR-0031
 priority: P2
-state: InProgress
+state: Done
 tags:
 - embedding
 - tests
@@ -49,3 +49,4 @@ A hash-based pseudo-vector must be deterministic across platforms; if used, spec
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
 2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement noop embedding adapter + telemetry tests.
+2026-01-19 03:18 [agent=opencode] [model=unknown] Implemented noop embedding adapter deterministic telemetry compatible with TokenCount + budget fields.

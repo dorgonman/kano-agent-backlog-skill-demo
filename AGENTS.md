@@ -266,12 +266,19 @@ Follow commit guidelines in `.github/copilot-instructions.md`:
 - Multiple items: `KABSD-TSK-0146 KABSD-TSK-0147: <short summary>`
 - Do NOT use `jira#` prefix
 
+Backlog system note:
+- This repository uses kano-backlog as the system of record, not Jira.
+- Do not add any `jira#` or `JIRA:` prefixes. Reference Kano IDs directly.
+- Examples:
+  - Good: `KABSD-TSK-0261: refine filename truncation`
+  - Bad: `jira#KABSD-TSK-0261`
+
 #### Agent Identity
 
 Valid agent IDs for worklog entries:
 - `copilot`, `codex`, `claude`, `goose`, `antigravity`, `cursor`, `windsurf`, `opencode`, `kiro`, `amazon-q`
 
-Forbidden: `auto`, `user`, `assistant`, `<AGENT_NAME>`, `$AGENT_NAME`
+Forbidden: `<AGENT_NAME>`, `$AGENT_NAME`
 
 ### Architecture Rules (ADR-0013)
 

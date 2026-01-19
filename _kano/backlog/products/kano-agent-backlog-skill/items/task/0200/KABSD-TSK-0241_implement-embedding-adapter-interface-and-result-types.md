@@ -14,7 +14,7 @@ links:
 owner: opencode
 parent: KABSD-USR-0031
 priority: P1
-state: InProgress
+state: Done
 tags:
 - embedding
 - adapter
@@ -49,3 +49,4 @@ If we place the interface in the wrong package boundary it will be hard to evolv
 
 2026-01-17 20:36 [agent=copilot] [model=unknown] Created item
 2026-01-19 03:00 [agent=opencode] [model=unknown] Start: implement embedding adapter interface and result types.
+2026-01-19 03:18 [agent=opencode] [model=unknown] Implemented embedding adapter interface/types updates (telemetry now carries TokenCount + budget fields) and fixed OpenAI adapter imports.

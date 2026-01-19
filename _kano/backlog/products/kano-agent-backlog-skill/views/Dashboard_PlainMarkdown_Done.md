@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 107
-vcs.hash: c318a6844fd27e2f569d2cd094cfe99e51c57e71
+vcs.revno: 108
+vcs.hash: e2662afdb53830a1596904e5cd0b3ebb2cbf1f65
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: copilot
 
 ## Done
 
@@ -63,6 +63,10 @@ Agent: opencode
 - [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstory/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstory/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 - [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
+- [KABSD-USR-0030 Pluggable vector backend MVP for embeddings](../items/userstory/0000/KABSD-USR-0030_pluggable-vector-backend-mvp-for-embeddings.md)
+- [KABSD-USR-0031 Embedding adapter interface with token-counting telemetry](../items/userstory/0000/KABSD-USR-0031_embedding-adapter-interface-with-token-counting-telemetry.md)
+- [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
+- [KABSD-USR-0035 Decide cross-lingual retrieval and index strategy via ADRs](../items/userstory/0000/KABSD-USR-0035_decide-cross-lingual-retrieval-and-index-strategy-via-adrs.md)
 - [KABSD-USR-0036 Implement Topic Template System with Predefined Archetypes](../items/userstory/0000/KABSD-USR-0036_implement-topic-template-system-with-predefined-archetypes.md)
 - [KABSD-USR-0037 Implement Lightweight Topic Cross-Reference System](../items/userstory/0000/KABSD-USR-0037_implement-lightweight-topic-cross-reference-system.md)
 - [KABSD-USR-0038 Implement Topic Snapshot System with Named Checkpoints](../items/userstory/0000/KABSD-USR-0038_implement-topic-snapshot-system-with-named-checkpoints.md)
@@ -227,10 +231,16 @@ Agent: opencode
 - [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
 - [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
 - [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
+- [KABSD-TSK-0241 Implement embedding adapter interface and result types](../items/task/0200/KABSD-TSK-0241_implement-embedding-adapter-interface-and-result-types.md)
+- [KABSD-TSK-0242 Add embedding adapter factory and config resolver](../items/task/0200/KABSD-TSK-0242_add-embedding-adapter-factory-and-config-resolver.md)
+- [KABSD-TSK-0243 Implement noop embedding adapter and telemetry tests](../items/task/0200/KABSD-TSK-0243_implement-noop-embedding-adapter-and-telemetry-tests.md)
 - [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
 - [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
 - [KABSD-TSK-0258 Improve topic distill brief items listing](../items/task/0200/KABSD-TSK-0258_improve-topic-distill-brief-items-listing.md)
 - [KABSD-TSK-0259 Document topic snapshot retention policy (keep latest)](../items/task/0200/KABSD-TSK-0259_document-topic-snapshot-retention-policy-keep-latest.md)
+- [KABSD-TSK-0260 Implement sqlite vector backend MVP wiring](../items/task/0200/KABSD-TSK-0260_implement-sqlite-vector-backend-mvp-wiring.md)
+- [KABSD-TSK-0261 Implement deterministic benchmark harness for chunking/embedding/vector](../items/task/0200/KABSD-TSK-0261_implement-deterministic-benchmark-harness-for-chunking-embedding-vector.md)
+- [KABSD-TSK-0263 Implement topic merge: merge embedding-preprocessing-and-vector-backend-research and phase-2](../items/task/0200/KABSD-TSK-0263_implement-topic-merge-merge-embedding-preprocessing-and-vector-backend-research-and-phase-2.md)
 
 ### Bug
 

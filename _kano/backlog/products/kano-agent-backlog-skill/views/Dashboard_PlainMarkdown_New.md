@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 107
-vcs.hash: c318a6844fd27e2f569d2cd094cfe99e51c57e71
+vcs.revno: 108
+vcs.hash: e2662afdb53830a1596904e5cd0b3ebb2cbf1f65
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: copilot
 
 ## New
 
@@ -63,10 +63,7 @@ Agent: opencode
 - [KABSD-USR-0026 Assignment record and conflict isolation for dispatched work](../items/userstory/0000/KABSD-USR-0026_assignment-record-and-conflict-isolation-for-dispatched-work.md)
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
 - [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
-- [KABSD-USR-0032 Tokenizer adapters for accurate token counting (OpenAI and local)](../items/userstory/0000/KABSD-USR-0032_tokenizer-adapters-for-accurate-token-counting-openai-and-local.md)
 - [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
-- [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
-- [KABSD-USR-0035 Decide cross-lingual retrieval and index strategy via ADRs](../items/userstory/0000/KABSD-USR-0035_decide-cross-lingual-retrieval-and-index-strategy-via-adrs.md)
 
 ### Task
 
@@ -131,7 +128,6 @@ Agent: opencode
 - [KABSD-TSK-0229 Refresh demo dashboard views](../items/task/0200/KABSD-TSK-0229_refresh-demo-dashboard-views.md)
 - [KABSD-TSK-0230 Ignore demo artifacts in git](../items/task/0200/KABSD-TSK-0230_ignore-demo-artifacts-in-git.md)
 - [KABSD-TSK-0231 Restore generate_demo_views as self-contained skill script](../items/task/0200/KABSD-TSK-0231_restore-generate-demo-views-as-self-contained-skill-script.md)
-- [KABSD-TSK-0244 Implement tiktoken tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0244_implement-tiktoken-tokenizer-adapter-optional-dependency.md)
 - [KABSD-TSK-0245 Implement HuggingFace tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0245_implement-huggingface-tokenizer-adapter-optional-dependency.md)
 - [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
 - [KABSD-TSK-0247 Define embedding pipeline config schema (TOML) and validation](../items/task/0200/KABSD-TSK-0247_define-embedding-pipeline-config-schema-toml-and-validation.md)
@@ -142,6 +138,7 @@ Agent: opencode
 - [KABSD-TSK-0252 Document benchmark results and trade-offs in topic synthesis](../items/task/0200/KABSD-TSK-0252_document-benchmark-results-and-trade-offs-in-topic-synthesis.md)
 - [KABSD-TSK-0253 Draft ADR: default embedder policy (multilingual vs tiered)](../items/task/0200/KABSD-TSK-0253_draft-adr-default-embedder-policy-multilingual-vs-tiered.md)
 - [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
+- [KABSD-TSK-0262 Implement topic merge function and merge embedding-preprocessing-and-vector-backend-research with phase-2](../items/task/0200/KABSD-TSK-0262_implement-topic-merge-function-and-merge-embedding-preprocessing-and-vector-backend-research-with-phase-2.md)
 
 ### Nones
 
