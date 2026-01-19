@@ -61,13 +61,13 @@ Update `scripts/common/config_loader.py` to:
 2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. Depends on TSK-0079 (context.py); unblocks TSK-0083.
 
 2026-01-06 21:45 [agent=copilot] **IMPLEMENTATION COMPLETE**:
-  - Added imports from context.py (find_repo_root, find_platform_root, resolve_product_name, get_config_file)
+  - Added imports from context.py (find_repo_root, find_project_root, resolve_product_name, get_config_file)
   - Updated resolve_config_path() with 4-tier fallback logic:
     1. Explicit config_path argument
     2. KANO_BACKLOG_CONFIG_PATH env var
     3. Product-specific config using context.get_config_file()
     4. Legacy platform-level config
-  - Updated allowed_roots_for_repo() to use context.find_platform_root() and include products/, sandboxes/ folders
+  - Updated allowed_roots_for_repo() to use context.find_project_root() and include products/, sandboxes/ folders
   - Added product_name parameter (optional) to load_config() and load_config_with_defaults()
   - Comprehensive docstrings added explaining multi-product behavior and fallback logic
   - Backward compatible: all new parameters are optional, existing code unaffected
@@ -79,7 +79,7 @@ Update `scripts/common/config_loader.py` to:
 
 - `load_config(product_name="kano-agent-backlog-skill")` loads from `_kano/backlog/products/kano-agent-backlog-skill/_config/config.json`.
 - `load_config()` with no args loads from the default product.
-- `resolve_config_path("test-product")` returns `<platform_root>/products/test-product/_config/config.json` (as a path object).
+- `resolve_config_path("test-product")` returns `<project_root>/products/test-product/_config/config.json` (as a path object).
 - Error message is clear if config file does not exist.
 - Legacy single-product paths are logged as deprecated but still work (optional, if migration period needed).
 

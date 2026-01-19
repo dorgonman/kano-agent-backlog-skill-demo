@@ -1,8 +1,9 @@
 ---
-id: ADR-0004
-title: Per-Product Isolated Index Architecture
-status: Accepted
 decision_date: 2026-01-07
+id: ADR-0004
+status: Accepted
+title: Per-Product Isolated Index Architecture
+uid: 019bc5dc-68dd-7280-89dd-d1c5dcdeca30
 ---
 
 # Context
@@ -105,5 +106,5 @@ When cross-product features are needed:
 
 # References
 
-- [[KABSD-FTR-0010]]: Monorepo Platform Migration feature
-- [[KABSD-TSK-0084]]: Indexer and resolver product isolation
+- [[../items/feature/0000/KABSD-FTR-0010_monorepo-platform-migration.md]]: Monorepo Platform Migration feature
+- [[../items/task/0000/KABSD-TSK-0084_update-indexer-and-resolver-for-product-isolation.md]]: Indexer and resolver product isolation

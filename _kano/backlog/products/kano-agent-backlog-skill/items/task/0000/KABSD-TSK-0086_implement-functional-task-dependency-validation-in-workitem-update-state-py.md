@@ -5,7 +5,7 @@ type: Task
 title: "Implement functional task dependency validation in workitem_update_state.py"
 state: Done
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: general
 iteration: null
 tags: []

@@ -19,7 +19,7 @@ tags: []
 title: Build JSON to TOML migration tool with validation
 type: Task
 uid: 019bb368-f403-760c-93ef-b23e7915d16e
-updated: '2026-01-13'
+updated: 2026-01-19
 ---
 
 # Context
@@ -42,7 +42,12 @@ Migration tool runs in dry-run mode by default; writes TOML files that match sch
 
 Schema mismatch for edge-case keys; keeping formatting stable for diffs; avoiding secrets in output
 
+
+## Decisions
+
+- Support JSON+TOML for two minor versions and provide a migration tool with JSON deprecated warnings. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
 2026-01-13 23:45 [agent=antigravity] State -> Done. Verified migrate-json command in config_cmd.py and completed manual repo-wide migration.
+2026-01-19 12:15 [agent=copilot] [model=unknown] Decision write-back added: Support JSON+TOML for two minor versions and provide a migration tool with JSON deprecated warnings. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

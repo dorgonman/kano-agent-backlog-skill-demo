@@ -1,11 +1,16 @@
 ---
-id: ADR-0015
-title: "Skill-Scoped CLI Namespace Convention"
-status: Proposed
 date: 2026-01-12
-related_items: ["KABSD-EPIC-0009", "KABSD-FTR-0034", "KABSD-FTR-0035", "KABSD-FTR-0036"]
-supersedes: null
+id: ADR-0015
+related_items:
+- KABSD-EPIC-0009
+- KABSD-FTR-0034
+- KABSD-FTR-0035
+- KABSD-FTR-0036
+status: Proposed
 superseded_by: null
+supersedes: null
+title: Skill-Scoped CLI Namespace Convention
+uid: 019bc5dc-68e8-7559-beb8-af235f7fe76e
 ---
 
 # Decision

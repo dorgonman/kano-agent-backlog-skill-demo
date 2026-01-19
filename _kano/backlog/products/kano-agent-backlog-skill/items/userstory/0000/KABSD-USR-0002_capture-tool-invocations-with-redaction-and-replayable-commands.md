@@ -50,11 +50,11 @@ copy-ready command so I can audit and rerun actions safely.
 # Links
 
 - Feature: [[KABSD-FTR-0002_agent-tool-invocation-audit-logging-system|KABSD-FTR-0002 Agent tool invocation audit logging system]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0006_define-audit-log-schema-and-redaction-rules|KABSD-TSK-0006 Define audit log schema and redaction rules]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0007_prototype-tool-invocation-logger-with-redaction|KABSD-TSK-0007 Prototype tool invocation logger with redaction]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0013_integrate-audit-logging-into-skill-scripts|KABSD-TSK-0013 Integrate audit logging into skill scripts]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0014_enhance-audit-logging-config-and-wrapper-coverage|KABSD-TSK-0014 Enhance audit logging config and wrapper coverage]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0016_restrict-skill-scripts-to-kano-backlog-paths|KABSD-TSK-0016 Restrict skill scripts to _kano/backlog paths]]
+- Task: [[../../task/0000/KABSD-TSK-0006_define-audit-log-schema-and-redaction-rules|KABSD-TSK-0006 Define audit log schema and redaction rules]]
+- Task: [[../../task/0000/KABSD-TSK-0007_prototype-tool-invocation-logger-with-redaction|KABSD-TSK-0007 Prototype tool invocation logger with redaction]]
+- Task: [[../../task/0000/KABSD-TSK-0013_integrate-audit-logging-into-skill-scripts|KABSD-TSK-0013 Integrate audit logging into skill scripts]]
+- Task: [[../../task/0000/KABSD-TSK-0014_enhance-audit-logging-config-and-wrapper-coverage|KABSD-TSK-0014 Enhance audit logging config and wrapper coverage]]
+- Task: [[../../task/0000/KABSD-TSK-0016_restrict-skill-scripts-to-kano-backlog-paths|KABSD-TSK-0016 Restrict skill scripts to _kano/backlog paths]]
 
 # Alternatives
 

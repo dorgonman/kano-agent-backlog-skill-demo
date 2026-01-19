@@ -1,33 +1,24 @@
-# Topic Brief: embedding-preprocessing-and-vector-backend-research
+# Stable Brief: embedding-preprocessing-and-vector-backend-research
 
-Generated: 2026-01-15T14:42:05.217983Z
+This file is the stable brief. It must not be overwritten by automated distill steps.
 
-## Facts
+## Purpose
+- Provide long-lived summary and decisions.
 
-<!-- Verified facts with citations to materials/items/docs -->
-- [x] Tokenization choice materially impacts token counting/cost and max-context enforcement; token inflation differs by language. - Source: `synthesis/tokenizers-and-embeddings-key-takeaways.md`
-- [x] Embedding models have hard max-token windows (commonly ~512 for BERT-derived encoders; ~8k for some newer multilingual encoders / OpenAI embeddings), so chunking is required for documents. - Source: `synthesis/tokenizers-and-embeddings-key-takeaways.md`
-- [x] Deterministic, model-independent chunking + stable chunk IDs enable incremental indexing and reliable reconstruction. - Source: `synthesis/tokenizers-and-embeddings-key-takeaways.md`
+## Stable Summary
+- This topic consolidates research and decisions around embedding preprocessing, chunking, token budgets, and vector backend options for a local-first backlog system.
+- Current milestone focus: the 0.0.2 indexing + resolver milestone, plus embedding providers, tokenizers, and benchmark harness work.
+- Implementation is guided by ADR-0009 (local-first embedding search architecture) and ongoing research tasks around chunking and backend selection.
 
-## Unknowns / Risks
+## Key Decisions
+- Local-first embedding search architecture documented in ADR-0009.
+- Vector backend research re-framed as a pluggable backend (see KABSD-TSK-0208).
+- Embedding adapter interface includes token-counting telemetry (KABSD-USR-0031).
 
-<!-- Open questions and potential blockers -->
-- [ ] Do we require cross-lingual retrieval (single shared embedding space), or is same-language search sufficient?
-- [ ] If we support multiple embedders with different max-token windows, do we chunk to the smallest window (model-agnostic index) or keep per-model indexes?
-- [ ] Tokenization + chunking choices may bias against CJK content (cost and context utilization) if not measured and compensated.
+## Open Questions / Risks
+- Finalize chunking/token-budget fitting policy for embeddings (KABSD-TSK-0207).
+- Benchmark results may change backend selection; keep pluggable design flexible (KABSD-FTR-0042).
+- Ensure tokenizer selection aligns with embedding provider constraints and multilingual needs (KABSD-USR-0034).
 
-## Proposed Actions
-
-<!-- Concrete next steps, linked to workitems -->
-- [ ] Define a deterministic chunking contract (normalization, rules, max size, overlap, chunk ID/hash). → new ticket needed
-- [ ] Create an embedding adapter interface with per-provider token counting and truncation telemetry. → new ticket needed
-- [ ] Run a small benchmark (local vs cloud, multilingual vs English-first) and document speed/quality/storage tradeoffs. → new ticket needed
-
-## Decision Candidates
-
-<!-- Tradeoffs requiring ADR -->
-- [ ] Adopt a single multilingual embedder as the default vs a tiered policy (MiniLM default + multilingual fallback). → ADR draft needed
-- [ ] Index strategy: single model-agnostic index vs per-model indexes (dimensionality + chunk window differences). → ADR draft needed
-
----
-_This brief is auto-generated. Edit after distill to finalize._
+## References
+- Generated snapshot: `_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/brief.generated.md`

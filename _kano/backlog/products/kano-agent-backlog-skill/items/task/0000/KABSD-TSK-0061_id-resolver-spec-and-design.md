@@ -74,4 +74,4 @@ Design and document the ID resolver specification:
 
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 resolver semantics design.
 2026-01-06 01:40 [agent=antigravity] Created ID Resolver spec: ADR-0003-appendix_id-resolver-spec.md with ResolveRef() function, index requirements, disambiguation logic.
-2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0042 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

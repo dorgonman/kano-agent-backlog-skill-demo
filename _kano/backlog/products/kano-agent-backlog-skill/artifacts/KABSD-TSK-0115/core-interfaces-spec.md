@@ -37,7 +37,7 @@ kano-backlog-core/
 
 ## 1. Config Module
 
-**Purpose:** Resolve platform/product/sandbox roots and load configuration.
+**Purpose:** Resolve project/product/sandbox roots and load configuration.
 
 ### Interfaces
 
@@ -48,8 +48,8 @@ from pydantic import BaseModel
 
 class BacklogContext(BaseModel):
     """Resolved backlog context with platform and product roots."""
-    platform_root: Path      # e.g., D:/_work/_Kano/kano-agent-backlog-skill-demo
-    backlog_root: Path       # e.g., platform_root / _kano/backlog
+    project_root: Path      # e.g., D:/_work/_Kano/kano-agent-backlog-skill-demo
+    backlog_root: Path       # e.g., project_root / _kano/backlog
     product_root: Path       # e.g., backlog_root / products / kano-agent-backlog-skill
     sandbox_root: Optional[Path]  # e.g., backlog_root / sandboxes / <sandbox-name>
     product_name: str        # e.g., "kano-agent-backlog-skill"
@@ -72,7 +72,7 @@ class ConfigLoader:
             BacklogContext with resolved roots
             
         Raises:
-            ConfigError: If platform/product root cannot be determined
+            ConfigError: If project/product root cannot be determined
         """
         pass
     

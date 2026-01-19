@@ -30,7 +30,7 @@ decisions: [ADR-0013]
 - Risk: different scripts bypass checks or diverge behavior over time.
 - No single CLI entrypoint exists; agents must know which script to call for each operation.
 
-**Related**: [[KABSD-FTR-0025]] addresses expanding the `kano` CLI commands, but this Feature goes further by defining the complete architectural separation between executable entrypoints and library modules.
+**Related**: [[KABSD-FTR-0025_unified-cli-for-backlog-operations]] addresses expanding the `kano` CLI commands, but this Feature goes further by defining the complete architectural separation between executable entrypoints and library modules.
 
 # Goal
 
@@ -199,7 +199,7 @@ Track these as follow-up tasks under this feature so Phase 3.6 has a clear defin
 
 - **Risk**: Breaking change for agents using raw scripts directly. Mitigation: Keep thin wrappers in Phase 2-3, deprecate gradually.
 - **Risk**: Large refactoring scope. Mitigation: Phased approach, each phase is independently valuable.
-- **Dependency**: [[KABSD-FTR-0025]] (Unified CLI) is a subset of this work; should be merged or superseded.
+- **Dependency**: [[KABSD-FTR-0025_unified-cli-for-backlog-operations]] (Unified CLI) is a subset of this work; should be merged or superseded.
 - **Open Question**: Exact naming of Python packages (snake_case vs hyphen) — prefer Python import friendliness.
 - **Open Question**: Whether to keep deprecated wrappers temporarily for backward compatibility.
 - **Deferred**: Plugin/hook mechanism; only document in ADR as future extension point.

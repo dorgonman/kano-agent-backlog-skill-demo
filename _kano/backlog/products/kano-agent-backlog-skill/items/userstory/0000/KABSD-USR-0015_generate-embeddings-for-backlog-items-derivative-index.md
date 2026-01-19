@@ -36,7 +36,7 @@ As a user, I want a hybrid retrieval pipeline that combines semantic search (emb
 
 # Approach
 
-- Follow **Route B** (Sidecar ANN Index) as decided in [ADR-0009](../../decisions/ADR-0009_local-first-embedding-search-architecture.md).
+- Follow **Route B** (Sidecar ANN Index) as decided in [ADR-0009](_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md).
 - Implement a **Unified Ingester** (`ingest.py`) covering multiple DocTypes with specialized chunking strategies.
 - Use **SQLite FTS5** for keyword-based BM25 ranking.
 - Use **ANN Sidecar** (HNSWlib/FAISS) for semantic similarity.

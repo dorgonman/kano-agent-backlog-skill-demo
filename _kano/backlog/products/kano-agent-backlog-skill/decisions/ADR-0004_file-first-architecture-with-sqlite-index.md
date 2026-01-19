@@ -1,11 +1,16 @@
 ---
-id: ADR-0004
-title: "File-First Architecture with SQLite Index"
-status: Proposed
 date: 2026-01-06
-related_items: [KABSD-FTR-0007, KABSD-TSK-0049, ADR-0003, ADR-0012]
-supersedes: null
+id: ADR-0004
+related_items:
+- KABSD-FTR-0007
+- KABSD-TSK-0049
+- ADR-0003
+- ADR-0012
+status: Proposed
 superseded_by: null
+supersedes: null
+title: File-First Architecture with SQLite Index
+uid: 019bc5dc-68dc-7034-a1c6-31a01a72a696
 ---
 
 # Decision

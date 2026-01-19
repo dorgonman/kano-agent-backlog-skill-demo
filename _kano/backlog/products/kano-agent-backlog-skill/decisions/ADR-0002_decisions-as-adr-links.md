@@ -1,11 +1,13 @@
 ---
-id: ADR-0002
-title: "Decision handling: ADRs stay in decisions/ with item links"
-status: Proposed
 date: 2026-01-05
-related_items: [KABSD-FTR-0001]
-supersedes: null
+id: ADR-0002
+related_items:
+- KABSD-FTR-0001
+status: Proposed
 superseded_by: null
+supersedes: null
+title: 'Decision handling: ADRs stay in decisions/ with item links'
+uid: 019bc5dc-68d6-70fe-9273-9dd9099e89fb
 ---
 
 # Decision
@@ -22,7 +24,7 @@ workflow tickets. We want to preserve clarity while avoiding ticket sprawl.
 
 # Links
 
-- Related: [[_kano/backlog/items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
+- Related: [[../items/feature/0000/KABSD-FTR-0001_local-backlog-system|KABSD-FTR-0001 Local-first backlog system]]
 
 # Options Considered
 

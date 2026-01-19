@@ -1,8 +1,9 @@
 ---
-id: ADR-0006
-title: Multi-Product Directory Structure and Naming Conventions
-status: Accepted
 decision_date: 2026-01-07
+id: ADR-0006
+status: Accepted
+title: Multi-Product Directory Structure and Naming Conventions
+uid: 019bc5dc-68e0-71cd-82e5-83c9cee8fc91
 ---
 
 # Context
@@ -10,13 +11,13 @@ decision_date: 2026-01-07
 A monorepo containing multiple independent products (skills) needs a consistent directory layout that:
 - Keeps products isolated from each other
 - Supports independent configuration and indexing
-- Allows shared tools and metadata at the platform level
+- Allows shared tools and metadata at the project level
 - Scales to many products without directory explosion
 - Maintains backward compatibility during migration
 
 ## Competing Designs
 
-1. **Platform + Products model** (chosen):
+1. **Project + Products model** (chosen):
    ```
    _kano/backlog/
      products/<product-name>/
@@ -46,12 +47,12 @@ A monorepo containing multiple independent products (skills) needs a consistent 
 
 # Decision
 
-**Implement Platform + Products hierarchical model.**
+**Implement Project + Products hierarchical model.**
 
 Directory structure:
 
 ```
-_kano/backlog/                          # Platform root
+_kano/backlog/                          # Project root
 ├── products/                           # Product container
 │   ├── kano-agent-backlog-skill/       # First product
 │   │   ├── _config/
@@ -79,17 +80,17 @@ _kano/backlog/                          # Platform root
 │   ├── kano-agent-backlog-skill/       # Can test schema changes here
 │   └── kano-commit-convention-skill/
 │
-├── _shared/                            # Platform-level shared data
+├── _shared/                            # Project-level shared data
 │   ├── defaults.json                   # { "default_product": "..." }
 │   └── config_template.json            # Shared config seed
 │
-├── _meta/                              # Platform metadata (if needed)
-├── _index/                             # Platform index (optional, future)
-├── views/                              # Platform-level dashboards
+├── _meta/                              # Project metadata (if needed)
+├── _index/                             # Project index (optional, future)
+├── views/                              # Project-level dashboards
 │   ├── Dashboard_PlainMarkdown_Active.md
 │   ├── Dashboard_PlainMarkdown_New.md
 │   └── Dashboard_PlainMarkdown_Done.md
-└── _logs/                              # Audit logs (platform-level)
+└── _logs/                              # Audit logs (project-level)
     └── agent_tools/
         └── tool_invocations.jsonl
 ```
@@ -143,14 +144,14 @@ Rebuild product A's index without touching product B.
 - Run migration scripts without affecting production backlog
 - Easy cleanup: just delete sandbox directory
 
-## 7. Platform-Level Aggregation (Future)
+## 7. Project-Level Aggregation (Future)
 
 `_shared/` and `_index/` support future features:
 - Global embedding database
 - Cross-product analytics dashboards
 - Unified search index (optional, opt-in)
 
-Products remain independent; platform layer is additive.
+Products remain independent; project layer is additive.
 
 # Implementation
 
@@ -168,7 +169,7 @@ items_dir = get_items_dir(product_name)        # products/<name>/items
 
 ### Configuration
 
-- Platform level: `_kano/backlog/_shared/defaults.json` (default product)
+- Project level: `_kano/backlog/_shared/defaults.json` (default product)
 - Product level: `products/<name>/_config/config.json` (product-specific)
 
 Fallback chain:
@@ -203,6 +204,6 @@ items/kccs-features/0000/
 
 # References
 
-- [[KABSD-FTR-0010]]: Monorepo Platform Migration feature
-- [[KABSD-TSK-0081]]: Directory migration implementation
-- [[ADR-0004]]: Per-Product Index Architecture
+- [[../items/feature/0000/KABSD-FTR-0010_monorepo-platform-migration.md]]: Monorepo Platform Migration feature
+- [[../items/task/0000/KABSD-TSK-0081_execute-directory-restructuring-for-monorepo-platform.md]]: Directory migration implementation
+- [[ADR-0016_per-product-isolated-index-architecture]]: Per-Product Index Architecture

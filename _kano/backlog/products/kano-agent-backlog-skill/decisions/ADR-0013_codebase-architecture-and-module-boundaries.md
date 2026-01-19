@@ -1,11 +1,15 @@
 ---
-id: ADR-0013
-title: "Codebase Architecture and Module Boundaries"
-status: Accepted
 date: 2026-01-11
-related_items: [KABSD-FTR-0028, KABSD-FTR-0025, KABSD-FTR-0019]
-supersedes: null
+id: ADR-0013
+related_items:
+- KABSD-FTR-0028
+- KABSD-FTR-0025
+- KABSD-FTR-0019
+status: Accepted
 superseded_by: null
+supersedes: null
+title: Codebase Architecture and Module Boundaries
+uid: 019bc5dc-68e5-732c-81ca-2bf2661bf48d
 ---
 
 # Decision
@@ -211,15 +215,15 @@ kano
 # Consequences
 
 1. **For skill developers**: Must read this ADR before adding code. New logic goes in `src/`, not `scripts/`.
-2. **For agents**: Call only `scripts/kano-backlog`. Direct script calls are deprecated. See [[ADR-0015]] for skill-scoped CLI naming convention.
+2. **For agents**: Call only `scripts/kano-backlog`. Direct script calls are deprecated. See [[ADR-0015_skill-scoped-cli-namespace-convention]] for skill-scoped CLI naming convention.
 3. **For future facades**: HTTP/MCP/GUI can import `kano_backlog_ops` directly, no CLI dependency.
 4. **For testing**: Use-case functions in `src/` are easier to unit test than CLI scripts.
-5. **Naming convention**: This skill follows skill-scoped naming (`kano-backlog`, `kano_backlog_*`). The bare `kano` namespace is reserved for a future umbrella CLI. See [[ADR-0015]] for full rationale.
+5. **Naming convention**: This skill follows skill-scoped naming (`kano-backlog`, `kano_backlog_*`). The bare `kano` namespace is reserved for a future umbrella CLI. See [[ADR-0015_skill-scoped-cli-namespace-convention]] for full rationale.
 
 # Related
 
-- [[KABSD-FTR-0028]]: Parent feature for this refactoring
-- [[KABSD-FTR-0025]]: Unified CLI (subset of this work)
-- [[KABSD-FTR-0019]]: Core/CLI/Server/GUI facades separation
-- [[ADR-0004]]: File-first architecture (complements this ADR)
-- [[ADR-0015]]: Skill-scoped CLI namespace convention (naming strategy)
+- [[../items/feature/0000/KABSD-FTR-0028_refactor-kano-agent-backlog-skill-scripts-into-a-single-cli-entry-library-modules.md]]: Parent feature for this refactoring
+- [[KABSD-FTR-0025_unified-cli-for-backlog-operations]]: Unified CLI (subset of this work)
+- [[KABSD-FTR-0019_refactor-kano-backlog-core-cli-server-gui-facades]]: Core/CLI/Server/GUI facades separation
+- [[ADR-0004_file-first-architecture-with-sqlite-index]]: File-first architecture (complements this ADR)
+- [[ADR-0015_skill-scoped-cli-namespace-convention]]: Skill-scoped CLI namespace convention (naming strategy)

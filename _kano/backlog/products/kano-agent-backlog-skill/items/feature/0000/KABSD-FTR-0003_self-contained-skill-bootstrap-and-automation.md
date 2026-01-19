@@ -52,7 +52,7 @@ layout, install tool wrappers, and optionally seed demo views/items.
 
 - Epic: [[KABSD-EPIC-0002_milestone-0-0-1-core-demo|KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)]]
 - UserStory: [[KABSD-USR-0004_bootstrap-backlog-scaffold-and-tools-from-the-skill|KABSD-USR-0004 Bootstrap backlog scaffold and tools from the skill]]
-- UserStory: [[KABSD-USR-0005_seed-demo-data-and-views-from-the-skill|KABSD-USR-0005 Seed demo data and views from the skill]]
+- UserStory: [[KABSD-USR-0028_seed-demo-data-and-views-from-the-skill|KABSD-USR-0005 Seed demo data and views from the skill]]
 
 # Alternatives
 

@@ -1,11 +1,12 @@
 ---
-id: ADR-0009
-title: Local-First Embedding Search Strategic Evaluation
 date: 2026-01-07
-status: Proposed
 deciders:
-  - agent=antigravity
-  - user
+- agent=antigravity
+- user
+id: ADR-0009
+status: Proposed
+title: Local-First Embedding Search Strategic Evaluation
+uid: 019bc5dc-68e1-72f0-bffa-18ae99b7de13
 ---
 
 # Local-First Embedding Search Strategic Evaluation
@@ -97,7 +98,7 @@ Chosen option: **Route B (Sidecar ANN Index)** for local-first environments, wit
 
 ## References
 
-- [KABSD-USR-0015: Generate embeddings for backlog items](KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md)
+- [KABSD-USR-0015: Generate embeddings for backlog items](../items/userstory/0000/KABSD-USR-0015_generate-embeddings-for-backlog-items-derivative-index.md)
 - [ADR-0004: File-first architecture with SQLite index](ADR-0004_file-first-architecture-with-sqlite-index.md)
 
 
@@ -114,4 +115,3 @@ Minimal strategy:
 See:
 - [[ADR-0011_graph-assisted-retrieval-and-context-graph.md|ADR-0011 Graph-assisted retrieval with a derived Context Graph]]
 - [[../items/feature/0000/KABSD-FTR-0023_graph-assisted-rag-planning-and-minimal-implementation.md|KABSD-FTR-0023 Graph-assisted RAG planning]]
-

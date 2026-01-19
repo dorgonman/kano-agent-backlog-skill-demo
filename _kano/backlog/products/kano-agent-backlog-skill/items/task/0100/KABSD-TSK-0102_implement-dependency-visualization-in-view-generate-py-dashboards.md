@@ -5,7 +5,7 @@ type: Task
 title: "Implement dependency visualization in view_generate.py dashboards"
 state: Proposed
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: general
 iteration: null
 tags: []

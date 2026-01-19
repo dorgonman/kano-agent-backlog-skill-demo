@@ -15,7 +15,7 @@ updated: 2026-01-09
   - [[KABSD-TSK-0113_evaluate-docker-packaging-and-runtime-split-server-vs-data|KABSD-TSK-0113 Evaluate Docker packaging and runtime split (server vs data)]] (state: Proposed)
   - [[KABSD-TSK-0114_evaluate-data-backends-local-files-sqlite-postgresql-mysql|KABSD-TSK-0114 Evaluate data backends: local files, SQLite, PostgreSQL/MySQL]] (state: Proposed)
 - [[KABSD-FTR-0019_refactor-kano-backlog-core-cli-server-gui-facades|KABSD-FTR-0019 Refactor: kano-backlog-core + CLI/Server/GUI facades]] (state: Done)
-  - [[KABSD-TSK-0001_implement-kano-backlog-core-phase-3-state-and-audit-modules|KABSD-TSK-0001 Implement kano-backlog-core Phase 3: State and Audit modules]] (state: Done)
+  - [[KABSD-TSK-0001_project-backlog-skill|KABSD-TSK-0001 Implement kano-backlog-core Phase 3: State and Audit modules]] (state: Done)
   - [[KABSD-TSK-0115_define-core-interfaces-and-module-boundaries|KABSD-TSK-0115 Define core interfaces and module boundaries]] (state: Done)
   - [[KABSD-TSK-0116_plan-cli-migration-to-thin-wrappers|KABSD-TSK-0116 Plan CLI migration to thin wrappers]] (state: Done)
   - [[KABSD-TSK-0117_design-server-facade-layering-http-mcp|KABSD-TSK-0117 Design server facade layering (HTTP/MCP)]] (state: Done)
@@ -30,7 +30,7 @@ updated: 2026-01-09
   - [[KABSD-USR-0021_validate-section-completeness-in-backlog-items|KABSD-USR-0021 Validate section completeness in backlog items]] (state: Proposed)
   - [[KABSD-USR-0022_provide-ci-integration-for-backlog-quality-linting|KABSD-USR-0022 Provide CI integration for backlog quality linting]] (state: Proposed)
   - [[KABSD-TSK-0123_remediate-non-english-content-in-backlog-adrs-items-to-english|KABSD-TSK-0123 Remediate non-English content in backlog (ADRs/items) to English]] (state: Done)
-- [[KABSD-FTR-0021_graph-assisted-rag-planning-and-minimal-implementation|KABSD-FTR-0023 Graph-assisted RAG planning and minimal implementation]] (state: Proposed)
+- [[KABSD-FTR-0023_graph-assisted-rag-planning-and-minimal-implementation|KABSD-FTR-0023 Graph-assisted RAG planning and minimal implementation]] (state: Proposed)
 - [[KABSD-FTR-0024_global-config-layers-and-uri-compilation|KABSD-FTR-0024 Global config layers and URI compilation]] (state: Proposed)
 
 ## Auto list (Dataview)

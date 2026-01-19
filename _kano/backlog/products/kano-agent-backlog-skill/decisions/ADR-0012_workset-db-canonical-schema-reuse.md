@@ -5,7 +5,7 @@ title: "Workset DB Uses Canonical Schema (No Parallel Schema)"
 status: Accepted
 decision_date: 2026-01-10
 date: 2026-01-09
-related_items: [KABSD-FTR-0013, KABSD-FTR-0015, KABSD-TSK-0132, KABSD-TSK-0046, ADR-0004, ADR-0008, ADR-0011]
+related_items: [KABSD-FTR-0013, KABSD-FTR-0015, KABSD-TSK-0217, KABSD-TSK-0046, ADR-0004, ADR-0008, ADR-0011]
 supersedes: null
 superseded_by: null
 deciders:

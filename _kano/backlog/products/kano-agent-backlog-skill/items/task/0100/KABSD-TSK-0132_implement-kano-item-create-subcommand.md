@@ -5,7 +5,7 @@ decisions: []
 external:
   azure_id: null
   jira_key: null
-id: KABSD-TSK-0188
+id: KABSD-TSK-0224
 iteration: null
 links:
   blocked_by: []
@@ -33,3 +33,8 @@ Wrap `workitem_create.py` logic into the unified `kano` CLI.
 - Add `item create` subcommand to `kano` CLI.
 - Supporting arguments: `--type`, `--title`, `--parent`, `--priority`, `--tags`, `--product`.
 - Ensure consistent output and error handling.
+
+# Worklog
+
+2026-01-16 11:42 [agent=codex] [model=GPT-5.2-Codex] Remapped ID: KABSD-TSK-0222 -> KABSD-TSK-0218.
+2026-01-16 13:34 [agent=codex] [model=unknown] Remapped ID: KABSD-TSK-0132 -> KABSD-TSK-0222.

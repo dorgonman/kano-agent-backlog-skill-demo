@@ -5,7 +5,7 @@ type: Task
 title: Generalize index generator for any item
 state: Done
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: views
 iteration: null
 tags:

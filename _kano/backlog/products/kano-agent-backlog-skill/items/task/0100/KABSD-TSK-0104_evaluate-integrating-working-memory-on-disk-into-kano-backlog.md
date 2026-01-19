@@ -76,4 +76,4 @@ Kano backlog has implemented some capabilities (structured work items, ADRs, wor
 
 2026-01-07 10:00 [agent=antigravity] Created from template.
 2026-01-07 10:01 [agent=antigravity] Populated task scope, acceptance criteria, and deliverables based on user discussion with ChatGPT.
-2026-01-07 14:10 [agent=antigravity] Completed evaluation. Report generated at [workset_evaluation_report.md](../../../artifacts/workset_evaluation_report.md). State changed to Done.
+2026-01-07 14:10 [agent=antigravity] Completed evaluation. Report generated at [workset_evaluation_report.md](_kano/backlog/products/kano-agent-backlog-skill/artifacts/workset_evaluation_report.md). State changed to Done.

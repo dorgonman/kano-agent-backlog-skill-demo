@@ -49,9 +49,9 @@ isolation without touching `_kano/backlog/` data.
 # Links
 
 - Feature: [[KABSD-FTR-0004_backlog-config-system-and-process-profiles|KABSD-FTR-0004 Backlog config system and process profiles]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0025_define-backlog-sandbox-path-and-guardrails|KABSD-TSK-0025 Define backlog sandbox path and guardrails]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0026_update-test-scripts-to-use-backlog-sandbox|KABSD-TSK-0026 Update test scripts to use backlog sandbox]]
-- Task: [[_kano/backlog/items/task/0000/KABSD-TSK-0027_add-user-story-validation-test-script|KABSD-TSK-0027 Add user story validation test script]]
+- Task: [[../../task/0000/KABSD-TSK-0025_define-backlog-sandbox-path-and-guardrails|KABSD-TSK-0025 Define backlog sandbox path and guardrails]]
+- Task: [[../../task/0000/KABSD-TSK-0026_update-test-scripts-to-use-backlog-sandbox|KABSD-TSK-0026 Update test scripts to use backlog sandbox]]
+- Task: [[../../task/0000/KABSD-TSK-0027_add-user-story-validation-test-script|KABSD-TSK-0027 Add user story validation test script]]
 
 # Alternatives
 

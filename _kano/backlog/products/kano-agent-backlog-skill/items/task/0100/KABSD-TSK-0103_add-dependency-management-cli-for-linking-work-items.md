@@ -5,7 +5,7 @@ type: Task
 title: "Add dependency management CLI for linking work items"
 state: Proposed
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: general
 iteration: null
 tags: []

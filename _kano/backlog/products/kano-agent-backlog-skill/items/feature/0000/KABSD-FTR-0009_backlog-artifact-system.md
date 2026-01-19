@@ -53,7 +53,7 @@ Addendum (2026-01-09): Shared artifacts for cross-product
 2. **Helper Scripts**:
    - `workitem_attach_artifact.py`: Copy file to artifact folder and append link to item worklog/body.
    - `open_artifacts.py`: Open the artifact folder for an item.
-3. **Link Format**: Use relative links in Markdown: `[Design](.../../../artifacts/KABSD-FTR-0009/design.png)` or define a sweet path alias if possible (complexity). For now, standard relative links.
+3. **Link Format**: Use relative links in Markdown: `[Design](../../../artifacts/KABSD-FTR-0009/design.md)` or define a sweet path alias if possible (complexity). For now, standard relative links.
 
 # Alternatives
 
@@ -69,9 +69,11 @@ Define a standard folder structure and naming convention for item artifacts.
 2026-01-06 11:53 [agent=antigravity] Starting implementation of artifact system tasks.
 
 2026-01-06 11:55 [agent=antigravity] Testing artifact attachment.
-- Artifact: [test_artifact.txt](/_kano/backlog/artifacts/KABSD-FTR-0009/test_artifact.txt)
+- Artifact: [test_artifact.txt](../../../artifacts/KABSD-FTR-0009/test_artifact.txt)
 2026-01-06 11:59 [agent=antigravity] Retrying artifact attachment with relative path fix.
 - Artifact: [test_artifact.txt](../../../artifacts/KABSD-FTR-0009/test_artifact.txt)
 2026-01-06 12:14 [agent=antigravity] Configured Git LFS for artifacts directory.
 2026-01-09 11:33 [agent=windsurf] Added shared artifacts addendum: cross-product artifacts should live under `_kano/backlog/_shared/artifacts/<ItemID>/`.
 2026-01-12 08:52 [agent=copilot] Artifact System complete: attach-artifact CLI + ops implemented; artifacts policy documented; tasks TSK-0070 and TSK-0071 marked Done; dashboards refreshed.
+2026-01-16 16:09 [agent=codex] [model=unknown] Artifact attached: [design.md](..\..\..\artifacts\KABSD-FTR-0009\design.md)
+2026-01-16 16:09 [agent=codex] [model=unknown] Artifact attached: [test_artifact.txt](../../../artifacts/KABSD-FTR-0009/test_artifact.txt)

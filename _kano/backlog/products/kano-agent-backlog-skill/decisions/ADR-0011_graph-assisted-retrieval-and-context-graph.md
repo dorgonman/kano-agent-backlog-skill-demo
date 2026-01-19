@@ -1,9 +1,13 @@
 ---
-id: ADR-0011
-title: "Graph-assisted retrieval with a derived Context Graph (weak graph first)"
 date: 2026-01-09
+id: ADR-0011
+related_items:
+- KABSD-FTR-0023
+- KABSD-FTR-0007
+- KABSD-USR-0015
 status: Proposed
-related_items: [KABSD-FTR-0023, KABSD-FTR-0007, KABSD-USR-0015]
+title: Graph-assisted retrieval with a derived Context Graph (weak graph first)
+uid: 019bc5dc-68e2-7002-b803-1ef953c0a991
 ---
 
 # Decision

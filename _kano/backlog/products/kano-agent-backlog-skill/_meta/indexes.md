@@ -14,5 +14,6 @@ Epic-level index only; lower-level items rely on the Epic MOC tree.
 | Epic | KABSD-EPIC-0007 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.index.md | 2026-01-08 | Roadmap: Cloud security & access control |
 | Epic | DM-EPIC-0001 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/DM-EPIC-0001_demo-epic.index.md | 2026-01-10 | Demo Epic |
 | Epic | DM-EPIC-0002 | _kano/backlog/products/kano-agent-backlog-skill/items/epic/0000/DM-EPIC-0002_demo-epic.index.md | 2026-01-10 | Demo Epic |
-- [Demo Epic: Multi-Agent Backlog System](KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.index.md) (ID: KABSD-EPIC-0008)
-- [CLI Namespace Refactoring: Skill-Scoped Naming Convention](KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.index.md) (ID: KABSD-EPIC-0009)
+- [Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.index.md) (ID: KABSD-EPIC-0008)
+- [CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.index.md) (ID: KABSD-EPIC-0009)
+- [0.0.3 Archive semantics + topic evidence packs](KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.index.md) (ID: KABSD-EPIC-0010)

@@ -1,0 +1,39 @@
+{
+  "name": "pre-brief-distill",
+  "topic": "embedding-preprocessing-and-vector-backend-research",
+  "created_at": "2026-01-18T17:37:08.376296Z",
+  "created_by": "codex",
+  "description": "Snapshot before refreshing brief via topic distill",
+  "manifest": {
+    "topic": "embedding-preprocessing-and-vector-backend-research",
+    "agent": "copilot",
+    "seed_items": [
+      "019bc21c-6e9c-765a-877f-994bacdf5002",
+      "019bc21c-ec25-70e2-84ec-d0042844af4d",
+      "019bac4a-6857-7432-b43f-3082737ca786",
+      "019bcbef-dc2a-778e-8c87-d5619170230c",
+      "019bcbf0-58b4-7308-81e0-4aaed24cd43b",
+      "019bcbf4-71e9-7150-9498-889e8a1af8e9",
+      "019bcbf4-aed0-77ec-8d79-15407c5db49a",
+      "019bc754-30c3-70fa-8740-c643948c9a9d",
+      "019bc754-4618-71c1-9ff9-db63c0d47561",
+      "019b8f52-9f4a-754d-8d3a-81c5e41c131a",
+      "019bac4a-683c-76c3-adc9-bf67e569e226",
+      "019b8f52-9fc8-7c94-aa2d-806cacdd9086"
+    ],
+    "pinned_docs": [
+      "_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md",
+      "_kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md"
+    ],
+    "snippet_refs": [],
+    "related_topics": [],
+    "status": "open",
+    "closed_at": null,
+    "created_at": "2026-01-15T14:42:05.217983Z",
+    "updated_at": "2026-01-17T15:26:04.431134Z",
+    "has_spec": false
+  },
+  "brief_content": "# Topic Brief: embedding-preprocessing-and-vector-backend-research\n\nGenerated: 2026-01-17T15:26:04.431134Z\n\n## Facts\n\n<!-- Verified facts with citations to materials/items/docs -->\n- [ ] {fact} — [source](ref)\n\n## Unknowns / Risks\n\n- [ ] {unknown or risk}\n\n## Proposed Actions\n\n- [ ] {action} → {workitem ref or \"new ticket needed\"}\n\n## Decision Candidates\n\n- [ ] {decision} → {ADR ref or \"draft needed\"}\n\n## Materials Index (Deterministic)\n\n### Items\n- 019b8f52-9f4a-754d-8d3a-81c5e41c131a\n- 019b8f52-9fc8-7c94-aa2d-806cacdd9086\n- 019bac4a-683c-76c3-adc9-bf67e569e226\n- 019bac4a-6857-7432-b43f-3082737ca786\n- 019bc21c-6e9c-765a-877f-994bacdf5002\n- 019bc21c-ec25-70e2-84ec-d0042844af4d\n- 019bc754-30c3-70fa-8740-c643948c9a9d\n- 019bc754-4618-71c1-9ff9-db63c0d47561\n- 019bcbef-dc2a-778e-8c87-d5619170230c\n- 019bcbf0-58b4-7308-81e0-4aaed24cd43b\n- 019bcbf4-71e9-7150-9498-889e8a1af8e9\n- 019bcbf4-aed0-77ec-8d79-15407c5db49a\n\n### Pinned Docs\n- _kano/backlog/products/kano-agent-backlog-skill/decisions/ADR-0009_local-first-embedding-search-architecture.md\n- _kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md\n\n### Snippet Refs\n- (none)\n",
+  "notes_content": "# Topic Notes: embedding-preprocessing-and-vector-backend-research\n\n## Overview\n\nResearch and design notes for a local-first embedding pipeline (tokenization, deterministic chunking, model/provider adapters) and how those choices constrain a vector backend.\n\nKey synthesis: `_kano/backlog/topics/embedding-preprocessing-and-vector-backend-research/synthesis/tokenizers-and-embeddings-key-takeaways.md`.\n\n## Related Items\n\nSeed items are tracked in `manifest.json`. Future workitems will likely split into:\n- deterministic chunking spec + hashing/IDs\n- embedding adapter + token counting observability\n- vector backend evaluation (storage, indexing, search)\n\n## Key Decisions\n\n- Whether cross-lingual retrieval is required (drives multilingual model selection and index design).\n- Whether the index is per-model (different chunk limits/dims) or model-agnostic (chunk to the smallest supported window).\n- Local-first default provider policy (local embeddings first vs cloud-first with fallback).\n\n## Open Questions\n\n- Which embedding family is the default for local-first (MiniLM-class vs multilingual GTE/BGE-class)?\n- What is the “versioned” deterministic chunking contract (rules, max size, overlap, normalization)?\n- How will we represent token counting + truncation events for observability and routing?\n",
+  "materials_index": {}
+}

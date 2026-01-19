@@ -95,7 +95,7 @@ _kano/backlog/topics/<topic>/
 Generated: <timestamp>
 
 ## Facts
-- [ ] <fact> — [source](ref)
+- [ ] <fact> — [source](../../../_meta/conventions.md)
 
 ## Unknowns / Risks
 - [ ] <unknown>

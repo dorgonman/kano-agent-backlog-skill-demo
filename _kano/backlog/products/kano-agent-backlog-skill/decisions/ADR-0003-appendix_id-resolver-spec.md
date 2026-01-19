@@ -1,3 +1,7 @@
+---
+uid: 019bc5dc-68d8-758c-bd8b-8a13d3c2e405
+---
+
 # ID Resolver Specification
 
 **ResolveRef() function specification - for resolving backlog item references**

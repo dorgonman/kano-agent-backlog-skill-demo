@@ -19,7 +19,7 @@ tags: []
 title: Implement URI compilation from human-friendly config fields
 type: Task
 uid: 019bb368-d2d0-736d-b38c-4a0f2d43cdaf
-updated: 2026-01-13
+updated: 2026-01-19
 ---
 
 # Context
@@ -42,8 +42,13 @@ Given backend blocks, compiler returns expected URIs per schema; missing require
 
 Ambiguity in URI formats (e.g., azure host/path encoding); future expansion (mcp) must stay spec-only and local-first
 
+
+## Decisions
+
+- Use env-var only auth (no secrets in config) and compile backend URIs from config fields. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)
 # Worklog
 
 2026-01-13 02:12 [agent=copilot] Created item
 2026-01-13 08:02 [agent=copilot-sonnet4] [model=unknown] State -> InProgress.
 2026-01-13 08:03 [agent=copilot-sonnet4] [model=unknown] State -> Done.
+2026-01-19 12:15 [agent=copilot] [model=unknown] Decision write-back added: Use env-var only auth (no secrets in config) and compile backend URIs from config fields. (source: _kano/backlog/topics/config-refactor-toml-layers/synthesis/toml-config-schema-v1.md)

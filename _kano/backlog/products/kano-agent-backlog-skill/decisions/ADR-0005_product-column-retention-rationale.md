@@ -1,8 +1,9 @@
 ---
-id: ADR-0005
-title: Product Column Retention in Per-Product Indexes
-status: Accepted
 decision_date: 2026-01-07
+id: ADR-0005
+status: Accepted
+title: Product Column Retention in Per-Product Indexes
+uid: 019bc5dc-68de-7465-b6a9-c6f3f3be1164
 ---
 
 # Context
@@ -138,5 +139,5 @@ When global embedding database is implemented:
 
 # References
 
-- [[KABSD-FTR-0010]]: Monorepo Platform Migration
-- [[ADR-0004]]: Per-Product Isolated Index Architecture
+- [[../items/feature/0000/KABSD-FTR-0010_monorepo-platform-migration.md]]: Monorepo Platform Migration
+- [[ADR-0004_file-first-architecture-with-sqlite-index]]: Per-Product Isolated Index Architecture

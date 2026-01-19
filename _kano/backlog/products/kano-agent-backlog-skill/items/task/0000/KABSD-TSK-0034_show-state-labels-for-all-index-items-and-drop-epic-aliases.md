@@ -5,7 +5,7 @@ type: Task
 title: Show state labels for all index items and drop epic aliases
 state: Done
 priority: P2
-parent: KABSD-FTR-0001
+parent: KABSD-FTR-0042
 area: views
 iteration: null
 tags:

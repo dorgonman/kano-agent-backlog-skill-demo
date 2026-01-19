@@ -28,3 +28,29 @@ mode = "rebuild"
 
 [analysis.llm]
 enabled = true
+
+[conflict_policy]
+id_conflict = "rename"
+uid_conflict = "trash_shorter"
+
+# Embedding pipeline defaults (local-first; heavy deps optional)
+[chunking]
+target_tokens = 256
+max_tokens = 512
+overlap_tokens = 32
+version = "chunk-v1"
+
+[tokenizer]
+adapter = "heuristic"
+model = "text-embedding-3-small"
+
+[embedding]
+provider = "noop"
+model = "noop-embedding"
+dimension = 1536
+
+[vector]
+backend = "sqlite"
+path = ".kano/vector"
+collection = "backlog"
+metric = "cosine"

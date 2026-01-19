@@ -35,7 +35,7 @@ The current `bootstrap_init_backlog.py` assumes a single `_kano/backlog` root. T
 Update `scripts/backlog/bootstrap_init_backlog.py` to:
 
 1. Accept `--product <name>` and `--sandbox <path>` (optional) command-line arguments.
-2. Use `context.py` to resolve the platform root and then determine the product root.
+2. Use `context.py` to resolve the project root and then determine the product root.
 3. Initialize folder structure under the resolved product root: `_config/`, `items/`, `decisions/`, `views/`.
 4. Write `config.json` with correct metadata for the product (name, prefix, etc.).
 5. Provide helpful error messages if the product already exists.
@@ -63,12 +63,12 @@ Update `scripts/backlog/bootstrap_init_backlog.py` to:
 2026-01-06 21:10 [agent=copilot] Transferred ownership from antigravity. Ready gate completed. Depends on TSK-0079 (context.py); unblocks TSK-0085.
 
 2026-01-06 21:35 [agent=copilot] **IMPLEMENTATION COMPLETE**:
-  - Updated import to use new context.py functions (find_repo_root, find_platform_root, resolve_product_name, get_product_root, get_sandbox_root_or_none)
+  - Updated import to use new context.py functions (find_repo_root, find_project_root, resolve_product_name, get_product_root, get_sandbox_root_or_none)
   - Added --agent flag for audit logging
   - Simplified path resolution logic using context helpers
   - Removed obsolete --backlog-root flag and ensure_under_allowed() function
   - Removed tools/ directory from bootstrap (not product-specific)
-  - Removed _index/ from product root (stays at platform level)
+  - Removed _index/ from product root (stays at project level)
   - Added _derive_prefix() helper to generate KABSD-style prefixes from product names
   - Enhanced config.json generation with automatic prefix derivation
   - Help text updated to reflect multi-product behavior

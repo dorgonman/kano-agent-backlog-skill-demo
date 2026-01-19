@@ -75,4 +75,4 @@ Implement tooling for collision detection and resolution:
 
 2026-01-06 00:36 [agent=antigravity] Created task to address ADR-0003 Open Question #4.
 2026-01-06 01:44 [agent=antigravity] Created collision report and resolver CLI spec: ADR-0003-appendix_collision-report-cli-spec.md
-2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0001 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.
+2026-01-06 08:42 [agent=codex-cli] Re-parented Task from KABSD-FTR-0042 to KABSD-FTR-0008 to align with milestone 0.0.2 scope.

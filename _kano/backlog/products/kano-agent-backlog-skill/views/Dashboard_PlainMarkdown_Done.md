@@ -2,24 +2,25 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: main
-vcs.revno: 99
-vcs.hash: 2d40df5f08500c5808c81f5382010c278da4bebc
+vcs.branch: feature/embedding
+vcs.revno: 110
+vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: codex
 
 ## Done
 
 ### Epic
 
+- [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epic/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
+- [KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)](../items/epic/0000/KABSD-EPIC-0002_milestone-0-0-1-core-demo.md)
 - [KABSD-EPIC-0009 CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.md)
 
 ### Feature
 
-- [KABSD-FTR-0000 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0001 Local-first backlog system](../items/feature/0000/KABSD-FTR-0001_local-backlog-system.md)
 - [KABSD-FTR-0002 Agent tool invocation audit logging system](../items/feature/0000/KABSD-FTR-0002_agent-tool-invocation-audit-logging-system.md)
 - [KABSD-FTR-0003 Self-contained skill bootstrap and automation](../items/feature/0000/KABSD-FTR-0003_self-contained-skill-bootstrap-and-automation.md)
@@ -42,6 +43,14 @@ Agent: copilot
 - [KABSD-FTR-0037 Topic Lifecycle and Materials Buffer System](../items/feature/0000/KABSD-FTR-0037_topic-lifecycle-and-materials-buffer-system.md)
 - [KABSD-FTR-0038 Repo Snapshot + Evidence-driven Reports](../items/feature/0000/KABSD-FTR-0038_repo-snapshot-evidence-driven-reports.md)
 - [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
+- [KABSD-FTR-0040 Topic Spec Support](../items/feature/0000/KABSD-FTR-0040_topic-spec-support.md)
+- [KABSD-FTR-0041 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0041_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0043 Topic Templates and Archetypes](../items/feature/0000/KABSD-FTR-0043_topic-templates-and-archetypes.md)
+- [KABSD-FTR-0044 Lightweight Topic Cross-References](../items/feature/0000/KABSD-FTR-0044_lightweight-topic-cross-references.md)
+- [KABSD-FTR-0045 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
+- [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 
 ### UserStory
 
@@ -54,6 +63,14 @@ Agent: copilot
 - [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstory/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstory/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 - [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
+- [KABSD-USR-0030 Pluggable vector backend MVP for embeddings](../items/userstory/0000/KABSD-USR-0030_pluggable-vector-backend-mvp-for-embeddings.md)
+- [KABSD-USR-0031 Embedding adapter interface with token-counting telemetry](../items/userstory/0000/KABSD-USR-0031_embedding-adapter-interface-with-token-counting-telemetry.md)
+- [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
+- [KABSD-USR-0035 Decide cross-lingual retrieval and index strategy via ADRs](../items/userstory/0000/KABSD-USR-0035_decide-cross-lingual-retrieval-and-index-strategy-via-adrs.md)
+- [KABSD-USR-0036 Implement Topic Template System with Predefined Archetypes](../items/userstory/0000/KABSD-USR-0036_implement-topic-template-system-with-predefined-archetypes.md)
+- [KABSD-USR-0037 Implement Lightweight Topic Cross-Reference System](../items/userstory/0000/KABSD-USR-0037_implement-lightweight-topic-cross-reference-system.md)
+- [KABSD-USR-0038 Implement Topic Snapshot System with Named Checkpoints](../items/userstory/0000/KABSD-USR-0038_implement-topic-snapshot-system-with-named-checkpoints.md)
+- [KABSD-USR-0039 Implement Topic Merge and Split Operations with History Preservation](../items/userstory/0000/KABSD-USR-0039_implement-topic-merge-and-split-operations-with-history-preservation.md)
 
 ### Task
 
@@ -183,8 +200,7 @@ Agent: copilot
 - [KABSD-TSK-0183 Create ADR-0016 for Skill-Scoped CLI Namespace Convention](../items/task/0100/KABSD-TSK-0183_create-adr-0016-for-skill-scoped-cli-namespace-convention.md)
 - [KABSD-TSK-0184 Update ADR-0013 to reference skill-scoped CLI naming](../items/task/0100/KABSD-TSK-0184_update-adr-0013-to-reference-skill-scoped-cli-naming.md)
 - [KABSD-TSK-0185 Normalize work item type labels to singular](../items/task/0100/KABSD-TSK-0185_normalize-work-item-type-labels-to-singular.md)
-- [KABSD-TSK-0186 Clean up legacy platform roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-platform-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
-- [KABSD-TSK-0187 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0186 Clean up legacy project roots (_index, _logs, sandboxes) and align scripts to shared layout](../items/task/0100/KABSD-TSK-0186_clean-up-legacy-project-roots-index-logs-sandboxes-and-align-scripts-to-shared-layout.md)
 - [KABSD-TSK-0189 Ensure worklog entries record model (default unknown) and warn when missing](../items/task/0100/KABSD-TSK-0189_ensure-worklog-entries-record-model-default-unknown-and-warn-when-missing.md)
 - [KABSD-TSK-0190 Topic lifecycle + materials buffer (workset merge)](../items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md)
 - [KABSD-TSK-0191 Define TOML config schema and migration strategy](../items/task/0100/KABSD-TSK-0191_define-toml-config-schema-and-migration-strategy.md)
@@ -201,6 +217,35 @@ Agent: copilot
 - [KABSD-TSK-0204 Clarify 'kano workset next' purpose in README](../items/task/0200/KABSD-TSK-0204_clarify-kano-workset-next-purpose-in-readme.md)
 - [KABSD-TSK-0205 Make skill README standalone-focused](../items/task/0200/KABSD-TSK-0205_make-skill-readme-standalone-focused.md)
 - [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
+- [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
+- [KABSD-TSK-0209 Add link integrity validator for backlog refs](../items/task/0200/KABSD-TSK-0209_add-link-integrity-validator-for-backlog-refs.md)
+- [KABSD-TSK-0210 Relax model attribution warnings for worklog commands](../items/task/0200/KABSD-TSK-0210_relax-model-attribution-warnings-for-worklog-commands.md)
+- [KABSD-TSK-0212 Add backlog-root override flag for sandbox operations](../items/task/0200/KABSD-TSK-0212_add-backlog-root-override-flag-for-sandbox-operations.md)
+- [KABSD-TSK-0213 Fix view refresh VcsMeta branch mismatch](../items/task/0200/KABSD-TSK-0213_fix-view-refresh-vcsmeta-branch-mismatch.md)
+- [KABSD-TSK-0217 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0200/KABSD-TSK-0217_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
+- [KABSD-TSK-0221 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0200/KABSD-TSK-0221_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
+- [KABSD-TSK-0223 Add UID-based duplicate ID validator and auto-remap](../items/task/0200/KABSD-TSK-0223_add-uid-based-duplicate-id-validator-and-auto-remap.md)
+- [KABSD-TSK-0224 Add admin items trash command](../items/task/0200/KABSD-TSK-0224_add-admin-items-trash-command.md)
+- [KABSD-TSK-0225 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
+- [KABSD-TSK-0232 Add conflict handling policy to config and skill](../items/task/0200/KABSD-TSK-0232_add-conflict-handling-policy-to-config-and-skill.md)
+- [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
+- [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
+- [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
+- [KABSD-TSK-0241 Implement embedding adapter interface and result types](../items/task/0200/KABSD-TSK-0241_implement-embedding-adapter-interface-and-result-types.md)
+- [KABSD-TSK-0242 Add embedding adapter factory and config resolver](../items/task/0200/KABSD-TSK-0242_add-embedding-adapter-factory-and-config-resolver.md)
+- [KABSD-TSK-0243 Implement noop embedding adapter and telemetry tests](../items/task/0200/KABSD-TSK-0243_implement-noop-embedding-adapter-and-telemetry-tests.md)
+- [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
+- [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
+- [KABSD-TSK-0258 Improve topic distill brief items listing](../items/task/0200/KABSD-TSK-0258_improve-topic-distill-brief-items-listing.md)
+- [KABSD-TSK-0259 Document topic snapshot retention policy (keep latest)](../items/task/0200/KABSD-TSK-0259_document-topic-snapshot-retention-policy-keep-latest.md)
+- [KABSD-TSK-0260 Implement sqlite vector backend MVP wiring](../items/task/0200/KABSD-TSK-0260_implement-sqlite-vector-backend-mvp-wiring.md)
+- [KABSD-TSK-0261 Implement deterministic benchmark harness for chunking/embedding/vector](../items/task/0200/KABSD-TSK-0261_implement-deterministic-benchmark-harness-for-chunking-embedding-vector.md)
+- [KABSD-TSK-0263 Implement topic merge: merge embedding-preprocessing-and-vector-backend-research and phase-2](../items/task/0200/KABSD-TSK-0263_implement-topic-merge-merge-embedding-preprocessing-and-vector-backend-research-and-phase-2.md)
+- [KABSD-TSK-0264 Add decision audit report for topics](../items/task/0200/KABSD-TSK-0264_add-decision-audit-report-for-topics.md)
+- [KABSD-TSK-0265 Add decision write-back command for workitems](../items/task/0200/KABSD-TSK-0265_add-decision-write-back-command-for-workitems.md)
+- [KABSD-TSK-0267 Prepare 0.0.2 release notes and bump demo version](../items/task/0200/KABSD-TSK-0267_prepare-0-0-2-release-notes-and-bump-demo-version.md)
+- [KABSD-TSK-0268 Make brief.generated.md deterministic-only; keep templates in brief.md](../items/task/0200/KABSD-TSK-0268_make-brief-generated-md-deterministic-only-keep-templates-in-brief-md.md)
+- [KABSD-TSK-0269 Omit [model=unknown] in Worklog entries](../items/task/0200/KABSD-TSK-0269_omit-model-unknown-in-worklog-entries.md)
 
 ### Bug
 
@@ -208,4 +253,7 @@ Agent: copilot
 - [KABSD-BUG-0002 Add dependency links between FTR-0013 and FTR-0015](../items/bug/0000/KABSD-BUG-0002_add-dependency-links-between-ftr-0013-and-ftr-0015.md)
 - [KABSD-BUG-0003 Snapshot reports render raw template blocks (nested each/if/unless)](../items/bug/0000/KABSD-BUG-0003_snapshot-reports-render-raw-template-blocks-nested-each-if-unless.md)
 - [KABSD-BUG-0004 Product snapshots include stubs from other skills](../items/bug/0000/KABSD-BUG-0004_product-snapshots-include-stubs-from-other-skills.md)
+- [KABSD-BUG-0005 Views: dashboards emit VCS metadata per FTR-0039](../items/bug/0000/KABSD-BUG-0005_views-dashboards-emit-vcs-metadata-per-ftr-0039.md)
+- [KABSD-BUG-0006 CLI: avoid Windows UnicodeEncodeError on non-UTF8 terminals](../items/bug/0000/KABSD-BUG-0006_cli-avoid-windows-unicodeencodeerror-on-non-utf8-terminals.md)
+- [KABSD-BUG-0007 Core: accept Planned as a valid ItemState](../items/bug/0000/KABSD-BUG-0007_core-accept-planned-as-a-valid-itemstate.md)
 

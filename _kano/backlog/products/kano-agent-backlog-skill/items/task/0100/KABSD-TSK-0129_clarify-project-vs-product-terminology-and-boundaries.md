@@ -50,12 +50,12 @@ Define a clear, actionable interpretation of "Project" vs "Product" for this eco
    - Project: organizational / delivery boundary (may span repos).
    - Product: backlog/config boundary for items and views within a project.
 3. Document the model in a short Markdown note (or update existing docs if present).
-   - Note: [[../../artifacts/project-vs-product-terminology.md|Project vs Product terminology]]
+   - Note: [[_kano/backlog/products/kano-agent-backlog-skill/artifacts/project-vs-product-terminology.md|Project vs Product terminology]]
 4. Identify which scripts/config keys are impacted (if any) and list follow-up Tasks if changes are needed.
 
 Impacted scripts/config keys (initial list):
 
-- `context.resolve_product_name`, `get_product_root`, `find_platform_root`
+- `context.resolve_product_name`, `get_product_root`, `find_project_root`
 - `load_config_with_defaults(..., product_name=...)`
 - `view_generate.py` CLI scoping: `--product`, `--products`, `--all-products`
 - `view_refresh_dashboards.py` scoping + output routing rules
@@ -63,7 +63,7 @@ Impacted scripts/config keys (initial list):
 Potential follow-up engineering Tasks:
 
 - Documentation pass: ensure "Project" vs "Product" terms are consistent across READMEs/examples.
-- If/when a server/API layer exists: enforce allowed-roots sandbox at platform/product roots.
+- If/when a server/API layer exists: enforce allowed-roots sandbox at project/product roots.
 - If/when auth is implemented: add product-level ACL and scopes aligned with this model.
 
 # Acceptance Criteria

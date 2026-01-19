@@ -4,6 +4,344 @@
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).
 
+## Conversational-first documentation (human-agent collaboration)
+
+This project’s primary value is **human + AI collaboration**, not just a CLI.
+Therefore, when writing or updating documentation (README, docs, SKILL.md, process notes), always include
+instructions for **how to drive the workflow through a conversation with an AI agent**, not only how to run commands.
+
+Rules:
+- Every workflow doc should contain both:
+  - **CLI commands** (for deterministic, auditable execution), and
+  - **Suggested chat prompts** (copy/paste) that a human can say to an agent.
+- Prompts must be specific about inputs the agent needs: topic/item IDs, product, agent identity, expected outputs.
+- Document the expected artifacts and paths the agent will produce/update (e.g., reports under `topic/publish/`).
+- Prefer a consistent pattern in docs:
+  1) “Say this to your agent”
+  2) “The agent will do” (explicit steps)
+  3) “Expected output” (files/paths + how to verify)
+
+Example (decision audit + decision write-back):
+- Say to agent: “Run a decision write-back audit for topic <topic-name> and show me which work items are missing decisions.”
+- Agent runs: `kano topic decision-audit <topic-name> --format plain`
+- Expected output: `_kano/backlog/topics/<topic-name>/publish/decision-audit.md`
+- Say to agent: “Write back this decision to <ITEM_ID> and include the synthesis file as source.”
+- Agent runs: `kano workitem add-decision <ITEM_ID> --decision "..." --source "..." --agent <agent-id> --product <product>`
+- Expected output: updated work item with a `## Decisions` section + appended Worklog entry.
+
+## Agent roster (from README.md)
+- Codex
+- GitHub Copilot
+- Google Antigravity
+- Amazon Q
+- Amazon Kiro
+- Cursor
+- Windsurf
+- OpenCode
+
+| Agent | Primary Model(s) | Alternative Models | Notes |
+|--------|------------------|-------------------|-------|
+| **Codex** | **Codex-Max** (Nov 2025) | GPT-5.2-Codex, o1/o3-reasoning | OpenAI's dedicated line for software engineering and multi-file logic |
+| **GitHub Copilot** | **GPT-5.2** (Dec 2025) | Claude 4.5, Gemini 3 Pro, GPT-5.1 | Multi-model picker; GPT-5.2 Pro available for advanced research/reasoning |
+| **Google Antigravity** | **Gemini 3 Flash** (Dec 2025) | Gemini 3 Pro, Gemini 1.5 Pro (legacy) | Optimized for low-latency planning and multimodal workspace reasoning |
+| **Amazon Q** | **Claude 4 Sonnet** (May 2025) | Claude 4.5 Sonnet, Amazon Nova | Enhanced for autonomous computer use and deep codebase integration |
+| **Amazon Kiro** | **Auto-Routing** (Dynamic) | Claude 4.5 (Opus/Sonnet/Haiku) | Intelligent routing across Claude 4 family; ~23% cheaper than direct Opus 4.5 use |
+| **Cursor** | **Claude 3.5 Sonnet**, **GPT-5** | cursor-small (V2), GPT-4.1 Mini | Stable support for 2024/2025 frontier models; high-freq codebase indexing |
+| **Windsurf** | **SWE-1.5** (Proprietary) | Claude 4, GPT-5.1, BYOK | SWE-1.5 is a frontier coding model with performance near Claude 4.5 |
+| **OpenCode** | **Multi-Provider** | DeepSeek V3.2, Llama 4 Scout, Mistral Large 3 | Open-source champion; supports 75+ providers including regional models |
+
+## Development Guidelines
+
+### Quick Start Commands
+
+```bash
+# Install dependencies (dev mode)
+python -m pip install -e skills/kano-agent-backlog-skill[dev]
+
+# Run a specific test
+python -m pytest tests/test_chunking_mvp.py -v
+
+# Run all tests
+python -m pytest tests/ -v
+
+# Run tests with coverage
+python -m pytest tests/ --cov=skills/kano-agent-backlog-skill/src --cov-report=html
+
+# Format code
+black skills/kano-agent-backlog-skill/src tests/
+
+# Sort imports
+isort skills/kano-agent-backlog-skill/src tests/
+
+# Check types
+mypy skills/kano-agent-backlog-skill/src
+
+# Run all linting
+black skills/kano-agent-backlog-skill/src tests/ && \
+isort skills/kano-agent-backlog-skill/src tests/ && \
+mypy skills/kano-agent-backlog-skill/src
+```
+
+### Code Style Guidelines
+
+#### Type Hints
+
+Always use type hints from `typing` module: `List`, `Dict`, `Optional`, `Any`, `Union`, `Tuple`.
+
+Example:
+```python
+from typing import List, Optional, Dict
+
+def process_items(items: List[str]) -> Dict[str, Any]:
+    """Process items and return a dictionary."""
+    result: Dict[str, Any] = {}
+    for item in items:
+        result[item] = len(item)
+    return result
+```
+
+#### Import Conventions
+
+1. Order: standard library → third-party → local modules
+2. Use absolute imports from skill packages: `from kano_backlog_core import ...`
+3. Use relative imports within packages: `from .models import ...`
+
+Example:
+```python
+import json  # Standard library
+from pathlib import Path  # Standard library
+from frontmatter import load  # Third-party
+from kano_backlog_core import BacklogItem  # Absolute from skill root
+from .models import ItemState  # Relative within package
+```
+
+#### Naming Conventions
+
+- Classes: `PascalCase` (e.g., `CanonicalStore`, `ChunkingOptions`)
+- Functions: `snake_case` (e.g., `read_item`, `validate_config`)
+- Constants: `UPPER_SNAKE_CASE` (e.g., `TYPE_DIRNAMES`)
+- Private members: leading underscore `_private_var`, `__dunder__`
+- Modules: `snake_case` (e.g., `kano_backlog_core`, `token_counter`)
+
+#### Formatting Rules
+
+- Line length: 88 characters (Black default)
+- Indentation: 4 spaces
+- No trailing whitespace
+- Docstrings: triple double quotes `"""`, Google style
+- Type hints: after function definition, before docstring
+
+Example:
+```python
+def process_data(data: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Process data and return results.
+
+    Args:
+        data: Input data to process.
+
+    Returns:
+        Dictionary of processed results.
+    """
+    result: {}
+    for item in data:
+        result[item["id"]] = item["value"]
+    return result
+```
+
+#### Error Handling
+
+Use exceptions from `kano_backlog_core/errors.py`:
+
+- `ItemNotFoundError` - Item file doesn't exist
+- `ParseError` - Invalid frontmatter or markdown
+- `ValidationError` - Data validation failed
+- `ConfigError` - Configuration error
+- `WriteError` - Write operation failed
+
+Example:
+```python
+from kano_backlog_core.errors import ItemNotFoundError
+
+def load_item(item_path: Path) -> BacklogItem:
+    if not item_path.exists():
+        raise ItemNotFoundError(item_path, f"Item file not found: {item_path}")
+```
+
+#### Docstring Conventions
+
+- Triple double quotes `"""`
+- Google Style Guide format
+- Include `Args:`, `Returns:`, and `Raises:` sections
+- Imperative mood: "Return", not "Returns"
+
+Example:
+```python
+def create_item(title: str) -> BacklogItem:
+    """Create a new backlog item.
+
+    Args:
+        title: The title of the item.
+
+    Returns:
+        The created BacklogItem object.
+    """
+    return BacklogItem(title=title)
+```
+
+### Testing Guidelines
+
+#### Test Structure
+
+- Use pytest as test runner
+- Place tests in `tests/` directory
+- Test filename: `test_{module_name}.py`
+- Use Hypothesis for property-based testing
+
+#### Property-Based Testing with Hypothesis
+
+```python
+from hypothesis import given, strategies as st, composite
+from kano_backlog_core import ChunkingOptions
+
+@composite
+def valid_config_strategy(draw):
+    """Generate valid config instances."""
+    return ChunkingOptions(
+        target_tokens=draw(st.integers(min_value=50, max_value=2048)),
+        max_tokens=draw(st.integers(min_value=512, max_value=4096))
+    )
+
+@given(valid_config_strategy())
+def test_valid_config_passes(config: ChunkingOptions):
+    """Valid config should pass validation."""
+    assert config.target_tokens <= config.max_tokens
+```
+
+### Using the Kano Backlog Skill
+
+#### Before Making Changes
+
+1. Check existing items:
+```bash
+python -m kano_backlog_cli.main item list --product kano-agent-backlog-skill
+```
+
+2. Create or update work items before coding:
+```bash
+python -m kano_backlog_cli.main item create \
+    --type task \
+    --title "Implement X feature" \
+    --product kano-agent-backlog-skill \
+    --agent <your-agent-id>
+```
+
+3. Enforce the Ready gate on Task/Bug items:
+- Required fields: Context, Goal, Approach, Acceptance Criteria, Risks / Dependencies
+- All fields must be non-empty and written in **English only**
+
+4. Update item state when starting work:
+```bash
+python -m kano_backlog_cli.main item update-state \
+    --id KABSD-TSK-0146 \
+    --state InProgress \
+    --agent <your-agent-id>
+```
+
+#### Worklog Discipline
+
+Worklog is append-only. Append when:
+- A load-bearing decision is made
+- An item state changes
+- Scope/approach changes
+- An ADR is created/linked
+
+Format:
+```
+YYYY-MM-DD HH:MM [agent=<agent-id>] [model=<model>] description
+```
+
+**Always provide explicit `--agent <id>`** - never use placeholders like `auto` or `<AGENT_NAME>`.
+
+#### State Transitions
+
+```bash
+# Move to InProgress
+python -m kano_backlog_cli.main item update-state --id <ID> --state InProgress --agent <agent-id>
+
+# Move to Done
+python -m kano_backlog_cli.main item update-state --id <ID> --state Done --agent <agent-id>
+```
+
+#### ADR Creation
+
+```bash
+python -m kano_backlog_cli.main adr create \
+    --title "Decision title" \
+    --product kano-agent-backlog-skill \
+    --agent <agent-id>
+```
+
+### Agent-Specific Rules
+
+#### GitHub Copilot
+
+Follow commit guidelines in `.github/copilot-instructions.md`:
+- Use Kano backlog IDs directly in commit messages
+- Preferred format: `KABSD-TSK-0146: <short summary>`
+- Multiple items: `KABSD-TSK-0146 KABSD-TSK-0147: <short summary>`
+- Do NOT use `jira#` prefix
+
+Backlog system note:
+- This repository uses kano-backlog as the system of record, not Jira.
+- Do not add any `jira#` or `JIRA:` prefixes. Reference Kano IDs directly.
+- Examples:
+  - Good: `KABSD-TSK-0261: refine filename truncation`
+  - Bad: `jira#KABSD-TSK-0261`
+
+#### Agent Identity
+
+Valid agent IDs for worklog entries:
+- `copilot`, `codex`, `claude`, `goose`, `antigravity`, `cursor`, `windsurf`, `opencode`, `kiro`, `amazon-q`
+
+Forbidden: `<AGENT_NAME>`, `$AGENT_NAME`
+
+### Architecture Rules (ADR-0013)
+
+#### Module Boundaries
+
+- `kano_backlog_core/` - Import-only, no executable code
+- `kano_backlog_ops/` - Use cases and business logic
+- `kano_backlog_cli/` - Executable CLI commands
+- `scripts/` - Entry point scripts
+
+#### Cross-Package Imports
+
+Use absolute imports from `kano_backlog_core` when importing from other packages:
+```python
+from kano_backlog_core import BacklogItem, ItemState
+```
+
+Never import directly from `kano_backlog_ops` from CLI or scripts.
+
+### Common Data Structures
+
+- `BacklogItem` - Core work item model with frontmatter
+- `ItemType` - Enum: EPIC, FEATURE, USER_STORY, TASK, BUG
+- `ItemState` - Enum: Proposed, Planned, Ready, InProgress, Blocked, Done, Dropped
+- `ChunkingOptions`, `TokenBudgetPolicy` - Configuration for chunking system
+
+### Common Error Types
+
+- `ItemNotFoundError` - Item file doesn't exist
+- `ParseError` - Invalid frontmatter or markdown
+- `ValidationError` - Data validation failed
+- `ConfigError` - Configuration error
+- `WriteError` - Write operation failed
+
+---
+
+**Remember**: This is a living document. Update it as patterns evolve in the codebase.
+
 ## Canonical + Adapters Architecture
 
 > [!IMPORTANT]

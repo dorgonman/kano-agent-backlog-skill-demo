@@ -2,23 +2,26 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: main
-vcs.revno: 99
-vcs.hash: 2d40df5f08500c5808c81f5382010c278da4bebc
+vcs.branch: feature/embedding
+vcs.revno: 110
+vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
 vcs.dirty: true
 -->
 
 Source: items
-Agent: copilot
+Agent: codex
 
 ## New
 
 ### Epic
 
+- [DM-EPIC-0001 Demo Epic](../items/epic/0000/DM-EPIC-0001_demo-epic.md)
+- [DM-EPIC-0002 Demo Epic](../items/epic/0000/DM-EPIC-0002_demo-epic.md)
 - [KABSD-EPIC-0005 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0005_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0006 Roadmap: Multi-Agent OS Evolution (Q1 2026)](../items/epic/0000/KABSD-EPIC-0006_roadmap-multi-agent-os-evolution-q1-2026.md)
 - [KABSD-EPIC-0007 Roadmap: Cloud security & access control](../items/epic/0000/KABSD-EPIC-0007_roadmap-cloud-security-and-access-control.md)
 - [KABSD-EPIC-0008 Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.md)
+- [KABSD-EPIC-0010 0.0.3 Archive semantics + topic evidence packs](../items/epic/0000/KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.md)
 
 ### Feature
 
@@ -39,6 +42,10 @@ Agent: copilot
 - [KABSD-FTR-0030 Configurable persona packs (beyond developer/pm/qa)](../items/feature/0000/KABSD-FTR-0030_configurable-persona-packs-beyond-developer-pm-qa.md)
 - [KABSD-FTR-0031 Worklog run telemetry schema + instrumentation (tri-state tokens) [⛓️ Blocks: KABSD-FTR-0032]](../items/feature/0000/KABSD-FTR-0031_worklog-run-telemetry-schema-instrumentation-tri-s.md)
 - [KABSD-FTR-0032 Dispatcher scoring + routing using worklog telemetry (capability vs observability) [🔴 Blocked by: KABSD-FTR-0031]](../items/feature/0000/KABSD-FTR-0032_dispatcher-scoring-routing-using-worklog-telemetry.md)
+- [KABSD-FTR-0047 Topic Analytics and Usage Insights](../items/feature/0000/KABSD-FTR-0047_topic-analytics-and-usage-insights.md)
+- [KABSD-FTR-0048 Smart Topic Suggestions and Similarity Search](../items/feature/0000/KABSD-FTR-0048_smart-topic-suggestions-and-similarity-search.md)
+- [KABSD-FTR-0049 Dual-store archive semantics (human-hide, agent-searchable)](../items/feature/0000/KABSD-FTR-0049_dual-store-archive-semantics-human-hide-agent-searchable.md)
+- [KABSD-FTR-0050 Topic evidence pack gather pipeline (focus/sculpt)](../items/feature/0000/KABSD-FTR-0050_topic-evidence-pack-gather-pipeline-focus-sculpt.md)
 
 ### UserStory
 
@@ -58,10 +65,18 @@ Agent: copilot
 - [KABSD-USR-0025 Bid gating protocol: submit plan before work starts](../items/userstory/0000/KABSD-USR-0025_bid-gating-protocol-submit-plan-before-work-starts.md)
 - [KABSD-USR-0026 Assignment record and conflict isolation for dispatched work](../items/userstory/0000/KABSD-USR-0026_assignment-record-and-conflict-isolation-for-dispatched-work.md)
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
+- [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
+- [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
+- [KABSD-USR-0040 Archive/unarchive work items with experimental gating](../items/userstory/0000/KABSD-USR-0040_archive-unarchive-work-items-with-experimental-gating.md)
+- [KABSD-USR-0041 Archive/unarchive topics and hide archived topics from default views](../items/userstory/0000/KABSD-USR-0041_archive-unarchive-topics-and-hide-archived-topics-from-default-views.md)
+- [KABSD-USR-0042 Search across hot + archived by default for agents (scope=all)](../items/userstory/0000/KABSD-USR-0042_search-across-hot-archived-by-default-for-agents-scope-all.md)
+- [KABSD-USR-0043 Generate deterministic topic evidence pack (brief/digest/evidence)](../items/userstory/0000/KABSD-USR-0043_generate-deterministic-topic-evidence-pack-brief-digest-evidence.md)
 
 ### Task
 
 - [DM-TSK-0001 Phase 3.2 Test Item](../items/task/0000/DM-TSK-0001_phase-3-2-test-item.md)
+- [KA-TSK-0001 Add guidance: record bug origin via git history](../items/task/0000/KA-TSK-0001_add-guidance-record-bug-origin-via-git-history.md)
+- [KA-TSK-0002 Add guidance: record bug origin via git history](../items/task/0000/KA-TSK-0002_add-guidance-record-bug-origin-via-git-history.md)
 - [KABSD-TSK-0073 Add first-run bootstrap (init_project) for kano-agent-backlog-skill](../items/task/0000/KABSD-TSK-0073_add-first-run-bootstrap-init-project-for-kano-agent-backlog-skill.md)
 - [KABSD-TSK-0075 Implement index_db.py for SQLite sync](../items/task/0000/KABSD-TSK-0075_implement-index-db-py-for-sqlite-sync.md)
 - [KABSD-TSK-0077 Evaluate continuous agent loop until work item completion](../items/task/0000/KABSD-TSK-0077_evaluate-continuous-agent-loop-until-work-item-completion.md)
@@ -107,9 +122,37 @@ Agent: copilot
 - [KABSD-TSK-0172 Demo Task: Create CLI facade with Typer](../items/task/0100/KABSD-TSK-0172_demo-task-create-cli-facade-with-typer.md)
 - [KABSD-TSK-0174 Define artifact retention policy (commit artifacts)](../items/task/0100/KABSD-TSK-0174_define-artifact-retention-policy-commit-artifacts.md)
 - [KABSD-TSK-0187 Refactor config resolution using topic/workset overlays](../items/task/0100/KABSD-TSK-0187_refactor-config-resolution-using-topic-workset-overlays.md)
-- [KABSD-TSK-0188 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0200 Evaluate snapshot artifacts: folder-based packs, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0200_evaluate-snapshot-artifacts-folder-based-packs-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0201 Implement snapshot packs: folder-based, VCS metadata, no timestamps](../items/task/0200/KABSD-TSK-0201_implement-snapshot-packs-folder-based-vcs-metadata-no-timestamps.md)
 - [KABSD-TSK-0207 Research and spec chunking, token budget fitting, and trimming for embeddings](../items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md)
-- [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
+- [KABSD-TSK-0218 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0218_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0222 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0222_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0224 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0225 Create Obsidian Base demo views](../items/task/0200/KABSD-TSK-0225_create-obsidian-base-demo-views.md)
+- [KABSD-TSK-0226 Normalize migrated backlog items for demo](../items/task/0200/KABSD-TSK-0226_normalize-migrated-backlog-items-for-demo.md)
+- [KABSD-TSK-0227 Remove demo tool wrappers and use skill scripts directly](../items/task/0200/KABSD-TSK-0227_remove-demo-tool-wrappers-and-use-skill-scripts-directly.md)
+- [KABSD-TSK-0228 Seed demo backlog items and views](../items/task/0200/KABSD-TSK-0228_seed-demo-backlog-items-and-views.md)
+- [KABSD-TSK-0229 Refresh demo dashboard views](../items/task/0200/KABSD-TSK-0229_refresh-demo-dashboard-views.md)
+- [KABSD-TSK-0230 Ignore demo artifacts in git](../items/task/0200/KABSD-TSK-0230_ignore-demo-artifacts-in-git.md)
+- [KABSD-TSK-0231 Restore generate_demo_views as self-contained skill script](../items/task/0200/KABSD-TSK-0231_restore-generate-demo-views-as-self-contained-skill-script.md)
+- [KABSD-TSK-0245 Implement HuggingFace tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0245_implement-huggingface-tokenizer-adapter-optional-dependency.md)
+- [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
+- [KABSD-TSK-0247 Define embedding pipeline config schema (TOML) and validation](../items/task/0200/KABSD-TSK-0247_define-embedding-pipeline-config-schema-toml-and-validation.md)
+- [KABSD-TSK-0248 Add effective-config debug output for embedding pipeline](../items/task/0200/KABSD-TSK-0248_add-effective-config-debug-output-for-embedding-pipeline.md)
+- [KABSD-TSK-0249 Add topic-level config examples for embedding evaluation](../items/task/0200/KABSD-TSK-0249_add-topic-level-config-examples-for-embedding-evaluation.md)
+- [KABSD-TSK-0250 Define benchmark corpus and scripted query set (English + CJK)](../items/task/0200/KABSD-TSK-0250_define-benchmark-corpus-and-scripted-query-set-english-cjk.md)
+- [KABSD-TSK-0251 Implement benchmark runner and report format](../items/task/0200/KABSD-TSK-0251_implement-benchmark-runner-and-report-format.md)
+- [KABSD-TSK-0252 Document benchmark results and trade-offs in topic synthesis](../items/task/0200/KABSD-TSK-0252_document-benchmark-results-and-trade-offs-in-topic-synthesis.md)
+- [KABSD-TSK-0253 Draft ADR: default embedder policy (multilingual vs tiered)](../items/task/0200/KABSD-TSK-0253_draft-adr-default-embedder-policy-multilingual-vs-tiered.md)
+- [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
+- [KABSD-TSK-0262 Implement topic merge function and merge embedding-preprocessing-and-vector-backend-research with phase-2](../items/task/0200/KABSD-TSK-0262_implement-topic-merge-function-and-merge-embedding-preprocessing-and-vector-backend-research-with-phase-2.md)
+- [KABSD-TSK-0266 Design: physical archive strategy (DB cold store vs directory move)](../items/task/0200/KABSD-TSK-0266_design-physical-archive-strategy-db-cold-store-vs-directory-move.md)
+
+### Nones
+
+- [None None](../items/task/0000/KABSD-TSK-0096_ARCHITECTURE_GUIDE.md)
+- [None None](../items/task/0100/KABSD-TSK-0101_CLI_AUDIT_REPORT.md)
+- [None None](../items/task/0200/KABSD-TSK-0214_architecture-guide.md)
+- [None None](../items/task/0200/KABSD-TSK-0215_architecture-guide.md)
+- [None None](../items/task/0200/KABSD-TSK-0216_cli-audit-report.md)
 
