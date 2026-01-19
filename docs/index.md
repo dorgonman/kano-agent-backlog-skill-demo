@@ -2,6 +2,11 @@
 
 This repository demonstrates the capabilities of the **Kano Agent Backlog Skill** - a local-first, file-based backlog management system for AI agent collaboration.
 
+## Releases
+
+- Latest: `docs/releases/0.0.2.md`
+- Previous: `docs/releases/0.0.1.md`
+
 ## Quick Start
 
 ### 1. Clone the repository

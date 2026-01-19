@@ -7,14 +7,15 @@
     "019bcc9c-2b8c-73ee-9aa7-9b7a78318819",
     "019bcc9c-3b5a-7b8e-8b4c-d5e6f7a8b9c0",
     "019bcc9c-4c6b-7c9f-9c5d-e6f7a8b9c0d1",
-    "019bcc9c-5c07-7390-b0a5-36a0e2bbdfcd"
+    "019bcc9c-5c07-7390-b0a5-36a0e2bbdfcd",
+    "019bcc9c-3beb-7183-98a3-9be0a6efea27"
   ],
   "pinned_docs": [],
   "snippet_refs": [],
   "related_topics": [],
-  "status": "open",
-  "closed_at": null,
+  "status": "closed",
+  "closed_at": "2026-01-19T16:33:31.334814Z",
   "created_at": "2026-01-17T15:47:18.185640Z",
-  "updated_at": "2026-01-17T16:37:40.091341Z",
+  "updated_at": "2026-01-19T17:09:51.856056Z",
   "has_spec": false
 }

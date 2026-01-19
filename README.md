@@ -7,9 +7,9 @@
 
 > **AI Agent Skills** for **Spec-Driven Agentic Programming** | File-based backlog management | Multi-agent collaboration | Local-first architecture
 
-⚠️ **VERSION 0.0.1 - INITIAL RELEASE** ⚠️
+⚠️ **VERSION 0.0.2 - TOPICS + EMBEDDING PIPELINE FOUNDATIONS** ⚠️
 
-This is the **initial 0.0.1 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
+This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
 
 **IMPORTANT DISCLAIMERS:**
 - 🚧 **Rapid Development**: System architecture is changing frequently
@@ -18,10 +18,11 @@ This is the **initial 0.0.1 release** of the **kano-agent-backlog-skill-demo** -
 - ❌ **No Guarantees**: No stability, compatibility, or support guarantees
 - 📝 **Documentation Lag**: Documentation may not reflect current implementation
 
-**What's New in 0.0.1:**
+**What's New in 0.0.2:**
 - ✅ Core backlog item management (Epic, Feature, UserStory, Task, Bug)
 - ✅ Workset execution cache for per-item context
 - ✅ Topic-based context switching and grouping
+- ✅ Topic templates, cross-references, snapshots, and merge/split operations
 - ✅ Code snippet collection in topic materials
 - ✅ Deterministic brief generation from materials
 - ✅ ADR (Architecture Decision Record) support
@@ -30,15 +31,15 @@ This is the **initial 0.0.1 release** of the **kano-agent-backlog-skill-demo** -
 - ✅ CLI commands for all core operations
 - ✅ Property-based testing with Hypothesis
 - 🚧 SQLite indexing (experimental)
-- 🚧 Embedding search (experimental)
+- 🚧 Embedding search foundations (cross-lingual requirement, per-model index strategy)
 
 ## Overview
 
-**Current Status: Version 0.0.1 - Initial Release**
+**Current Status: Version 0.0.2**
 
 This repository demonstrates an evolving approach to transform agent collaboration into a durable, auditable backlog system. The core concept is to persist planning, decisions, and work items as structured markdown files rather than losing context in chat conversations.
 
-**What's Working in 0.0.1:**
+**What's Working in 0.0.2:**
 - ✅ Markdown-based work item storage with frontmatter metadata
 - ✅ CLI scripts for item creation, state transitions, and worklog management
 - ✅ Workset execution cache for per-item context isolation
@@ -313,7 +314,7 @@ The agent automatically maintains views under product roots (e.g. `_kano/backlog
 
 ## Work Item Types
 
-- **Epic**: Large initiative spanning multiple features (e.g., "Milestone 0.0.1")
+- **Epic**: Large initiative spanning multiple features (e.g., "Milestone 0.0.2")
 - **Feature**: Cohesive capability (e.g., "Local-first backlog system")
 - **User Story**: User-facing functionality (e.g., "Plan before code")
 - **Task**: Technical work item (e.g., "Add test script")
@@ -552,7 +553,7 @@ Backlog configuration is in `_kano/backlog/_config/` (product-specific) or `_kan
 
 ## Contributing (Pre-Alpha)
 
-**Current Status**: This is version 0.0.1 - an experimental demo repository in rapid development.
+**Current Status**: This is version 0.0.2 - an experimental demo repository in rapid development.
 
 **Before Contributing:**
 - Expect frequent breaking changes
@@ -570,7 +571,7 @@ For the main skill development, see [kano-agent-backlog-skill](https://github.co
 
 ## Roadmap
 
-**Version 0.0.1 (Current):**
+**Version 0.0.2 (Current):**
 - ✅ Core backlog management
 - ✅ Workset and topic features
 - ✅ Multi-agent collaboration patterns
@@ -617,7 +618,7 @@ See the individual skill repositories for license information.
 ## Frequently Asked Questions
 
 **Q: Is this production-ready?**
-A: No. This is version 0.0.1 - experimental software. Use at your own risk.
+A: No. This is version 0.0.2 - experimental software. Use at your own risk.
 
 **Q: Can I use this for my project?**
 A: Yes, but expect breaking changes. Copy the skill directory or use as a git submodule.
@@ -648,7 +649,7 @@ This experimental demo explores a "backlog-first" approach where:
 - **Context isolation**: Worksets prevent drift during complex tasks
 - **Rapid context switching**: Topics enable quick focus area changes
 
-**Version 0.0.1 Status**: These principles are being tested and refined. Implementation is evolving but demonstrates the core concepts in action. The `_kano/backlog/` directory contains real-world examples of this philosophy applied to the development of the system itself.
+**Version 0.0.2 Status**: These principles are being tested and refined. Implementation is evolving but demonstrates the core concepts in action. The `_kano/backlog/` directory contains real-world examples of this philosophy applied to the development of the system itself.
 
 ### Dual-Readability Design (Topic & Snapshot)
 

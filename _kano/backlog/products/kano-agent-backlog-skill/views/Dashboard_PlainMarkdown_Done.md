@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 109
-vcs.hash: 0dde451375144070d124202a75a48bd0cf69cffe
+vcs.revno: 110
+vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: codex
 
 ## Done
 
@@ -243,6 +243,9 @@ Agent: opencode
 - [KABSD-TSK-0263 Implement topic merge: merge embedding-preprocessing-and-vector-backend-research and phase-2](../items/task/0200/KABSD-TSK-0263_implement-topic-merge-merge-embedding-preprocessing-and-vector-backend-research-and-phase-2.md)
 - [KABSD-TSK-0264 Add decision audit report for topics](../items/task/0200/KABSD-TSK-0264_add-decision-audit-report-for-topics.md)
 - [KABSD-TSK-0265 Add decision write-back command for workitems](../items/task/0200/KABSD-TSK-0265_add-decision-write-back-command-for-workitems.md)
+- [KABSD-TSK-0267 Prepare 0.0.2 release notes and bump demo version](../items/task/0200/KABSD-TSK-0267_prepare-0-0-2-release-notes-and-bump-demo-version.md)
+- [KABSD-TSK-0268 Make brief.generated.md deterministic-only; keep templates in brief.md](../items/task/0200/KABSD-TSK-0268_make-brief-generated-md-deterministic-only-keep-templates-in-brief-md.md)
+- [KABSD-TSK-0269 Omit [model=unknown] in Worklog entries](../items/task/0200/KABSD-TSK-0269_omit-model-unknown-in-worklog-entries.md)
 
 ### Bug
 

@@ -62,3 +62,4 @@ Complete the full DB embedding chain so that documents can be chunked, embedded,
 2026-01-06 08:33 [agent=codex-cli] State -> Planned. Milestone 0.0.2 queued after 0.0.1 core demo; scope focuses on indexing + resolver.
 2026-01-06 08:36 [agent=antigravity] Auto-sync from child KABSD-TSK-0049 -> InProgress.
 2026-01-16 23:08 [agent=codex] [model=gpt-5.2-codex] Updated epic scope to cover the full local-first DB embedding chain (chunking -> embeddings -> vector backend) and mapped to new user stories.
+2026-01-20 00:32 [agent=codex] [model=unknown] Artifact attached: [0.0.2.md](..\..\..\artifacts\KABSD-EPIC-0003\0.0.2.md) — Attach 0.0.2 release notes (topics + embedding pipeline foundations)

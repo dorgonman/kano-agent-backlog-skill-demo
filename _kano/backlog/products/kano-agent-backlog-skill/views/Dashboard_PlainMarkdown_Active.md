@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: feature/embedding
-vcs.revno: 109
-vcs.hash: 0dde451375144070d124202a75a48bd0cf69cffe
+vcs.revno: 110
+vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: codex
 
 ## New
 
