@@ -1,0 +1,13 @@
+                                  Kano Doctor                                  
++-----------------------------------------------------------------------------+
+| Check                | Status | Message                                     |
+|----------------------+--------+---------------------------------------------|
+| Python Prerequisites | ? PASS | All required packages installed             |
+| Skill Layout         | ? PASS | OK (no legacy src/kano_cli python files)    |
+| Backlog Initialized  | ? PASS | Found 2 product(s):                         |
+|                      |        | kano-agent-backlog-skill,                   |
+|                      |        | kano-commit-convention-skill                |
+| Kano CLI             | ? PASS | CLI module available                        |
++-----------------------------------------------------------------------------+
+
+All checks passed!

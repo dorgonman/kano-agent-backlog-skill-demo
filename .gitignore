@@ -53,3 +53,9 @@ Thumbs.db
 .kiro/
 /.hypothesis
 /nul
+
+# OpenCode local runtime artifacts
+.opencode/run/
+.opencode/logs/
+.opencode/node_modules/
+.opencode/.bun/

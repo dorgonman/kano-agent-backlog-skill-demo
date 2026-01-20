@@ -1,0 +1,3 @@
+? Restored topic 'release-0-0-2-smoke-a' from snapshot 'smoke'
+  Restored at: 2026-01-20T09:16:07.827576Z
+  Components restored: manifest, notes

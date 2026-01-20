@@ -8,6 +8,9 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd -P)"
+
 print_info() {
     echo -e "${BLUE}[INFO]${NC} $1"
 }
@@ -22,6 +25,154 @@ print_warning() {
 
 print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
+}
+
+usage() {
+    cat <<EOF
+Usage:
+  $(basename "$0") [install|check] [--no-oh-my-opencode] [--no-kano-skill]
+
+Notes:
+  - Can be run from any directory; it will 'cd' to repo root automatically.
+  - OpenCode UI may require Bun. If you saw:
+      {"name":"BunInstallFailedError",...}
+    run:
+      $(basename "$0") install
+EOF
+}
+
+have_cmd() { command -v "$1" >/dev/null 2>&1; }
+
+add_path_dir() {
+    local dir="${1:-}"
+    [ -n "$dir" ] || return 0
+
+    case ":$PATH:" in
+        *":$dir:"*) return 0 ;;
+        *) export PATH="$dir:$PATH" ;;
+    esac
+}
+
+to_unix_path() {
+    local p="${1:-}"
+    [ -n "$p" ] || return 1
+
+    if have_cmd cygpath; then
+        cygpath -u "$p"
+        return 0
+    fi
+
+    # Best-effort fallback (covers C:\ -> /c/ for Git Bash/MSYS).
+    printf "%s\n" "$p" | sed -E 's#^([A-Za-z]):#/\L\\1#; s#\\\\#/#g'
+}
+
+resolve_bun_cmd() {
+    if have_cmd bun; then
+        echo "bun"
+        return 0
+    fi
+
+    # Common bun locations (Git Bash / MSYS)
+    if [ -n "${HOME:-}" ]; then
+        [ -x "${HOME}/.bun/bin/bun" ] && { echo "${HOME}/.bun/bin/bun"; return 0; }
+        [ -x "${HOME}/.bun/bin/bun.exe" ] && { echo "${HOME}/.bun/bin/bun.exe"; return 0; }
+    fi
+
+    if [ -n "${USERPROFILE:-}" ]; then
+        local win_bun="${USERPROFILE}\\.bun\\bin\\bun.exe"
+        if [ -f "$win_bun" ]; then
+            local unix_bun
+            unix_bun="$(to_unix_path "$win_bun")"
+            [ -x "$unix_bun" ] && { echo "$unix_bun"; return 0; }
+        fi
+    fi
+
+    local user="${USERNAME:-}"
+    if [ -n "$user" ]; then
+        local candidates=(
+            "/c/Users/${user}/.bun/bin/bun.exe"
+            "/c/Users/${user}/AppData/Local/Programs/Bun/bun.exe"
+            "/c/Users/${user}/AppData/Local/bun/bun.exe"
+        )
+        for c in "${candidates[@]}"; do
+            [ -x "$c" ] && { echo "$c"; return 0; }
+        done
+    fi
+
+    local candidates2=(
+        "/c/Program Files/Bun/bun.exe"
+        "/c/Program Files (x86)/Bun/bun.exe"
+    )
+    for c in "${candidates2[@]}"; do
+        [ -x "$c" ] && { echo "$c"; return 0; }
+    done
+
+    return 1
+}
+
+append_line_if_missing() {
+    local file="$1"
+    local line="$2"
+    [ -n "$file" ] || return 0
+    [ -n "$line" ] || return 0
+
+    if [ -f "$file" ] && rg -nF -- "$line" "$file" >/dev/null 2>&1; then
+        return 0
+    fi
+
+    mkdir -p "$(dirname "$file")" 2>/dev/null || true
+    {
+        echo ""
+        echo "# Added by kano-agent-backlog-skill-demo scripts/prerequisite.sh"
+        echo "$line"
+    } >> "$file"
+}
+
+ensure_user_bin_shims() {
+    local bun_cmd=""
+    bun_cmd="$(resolve_bun_cmd || true)"
+    [ -n "$bun_cmd" ] || return 0
+
+    local user_bin="${HOME:-}/bin"
+    [ -n "$user_bin" ] || return 0
+    mkdir -p "$user_bin" 2>/dev/null || true
+
+    # If bun is not directly on PATH, create a shim in ~/bin so shells can find it.
+    if ! have_cmd bun; then
+        local bun_target="$bun_cmd"
+        local bun_link="${user_bin}/bun"
+
+        if ln -sf "$bun_target" "$bun_link" 2>/dev/null; then
+            :
+        else
+            cat > "$bun_link" <<EOF
+#!/usr/bin/env bash
+exec "$bun_target" "\$@"
+EOF
+            chmod +x "$bun_link" 2>/dev/null || true
+        fi
+    fi
+
+    # Make sure current shell can find ~/bin.
+    add_path_dir "$user_bin"
+
+    # Persist for bash/zsh if possible (best-effort).
+    if [ -n "${BASH_VERSION:-}" ]; then
+        append_line_if_missing "${HOME}/.bashrc" 'export PATH="$HOME/bin:$PATH"'
+        append_line_if_missing "${HOME}/.bashrc" 'export BUN_INSTALL="$HOME/.bun"'
+        append_line_if_missing "${HOME}/.bashrc" 'export PATH="$BUN_INSTALL/bin:$PATH"'
+    fi
+
+    if [ -n "${ZSH_VERSION:-}" ]; then
+        append_line_if_missing "${HOME}/.zshrc" 'export PATH="$HOME/bin:$PATH"'
+        append_line_if_missing "${HOME}/.zshrc" 'export BUN_INSTALL="$HOME/.bun"'
+        append_line_if_missing "${HOME}/.zshrc" 'export PATH="$BUN_INSTALL/bin:$PATH"'
+    fi
+
+    # Fish users will need manual setup; we do not modify fish config.
+    if [ -n "${SHELL:-}" ] && echo "$SHELL" | rg -q "fish"; then
+        print_warning "Fish shell detected; add ~/.bun/bin to PATH manually."
+    fi
 }
 
 detect_python() {
@@ -117,23 +268,94 @@ check_npm() {
     fi
 }
 
+check_bun() {
+    print_info "Checking Bun installation..."
+
+    local bun_cmd=""
+    bun_cmd="$(resolve_bun_cmd || true)"
+
+    if [ -n "$bun_cmd" ]; then
+        local bun_version
+        bun_version="$("$bun_cmd" --version 2>/dev/null || true)"
+        print_success "bun is installed (version: ${bun_version:-unknown})"
+        return 0
+    fi
+
+    print_warning "bun is not installed (required for OpenCode UI on some setups)."
+    print_info "We can install it for you (install mode) or follow docs:"
+    print_info "  - https://bun.sh/docs/installation"
+    return 1
+}
+
+install_bun() {
+    print_info "Installing Bun..."
+
+    # Windows (Git Bash / MSYS) best effort: use winget if available.
+    if command -v winget &> /dev/null; then
+        print_info "Using winget..."
+        winget install --id Oven-sh.Bun -e || true
+    elif command -v brew &> /dev/null; then
+        print_info "Using brew..."
+        brew install bun || true
+    else
+        # Official install script (macOS/Linux). Requires network.
+        print_info "Using bun official installer (requires network)..."
+        if command -v curl &> /dev/null; then
+            curl -fsSL https://bun.sh/install | bash || true
+        elif command -v wget &> /dev/null; then
+            wget -qO- https://bun.sh/install | bash || true
+        else
+            print_error "Neither winget/brew/curl/wget found; cannot auto-install bun."
+            return 1
+        fi
+    fi
+
+    local bun_cmd=""
+    bun_cmd="$(resolve_bun_cmd || true)"
+
+    if [ -n "$bun_cmd" ]; then
+        local bun_version
+        bun_version="$("$bun_cmd" --version 2>/dev/null || true)"
+        print_success "bun installed (version: ${bun_version:-unknown})"
+
+        # Ensure current shell can find bun if installed outside PATH.
+        if [ "$bun_cmd" != "bun" ]; then
+            add_path_dir "$(dirname "$bun_cmd")"
+        fi
+        return 0
+    fi
+
+    print_warning "bun install command ran, but 'bun' is still not in PATH for this shell."
+    print_info "Open a new terminal and re-run this script."
+    return 1
+}
+
 install_oh_my_opencode() {
     print_info "Checking oh-my-opencode installation..."
 
+    local bun_cmd=""
+    bun_cmd="$(resolve_bun_cmd || true)"
+
+    if [ -z "$bun_cmd" ]; then
+        print_error "bun is required to install oh-my-opencode (official install flow)."
+        print_info "Install Bun first, then re-run: $(basename "$0") install"
+        return 1
+    fi
+
     if command -v oh-my-opencode &> /dev/null; then
-        local current_version=$(npm list -g oh-my-opencode 2>&1 | grep oh-my-opencode | sed 's/.*oh-my-opencode@//')
-        print_info "oh-my-opencode is already installed (version: $current_version)"
-        print_info "Updating to latest version..."
-
-        npm install -g oh-my-opencode@latest
-
-        local new_version=$(npm list -g oh-my-opencode 2>&1 | grep oh-my-opencode | sed 's/.*oh-my-opencode@//')
-        print_success "oh-my-opencode updated to version: $new_version"
+        print_info "oh-my-opencode is already available in PATH."
+        print_info "Updating to latest version via bun..."
     else
-        print_info "Installing oh-my-opencode..."
-        npm install -g oh-my-opencode@latest
-        local version=$(npm list -g oh-my-opencode 2>&1 | grep oh-my-opencode | sed 's/.*oh-my-opencode@//')
-        print_success "oh-my-opencode installed (version: $version)"
+        print_info "Installing oh-my-opencode via bun..."
+    fi
+
+    "$bun_cmd" add -g oh-my-opencode@latest
+
+    if command -v oh-my-opencode &> /dev/null; then
+        print_success "oh-my-opencode is installed and available in PATH."
+    else
+        print_warning "oh-my-opencode install finished, but command is not in PATH for this shell."
+        print_info "Try opening a new terminal, then run: oh-my-opencode --help"
     fi
 }
 
@@ -155,6 +377,22 @@ check_vscode_extension() {
 }
 
 main() {
+    local action="install"
+    local do_oh_my_opencode=1
+    local do_kano_skill=1
+
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            -h|--help) usage; exit 0;;
+            install|check) action="$1"; shift;;
+            --no-oh-my-opencode|--no-node) do_oh_my_opencode=0; shift;;
+            --no-kano-skill) do_kano_skill=0; shift;;
+            *) print_error "Unknown arg: $1"; usage; exit 2;;
+        esac
+    done
+
+    cd "$REPO_ROOT"
+
     print_info "========================================"
     print_info "Prerequisites Setup"
     print_info "========================================"
@@ -170,19 +408,27 @@ main() {
     fi
     echo ""
 
-    install_kano_skill
-    echo ""
+    if [ "$action" = "install" ] && [ "$do_kano_skill" -eq 1 ]; then
+        install_kano_skill
+        echo ""
+    fi
 
-    if ! check_npm; then
-        exit 1
+    if [ "$action" = "install" ]; then
+        if ! check_bun; then
+            install_bun || true
+        fi
+        ensure_user_bin_shims || true
+    else
+        check_bun || true
     fi
     echo ""
 
-    install_oh_my_opencode
-    echo ""
-
-    check_vscode_extension
-    echo ""
+    if [ "$do_oh_my_opencode" -eq 1 ] && [ "$action" = "install" ]; then
+        install_oh_my_opencode || true
+        echo ""
+        check_vscode_extension
+        echo ""
+    fi
 
     print_info "========================================"
     print_success "Prerequisites setup completed!"
@@ -194,4 +440,4 @@ main() {
     print_info "3. Initialize backlog: kano-backlog backlog init --product <name> --agent <id>"
 }
 
-main
+main "$@"

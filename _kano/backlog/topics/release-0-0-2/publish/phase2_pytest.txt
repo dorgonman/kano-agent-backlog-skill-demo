@@ -1,0 +1,84 @@
+........................................................................ [ 61%]
+.............................................                            [100%]
+============================== warnings summary ===============================
+tests/test_config_migration.py::test_migrate_json_dry_run_leaves_files_untouched
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_dry_run_leav0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_dry_run_leaves_files_untouched
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_dry_run_leav0\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_writes_toml_and_backup
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_writes_toml_0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_writes_toml_and_backup
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_writes_toml_0\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[True]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_skips_when_t0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[False]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_skips_when_t1\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[False]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_migrate_json_skips_when_t1\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_toml.py::test_json_loads_when_no_toml
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\config.py:327: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_json_loads_when_no_toml0\_kano\backlog\_shared\defaults.json
+    return ConfigLoader._read_config_optional(backlog_root / "_shared", "defaults")
+
+tests/test_config_toml.py::test_deep_merge_toml_and_json
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\config.py:169: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\pytest-of-dorgon.chang\pytest-79\test_deep_merge_toml_and_json0\_kano\backlog\products\prod\_config\config.json
+    return ConfigLoader._read_config_optional(product_root / "_config", "config")
+
+tests/test_workitem_ops.py: 31 warnings
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\frontmatter\__init__.py:161: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+    with codecs.open(fd, "r", encoding) as f:
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                                                                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------
+skills\kano-agent-backlog-skill\src\kano_backlog_core\__init__.py                      12      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\audit.py                         53     37    30%   33-39, 52-57, 79-95, 112-134
+skills\kano-agent-backlog-skill\src\kano_backlog_core\backend_uri.py                   84      8    90%   25, 49, 103, 107, 114, 127, 132, 148
+skills\kano-agent-backlog-skill\src\kano_backlog_core\canonical.py                    168     96    43%   18, 66, 70-71, 107-108, 121-180, 198-237, 253, 270-307, 337, 355, 361-376, 382-385
+skills\kano-agent-backlog-skill\src\kano_backlog_core\chunking.py                     133     21    84%   29, 31, 33, 35, 37, 39, 120, 143, 149-153, 178, 183, 203, 210, 213, 237-241
+skills\kano-agent-backlog-skill\src\kano_backlog_core\config.py                       203     23    89%   32-36, 81, 88-93, 101-102, 107, 132, 202, 226, 258, 275, 281-282, 301
+skills\kano-agent-backlog-skill\src\kano_backlog_core\derived.py                      132     90    32%   15-25, 43-50, 54-70, 87, 92, 97, 102, 107, 112, 117, 122, 140-144, 148-161, 165, 169-172, 176, 180, 184-193, 197, 201, 205, 209-213, 217-227, 236-240
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\__init__.py             5      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\adapter.py             15      3    80%   14, 19, 24
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\factory.py             18      8    56%   19-28
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\noop.py                24     13    46%   22-54
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\openai_adapter.py      37     37     0%   3-78
+skills\kano-agent-backlog-skill\src\kano_backlog_core\embedding\types.py               10      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\errors.py                        51     25    51%   29-30, 37-39, 46-48, 64-67, 74-76, 86-87, 94-97, 113-116
+skills\kano-agent-backlog-skill\src\kano_backlog_core\models.py                        68     10    85%   105-113, 117-119
+skills\kano-agent-backlog-skill\src\kano_backlog_core\pipeline_config.py               46      4    91%   88-89, 102-103
+skills\kano-agent-backlog-skill\src\kano_backlog_core\refs.py                         137    108    21%   29-33, 43-47, 52-54, 65-92, 106-107, 124-135, 147-155, 167-170, 174-191, 195-215, 219-236, 240-256, 265-274
+skills\kano-agent-backlog-skill\src\kano_backlog_core\state.py                         53     40    25%   62, 88-123, 142-164
+skills\kano-agent-backlog-skill\src\kano_backlog_core\template.py                     129     74    43%   31-46, 76-101, 116, 143-154, 158-162, 174-179, 184, 202-237, 242-254, 260-262, 267-270
+skills\kano-agent-backlog-skill\src\kano_backlog_core\token_budget.py                  83     40    52%   21, 23, 74, 89-90, 108-138, 144-159, 165-181
+skills\kano-agent-backlog-skill\src\kano_backlog_core\tokenizer.py                     68     26    62%   34, 41, 57, 67-69, 77-85, 88-95, 103-105, 115, 118, 130-132
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vcs\__init__.py                   4      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vcs\base.py                      30      1    97%   28
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vcs\detector.py                  26      3    88%   13, 23, 46
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vcs\git_adapter.py               31     24    23%   17-83
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vcs\null_adapter.py               7      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\__init__.py                5      0   100%
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\adapter.py                23      6    74%   22, 27, 32, 46, 51, 56
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\factory.py                27     16    41%   12, 15, 18, 23, 26, 29, 35-52
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\sqlite_backend.py        162    134    17%   34-40, 43-55, 58-77, 80-83, 86-87, 93-96, 99-158, 161-191, 194-205, 210-245, 248-260, 264, 268, 272-277, 280-281, 284-294
+skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\types.py                  15      0   100%
+-----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                1859    847    54%
+Coverage HTML written to dir htmlcov
+117 passed, 40 warnings in 89.90s (0:01:29)

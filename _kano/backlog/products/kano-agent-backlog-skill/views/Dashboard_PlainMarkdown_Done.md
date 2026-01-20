@@ -2,14 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: feature/embedding
-vcs.revno: 110
-vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
+vcs.branch: main
+vcs.revno: 102
+vcs.hash: 36e04b15f6be6cb5a7bb8d568c4ce11425ceed47
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex
+Agent: opencode
 
 ## Done
 
@@ -219,6 +219,7 @@ Agent: codex
 - [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
 - [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
 - [KABSD-TSK-0209 Add link integrity validator for backlog refs](../items/task/0200/KABSD-TSK-0209_add-link-integrity-validator-for-backlog-refs.md)
+- [KABSD-TSK-0209 Gitignore: ignore product _trash directories](../items/task/0200/KABSD-TSK-0209_gitignore-ignore-product-trash-directories.md)
 - [KABSD-TSK-0210 Relax model attribution warnings for worklog commands](../items/task/0200/KABSD-TSK-0210_relax-model-attribution-warnings-for-worklog-commands.md)
 - [KABSD-TSK-0212 Add backlog-root override flag for sandbox operations](../items/task/0200/KABSD-TSK-0212_add-backlog-root-override-flag-for-sandbox-operations.md)
 - [KABSD-TSK-0213 Fix view refresh VcsMeta branch mismatch](../items/task/0200/KABSD-TSK-0213_fix-view-refresh-vcsmeta-branch-mismatch.md)

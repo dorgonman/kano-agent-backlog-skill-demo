@@ -1,0 +1,3 @@
+DRY RUN: Topic 'release-0-0-2-smoke-a'
+  Snapshots scanned: 1
+  Snapshots deleted: 0

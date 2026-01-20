@@ -2,14 +2,14 @@
 
 <!-- kano:build
 vcs.provider: git
-vcs.branch: feature/embedding
-vcs.revno: 110
-vcs.hash: 7ff664b4790f2211e3d13ab5108f189ad9ace5d8
+vcs.branch: main
+vcs.revno: 102
+vcs.hash: 36e04b15f6be6cb5a7bb8d568c4ce11425ceed47
 vcs.dirty: true
 -->
 
 Source: items
-Agent: codex
+Agent: opencode
 
 ## New
 
@@ -189,4 +189,5 @@ Agent: codex
 - [KABSD-TSK-0240 Add MVP chunking tests (ASCII, long English, CJK)](../items/task/0200/KABSD-TSK-0240_add-mvp-chunking-tests-ascii-long-english-cjk.md)
 - [KABSD-TSK-0244 Implement tiktoken tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0244_implement-tiktoken-tokenizer-adapter-optional-dependency.md)
 - [KABSD-TSK-0257 Implement repo-shared active topic state (lock-free)](../items/task/0200/KABSD-TSK-0257_implement-repo-shared-active-topic-state-lock-free.md)
+- [KABSD-TSK-0270 Skillify release check workflow (0.0.2)](../items/task/0200/KABSD-TSK-0270_skillify-release-check-workflow-0-0-2.md)
 
