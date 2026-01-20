@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../oh-my-opencode"
-		},
-		{
-			"path": "../kano-agent-backlog-skill-githubpages"
 		}
 	],
 	"settings": {}

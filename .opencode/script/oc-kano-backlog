@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# -----------------------------------------------------------------------------
+# oc-kano-bklog
+# Quick start launcher for OpenCode in this repo.
+#
+# - Locate repo root from script location (.opencode/script/*)
+# - Prefer tmux session for resilience (mobile SSH / flaky network)
+# - Fallback to direct opencode if tmux is unavailable
+#
+# Usage:
+#   oc-kano-bklog
+#   oc-kano-bklog --session oc-kano-bklog
+#   oc-kano-bklog --no-tmux
+#   oc-kano-bklog -- <extra args passed to opencode>
+# -----------------------------------------------------------------------------
+
+SESSION_NAME="oc-kano-bklog"
+USE_TMUX=1
+OPENCODE_ARGS=()
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --session)
+      SESSION_NAME="${2:-}"
+      if [[ -z "$SESSION_NAME" ]]; then
+        echo "ERROR: --session requires a value." >&2
+        exit 2
+      fi
+      shift 2
+      ;;
+    --no-tmux)
+      USE_TMUX=0
+      shift
+      ;;
+    --)
+      shift
+      OPENCODE_ARGS+=("$@")
+      break
+      ;;
+    -h|--help)
+      echo "Usage: oc-kano-bklog [--session <name>] [--no-tmux] [-- <opencode args...>]" >&2
+      exit 0
+      ;;
+    *)
+      # Treat unknown args as opencode args
+      OPENCODE_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+# Resolve script directory (works with symlink)
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+if command -v realpath >/dev/null 2>&1; then
+  SCRIPT_PATH="$(realpath "$SCRIPT_PATH")"
+else
+  # Python fallback for platforms without realpath
+  SCRIPT_PATH="$(python3 -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' "$SCRIPT_PATH")"
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd -P)"
+
+# This script must live in <RepoRoot>/.opencode/script/
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd -P)"
+
+if [[ ! -d "$REPO_ROOT/.opencode" ]]; then
+  echo "ERROR: Cannot find repo root (.opencode missing): $REPO_ROOT" >&2
+  exit 2
+fi
+
+if ! command -v opencode >/dev/null 2>&1; then
+  echo "ERROR: 'opencode' not found in PATH." >&2
+  echo "Hint: Install opencode on the remote machine, or adjust PATH." >&2
+  exit 2
+fi
+
+if [[ "$USE_TMUX" -eq 1 ]] && command -v tmux >/dev/null 2>&1; then
+  echo "INFO: Launching via tmux session: $SESSION_NAME" >&2
+  # -A: attach if exists, otherwise create
+  # -c: start in repo root
+  exec tmux new-session -A -s "$SESSION_NAME" -c "$REPO_ROOT" "opencode ${OPENCODE_ARGS[*]:-}"
+else
+  echo "INFO: Launching directly (tmux disabled/unavailable)." >&2
+  cd "$REPO_ROOT"
+  exec opencode "${OPENCODE_ARGS[@]}"
+fi
