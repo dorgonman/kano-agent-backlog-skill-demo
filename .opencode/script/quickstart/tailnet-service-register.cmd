@@ -20,7 +20,21 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
 )
 
 
+echo.
+echo === TAILNET SERVICE REGISTER ===
+echo About to register service with these parameters:
+echo   Name: %DEFAULT_NAME%
+echo   Port: %DEFAULT_PORT%
+echo   TsHttpsPort: %DEFAULT_TS_HTTPS_PORT%
+echo   Script: %PS1%
+echo ================================
+echo.
+pause
+echo.
+echo DEBUG: Registering service '%DEFAULT_NAME%' with Port=%DEFAULT_PORT%, TsHttpsPort=%DEFAULT_TS_HTTPS_PORT%
+echo DEBUG: PowerShell command: powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action install -Name "%DEFAULT_NAME%" -Port %DEFAULT_PORT% -TsHttpsPort %DEFAULT_TS_HTTPS_PORT%
 powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action install -Name "%DEFAULT_NAME%" -Port %DEFAULT_PORT% -TsHttpsPort %DEFAULT_TS_HTTPS_PORT%
+
 if errorlevel 1 goto :fail
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action start -Name "%DEFAULT_NAME%" >nul 2>&1

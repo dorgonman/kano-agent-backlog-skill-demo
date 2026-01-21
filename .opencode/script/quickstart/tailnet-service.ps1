@@ -11,6 +11,13 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+Write-Host "=== TAILNET SERVICE SCRIPT ===" -ForegroundColor Cyan
+Write-Host "Action: $Action" -ForegroundColor Yellow
+Write-Host "Name: $Name" -ForegroundColor Yellow
+Write-Host "Port: $Port" -ForegroundColor Yellow
+Write-Host "TsHttpsPort: $TsHttpsPort" -ForegroundColor Yellow
+Write-Host "==============================" -ForegroundColor Cyan
+
 function Get-RepoRoot {
   $scriptDir = Split-Path -Parent $PSCommandPath
   # .opencode/script/quickstart -> repo root is ../../..
@@ -112,32 +119,37 @@ if (-not (Test-Path $tailnetSh)) {
   throw "Missing script: $tailnetSh"
 }
 
-$bashCommand = ("./.opencode/script/quickstart/tailnet.sh --service --port {0} --ts-https {1}" -f $Port, $TsHttpsPort)
-$args = @("-lc", $bashCommand)
-
 $nssmPath = Get-NssmPath
 
-# $portInUse = Get-NetTCPConnection | Where-Object { $_.LocalPort -eq $Port }
-# if ($portInUse) {
-#     throw "Port $Port is already in use. Please stop the process using this port before proceeding."
-# }
-
 if ($Action -eq "install") {
+  $portInUse = Get-NetTCPConnection | Where-Object { $_.LocalPort -eq $Port }
+  if ($portInUse) {
+      throw "Port $Port is already in use. Please stop the process using this port before proceeding."
+  }
   if (Test-ServiceExists -Name $Name) {
     Remove-ServiceBestEffort -Name $Name
     Start-Sleep -Seconds 1
   }
 
-  if ($null -ne $nssmPath) {
-    # Prefer repo-local HOME and Bun install locations so services do not depend on a user profile.
-    $repoOpencodeDir = Join-Path $repoRoot ".opencode"
-    $repoBunInstall = Join-Path $repoOpencodeDir ".bun"
-    $repoBunBin = Join-Path $repoBunInstall "bin"
-    New-Item -ItemType Directory -Force -Path $repoOpencodeDir | Out-Null
-    New-Item -ItemType Directory -Force -Path $repoBunBin | Out-Null
+  $bashCommand = ("./.opencode/script/quickstart/tailnet.sh --service --port {0} --ts-https {1}" -f $Port, $TsHttpsPort)
 
-    & $nssmPath install $Name $bashPath $args[0] $args[1]
-    Write-Host "$nssmPath install $Name $bashPath $($args -join ' ')"
+  if ($null -ne $nssmPath) {
+
+    Write-Host "Installing service with configuration:"
+    Write-Host "  Name: $Name"
+    Write-Host "  Port: $Port"
+    Write-Host "  TsHttpsPort: $TsHttpsPort"
+    Write-Host ""
+
+    $nssmArgs = @("-lc", $bashCommand)
+
+    Write-Host "About to execute NSSM install command:"
+    Write-Host "$nssmPath install $Name $bashPath $($nssmArgs[0]) ""$($nssmArgs[1])"""
+    Write-Host "Press Enter to continue or Ctrl+C to cancel..."
+    Read-Host
+
+    & $nssmPath install $Name $bashPath $nssmArgs[0] ('"{0}"' -f $nssmArgs[1])
+    Write-Host "$nssmPath install $Name $bashPath $($nssmArgs[0]) ""$($nssmArgs[1])"""
     if ($LASTEXITCODE -ne 0) { throw "nssm install failed (exit=$LASTEXITCODE)" }
     & $nssmPath set $Name AppDirectory $repoRoot | Out-Null
     & $nssmPath set $Name DisplayName $Name | Out-Null
@@ -160,17 +172,27 @@ if ($Action -eq "install") {
 
     & $nssmPath set $Name AppEnvironmentExtra $envBlock | Out-Null
 
-    & $nssmPath set $Name AppStdout (Join-Path $repoRoot ".opencode\\logs\\service-stdout.log") | Out-Null
-    & $nssmPath set $Name AppStderr (Join-Path $repoRoot ".opencode\\logs\\service-stderr.log") | Out-Null
-    & $nssmPath set $Name AppRotateFiles 1 | Out-Null
+$logsDir = Join-Path $repoRoot ".opencode\logs"
+    Write-Host "Creating logs directory: $logsDir"
+    New-Item -ItemType Directory -Force -Path $logsDir | Out-Null
+    
+    $serviceStdout = Join-Path $repoRoot ".opencode\logs\service-stdout.log"
+    $serviceStderr = Join-Path $repoRoot ".opencode\logs\service-stderr.log"
+    Write-Host "Setting log paths:"
+    Write-Host "  Stdout: $serviceStdout"
+    Write-Host "  Stderr: $serviceStderr"
+    & $nssmPath set $Name AppStdout $serviceStdout | Out-Null
+    & $nssmPath set $Name AppStderr $serviceStderr | Out-Null
+& $nssmPath set $Name AppRotateFiles 1 | Out-Null
     & $nssmPath set $Name AppRotateOnline 1 | Out-Null
     & $nssmPath set $Name AppRotateSeconds 86400 | Out-Null
-    & $nssmPath set $Name AppRotateBytes 10485760 | Out-Null
-
+& $nssmPath set $Name AppRotateBytes 10485760 | Out-Null
+    & $nssmPath edit $Name
+    
     if (-not (Test-ServiceExists -Name $Name)) {
       throw "Service '$Name' was not created successfully."
     }
-
+    
     Write-Host "OK: installed service via NSSM: $Name"
     return
   }

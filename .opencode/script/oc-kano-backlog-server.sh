@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
+# set -x # Enable debug tracing to echo all commands
+
 
 # ------------------------------------------------------------------------------
 # oc-kano-backlog-server
@@ -9,12 +11,12 @@ set -euo pipefail
 # ------------------------------------------------------------------------------
 
 HOST="127.0.0.1"
-PORT="4096"
+PORT="80"
 AUTH_MODE="auto" # auto|basic|none
 PASSWORD_ENV="OPENCODE_SERVER_PASSWORD"
 
 TAILNET="0"
-TS_HTTPS_PORT="8443"
+TS_HTTPS_PORT="443"
 BG="0"
 SERVICE="0"
 STOP="0"
@@ -100,18 +102,6 @@ resolve_bun_cmd() {
     fi
   fi
 
-  # Repo-local bun (used by Windows service env).
-  if [[ -n "${REPO_ROOT:-}" ]]; then
-    if [[ -x "${REPO_ROOT}/.opencode/.bun/bin/bun" ]]; then
-      printf "%s\n" "${REPO_ROOT}/.opencode/.bun/bin/bun"
-      return 0
-    fi
-    if [[ -x "${REPO_ROOT}/.opencode/.bun/bin/bun.exe" ]]; then
-      printf "%s\n" "${REPO_ROOT}/.opencode/.bun/bin/bun.exe"
-      return 0
-    fi
-  fi
-
   # Windows (Git Bash) common bun installs.
   if [[ -n "${USERPROFILE:-}" ]]; then
     local bun_win="${USERPROFILE}\\.bun\\bin\\bun.exe"
@@ -183,7 +173,9 @@ fi
 RUN_DIR="${REPO_ROOT}/.opencode/run"
 LOG_DIR="${REPO_ROOT}/.opencode/logs"
 OPENCODE_PID_FILE="${RUN_DIR}/opencode-serve.pid"
-mkdir -p "$RUN_DIR" "$LOG_DIR"
+echo "DEBUG: Creating directories: $RUN_DIR and $LOG_DIR"
+mkdir -p "$RUN_DIR"
+mkdir -p "$LOG_DIR"
 
 require_opencode() {
   if ! have_cmd opencode; then
@@ -442,7 +434,11 @@ if [[ "$SERVICE" == "1" ]]; then
   echo "INFO: service mode enabled; waiting on opencode pid=$SERVICE_PID" >&2
   while kill -0 "$SERVICE_PID" >/dev/null 2>&1; do
     sleep 2
-  done
+done
+
+echo "INFO: RepoRoot : $REPO_ROOT" >&2
+echo "INFO: Bind     : http://${HOST}:${PORT}" >&2
+
   echo "INFO: opencode process exited; stopping tailscale serve." >&2
   cleanup
 fi

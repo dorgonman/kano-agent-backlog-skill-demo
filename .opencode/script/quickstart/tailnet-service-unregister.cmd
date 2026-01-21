@@ -2,6 +2,8 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 set "DEFAULT_NAME=opencode-tailnet"
+set "DEFAULT_PORT=5096"
+set "DEFAULT_TS_HTTPS_PORT=9443"
 
 set "SCRIPT_DIR=%~dp0"
 set "PS1=%SCRIPT_DIR%tailnet-service.ps1"
@@ -14,7 +16,7 @@ if not "%errorlevel%"=="0" (
   exit /b %errorlevel%
 )
 
-powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action uninstall -Name "%DEFAULT_NAME%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action uninstall -Name "%DEFAULT_NAME%" -Port "%DEFAULT_PORT%" -TsHttpsPort "%DEFAULT_TS_HTTPS_PORT%"
 if errorlevel 1 goto :fail
 
 echo.
