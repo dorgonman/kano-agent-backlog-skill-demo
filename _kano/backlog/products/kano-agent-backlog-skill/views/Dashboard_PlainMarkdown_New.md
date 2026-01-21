@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 102
-vcs.hash: 36e04b15f6be6cb5a7bb8d568c4ce11425ceed47
+vcs.revno: 103
+vcs.hash: 6a0177d102fab01cc88bc44b6e99424bf291df51
 vcs.dirty: true
 -->
 
@@ -46,6 +46,10 @@ Agent: opencode
 - [KABSD-FTR-0048 Smart Topic Suggestions and Similarity Search](../items/feature/0000/KABSD-FTR-0048_smart-topic-suggestions-and-similarity-search.md)
 - [KABSD-FTR-0049 Dual-store archive semantics (human-hide, agent-searchable)](../items/feature/0000/KABSD-FTR-0049_dual-store-archive-semantics-human-hide-agent-searchable.md)
 - [KABSD-FTR-0050 Topic evidence pack gather pipeline (focus/sculpt)](../items/feature/0000/KABSD-FTR-0050_topic-evidence-pack-gather-pipeline-focus-sculpt.md)
+- [KABSD-FTR-0051 Kano Constellation derived product blueprint (Context Graph view)](../items/feature/0000/KABSD-FTR-0051_kano-constellation-derived-product-blueprint-context-graph-view.md)
+- [KABSD-FTR-0052 Inbox Flow: low-friction capture + triage (human/agent entrypoints)](../items/feature/0000/KABSD-FTR-0052_inbox-flow-low-friction-capture-triage-human-agent-entrypoints.md)
+- [KABSD-FTR-0053 Health Scan: spotlight top review points from audit findings](../items/feature/0000/KABSD-FTR-0053_health-scan-spotlight-top-review-points-from-audit-findings.md)
+- [KABSD-FTR-0054 Brainstorm Pulse: generate non-backlog idea feed (time-ordered)](../items/feature/0000/KABSD-FTR-0054_brainstorm-pulse-generate-non-backlog-idea-feed-time-ordered.md)
 
 ### UserStory
 
@@ -147,6 +151,20 @@ Agent: opencode
 - [KABSD-TSK-0254 Draft ADR: index strategy (single model-agnostic vs per-model indexes)](../items/task/0200/KABSD-TSK-0254_draft-adr-index-strategy-single-model-agnostic-vs-per-model-indexes.md)
 - [KABSD-TSK-0262 Implement topic merge function and merge embedding-preprocessing-and-vector-backend-research with phase-2](../items/task/0200/KABSD-TSK-0262_implement-topic-merge-function-and-merge-embedding-preprocessing-and-vector-backend-research-with-phase-2.md)
 - [KABSD-TSK-0266 Design: physical archive strategy (DB cold store vs directory move)](../items/task/0200/KABSD-TSK-0266_design-physical-archive-strategy-db-cold-store-vs-directory-move.md)
+- [KABSD-TSK-0272 Implement Constellation build command (nodes/edges -> Mermaid + JSON)](../items/task/0200/KABSD-TSK-0272_implement-constellation-build-command-nodes-edges-mermaid-json.md)
+- [KABSD-TSK-0273 Add cohesion + islands metrics to Constellation output](../items/task/0200/KABSD-TSK-0273_add-cohesion-islands-metrics-to-constellation-output.md)
+- [KABSD-TSK-0274 Design Inbox entry storage (reuse Topic/workset/artifacts; no new SoT)](../items/task/0200/KABSD-TSK-0274_design-inbox-entry-storage-reuse-topic-workset-artifacts-no-new-sot.md)
+- [KABSD-TSK-0275 Implement inbox commands: add, list, triage (human-in-the-loop)](../items/task/0200/KABSD-TSK-0275_implement-inbox-commands-add-list-triage-human-in-the-loop.md)
+- [KABSD-TSK-0276 Add transcript-based voice/mobile capture (no STT; just text input)](../items/task/0200/KABSD-TSK-0276_add-transcript-based-voice-mobile-capture-no-stt-just-text-input.md)
+- [KABSD-TSK-0277 Standardize audit findings schema + JSON output (stable fingerprints)](../items/task/0200/KABSD-TSK-0277_standardize-audit-findings-schema-json-output-stable-fingerprints.md)
+- [KABSD-TSK-0278 Implement Health Scan command (rank findings -> top-N review cards)](../items/task/0200/KABSD-TSK-0278_implement-health-scan-command-rank-findings-top-n-review-cards.md)
+- [KABSD-TSK-0279 Implement Brainstorm Pulse command and storage layout (time-ordered)](../items/task/0200/KABSD-TSK-0279_implement-brainstorm-pulse-command-and-storage-layout-time-ordered.md)
+- [KABSD-TSK-0280 Write ADR: Defensive design against agent mistakes (schemas, derived views, append-only)](../items/task/0200/KABSD-TSK-0280_write-adr-defensive-design-against-agent-mistakes-schemas-derived-views-append-only.md)
+- [KABSD-TSK-0281 Unify terminology and layering for doctor vs validate vs audit](../items/task/0200/KABSD-TSK-0281_unify-terminology-and-layering-for-doctor-vs-validate-vs-audit.md)
+
+### Bug
+
+- [KABSD-BUG-0008 Fix doctor backlog initialization check (supports config.toml; avoid false FAIL)](../items/bug/0000/KABSD-BUG-0008_fix-doctor-backlog-initialization-check-supports-config-toml-avoid-false-fail.md)
 
 ### Nones
 

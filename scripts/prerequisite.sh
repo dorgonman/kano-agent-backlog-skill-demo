@@ -30,7 +30,7 @@ print_error() {
 usage() {
     cat <<EOF
 Usage:
-  $(basename "$0") [install|check] [--no-oh-my-opencode] [--no-kano-skill]
+  $(basename "$0") [install|check] [--no-opencode] [--no-oh-my-opencode] [--no-kano-skill]
 
 Notes:
   - Can be run from any directory; it will 'cd' to repo root automatically.
@@ -87,26 +87,6 @@ resolve_bun_cmd() {
         fi
     fi
 
-    local user="${USERNAME:-}"
-    if [ -n "$user" ]; then
-        local candidates=(
-            "/c/Users/${user}/.bun/bin/bun.exe"
-            "/c/Users/${user}/AppData/Local/Programs/Bun/bun.exe"
-            "/c/Users/${user}/AppData/Local/bun/bun.exe"
-        )
-        for c in "${candidates[@]}"; do
-            [ -x "$c" ] && { echo "$c"; return 0; }
-        done
-    fi
-
-    local candidates2=(
-        "/c/Program Files/Bun/bun.exe"
-        "/c/Program Files (x86)/Bun/bun.exe"
-    )
-    for c in "${candidates2[@]}"; do
-        [ -x "$c" ] && { echo "$c"; return 0; }
-    done
-
     return 1
 }
 
@@ -116,7 +96,7 @@ append_line_if_missing() {
     [ -n "$file" ] || return 0
     [ -n "$line" ] || return 0
 
-    if [ -f "$file" ] && rg -nF -- "$line" "$file" >/dev/null 2>&1; then
+    if [ -f "$file" ] && { (command -v rg >/dev/null 2>&1 && rg -nF -- "$line" "$file" >/dev/null 2>&1) || (command -v grep >/dev/null 2>&1 && grep -F -- "$line" "$file" >/dev/null 2>&1); }; then
         return 0
     fi
 
@@ -330,6 +310,47 @@ install_bun() {
     return 1
 }
 
+check_opencode() {
+    print_info "Checking OpenCode (opencode) installation..."
+
+    if command -v opencode &> /dev/null; then
+        local v
+        v="$(opencode --version 2>/dev/null || true)"
+        print_success "opencode is installed (${v:-version unknown})"
+        return 0
+    fi
+
+    print_warning "opencode is not installed."
+    return 1
+}
+
+install_opencode() {
+    print_info "Installing OpenCode (opencode) via bun..."
+
+    local bun_cmd=""
+    bun_cmd="$(resolve_bun_cmd || true)"
+
+    if [ -z "$bun_cmd" ]; then
+        print_error "bun is required to install opencode (bun global install)."
+        print_info "Run: $(basename "$0") install (it will attempt to install bun)"
+        return 1
+    fi
+
+    # The OpenCode CLI is distributed as the npm package 'opencode-ai'.
+    "$bun_cmd" add -g opencode-ai@latest
+
+    if command -v opencode &> /dev/null; then
+        local v
+        v="$(opencode --version 2>/dev/null || true)"
+        print_success "opencode installed (${v:-version unknown})"
+        return 0
+    fi
+
+    print_warning "opencode install finished, but command is not in PATH for this shell."
+    print_info "Try opening a new terminal, then run: opencode --help"
+    return 1
+}
+
 install_oh_my_opencode() {
     print_info "Checking oh-my-opencode installation..."
 
@@ -379,12 +400,14 @@ check_vscode_extension() {
 main() {
     local action="install"
     local do_oh_my_opencode=1
+    local do_opencode=1
     local do_kano_skill=1
 
     while [ $# -gt 0 ]; do
         case "$1" in
             -h|--help) usage; exit 0;;
             install|check) action="$1"; shift;;
+            --no-opencode) do_opencode=0; shift;;
             --no-oh-my-opencode|--no-node) do_oh_my_opencode=0; shift;;
             --no-kano-skill) do_kano_skill=0; shift;;
             *) print_error "Unknown arg: $1"; usage; exit 2;;
@@ -422,6 +445,13 @@ main() {
         check_bun || true
     fi
     echo ""
+
+    if [ "$do_opencode" -eq 1 ] && [ "$action" = "install" ]; then
+        if ! check_opencode; then
+            install_opencode || true
+        fi
+        echo ""
+    fi
 
     if [ "$do_oh_my_opencode" -eq 1 ] && [ "$action" = "install" ]; then
         install_oh_my_opencode || true

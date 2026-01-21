@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-set "DEFAULT_NAME=oc-tailnet"
+set "DEFAULT_NAME=opencode-tailnet"
 
 set "SCRIPT_DIR=%~dp0"
 set "PS1=%SCRIPT_DIR%tailnet-service.ps1"

@@ -18,6 +18,7 @@ function Get-BashPath {
 param(
     [ValidateSet("install", "check")]
     [string]$Action = "install",
+    [switch]$NoOpencode,
     [switch]$NoOhMyOpencode,
     [switch]$NoKanoSkill
 )
@@ -31,6 +32,7 @@ if (-not (Test-Path $shPath)) {
 }
 
 $args = @($shPath, $Action)
+if ($NoOpencode) { $args += "--no-opencode" }
 if ($NoOhMyOpencode) { $args += "--no-oh-my-opencode" }
 if ($NoKanoSkill) { $args += "--no-kano-skill" }
 
@@ -41,4 +43,3 @@ try {
 finally {
     Pop-Location
 }
-

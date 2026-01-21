@@ -20,7 +20,7 @@ _kano/backlog/**/.cache/
 # Python build artifacts
 __pycache__/
 *.py[cod]
-
+.pycache_escalated/
 # Python packaging metadata (editable installs/build outputs)
 *.egg-info/
 *.dist-info/

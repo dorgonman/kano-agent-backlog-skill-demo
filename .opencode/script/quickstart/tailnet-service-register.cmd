@@ -1,9 +1,9 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-set "DEFAULT_NAME=oc-kano-tailnet"
-set "DEFAULT_PORT=4096"
-set "DEFAULT_TS_HTTPS_PORT=8443"
+set "DEFAULT_NAME=opencode-tailnet"
+set "DEFAULT_PORT=5096"
+set "DEFAULT_TS_HTTPS_PORT=9443"
 
 set "SCRIPT_DIR=%~dp0"
 set "PS1=%SCRIPT_DIR%tailnet-service.ps1"
@@ -19,22 +19,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
   exit /b %errorlevel%
 )
 
-if exist "%PREREQ_PS1%" (
-  echo.
-  echo INFO: Ensuring prerequisites (bun / oh-my-opencode)...
-  powershell -NoProfile -ExecutionPolicy Bypass -File "%PREREQ_PS1%" install -NoKanoSkill
-  powershell -NoProfile -ExecutionPolicy Bypass -Command "$c=Get-Command bun -ErrorAction SilentlyContinue; if(-not $c){ exit 2 }"
-  if errorlevel 1 (
-    echo.
-    echo ERROR: bun still not available after prerequisite step.
-    echo ERROR: Install Bun and re-run this script.
-    pause
-    exit /b 2
-  )
-) else (
-  echo WARN: Missing prerequisite script: %PREREQ_PS1%
-  echo WARN: If you see BunInstallFailedError, install Bun first.
-)
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" -Action install -Name "%DEFAULT_NAME%" -Port %DEFAULT_PORT% -TsHttpsPort %DEFAULT_TS_HTTPS_PORT%
 if errorlevel 1 goto :fail
@@ -47,10 +31,6 @@ echo.
 echo How to connect:
 echo - Run: tailscale serve status
 echo - Use the URL shown under "Available within your tailnet"
-echo.
-echo If you see this in the browser:
-echo   {"name":"BunInstallFailedError",...}
-echo Install Bun (bun.sh) and then re-run this register script.
 echo.
 
 set "TS_EXE="

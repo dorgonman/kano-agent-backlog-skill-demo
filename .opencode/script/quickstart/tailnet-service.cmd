@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-set "DEFAULT_NAME=oc-tailnet"
+set "DEFAULT_NAME=opencode-tailnet"
 set "DEFAULT_PORT=4096"
 set "DEFAULT_TS_HTTPS_PORT=8443"
 

@@ -3,7 +3,7 @@ param(
   [ValidateSet("install", "uninstall", "start", "stop", "status", "logs")]
   [string]$Action,
 
-  [string]$Name = "oc-tailnet",
+  [string]$Name = "opencode-tailnet",
   [int]$Port = 4096,
   [int]$TsHttpsPort = 8443,
   [int]$Tail = 200
@@ -117,6 +117,11 @@ $args = @("-lc", $bashCommand)
 
 $nssmPath = Get-NssmPath
 
+# $portInUse = Get-NetTCPConnection | Where-Object { $_.LocalPort -eq $Port }
+# if ($portInUse) {
+#     throw "Port $Port is already in use. Please stop the process using this port before proceeding."
+# }
+
 if ($Action -eq "install") {
   if (Test-ServiceExists -Name $Name) {
     Remove-ServiceBestEffort -Name $Name
@@ -131,26 +136,8 @@ if ($Action -eq "install") {
     New-Item -ItemType Directory -Force -Path $repoOpencodeDir | Out-Null
     New-Item -ItemType Directory -Force -Path $repoBunBin | Out-Null
 
-    # Make Bun available to the service even when it runs under LocalSystem.
-    # If Bun exists on this machine, copy bun.exe into the repo-local bun bin dir.
-    $bunExePath = Get-BunExePath
-    if ($bunExePath) {
-      try {
-        Copy-Item -Force -Path $bunExePath -Destination (Join-Path $repoBunBin "bun.exe")
-        $bunDest = Join-Path $repoBunBin "bun.exe"
-        if (Test-Path $bunDest) {
-          Write-Host "OK: bun.exe copied into repo-local bin: $bunDest"
-        }
-      }
-      catch {
-        Write-Warning "Failed to copy bun.exe into repo: $($_.Exception.Message)"
-      }
-    }
-    else {
-      Write-Warning "bun.exe not found for this installer session; service may fail with BunInstallFailedError."
-    }
-
-    & $nssmPath install $Name $bashPath @args
+    & $nssmPath install $Name $bashPath $args[0] $args[1]
+    Write-Host "$nssmPath install $Name $bashPath $($args -join ' ')"
     if ($LASTEXITCODE -ne 0) { throw "nssm install failed (exit=$LASTEXITCODE)" }
     & $nssmPath set $Name AppDirectory $repoRoot | Out-Null
     & $nssmPath set $Name DisplayName $Name | Out-Null
@@ -169,6 +156,8 @@ if ($Action -eq "install") {
       ("BUN_INSTALL={0}" -f $repoBunInstall),
       ("OPENCODE_HOME={0}" -f $repoOpencodeDir)
     ) -join "`n"
+
+
     & $nssmPath set $Name AppEnvironmentExtra $envBlock | Out-Null
 
     & $nssmPath set $Name AppStdout (Join-Path $repoRoot ".opencode\\logs\\service-stdout.log") | Out-Null
