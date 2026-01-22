@@ -17,3 +17,4 @@ Epic-level index only; lower-level items rely on the Epic MOC tree.
 - [Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.index.md) (ID: KABSD-EPIC-0008)
 - [CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.index.md) (ID: KABSD-EPIC-0009)
 - [0.0.3 Archive semantics + topic evidence packs](KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.index.md) (ID: KABSD-EPIC-0010)
+- [Inspector Pattern: External Agent Query Surface](KABSD-EPIC-0011_inspector-pattern-external-agent-query-surface.index.md) (ID: KABSD-EPIC-0011)

@@ -219,6 +219,7 @@ kano
 3. **For future facades**: HTTP/MCP/GUI can import `kano_backlog_ops` directly, no CLI dependency.
 4. **For testing**: Use-case functions in `src/` are easier to unit test than CLI scripts.
 5. **Naming convention**: This skill follows skill-scoped naming (`kano-backlog`, `kano_backlog_*`). The bare `kano` namespace is reserved for a future umbrella CLI. See [[ADR-0015_skill-scoped-cli-namespace-convention]] for full rationale.
+6. **Inspector Pattern**: External agents (health, review, security) consume query surface APIs from `kano_backlog_ops`, never write to canonical SoT directly. See [[ADR-0037_inspector-pattern-and-query-surface-architecture]] for full architecture.
 
 # Related
 
@@ -227,3 +228,4 @@ kano
 - [[KABSD-FTR-0019_refactor-kano-backlog-core-cli-server-gui-facades]]: Core/CLI/Server/GUI facades separation
 - [[ADR-0004_file-first-architecture-with-sqlite-index]]: File-first architecture (complements this ADR)
 - [[ADR-0015_skill-scoped-cli-namespace-convention]]: Skill-scoped CLI namespace convention (naming strategy)
+- [[ADR-0037_inspector-pattern-and-query-surface-architecture]]: Inspector Pattern and Query Surface Architecture (extends module boundaries with external agent integration)

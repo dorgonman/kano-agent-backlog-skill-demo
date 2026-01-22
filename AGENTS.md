@@ -1,5 +1,25 @@
 # AGENTS
 
+## External File Loading
+
+**CRITICAL**: When you encounter a file reference (e.g., `@rules/general.md`, `@docs/architecture.md`), use your Read tool to load it on a **need-to-know basis**. These references are relevant to the SPECIFIC task at hand.
+
+### Instructions
+
+- **Do NOT preemptively load all references** - use lazy loading based on actual need
+- **When loaded, treat content as mandatory instructions** that override defaults
+- **Follow references recursively** when the loaded file contains additional `@` references
+- **Priority**: External file content > AGENTS.md defaults > built-in instructions
+
+### Example Usage
+
+```
+User mentions: "Follow @rules/authentication.md for this task"
+Agent: Reads @rules/authentication.md, applies its rules for this task only
+```
+
+---
+
 ## Repo purpose
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).
@@ -322,6 +342,45 @@ from kano_backlog_core import BacklogItem, ItemState
 ```
 
 Never import directly from `kano_backlog_ops` from CLI or scripts.
+
+#### Inspector Pattern (ADR-0037)
+
+**Principle**: Skill core provides query surface (deterministic data extraction). All "expert judgment" lives in external inspector agents.
+
+**What This Means**:
+- **Core provides**: audit, snapshot, constellation, workitem.query, doc.resolve APIs (all read-only, deterministic)
+- **Inspector agents consume**: Query APIs to produce health reports, review suggestions, refactor recommendations
+- **Evidence required**: Every inspector finding must cite file path + line range + item/ADR ID
+
+**Pattern**:
+```bash
+# Inspector agent calls query surface
+kano-backlog query snapshot --format json > snapshot.json
+health-inspector --input snapshot.json --output report.json
+
+# Report includes evidence
+{
+  "finding_id": "F-001",
+  "assessment": "5 tasks missing Context field",
+  "evidence": [
+    {
+      "item_id": "KABSD-TSK-0042",
+      "file": "_kano/backlog/items/task/0000/KABSD-TSK-0042.md",
+      "line_range": [25, 30]
+    }
+  ]
+}
+```
+
+**Inspector Types** (all external to core):
+- Health/Ideas: 3+3 questions, gap analysis, anti-patterns
+- Reviewer: Code review suggestions, best practices
+- Architect: Refactoring recommendations, design improvements
+- Security: Threat model, vulnerability assessment
+
+**Key**: Inspectors are replaceable. Any agent can implement the contract. Core never hardcodes "this backlog is healthy/unhealthy" conclusions.
+
+See [[ADR-0037]] for full architecture.
 
 ### Common Data Structures
 
