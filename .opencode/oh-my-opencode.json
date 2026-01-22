@@ -1,124 +1,97 @@
 {
-  "sisyphus_agent": {  
-    "disabled": false,  
-    "planner_enabled": true,  
-    "replace_plan": true  
-  },  
-
-  "agents": {  
-    /* Main orchestrator */  
-    "Sisyphus": {  
-      "model": "github-copilot/claude-opus-4.5",  
-      "temperature": 0.1,  
-      "thinking": {  
-        "type": "enabled",  
-        "budgetTokens": 64000  
-      }  
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "Sisyphus": {
+      "model": "openai/gpt-5.2-high",
+      "comment": "Main agent using OpenAI GPT 5.2 with high reasoning mode"
     },
-  
-    /* Architecture advisor */  
-    "oracle": {  
-      "model": "openai/gpt-5.2",  
-      "temperature": 0.1,  
-      "reasoningEffort": "medium",  
-      "textVerbosity": "high"  
-    },  
-  
-    /* Documentation researcher */  
-    "librarian": {  
-      "model": "opencode/glm-4-7-free",  
-      "temperature": 0.1  
-    },  
-  
-    /* Code explorer */  
-    "explore": {  
-      "model": "opencode/grok-code",  
-      "temperature": 0.1  
-    },  
-  
-    /* Frontend engineer */  
-    "frontend-ui-ux-engineer": {  
-      "model": "google/gemini-3-pro-preview",  
-      "temperature": 0.1  
-    },  
-  
-    /* Technical writer */  
-    "document-writer": {  
-      "model": "google/gemini-3-pro-preview",  
-      "temperature": 0.1  
-    },  
-  
-    /* Multimodal analyzer */  
-    "multimodal-looker": {  
-      "model": "google/gemini-3-flash",  
-      "temperature": 0.1  
-    },  
-  
-    /* Strategic planner */  
-    "Prometheus (Planner)": {  
-      "model": "anthropic/claude-opus-4-5",  
-      "temperature": 0.1,  
-      "thinking": {  
-        "type": "enabled",  
-        "budgetTokens": 32000  
-      }  
-    },  
-  
-    /* Plan consultant */  
-    "Metis (Plan Consultant)": {  
-      "model": "anthropic/claude-sonnet-4-5",  
-      "temperature": 0.1  
-    },  
-  
-    /* Plan reviewer */  
-    "Momus (Plan Reviewer)": {  
-      "model": "anthropic/claude-sonnet-4-5",  
-      "temperature": 0.1  
-    },  
-  
-    /* Default build agent */  
-    "build": {  
-      "model": "anthropic/claude-opus-4-5",  
-      "temperature": 0.1  
-    },  
-  
-    /* Default plan agent */  
-    "plan": {  
-      "model": "anthropic/claude-opus-4-5",  
-      "temperature": 0.1  
-    }  
+    "librarian": {
+      "model": "github-copilot/claude-sonnet-4",
+      "comment": "Documentation search and code exploration using GitHub Copilot Claude Sonnet 4"
+    },
+    "explore": {
+      "model": "github-copilot/gpt-4o-mini",
+      "comment": "Fast codebase exploration using GitHub Copilot GPT-4o Mini"
+    },
+    "oracle": {
+      "model": "openai/gpt-5.2-xhigh",
+      "comment": "Architecture decisions and debugging using OpenAI GPT 5.2 with extra-high reasoning"
+    },
+    "frontend-ui-ux-engineer": {
+      "model": "google/antigravity-gemini-3-pro-high",
+      "comment": "Frontend development and UI/UX design using Google Gemini 3 Pro"
+    },
+    "document-writer": {
+      "model": "github-copilot/gpt-4o",
+      "comment": "Technical documentation writing using GitHub Copilot GPT-4o"
+    },
+    "multimodal-looker": {
+      "model": "google/gemini-3-flash-preview",
+      "comment": "Multimodal analysis (images, PDFs) using Google Gemini 3 Flash"
+    }
   },
-  "disabled_hooks": [],
-  "disabled_mcps": [],
+  "google_auth": true,
   "lsp": {
     "pyright": {
-      "disabled": false,
+      "command": [
+        "pyright-langserver",
+        "--stdio"
+      ],
       "extensions": [
         ".py",
         ".pyi"
       ],
-      "priority": 10
+      "priority": 10,
+      "comment": "Python LSP for type checking and IntelliSense"
     },
-    "typescript": {
-      "disabled": false,
+    "typescript-language-server": {
+      "command": [
+        "typescript-language-server",
+        "--stdio"
+      ],
       "extensions": [
         ".ts",
         ".tsx",
         ".js",
-        ".jsx",
-        ".mjs",
-        ".cjs",
-        ".mts",
-        ".cts"
+        ".jsx"
       ],
-      "priority": 10
+      "priority": 10,
+      "comment": "TypeScript/JavaScript LSP for code analysis"
+    },
+    "vscode-json-language-server": {
+      "command": [
+        "vscode-json-language-server",
+        "--stdio"
+      ],
+      "extensions": [
+        ".json",
+        ".jsonc"
+      ],
+      "priority": 10,
+      "comment": "JSON LSP for configuration files"
+    },
+    "yaml-language-server": {
+      "command": [
+        "yaml-language-server",
+        "--stdio"
+      ],
+      "extensions": [
+        ".yaml",
+        ".yml"
+      ],
+      "priority": 10,
+      "comment": "YAML LSP for configuration files"
+    },
+    "marksman": {
+      "command": [
+        "marksman",
+        "server"
+      ],
+      "extensions": [
+        ".md"
+      ],
+      "priority": 10,
+      "comment": "Markdown LSP for documentation"
     }
-  },
-  "experimental": {
-    "preemptive_compaction_threshold": 0.85,
-    "truncate_all_tool_outputs": false,
-    "aggressive_truncation": false,
-    "auto_resume": true,
-    "dcp_for_compaction": false
   }
 }

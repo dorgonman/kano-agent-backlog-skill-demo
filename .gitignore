@@ -59,3 +59,4 @@ Thumbs.db
 .opencode/logs/
 .opencode/node_modules/
 .opencode/.bun/
+/kano-agent-backlog-skill-demo2.local.code-workspace

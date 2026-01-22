@@ -76,20 +76,32 @@ updated: '2026-01-22'
 
 # Approach
 
-## Phase 1: Evidence Schema (Low Effort)
+## Phase 1: Evidence Schema (Extended 5-Axes)
 
-Define standard evidence attachment schema in `kano_backlog_core/models.py`:
+Define `EvidenceRecord` in `kano_backlog_core/models.py` supporting 5-axes quality:
 
 ```python
 @dataclass
-class Evidence:
-    """Traceable source for inspector findings."""
+class EvidenceRecord:
+    """Full evidence record with quality metadata (ADR-0037)."""
+    # Core identity
     type: str           # "item", "adr", "file", "audit_finding"
     id: str             # Item/ADR ID or finding ID
-    file_path: str      # Relative path from backlog root
-    line_range: Optional[Tuple[int, int]] = None  # Start, end lines
-    excerpt: Optional[str] = None  # Text snippet
+    file_path: str      # Relative path
+    
+    # Optional core
+    line_range: Optional[Tuple[int, int]] = None
+    excerpt: Optional[str] = None
     timestamp: Optional[str] = None
+    
+    # 5-Axes Metadata
+    claim_id: Optional[str] = None       # Relevance
+    source_type: str = "unknown"         # Reliability (repo_path, issue, web...)
+    provenance: Optional[Dict] = None    # Reliability (hash, commit)
+    coverage: Optional[Dict] = None      # Sufficiency (sample size)
+    verification: Optional[Dict] = None  # Verifiability (repro steps)
+    independence: Optional[Dict] = None  # Independence (conflict flags)
+    confidence: Optional[float] = None   # Explicit confidence score
 ```
 
 ## Phase 2: Enhance Existing APIs (Medium Effort)
@@ -173,3 +185,4 @@ class Evidence:
 2026-01-22 08:52 [agent=antigravity] Created item
 2026-01-22 08:52 [agent=antigravity] Filled in Context, Goal, Approach, Acceptance Criteria for query surface API implementation
 2026-01-22 11:15 [agent=antigravity] [model=unknown] Revised to align with existing architecture. Inventoried existing APIs (snapshot, workitem, topic). Changed approach from creating new query module to enhancing existing ops with evidence schema. Removed export.bundle (topic export-context covers this).
+2026-01-22 14:46 [agent=antigravity] [model=unknown] Updated Evidence schema to include 5-axes quality metadata (Relevance, Reliability, Sufficiency, Verifiability, Independence) per ADR-0037 update.

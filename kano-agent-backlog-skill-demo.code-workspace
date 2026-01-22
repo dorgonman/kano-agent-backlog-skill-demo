@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "C:/Users/User/.opencode"
-		},
-		{
-			"path": "C:/Users/User/.config/opencode"
 		}
 	],
 	"settings": {}

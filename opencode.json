@@ -3,7 +3,8 @@
   "plugin": [
     "oh-my-opencode",
     "opencode-openai-codex-auth",
-    "opencode-antigravity-auth@latest"
+    "opencode-antigravity-auth@latest",
+    "@zhafron/opencode-kiro-auth"
   ],
   "lsp": {
     "pyright": {
@@ -251,6 +252,77 @@
         }
       },
       "name": "Google"
+    },
+    "kiro": {
+      "models": {
+        "claude-sonnet-4-5": {
+          "name": "Claude Sonnet 4.5 (Kiro)",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4-5-thinking": {
+          "name": "Claude Sonnet 4.5 Thinking (Kiro)",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "thinkingConfig": {
+                "thinkingBudget": 8192
+              }
+            },
+            "medium": {
+              "thinkingConfig": {
+                "thinkingBudget": 16384
+              }
+            },
+            "max": {
+              "thinkingConfig": {
+                "thinkingBudget": 32768
+              }
+            }
+          }
+        },
+        "claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5 (Kiro)",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
     }
   }
 }

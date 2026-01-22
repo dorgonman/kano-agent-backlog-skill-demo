@@ -14,12 +14,12 @@ links:
 owner: opencode
 parent: null
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Close out SQLite indexing + embedding search foundations
 type: Task
 uid: 019bdda7-be68-74c6-ac33-ac02187bd76c
-updated: 2026-01-21
+updated: 2026-01-23
 ---
 
 # Context
@@ -46,3 +46,6 @@ Phase A (SQLite index): align index artifact path with docs/config, add status/q
 
 2026-01-21 07:05 [agent=opencode] Created item
 2026-01-21 07:05 [agent=opencode] Start closeout: unify SQLite index + embedding search workflow; capture findings and artifacts in topic index-search-closeout.
+2026-01-23 02:13 [agent=kiro] State -> InProgress.
+2026-01-23 02:20 [agent=kiro] [model=unknown] Phase A completed: Added index status command with deterministic reporting. Phase B completed: Fixed vector search integration and BacklogItem text extraction. Phase C completed: Updated indexing documentation with current CLI commands. All tests passing for integrated workflow.
+2026-01-23 02:20 [agent=kiro] State -> Done.

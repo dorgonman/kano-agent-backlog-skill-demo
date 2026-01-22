@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 103
-vcs.hash: 6a0177d102fab01cc88bc44b6e99424bf291df51
+vcs.revno: 106
+vcs.hash: bd5af11ea31ba14c84c54281987d05b0b79fdd2a
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: kiro
 
 ## Done
 
@@ -63,6 +63,7 @@ Agent: opencode
 - [KABSD-USR-0016 DB-index views: query DB and render Markdown dashboards](../items/userstory/0000/KABSD-USR-0016_db-index-views-query-db-and-render-markdown-dashboards.md)
 - [KABSD-USR-0017 Query the SQLite index via skill scripts (read-only)](../items/userstory/0000/KABSD-USR-0017_query-the-sqlite-index-via-skill-scripts-read-only.md)
 - [KABSD-USR-0018 VCS Adapter Abstraction Layer](../items/userstory/0000/KABSD-USR-0018_vcs-adapter-abstraction-layer.md)
+- [KABSD-USR-0029 Chunking and token-budget embedding pipeline MVP](../items/userstory/0000/KABSD-USR-0029_chunking-and-token-budget-embedding-pipeline-mvp.md)
 - [KABSD-USR-0030 Pluggable vector backend MVP for embeddings](../items/userstory/0000/KABSD-USR-0030_pluggable-vector-backend-mvp-for-embeddings.md)
 - [KABSD-USR-0031 Embedding adapter interface with token-counting telemetry](../items/userstory/0000/KABSD-USR-0031_embedding-adapter-interface-with-token-counting-telemetry.md)
 - [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
@@ -247,6 +248,14 @@ Agent: opencode
 - [KABSD-TSK-0267 Prepare 0.0.2 release notes and bump demo version](../items/task/0200/KABSD-TSK-0267_prepare-0-0-2-release-notes-and-bump-demo-version.md)
 - [KABSD-TSK-0268 Make brief.generated.md deterministic-only; keep templates in brief.md](../items/task/0200/KABSD-TSK-0268_make-brief-generated-md-deterministic-only-keep-templates-in-brief-md.md)
 - [KABSD-TSK-0269 Omit [model=unknown] in Worklog entries](../items/task/0200/KABSD-TSK-0269_omit-model-unknown-in-worklog-entries.md)
+- [KABSD-TSK-0271 Close out SQLite indexing + embedding search foundations](../items/task/0200/KABSD-TSK-0271_close-out-sqlite-indexing-embedding-search-foundations.md)
+- [KABSD-TSK-0282 Add MVP chunking tests (ASCII, long English, CJK)](../items/task/0200/KABSD-TSK-0282_add-mvp-chunking-tests-ascii-long-english-cjk.md)
+- [KABSD-TSK-0283 Add tiktoken adapter integration tests and fallback verification](../items/task/0200/KABSD-TSK-0283_add-tiktoken-adapter-integration-tests-and-fallback-verification.md)
+- [KABSD-TSK-0284 Implement embedding E2E pipeline integration function (chunk-embed-upsert)](../items/task/0200/KABSD-TSK-0284_implement-embedding-e2e-pipeline-integration-function-chunk-embed-upsert.md)
+- [KABSD-TSK-0285 Add CLI commands for embedding pipeline (build/query/status)](../items/task/0200/KABSD-TSK-0285_add-cli-commands-for-embedding-pipeline-build-query-status.md)
+- [KABSD-TSK-0286 Verify and populate benchmark corpus fixtures (English + CJK samples)](../items/task/0200/KABSD-TSK-0286_verify-and-populate-benchmark-corpus-fixtures-english-cjk-samples.md)
+- [KABSD-TSK-0287 Document embedding pipeline config schema in references](../items/task/0200/KABSD-TSK-0287_document-embedding-pipeline-config-schema-in-references.md)
+- [KABSD-TSK-0288 Close out InProgress embedding tasks and update parent USR-0029 state](../items/task/0200/KABSD-TSK-0288_close-out-inprogress-embedding-tasks-and-update-parent-usr-0029-state.md)
 
 ### Bug
 

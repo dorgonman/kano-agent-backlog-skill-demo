@@ -72,6 +72,77 @@ Example (decision audit + decision write-back):
 
 ## Development Guidelines
 
+### Derived Data and .gitignore Rules
+
+**CRITICAL**: Always exclude derived/generated data from version control to keep repositories clean and efficient.
+
+#### What to Exclude
+
+**Generated/Derived Data** (always add to .gitignore):
+- **Cache directories**: `.cache/`, `__pycache__/`, `.pytest_cache/`
+- **Build artifacts**: `dist/`, `build/`, `*.egg-info/`
+- **Test outputs**: `htmlcov/`, `.coverage`, `.hypothesis/`
+- **Vector databases**: `.cache/vector/`, `*.sqlite3` (embedding indexes)
+- **Compiled files**: `*.pyc`, `*.pyo`, `*.so`
+- **IDE files**: `.vscode/`, `.idea/`, `*.swp`
+- **OS files**: `.DS_Store`, `Thumbs.db`
+- **Environment files**: `.env`, `.venv/`, `venv/`
+
+#### What to Include
+
+**Source of Truth** (always version control):
+- **Source code**: `src/`, `tests/`, scripts
+- **Configuration templates**: `config.toml.example`, default configs
+- **Documentation**: `README.md`, `references/`, `SKILL.md`
+- **Schema definitions**: data models, API specs
+- **Test fixtures**: static test data, benchmark corpus
+
+#### Implementation Rules
+
+1. **Before adding any new feature that generates data**:
+   - Identify what files/directories will be created
+   - Add appropriate .gitignore entries immediately
+   - Document the regeneration process
+
+2. **Common patterns to exclude**:
+   ```gitignore
+   # Caches and derived data
+   .cache/
+   __pycache__/
+   *.pyc
+   
+   # Build outputs
+   dist/
+   build/
+   *.egg-info/
+   
+   # Test artifacts
+   .pytest_cache/
+   .coverage
+   htmlcov/
+   
+   # Vector/embedding indexes
+   .cache/vector/
+   *.sqlite3
+   
+   # IDE and OS
+   .vscode/
+   .DS_Store
+   ```
+
+3. **Documentation requirement**:
+   - Always document how to regenerate excluded data
+   - Include regeneration steps in README or setup docs
+   - Provide example commands for rebuilding indexes/caches
+
+#### Rationale
+
+- **Repository size**: Derived data can be large and grows over time
+- **Merge conflicts**: Generated files often cause unnecessary conflicts
+- **Environment differences**: Derived data may be platform/environment specific
+- **Reproducibility**: Source code should be sufficient to recreate all derived data
+- **Security**: Avoid accidentally committing sensitive generated data
+
 ### Quick Start Commands
 
 ```bash

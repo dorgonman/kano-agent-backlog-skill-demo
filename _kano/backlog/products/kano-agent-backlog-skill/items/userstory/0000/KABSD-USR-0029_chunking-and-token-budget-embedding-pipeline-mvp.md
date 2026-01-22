@@ -14,12 +14,12 @@ links:
 owner: None
 parent: KABSD-EPIC-0003
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Chunking and token-budget embedding pipeline MVP
 type: UserStory
 uid: 019bc754-30c3-70fa-8740-c643948c9a9d
-updated: 2026-01-16
+updated: 2026-01-23
 ---
 
 # Context
@@ -52,3 +52,4 @@ Tokenizer mismatch across models may undercount tokens; CJK token inflation redu
 2026-01-16 23:02 [agent=codex] [model=unknown] Created item
 2026-01-16 23:08 [agent=codex] [model=gpt-5.2-codex] Parent updated: null -> KABSD-EPIC-0003.
 2026-01-16 23:54 [agent=codex] [model=unknown] Auto parent sync: child KABSD-TSK-0238 -> InProgress; parent -> InProgress.
+2026-01-23 01:45 [agent=kiro] State -> Done.

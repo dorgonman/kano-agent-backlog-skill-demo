@@ -51,6 +51,6 @@ dimension = 1536
 
 [vector]
 backend = "sqlite"
-path = ".kano/vector"
+path = ".cache/vector"
 collection = "backlog"
 metric = "cosine"

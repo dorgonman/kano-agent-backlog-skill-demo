@@ -96,7 +96,83 @@ Current risk: encoding "judgment" (health assessment, review suggestions, refact
 
 ## Principle C: Evidence = First-Class Citizen
 
-**Every inspector output MUST include**:
+**Core Principle**: Every inspector finding must cite traceable evidence. Without evidence, conclusions are rejected or downgraded.
+
+### Evidence Quality: Five Axes (Critical Thinking Foundation)
+
+Based on critical thinking principles, evidence quality must be evaluated across five axes:
+
+| Axis | Definition | System Application |
+|------|------------|-------------------|
+| **Relevance** | Evidence must directly support the claim, not just appear related | `claim_id` links evidence to specific finding |
+| **Reliability** | Source is real, traceable, verifiable (not "jargon credentialism") | `provenance` field: hash, commit, URL, timestamp, author |
+| **Sufficiency** | One example ≠ universal rule (avoid survivor bias, no control group) | `coverage` field: sample range, counter-examples, failure stats |
+| **Verifiability** | Others can check, repeat, measure the claim | `verification` field: reproducible command, test, or check steps |
+| **Independence** | Evidence doesn't collude with conclusion (avoid self-citation, astroturfing) | `independence` field: source type, conflict-of-interest flags |
+
+**Why This Matters**:
+- Bayes' prior problem: Math looks objective, but **where priors come from** is the landmine; priors can be manipulated → conclusions can be steered
+- Peer review ideal vs reality: The idea is to shift credibility from individuals to community validation, but institutions develop interest chains, conservatism within paradigms
+- Trust should be in **continuous questioning + verifiable judgment**, not fixed standards
+
+### Evidence Schema (Extended with 5-Axes)
+
+```python
+@dataclass
+class EvidenceRecord:
+    """Full evidence record with quality metadata."""
+    
+    # Core identity (existing)
+    type: str                 # "item", "adr", "file", "audit_finding", "commit", "log"
+    id: str                   # Item/ADR ID or finding ID
+    file_path: str            # Relative path from backlog root
+    line_range: Optional[Tuple[int, int]] = None
+    excerpt: Optional[str] = None
+    timestamp: Optional[str] = None
+    
+    # Relevance (5-axis 1)
+    claim_id: Optional[str] = None       # Which claim/decision this supports
+    support_type: Optional[str] = None   # "direct", "indirect", "counterpoint"
+    
+    # Reliability (5-axis 2)
+    source_type: str = "unknown"         # "repo_path", "issue", "pr", "chat", "doc", "web", "experiment"
+    provenance: Optional[Dict] = None    # {"hash": "...", "commit": "...", "url": "...", "author": "..."}
+    
+    # Sufficiency (5-axis 3)
+    coverage: Optional[Dict] = None      # {"sample_size": N, "has_counterexamples": bool, "has_failure_stats": bool}
+    
+    # Verifiability (5-axis 4)
+    verification: Optional[Dict] = None  # {"method": "command|test|manual", "steps": [...], "reproducible": bool}
+    
+    # Independence (5-axis 5)
+    independence: Optional[Dict] = None  # {"self_cited": bool, "conflict_of_interest": bool, "same_source_chain": bool}
+    
+    # Meta
+    confidence: Optional[float] = None   # 0.0-1.0, with explicit reasoning
+    confidence_reason: Optional[str] = None
+```
+
+### Minimum Evidence Requirements by Context
+
+| Context | Required Fields | Recommended Fields |
+|---------|-----------------|-------------------|
+| **Workset material** | type, id, file_path, source_type | provenance, verification |
+| **Inspector finding** | type, id, file_path, line_range, claim_id | coverage, independence |
+| **ADR decision support** | type, id, file_path, claim_id, verification | coverage, independence, confidence |
+| **Health review** | type, id, source_type, independence | coverage, sufficiency analysis |
+
+### Anti-Patterns (Evidence Red Flags)
+
+| Red Flag | Detection | Risk |
+|----------|-----------|------|
+| **Single source dependency** | All evidence from one file/author | Low reliability, no cross-validation |
+| **Same-source masquerade** | Multiple "evidence" items from same origin | Fake sufficiency |
+| **Missing counterexamples** | No failure cases, only success stories | Survivor bias |
+| **Non-reproducible** | "Trust me" without verification steps | Unverifiable claims |
+| **Self-citation loop** | Author cites own previous work exclusively | Independence violation |
+| **Jargon credentialism** | Claims backed by terminology, not data | Reliability theater |
+
+**Every inspector output MUST include evidence records**:
 
 ```json
 {
@@ -146,10 +222,14 @@ Current risk: encoding "judgment" (health assessment, review suggestions, refact
 
 **Evidence Schema (to standardize across all APIs):**
 
+See "Principle C: Evidence Quality Five Axes" above for the extended `EvidenceRecord` schema with 5-axis quality metadata.
+
+**Minimal Evidence schema** (for backward compatibility):
+
 ```python
 @dataclass
 class Evidence:
-    """Traceable source for inspector findings."""
+    """Minimal traceable source for inspector findings."""
     type: str           # "item", "adr", "file", "audit_finding"
     id: str             # Item/ADR ID or finding ID
     file_path: str      # Relative path from backlog root
@@ -157,6 +237,30 @@ class Evidence:
     excerpt: Optional[str] = None  # Text snippet
     timestamp: Optional[str] = None
 ```
+
+### Audit vs Health: Distinction
+
+Both use the same query surface and evidence format, but differ in what they check:
+
+| Aspect | Audit | Health Review |
+|--------|-------|---------------|
+| **Focus** | Consistency / Conformance | Credibility / Risk / Gaps |
+| **Questions** | "Does X conform to rule Y?" | "Can we trust X? What are the risks?" |
+| **Examples** | Naming conventions, directory structure, schema drift, deterministic pipeline completeness | Single-source dependency, survivor bias, unverifiable claims, conflicted evidence |
+| **Output** | Violation list (pass/fail per rule) | Risk and trust gap report (with severity) |
+| **Trigger** | CI gate, pre-release check, schema migration | Manual request, agent stuck, decision review |
+
+**Audit checks for "rule violations"**:
+- Missing required fields
+- Wrong directory structure
+- Schema mismatch
+- Deterministic pipeline gaps
+
+**Health checks for "trust gaps"**:
+- Evidence quality degradation (5-axis failures)
+- Single-narrative dependency
+- Missing counterexamples
+- Unstated assumptions (priors)
 
 ### Inspector Output Contract
 
