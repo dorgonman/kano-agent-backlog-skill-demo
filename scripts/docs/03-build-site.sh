@@ -3,18 +3,37 @@ set -euo pipefail
 
 # Build Quartz site locally
 # Run after docs-prepare-quartz.sh to build the static site
+#
+# Usage: 
+#   03-build-site.sh [REPO_ROOT] [QUARTZ_DIR] [BUILD_DIR] [CONFIG_FILE]
+#   If no arguments provided, auto-detect paths for local usage
 
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-cd "$REPO_ROOT"
+# Parse arguments or auto-detect paths
+if [ $# -eq 4 ]; then
+  # Parameterized mode: use provided paths
+  REPO_ROOT="$1"
+  QUARTZ_DIR="$2"
+  BUILD_DIR="$3"
+  CONFIG_FILE="$4"
+  echo "Using provided paths"
+else
+  # Local mode: auto-detect repository root
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+  QUARTZ_DIR="$REPO_ROOT/_ws/src/quartz"
+  BUILD_DIR="$REPO_ROOT/_ws/build"
+  CONFIG_FILE="$SCRIPT_DIR/quartz.config.ts"
+  echo "Auto-detected paths"
+fi
 
 # Validate workspace structure
-if [ ! -d "_ws/src/quartz" ]; then
-  echo "Error: _ws/src/quartz directory not found. Run 01-setup-workspace.sh first."
+if [ ! -d "$QUARTZ_DIR" ]; then
+  echo "Error: Quartz directory not found: $QUARTZ_DIR"
   exit 1
 fi
 
-if [ ! -d "_ws/build/content" ]; then
-  echo "Error: _ws/build/content directory not found. Run 02-prepare-content.sh first."
+if [ ! -d "$BUILD_DIR/content" ]; then
+  echo "Error: Build content directory not found: $BUILD_DIR/content"
   exit 1
 fi
 
@@ -22,12 +41,12 @@ echo "Building Quartz site..."
 
 # Install dependencies
 echo "Installing Quartz dependencies..."
-cd _ws/src/quartz
+cd "$QUARTZ_DIR"
 npm ci
 
 # Apply custom configuration
 echo "Applying custom Quartz configuration..."
-cp "$REPO_ROOT/scripts/docs/quartz.config.ts" ./quartz.config.ts
+cp "$CONFIG_FILE" ./quartz.config.ts
 
 # Install tokyo-night theme
 echo "Installing tokyo-night theme..."
@@ -35,12 +54,11 @@ npm install --save-dev shiki-themes
 
 # Build static site
 echo "Building static site..."
-CONTENT_DIR="$(cd ../../build/content && pwd)"
-OUTPUT_DIR="$(cd ../../build && pwd)/public"
+CONTENT_DIR="$BUILD_DIR/content"
+OUTPUT_DIR="$BUILD_DIR/public"
 echo "Content directory: $CONTENT_DIR"
 echo "Output directory: $OUTPUT_DIR"
 npx quartz build --directory "$CONTENT_DIR" --output "$OUTPUT_DIR"
 
-cd "$REPO_ROOT"
 echo "Build completed successfully!"
-echo "Static site available in: _ws/build/public/"
+echo "Static site available in: $OUTPUT_DIR"

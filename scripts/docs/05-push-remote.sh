@@ -3,19 +3,33 @@ set -euo pipefail
 
 # Push committed changes to remote gh-pages branch
 # Run after deploy-to-gh-pages.sh to actually push to GitHub
+#
+# Usage: 
+#   05-push-remote.sh [DEPLOY_DIR]
+#   If no arguments provided, auto-detect paths for local usage
 
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-cd "$REPO_ROOT"
+# Parse arguments or auto-detect paths
+if [ $# -eq 1 ]; then
+  # Parameterized mode: use provided path
+  DEPLOY_DIR="$1"
+  echo "Using provided path: $DEPLOY_DIR"
+else
+  # Local mode: auto-detect repository root
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+  DEPLOY_DIR="$REPO_ROOT/_ws/deploy/gh-pages"
+  echo "Auto-detected path: $DEPLOY_DIR"
+fi
 
 # Validate workspace structure
-if [ ! -d "_ws/deploy/gh-pages/.git" ]; then
-  echo "Error: _ws/deploy/gh-pages git repository not found. Run 04-deploy-local.sh first."
+if [ ! -d "$DEPLOY_DIR/.git" ]; then
+  echo "Error: Deploy git repository not found: $DEPLOY_DIR/.git"
   exit 1
 fi
 
 echo "Pushing to remote gh-pages branch..."
 
-cd _ws/deploy/gh-pages
+cd "$DEPLOY_DIR"
 
 # Check if there are commits to push
 if git diff --quiet HEAD origin/gh-pages 2>/dev/null; then
