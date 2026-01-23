@@ -3,7 +3,7 @@ id: KABSD-EPIC-0012
 uid: 019be6eb-120a-70c9-9489-edfad4e95f71
 type: Epic
 title: "Official Documentation Website with GitHub Pages"
-state: Proposed
+state: Done
 priority: P2
 parent: null
 area: general
@@ -101,3 +101,4 @@ Establish a professional documentation website for the kano-agent-backlog-skill 
 # Worklog
 
 2026-01-23 02:15 [agent=amazonq] Created item
+2026-01-23 08:20 [agent=amazonq] Auto parent sync: child KABSD-FTR-0057 -> Done; parent -> Done.

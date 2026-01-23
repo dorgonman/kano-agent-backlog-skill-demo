@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 106
-vcs.hash: bd5af11ea31ba14c84c54281987d05b0b79fdd2a
+vcs.revno: 107
+vcs.hash: cd953b7aea4c2591c9cded352c5d3edea9bf9fa7
 vcs.dirty: true
 -->
 
 Source: items
-Agent: kiro
+Agent: amazonq
 
 ## Done
 
@@ -18,6 +18,7 @@ Agent: kiro
 - [KABSD-EPIC-0001 Kano Agent Backlog Skill Demo](../items/epic/0000/KABSD-EPIC-0001_kano-agent-backlog-skill-demo.md)
 - [KABSD-EPIC-0002 Milestone 0.0.1 (Core demo)](../items/epic/0000/KABSD-EPIC-0002_milestone-0-0-1-core-demo.md)
 - [KABSD-EPIC-0009 CLI Namespace Refactoring: Skill-Scoped Naming Convention](../items/epic/0000/KABSD-EPIC-0009_cli-namespace-refactoring-skill-scoped-naming-convention.md)
+- [KABSD-EPIC-0012 Official Documentation Website with GitHub Pages](../items/epic/0000/KABSD-EPIC-0012_official-documentation-website-with-github-pages.md)
 
 ### Feature
 
@@ -51,6 +52,7 @@ Agent: kiro
 - [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
 - [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 - [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
+- [KABSD-FTR-0057 Quartz Documentation Pipeline](../items/feature/0000/KABSD-FTR-0057_quartz-documentation-pipeline.md)
 
 ### UserStory
 
@@ -256,6 +258,10 @@ Agent: kiro
 - [KABSD-TSK-0286 Verify and populate benchmark corpus fixtures (English + CJK samples)](../items/task/0200/KABSD-TSK-0286_verify-and-populate-benchmark-corpus-fixtures-english-cjk-samples.md)
 - [KABSD-TSK-0287 Document embedding pipeline config schema in references](../items/task/0200/KABSD-TSK-0287_document-embedding-pipeline-config-schema-in-references.md)
 - [KABSD-TSK-0288 Close out InProgress embedding tasks and update parent USR-0029 state](../items/task/0200/KABSD-TSK-0288_close-out-inprogress-embedding-tasks-and-update-parent-usr-0029-state.md)
+- [KABSD-TSK-0292 Multi-repo Checkout and Workspace Layout](../items/task/0200/KABSD-TSK-0292_multi-repo-checkout-and-workspace-layout.md)
+- [KABSD-TSK-0293 Cross-repo Push with GitHub Token Setup](../items/task/0200/KABSD-TSK-0293_cross-repo-push-with-github-token-setup.md)
+- [KABSD-TSK-0294 Content Cook Strategy with Manifest](../items/task/0200/KABSD-TSK-0294_content-cook-strategy-with-manifest.md)
+- [KABSD-TSK-0295 Release Trigger Workflow](../items/task/0200/KABSD-TSK-0295_release-trigger-workflow.md)
 
 ### Bug
 

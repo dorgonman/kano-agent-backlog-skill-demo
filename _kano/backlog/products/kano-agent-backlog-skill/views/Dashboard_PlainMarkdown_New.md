@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 106
-vcs.hash: bd5af11ea31ba14c84c54281987d05b0b79fdd2a
+vcs.revno: 107
+vcs.hash: cd953b7aea4c2591c9cded352c5d3edea9bf9fa7
 vcs.dirty: true
 -->
 
 Source: items
-Agent: kiro
+Agent: amazonq
 
 ## New
 
@@ -23,7 +23,6 @@ Agent: kiro
 - [KABSD-EPIC-0008 Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.md)
 - [KABSD-EPIC-0010 0.0.3 Archive semantics + topic evidence packs](../items/epic/0000/KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.md)
 - [KABSD-EPIC-0011 Inspector Pattern: External Agent Query Surface](../items/epic/0000/KABSD-EPIC-0011_inspector-pattern-external-agent-query-surface.md)
-- [KABSD-EPIC-0012 Official Documentation Website with GitHub Pages](../items/epic/0000/KABSD-EPIC-0012_official-documentation-website-with-github-pages.md)
 
 ### Feature
 
@@ -54,7 +53,6 @@ Agent: kiro
 - [KABSD-FTR-0054 Brainstorm Pulse: generate non-backlog idea feed (time-ordered)](../items/feature/0000/KABSD-FTR-0054_brainstorm-pulse-generate-non-backlog-idea-feed-time-ordered.md)
 - [KABSD-FTR-0055 Query Surface API Implementation](../items/feature/0000/KABSD-FTR-0055_query-surface-api-implementation.md)
 - [KABSD-FTR-0056 Inspector Agent Reference Implementation](../items/feature/0000/KABSD-FTR-0056_inspector-agent-reference-implementation.md)
-- [KABSD-FTR-0057 Quartz Documentation Pipeline](../items/feature/0000/KABSD-FTR-0057_quartz-documentation-pipeline.md)
 
 ### UserStory
 
@@ -169,10 +167,6 @@ Agent: kiro
 - [KABSD-TSK-0289 Implement Evidence Schema & Workset Metadata](../items/task/0200/KABSD-TSK-0289_implement-evidence-schema-workset-metadata.md)
 - [KABSD-TSK-0290 Implement Health Review Inspector (Evidence Credibility)](../items/task/0200/KABSD-TSK-0290_implement-health-review-inspector-evidence-credibility.md)
 - [KABSD-TSK-0291 Implement Assumptions/Priors Registry](../items/task/0200/KABSD-TSK-0291_implement-assumptions-priors-registry.md)
-- [KABSD-TSK-0292 Multi-repo Checkout and Workspace Layout](../items/task/0200/KABSD-TSK-0292_multi-repo-checkout-and-workspace-layout.md)
-- [KABSD-TSK-0293 Cross-repo Push with GitHub Token Setup](../items/task/0200/KABSD-TSK-0293_cross-repo-push-with-github-token-setup.md)
-- [KABSD-TSK-0294 Content Cook Strategy with Manifest](../items/task/0200/KABSD-TSK-0294_content-cook-strategy-with-manifest.md)
-- [KABSD-TSK-0295 Release Trigger Workflow](../items/task/0200/KABSD-TSK-0295_release-trigger-workflow.md)
 
 ### Bug
 

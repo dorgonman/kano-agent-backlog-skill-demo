@@ -3,7 +3,7 @@ id: KABSD-TSK-0295
 uid: 019be6eb-6b48-7602-bcaa-9997e292d029
 type: Task
 title: "Release Trigger Workflow"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-FTR-0057
 area: general
@@ -39,3 +39,4 @@ decisions: []
 # Worklog
 
 2026-01-23 02:15 [agent=amazonq] Created item
+2026-01-23 08:20 [agent=amazonq] Implemented release trigger workflow with v*.*.* tag support and manual dispatch

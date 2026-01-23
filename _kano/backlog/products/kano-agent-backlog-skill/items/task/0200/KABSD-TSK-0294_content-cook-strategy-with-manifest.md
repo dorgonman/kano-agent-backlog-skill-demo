@@ -3,7 +3,7 @@ id: KABSD-TSK-0294
 uid: 019be6eb-594c-76f1-81e6-df63cb4a31a5
 type: Task
 title: "Content Cook Strategy with Manifest"
-state: Proposed
+state: Done
 priority: P2
 parent: KABSD-FTR-0057
 area: general
@@ -39,3 +39,4 @@ decisions: []
 # Worklog
 
 2026-01-23 02:15 [agent=amazonq] Created item
+2026-01-23 08:20 [agent=amazonq] Implemented manifest-based content filtering with publish.manifest support
