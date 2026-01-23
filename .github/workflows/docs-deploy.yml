@@ -68,11 +68,22 @@ jobs:
         shell: bash
         run: |
           chmod +x _ws/src/demo/scripts/docs/02-prepare-content.sh
-          _ws/src/demo/scripts/docs/02-prepare-content.sh
+          # Call script with CI paths: REPO_ROOT DEMO_DIR SKILL_DIR BUILD_DIR
+          _ws/src/demo/scripts/docs/02-prepare-content.sh \
+            "$(pwd)" \
+            "$(pwd)/_ws/src/demo" \
+            "$(pwd)/_ws/src/skill" \
+            "$(pwd)/_ws/build"
 
       # 6) Build Quartz site and deploy to gh-pages
       - name: Build and deploy documentation site
         shell: bash
         run: |
           chmod +x _ws/src/demo/scripts/docs/build-and-deploy-ci.sh
-          _ws/src/demo/scripts/docs/build-and-deploy-ci.sh
+          # Call script with CI paths: REPO_ROOT QUARTZ_DIR BUILD_DIR DEPLOY_DIR CONFIG_FILE
+          _ws/src/demo/scripts/docs/build-and-deploy-ci.sh \
+            "$(pwd)" \
+            "$(pwd)/_ws/src/quartz" \
+            "$(pwd)/_ws/build" \
+            "$(pwd)/_ws/deploy/gh-pages" \
+            "$(pwd)/_ws/src/demo/scripts/docs/quartz.config.ts"

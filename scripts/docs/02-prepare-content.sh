@@ -4,27 +4,42 @@ set -euo pipefail
 # Documentation preparation script for Quartz static site generator
 # Collects and filters documentation from multiple repositories using manifest-based selection
 # 
-# Usage: Run from repository root where _ws/ directory exists
-# Expected structure:
-#   _ws/demo/     - Demo repository content
-#   _ws/skill/    - Skill repository content  
-#   _ws/content/  - Output directory (created by this script)
+# Usage: 
+#   02-prepare-content.sh [REPO_ROOT] [DEMO_DIR] [SKILL_DIR] [BUILD_DIR]
+#   If no arguments provided, auto-detect paths for local usage
 
-# Find repository root by looking for key files
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+# Parse arguments or auto-detect paths
+if [ $# -eq 4 ]; then
+  # CI mode: use provided paths
+  REPO_ROOT="$1"
+  DEMO_DIR="$2"
+  SKILL_DIR="$3"
+  BUILD_DIR="$4"
+  echo "Using provided paths (CI mode)"
+else
+  # Local mode: auto-detect repository root
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+  DEMO_DIR="$REPO_ROOT/_ws/src/demo"
+  SKILL_DIR="$REPO_ROOT/_ws/src/skill"
+  BUILD_DIR="$REPO_ROOT/_ws/build"
+  echo "Auto-detected paths (local mode)"
+fi
 
-echo "Repository root found: $REPO_ROOT"
-cd "$REPO_ROOT"
+echo "Repository root: $REPO_ROOT"
+echo "Demo directory: $DEMO_DIR"
+echo "Skill directory: $SKILL_DIR"
+echo "Build directory: $BUILD_DIR"
 
 # Validate workspace structure
-if [ ! -d "_ws" ]; then
-  echo "Error: _ws directory not found in repository root: $REPO_ROOT"
-  echo "Run scripts/docs/01-setup-workspace.sh first to create the workspace."
+if [ ! -d "$DEMO_DIR" ] || [ ! -d "$SKILL_DIR" ]; then
+  echo "Error: Required directories not found."
+  echo "Demo dir exists: $([ -d "$DEMO_DIR" ] && echo 'yes' || echo 'no')"
+  echo "Skill dir exists: $([ -d "$SKILL_DIR" ] && echo 'yes' || echo 'no')"
   exit 1
 fi
 
-mkdir -p _ws/build/content
+mkdir -p "$BUILD_DIR/content"
 
 # Function to copy files based on manifest
 copy_with_manifest() {
@@ -64,17 +79,17 @@ copy_with_manifest() {
 }
 
 # Copy demo content with manifest
-if [ -d "_ws/src/demo" ] && [ -f "_ws/src/demo/docs/publish.manifest" ]; then
-  copy_with_manifest "_ws/src/demo" "_ws/build/content/demo" "_ws/src/demo/docs/publish.manifest"
+if [ -d "$DEMO_DIR" ] && [ -f "$DEMO_DIR/docs/publish.manifest" ]; then
+  copy_with_manifest "$DEMO_DIR" "$BUILD_DIR/content/demo" "$DEMO_DIR/docs/publish.manifest"
 fi
 
 # Copy skill content with manifest  
-if [ -d "_ws/src/skill" ] && [ -f "_ws/src/skill/docs/publish.manifest" ]; then
-  copy_with_manifest "_ws/src/skill" "_ws/build/content/skill" "_ws/src/skill/docs/publish.manifest"
+if [ -d "$SKILL_DIR" ] && [ -f "$SKILL_DIR/docs/publish.manifest" ]; then
+  copy_with_manifest "$SKILL_DIR" "$BUILD_DIR/content/skill" "$SKILL_DIR/docs/publish.manifest"
 fi
 
 # Fallback: copy main files if no manifest
-if [ -f "_ws/src/skill/README.md" ]; then
+if [ -f "$SKILL_DIR/README.md" ]; then
   echo "Setting up landing page..."
   # Add frontmatter with title to index.md
   {
@@ -82,13 +97,13 @@ if [ -f "_ws/src/skill/README.md" ]; then
     echo "title: Kano Agent Backlog Skill"
     echo "---"
     echo ""
-    cat "_ws/src/skill/README.md"
-  } > "_ws/build/content/index.md"
+    cat "$SKILL_DIR/README.md"
+  } > "$BUILD_DIR/content/index.md"
 fi
 
-if [ -f "_ws/src/skill/SKILL.md" ]; then
+if [ -f "$SKILL_DIR/SKILL.md" ]; then
   echo "Copying SKILL.md..."
-  cp "_ws/src/skill/SKILL.md" "_ws/build/content/skill-guide.md"
+  cp "$SKILL_DIR/SKILL.md" "$BUILD_DIR/content/skill-guide.md"
 fi
 
 echo "Documentation preparation completed successfully"
