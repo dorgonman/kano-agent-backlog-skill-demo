@@ -18,23 +18,33 @@ jobs:
       - name: Checkout Demo repo
         uses: actions/checkout@v4
         with:
-          path: _ws/demo
+          path: _ws/src/demo
+
+      # Read configuration
+      - name: Read deployment configuration
+        id: config
+        run: |
+          QUARTZ_VERSION=$(grep -o '"version"[[:space:]]*:[[:space:]]*"[^"]*"' _ws/src/demo/scripts/docs/config.json | cut -d'"' -f4)
+          NODE_VERSION=$(grep -A5 '"build"' _ws/src/demo/scripts/docs/config.json | grep -o '"node_version"[[:space:]]*:[[:space:]]*"[^"]*"' | cut -d'"' -f4)
+          echo "quartz_version=$QUARTZ_VERSION" >> $GITHUB_OUTPUT
+          echo "node_version=$NODE_VERSION" >> $GITHUB_OUTPUT
+          echo "Using Quartz version: $QUARTZ_VERSION"
+          echo "Using Node.js version: $NODE_VERSION"
 
       # 2) Checkout Quartz (engine)
       - name: Checkout Quartz repo
         uses: actions/checkout@v4
         with:
           repository: jackyzha0/quartz
-          path: _ws/quartz
-          # Pin to stable version to avoid breaking changes
-          ref: v4.4.0
+          path: _ws/src/quartz
+          ref: ${{ steps.config.outputs.quartz_version }}
 
       # 3) Checkout Skill repo (main) as source
       - name: Checkout Skill repo (source)
         uses: actions/checkout@v4
         with:
           repository: dorgonman/kano-agent-backlog-skill
-          path: _ws/skill
+          path: _ws/src/skill
           token: ${{ secrets.SKILL_REPO_TOKEN }}
 
       # 4) Checkout Skill repo (gh-pages) as deployment target
@@ -43,88 +53,33 @@ jobs:
         with:
           repository: dorgonman/kano-agent-backlog-skill
           ref: gh-pages
-          path: _ws/skill-pages
+          path: _ws/deploy/gh-pages
           token: ${{ secrets.SKILL_REPO_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/checkout@v4
+        with:
+          node-version: ${{ steps.config.outputs.node_version }}
+          cache: 'npm'
+          cache-dependency-path: '_ws/src/quartz/package-lock.json'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: ${{ steps.config.outputs.node_version }}
           cache: 'npm'
-          cache-dependency-path: '_ws/quartz/package-lock.json'
+          cache-dependency-path: '_ws/src/quartz/package-lock.json'
 
-      # 5) Cook: select and organize docs -> _ws/content
-      - name: Cook docs into Quartz content
+      # 5) Prepare documentation content for Quartz
+      - name: Prepare docs for Quartz build
         shell: bash
         run: |
-          set -euo pipefail
-          mkdir -p _ws/content
+          chmod +x _ws/src/demo/scripts/docs/02-prepare-content.sh
+          _ws/src/demo/scripts/docs/02-prepare-content.sh
 
-          # Content selection policy:
-          # - Demo docs from _ws/demo/docs
-          # - Skill docs from _ws/skill/docs  
-          # - Main README as landing page
-          # TODO: Implement manifest-based filtering for production
-
-          if [ -d "_ws/demo/docs" ]; then
-            echo "Copying demo docs..."
-            rsync -av --delete "_ws/demo/docs/" "_ws/content/demo/"
-          fi
-
-          if [ -d "_ws/skill/docs" ]; then
-            echo "Copying skill docs..."
-            rsync -av --delete "_ws/skill/docs/" "_ws/content/skill/"
-          fi
-
-          # Use skill README as landing page
-          if [ -f "_ws/skill/README.md" ]; then
-            echo "Setting up landing page..."
-            cp "_ws/skill/README.md" "_ws/content/index.md"
-          fi
-
-          # Copy skill SKILL.md as main documentation
-          if [ -f "_ws/skill/SKILL.md" ]; then
-            echo "Copying SKILL.md..."
-            cp "_ws/skill/SKILL.md" "_ws/content/skill-guide.md"
-          fi
-
-      # 6) Build Quartz site
-      - name: Install Quartz dependencies
-        shell: bash
-        working-directory: _ws/quartz
-        run: |
-          set -euo pipefail
-          npm ci
-
-      - name: Build static site with Quartz
-        shell: bash
-        working-directory: _ws/quartz
-        run: |
-          set -euo pipefail
-          npx quartz build --directory ../content --output ../public
-
-      # 7) Deploy: overwrite gh-pages content and push
-      - name: Deploy to gh-pages branch
+      # 6) Build Quartz site and deploy to gh-pages
+      - name: Build and deploy documentation site
         shell: bash
         run: |
-          set -euo pipefail
-
-          # Clear target directory (preserve .git)
-          find _ws/skill-pages -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-
-          # Copy built site to deployment target
-          rsync -av "_ws/public/" "_ws/skill-pages/"
-
-          # Configure git and commit changes
-          cd _ws/skill-pages
-          git config user.name "docs-bot"
-          git config user.email "docs-bot@users.noreply.github.com"
-
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to deploy."
-            exit 0
-          fi
-
-          git commit -m "Deploy docs site from ${GITHUB_REPOSITORY}@${GITHUB_SHA}"
-          git push origin gh-pages
+          chmod +x _ws/src/demo/scripts/docs/build-and-deploy-ci.sh
+          _ws/src/demo/scripts/docs/build-and-deploy-ci.sh

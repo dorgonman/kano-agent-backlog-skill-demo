@@ -1,0 +1,22 @@
+# Documentation Publish Manifest
+# Only files listed here will be published to the documentation website
+# Format: one file path per line, supports glob patterns
+
+# Core documentation
+README.md
+AGENTS.md
+CLAUDE.md
+LICENSE
+
+# Documentation directories
+docs/**/*.md
+docs/**/*.png
+docs/**/*.jpg
+docs/**/*.svg
+
+# Exclude patterns (prefix with !)
+!docs/internal/
+!docs/drafts/
+!docs/**/*-draft.md
+!docs/**/*-wip.md
+!docs/publish.manifest
