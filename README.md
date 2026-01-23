@@ -145,22 +145,22 @@ python -m pip install -e skills/kano-agent-backlog-skill
 
 **4. Verify installation:**
 ```bash
-kano --help
+kano-backlog --help
 ```
 
 **5. Explore the demo backlog:**
 ```bash
 # List work items
-kano item list --product kano-agent-backlog-skill
+kano-backlog item list --product kano-agent-backlog-skill
 
 # View dashboard
-kano view refresh --product kano-agent-backlog-skill --agent demo
+kano-backlog view refresh --product kano-agent-backlog-skill --agent demo
 
 # List topics
-kano topic list
+kano-backlog topic list
 
 # List worksets
-kano workset list
+kano-backlog workset list
 ```
 
 ### Optional: Dev Dependencies
@@ -192,9 +192,9 @@ python -m pip install -e "skills/kano-agent-backlog-skill[dev]"
 After installation, verify the CLI is available:
 
 ```bash
-kano --help
-kano workset --help
-kano topic --help
+kano-backlog --help
+kano-backlog workset --help
+kano-backlog topic --help
 ```
 
 ### Agent-First Setup
@@ -337,12 +337,12 @@ Worksets provide a focused, per-item execution context that prevents agent drift
 
 **Initialize a workset:**
 ```bash
-kano workset init --item TASK-0042 --agent my-agent --ttl-hours 72
+kano-backlog workset init --item TASK-0042 --agent my-agent --ttl-hours 72
 ```
 
 **Get next action from plan:**
 ```bash
-kano workset next --item TASK-0042
+kano-backlog workset next --item TASK-0042
 ```
 
 This command is the workset's "keep me on track" primitive:
@@ -350,35 +350,35 @@ This command is the workset's "keep me on track" primitive:
 - It returns the *first unchecked* checkbox item (`- [ ] ...`).
 - If everything is checked, it prints a completion message.
 
-It does not automatically mark anything as done; you check items off in `plan.md` as you complete them, then run `kano workset next` again to get the next step. Use `--format json` if you want structured output for tooling/agent automation.
+It does not automatically mark anything as done; you check items off in `plan.md` as you complete them, then run `kano-backlog workset next` again to get the next step. Use `--format json` if you want structured output for tooling/agent automation.
 
 **Refresh from canonical files:**
 ```bash
-kano workset refresh --item TASK-0042 --agent my-agent
+kano-backlog workset refresh --item TASK-0042 --agent my-agent
 ```
 
 **Promote deliverables to canonical artifacts:**
 ```bash
-kano workset promote --item TASK-0042 --agent my-agent
+kano-backlog workset promote --item TASK-0042 --agent my-agent
 # Dry run to preview
-kano workset promote --item TASK-0042 --agent my-agent --dry-run
+kano-backlog workset promote --item TASK-0042 --agent my-agent --dry-run
 ```
 
 **Detect ADR candidates in notes:**
 ```bash
-kano workset detect-adr --item TASK-0042
+kano-backlog workset detect-adr --item TASK-0042
 ```
 
 **List all worksets:**
 ```bash
-kano workset list
+kano-backlog workset list
 ```
 
 **Cleanup expired worksets:**
 ```bash
-kano workset cleanup --ttl-hours 72
+kano-backlog workset cleanup --ttl-hours 72
 # Dry run to preview
-kano workset cleanup --ttl-hours 72 --dry-run
+kano-backlog workset cleanup --ttl-hours 72 --dry-run
 ```
 
 #### Agent Workflow with Worksets
@@ -416,7 +416,7 @@ Current implementation (see `_kano/backlog/products/kano-agent-backlog-skill/ite
 
 - **manifest.json**: Topic metadata, seed items, pinned documents
 - **brief.md**: Stable, human-maintained brief (do not overwrite automatically)
-- **brief.generated.md**: Deterministic distilled brief (generated/overwritten by `kano topic distill`)
+- **brief.generated.md**: Deterministic distilled brief (generated/overwritten by `kano-backlog topic distill`)
 - **synthesis/**: Working outputs for distillation (derived)
 - **publish/**: Prepared write-backs / patch skeletons (derived)
 - **materials/**: Raw collected materials (snippets, links, extracts, logs)
@@ -433,39 +433,39 @@ Notes:
 
 **Create a topic:**
 ```bash
-kano topic create auth-refactor --agent my-agent
+kano-backlog topic create auth-refactor --agent my-agent
 ```
 
 **Add items to topic:**
 ```bash
-kano topic add auth-refactor --item TASK-0042
-kano topic add auth-refactor --item TASK-0043
+kano-backlog topic add auth-refactor --item TASK-0042
+kano-backlog topic add auth-refactor --item TASK-0043
 ```
 
 **Pin documents for context:**
 ```bash
-kano topic pin auth-refactor --doc _kano/backlog/decisions/ADR-0005-auth-strategy.md
+kano-backlog topic pin auth-refactor --doc _kano/backlog/decisions/ADR-0005-auth-strategy.md
 ```
 
 **Add code snippets to materials:**
 ```bash
-kano topic add-snippet auth-refactor --file src/auth.py --start 10 --end 25
+kano-backlog topic add-snippet auth-refactor --file src/auth.py --start 10 --end 25
 ```
 
 **Distill materials into brief:**
 ```bash
-kano topic distill auth-refactor
+kano-backlog topic distill auth-refactor
 ```
 
 **Audit decision write-back (writes a report into topic publish/):**
 ```bash
-kano topic decision-audit auth-refactor
-kano topic decision-audit auth-refactor --format json
+kano-backlog topic decision-audit auth-refactor
+kano-backlog topic decision-audit auth-refactor --format json
 ```
 
 **Write back a decision to a work item:**
 ```bash
-kano workitem add-decision KABSD-TSK-0001 \
+kano-backlog workitem add-decision KABSD-TSK-0001 \
   --decision "Use X over Y because ..." \
   --source "_kano/backlog/topics/auth-refactor/synthesis/decision-notes.md" \
   --agent my-agent \
@@ -474,30 +474,30 @@ kano workitem add-decision KABSD-TSK-0001 \
 
 **Switch active topic:**
 ```bash
-kano topic switch auth-refactor --agent my-agent
+kano-backlog topic switch auth-refactor --agent my-agent
 ```
 
 **Export context bundle:**
 ```bash
-kano topic export-context auth-refactor --format markdown
-kano topic export-context auth-refactor --format json
+kano-backlog topic export-context auth-refactor --format markdown
+kano-backlog topic export-context auth-refactor --format json
 ```
 
 **List all topics:**
 ```bash
-kano topic list --agent my-agent
+kano-backlog topic list --agent my-agent
 ```
 
 **Close a topic (enables TTL cleanup):**
 ```bash
-kano topic close auth-refactor --agent my-agent
+kano-backlog topic close auth-refactor --agent my-agent
 ```
 
 **Cleanup closed topics:**
 ```bash
-kano topic cleanup --ttl-days 14 --apply
+kano-backlog topic cleanup --ttl-days 14 --apply
 # Dry run to preview
-kano topic cleanup --ttl-days 14
+kano-backlog topic cleanup --ttl-days 14
 ```
 
 #### Agent Workflow with Topics
@@ -608,7 +608,7 @@ See the individual skill repositories for license information.
 **Backlog not found:**
 - Ensure you're in the repository root
 - Check `_kano/backlog/` directory exists
-- Initialize a product: `kano admin backlog init --product my-product --agent my-agent`
+- Initialize a product: `kano-backlog admin init --product my-product --agent my-agent`
 
 **Agent asks for help:**
 - Point agent to `AGENTS.md` for guidelines

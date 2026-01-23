@@ -57,13 +57,6 @@ jobs:
           token: ${{ secrets.SKILL_REPO_TOKEN }}
 
       - name: Setup Node.js
-        uses: actions/checkout@v4
-        with:
-          node-version: ${{ steps.config.outputs.node_version }}
-          cache: 'npm'
-          cache-dependency-path: '_ws/src/quartz/package-lock.json'
-
-      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ steps.config.outputs.node_version }}

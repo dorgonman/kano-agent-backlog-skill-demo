@@ -8,14 +8,14 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT"
 
 # Validate workspace structure
-if [ ! -d "_ws/gh-pages/.git" ]; then
-  echo "Error: _ws/gh-pages git repository not found. Run 04-deploy-local.sh first."
+if [ ! -d "_ws/deploy/gh-pages/.git" ]; then
+  echo "Error: _ws/deploy/gh-pages git repository not found. Run 04-deploy-local.sh first."
   exit 1
 fi
 
 echo "Pushing to remote gh-pages branch..."
 
-cd _ws/gh-pages
+cd _ws/deploy/gh-pages
 
 # Check if there are commits to push
 if git diff --quiet HEAD origin/gh-pages 2>/dev/null; then

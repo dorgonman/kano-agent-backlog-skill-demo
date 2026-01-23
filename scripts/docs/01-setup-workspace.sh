@@ -24,18 +24,57 @@ echo "Setting up workspace structure in: $REPO_ROOT"
 echo "Using Quartz version: $QUARTZ_VERSION"
 
 # Clean existing workspace
-rm -rf _ws
-mkdir -p _ws
-
-# Clone all repositories to match GitHub Actions structure
-echo "Cloning demo repo (current repo)..."
-git clone . _ws/src/demo
-
-echo "Cloning Quartz repo..."
-git clone --branch "$QUARTZ_VERSION" --depth 1 "$QUARTZ_REPO" _ws/src/quartz
-
-echo "Cloning skill repo..."
-git clone "$SKILL_REPO" _ws/src/skill
+if [ -d "_ws" ]; then
+  echo "Updating existing workspace..."
+  
+  # Update demo repo (current repo)
+  if [ -d "_ws/src/demo" ]; then
+    echo "Updating demo repo..."
+    cd _ws/src/demo
+    git fetch origin
+    git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+    cd "$REPO_ROOT"
+  else
+    echo "Cloning demo repo (current repo)..."
+    git clone . _ws/src/demo
+  fi
+  
+  # Update Quartz repo
+  if [ -d "_ws/src/quartz" ]; then
+    echo "Updating Quartz repo..."
+    cd _ws/src/quartz
+    git fetch origin
+    git checkout "$QUARTZ_VERSION"
+    cd "$REPO_ROOT"
+  else
+    echo "Cloning Quartz repo..."
+    git clone --branch "$QUARTZ_VERSION" --depth 1 "$QUARTZ_REPO" _ws/src/quartz
+  fi
+  
+  # Update skill repo
+  if [ -d "_ws/src/skill" ]; then
+    echo "Updating skill repo..."
+    cd _ws/src/skill
+    git fetch origin
+    git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+    cd "$REPO_ROOT"
+  else
+    echo "Cloning skill repo..."
+    git clone "$SKILL_REPO" _ws/src/skill
+  fi
+else
+  echo "Creating new workspace..."
+  mkdir -p _ws
+  
+  echo "Cloning demo repo (current repo)..."
+  git clone . _ws/src/demo
+  
+  echo "Cloning Quartz repo..."
+  git clone --branch "$QUARTZ_VERSION" --depth 1 "$QUARTZ_REPO" _ws/src/quartz
+  
+  echo "Cloning skill repo..."
+  git clone "$SKILL_REPO" _ws/src/skill
+fi
 
 # Create build and deploy directories
 mkdir -p _ws/build/{content,public}

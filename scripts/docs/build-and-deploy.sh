@@ -5,8 +5,11 @@ set -euo pipefail
 # This script orchestrates the complete local documentation build and deployment process
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$REPO_ROOT"
 
 echo "=== Documentation Deployment Pipeline ==="
+echo "Repository root: $REPO_ROOT"
 echo ""
 
 # Step 1: Setup workspace

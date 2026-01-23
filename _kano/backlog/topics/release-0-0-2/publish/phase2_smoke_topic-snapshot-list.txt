@@ -1,7 +1,32 @@
-Snapshots for topic 'release-0-0-2-smoke-a' (1 total):
+Snapshots for topic 'release-0-0-2-smoke-a' (6 total):
 
   ? smoke
      Created: 2026-01-20T09:16:07.072245Z
      By: opencode
+     Description: release check smoke snapshot
+
+  ? smoke
+     Created: 2026-01-23T09:14:34.020203Z
+     By: codex
+     Description: release check smoke snapshot
+
+  ? smoke
+     Created: 2026-01-23T10:38:51.349618Z
+     By: codex
+     Description: release check smoke snapshot
+
+  ? smoke
+     Created: 2026-01-23T14:36:19.979711Z
+     By: codex
+     Description: release check smoke snapshot
+
+  ? smoke
+     Created: 2026-01-23T15:07:53.728353Z
+     By: codex
+     Description: release check smoke snapshot
+
+  ? smoke
+     Created: 2026-01-23T15:32:12.127573Z
+     By: codex
      Description: release check smoke snapshot
 

@@ -5,6 +5,9 @@
 # Documentation build workspace (local testing and CI/CD)
 _ws/
 
+# Local CLI state
+.kano/
+
 # Logs, temp, trash, sandbox
 _kano/backlog/_logs/
 _kano/backlog/_tmp_tests/
@@ -34,6 +37,7 @@ __pycache__/
 .ruff_cache/
 .coverage*
 coverage.xml
+htmlcov/
 .tmp
 .tmp*
 _trash
@@ -63,3 +67,6 @@ Thumbs.db
 .opencode/node_modules/
 .opencode/.bun/
 /kano-agent-backlog-skill-demo2.local.code-workspace
+
+# 
+.vs

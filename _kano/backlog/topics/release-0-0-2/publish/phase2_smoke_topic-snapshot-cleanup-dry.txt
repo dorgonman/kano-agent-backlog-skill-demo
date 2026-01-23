@@ -1,3 +1,9 @@
 DRY RUN: Topic 'release-0-0-2-smoke-a'
-  Snapshots scanned: 1
-  Snapshots deleted: 0
+  Snapshots scanned: 6
+  Snapshots deleted: 5
+  Deleted files:
+    - D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a\snapshots\20260123T150753_smoke.json
+    - D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a\snapshots\20260123T143619_smoke.json
+    - D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a\snapshots\20260123T103851_smoke.json
+    - D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a\snapshots\20260123T091434_smoke.json
+    - D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a\snapshots\20260120T091607_smoke.json

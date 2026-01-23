@@ -15,9 +15,26 @@ fi
 
 # Clone skill repo gh-pages branch if not exists
 if [ ! -d "_ws/deploy/gh-pages" ]; then
-  echo "Cloning skill repo gh-pages branch..."
+  echo "Setting up gh-pages branch..."
   mkdir -p _ws/deploy
-  git clone --branch gh-pages https://github.com/dorgonman/kano-agent-backlog-skill.git _ws/deploy/gh-pages
+  
+  # Try to clone existing gh-pages branch, if it doesn't exist, create it
+  if git ls-remote --heads https://github.com/dorgonman/kano-agent-backlog-skill.git gh-pages | grep -q gh-pages; then
+    echo "Cloning existing gh-pages branch..."
+    git clone --branch gh-pages https://github.com/dorgonman/kano-agent-backlog-skill.git _ws/deploy/gh-pages
+  else
+    echo "Creating new gh-pages branch..."
+    git clone https://github.com/dorgonman/kano-agent-backlog-skill.git _ws/deploy/gh-pages
+    cd _ws/deploy/gh-pages
+    git checkout --orphan gh-pages
+    git rm -rf .
+    echo "# Documentation Site" > README.md
+    git add README.md
+    git config user.name "docs-bot"
+    git config user.email "docs-bot@users.noreply.github.com"
+    git commit -m "Initial gh-pages branch"
+    cd "$REPO_ROOT"
+  fi
 fi
 
 echo "Deploying to gh-pages branch..."

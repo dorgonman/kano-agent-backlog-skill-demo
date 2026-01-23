@@ -1,5 +1,3 @@
-? Initialized sandbox: release-0-0-2-smoke
-  Location: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog_sandbox\release-0-0-2-smoke
-  Created 19 directories/files
 
-? Use this sandbox with: --product release-0-0-2-smoke
+? Sandbox already exists: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog_sandbox\release-0-0-2-smoke (use --force to recreate)
+? Use --force to recreate the sandbox.

@@ -25,9 +25,21 @@ echo "Installing Quartz dependencies..."
 cd _ws/src/quartz
 npm ci
 
+# Apply custom configuration
+echo "Applying custom Quartz configuration..."
+cp "$REPO_ROOT/scripts/docs/quartz.config.ts" ./quartz.config.ts
+
+# Install tokyo-night theme
+echo "Installing tokyo-night theme..."
+npm install --save-dev shiki-themes
+
 # Build static site
 echo "Building static site..."
-npx quartz build --directory ../../build/content --output ../../build/public
+CONTENT_DIR="$(cd ../../build/content && pwd)"
+OUTPUT_DIR="$(cd ../../build && pwd)/public"
+echo "Content directory: $CONTENT_DIR"
+echo "Output directory: $OUTPUT_DIR"
+npx quartz build --directory "$CONTENT_DIR" --output "$OUTPUT_DIR"
 
 cd "$REPO_ROOT"
 echo "Build completed successfully!"

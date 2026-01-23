@@ -1,4 +1,2 @@
-? Topic created: release-0-0-2-smoke-a
-  Template: research
-  Variables: 1 provided
-  Path: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\topics\release-0-0-2-smoke-a
+
+? Unexpected error: Topic already exists: release-0-0-2-smoke-a

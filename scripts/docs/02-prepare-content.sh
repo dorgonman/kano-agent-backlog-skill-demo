@@ -10,10 +10,17 @@ set -euo pipefail
 #   _ws/skill/    - Skill repository content  
 #   _ws/content/  - Output directory (created by this script)
 
+# Find repository root by looking for key files
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
+echo "Repository root found: $REPO_ROOT"
+cd "$REPO_ROOT"
+
 # Validate workspace structure
 if [ ! -d "_ws" ]; then
-  echo "Error: _ws directory not found. Run from repository root with _ws/ structure."
-  echo "Use scripts/test-docs-prepare.sh for local testing."
+  echo "Error: _ws directory not found in repository root: $REPO_ROOT"
+  echo "Run scripts/docs/01-setup-workspace.sh first to create the workspace."
   exit 1
 fi
 
@@ -69,7 +76,14 @@ fi
 # Fallback: copy main files if no manifest
 if [ -f "_ws/src/skill/README.md" ]; then
   echo "Setting up landing page..."
-  cp "_ws/src/skill/README.md" "_ws/build/content/index.md"
+  # Add frontmatter with title to index.md
+  {
+    echo "---"
+    echo "title: Kano Agent Backlog Skill"
+    echo "---"
+    echo ""
+    cat "_ws/src/skill/README.md"
+  } > "_ws/build/content/index.md"
 fi
 
 if [ -f "_ws/src/skill/SKILL.md" ]; then
