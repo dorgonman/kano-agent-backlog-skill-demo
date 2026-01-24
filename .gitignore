@@ -5,6 +5,9 @@
 # Documentation build workspace (local testing and CI/CD)
 _ws/
 
+# Archive directory
+_archives/
+
 # Local CLI state
 .kano/
 

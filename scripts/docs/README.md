@@ -27,17 +27,59 @@ Source Repos → Content Preparation → Quartz Build → Deployment
   _ws/src/    →  _ws/build/content  →  _ws/build/public  →  _ws/deploy/gh-pages
 ```
 
-## Scripts Overview
+## File Structure
 
+### Main Scripts
 | Script | Purpose | Dependencies |
-|--------|---------|--------------|
+|--------|---------|-------------|
 | `01-setup-workspace.sh` | Clone repositories and setup workspace | Git |
-| `02-prepare-content.sh` | Filter and prepare documentation content | 01 |
+| `02-prepare-content.sh` | Process YAML config and prepare content | 01 |
 | `03-build-site.sh` | Build static site with Quartz | 02, Node.js 22 |
 | `04-deploy-local.sh` | Deploy to local gh-pages branch | 03 |
 | `05-push-remote.sh` | Push changes to remote GitHub | 04 |
 | `build-and-deploy.sh` | **Main script** - runs all steps | All above |
-| `build-and-deploy-ci.sh` | CI-only script for GitHub Actions | N/A |
+
+### Configuration Files
+| File | Purpose |
+|------|---------|
+| `config/build.json` | Build parameters (Quartz version, repos, deployment) |
+| `config/quartz.config.ts` | Quartz theme and plugin configuration |
+| `config/mkdocs.yml` | MkDocs API documentation preprocessing |
+| `docs/publish.config.yml` | Content mapping and navigation structure |
+
+### Helper Tools
+| File | Purpose |
+|------|---------|
+| `help/process_yaml_config.py` | YAML configuration processor and index generator |
+
+## Content Publishing System
+
+### YAML-Based Configuration
+
+Content publishing is now controlled by `docs/publish.config.yml` which defines:
+
+```yaml
+navigation:
+  Demo:
+    title: "Demo & Examples"
+    items:
+      - source: "README.md"
+        target: "demo/index.md"
+        title: "Demo Overview"
+  
+  ADR:
+    title: "Architecture Decisions"
+    items:
+      - source: "_kano/backlog/products/*/decisions/**/*.md"
+        target: "adr/"
+        title_from_frontmatter: "title"
+```
+
+### GitHub Pages Compatibility
+
+- **Flattened Structure**: Deep paths automatically flattened to avoid GitHub Pages routing issues
+- **Navigation Indexes**: Auto-generated index pages for each content section
+- **Direct Access**: All content accessible via clean URLs
 
 ## Usage
 
@@ -48,13 +90,20 @@ Source Repos → Content Preparation → Quartz Build → Deployment
 ./scripts/docs/build-and-deploy.sh
 ```
 
+### CI Mode
+
+```bash
+# Skip workspace setup (for GitHub Actions)
+./scripts/docs/build-and-deploy.sh --ci
+```
+
 ### Step-by-Step Execution
 
 ```bash
 # 1. Setup workspace
 ./scripts/docs/01-setup-workspace.sh
 
-# 2. Prepare content
+# 2. Prepare content with YAML config
 ./scripts/docs/02-prepare-content.sh
 
 # 3. Build site
@@ -74,37 +123,46 @@ Source Repos → Content Preparation → Quartz Build → Deployment
 rm -rf _ws
 ```
 
-## Content Filtering
-
-Documentation content is filtered using `docs/publish.manifest` files:
-
-```
-# Core documentation
-README.md
-AGENTS.md
-LICENSE
-
-# Documentation directories
-docs/**/*.md
-docs/**/*.png
-
-# Exclude patterns (prefix with !)
-!docs/internal/
-!docs/**/*-draft.md
-```
-
 ## Prerequisites
 
 - **Git**: For repository cloning
 - **Node.js 22**: For Quartz build process
-- **rsync**: For file synchronization
+- **Python 3**: For YAML configuration processing
 - **GitHub Access**: For pushing to remote repository
+
+## Configuration
+
+### Build Configuration (`config/build.json`)
+
+```json
+{
+  "quartz": {
+    "version": "v4.4.0",
+    "repository": "https://github.com/jackyzha0/quartz.git"
+  },
+  "repositories": {
+    "skill": "https://github.com/dorgonman/kano-agent-backlog-skill.git"
+  },
+  "deployment": {
+    "site_url": "https://dorgonman.github.io/kano-agent-backlog-skill/",
+    "branch": "gh-pages"
+  }
+}
+```
+
+### Content Mapping (`docs/publish.config.yml`)
+
+Defines how source files map to website structure:
+- **Navigation sections**: Demo, Skill, ADR, Examples, References
+- **File mappings**: Source patterns to target paths
+- **Index generation**: Automatic navigation page creation
+- **GitHub Pages optimization**: Flattened URLs for compatibility
 
 ## GitHub Actions Integration
 
-The CI pipeline uses `build-and-deploy-ci.sh` which:
+The CI pipeline uses `--ci` mode which:
 1. Assumes workspace is already setup by GitHub Actions checkout steps
-2. Combines build and deploy steps for automation
+2. Uses explicit paths for all operations
 3. Automatically pushes to remote gh-pages branch
 
 ### Workflow Structure
@@ -113,8 +171,8 @@ The CI pipeline uses `build-and-deploy-ci.sh` which:
 steps:
   - name: Checkout repos (Demo, Quartz, Skill, gh-pages)
   - name: Setup Node.js
-  - name: Prepare content (02-prepare-content.sh)
-  - name: Build and deploy (build-and-deploy-ci.sh)
+  - name: Build and deploy
+    run: ./scripts/docs/build-and-deploy.sh --ci
 ```
 
 ## Troubleshooting
@@ -127,23 +185,17 @@ Error: _ws directory not found
 ```
 → Run `01-setup-workspace.sh` first
 
-**Content directory missing:**
+**YAML config not found:**
 ```bash
-Error: _ws/build/content directory not found
+Warning: Config docs/publish.config.yml not found
 ```
-→ Run `02-prepare-content.sh` first
+→ Ensure `docs/publish.config.yml` exists in demo repo
 
-**Build artifacts missing:**
+**Python dependencies:**
 ```bash
-Error: _ws/build/public directory not found
+ModuleNotFoundError: No module named 'yaml'
 ```
-→ Run `03-build-site.sh` first
-
-**Git repository not found:**
-```bash
-Error: _ws/deploy/gh-pages git repository not found
-```
-→ Run `04-deploy-local.sh` first
+→ Install PyYAML: `pip install PyYAML`
 
 ### Debug Mode
 
@@ -152,23 +204,6 @@ Add debug output to any script:
 set -x  # Enable debug mode
 ./scripts/docs/build-and-deploy.sh
 ```
-
-## Configuration
-
-### Repository URLs
-
-Update repository URLs in `01-setup-workspace.sh`:
-- Demo repo: Current repository (`.`)
-- Quartz: `https://github.com/jackyzha0/quartz.git`
-- Skill: `https://github.com/dorgonman/kano-agent-backlog-skill.git`
-
-### Quartz Version
-
-Pinned to `v4.4.0` for stability. Update in `01-setup-workspace.sh` if needed.
-
-### Deployment Target
-
-Site deploys to: `https://dorgonman.github.io/kano-agent-backlog-skill/`
 
 ## Development
 
@@ -180,20 +215,19 @@ Site deploys to: `https://dorgonman.github.io/kano-agent-backlog-skill/`
 
 ### Content Updates
 
-1. Modify `docs/publish.manifest` to control published files
-2. Update documentation in `docs/` directory
+1. Modify `docs/publish.config.yml` to control published content
+2. Update documentation in source repositories
 3. Run pipeline to rebuild and deploy
 
-### Script Modifications
+### Adding New Content Sections
 
-- All scripts use `REPO_ROOT` for consistent path resolution
-- Paths are relative to repository root
-- Error handling with `set -euo pipefail`
-- Validation checks before each major operation
+1. Add new navigation section to `docs/publish.config.yml`
+2. Define source patterns and target paths
+3. Run content preparation to generate indexes
 
 ## Security Notes
 
 - Scripts clone public repositories only
 - No sensitive credentials in scripts
-- GitHub token (`SKILL_REPO_TOKEN`) required for CI deployment
+- GitHub token required for CI deployment
 - Local scripts commit but don't auto-push (manual verification step)

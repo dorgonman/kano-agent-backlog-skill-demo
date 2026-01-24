@@ -412,7 +412,7 @@ Agent: "Great! I'll promote the deliverables to the canonical artifacts director
 
 Topics provide a higher-level grouping mechanism for related items and documents, enabling rapid context switching when focus areas change during a conversation.
 
-Current implementation (see `_kano/backlog/products/kano-agent-backlog-skill/items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md`) stores topics in `_kano/backlog/topics/<topic>/` so the deterministic `brief.md` can be shared/reviewed in-repo, while keeping the per-agent active-topic pointer in cache.
+Current implementation (see `_kano/backlog/products/kano-agent-backlog-skill/items/task/0100/KABSD-TSK-0190_topic-lifecycle-materials-buffer-workset-merge.md`) stores topics in `_kano/backlog/topics/<topic>/` so the deterministic `brief.generated.md` can be shared/reviewed in-repo, while keeping per-agent active-topic tracking in shared cache state.
 
 - **manifest.json**: Topic metadata, seed items, pinned documents
 - **brief.md**: Stable, human-maintained brief (do not overwrite automatically)
@@ -427,7 +427,7 @@ Current implementation (see `_kano/backlog/products/kano-agent-backlog-skill/ite
 
 Notes:
 - Raw materials are treated as cache: by default this repo ignores `_kano/backlog/topics/**/materials/` via `.gitignore`.
-- Active topic for an agent is stored under `_kano/backlog/.cache/worksets/active_topic.<agent>.txt`.
+- Active topic state is stored under `_kano/backlog/.cache/worksets/state.json` (and topic entries under `_kano/backlog/.cache/worksets/topics/`).
 
 #### Topic Commands
 
@@ -545,11 +545,11 @@ Agent: "Switching to topic 'auth-refactor'... Here are the 5 tasks and relevant 
 | **Lifetime** | Task duration | Work area duration |
 | **Content** | Plan, notes, deliverables | Items, docs, snippets, brief |
 | **Use Case** | Prevent drift during task | Switch focus areas |
-| **Storage** | `.cache/worksets/items/` | `topics/<topic>/` (materials ignored; active pointer in `.cache/`) |
+| **Storage** | `.cache/worksets/items/` | `topics/<topic>/` (materials ignored; active topic tracked in `_kano/backlog/.cache/worksets/state.json`) |
 
 ## Configuration
 
-Backlog configuration is in `_kano/backlog/_config/` (product-specific) or `_kano/backlog/_shared/` (shared settings).
+Backlog configuration is in `_kano/backlog/products/<product>/_config/config.toml` (product-specific) and `_kano/backlog/_shared/defaults.toml` (shared defaults).
 
 ## Contributing (Pre-Alpha)
 

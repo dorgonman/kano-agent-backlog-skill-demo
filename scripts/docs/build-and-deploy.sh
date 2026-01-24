@@ -50,14 +50,14 @@ fi
 # Step 2: Prepare content
 echo "Step 2: Preparing documentation content..."
 if [ "$CI_MODE" = true ]; then
-  # CI mode: use explicit paths
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/02-prepare-content.sh" \
+  # CI mode: use explicit paths with YAML config
+  "$REPO_ROOT/scripts/docs/02-prepare-content.sh" \
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/demo" \
     "$REPO_ROOT/_ws/src/skill" \
     "$REPO_ROOT/_ws/build"
 else
-  # Local mode: auto-detect paths
+  # Local mode: use YAML config with auto-detect paths
   "$REPO_ROOT/scripts/docs/02-prepare-content.sh"
 fi
 echo ""
@@ -70,7 +70,7 @@ if [ "$CI_MODE" = true ]; then
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/quartz" \
     "$REPO_ROOT/_ws/build" \
-    "$REPO_ROOT/_ws/src/demo/scripts/docs/quartz.config.ts"
+    "$REPO_ROOT/scripts/docs/config/quartz.config.ts"
 else
   # Local mode: use parameterized script with auto-detect
   "$REPO_ROOT/scripts/docs/03-build-site.sh"

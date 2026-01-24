@@ -1,3 +1,11 @@
+/**
+ * Quartz Configuration for Kano Agent Backlog Skill Documentation
+ * 
+ * This file configures the Quartz static site generator for the documentation website.
+ * It defines theme colors (Tokyo Night), plugins, and site metadata.
+ * 
+ * @see https://quartz.jzhao.xyz/configuration
+ */
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
@@ -13,7 +21,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "dorgonman.github.io/kano-agent-backlog-skill",
+    baseUrl: "https://dorgonman.github.io/kano-agent-backlog-skill",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {

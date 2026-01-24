@@ -1,0 +1,85 @@
+# Documentation Publishing Configuration
+# Defines content mapping and navigation structure for documentation website
+
+navigation:
+  Demo:
+    title: "Demo & Examples"
+    description: "Demonstration repository and usage examples"
+    items:
+      - source: "README.md"
+        target: "demo/index.md"
+        title: "Demo Overview"
+      - source: "AGENTS.md"
+        target: "demo/agents.md"
+        title: "Agent Guidelines"
+      - source: "CLAUDE.md"
+        target: "demo/claude.md"
+        title: "Claude Integration"
+
+  Skill:
+    title: "Skill Documentation"
+    description: "Core skill implementation and reference"
+    items:
+      - source: "skills/kano-agent-backlog-skill/SKILL.md"
+        target: "skill/index.md"
+        title: "Skill Guide"
+      - source: "skills/kano-agent-backlog-skill/README.md"
+        target: "skill/readme.md"
+        title: "Skill README"
+      - source: "skills/kano-agent-backlog-skill/REFERENCE.md"
+        target: "skill/reference.md"
+        title: "API Reference"
+      - source: "skills/kano-agent-backlog-skill/CHANGELOG.md"
+        target: "skill/changelog.md"
+        title: "Changelog"
+
+  ADR:
+    title: "Architecture Decisions"
+    description: "Architecture Decision Records and design rationale"
+    items:
+      - source: "_kano/backlog/products/kano-agent-backlog-skill/decisions/**/*.md"
+        target: "adr/"
+        title_from_frontmatter: "title"
+        sort_by: "id"
+
+  Examples:
+    title: "Examples & Templates"
+    description: "Code examples and templates"
+    items:
+      - source: "skills/kano-agent-backlog-skill/examples/**/*.py"
+        target: "examples/"
+        preserve_structure: true
+      - source: "skills/kano-agent-backlog-skill/templates/**/*.md"
+        target: "templates/"
+        preserve_structure: true
+
+  References:
+    title: "Technical References"
+    description: "Technical documentation and references"
+    items:
+      - source: "skills/kano-agent-backlog-skill/references/**/*.md"
+        target: "references/"
+        preserve_structure: true
+      - source: "skills/kano-agent-backlog-skill/references/**/*.json"
+        target: "references/"
+        preserve_structure: true
+
+# Global exclusions
+exclude:
+  - "docs/internal/"
+  - "docs/drafts/"
+  - "docs/**/*-draft.md"
+  - "docs/**/*-wip.md"
+  - "skills/kano-agent-backlog-skill/htmlcov/"
+  - "skills/kano-agent-backlog-skill/.hypothesis/"
+  - "skills/kano-agent-backlog-skill/.pytest_cache/"
+  - "skills/kano-agent-backlog-skill/.kano/"
+  - "skills/kano-agent-backlog-skill/src/"
+  - "skills/kano-agent-backlog-skill/tests/"
+
+# Site configuration
+site:
+  title: "Kano Agent Backlog Skill"
+  description: "AI Agent Skills for Spec-Driven Agentic Programming"
+  generate_indexes: true
+  flatten_deep_paths: true

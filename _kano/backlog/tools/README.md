@@ -3,7 +3,7 @@
 This folder contains **project-specific** helper scripts for `_kano/backlog/`.
 
 Principle:
-- **Generic** backlog workflows live in the skill: call `python skills/kano-agent-backlog-skill/scripts/kano <command>`
+- **Generic** backlog workflows live in the skill: call `python skills/kano-agent-backlog-skill/scripts/kano-backlog <command>`
 - **Project-only** dashboards/reports live here (iteration, recent changes, team conventions)
 
 ## Canonical dashboards
@@ -25,7 +25,7 @@ The tool prefers SQLite index when enabled/available, otherwise falls back to sc
 
 **Status**: Experimental, interfaces may change
 
-The legacy demo generator script has been removed. Re-introduce it as a `kano view demo ...` subcommand (TBD) before relying on it again.
+The legacy demo generator script has been removed. Re-introduce it as a `kano-backlog view demo ...` subcommand (TBD) before relying on it again.
 
 Outputs:
 - `_kano/backlog/products/<product-name>/views/_demo/Dashboard_Demo_DBIndex_{Active,New,Done}.md`

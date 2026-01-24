@@ -9,7 +9,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
 
 # Load configuration
-CONFIG_FILE="$SCRIPT_DIR/config.json"
+CONFIG_FILE="$SCRIPT_DIR/config/build.json"
 if [ ! -f "$CONFIG_FILE" ]; then
   echo "Error: Configuration file not found: $CONFIG_FILE"
   exit 1
