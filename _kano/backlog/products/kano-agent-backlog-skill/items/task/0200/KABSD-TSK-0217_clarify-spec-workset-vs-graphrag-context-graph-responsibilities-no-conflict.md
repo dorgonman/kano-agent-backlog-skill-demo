@@ -27,7 +27,7 @@ tags:
 - documentation
 title: Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)
 type: Task
-uid: 019bac4a-683f-7576-93e4-157304876acc
+uid: 019bf086-c324-73eb-adc7-428ad81771e5
 updated: 2026-01-12
 ---
 

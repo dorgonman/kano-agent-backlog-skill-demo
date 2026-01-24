@@ -20,7 +20,7 @@ tags:
 - implementation
 title: Implement `kano item create` subcommand
 type: Task
-uid: 019bac4a-6840-7074-91d2-e59c4a8cd392
+uid: 019bf086-c324-73eb-adc7-428db92236fd
 updated: 2026-01-09
 ---
 
