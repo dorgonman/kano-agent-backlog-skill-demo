@@ -11,7 +11,7 @@ import shutil
 import sys
 from pathlib import Path
 
-def process_config(source_dir, target_dir, config_file):
+def process_config(source_base_dir, target_dir, config_file):
     """Process YAML configuration and copy files according to mapping rules"""
     
     if not os.path.exists(config_file):
@@ -49,12 +49,12 @@ title: {section['title']}
             
             # Handle glob patterns
             if '**' in source_pattern or '*' in source_pattern:
-                source_files = glob.glob(os.path.join(source_dir, source_pattern), recursive=True)
+                source_files = glob.glob(os.path.join(source_base_dir, source_pattern), recursive=True)
                 for source_file in source_files:
                     if os.path.isfile(source_file):
-                        rel_path = os.path.relpath(source_file, source_dir)
+                        rel_path = os.path.relpath(source_file, source_base_dir)
                         if item.get('preserve_structure'):
-                            target_file = os.path.join(target_dir, target_path, rel_path)
+                            target_file = os.path.join(target_dir, target_path, os.path.relpath(source_file, os.path.join(source_base_dir, os.path.dirname(source_pattern.replace('**/*', '')))))
                         else:
                             filename = os.path.basename(source_file)
                             target_file = os.path.join(target_dir, target_path, filename)
@@ -69,7 +69,7 @@ title: {section['title']}
                         index_content += f"- [{title}]({link_path})\n"
             else:
                 # Single file
-                source_file = os.path.join(source_dir, source_pattern)
+                source_file = os.path.join(source_base_dir, source_pattern)
                 if os.path.isfile(source_file):
                     target_file = os.path.join(target_dir, target_path)
                     os.makedirs(os.path.dirname(target_file), exist_ok=True)
@@ -81,9 +81,11 @@ title: {section['title']}
                     link_path = os.path.relpath(target_file, section_dir).replace('\\', '/')
                     index_content += f"- [{title}]({link_path})\n"
         
-        # Write section index
-        with open(os.path.join(section_dir, 'index.md'), 'w', encoding='utf-8') as f:
-            f.write(index_content)
+        # Write section index (skip if index.md already exists)
+        index_path = os.path.join(section_dir, 'index.md')
+        if not os.path.exists(index_path):
+            with open(index_path, 'w', encoding='utf-8') as f:
+                f.write(index_content)
         
         nav_links.append((section_key.lower(), section['title'], section['description']))
     
@@ -93,10 +95,6 @@ title: {section['title']}
 title: {site_config.get('title', 'Documentation')}
 ---
 
-# {site_config.get('title', 'Documentation')}
-
-{site_config.get('description', '')}
-
 ## Navigation
 
 """
@@ -104,15 +102,18 @@ title: {site_config.get('title', 'Documentation')}
     for link, title, desc in nav_links:
         main_index += f"- [{title}]({link}/) - {desc}\n"
     
-    with open(os.path.join(target_dir, 'index.md'), 'w', encoding='utf-8') as f:
-        f.write(main_index)
+    # Only write navigation index if no index.md was created by items
+    index_path = os.path.join(target_dir, 'index.md')
+    if not os.path.exists(index_path):
+        with open(index_path, 'w', encoding='utf-8') as f:
+            f.write(main_index)
     
     print("YAML config processing completed")
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: process_yaml_config.py <source_dir> <target_dir> <config_file>")
+        print("Usage: process_yaml_config.py <source_base_dir> <target_dir> <config_file>")
         sys.exit(1)
     
-    source_dir, target_dir, config_file = sys.argv[1:4]
-    process_config(source_dir, target_dir, config_file)
+    source_base_dir, target_dir, config_file = sys.argv[1:4]
+    process_config(source_base_dir, target_dir, config_file)

@@ -27,23 +27,35 @@ echo "Cleaning previous build artifacts..."
 rm -rf "$BUILD_DIR/content"/*
 rm -rf "$BUILD_DIR/public"/*
 
-# Process demo content with YAML config
-if [ -d "$DEMO_DIR" ] && [ -f "$REPO_ROOT/docs/publish.config.yml" ]; then
-  echo "Processing demo content with YAML config..."
-  python "$SCRIPT_DIR/help/process_yaml_config.py" "$DEMO_DIR" "$BUILD_DIR/content" "$REPO_ROOT/docs/publish.config.yml"
-fi
-
-# Generate CLI and API docs
+# Generate CLI and API docs first
 echo "Generating CLI documentation..."
 mkdir -p "$BUILD_DIR/content/cli"
 
 if command -v kano-backlog >/dev/null 2>&1; then
-  echo "# CLI Reference" > "$BUILD_DIR/content/cli/index.md"
+  echo "---" > "$BUILD_DIR/content/cli/index.md"
+  echo "title: CLI Reference" >> "$BUILD_DIR/content/cli/index.md"
+  echo "---" >> "$BUILD_DIR/content/cli/index.md"
+  echo "" >> "$BUILD_DIR/content/cli/index.md"
+  echo "# CLI Reference" >> "$BUILD_DIR/content/cli/index.md"
   echo "" >> "$BUILD_DIR/content/cli/index.md"
   echo "## kano-backlog" >> "$BUILD_DIR/content/cli/index.md"
   echo '```' >> "$BUILD_DIR/content/cli/index.md"
   kano-backlog --help >> "$BUILD_DIR/content/cli/index.md" 2>/dev/null || echo "Command not available" >> "$BUILD_DIR/content/cli/index.md"
   echo '```' >> "$BUILD_DIR/content/cli/index.md"
+else
+  echo "---" > "$BUILD_DIR/content/cli/index.md"
+  echo "title: CLI Reference" >> "$BUILD_DIR/content/cli/index.md"
+  echo "---" >> "$BUILD_DIR/content/cli/index.md"
+  echo "" >> "$BUILD_DIR/content/cli/index.md"
+  echo "# CLI Reference" >> "$BUILD_DIR/content/cli/index.md"
+  echo "" >> "$BUILD_DIR/content/cli/index.md"
+  echo "kano-backlog command not available" >> "$BUILD_DIR/content/cli/index.md"
+fi
+
+# Process content with YAML config supporting multiple source directories
+if [ -d "$DEMO_DIR" ] && [ -f "$REPO_ROOT/docs/publish.config.yml" ]; then
+  echo "Processing content with YAML config..."
+  python "$SCRIPT_DIR/help/process_yaml_config.py" "$REPO_ROOT/_ws/src" "$BUILD_DIR/content" "$REPO_ROOT/docs/publish.config.yml"
 fi
 
 echo "Enhanced content preparation completed successfully"

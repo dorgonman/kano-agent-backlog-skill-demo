@@ -14,18 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout Demo (this repo)
+      # 1) Checkout Demo repo (minimal - only docs and scripts)
       - name: Checkout Demo repo
         uses: actions/checkout@v4
         with:
           path: _ws/src/demo
+          sparse-checkout: |
+            docs/
+            scripts/docs/
+          sparse-checkout-cone-mode: false
+      
+      # Copy config to root for CI access
+      - name: Setup config access
+        run: |
+          mkdir -p docs
+          cp _ws/src/demo/docs/publish.config.yml docs/publish.config.yml
 
       # Read configuration
       - name: Read deployment configuration
         id: config
         run: |
-          QUARTZ_VERSION=$(grep -o '"version"[[:space:]]*:[[:space:]]*"[^"]*"' _ws/src/demo/scripts/docs/config.json | cut -d'"' -f4)
-          NODE_VERSION=$(grep -A5 '"build"' _ws/src/demo/scripts/docs/config.json | grep -o '"node_version"[[:space:]]*:[[:space:]]*"[^"]*"' | cut -d'"' -f4)
+          QUARTZ_VERSION=$(grep -o '"version"[[:space:]]*:[[:space:]]*"[^"]*"' _ws/src/demo/scripts/docs/config/build.json | cut -d'"' -f4)
+          NODE_VERSION=$(grep -A5 '"build"' _ws/src/demo/scripts/docs/config/build.json | grep -o '"node_version"[[:space:]]*:[[:space:]]*"[^"]*"' | cut -d'"' -f4)
           echo "quartz_version=$QUARTZ_VERSION" >> $GITHUB_OUTPUT
           echo "node_version=$NODE_VERSION" >> $GITHUB_OUTPUT
           echo "Using Quartz version: $QUARTZ_VERSION"
