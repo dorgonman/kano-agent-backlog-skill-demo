@@ -2,7 +2,6 @@ name: Build & Deploy Docs Site (Quartz -> Skill gh-pages)
 
 on:
   push:
-    branches: [ "main" ]
     tags: [ "v*.*.*" ]
   workflow_dispatch: {}
 
