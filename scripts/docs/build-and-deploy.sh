@@ -40,7 +40,7 @@ echo ""
 # Step 1: Setup workspace (skip in CI mode)
 if [ "$CI_MODE" = false ]; then
   echo "Step 1: Setting up workspace..."
-  "$REPO_ROOT/scripts/docs/01-setup-workspace.sh"
+  bash "$REPO_ROOT/scripts/docs/01-setup-workspace.sh"
   echo ""
 else
   echo "Step 1: Skipping workspace setup (CI mode)"
@@ -51,14 +51,14 @@ fi
 echo "Step 2: Preparing documentation content..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use explicit paths with YAML config
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/02-prepare-content.sh" \
+  bash "$REPO_ROOT/_ws/src/demo/scripts/docs/02-prepare-content.sh" \
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/demo" \
     "$REPO_ROOT/_ws/src/skill" \
     "$REPO_ROOT/_ws/build"
 else
   # Local mode: use YAML config with auto-detect paths
-  "$REPO_ROOT/scripts/docs/02-prepare-content.sh"
+  bash "$REPO_ROOT/scripts/docs/02-prepare-content.sh"
 fi
 echo ""
 
@@ -66,14 +66,14 @@ echo ""
 echo "Step 3: Building Quartz site..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/03-build-site.sh" \
+  bash "$REPO_ROOT/_ws/src/demo/scripts/docs/03-build-site.sh" \
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/quartz" \
     "$REPO_ROOT/_ws/build" \
     "$REPO_ROOT/_ws/src/demo/scripts/docs/config/quartz.config.ts"
 else
   # Local mode: use parameterized script with auto-detect
-  "$REPO_ROOT/scripts/docs/03-build-site.sh"
+  bash "$REPO_ROOT/scripts/docs/03-build-site.sh"
 fi
 echo ""
 
@@ -81,13 +81,13 @@ echo ""
 echo "Step 4: Deploying MkDocs API documentation..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/04-deploy-mkdocs.sh" \
+  bash "$REPO_ROOT/_ws/src/demo/scripts/docs/04-deploy-mkdocs.sh" \
     "$REPO_ROOT/_ws/build" \
     "$REPO_ROOT/_ws/src/skill" \
     "$REPO_ROOT/_ws/src/demo/scripts/docs/config/mkdocs.yml"
 else
   # Local mode: use auto-detect
-  "$REPO_ROOT/scripts/docs/04-deploy-mkdocs.sh"
+  bash "$REPO_ROOT/scripts/docs/04-deploy-mkdocs.sh"
 fi
 echo ""
 
@@ -95,13 +95,13 @@ echo ""
 echo "Step 5: Deploying to local gh-pages branch..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/05-deploy-quartz.sh" \
+  bash "$REPO_ROOT/_ws/src/demo/scripts/docs/05-deploy-quartz.sh" \
     "$REPO_ROOT/_ws/build" \
     "$REPO_ROOT/_ws/deploy/gh-pages" \
     "Deploy docs site from GitHub Actions (${GITHUB_SHA:-unknown})"
 else
   # Local mode: use parameterized script with auto-detect
-  "$REPO_ROOT/scripts/docs/05-deploy-quartz.sh"
+  bash "$REPO_ROOT/scripts/docs/05-deploy-quartz.sh"
 fi
 echo ""
 
@@ -109,12 +109,12 @@ echo ""
 echo "Step 6: Committing and pushing to remote gh-pages branch..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script with auto-push
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/06-push-remote.sh" \
+  bash "$REPO_ROOT/_ws/src/demo/scripts/docs/06-push-remote.sh" \
     "$REPO_ROOT/_ws/deploy/gh-pages" \
     "Deploy docs site from GitHub Actions (${GITHUB_SHA:-unknown})"
 else
   # Local mode: use parameterized script with auto-detect
-  "$REPO_ROOT/scripts/docs/06-push-remote.sh"
+  bash "$REPO_ROOT/scripts/docs/06-push-remote.sh"
 fi
 echo ""
 
