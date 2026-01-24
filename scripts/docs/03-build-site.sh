@@ -32,8 +32,8 @@ if [ ! -d "$QUARTZ_DIR" ]; then
   exit 1
 fi
 
-if [ ! -d "$BUILD_DIR/content" ]; then
-  echo "Error: Build content directory not found: $BUILD_DIR/content"
+if [ ! -d "$BUILD_DIR/content_quartz" ]; then
+  echo "Error: Build content directory not found: $BUILD_DIR/content_quartz"
   exit 1
 fi
 
@@ -41,29 +41,8 @@ echo "Building Quartz site..."
 
 # Clean output directory
 echo "Cleaning output directory..."
-rm -rf "$BUILD_DIR/public"/*
-mkdir -p "$BUILD_DIR/public"
-
-# Pre-process API docs with MkDocs if available
-if command -v mkdocs >/dev/null 2>&1 && [ -f "$SCRIPT_DIR/config/mkdocs.yml" ]; then
-  echo "Pre-processing API documentation with MkDocs..."
-  cd "$BUILD_DIR"
-  cp "$SCRIPT_DIR/config/mkdocs.yml" ./
-  
-  # Set PYTHONPATH to include skill source
-  export PYTHONPATH="$REPO_ROOT/skills/kano-agent-backlog-skill/src:$PYTHONPATH"
-  
-  # Generate API docs to temporary directory
-  mkdocs build -d temp_api --quiet || echo "MkDocs build failed, continuing with basic docs"
-  
-  # Copy generated API docs to content
-  if [ -d "temp_api" ]; then
-    cp -r temp_api/* content/ 2>/dev/null || true
-    rm -rf temp_api
-  fi
-else
-  echo "MkDocs not available, using basic API docs"
-fi
+rm -rf "$BUILD_DIR/staged"/*
+mkdir -p "$BUILD_DIR/staged"
 
 # Install dependencies
 echo "Installing Quartz dependencies..."
@@ -80,8 +59,8 @@ npm install --save-dev shiki-themes
 
 # Build static site
 echo "Building static site..."
-CONTENT_DIR="$BUILD_DIR/content"
-OUTPUT_DIR="$BUILD_DIR/public"
+CONTENT_DIR="$BUILD_DIR/content_quartz"
+OUTPUT_DIR="$BUILD_DIR/staged"
 echo "Content directory: $CONTENT_DIR"
 echo "Output directory: $OUTPUT_DIR"
 npx quartz build --directory "$CONTENT_DIR" --output "$OUTPUT_DIR"

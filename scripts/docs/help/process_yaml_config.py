@@ -43,9 +43,26 @@ title: {section['title']}
 """
         
         items = section.get('items', [])
+        
+        # Special handling for CLI section - check if CLI docs already exist
+        if section_key.lower() == 'cli' and os.path.exists(os.path.join(target_dir, 'cli', 'index.md')):
+            # CLI docs exist, add them to the index
+            index_content += "- [CLI Commands](index.md)\n"
+        
         for item in items:
-            source_pattern = item['source']
+            source_pattern = item.get('source')
             target_path = item['target']
+            
+            # Handle items without source (like CLI commands.md)
+            if not source_pattern:
+                # Just add to index, file should be generated elsewhere
+                title = item.get('title', os.path.splitext(os.path.basename(target_path))[0])
+                if target_path.startswith(section_key.lower() + '/'):
+                    link_path = os.path.relpath(os.path.join(target_dir, target_path), section_dir).replace('\\', '/')
+                else:
+                    link_path = target_path
+                index_content += f"- [{title}]({link_path})\n"
+                continue
             
             # Handle glob patterns
             if '**' in source_pattern or '*' in source_pattern:
@@ -95,6 +112,10 @@ title: {section['title']}
 title: {site_config.get('title', 'Documentation')}
 ---
 
+# {site_config.get('title', 'Documentation')}
+
+{site_config.get('description', '')}
+
 ## Navigation
 
 """
@@ -102,11 +123,13 @@ title: {site_config.get('title', 'Documentation')}
     for link, title, desc in nav_links:
         main_index += f"- [{title}]({link}/) - {desc}\n"
     
-    # Only write navigation index if no index.md was created by items
+    # Add link to demo overview as default content
+    main_index += f"\n## Getting Started\n\n[View Demo Overview](demo/overview.md)\n"
+    
+    # Write main index
     index_path = os.path.join(target_dir, 'index.md')
-    if not os.path.exists(index_path):
-        with open(index_path, 'w', encoding='utf-8') as f:
-            f.write(main_index)
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write(main_index)
     
     print("YAML config processing completed")
 

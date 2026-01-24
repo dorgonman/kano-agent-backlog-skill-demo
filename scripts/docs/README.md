@@ -35,8 +35,9 @@ Source Repos → Content Preparation → Quartz Build → Deployment
 | `01-setup-workspace.sh` | Clone repositories and setup workspace | Git |
 | `02-prepare-content.sh` | Process YAML config and prepare content | 01 |
 | `03-build-site.sh` | Build static site with Quartz | 02, Node.js 22 |
-| `04-deploy-local.sh` | Deploy to local gh-pages branch | 03 |
-| `05-push-remote.sh` | Push changes to remote GitHub | 04 |
+| `04-deploy-mkdocs.sh` | Build + integrate MkDocs API docs into site | 03, Python deps |
+| `05-deploy-quartz.sh` | Copy built site into gh-pages working tree | 03 |
+| `06-push-remote.sh` | Commit + push gh-pages branch to remote | 05 |
 | `build-and-deploy.sh` | **Main script** - runs all steps | All above |
 
 ### Configuration Files
@@ -45,7 +46,7 @@ Source Repos → Content Preparation → Quartz Build → Deployment
 | `config/build.json` | Build parameters (Quartz version, repos, deployment) |
 | `config/quartz.config.ts` | Quartz theme and plugin configuration |
 | `config/mkdocs.yml` | MkDocs API documentation preprocessing |
-| `docs/publish.config.yml` | Content mapping and navigation structure |
+| `config/publish.config.yml` | Content mapping and navigation structure |
 
 ### Helper Tools
 | File | Purpose |
@@ -56,7 +57,7 @@ Source Repos → Content Preparation → Quartz Build → Deployment
 
 ### YAML-Based Configuration
 
-Content publishing is now controlled by `docs/publish.config.yml` which defines:
+Content publishing is controlled by `config/publish.config.yml` which defines:
 
 ```yaml
 navigation:
@@ -110,10 +111,10 @@ navigation:
 ./scripts/docs/03-build-site.sh
 
 # 4. Deploy locally
-./scripts/docs/04-deploy-local.sh
+./scripts/docs/05-deploy-quartz.sh
 
 # 5. Push to remote
-./scripts/docs/05-push-remote.sh
+./scripts/docs/06-push-remote.sh
 ```
 
 ### Cleanup
@@ -150,7 +151,9 @@ rm -rf _ws
 }
 ```
 
-### Content Mapping (`docs/publish.config.yml`)
+### Content Mapping (`config/publish.config.yml`)
+
+Note: the canonical location in this repo is `scripts/docs/config/publish.config.yml`.
 
 Defines how source files map to website structure:
 - **Navigation sections**: Demo, Skill, ADR, Examples, References
@@ -187,9 +190,9 @@ Error: _ws directory not found
 
 **YAML config not found:**
 ```bash
-Warning: Config docs/publish.config.yml not found
+ERROR: publish.config.yml not found in any expected location
 ```
-→ Ensure `docs/publish.config.yml` exists in demo repo
+→ Ensure `scripts/docs/config/publish.config.yml` exists in the demo repo checkout
 
 **Python dependencies:**
 ```bash
@@ -215,13 +218,13 @@ set -x  # Enable debug mode
 
 ### Content Updates
 
-1. Modify `docs/publish.config.yml` to control published content
+1. Modify `scripts/docs/config/publish.config.yml` to control published content
 2. Update documentation in source repositories
 3. Run pipeline to rebuild and deploy
 
 ### Adding New Content Sections
 
-1. Add new navigation section to `docs/publish.config.yml`
+1. Add new navigation section to `scripts/docs/config/publish.config.yml`
 2. Define source patterns and target paths
 3. Run content preparation to generate indexes
 
@@ -230,4 +233,4 @@ set -x  # Enable debug mode
 - Scripts clone public repositories only
 - No sensitive credentials in scripts
 - GitHub token required for CI deployment
-- Local scripts commit but don't auto-push (manual verification step)
+- Local pipeline runs the full deploy, including pushing to `gh-pages` (skip step 6 if you want build-only)

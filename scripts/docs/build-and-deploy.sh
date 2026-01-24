@@ -51,7 +51,7 @@ fi
 echo "Step 2: Preparing documentation content..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use explicit paths with YAML config
-  "$REPO_ROOT/scripts/docs/02-prepare-content.sh" \
+  "$REPO_ROOT/_ws/src/demo/scripts/docs/02-prepare-content.sh" \
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/demo" \
     "$REPO_ROOT/_ws/src/skill" \
@@ -70,36 +70,51 @@ if [ "$CI_MODE" = true ]; then
     "$REPO_ROOT" \
     "$REPO_ROOT/_ws/src/quartz" \
     "$REPO_ROOT/_ws/build" \
-    "$REPO_ROOT/scripts/docs/config/quartz.config.ts"
+    "$REPO_ROOT/_ws/src/demo/scripts/docs/config/quartz.config.ts"
 else
   # Local mode: use parameterized script with auto-detect
   "$REPO_ROOT/scripts/docs/03-build-site.sh"
 fi
 echo ""
 
-# Step 4: Deploy locally
-echo "Step 4: Deploying to local gh-pages branch..."
+# Step 4: Deploy MkDocs API documentation
+echo "Step 4: Deploying MkDocs API documentation..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/04-deploy-local.sh" \
+  "$REPO_ROOT/_ws/src/demo/scripts/docs/04-deploy-mkdocs.sh" \
+    "$REPO_ROOT/_ws/build" \
+    "$REPO_ROOT/_ws/src/skill" \
+    "$REPO_ROOT/_ws/src/demo/scripts/docs/config/mkdocs.yml"
+else
+  # Local mode: use auto-detect
+  "$REPO_ROOT/scripts/docs/04-deploy-mkdocs.sh"
+fi
+echo ""
+
+# Step 5: Deploy to local gh-pages branch
+echo "Step 5: Deploying to local gh-pages branch..."
+if [ "$CI_MODE" = true ]; then
+  # CI mode: use parameterized script
+  "$REPO_ROOT/_ws/src/demo/scripts/docs/05-deploy-quartz.sh" \
     "$REPO_ROOT/_ws/build" \
     "$REPO_ROOT/_ws/deploy/gh-pages" \
     "Deploy docs site from GitHub Actions (${GITHUB_SHA:-unknown})"
 else
   # Local mode: use parameterized script with auto-detect
-  "$REPO_ROOT/scripts/docs/04-deploy-local.sh"
+  "$REPO_ROOT/scripts/docs/05-deploy-quartz.sh"
 fi
 echo ""
 
-# Step 5: Push to remote
-echo "Step 5: Pushing to remote gh-pages branch..."
+# Step 6: Push to remote
+echo "Step 6: Committing and pushing to remote gh-pages branch..."
 if [ "$CI_MODE" = true ]; then
   # CI mode: use parameterized script with auto-push
-  "$REPO_ROOT/_ws/src/demo/scripts/docs/05-push-remote.sh" \
-    "$REPO_ROOT/_ws/deploy/gh-pages"
+  "$REPO_ROOT/_ws/src/demo/scripts/docs/06-push-remote.sh" \
+    "$REPO_ROOT/_ws/deploy/gh-pages" \
+    "Deploy docs site from GitHub Actions (${GITHUB_SHA:-unknown})"
 else
   # Local mode: use parameterized script with auto-detect
-  "$REPO_ROOT/scripts/docs/05-push-remote.sh"
+  "$REPO_ROOT/scripts/docs/06-push-remote.sh"
 fi
 echo ""
 

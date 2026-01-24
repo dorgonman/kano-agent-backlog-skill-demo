@@ -26,8 +26,8 @@ else
 fi
 
 # Validate workspace structure
-if [ ! -d "$BUILD_DIR/public" ]; then
-  echo "Error: Build public directory not found: $BUILD_DIR/public"
+if [ ! -d "$BUILD_DIR/staged" ]; then
+  echo "Error: Build staged directory not found: $BUILD_DIR/staged"
   exit 1
 fi
 
@@ -61,22 +61,7 @@ echo "Deploying to gh-pages branch..."
 find "$DEPLOY_DIR" -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
 
 # Copy built site to deployment target
-cp -r "$BUILD_DIR/public"/* "$DEPLOY_DIR/"
+cp -r "$BUILD_DIR/staged"/* "$DEPLOY_DIR/"
 
-# Configure git and commit changes
-cd "$DEPLOY_DIR"
-git config user.name "docs-bot"
-git config user.email "docs-bot@users.noreply.github.com"
-
-git add -A
-if git diff --cached --quiet; then
-  echo "No changes to deploy."
-  exit 0
-fi
-
-git commit -m "$COMMIT_MESSAGE"
-
-echo "Changes committed. To push to remote:"
-echo "  cd $DEPLOY_DIR && git push origin gh-pages"
-echo ""
-echo "Or run: ./scripts/docs/05-push-remote.sh"
+echo "Files copied to gh-pages branch."
+echo "To commit and push changes, run: ./scripts/docs/06-push-remote.sh"
