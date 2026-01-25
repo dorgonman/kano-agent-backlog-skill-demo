@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 107
-vcs.hash: cd953b7aea4c2591c9cded352c5d3edea9bf9fa7
+vcs.revno: 119
+vcs.hash: b769cbd271125e8e9f93f42cbbccc880bb36d1db
 vcs.dirty: true
 -->
 
 Source: items
-Agent: amazonq
+Agent: opencode
 
 ## New
 
@@ -134,7 +134,6 @@ Agent: amazonq
 - [KABSD-TSK-0207 Research and spec chunking, token budget fitting, and trimming for embeddings](../items/task/0200/KABSD-TSK-0207_research-and-spec-chunking-token-budget-fitting-and-trimming-for-embeddings.md)
 - [KABSD-TSK-0218 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0218_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0222 Implement `kano item create` subcommand](../items/task/0200/KABSD-TSK-0222_implement-kano-item-create-subcommand.md)
-- [KABSD-TSK-0224 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0225 Create Obsidian Base demo views](../items/task/0200/KABSD-TSK-0225_create-obsidian-base-demo-views.md)
 - [KABSD-TSK-0226 Normalize migrated backlog items for demo](../items/task/0200/KABSD-TSK-0226_normalize-migrated-backlog-items-for-demo.md)
 - [KABSD-TSK-0227 Remove demo tool wrappers and use skill scripts directly](../items/task/0200/KABSD-TSK-0227_remove-demo-tool-wrappers-and-use-skill-scripts-directly.md)
@@ -167,10 +166,18 @@ Agent: amazonq
 - [KABSD-TSK-0289 Implement Evidence Schema & Workset Metadata](../items/task/0200/KABSD-TSK-0289_implement-evidence-schema-workset-metadata.md)
 - [KABSD-TSK-0290 Implement Health Review Inspector (Evidence Credibility)](../items/task/0200/KABSD-TSK-0290_implement-health-review-inspector-evidence-credibility.md)
 - [KABSD-TSK-0291 Implement Assumptions/Priors Registry](../items/task/0200/KABSD-TSK-0291_implement-assumptions-priors-registry.md)
+- [KABSD-TSK-0296 Fix duplicate UIDs and null UIDs in backlog items](../items/task/0200/KABSD-TSK-0296_fix-duplicate-uids-and-null-uids-in-backlog-items.md)
+- [KABSD-TSK-0297 Define corpus boundaries and cache freshness policy](../items/task/0200/KABSD-TSK-0297_define-corpus-boundaries-and-cache-freshness-policy.md)
+- [KABSD-TSK-0298 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
+- [KABSD-TSK-0299 Implement repo corpus chunks DB (docs + code)](../items/task/0200/KABSD-TSK-0299_implement-repo-corpus-chunks-db-docs-code.md)
+- [KABSD-TSK-0300 Migrate SQLite index schema to use uid as PRIMARY KEY](../items/task/0200/KABSD-TSK-0296_migrate-sqlite-index-schema-to-use-uid-as-primary-key.md)
+- [KABSD-TSK-0300 Add repo corpus embedding build and hybrid search](../items/task/0300/KABSD-TSK-0300_add-repo-corpus-embedding-build-and-hybrid-search.md)
+- [KABSD-TSK-0301 Document multi-corpus search usage and rebuild commands](../items/task/0300/KABSD-TSK-0301_document-multi-corpus-search-usage-and-rebuild-commands.md)
 
 ### Bug
 
 - [KABSD-BUG-0008 Fix doctor backlog initialization check (supports config.toml; avoid false FAIL)](../items/bug/0000/KABSD-BUG-0008_fix-doctor-backlog-initialization-check-supports-config-toml-avoid-false-fail.md)
+- [KABSD-BUG-0009 SQLite index build fails due to duplicate item IDs in backlog](../items/bug/0000/KABSD-BUG-0009_sqlite-index-build-fails-due-to-duplicate-item-ids-in-backlog.md)
 
 ### Nones
 

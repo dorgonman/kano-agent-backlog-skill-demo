@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "agents": {
-    "sisyphus": {
+    "Sisyphus": {
       "model": "openai/gpt-5.2-high",
       "comment": "Main agent using OpenAI GPT 5.2 with high reasoning mode"
     },

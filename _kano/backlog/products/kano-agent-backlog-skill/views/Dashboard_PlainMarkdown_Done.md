@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 107
-vcs.hash: cd953b7aea4c2591c9cded352c5d3edea9bf9fa7
+vcs.revno: 119
+vcs.hash: b769cbd271125e8e9f93f42cbbccc880bb36d1db
 vcs.dirty: true
 -->
 
 Source: items
-Agent: amazonq
+Agent: opencode
 
 ## Done
 
@@ -48,11 +48,11 @@ Agent: amazonq
 - [KABSD-FTR-0041 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0041_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 - [KABSD-FTR-0043 Topic Templates and Archetypes](../items/feature/0000/KABSD-FTR-0043_topic-templates-and-archetypes.md)
 - [KABSD-FTR-0044 Lightweight Topic Cross-References](../items/feature/0000/KABSD-FTR-0044_lightweight-topic-cross-references.md)
-- [KABSD-FTR-0045 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
-- [KABSD-FTR-0046 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 - [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 - [KABSD-FTR-0057 Quartz Documentation Pipeline](../items/feature/0000/KABSD-FTR-0057_quartz-documentation-pipeline.md)
+- [KABSD-FTR-0060 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0061 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 
 ### UserStory
 
@@ -170,6 +170,7 @@ Agent: amazonq
 - [KABSD-TSK-0126 Improve process profile migration with original type preservation](../items/task/0100/KABSD-TSK-0126_improve-process-profile-migration-with-original-type-preservation.md)
 - [KABSD-TSK-0127 Implement kano-backlog-core Phase 2: Derived and Refs modules](../items/task/0100/KABSD-TSK-0127_implement-kano-backlog-core-phase-2-derived-and-refs-modules.md)
 - [KABSD-TSK-0130 Consider Mermaid diagrams as context-engineering artifacts for agent attention](../items/task/0100/KABSD-TSK-0130_use-mermaid-diagrams-as-context-engineering-artifacts.md)
+- [KABSD-TSK-0132 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 - [KABSD-TSK-0136 Fix gitignore for derived data compliance](../items/task/0100/KABSD-TSK-0136_fix-gitignore-for-derived-data-compliance.md)
 - [KABSD-TSK-0145 Add prerequisite install script for Python deps (self-contained skill)](../items/task/0100/KABSD-TSK-0145_add-prerequisite-install-script-for-python-deps-self-contained-skill.md)
 - [KABSD-TSK-0146 Clarify config: replace mode.role with mode.skill_developer + persona](../items/task/0100/KABSD-TSK-0146_clarify-config-replace-mode-role-with-mode-skill-developer-persona.md)
@@ -222,7 +223,6 @@ Agent: amazonq
 - [KABSD-TSK-0206 Make skill README more agent-first](../items/task/0200/KABSD-TSK-0206_make-skill-readme-more-agent-first.md)
 - [KABSD-TSK-0208 Reframe vector index backend research as pluggable backend (KABSD-TSK-0124)](../items/task/0200/KABSD-TSK-0208_reframe-vector-index-backend-research-as-pluggable-backend-kabsd-tsk-0124.md)
 - [KABSD-TSK-0209 Add link integrity validator for backlog refs](../items/task/0200/KABSD-TSK-0209_add-link-integrity-validator-for-backlog-refs.md)
-- [KABSD-TSK-0209 Gitignore: ignore product _trash directories](../items/task/0200/KABSD-TSK-0209_gitignore-ignore-product-trash-directories.md)
 - [KABSD-TSK-0210 Relax model attribution warnings for worklog commands](../items/task/0200/KABSD-TSK-0210_relax-model-attribution-warnings-for-worklog-commands.md)
 - [KABSD-TSK-0212 Add backlog-root override flag for sandbox operations](../items/task/0200/KABSD-TSK-0212_add-backlog-root-override-flag-for-sandbox-operations.md)
 - [KABSD-TSK-0213 Fix view refresh VcsMeta branch mismatch](../items/task/0200/KABSD-TSK-0213_fix-view-refresh-vcsmeta-branch-mismatch.md)
@@ -230,7 +230,6 @@ Agent: amazonq
 - [KABSD-TSK-0221 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0200/KABSD-TSK-0221_clarify-spec-workset-vs-graphrag-context-graph-responsibilities-no-conflict.md)
 - [KABSD-TSK-0223 Add UID-based duplicate ID validator and auto-remap](../items/task/0200/KABSD-TSK-0223_add-uid-based-duplicate-id-validator-and-auto-remap.md)
 - [KABSD-TSK-0224 Add admin items trash command](../items/task/0200/KABSD-TSK-0224_add-admin-items-trash-command.md)
-- [KABSD-TSK-0225 Clarify & Spec — Workset vs GraphRAG / Context Graph Responsibilities (No Conflict)](../items/task/0100/KABSD-TSK-0132_clarify-workset-graphrag-context-graph-responsibilities.md)
 - [KABSD-TSK-0232 Add conflict handling policy to config and skill](../items/task/0200/KABSD-TSK-0232_add-conflict-handling-policy-to-config-and-skill.md)
 - [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
 - [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
@@ -262,6 +261,7 @@ Agent: amazonq
 - [KABSD-TSK-0293 Cross-repo Push with GitHub Token Setup](../items/task/0200/KABSD-TSK-0293_cross-repo-push-with-github-token-setup.md)
 - [KABSD-TSK-0294 Content Cook Strategy with Manifest](../items/task/0200/KABSD-TSK-0294_content-cook-strategy-with-manifest.md)
 - [KABSD-TSK-0295 Release Trigger Workflow](../items/task/0200/KABSD-TSK-0295_release-trigger-workflow.md)
+- [KABSD-TSK-0297 Gitignore: ignore product _trash directories](../items/task/0200/KABSD-TSK-0209_gitignore-ignore-product-trash-directories.md)
 
 ### Bug
 
