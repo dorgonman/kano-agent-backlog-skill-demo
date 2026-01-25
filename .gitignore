@@ -71,5 +71,8 @@ Thumbs.db
 .opencode/.bun/
 /kano-agent-backlog-skill-demo2.local.code-workspace
 
-# 
+#
 .vs
+/.cache/
+/.local/
+/.opencode/oh-my-opencode.json.bak.2026-01-24T23-47-15-587Z
