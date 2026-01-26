@@ -459,11 +459,11 @@ Agent: "Inspector found 3 items blocking my work (evidence: ...)"
 
 # Related
 
-- [[KABSD-EPIC-0011]]: Inspector Pattern: External Agent Query Surface (parent epic)
-- [[KABSD-FTR-0055]]: Query Surface API Implementation
-- [[KABSD-FTR-0056]]: Inspector Agent Reference Implementation
-- [[ADR-0013]]: Codebase Architecture and Module Boundaries (will add inspector pattern section)
-- [[ADR-0004]]: File-First Architecture with SQLite Index (complements this ADR)
+- [KABSD-EPIC-0011](../items/epic/0000/KABSD-EPIC-0011_inspector-pattern-external-agent-query-surface.md): Inspector Pattern: External Agent Query Surface (parent epic)
+- [KABSD-FTR-0055](../items/feature/0000/KABSD-FTR-0055_query-surface-api-implementation.md): Query Surface API Implementation
+- [KABSD-FTR-0056](../items/feature/0000/KABSD-FTR-0056_inspector-agent-reference-implementation.md): Inspector Agent Reference Implementation
+- [ADR-0013](ADR-0013_codebase-architecture-and-module-boundaries.md): Codebase Architecture and Module Boundaries (will add inspector pattern section)
+- [ADR-0004](ADR-0004_file-first-architecture-with-sqlite-index.md): File-First Architecture with SQLite Index (complements this ADR)
 
 # Status
 

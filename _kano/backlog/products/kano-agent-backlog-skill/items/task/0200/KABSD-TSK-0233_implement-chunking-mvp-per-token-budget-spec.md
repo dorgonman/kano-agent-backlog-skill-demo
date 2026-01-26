@@ -14,12 +14,12 @@ links:
 owner: codex
 parent: KABSD-USR-0029
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Implement chunking MVP per token budget spec
 type: Task
 uid: 019bc751-425d-71c7-a896-cbfef9c68265
-updated: '2026-01-17'
+updated: 2026-01-26
 ---
 
 # Context
@@ -61,3 +61,5 @@ Deliver a working chunking pipeline with deterministic chunk IDs, token budget f
 2026-01-17 11:32 [agent=codex] [model=gpt-5.2-codex] Integrated chunking MVP pipeline in kano_backlog_core.token_budget: added BudgetedChunk and budget_chunks() to run chunk_text + enforce_token_budget, recompute chunk_id from trimmed span; exposed build_chunk_id in chunking core and exported new APIs.
 2026-01-17 11:43 [agent=codex] [model=gpt-5.2-codex] Removed legacy chunking package and legacy tests; retained only kano_backlog_core chunking MVP test suite.
 2026-01-17 11:47 [agent=codex] [model=gpt-5.2-codex] Updated AGENTS.md to drop legacy chunking install/test/lint references and switch example to ChunkingOptions/TokenBudgetPolicy.
+2026-01-26 13:15 [agent=opencode] [model=unknown] Verified chunking MVP implementation: (1) Deterministic chunk IDs ✓ (2) Token budget enforcement with safety margin ✓ (3) Tokenizer adapter interface (heuristic + tiktoken) ✓ (4) All 89 chunking tests pass including MVP cases (ASCII, long English, CJK) ✓. Implementation complete in kano_backlog_core.chunking + token_budget modules.
+2026-01-26 13:15 [agent=opencode] State -> Done.

@@ -22,7 +22,7 @@ tags:
 title: Clean up broken backlog links (missing/ambiguous targets)
 type: Task
 uid: 019bc485-5c73-74db-9872-b3e34254fb81
-updated: '2026-01-16'
+updated: '2026-01-26'
 ---
 
 # Context
@@ -59,3 +59,4 @@ Risk: removing links may lose historical context; mitigate by keeping the visibl
 2026-01-16 14:24 [agent=codex] [model=unknown] Updated broken refs by remapping item/decision links to product-root paths and fixing a few legacy targets; remaining issues are missing items/artifacts and ambiguous ADR-0004/ADR-0015 references.
 2026-01-16 16:12 [agent=codex] [model=unknown] Restored link integrity by creating replacement items for missing KABSD-TSK/USR references, remapping ADR-0004/ADR-0015 duplicates (per-product -> ADR-0032, decision-for -> ADR-0033), and repointing ambiguous ADR links. Added product-local placeholder artifacts for KABSD-FTR-0009/KABSD-FTR-0015, repointed legacy artifact links, and resolved placeholder links. Fixed admin links remap-ref result bug and added ADR UID backfill command + ADR create UID field; backfilled UUIDv7 uids across decisions.
 2026-01-16 16:14 [agent=codex] [model=unknown] Aligned ADR frontmatter IDs to filenames to eliminate mismatched IDs introduced by prior remaps.
+2026-01-26 13:16 [agent=opencode] [model=unknown] Fixed remaining 5 broken links: (1) Updated ADR-0037 to use markdown links instead of wikilinks for KABSD-EPIC-0011, KABSD-FTR-0055, KABSD-FTR-0056, ADR-0013, ADR-0004 ✓ (2) Fixed 3 relative path links in _meta/indexes.md for KABSD-EPIC-0010, 0011, 0012 ✓. Link validation now reports 0 issues across 509 files ✓. All acceptance criteria met.

@@ -14,12 +14,12 @@ links:
 owner: None
 parent: KABSD-FTR-0013
 priority: P2
-state: InProgress
+state: Done
 tags: []
 title: Implement repo-shared active topic state (lock-free)
 type: Task
 uid: 019bce98-b850-74e4-9959-b1ec62f9f14c
-updated: 2026-01-19
+updated: 2026-01-26
 ---
 
 # Context
@@ -48,4 +48,5 @@ Lock-free writes can lose the last writer in rare concurrent updates; mitigate b
 2026-01-18 08:54 [agent=codex] [model=unknown] Ready: implement repo-shared active topic state store (state.json + topics/*.json) with legacy active_topic.* migration.
 2026-01-18 09:17 [agent=codex] [model=unknown] Ready: implement repo-shared active topic state store (state.json + topics/*.json) with legacy active_topic.* migration.
 2026-01-19 13:45 [agent=copilot] [model=claude-haiku] InProgress: Implemented core KABSD-TSK-0257 with (1) StateIndex/AgentTopicState/TopicStateDocument data classes, (2) state.json + topics/*.json read/write with atomic writes, (3) updated get_active_topic() to read from state.json with .txt fallback, (4) updated switch_topic() to write to both stores, (5) migrate_legacy_active_topics() and cleanup functions, (6) new API functions (list_active_topics, get_topic_state_by_name, update_agent_state), (7) CLI commands (list-active, show-state, migrate, cleanup-legacy), (8) all 27 existing topic tests pass. Ready for next phase.
-
+2026-01-26 13:14 [agent=opencode] [model=unknown] Verified implementation: (1) state.json exists with version=1, repo_id, and agents map ✓ (2) Topic documents exist at topics/<topic_id>.json ✓ (3) All 35 topic tests pass ✓ (4) No background lock/GC introduced ✓ (5) Local-first only ✓. All acceptance criteria met.
+2026-01-26 13:14 [agent=opencode] State -> Done.

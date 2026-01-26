@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 126
-vcs.hash: 66be52f463712d75e57ed47a15667687f1a21a45
+vcs.revno: 127
+vcs.hash: 20431d9542c069d0a08ce6320f88cc69dcb1bca2
 vcs.dirty: true
 -->
 
@@ -237,6 +237,7 @@ Agent: opencode
 - [KABSD-TSK-0223 Add UID-based duplicate ID validator and auto-remap](../items/task/0200/KABSD-TSK-0223_add-uid-based-duplicate-id-validator-and-auto-remap.md)
 - [KABSD-TSK-0224 Add admin items trash command](../items/task/0200/KABSD-TSK-0224_add-admin-items-trash-command.md)
 - [KABSD-TSK-0232 Add conflict handling policy to config and skill](../items/task/0200/KABSD-TSK-0232_add-conflict-handling-policy-to-config-and-skill.md)
+- [KABSD-TSK-0233 Implement chunking MVP per token budget spec](../items/task/0200/KABSD-TSK-0233_implement-chunking-mvp-per-token-budget-spec.md)
 - [KABSD-TSK-0234 Add CLI command to update work item parent](../items/task/0200/KABSD-TSK-0234_add-cli-command-to-update-work-item-parent.md)
 - [KABSD-TSK-0235 Clarify Epic/Feature/UserStory/Task ticketing guidance in SKILL](../items/task/0200/KABSD-TSK-0235_clarify-epic-feature-userstory-task-ticketing-guidance-in-skill.md)
 - [KABSD-TSK-0236 Add ticketing guidance to conventions via CLI](../items/task/0200/KABSD-TSK-0236_add-ticketing-guidance-to-conventions-via-cli.md)
@@ -248,6 +249,7 @@ Agent: opencode
 - [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
 - [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
 - [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
+- [KABSD-TSK-0257 Implement repo-shared active topic state (lock-free)](../items/task/0200/KABSD-TSK-0257_implement-repo-shared-active-topic-state-lock-free.md)
 - [KABSD-TSK-0258 Improve topic distill brief items listing](../items/task/0200/KABSD-TSK-0258_improve-topic-distill-brief-items-listing.md)
 - [KABSD-TSK-0259 Document topic snapshot retention policy (keep latest)](../items/task/0200/KABSD-TSK-0259_document-topic-snapshot-retention-policy-keep-latest.md)
 - [KABSD-TSK-0260 Implement sqlite vector backend MVP wiring](../items/task/0200/KABSD-TSK-0260_implement-sqlite-vector-backend-mvp-wiring.md)

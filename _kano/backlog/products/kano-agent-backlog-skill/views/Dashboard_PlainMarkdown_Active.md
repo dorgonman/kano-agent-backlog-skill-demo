@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 126
-vcs.hash: 66be52f463712d75e57ed47a15667687f1a21a45
+vcs.revno: 127
+vcs.hash: 20431d9542c069d0a08ce6320f88cc69dcb1bca2
 vcs.dirty: true
 -->
 
@@ -203,12 +203,10 @@ Agent: opencode
 - [KABSD-TSK-0110 Evaluate VCS Query Cache Layer](../items/task/0100/KABSD-TSK-0110_evaluate-vcs-query-cache-layer.md)
 - [KABSD-TSK-0188 Restructure Topic directory to _kano/backlog/topics with materials buffer](../items/task/0100/KABSD-TSK-0188_restructure-topic-directory-to-kano-backlog-topics-with-materials-buffer.md)
 - [KABSD-TSK-0211 Clean up broken backlog links (missing/ambiguous targets)](../items/task/0200/KABSD-TSK-0211_clean-up-broken-backlog-links-missing-ambiguous-targets.md)
-- [KABSD-TSK-0233 Implement chunking MVP per token budget spec](../items/task/0200/KABSD-TSK-0233_implement-chunking-mvp-per-token-budget-spec.md)
 - [KABSD-TSK-0237 Implement tokenizer adapter and model token budget interface](../items/task/0200/KABSD-TSK-0237_implement-tokenizer-adapter-and-model-token-budget-interface.md)
 - [KABSD-TSK-0238 Implement deterministic chunking core (normalization, boundaries, overlap)](../items/task/0200/KABSD-TSK-0238_implement-deterministic-chunking-core-normalization-boundaries-overlap.md)
 - [KABSD-TSK-0239 Implement token-budget fitting and trimming policy](../items/task/0200/KABSD-TSK-0239_implement-token-budget-fitting-and-trimming-policy.md)
 - [KABSD-TSK-0240 Add MVP chunking tests (ASCII, long English, CJK)](../items/task/0200/KABSD-TSK-0240_add-mvp-chunking-tests-ascii-long-english-cjk.md)
-- [KABSD-TSK-0257 Implement repo-shared active topic state (lock-free)](../items/task/0200/KABSD-TSK-0257_implement-repo-shared-active-topic-state-lock-free.md)
 - [KABSD-TSK-0270 Skillify release check workflow (0.0.2)](../items/task/0200/KABSD-TSK-0270_skillify-release-check-workflow-0-0-2.md)
 - [KABSD-TSK-0299 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 
