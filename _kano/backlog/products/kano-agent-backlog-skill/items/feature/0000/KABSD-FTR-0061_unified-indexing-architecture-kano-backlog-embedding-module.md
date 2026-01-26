@@ -43,6 +43,9 @@ The current indexing and embedding implementation has significant code duplicati
 4. Embedding model management scattered across files
 5. No unified abstraction for FTS + vector + hybrid search
 
+Scale note:
+- This must support very large monorepos (e.g., AAA game projects using Unreal Engine), where repo indexing can involve a huge number of files and large generated/vendor directories.
+
 # Goal
 
 Create a unified `kano_backlog_embedding` module that:
@@ -107,6 +110,21 @@ kano_backlog_embedding/
 3. `FTSBackend` / `VectorBackend` - storage backends for search
 4. `IndexBuilder` - orchestrates building with progress tracking
 
+Implementation notes (for 0.0.3 design):
+- Keep the current repo chunks parallel builder approach, but design a unified progress/cancellation surface for both FTS and vector builds.
+- Add batch-oriented embedding/indexing as a first-class concept (vector build may need batching, multiprocessing, or backend-level batching; avoid assuming ThreadPoolExecutor helps for model inference).
+- Large-repo hygiene must be part of the architecture: default exclude lists (build outputs, vendor, engine intermediates), configurable include globs, and optional hard limits (max file size, max files, max total bytes).
+- Binary assets (e.g., Unreal `.uasset`) must be excluded from direct indexing/embedding; instead, support project-provided sidecar artifacts (text/JSON, and optionally images) as the index source.
+
+Project extension point (sidecar contract):
+- The unified indexing pipeline must allow a project to provide a deterministic "sidecar export" step that produces indexable artifacts for binary assets.
+- Sidecar artifacts are the only inputs to FTS/vector for those assets (never embed raw binary).
+- Proposed contract (sketch):
+  - Input: project root + corpus config
+  - Output: a sidecar directory tree (e.g., `.cache/index/sidecar/<corpus>/...`) containing JSON/text records and stable asset IDs
+  - Requirements: deterministic, incremental-friendly, includes provenance (source path, tool/version, timestamp)
+  - Config: project-defined include/exclude + binary extension list + sidecar roots
+
 # Alternatives
 
 1. **Keep current structure, just refactor duplicates** - Less intrusive but doesn't solve architectural issues
@@ -129,6 +147,7 @@ kano_backlog_embedding/
 - **Migration effort**: Need to update all import paths and CLI commands
 - **Testing**: Need comprehensive test coverage before migration
 - **Performance**: Must not regress from current async implementation
+- **Repo scale**: Unreal/AAA repos can exceed typical assumptions (file count, directory depth, binary assets); indexing must be configurable and resilient.
 - **Deadline**: Target 0.0.3, may slip if scope creeps
 
 # Worklog
