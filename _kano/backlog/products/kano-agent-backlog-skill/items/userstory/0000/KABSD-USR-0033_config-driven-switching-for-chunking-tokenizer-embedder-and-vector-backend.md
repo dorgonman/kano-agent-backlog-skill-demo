@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0042
 priority: P0
-state: Proposed
+state: Done
 tags:
 - config
 - chunking
@@ -24,7 +24,7 @@ tags:
 title: Config-driven switching for chunking, tokenizer, embedder, and vector backend
 type: UserStory
 uid: 019bcbf4-3775-7735-b414-41d699e327ba
-updated: '2026-01-17'
+updated: 2026-01-26
 ---
 
 # Context
@@ -50,3 +50,6 @@ Config drift across layers can be confusing; provide a deterministic effective-c
 # Worklog
 
 2026-01-17 20:35 [agent=copilot] [model=unknown] Created item
+2026-01-26 09:35 [agent=opencode] [model=unknown] Config infrastructure review: tokenizer_config.py (TOML-based with validation), pipeline_config.py (integrates chunking/tokenizer/embedding/vector), and config.py (layered resolution) all exist. Checking acceptance criteria against implementation.
+2026-01-26 09:35 [agent=opencode] State -> InProgress. [Ready gate validated]
+2026-01-26 10:06 [agent=opencode] [model=unknown] Acceptance criteria verified: (1) Config schema exists and validated (tokenizer_config.py + pipeline_config.py with comprehensive tests passing), (2) CLI command 'kano-backlog config pipeline' validates end-to-end pipeline from config, (3) Topic-level config overrides supported via layered resolution. All criteria met.

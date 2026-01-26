@@ -14,7 +14,7 @@ links:
 owner: opencode
 parent: KABSD-FTR-0058
 priority: P1
-state: InProgress
+state: Done
 tags:
 - search
 - fts
@@ -22,7 +22,7 @@ tags:
 title: Implement backlog corpus chunks DB (items + ADRs + topics)
 type: Task
 uid: 019bf587-8b35-7527-9890-167e854ff24c
-updated: 2026-01-25
+updated: 2026-01-26
 ---
 
 # Context
@@ -49,3 +49,5 @@ Topics may not have frontmatter; requires synthetic identity and collision avoid
 
 2026-01-25 22:20 [agent=opencode] Created item
 2026-01-25 23:29 [agent=opencode] Started implementation of backlog corpus chunks DB. Plan: 1) Expand scanning to include ADRs and Topics in chunks_db.py; 2) Ensure stable ID generation for non-item files; 3) Update build_chunks_db to process these new sources.
+2026-01-26 09:27 [agent=opencode] [model=unknown] Implementation complete: Modified chunks_db.py to scan and index ADRs from products/*/decisions/** and Topics from topics/**. Added _scan_adrs() and _scan_topics() helper functions. Tests pass for ADR and Topic indexing. Backlog corpus now includes items + ADRs + topics.
+2026-01-26 09:27 [agent=opencode] State -> Done.

@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-FTR-0042
 priority: P1
-state: InProgress
+state: Done
 tags:
 - tokenizer
 - tiktoken
@@ -23,7 +23,7 @@ tags:
 title: Tokenizer adapters for accurate token counting (OpenAI and local)
 type: UserStory
 uid: 019bcbf3-fc05-7137-a149-58e498656490
-updated: 2026-01-19
+updated: '2026-01-26'
 ---
 
 # Context
@@ -50,3 +50,7 @@ Optional dependencies may not be available on all platforms; implement graceful 
 
 2026-01-17 20:35 [agent=copilot] [model=unknown] Created item
 2026-01-19 03:19 [agent=opencode] [model=unknown] Auto parent sync: child KABSD-TSK-0244 -> Blocked; parent -> InProgress.
+2026-01-26 09:34 [agent=opencode] Auto parent sync: child KABSD-TSK-0245 -> Done; parent -> Done.
+2026-01-26 09:34 [agent=opencode] Auto parent sync: child KABSD-TSK-0244 -> Done; parent -> Done.
+2026-01-26 09:34 [agent=opencode] Auto parent sync: child KABSD-TSK-0246 -> Done; parent -> Done.
+2026-01-26 09:34 [agent=opencode] [model=unknown] All child tasks complete: KABSD-TSK-0244 (tiktoken), KABSD-TSK-0245 (HuggingFace), KABSD-TSK-0246 (max-tokens policy) are implemented and working. TokenizerRegistry with fallback chain exists. User story acceptance criteria met.

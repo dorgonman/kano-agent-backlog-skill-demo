@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0058
 priority: P1
-state: Proposed
+state: Done
 tags:
 - search
 - fts
@@ -22,7 +22,7 @@ tags:
 title: Implement repo corpus chunks DB (docs + code)
 type: Task
 uid: 019bf587-9093-71fe-bfd8-c2305166a910
-updated: '2026-01-25'
+updated: 2026-01-26
 ---
 
 # Context
@@ -48,3 +48,6 @@ Large repos can increase build time; mitigate with conservative defaults and mti
 # Worklog
 
 2026-01-25 22:21 [agent=opencode] Created item
+2026-01-26 08:41 [agent=opencode] State -> InProgress. [Ready gate validated]
+2026-01-26 08:51 [agent=opencode] [model=unknown] Implementation complete: Created repo_chunks_db.py with build_repo_chunks_db() and query_repo_chunks_fts() functions. Added CLI commands 'chunks build-repo' and 'chunks query-repo'. All 16 tests pass. Includes configurable include/exclude patterns, file size limits, and mtime-based scanning. DB stored at <workspace>/.cache/repo_chunks.sqlite3.
+2026-01-26 08:51 [agent=opencode] State -> Done.

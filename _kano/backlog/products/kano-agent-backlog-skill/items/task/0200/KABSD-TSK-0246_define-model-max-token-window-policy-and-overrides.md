@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-USR-0032
 priority: P2
-state: Proposed
+state: Done
 tags:
 - tokenizer
 - max-tokens
@@ -22,7 +22,7 @@ tags:
 title: Define model max-token window policy and overrides
 type: Task
 uid: 019bcbf6-13e1-711b-9f64-7cfeeab4e55e
-updated: '2026-01-17'
+updated: '2026-01-26'
 ---
 
 # Context
@@ -48,3 +48,5 @@ Incorrect max token windows can cause provider errors or silent truncation; requ
 # Worklog
 
 2026-01-17 20:37 [agent=copilot] [model=unknown] Created item
+2026-01-26 09:34 [agent=opencode] State -> Done.
+2026-01-26 09:34 [agent=opencode] [model=unknown] Implementation already exists: resolve_model_max_tokens() function with MODEL_MAX_TOKENS mapping (lines 488-498) supports overrides and defaults. Policy is implemented and working.

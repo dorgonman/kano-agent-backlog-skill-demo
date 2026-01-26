@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 119
-vcs.hash: b769cbd271125e8e9f93f42cbbccc880bb36d1db
+vcs.revno: 120
+vcs.hash: 3c94a03ebad1797a680bfe1d39373b0ef285ceb5
 vcs.dirty: true
 -->
 
@@ -73,7 +73,6 @@ Agent: opencode
 - [KABSD-USR-0026 Assignment record and conflict isolation for dispatched work](../items/userstory/0000/KABSD-USR-0026_assignment-record-and-conflict-isolation-for-dispatched-work.md)
 - [KABSD-USR-0027 Governance and outcome metrics for posterior tiering](../items/userstory/0000/KABSD-USR-0027_governance-and-outcome-metrics-for-posterior-tiering.md)
 - [KABSD-USR-0028 Seed demo data and views from the skill](../items/userstory/0000/KABSD-USR-0028_seed-demo-data-and-views-from-the-skill.md)
-- [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
 - [KABSD-USR-0040 Archive/unarchive work items with experimental gating](../items/userstory/0000/KABSD-USR-0040_archive-unarchive-work-items-with-experimental-gating.md)
 - [KABSD-USR-0041 Archive/unarchive topics and hide archived topics from default views](../items/userstory/0000/KABSD-USR-0041_archive-unarchive-topics-and-hide-archived-topics-from-default-views.md)
 - [KABSD-USR-0042 Search across hot + archived by default for agents (scope=all)](../items/userstory/0000/KABSD-USR-0042_search-across-hot-archived-by-default-for-agents-scope-all.md)
@@ -141,8 +140,6 @@ Agent: opencode
 - [KABSD-TSK-0229 Refresh demo dashboard views](../items/task/0200/KABSD-TSK-0229_refresh-demo-dashboard-views.md)
 - [KABSD-TSK-0230 Ignore demo artifacts in git](../items/task/0200/KABSD-TSK-0230_ignore-demo-artifacts-in-git.md)
 - [KABSD-TSK-0231 Restore generate_demo_views as self-contained skill script](../items/task/0200/KABSD-TSK-0231_restore-generate-demo-views-as-self-contained-skill-script.md)
-- [KABSD-TSK-0245 Implement HuggingFace tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0245_implement-huggingface-tokenizer-adapter-optional-dependency.md)
-- [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
 - [KABSD-TSK-0247 Define embedding pipeline config schema (TOML) and validation](../items/task/0200/KABSD-TSK-0247_define-embedding-pipeline-config-schema-toml-and-validation.md)
 - [KABSD-TSK-0248 Add effective-config debug output for embedding pipeline](../items/task/0200/KABSD-TSK-0248_add-effective-config-debug-output-for-embedding-pipeline.md)
 - [KABSD-TSK-0249 Add topic-level config examples for embedding evaluation](../items/task/0200/KABSD-TSK-0249_add-topic-level-config-examples-for-embedding-evaluation.md)
@@ -169,10 +166,7 @@ Agent: opencode
 - [KABSD-TSK-0296 Fix duplicate UIDs and null UIDs in backlog items](../items/task/0200/KABSD-TSK-0296_fix-duplicate-uids-and-null-uids-in-backlog-items.md)
 - [KABSD-TSK-0297 Define corpus boundaries and cache freshness policy](../items/task/0200/KABSD-TSK-0297_define-corpus-boundaries-and-cache-freshness-policy.md)
 - [KABSD-TSK-0298 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
-- [KABSD-TSK-0299 Implement repo corpus chunks DB (docs + code)](../items/task/0200/KABSD-TSK-0299_implement-repo-corpus-chunks-db-docs-code.md)
 - [KABSD-TSK-0300 Migrate SQLite index schema to use uid as PRIMARY KEY](../items/task/0200/KABSD-TSK-0296_migrate-sqlite-index-schema-to-use-uid-as-primary-key.md)
-- [KABSD-TSK-0300 Add repo corpus embedding build and hybrid search](../items/task/0300/KABSD-TSK-0300_add-repo-corpus-embedding-build-and-hybrid-search.md)
-- [KABSD-TSK-0301 Document multi-corpus search usage and rebuild commands](../items/task/0300/KABSD-TSK-0301_document-multi-corpus-search-usage-and-rebuild-commands.md)
 
 ### Bug
 

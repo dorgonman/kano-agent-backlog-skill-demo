@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 119
-vcs.hash: b769cbd271125e8e9f93f42cbbccc880bb36d1db
+vcs.revno: 120
+vcs.hash: 3c94a03ebad1797a680bfe1d39373b0ef285ceb5
 vcs.dirty: true
 -->
 
@@ -46,12 +46,16 @@ Agent: opencode
 - [KABSD-FTR-0039 Reproducible docs metadata (VCS-agnostic; remove timestamps)](../items/feature/0000/KABSD-FTR-0039_reproducible-docs-metadata-vcs-agnostic-remove-timestamps.md)
 - [KABSD-FTR-0040 Topic Spec Support](../items/feature/0000/KABSD-FTR-0040_topic-spec-support.md)
 - [KABSD-FTR-0041 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0041_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0042 Embedding providers, tokenizers, and benchmark harness](../items/feature/0000/KABSD-FTR-0042_embedding-providers-tokenizers-and-benchmark-harness.md)
 - [KABSD-FTR-0043 Topic Templates and Archetypes](../items/feature/0000/KABSD-FTR-0043_topic-templates-and-archetypes.md)
 - [KABSD-FTR-0044 Lightweight Topic Cross-References](../items/feature/0000/KABSD-FTR-0044_lightweight-topic-cross-references.md)
 - [KABSD-FTR-0045 Topic Snapshots and Checkpoints](../items/feature/0000/KABSD-FTR-0045_topic-snapshots-and-checkpoints.md)
 - [KABSD-FTR-0046 Topic Merge and Split Operations](../items/feature/0000/KABSD-FTR-0046_topic-merge-and-split-operations.md)
 - [KABSD-FTR-0057 Quartz Documentation Pipeline](../items/feature/0000/KABSD-FTR-0057_quartz-documentation-pipeline.md)
+- [KABSD-FTR-0058 Multi-corpus hybrid search (backlog + repo)](../items/feature/0000/KABSD-FTR-0058_multi-corpus-hybrid-search-backlog-repo.md)
+- [KABSD-FTR-0059 Ready Gate Validation and Enforcement](../items/feature/0000/KABSD-FTR-0059_ready-gate-validation-and-enforcement.md)
 - [KABSD-FTR-0060 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
+- [KABSD-FTR-0060 ID generation race condition prevention](../items/feature/0000/KABSD-FTR-0060_id-generation-race-condition-prevention.md)
 - [KABSD-FTR-0061 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 
 ### UserStory
@@ -68,6 +72,8 @@ Agent: opencode
 - [KABSD-USR-0029 Chunking and token-budget embedding pipeline MVP](../items/userstory/0000/KABSD-USR-0029_chunking-and-token-budget-embedding-pipeline-mvp.md)
 - [KABSD-USR-0030 Pluggable vector backend MVP for embeddings](../items/userstory/0000/KABSD-USR-0030_pluggable-vector-backend-mvp-for-embeddings.md)
 - [KABSD-USR-0031 Embedding adapter interface with token-counting telemetry](../items/userstory/0000/KABSD-USR-0031_embedding-adapter-interface-with-token-counting-telemetry.md)
+- [KABSD-USR-0032 Tokenizer adapters for accurate token counting (OpenAI and local)](../items/userstory/0000/KABSD-USR-0032_tokenizer-adapters-for-accurate-token-counting-openai-and-local.md)
+- [KABSD-USR-0033 Config-driven switching for chunking, tokenizer, embedder, and vector backend](../items/userstory/0000/KABSD-USR-0033_config-driven-switching-for-chunking-tokenizer-embedder-and-vector-backend.md)
 - [KABSD-USR-0034 Benchmark harness for chunking and embedding options (multilingual, window limits)](../items/userstory/0000/KABSD-USR-0034_benchmark-harness-for-chunking-and-embedding-options-multilingual-window-limits.md)
 - [KABSD-USR-0035 Decide cross-lingual retrieval and index strategy via ADRs](../items/userstory/0000/KABSD-USR-0035_decide-cross-lingual-retrieval-and-index-strategy-via-adrs.md)
 - [KABSD-USR-0036 Implement Topic Template System with Predefined Archetypes](../items/userstory/0000/KABSD-USR-0036_implement-topic-template-system-with-predefined-archetypes.md)
@@ -237,6 +243,9 @@ Agent: opencode
 - [KABSD-TSK-0241 Implement embedding adapter interface and result types](../items/task/0200/KABSD-TSK-0241_implement-embedding-adapter-interface-and-result-types.md)
 - [KABSD-TSK-0242 Add embedding adapter factory and config resolver](../items/task/0200/KABSD-TSK-0242_add-embedding-adapter-factory-and-config-resolver.md)
 - [KABSD-TSK-0243 Implement noop embedding adapter and telemetry tests](../items/task/0200/KABSD-TSK-0243_implement-noop-embedding-adapter-and-telemetry-tests.md)
+- [KABSD-TSK-0244 Implement tiktoken tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0244_implement-tiktoken-tokenizer-adapter-optional-dependency.md)
+- [KABSD-TSK-0245 Implement HuggingFace tokenizer adapter (optional dependency)](../items/task/0200/KABSD-TSK-0245_implement-huggingface-tokenizer-adapter-optional-dependency.md)
+- [KABSD-TSK-0246 Define model max-token window policy and overrides](../items/task/0200/KABSD-TSK-0246_define-model-max-token-window-policy-and-overrides.md)
 - [KABSD-TSK-0255 Design topic template schema and storage structure](../items/task/0200/KABSD-TSK-0255_design-topic-template-schema-and-storage-structure.md)
 - [KABSD-TSK-0256 Add OpenCode skill wrappers pointing to canonical SKILL.md](../items/task/0200/KABSD-TSK-0256_add-opencode-skill-wrappers-pointing-to-canonical-skill-md.md)
 - [KABSD-TSK-0258 Improve topic distill brief items listing](../items/task/0200/KABSD-TSK-0258_improve-topic-distill-brief-items-listing.md)
@@ -262,6 +271,21 @@ Agent: opencode
 - [KABSD-TSK-0294 Content Cook Strategy with Manifest](../items/task/0200/KABSD-TSK-0294_content-cook-strategy-with-manifest.md)
 - [KABSD-TSK-0295 Release Trigger Workflow](../items/task/0200/KABSD-TSK-0295_release-trigger-workflow.md)
 - [KABSD-TSK-0297 Gitignore: ignore product _trash directories](../items/task/0200/KABSD-TSK-0209_gitignore-ignore-product-trash-directories.md)
+- [KABSD-TSK-0298 Implement backlog corpus chunks DB (items + ADRs + topics)](../items/task/0200/KABSD-TSK-0298_implement-backlog-corpus-chunks-db-items-adrs-topics.md)
+- [KABSD-TSK-0299 Implement repo corpus chunks DB (docs + code)](../items/task/0200/KABSD-TSK-0299_implement-repo-corpus-chunks-db-docs-code.md)
+- [KABSD-TSK-0300 Add repo corpus embedding build and hybrid search](../items/task/0300/KABSD-TSK-0300_add-repo-corpus-embedding-build-and-hybrid-search.md)
+- [KABSD-TSK-0301 Document multi-corpus search usage and rebuild commands](../items/task/0300/KABSD-TSK-0301_document-multi-corpus-search-usage-and-rebuild-commands.md)
+- [KABSD-TSK-0302 Document Ready gate workflow and validation behavior](../items/task/0300/KABSD-TSK-0302_document-ready-gate-workflow-and-validation-behavior.md)
+- [KABSD-TSK-0303 Add Ready gate validation to update-state command](../items/task/0300/KABSD-TSK-0303_add-ready-gate-validation-to-update-state-command.md)
+- [KABSD-TSK-0304 Add item check-ready CLI command](../items/task/0300/KABSD-TSK-0304_add-item-check-ready-cli-command.md)
+- [KABSD-TSK-0305 Implement is_ready() validation function in core](../items/task/0300/KABSD-TSK-0305_implement-is-ready-validation-function-in-core.md)
+- [KABSD-TSK-0306 Add parent Ready gate check to item create command](../items/task/0300/KABSD-TSK-0306_add-parent-ready-gate-check-to-item-create-command.md)
+- [KABSD-TSK-0307 Migrate item create command to use DB-based ID generation](../items/task/0300/KABSD-TSK-0307_migrate-item-create-command-to-use-db-based-id-generation.md)
+- [KABSD-TSK-0308 Add id_sequences table to chunks.sqlite3 schema](../items/task/0300/KABSD-TSK-0308_add-id-sequences-table-to-chunks-sqlite3-schema.md)
+- [KABSD-TSK-0309 Implement get_next_id_from_db() atomic ID generation](../items/task/0300/KABSD-TSK-0309_implement-get-next-id-from-db-atomic-id-generation.md)
+- [KABSD-TSK-0310 Add migration script to initialize sequences from existing files](../items/task/0300/KABSD-TSK-0310_add-migration-script-to-initialize-sequences-from-existing-files.md)
+- [KABSD-TSK-0311 Add tests for concurrent ID generation](../items/task/0300/KABSD-TSK-0311_add-tests-for-concurrent-id-generation.md)
+- [KABSD-TSK-0312 Refine Ready Gate definitions by item type](../items/task/0300/KABSD-TSK-0312_refine-ready-gate-definitions-by-item-type.md)
 
 ### Bug
 

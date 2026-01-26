@@ -14,7 +14,7 @@ links:
 owner: None
 parent: KABSD-EPIC-0003
 priority: P2
-state: InProgress
+state: Done
 tags:
 - embedding
 - tokenizer
@@ -24,7 +24,7 @@ tags:
 title: Embedding providers, tokenizers, and benchmark harness
 type: Feature
 uid: 019bcbef-dc2a-778e-8c87-d5619170230c
-updated: 2026-01-19
+updated: '2026-01-26'
 ---
 
 # Context
@@ -51,3 +51,4 @@ Optional dependencies (tiktoken, transformers, sentence-transformers) may be pla
 
 2026-01-17 20:30 [agent=copilot] [model=unknown] Created item
 2026-01-19 03:00 [agent=opencode] [model=unknown] Auto parent sync: child KABSD-USR-0031 -> InProgress; parent -> InProgress.
+2026-01-26 10:07 [agent=opencode] [model=unknown] All child user stories complete: USR-0031 (Done), USR-0032 (Done), USR-0033 (Done), USR-0034 (Done), USR-0035 (Done). Feature acceptance criteria met: embedding adapter interface exists, tokenizer adapters implemented, config-driven switching working, benchmark harness available, cross-lingual strategy documented in ADRs.

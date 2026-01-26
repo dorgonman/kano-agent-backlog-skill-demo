@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0058
 priority: P1
-state: Proposed
+state: Done
 tags:
 - search
 - embedding
@@ -22,7 +22,7 @@ tags:
 title: Add repo corpus embedding build and hybrid search
 type: Task
 uid: 019bf587-97c1-77a6-b874-6d5fb4f86b96
-updated: '2026-01-25'
+updated: '2026-01-26'
 ---
 
 # Context
@@ -48,3 +48,6 @@ Vector rerank over large candidate sets can be slow; mitigate by limiting FTS ca
 # Worklog
 
 2026-01-25 22:21 [agent=opencode] Created item
+2026-01-26 08:53 [agent=opencode] State -> InProgress. [Ready gate validated]
+2026-01-26 08:55 [agent=opencode] State -> Done.
+2026-01-26 08:55 [agent=opencode] [model=unknown] Implementation complete: Created repo_vector_index.py with build_repo_vector_index() for embedding build with incremental indexing and stale vector pruning. Created repo_vector_query.py with search_repo_hybrid() for FTS+vector rerank. Added CLI commands 'chunks build-repo-vectors' and 'chunks search-repo-hybrid'. Embedding space ID includes corpus:repo prefix to prevent cross-corpus pollution. Supports force rebuild and configurable FTS candidate count.
