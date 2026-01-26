@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 120
-vcs.hash: 3c94a03ebad1797a680bfe1d39373b0ef285ceb5
+vcs.revno: 126
+vcs.hash: 66be52f463712d75e57ed47a15667687f1a21a45
 vcs.dirty: true
 -->
 
@@ -286,6 +286,7 @@ Agent: opencode
 - [KABSD-TSK-0310 Add migration script to initialize sequences from existing files](../items/task/0300/KABSD-TSK-0310_add-migration-script-to-initialize-sequences-from-existing-files.md)
 - [KABSD-TSK-0311 Add tests for concurrent ID generation](../items/task/0300/KABSD-TSK-0311_add-tests-for-concurrent-id-generation.md)
 - [KABSD-TSK-0312 Refine Ready Gate definitions by item type](../items/task/0300/KABSD-TSK-0312_refine-ready-gate-definitions-by-item-type.md)
+- [KABSD-TSK-0313 Implement unified search interface with --corpus parameter](../items/task/0300/KABSD-TSK-0313_implement-unified-search-interface-with-corpus-parameter.md)
 
 ### Bug
 
