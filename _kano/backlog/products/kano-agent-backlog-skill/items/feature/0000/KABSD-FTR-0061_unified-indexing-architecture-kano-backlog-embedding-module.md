@@ -3,14 +3,14 @@ id: KABSD-FTR-0061
 uid: 019bfa9e-8caf-762b-a793-93f2f0fcd2f9
 type: Feature
 title: "Unified indexing architecture (kano_backlog_embedding module)"
-state: Proposed
+state: Done
 priority: P2
 parent: null
 area: embedding
 iteration: "0.0.3"
 tags: [refactor, architecture, embedding, indexing]
 created: 2026-01-26
-updated: 2026-01-26
+updated: 2026-01-27
 owner: None
 external:
   azure_id: null
@@ -166,3 +166,6 @@ Project extension point (sidecar contract):
 
 2026-01-26 22:04 [agent=opencode] Created item - extracted requirements from async optimization discussion
 2026-01-27 01:50 [agent=opencode] Added storage optimization requirements: binary format (0.0.2), quantization/compression/tiered storage (0.0.3). Target: AAA repos (<5 GB for 3M chunks).
+2026-01-27 02:26 [agent=opencode] Auto parent sync: child KABSD-TSK-0315 -> Done; parent -> Done.
+2026-01-27 02:26 [agent=opencode] Auto parent sync: child KABSD-TSK-0315 -> Done; parent -> Done.
+2026-01-27 02:26 [agent=opencode] Auto parent sync: child KABSD-TSK-0314 -> Done; parent -> Done.

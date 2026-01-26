@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 127
-vcs.hash: 20431d9542c069d0a08ce6320f88cc69dcb1bca2
+vcs.revno: 134
+vcs.hash: ff0e2ec87084780c491780a9a08bcbd1e2bd8c6c
 vcs.dirty: true
 -->
 
@@ -57,6 +57,7 @@ Agent: opencode
 - [KABSD-FTR-0060 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_kano-agent-backlog-dispatcher-complexity-aware-bid-driven-task-routing-layer.md)
 - [KABSD-FTR-0060 ID generation race condition prevention](../items/feature/0000/KABSD-FTR-0060_id-generation-race-condition-prevention.md)
 - [KABSD-FTR-0061 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
+- [KABSD-FTR-0061 Unified indexing architecture (kano_backlog_embedding module)](../items/feature/0000/KABSD-FTR-0061_unified-indexing-architecture-kano-backlog-embedding-module.md)
 
 ### UserStory
 
@@ -289,6 +290,9 @@ Agent: opencode
 - [KABSD-TSK-0311 Add tests for concurrent ID generation](../items/task/0300/KABSD-TSK-0311_add-tests-for-concurrent-id-generation.md)
 - [KABSD-TSK-0312 Refine Ready Gate definitions by item type](../items/task/0300/KABSD-TSK-0312_refine-ready-gate-definitions-by-item-type.md)
 - [KABSD-TSK-0313 Implement unified search interface with --corpus parameter](../items/task/0300/KABSD-TSK-0313_implement-unified-search-interface-with-corpus-parameter.md)
+- [KABSD-TSK-0314 Add human-readable metadata files for vector indexes](../items/task/0300/KABSD-TSK-0314_add-human-readable-metadata-files-for-vector-indexes.md)
+- [KABSD-TSK-0315 Implement binary vector storage format (struct.pack)](../items/task/0300/KABSD-TSK-0315_implement-binary-vector-storage-format-struct-pack.md)
+- [KABSD-TSK-0315 Support vLLM and OpenAI-compatible embedding APIs](../items/task/0300/KABSD-TSK-0316_support-vllm-and-openai-compatible-embedding-apis.md)
 
 ### Bug
 
