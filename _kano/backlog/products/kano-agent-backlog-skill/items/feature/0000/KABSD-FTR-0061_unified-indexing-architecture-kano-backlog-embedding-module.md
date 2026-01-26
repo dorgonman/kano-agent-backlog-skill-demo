@@ -116,6 +116,15 @@ Implementation notes (for 0.0.3 design):
 - Large-repo hygiene must be part of the architecture: default exclude lists (build outputs, vendor, engine intermediates), configurable include globs, and optional hard limits (max file size, max files, max total bytes).
 - Binary assets (e.g., Unreal `.uasset`) must be excluded from direct indexing/embedding; instead, support project-provided sidecar artifacts (text/JSON, and optionally images) as the index source.
 
+**Storage Optimization (Critical for AAA-scale repos):**
+- **Binary vector storage** (0.0.2: implemented): Use `struct.pack` instead of JSON (saves 80% space: 836 MB → 160 MB for 26k chunks)
+- **Quantization** (0.0.3): Float32 → Int8 quantization (saves additional 75%: 160 MB → 40 MB)
+- **Compression** (0.0.3): zstd compression on binary vectors (saves 30-50%: 40 MB → 20-28 MB)
+- **Selective indexing** (0.0.3): Only vector-index "important" files (source code, docs), use FTS-only for tests/generated code
+- **Tiered storage** (0.0.3): Hot (recent queries) in memory, Warm (frequent) on SSD, Cold (rare) compressed on HDD
+
+Scale target: AAA Unreal project (~255k files, ~3M chunks) should fit in <5 GB total (FTS + Vector combined).
+
 Project extension point (sidecar contract):
 - The unified indexing pipeline must allow a project to provide a deterministic "sidecar export" step that produces indexable artifacts for binary assets.
 - Sidecar artifacts are the only inputs to FTS/vector for those assets (never embed raw binary).
@@ -140,6 +149,9 @@ Project extension point (sidecar contract):
 - [ ] Async index building works with unified builder
 - [ ] CLI commands work with minimal changes
 - [ ] Code reduction of 50%+ from current implementation
+- [ ] Vector storage uses binary format by default (80% space savings vs JSON)
+- [ ] Quantization support for int8 vectors (optional, 75% additional savings)
+- [ ] AAA-scale repo (3M chunks) fits in <5 GB total storage
 - [ ] Documentation updated in SKILL.md
 
 # Risks / Dependencies
@@ -153,3 +165,4 @@ Project extension point (sidecar contract):
 # Worklog
 
 2026-01-26 22:04 [agent=opencode] Created item - extracted requirements from async optimization discussion
+2026-01-27 01:50 [agent=opencode] Added storage optimization requirements: binary format (0.0.2), quantization/compression/tiered storage (0.0.3). Target: AAA repos (<5 GB for 3M chunks).

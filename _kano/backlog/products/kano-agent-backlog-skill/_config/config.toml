@@ -54,3 +54,6 @@ backend = "sqlite"
 path = ".cache/vector"
 collection = "backlog"
 metric = "cosine"
+
+[vector.options]
+storage_format = "binary"
