@@ -19,7 +19,7 @@ tags: []
 title: Support vLLM and OpenAI-compatible embedding APIs
 type: Task
 uid: 019bfb8c-9c7c-77be-81fb-7b51ce811fd9
-updated: 2026-01-27
+updated: '2026-01-27'
 ---
 
 # Context
@@ -47,3 +47,4 @@ None - backward compatible (base_url optional)
 2026-01-27 02:24 [agent=opencode] Created item [Parent Ready gate validated]
 2026-01-27 02:26 [agent=opencode] State -> Done.
 2026-01-27 02:26 [agent=opencode] State -> Done.
+2026-01-27 02:26 [agent=opencode] [model=unknown] Added base_url and dimension parameters to OpenAIEmbeddingAdapter. Updated factory to pass parameters from config. Tested with vLLM configuration. Created comprehensive vLLM setup guide. Commit: feat(embedding): support vLLM and OpenAI-compatible APIs
