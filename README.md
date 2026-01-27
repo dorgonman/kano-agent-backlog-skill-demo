@@ -7,9 +7,9 @@
 
 > **AI Agent Skills** for **Spec-Driven Agentic Programming** | File-based backlog management | Multi-agent collaboration | Local-first architecture
 
-⚠️ **VERSION 0.0.2 - TOPICS + EMBEDDING PIPELINE FOUNDATIONS** ⚠️
+⚠️ **VERSION 0.0.3 - STORAGE OPTIMIZATION + BACKLOG DISCIPLINE** ⚠️
 
-This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
+This is the **0.0.3 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
 
 **IMPORTANT DISCLAIMERS:**
 - 🚧 **Rapid Development**: System architecture is changing frequently
@@ -18,7 +18,14 @@ This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an expe
 - ❌ **No Guarantees**: No stability, compatibility, or support guarantees
 - 📝 **Documentation Lag**: Documentation may not reflect current implementation
 
-**What's New in 0.0.2:**
+**What's New in 0.0.3:**
+- ✅ **74.5% Storage Savings**: Binary vector format (struct.pack) reduces storage from 30KB to 6KB per chunk
+- ✅ **Human-Readable Metadata**: `.meta.json` files for vector indexes allow debugging without SQL
+- ✅ **vLLM Support**: Self-hosted embedding services via OpenAI-compatible API (`base_url` support)
+- ✅ **Backlog Discipline**: Soft git hooks (orphan commit detection) with gentle reminders
+- ✅ **Orphan Check**: CLI commands to detect and suggest ticket types for commits
+
+**What was New in 0.0.2:**
 - ✅ Core backlog item management (Epic, Feature, UserStory, Task, Bug)
 - ✅ Workset execution cache for per-item context
 - ✅ Topic-based context switching and grouping
@@ -35,11 +42,13 @@ This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an expe
 
 ## Overview
 
-**Current Status: Version 0.0.2**
+**Current Status: Version 0.0.3**
 
 This repository demonstrates an evolving approach to transform agent collaboration into a durable, auditable backlog system. The core concept is to persist planning, decisions, and work items as structured markdown files rather than losing context in chat conversations.
 
-**What's Working in 0.0.2:**
+**What's Working in 0.0.3:**
+- ✅ **Binary Vector Storage**: Efficient storage for AAA-scale codebases
+- ✅ **Backlog Discipline**: Git hooks and CLI tools to enforce process gently
 - ✅ Markdown-based work item storage with frontmatter metadata
 - ✅ CLI scripts for item creation, state transitions, and worklog management
 - ✅ Workset execution cache for per-item context isolation
@@ -571,12 +580,14 @@ For the main skill development, see [kano-agent-backlog-skill](https://github.co
 
 ## Roadmap
 
-**Version 0.0.2 (Current):**
+**Version 0.0.3 (Current):**
 - ✅ Core backlog management
 - ✅ Workset and topic features
 - ✅ Multi-agent collaboration patterns
 - ✅ CLI commands
 - ✅ Property-based testing
+- ✅ Storage optimization (Binary vectors)
+- ✅ Backlog discipline (Git hooks)
 
 **Future Versions:**
 - 🔮 Stable file format schema
@@ -649,7 +660,7 @@ This experimental demo explores a "backlog-first" approach where:
 - **Context isolation**: Worksets prevent drift during complex tasks
 - **Rapid context switching**: Topics enable quick focus area changes
 
-**Version 0.0.2 Status**: These principles are being tested and refined. Implementation is evolving but demonstrates the core concepts in action. The `_kano/backlog/` directory contains real-world examples of this philosophy applied to the development of the system itself.
+**Version 0.0.3 Status**: These principles are being tested and refined. Implementation is evolving but demonstrates the core concepts in action. The `_kano/backlog/` directory contains real-world examples of this philosophy applied to the development of the system itself.
 
 ### Dual-Readability Design (Topic & Snapshot)
 
