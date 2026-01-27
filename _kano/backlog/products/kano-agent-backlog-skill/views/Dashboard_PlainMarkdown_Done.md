@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 134
-vcs.hash: ff0e2ec87084780c491780a9a08bcbd1e2bd8c6c
+vcs.revno: 141
+vcs.hash: c0faf61f810673ef35b473667e2cc19c7626b525
 vcs.dirty: true
 -->
 
@@ -293,6 +293,7 @@ Agent: opencode
 - [KABSD-TSK-0314 Add human-readable metadata files for vector indexes](../items/task/0300/KABSD-TSK-0314_add-human-readable-metadata-files-for-vector-indexes.md)
 - [KABSD-TSK-0315 Implement binary vector storage format (struct.pack)](../items/task/0300/KABSD-TSK-0315_implement-binary-vector-storage-format-struct-pack.md)
 - [KABSD-TSK-0315 Support vLLM and OpenAI-compatible embedding APIs](../items/task/0300/KABSD-TSK-0316_support-vllm-and-openai-compatible-embedding-apis.md)
+- [KABSD-TSK-0317 Add orphan commit detection and git hooks for backlog discipline](../items/task/0300/KABSD-TSK-0317_add-orphan-commit-detection-and-git-hooks-for-backlog-discipline.md)
 
 ### Bug
 
