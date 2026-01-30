@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 143
-vcs.hash: 7d4403d27eba013820f74e345e9a3f456bf731d0
+vcs.revno: 144
+vcs.hash: 6322e9ee0efd88365e5838cc91758f17ae98fd84
 vcs.dirty: true
 -->
 
@@ -298,6 +298,7 @@ Agent: kiro
 - [KABSD-TSK-0321 Implement project-level config schema and loading](../items/task/0300/KABSD-TSK-0321_implement-project-level-config-schema-and-loading.md)
 - [KABSD-TSK-0322 Update config resolution logic with precedence hierarchy](../items/task/0300/KABSD-TSK-0322_update-config-resolution-logic-with-precedence-hierarchy.md)
 - [KABSD-TSK-0323 Add CLI support for --config-file parameter](../items/task/0300/KABSD-TSK-0323_add-cli-support-for-config-file-parameter.md)
+- [KABSD-TSK-0327 Implement debug mode config and documentation system](../items/task/0300/KABSD-TSK-0327_implement-debug-mode-config-and-documentation-system.md)
 
 ### Bug
 
