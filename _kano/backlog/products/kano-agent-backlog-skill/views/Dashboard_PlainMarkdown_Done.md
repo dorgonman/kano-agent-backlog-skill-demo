@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 144
-vcs.hash: 6322e9ee0efd88365e5838cc91758f17ae98fd84
+vcs.revno: 146
+vcs.hash: 9352d8343cf481061d152169487df282e8650140
 vcs.dirty: true
 -->
 
 Source: items
-Agent: kiro
+Agent: opencode
 
 ## Done
 
@@ -299,6 +299,7 @@ Agent: kiro
 - [KABSD-TSK-0322 Update config resolution logic with precedence hierarchy](../items/task/0300/KABSD-TSK-0322_update-config-resolution-logic-with-precedence-hierarchy.md)
 - [KABSD-TSK-0323 Add CLI support for --config-file parameter](../items/task/0300/KABSD-TSK-0323_add-cli-support-for-config-file-parameter.md)
 - [KABSD-TSK-0327 Implement debug mode config and documentation system](../items/task/0300/KABSD-TSK-0327_implement-debug-mode-config-and-documentation-system.md)
+- [KABSD-TSK-0328 Reorganize cache structure and clean up obsolete directories](../items/task/0300/KABSD-TSK-0328_reorganize-cache-structure-and-clean-up-obsolete-directories.md)
 
 ### Bug
 

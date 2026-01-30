@@ -1,0 +1,11 @@
+{
+  "workset_id": "4cf3b581-6362-4453-85d0-766904386130",
+  "item_id": "KABSD-TSK-0328",
+  "item_uid": "019c0fad-db8e-7683-99f5-c1b1635be8ca",
+  "item_path": "_kano\\backlog\\products\\kano-agent-backlog-skill\\items\\task\\0300\\KABSD-TSK-0328_reorganize-cache-structure-and-clean-up-obsolete-directories.md",
+  "agent": "opencode",
+  "created_at": "2026-01-30T16:25:03.349424Z",
+  "refreshed_at": "2026-01-30T16:25:03.349424Z",
+  "ttl_hours": 72,
+  "source_commit": "9352d8343cf4"
+}

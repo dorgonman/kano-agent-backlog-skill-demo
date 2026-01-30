@@ -558,6 +558,48 @@ Agent: "Switching to topic 'auth-refactor'... Here are the 5 tasks and relevant 
 
 Backlog configuration is in `_kano/backlog/products/<product>/_config/config.toml` (product-specific) and `_kano/backlog/_shared/defaults.toml` (shared defaults).
 
+## Cache Structure
+
+The backlog skill stores cache files in `.kano/cache/backlog/`:
+
+```
+.kano/cache/backlog/
+├── chunks.{corpus}.{product}.{version}.db     # Document chunks database (includes items + FTS)
+├── chunks.{corpus}.{version}.status           # Build status (repo only)
+├── vectors.{corpus}.{product}.{emb}.{hash}.db # Vector embeddings database
+└── vectors.{corpus}.{product}.{emb}.{hash}.meta # Vector metadata
+```
+
+**Corpus types**:
+- `repo`: Repository code and documentation (project-level, shared)
+- `backlog`: Backlog work items (product-specific, per-product databases)
+
+**Naming convention**:
+- `{corpus}`: `repo` or `backlog`
+- `{product}`: Product name (e.g., `kano-agent-backlog-skill`) - only for backlog corpus
+- `{version}`: Schema version (e.g., `v1`)
+- `{emb}`: Embedding model short name (e.g., `noop-d1536`)
+- `{hash}`: First 8 chars of embedding space hash
+
+**Example files**:
+
+*Repo corpus (project-level):*
+- `chunks.repo.v1.db` - Repository chunks with items + FTS (46M)
+- `chunks.repo.v1.status` - Build status (JSON)
+- `vectors.repo.noop-d1536.af3c739f.db` - Vector embeddings (213M)
+- `vectors.repo.noop-d1536.af3c739f.meta` - Vector metadata (JSON)
+
+*Backlog corpus (product-specific):*
+- `chunks.backlog.kano-agent-backlog-skill.v1.db` - Backlog chunks with items + FTS (4.0M)
+- `vectors.backlog.kano-agent-backlog-skill.noop-d1536.879bf517.db` - Vector embeddings (88M)
+- `vectors.backlog.kano-agent-backlog-skill.noop-d1536.eafd094d.db` - Vector embeddings (12K)
+
+**Note**: Both `chunks.repo.v1.db` and `chunks.backlog.*.v1.db` contain the full schema (items table + chunks table + FTS), so no separate index database is needed.
+
+**Migration from v0.0.2**: Run `bash scripts/migrate-cache-v003.sh` (Unix) or `.\scripts\migrate-cache-v003.ps1` (Windows) to migrate existing cache files from old locations:
+- Old repo corpus: `.cache/` → `.kano/cache/backlog/`
+- Old backlog corpus: `_kano/backlog/products/<product>/.cache/` → `.kano/cache/backlog/`
+
 ## Contributing (Pre-Alpha)
 
 **Current Status**: This is version 0.0.2 - an experimental demo repository in rapid development.
