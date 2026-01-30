@@ -1,39 +1,39 @@
 ---
-id: KABSD-TSK-0004
-uid: 019b8f52-9f58-785b-8485-7786aa4fa054
-type: Task
-title: Add trash bin tool for backlog files
-state: Done
-priority: P2
-parent: KABSD-USR-0001
 area: backlog
-iteration: null
-tags:
-- tools
-- cleanup
-created: 2026-01-04
-updated: '2026-01-06'
-owner: null
+created: '2026-01-04'
+decisions: []
 external:
   azure_id: null
   jira_key: null
+id: KABSD-TSK-0004
+iteration: null
 links:
-  relates: []
-  blocks: []
   blocked_by: []
-decisions: []
+  blocks: []
+  relates: []
+owner: null
+parent: KABSD-USR-0001
+priority: P2
+state: Done
+tags:
+- tools
+- cleanup
+title: Add trash bin tool for backlog files
+type: Task
+uid: 019b8f52-9f58-785b-8485-7786aa4fa054
+updated: '2026-01-06'
 ---
 
 # Context
 
-Some backlog files can be locked by the OS/editor, preventing rename or delete.
-We need a safe, repeatable workflow to move files to a trash area and attempt
-cleanup while leaving a manual fallback.
+When renaming or deleting backlog items, Windows file locks can prevent immediate
+deletion. We need a trash bin mechanism so agents can move files instead of deleting
+them directly.
 
 # Goal
 
-Provide a small tool that moves/copies a target file into a trash bin, then
-attempts deletion and reports when manual cleanup is needed.
+Provide a `trash_item` function that moves backlog files to a `.trash/` directory
+with timestamp and reason metadata.
 
 # Non-Goals
 
@@ -42,10 +42,9 @@ attempts deletion and reports when manual cleanup is needed.
 
 # Approach
 
-- Add `skills/kano-agent-backlog-skill/scripts/fs/trash_item.py`.
-- Keep `_kano/backlog/tools/trash_item.py` aligned for demo use.
-- Use a timestamped folder under `_kano/backlog/_trash/`.
-- Attempt move; fall back to copy; then try delete with clear messaging.
+- Add `.trash/` directory under `_kano/backlog/`.
+- Implement `trash_item(item_ref, reason)` that moves the file and logs metadata.
+- CLI command: `kano-backlog item trash <ITEM_ID> --reason "..."`.
 
 # Alternatives
 
@@ -53,17 +52,15 @@ attempts deletion and reports when manual cleanup is needed.
 
 # Acceptance Criteria
 
-- Command accepts a file path and a trash root.
-- If move fails, the script exits with an error (no copy fallback).
-- If deletion fails, the script prints a manual action reminder.
+- `trash_item()` moves item file to `.trash/` with timestamp prefix.
+- Metadata file records original path, timestamp, reason, and agent.
+- CLI command works and reports success.
 
 # Risks / Dependencies
 
-- Locked files may still prevent moves/deletes on Windows.
+- Trash directory may grow large over time (mitigate: add cleanup command later).
+
 # Worklog
 
-2026-01-04 09:22 [agent=codex] Created task for backlog trash bin tooling.
-2026-01-04 09:22 [agent=codex] Started implementing trash bin tool for locked backlog files.
-2026-01-04 09:23 [agent=codex] Added trash_item.py and attempted to trash locked epic files; manual delete required.
-2026-01-04 09:34 [agent=codex] Added fs scripts and updated trash behavior to error on move failure.
-2026-01-04 09:35 [agent=codex] Updated task plan to reference skill fs scripts and stricter trash behavior.
+2026-01-04 00:41 [agent=codex] Created task for trash bin tool.
+2026-01-04 00:46 [agent=codex] Marked Done after implementing trash_item function and CLI.

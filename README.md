@@ -558,6 +558,33 @@ Agent: "Switching to topic 'auth-refactor'... Here are the 5 tasks and relevant 
 
 Backlog configuration is in `_kano/backlog/products/<product>/_config/config.toml` (product-specific) and `_kano/backlog/_shared/defaults.toml` (shared defaults).
 
+### Cache Configuration
+
+The backlog skill stores cache files (chunks databases and vector embeddings) in `.kano/cache/backlog/` by default. You can override this location for team collaboration scenarios.
+
+**Configuration priority:**
+1. CLI parameter: `--cache-root /path/to/cache` (highest priority)
+2. Config file: `config.cache.root = "/path/to/cache"`
+3. Default: `<repo_root>/.kano/cache/backlog/`
+
+**Example config override:**
+```toml
+# _kano/backlog/products/<product>/_config/config.toml
+[cache]
+root = "/mnt/nas/shared-cache/backlog"
+```
+
+**Example CLI override:**
+```bash
+kano-backlog embedding build --product my-product --cache-root /mnt/nas/cache
+kano-backlog search query "authentication" --cache-root /mnt/nas/cache
+```
+
+**Use cases:**
+- **Team collaboration**: Share cache on NAS for multiple team members
+- **External projects**: Share cache between projects with external backlogs
+- **CI/CD**: Use persistent cache volumes to speed up builds
+
 ## Cache Structure
 
 The backlog skill stores cache files in `.kano/cache/backlog/`:
