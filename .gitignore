@@ -1,5 +1,5 @@
 
-# Kano Backlog Skill .gitignore (2026-01-07)
+# Kano Backlog Skill .gitignore (2026-01-30)
 # Only ignore derived/cache/logs/sandbox, never canonical data
 
 # Documentation build workspace (local testing and CI/CD)
@@ -8,21 +8,26 @@ _ws/
 # Archive directory
 _archives/
 
-# Local CLI state
-.kano/
+# Local CLI state and cache (moved from _kano to .kano)
+.kano/cache/
+
+# Debug output (but keep README.md for documentation)
+.kano/debug/*
+!.kano/debug/README.md
 
 # Logs, temp, trash, sandbox
 _kano/backlog/_logs/
 _kano/backlog/_tmp_tests/
 _kano/backlog/_trash/
-_kano/.cache/
 _kano/backlog/sandboxes/
 _kano/backlog_sandbox/
 logs/
 
-# Derived index/cache (never ignore canonical.db)
+# REMOVED: _kano/.cache/ (moved to .kano/cache/)
+# REMOVED: _kano/backlog/**/.cache/ (centralized to .kano/cache/)
+
+# Derived index (never ignore canonical.db)
 _kano/backlog/**/_index/
-_kano/backlog/**/.cache/
 
 
 

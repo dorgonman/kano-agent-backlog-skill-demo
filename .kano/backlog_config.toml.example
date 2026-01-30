@@ -1,0 +1,44 @@
+# Example Project-Level Backlog Configuration
+# Copy to .kano/backlog_config.toml and customize for your setup
+
+# Global defaults applied to all products
+[defaults]
+skill_developer = true
+persona = "developer"
+auto_refresh = true
+verbosity = "warning"
+debug = false
+
+# Product definitions
+[products.kano-agent-backlog-skill]
+name = "kano-agent-backlog-skill-demo"
+prefix = "KABSD"
+backlog_root = "_kano/backlog/products/kano-agent-backlog-skill"
+
+# Example: External project backlog management
+[products.kano-opencode-quickstart]
+name = "kano-opencode-quickstart"
+prefix = "KO"
+backlog_root = "../kano-opencode-quickstart/_kano/backlog"
+
+# Shared settings for all products
+[shared.log]
+verbosity = "warning"
+debug = false
+
+[shared.index]
+enabled = true
+backend = "sqlite"
+mode = "rebuild"
+
+[shared.analysis.llm]
+enabled = false
+
+# Product-specific overrides
+[products.kano-agent-backlog-skill.overrides]
+skill_developer = true
+"analysis.llm.enabled" = true
+
+[products.kano-opencode-quickstart.overrides]
+skill_developer = false
+"analysis.llm.enabled" = false

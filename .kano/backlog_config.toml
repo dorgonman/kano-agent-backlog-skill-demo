@@ -1,0 +1,30 @@
+# Project-Level Backlog Configuration
+# Manages kano-agent-backlog-skill and kano-commit-convention-skill products
+
+# Global defaults applied to all products
+[defaults]
+skill_developer = true
+auto_refresh = true
+
+# Product definitions for this project
+[products.kano-agent-backlog-skill]
+name = "kano-agent-backlog-skill-demo"
+prefix = "KABSD"
+backlog_root = "_kano/backlog/products/kano-agent-backlog-skill"
+
+[products.kano-commit-convention-skill]
+name = "kano-commit-convention-skill"
+prefix = "KCC"
+backlog_root = "_kano/backlog/products/kano-commit-convention-skill"
+
+# Shared settings for all products
+[shared.log]
+debug = false
+
+[shared.index]
+enabled = true
+backend = "sqlite"
+
+# Product-specific overrides
+[products.kano-agent-backlog-skill.overrides]
+"analysis.llm.enabled" = true

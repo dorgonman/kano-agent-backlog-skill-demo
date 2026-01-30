@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 141
-vcs.hash: c0faf61f810673ef35b473667e2cc19c7626b525
+vcs.revno: 143
+vcs.hash: 7d4403d27eba013820f74e345e9a3f456bf731d0
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: kiro
 
 ## New
 
@@ -23,6 +23,7 @@ Agent: opencode
 - [KABSD-EPIC-0008 Demo Epic: Multi-Agent Backlog System](../items/epic/0000/KABSD-EPIC-0008_demo-epic-multi-agent-backlog-system.md)
 - [KABSD-EPIC-0010 0.0.3 Archive semantics + topic evidence packs](../items/epic/0000/KABSD-EPIC-0010_0-0-3-archive-semantics-topic-evidence-packs.md)
 - [KABSD-EPIC-0011 Inspector Pattern: External Agent Query Surface](../items/epic/0000/KABSD-EPIC-0011_inspector-pattern-external-agent-query-surface.md)
+- [KABSD-EPIC-0014 kano-agent-backlog-skill v0.0.3 - Configuration System Refactor](../items/epic/0000/KABSD-EPIC-0014_kano-agent-backlog-skill-v0-0-3-configuration-system-refactor.md)
 
 ### Feature
 
@@ -167,6 +168,9 @@ Agent: opencode
 - [KABSD-TSK-0297 Define corpus boundaries and cache freshness policy](../items/task/0200/KABSD-TSK-0297_define-corpus-boundaries-and-cache-freshness-policy.md)
 - [KABSD-TSK-0298 Implement `kano item create` subcommand](../items/task/0100/KABSD-TSK-0132_implement-kano-item-create-subcommand.md)
 - [KABSD-TSK-0300 Migrate SQLite index schema to use uid as PRIMARY KEY](../items/task/0200/KABSD-TSK-0296_migrate-sqlite-index-schema-to-use-uid-as-primary-key.md)
+- [KABSD-TSK-0324 Create migration tools for existing multi-product setups](../items/task/0300/KABSD-TSK-0324_create-migration-tools-for-existing-multi-product-setups.md)
+- [KABSD-TSK-0325 Document new project-level config system](../items/task/0300/KABSD-TSK-0325_document-new-project-level-config-system.md)
+- [KABSD-TSK-0326 驗證破壞性重構完成](../items/task/0300/KABSD-TSK-0326_untitled.md)
 
 ### Bug
 

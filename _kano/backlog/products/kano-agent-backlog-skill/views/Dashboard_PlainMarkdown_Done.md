@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 141
-vcs.hash: c0faf61f810673ef35b473667e2cc19c7626b525
+vcs.revno: 143
+vcs.hash: 7d4403d27eba013820f74e345e9a3f456bf731d0
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: kiro
 
 ## Done
 
@@ -58,6 +58,7 @@ Agent: opencode
 - [KABSD-FTR-0060 ID generation race condition prevention](../items/feature/0000/KABSD-FTR-0060_id-generation-race-condition-prevention.md)
 - [KABSD-FTR-0061 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 - [KABSD-FTR-0061 Unified indexing architecture (kano_backlog_embedding module)](../items/feature/0000/KABSD-FTR-0061_unified-indexing-architecture-kano-backlog-embedding-module.md)
+- [KABSD-FTR-0063 Simplify multi-product config with project-level .kano/config.toml](../items/feature/0000/KABSD-FTR-0063_simplify-multi-product-config-with-project-level-kano-config-toml.md)
 
 ### UserStory
 
@@ -294,6 +295,9 @@ Agent: opencode
 - [KABSD-TSK-0315 Implement binary vector storage format (struct.pack)](../items/task/0300/KABSD-TSK-0315_implement-binary-vector-storage-format-struct-pack.md)
 - [KABSD-TSK-0315 Support vLLM and OpenAI-compatible embedding APIs](../items/task/0300/KABSD-TSK-0316_support-vllm-and-openai-compatible-embedding-apis.md)
 - [KABSD-TSK-0317 Add orphan commit detection and git hooks for backlog discipline](../items/task/0300/KABSD-TSK-0317_add-orphan-commit-detection-and-git-hooks-for-backlog-discipline.md)
+- [KABSD-TSK-0321 Implement project-level config schema and loading](../items/task/0300/KABSD-TSK-0321_implement-project-level-config-schema-and-loading.md)
+- [KABSD-TSK-0322 Update config resolution logic with precedence hierarchy](../items/task/0300/KABSD-TSK-0322_update-config-resolution-logic-with-precedence-hierarchy.md)
+- [KABSD-TSK-0323 Add CLI support for --config-file parameter](../items/task/0300/KABSD-TSK-0323_add-cli-support-for-config-file-parameter.md)
 
 ### Bug
 

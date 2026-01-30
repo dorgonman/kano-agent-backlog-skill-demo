@@ -1,0 +1,39 @@
+{
+  "topic": "config-system-refactor-v003",
+  "agent": "kiro",
+  "seed_items": [
+    "019c0c09-9f54-75a8-ace2-96e1b25daa56",
+    "019c0c0a-bd9c-7628-8496-2d345080106e",
+    "019c0c0a-da67-705f-ad92-be946f034f13",
+    "019c0c0a-f655-73e9-902a-4b22ff027a2a",
+    "019c0c0b-136f-737a-a1bb-aa4f72149497",
+    "019c0c20-05a1-7577-bce0-1ac7b04a0b25",
+    "019c0c38-4d88-74e4-bcaa-bfe113fca270"
+  ],
+  "pinned_docs": [
+    "skills/kano-agent-backlog-skill/references/config-simplification.md",
+    "skills/kano-agent-backlog-skill/references/project-config-implementation.md"
+  ],
+  "snippet_refs": [
+    {
+      "type": "snippet",
+      "repo": "local",
+      "revision": "7d4403d27eba013820f74e345e9a3f456bf731d0",
+      "file": "skills/kano-agent-backlog-skill/src/kano_backlog_core/project_config.py",
+      "lines": [
+        1,
+        50
+      ],
+      "hash": "sha256:95b90d5b28787182a48a2b38dfa208f35896696125edf96728ed40c6d99fcef9",
+      "cached_text": null,
+      "collected_at": "2026-01-30T00:04:01.634597Z",
+      "collector": "kiro"
+    }
+  ],
+  "related_topics": [],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-01-30T00:02:52.303090Z",
+  "updated_at": "2026-01-30T00:06:19.157862Z",
+  "has_spec": false
+}
