@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 150
-vcs.hash: 928817c0aebf21ce5f85e9be2528b850a3f01459
+vcs.revno: 151
+vcs.hash: 6b347db2362c959f83288e4b2401cb09f655dc35
 vcs.dirty: true
 -->
 
@@ -59,6 +59,7 @@ Agent: opencode
 - [KABSD-FTR-0061 DEPRECATED duplicate (do not use): kano-agent-backlog-dispatcher](../items/feature/0000/KABSD-FTR-0001_deprecated-duplicate-do-not-use-kano-agent-backlog-dispatcher.md)
 - [KABSD-FTR-0061 Unified indexing architecture (kano_backlog_embedding module)](../items/feature/0000/KABSD-FTR-0061_unified-indexing-architecture-kano-backlog-embedding-module.md)
 - [KABSD-FTR-0063 Simplify multi-product config with project-level .kano/config.toml](../items/feature/0000/KABSD-FTR-0063_simplify-multi-product-config-with-project-level-kano-config-toml.md)
+- [KABSD-FTR-0065 Improve ID allocation robustness and prevent ID collisions](../items/feature/0000/KABSD-FTR-0065_improve-id-allocation-robustness-and-prevent-id-collisions.md)
 
 ### UserStory
 
@@ -313,6 +314,9 @@ Agent: opencode
 - [KABSD-TSK-0331 Add configurable cache root for shared storage (NAS support)](../items/task/0300/KABSD-TSK-0331_add-configurable-cache-root-for-shared-storage-nas-support.md)
 - [KABSD-TSK-0334 Migrate product-specific configs to project-level config](../items/task/0300/KABSD-TSK-0334_migrate-product-specific-configs-to-project-level-config.md)
 - [KABSD-TSK-0335 Document ID allocation mechanism and sync-sequences workflow in SKILL.md](../items/task/0300/KABSD-TSK-0335_document-id-allocation-mechanism-and-sync-sequences-workflow-in-skill-md.md)
+- [KABSD-TSK-0337 Add CLI warning when DB sequence is stale during item creation](../items/task/0300/KABSD-TSK-0337_add-cli-warning-when-db-sequence-is-stale-during-item-creation.md)
+- [KABSD-TSK-0338 Add DB sequence health check to doctor command](../items/task/0300/KABSD-TSK-0338_add-db-sequence-health-check-to-doctor-command.md)
+- [KABSD-TSK-0339 Auto-sync DB sequences in item create if stale detected](../items/task/0300/KABSD-TSK-0339_auto-sync-db-sequences-in-item-create-if-stale-detected.md)
 
 ### Bug
 

@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 150
-vcs.hash: 928817c0aebf21ce5f85e9be2528b850a3f01459
+vcs.revno: 151
+vcs.hash: 6b347db2362c959f83288e4b2401cb09f655dc35
 vcs.dirty: true
 -->
 
@@ -172,9 +172,6 @@ Agent: opencode
 - [KABSD-TSK-0325 Document new project-level config system](../items/task/0300/KABSD-TSK-0325_document-new-project-level-config-system.md)
 - [KABSD-TSK-0326 驗證破壞性重構完成](../items/task/0300/KABSD-TSK-0326_untitled.md)
 - [KABSD-TSK-0330 Test correct ID after full fix](../items/task/0300/KABSD-TSK-0330_test-correct-id-after-full-fix.md)
-- [KABSD-TSK-0337 Add CLI warning when DB sequence is stale during item creation](../items/task/0300/KABSD-TSK-0337_add-cli-warning-when-db-sequence-is-stale-during-item-creation.md)
-- [KABSD-TSK-0338 Add DB sequence health check to doctor command](../items/task/0300/KABSD-TSK-0338_add-db-sequence-health-check-to-doctor-command.md)
-- [KABSD-TSK-0339 Auto-sync DB sequences in item create if stale detected](../items/task/0300/KABSD-TSK-0339_auto-sync-db-sequences-in-item-create-if-stale-detected.md)
 
 ### Bug
 

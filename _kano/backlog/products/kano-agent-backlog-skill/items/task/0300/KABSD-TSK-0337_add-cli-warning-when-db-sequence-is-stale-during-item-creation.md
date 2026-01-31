@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0065
 priority: P2
-state: Proposed
+state: Done
 tags:
 - cli
 - id-management
@@ -58,3 +58,6 @@ False positives if filesystem scan is slow. Mitigation: cache filesystem max ID.
 
 2026-01-31 10:45 [agent=opencode] Created item
 2026-01-31 10:46 [agent=opencode] Parent updated: null -> KABSD-FTR-0065.
+2026-01-31 13:18 [agent=opencode] Start implementation [Ready gate validated]
+2026-01-31 13:31 [agent=opencode] Implemented sequence warnings and flags
+2026-01-31 13:32 [agent=opencode] Implemented CLI warning for stale DB sequences with --skip-sequence-check flag
