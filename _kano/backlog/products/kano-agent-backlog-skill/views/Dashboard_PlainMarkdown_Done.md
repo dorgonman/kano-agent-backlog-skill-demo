@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 146
-vcs.hash: 9352d8343cf481061d152169487df282e8650140
+vcs.revno: 148
+vcs.hash: 68f7de62bcf842ca5b24d17152b5dc482e487006
 vcs.dirty: true
 -->
 
@@ -86,15 +86,20 @@ Agent: opencode
 ### Task
 
 - [KABSD-TSK-0001 Create project-backlog skill](../items/task/0000/KABSD-TSK-0001_project-backlog-skill.md)
+- [KABSD-TSK-0002 Create Obsidian Base demo views](../items/task/0000/KABSD-TSK-0002_create-obsidian-base-demo-views.md)
+- [KABSD-TSK-0003 Normalize migrated backlog items for demo](../items/task/0000/KABSD-TSK-0003_normalize-migrated-backlog-items-for-demo.md)
 - [KABSD-TSK-0004 Add trash bin tool for backlog files](../items/task/0000/KABSD-TSK-0004_add-trash-bin-tool-for-backlog-files.md)
+- [KABSD-TSK-0005 Add fs wrappers for demo tools](../items/task/0000/KABSD-TSK-0005_add-fs-wrappers-for-demo-tools.md)
 - [KABSD-TSK-0006 Define audit log schema and redaction rules](../items/task/0000/KABSD-TSK-0006_define-audit-log-schema-and-redaction-rules.md)
 - [KABSD-TSK-0007 Prototype tool invocation logger with redaction](../items/task/0000/KABSD-TSK-0007_prototype-tool-invocation-logger-with-redaction.md)
 - [KABSD-TSK-0008 Implement log rotation and retention](../items/task/0000/KABSD-TSK-0008_implement-log-rotation-and-retention.md)
 - [KABSD-TSK-0009 Implement backlog scaffold initializer script](../items/task/0000/KABSD-TSK-0009_implement-backlog-scaffold-initializer-script.md)
 - [KABSD-TSK-0010 Generate tool wrappers from skill scripts](../items/task/0000/KABSD-TSK-0010_generate-tool-wrappers-from-skill-scripts.md)
+- [KABSD-TSK-0011 Seed demo backlog items and views](../items/task/0000/KABSD-TSK-0011_seed-demo-backlog-items-and-views.md)
 - [KABSD-TSK-0012 Document self-contained setup and bootstrap scripts](../items/task/0000/KABSD-TSK-0012_document-self-contained-setup-and-bootstrap-scripts.md)
 - [KABSD-TSK-0013 Integrate audit logging into skill scripts](../items/task/0000/KABSD-TSK-0013_integrate-audit-logging-into-skill-scripts.md)
 - [KABSD-TSK-0014 Enhance audit logging config and wrapper coverage](../items/task/0000/KABSD-TSK-0014_enhance-audit-logging-config-and-wrapper-coverage.md)
+- [KABSD-TSK-0015 Remove demo tool wrappers and use skill scripts directly](../items/task/0000/KABSD-TSK-0015_remove-demo-tool-wrappers-and-use-skill-scripts-directly.md)
 - [KABSD-TSK-0016 Restrict skill scripts to _kano/backlog paths](../items/task/0000/KABSD-TSK-0016_restrict-skill-scripts-to-kano-backlog-paths.md)
 - [KABSD-TSK-0017 Define config root layout and baseline config file](../items/task/0000/KABSD-TSK-0017_define-config-root-layout-and-baseline-config-file.md)
 - [KABSD-TSK-0018 Add config loader for skill scripts](../items/task/0000/KABSD-TSK-0018_add-config-loader-for-skill-scripts.md)
@@ -107,6 +112,8 @@ Agent: opencode
 - [KABSD-TSK-0025 Define backlog sandbox path and guardrails](../items/task/0000/KABSD-TSK-0025_define-backlog-sandbox-path-and-guardrails.md)
 - [KABSD-TSK-0026 Update test scripts to use backlog sandbox](../items/task/0000/KABSD-TSK-0026_update-test-scripts-to-use-backlog-sandbox.md)
 - [KABSD-TSK-0027 Add user story validation test script](../items/task/0000/KABSD-TSK-0027_add-user-story-validation-test-script.md)
+- [KABSD-TSK-0028 Ignore demo artifacts in git](../items/task/0000/KABSD-TSK-0028_ignore-demo-artifacts-in-git.md)
+- [KABSD-TSK-0029 Refresh demo dashboard views](../items/task/0000/KABSD-TSK-0029_refresh-demo-dashboard-views.md)
 - [KABSD-TSK-0030 Require explicit agent identity in script worklogs](../items/task/0000/KABSD-TSK-0030_require-explicit-agent-identity-in-script-worklogs.md)
 - [KABSD-TSK-0031 Update documentation files](../items/task/0000/KABSD-TSK-0031_update-documentation-files.md)
 - [KABSD-TSK-0032 Generate epic index with task states](../items/task/0000/KABSD-TSK-0032_generate-epic-index-with-task-states.md)
@@ -142,11 +149,14 @@ Agent: opencode
 - [KABSD-TSK-0062 Collision report and resolver CLI [🔴 Blocked by: KABSD-TSK-0061@019b8f52]](../items/task/0000/KABSD-TSK-0062_collision-report-and-resolver-cli.md)
 - [KABSD-TSK-0063 Make generate_view use SQLite index when available (fallback to file scan)](../items/task/0000/KABSD-TSK-0063_make-generate-view-use-sqlite-index-when-available-fallback-to-file-scan.md)
 - [KABSD-TSK-0064 Unify dashboard generation: auto use SQLite index with file-scan fallback](../items/task/0000/KABSD-TSK-0064_unify-dashboard-generation-auto-use-sqlite-index-with-file-scan-fallback.md)
+- [KABSD-TSK-0065 Replace deprecated DBIndex dashboards with demo DBIndex/NoDBIndex generators and docs](../items/task/0000/KABSD-TSK-0065_replace-deprecated-dbindex-dashboards-with-demo-dbindex-nodbindex-generators-and-docs.md)
 - [KABSD-TSK-0066 Introduce milestone epics 0.0.1/0.0.2 and regroup backlog items](../items/task/0000/KABSD-TSK-0066_introduce-milestone-epics-0-0-1-0-0-2-and-regroup-backlog-items.md)
 - [KABSD-TSK-0067 Define skill versioning policy (ADR) and close MVP epic](../items/task/0000/KABSD-TSK-0067_define-skill-versioning-policy-adr-and-close-mvp-epic.md)
 - [KABSD-TSK-0068 Add skill version command and changelog](../items/task/0000/KABSD-TSK-0068_add-skill-version-command-and-changelog.md)
+- [KABSD-TSK-0069 Move demo view generator out of skill scripts](../items/task/0000/KABSD-TSK-0069_move-demo-view-generator-out-of-skill-scripts.md)
 - [KABSD-TSK-0070 Implement workitem_attach_artifact.py](../items/task/0000/KABSD-TSK-0070_implement-attach-artifact-py.md)
 - [KABSD-TSK-0071 Setup artifacts directory and gitignore](../items/task/0000/KABSD-TSK-0071_setup-artifacts-directory-and-gitignore.md)
+- [KABSD-TSK-0072 Restore generate_demo_views as self-contained skill script](../items/task/0000/KABSD-TSK-0072_restore-generate-demo-views-as-self-contained-skill-script.md)
 - [KABSD-TSK-0074 Organize skill scripts into grouped CLI wrappers and clarify terminology](../items/task/0000/KABSD-TSK-0074_organize-skill-scripts-into-grouped-cli-wrappers-and-clarify-terminology.md)
 - [KABSD-TSK-0076 Rename backlog scripts to prefixed names and update references](../items/task/0000/KABSD-TSK-0076_rename-backlog-scripts-to-prefixed-names-and-update-references.md)
 - [KABSD-TSK-0078 Fix SQLite index schema mismatch (missing source_path)](../items/task/0000/KABSD-TSK-0078_fix-sqlite-index-schema-mismatch-missing-source-path.md)
@@ -300,6 +310,8 @@ Agent: opencode
 - [KABSD-TSK-0323 Add CLI support for --config-file parameter](../items/task/0300/KABSD-TSK-0323_add-cli-support-for-config-file-parameter.md)
 - [KABSD-TSK-0327 Implement debug mode config and documentation system](../items/task/0300/KABSD-TSK-0327_implement-debug-mode-config-and-documentation-system.md)
 - [KABSD-TSK-0328 Reorganize cache structure and clean up obsolete directories](../items/task/0300/KABSD-TSK-0328_reorganize-cache-structure-and-clean-up-obsolete-directories.md)
+- [KABSD-TSK-0331 Add configurable cache root for shared storage (NAS support)](../items/task/0300/KABSD-TSK-0331_add-configurable-cache-root-for-shared-storage-nas-support.md)
+- [KABSD-TSK-0334 Migrate product-specific configs to project-level config](../items/task/0300/KABSD-TSK-0334_migrate-product-specific-configs-to-project-level-config.md)
 
 ### Bug
 

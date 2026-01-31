@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 146
-vcs.hash: 9352d8343cf481061d152169487df282e8650140
+vcs.revno: 148
+vcs.hash: 68f7de62bcf842ca5b24d17152b5dc482e487006
 vcs.dirty: true
 -->
 
@@ -54,6 +54,7 @@ Agent: opencode
 - [KABSD-FTR-0054 Brainstorm Pulse: generate non-backlog idea feed (time-ordered)](../items/feature/0000/KABSD-FTR-0054_brainstorm-pulse-generate-non-backlog-idea-feed-time-ordered.md)
 - [KABSD-FTR-0055 Query Surface API Implementation](../items/feature/0000/KABSD-FTR-0055_query-surface-api-implementation.md)
 - [KABSD-FTR-0056 Inspector Agent Reference Implementation](../items/feature/0000/KABSD-FTR-0056_inspector-agent-reference-implementation.md)
+- [KABSD-FTR-0065 Improve ID allocation robustness and prevent ID collisions](../items/feature/0000/KABSD-FTR-0065_improve-id-allocation-robustness-and-prevent-id-collisions.md)
 
 ### UserStory
 
@@ -171,6 +172,11 @@ Agent: opencode
 - [KABSD-TSK-0324 Create migration tools for existing multi-product setups](../items/task/0300/KABSD-TSK-0324_create-migration-tools-for-existing-multi-product-setups.md)
 - [KABSD-TSK-0325 Document new project-level config system](../items/task/0300/KABSD-TSK-0325_document-new-project-level-config-system.md)
 - [KABSD-TSK-0326 驗證破壞性重構完成](../items/task/0300/KABSD-TSK-0326_untitled.md)
+- [KABSD-TSK-0330 Test correct ID after full fix](../items/task/0300/KABSD-TSK-0330_test-correct-id-after-full-fix.md)
+- [KABSD-TSK-0335 Document ID allocation mechanism and sync-sequences workflow in SKILL.md](../items/task/0300/KABSD-TSK-0335_document-id-allocation-mechanism-and-sync-sequences-workflow-in-skill-md.md)
+- [KABSD-TSK-0337 Add CLI warning when DB sequence is stale during item creation](../items/task/0300/KABSD-TSK-0337_add-cli-warning-when-db-sequence-is-stale-during-item-creation.md)
+- [KABSD-TSK-0338 Add DB sequence health check to doctor command](../items/task/0300/KABSD-TSK-0338_add-db-sequence-health-check-to-doctor-command.md)
+- [KABSD-TSK-0339 Auto-sync DB sequences in item create if stale detected](../items/task/0300/KABSD-TSK-0339_auto-sync-db-sequences-in-item-create-if-stale-detected.md)
 
 ### Bug
 
