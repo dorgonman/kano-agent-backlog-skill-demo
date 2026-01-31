@@ -1,4 +1,5 @@
-_comment = "Baseline config for kano-commit-convention-skill."
+_comment = "Product-specific config for kano-commit-convention-skill."
+_comment_inheritance = "Shared settings (cache, vector, embedding) are inherited from project-level .kano/backlog_config.toml"
 
 [product]
 name = "kano-commit-convention-skill"

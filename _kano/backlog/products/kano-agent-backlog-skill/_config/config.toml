@@ -1,4 +1,5 @@
-_comment = "Baseline config for kano-agent-backlog-skill."
+_comment = "Product-specific config for kano-agent-backlog-skill."
+_comment_inheritance = "Shared settings (cache, vector, embedding, chunking, tokenizer) are inherited from project-level .kano/backlog_config.toml"
 
 [mode]
 skill_developer = true
@@ -28,27 +29,13 @@ enabled = true
 id_conflict = "rename"
 uid_conflict = "trash_shorter"
 
-# Embedding pipeline defaults (local-first; heavy deps optional)
-[chunking]
-target_tokens = 256
-max_tokens = 512
-overlap_tokens = 32
-version = "chunk-v1"
-
-[tokenizer]
-adapter = "heuristic"
-model = "text-embedding-3-small"
-
-[embedding]
-provider = "noop"
-model = "noop-embedding"
-dimension = 1536
-
-[vector]
-backend = "sqlite"
-path = ".cache/vector"
-collection = "backlog"
-metric = "cosine"
-
-[vector.options]
-storage_format = "binary"
+# NOTE: The following sections are now defined in project-level config (.kano/backlog_config.toml):
+# - [shared.cache] - Cache root directory
+# - [shared.vector] - Vector backend settings
+# - [shared.embedding] - Embedding provider settings
+# - [shared.chunking] - Chunking parameters
+# - [shared.tokenizer] - Tokenizer settings
+#
+# To override for this product only, add sections like:
+# [vector]
+# enabled = false  # Disable vectors for this product only
