@@ -11,10 +11,10 @@ links:
   blocked_by: []
   blocks: []
   relates: []
-owner: None
+owner: opencode
 parent: KABSD-FTR-0065
 priority: P1
-state: Proposed
+state: Done
 tags:
 - documentation
 - id-management
@@ -61,3 +61,5 @@ None - pure documentation task
 
 2026-01-31 10:42 [agent=opencode] Created item
 2026-01-31 10:46 [agent=opencode] Parent updated: null -> KABSD-FTR-0065.
+2026-01-31 11:50 [agent=opencode] State -> InProgress. [Ready gate validated]
+2026-01-31 11:51 [agent=opencode] Added comprehensive ID allocation documentation to SKILL.md and workflow.md. Covers UID vs Display ID, sequence sync, correct workflows, conflict handling, and best practices.

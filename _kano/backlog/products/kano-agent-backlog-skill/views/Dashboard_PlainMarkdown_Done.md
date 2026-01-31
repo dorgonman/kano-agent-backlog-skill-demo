@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 148
-vcs.hash: 68f7de62bcf842ca5b24d17152b5dc482e487006
+vcs.revno: 150
+vcs.hash: 928817c0aebf21ce5f85e9be2528b850a3f01459
 vcs.dirty: true
 -->
 
@@ -312,6 +312,7 @@ Agent: opencode
 - [KABSD-TSK-0328 Reorganize cache structure and clean up obsolete directories](../items/task/0300/KABSD-TSK-0328_reorganize-cache-structure-and-clean-up-obsolete-directories.md)
 - [KABSD-TSK-0331 Add configurable cache root for shared storage (NAS support)](../items/task/0300/KABSD-TSK-0331_add-configurable-cache-root-for-shared-storage-nas-support.md)
 - [KABSD-TSK-0334 Migrate product-specific configs to project-level config](../items/task/0300/KABSD-TSK-0334_migrate-product-specific-configs-to-project-level-config.md)
+- [KABSD-TSK-0335 Document ID allocation mechanism and sync-sequences workflow in SKILL.md](../items/task/0300/KABSD-TSK-0335_document-id-allocation-mechanism-and-sync-sequences-workflow-in-skill-md.md)
 
 ### Bug
 

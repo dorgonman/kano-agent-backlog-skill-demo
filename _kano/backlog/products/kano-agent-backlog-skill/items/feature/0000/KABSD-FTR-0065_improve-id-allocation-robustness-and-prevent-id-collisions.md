@@ -14,7 +14,7 @@ links:
 owner: None
 parent: null
 priority: P1
-state: Proposed
+state: InProgress
 tags:
 - id-management
 - robustness
@@ -22,7 +22,7 @@ tags:
 title: Improve ID allocation robustness and prevent ID collisions
 type: Feature
 uid: 019c11f1-c065-77be-9559-c6f0a10f963f
-updated: '2026-01-31'
+updated: 2026-01-31
 ---
 
 # Context
@@ -57,3 +57,4 @@ Performance impact from auto-sync. Mitigation: optimize sync-sequences or add ca
 # Worklog
 
 2026-01-31 10:46 [agent=opencode] Created item
+2026-01-31 11:50 [agent=opencode] Auto parent sync: child KABSD-TSK-0335 -> InProgress; parent -> InProgress.
