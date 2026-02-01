@@ -20,6 +20,24 @@ Agent: Reads @rules/authentication.md, applies its rules for this task only
 
 ---
 
+## Analysis Mode (Context Before Action)
+
+When a user explicitly requests analysis-mode behavior, gather context before making changes.
+
+**Context gathering (parallel)**:
+- 1-2 explore agents for codebase patterns/implementations.
+- 1-2 librarian agents if an external library/framework is involved.
+- Direct tools for targeted searches: Grep, AST-grep, LSP.
+
+**If complex, do not struggle alone**:
+- Consult Oracle for architecture, debugging, or complex logic.
+- Consult Artistry for non-conventional approaches.
+
+**Synthesize before proceeding**:
+- Summarize findings and the proposed approach before implementing.
+
+---
+
 ## Project Status: Pre-Alpha (No Backward Compatibility Required)
 
 **CRITICAL**: This project is in **pre-alpha** stage. Breaking changes are expected and encouraged.
@@ -63,8 +81,32 @@ This repo intentionally avoids surprise commits.
   - `commit now: move profiles to .kano/backlog_config`
 - **Pre-commit hygiene check (required)**:
   - Run `git status` and confirm no secrets are staged (e.g., `*.env`, `credentials.json`, keys).
+  - Review **untracked files** in `git status` and decide: commit as source-of-truth vs ignore as derived.
   - If new derived/generated paths show up, add them to `.gitignore` before committing.
   - Prefer committing canonical artifacts (docs, reports) and excluding caches/worksets/build outputs.
+
+**Rule of thumb**:
+- Secrets: never commit. Use `env/*.env` (ignored) + `env/*.example.env` templates (tracked).
+- Derived outputs: ignore (caches, worksets, build artifacts, editor junk).
+- Human-facing artifacts: commit when they are the intended output of a work item (e.g. reports under `_kano/backlog/products/**/artifacts/`).
+
+---
+
+## Secrets And Sensitive Output
+
+**Never print secrets**:
+- Do not paste API keys, tokens, cookies, OAuth credentials, or full secret config blobs into chat output.
+
+**Avoid reading secret files** (unless user explicitly asks to inspect contents):
+- Common local secret paths in this repo include:
+  - `env/local.secrets.env`
+- Treat any `env/*.env` (except templates like `*.example.env`) as secrets.
+
+**Safe diagnostics**:
+- Prefer checking presence/shape rather than printing values (e.g., confirm env var is set, file exists, schema keys exist).
+
+**If a leak happens**:
+- Stop immediately, inform the user, and rotate/revoke the exposed credentials.
 
 ---
 

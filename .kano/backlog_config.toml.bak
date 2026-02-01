@@ -20,6 +20,12 @@ prefix = "KCC"
 backlog_root = "_kano/backlog/products/kano-commit-convention-skill"
 vector_enabled = true
 
+[products.kano-opencode-quickstart]
+name = "kano-opencode-quickstart"
+prefix = "KOQS"
+backlog_root = "_kano/backlog/products/kano-opencode-quickstart"
+vector_enabled = true
+
 # Shared settings for all products
 [shared.log]
 debug = false

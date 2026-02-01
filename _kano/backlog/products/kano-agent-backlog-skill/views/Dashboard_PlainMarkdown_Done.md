@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 155
-vcs.hash: 3ea87173db75a273e652ab694db5a86c009cf374
+vcs.revno: 156
+vcs.hash: f514b7e3cbd9ce02e2e35e4b6fb24ac9244fe438
 vcs.dirty: true
 -->
 
@@ -326,6 +326,8 @@ Agent: opencode
 - [KABSD-TSK-0350 Add HuggingFace embedding provider (sentence-transformers) for local vectors](../items/task/0300/KABSD-TSK-0350_add-huggingface-embedding-provider-sentence-transformers-for-local-vectors.md)
 - [KABSD-TSK-0351 Add named config profiles for pipeline experiments (topic/workset driven)](../items/task/0300/KABSD-TSK-0351_add-named-config-profiles-for-pipeline-experiments-topic-workset-driven.md)
 - [KABSD-TSK-0352 Move config profiles next to .kano/backlog_config.toml](../items/task/0300/KABSD-TSK-0352_move-config-profiles-next-to-kano-backlog-config-toml.md)
+- [KABSD-TSK-0353 Allow --profile to accept path or shorthand](../items/task/0300/KABSD-TSK-0353_allow-profile-to-accept-path-or-shorthand.md)
+- [KABSD-TSK-0354 Make --profile path-first with shorthand fallback](../items/task/0300/KABSD-TSK-0354_make-profile-path-first-with-shorthand-fallback.md)
 
 ### Bug
 
