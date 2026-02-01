@@ -1,6 +1,6 @@
 # Report + LLM Analysis (qa)
 
-- Generated: 2026-01-29 23:34 UTC
+- Generated: 2026-02-01 07:54 UTC
 - Source report: `D:/_work/_Kano/kano-agent-backlog-skill-demo/_kano/backlog/products/kano-agent-backlog-skill/views/snapshots/snapshot.report_qa.md`
 
 > This section is a **derived artifact** for persona `qa`.

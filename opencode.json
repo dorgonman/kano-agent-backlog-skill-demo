@@ -1,5 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "openrouter": {
+      "models": {
+        "deepseek/deepseek-r1-0528:free": {
+          "name": "DeepSeek R1 0528 (free)"
+        },
+        "qwen/qwen3-coder:free": {
+          "name": "Qwen3 Coder (free)"
+        },
+        "z-ai/glm-4.5-air:free": {
+          "name": "GLM 4.5 Air (free)"
+        },
+        "meta-llama/llama-3.3-70b-instruct:free": {
+          "name": "Llama 3.3 70B Instruct (free)"
+        },
+        "qwen/qwen-2.5-vl-7b-instruct:free": {
+          "name": "Qwen 2.5 VL 7B (free)"
+        }
+      }
+    }
+  },
   "lsp": {
     "pyright": {
       "disabled": false,

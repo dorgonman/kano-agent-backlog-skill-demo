@@ -11,24 +11,24 @@ auto_refresh = true
 name = "kano-agent-backlog-skill-demo"
 prefix = "KABSD"
 backlog_root = "_kano/backlog/products/kano-agent-backlog-skill"
+analysis_llm_enabled = true
+vector_enabled = true
 
 [products.kano-commit-convention-skill]
 name = "kano-commit-convention-skill"
 prefix = "KCC"
 backlog_root = "_kano/backlog/products/kano-commit-convention-skill"
+vector_enabled = true
 
 [products.kano-opencode-quickstart]
 name = "kano-opencode-quickstart"
 prefix = "KOQS"
 backlog_root = "_kano/backlog/products/kano-opencode-quickstart"
+vector_enabled = true
 
 # Shared settings for all products
 [shared.log]
 debug = false
-
-[shared.index]
-enabled = true
-backend = "sqlite"
 
 # Cache configuration (unified for all chunks and vectors)
 [shared.cache]
@@ -40,21 +40,5 @@ root = ".kano/cache/backlog"
 [shared.vector]
 enabled = true
 backend = "sqlite"
-# Vector path is relative to cache.root (or absolute)
-# Empty string means use cache.root directly
-path = ""
 collection = "backlog"
 metric = "cosine"
-
-# Product-specific overrides
-[products.kano-agent-backlog-skill.overrides]
-"analysis.llm.enabled" = true
-
-[products.kano-agent-backlog-skill.overrides.vector]
-enabled = true
-
-[products.kano-commit-convention-skill.overrides.vector]
-enabled = true
-
-[products.kano-opencode-quickstart.overrides.vector]
-enabled = true

@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 151
-vcs.hash: 6b347db2362c959f83288e4b2401cb09f655dc35
+vcs.revno: 152
+vcs.hash: 87b2c758543f8f4b8a52380f02ffe3210e3944e9
 vcs.dirty: true
 -->
 
@@ -317,6 +317,11 @@ Agent: opencode
 - [KABSD-TSK-0337 Add CLI warning when DB sequence is stale during item creation](../items/task/0300/KABSD-TSK-0337_add-cli-warning-when-db-sequence-is-stale-during-item-creation.md)
 - [KABSD-TSK-0338 Add DB sequence health check to doctor command](../items/task/0300/KABSD-TSK-0338_add-db-sequence-health-check-to-doctor-command.md)
 - [KABSD-TSK-0339 Auto-sync DB sequences in item create if stale detected](../items/task/0300/KABSD-TSK-0339_auto-sync-db-sequences-in-item-create-if-stale-detected.md)
+- [KABSD-TSK-0344 Simplify product config schema by flattening overrides section](../items/task/0300/KABSD-TSK-0344_simplify-product-config-schema-by-flattening-overrides-section.md)
+- [KABSD-TSK-0345 Remove deprecated vector.path from configuration](../items/task/0300/KABSD-TSK-0345_remove-deprecated-vector-path-from-configuration.md)
+- [KABSD-TSK-0346 Remove deprecated shared.index configuration section](../items/task/0300/KABSD-TSK-0346_remove-deprecated-shared-index-configuration-section.md)
+- [KABSD-TSK-0347 Add comprehensive flattened keys for all common configuration overrides](../items/task/0300/KABSD-TSK-0347_add-comprehensive-flattened-keys-for-all-common-configuration-overrides.md)
+- [KABSD-TSK-0348 Remove legacy project config overrides; enforce flattened-only product config](../items/task/0300/KABSD-TSK-0348_remove-legacy-project-config-overrides-enforce-flattened-only-product-config.md)
 
 ### Bug
 

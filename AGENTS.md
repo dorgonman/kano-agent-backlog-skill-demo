@@ -20,6 +20,40 @@ Agent: Reads @rules/authentication.md, applies its rules for this task only
 
 ---
 
+## Project Status: Pre-Alpha (No Backward Compatibility Required)
+
+**CRITICAL**: This project is in **pre-alpha** stage. Breaking changes are expected and encouraged.
+
+### Rules for All Agents
+
+1. **NO backward compatibility required**: When improving code, configuration, or APIs, make clean breaking changes instead of maintaining compatibility layers.
+
+2. **Clean up immediately**: If you identify deprecated code, unused fields, or legacy patterns, remove them immediately rather than deprecating gradually.
+
+3. **Simplify aggressively**: Prefer simple, clean solutions over complex backward-compatible ones.
+
+4. **Document breaking changes**: Note what changed in commit messages and task worklogs, but don't add compatibility code.
+
+### Examples
+
+✅ **Good (Pre-Alpha)**:
+- Remove unused config field immediately
+- Rename confusing API without keeping old name
+- Change file format and update all references
+- Simplify complex code even if it breaks existing usage
+
+❌ **Bad (Unnecessary Compatibility)**:
+- Keep deprecated fields "for backward compatibility"
+- Support both old and new formats simultaneously
+- Add compatibility shims or migration layers
+- Warn about deprecation instead of removing
+
+### When This Changes
+
+This rule applies until the project reaches **v1.0.0**. At that point, semantic versioning and backward compatibility will be enforced.
+
+---
+
 ## Repo purpose
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).

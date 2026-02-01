@@ -38,8 +38,8 @@ debug = true
 ### Method 2: Product-specific override
 
 ```toml
-[products.my-product.overrides]
-"log.debug" = true
+[products.my-product]
+log_debug = true
 ```
 
 ### Method 3: Environment variable
@@ -76,10 +76,6 @@ prefix = "MP"
 debug = true
 level = "INFO"
 
-[config.index]
-enabled = true
-backend = "sqlite"
-
 # ... all other configuration sections
 ```
 
@@ -114,7 +110,7 @@ The effective config shows the **final merged result** from multiple layers:
 1. System defaults (lowest priority)
 2. Project-level defaults (`[defaults]` section)
 3. Shared settings (`[shared.*]` sections)
-4. Product-specific overrides (`[products.*.overrides]`)
+4. Product-specific settings (flattened keys under `[products.<name>]`)
 
 Check each layer to understand where a value is coming from.
 
