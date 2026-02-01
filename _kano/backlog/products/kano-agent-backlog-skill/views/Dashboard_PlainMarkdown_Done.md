@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 154
-vcs.hash: 43a3d1ccaf3b0faaf154a180aafb1c87c5af4e15
+vcs.revno: 155
+vcs.hash: 3ea87173db75a273e652ab694db5a86c009cf374
 vcs.dirty: true
 -->
 
@@ -322,7 +322,10 @@ Agent: opencode
 - [KABSD-TSK-0346 Remove deprecated shared.index configuration section](../items/task/0300/KABSD-TSK-0346_remove-deprecated-shared-index-configuration-section.md)
 - [KABSD-TSK-0347 Add comprehensive flattened keys for all common configuration overrides](../items/task/0300/KABSD-TSK-0347_add-comprehensive-flattened-keys-for-all-common-configuration-overrides.md)
 - [KABSD-TSK-0348 Remove legacy project config overrides; enforce flattened-only product config](../items/task/0300/KABSD-TSK-0348_remove-legacy-project-config-overrides-enforce-flattened-only-product-config.md)
+- [KABSD-TSK-0349 Benchmark paid OpenAI embeddings vs local sentence-transformers](../items/task/0300/KABSD-TSK-0349_benchmark-paid-openai-embeddings-vs-local-sentence-transformers.md)
+- [KABSD-TSK-0350 Add HuggingFace embedding provider (sentence-transformers) for local vectors](../items/task/0300/KABSD-TSK-0350_add-huggingface-embedding-provider-sentence-transformers-for-local-vectors.md)
 - [KABSD-TSK-0351 Add named config profiles for pipeline experiments (topic/workset driven)](../items/task/0300/KABSD-TSK-0351_add-named-config-profiles-for-pipeline-experiments-topic-workset-driven.md)
+- [KABSD-TSK-0352 Move config profiles next to .kano/backlog_config.toml](../items/task/0300/KABSD-TSK-0352_move-config-profiles-next-to-kano-backlog-config-toml.md)
 
 ### Bug
 

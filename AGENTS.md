@@ -54,6 +54,20 @@ This rule applies until the project reaches **v1.0.0**. At that point, semantic 
 
 ---
 
+## Commit Workflow (Human-Driven Trigger)
+
+This repo intentionally avoids surprise commits.
+
+- **Explicit trigger required**: Agents must only create a git commit when a human explicitly asks.
+- **Recommended trigger phrase**: Say `commit now` (optionally add a one-line intent), e.g.:
+  - `commit now: move profiles to .kano/backlog_config`
+- **Pre-commit hygiene check (required)**:
+  - Run `git status` and confirm no secrets are staged (e.g., `*.env`, `credentials.json`, keys).
+  - If new derived/generated paths show up, add them to `.gitignore` before committing.
+  - Prefer committing canonical artifacts (docs, reports) and excluding caches/worksets/build outputs.
+
+---
+
 ## Python Environment (Use a venv)
 
 **CRITICAL**: Use a local Python virtual environment for all installs and tooling in this repo.

@@ -1,0 +1,18 @@
+{
+  "database": "vectors.unknown.openai-d1536.3639fa93.db",
+  "collection": "backlog",
+  "embedding_space_id": "emb:openai:text-embedding-3-small:d1536|tok:heuristic:text-embedding-3-small:max8192|chunk:chunk-v1|metric:cosine",
+  "hash": "3639fa93",
+  "created_at": "2026-02-01T15:38:24.859548Z",
+  "config": {
+    "dimensions": 1536,
+    "metric": "cosine",
+    "storage_format": "binary"
+  },
+  "components": {
+    "emb": "openai:text-embedding-3-small:d1536",
+    "tok": "heuristic:text-embedding-3-small:max8192",
+    "chunk": "chunk-v1",
+    "metric": "cosine"
+  }
+}
