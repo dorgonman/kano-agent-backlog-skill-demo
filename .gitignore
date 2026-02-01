@@ -26,6 +26,12 @@ logs/
 # REMOVED: _kano/.cache/ (moved to .kano/cache/)
 # REMOVED: _kano/backlog/**/.cache/ (centralized to .kano/cache/)
 
+# Backlog worksets state (derived)
+_kano/backlog/.cache/
+
+# Legacy per-product caches (derived; should not be committed)
+_kano/backlog/products/**/.cache/
+
 # Derived index (never ignore canonical.db)
 _kano/backlog/**/_index/
 
@@ -57,7 +63,8 @@ _kano/backlog/topics/**/materials/
 /.obsidian/workspace.json
 
 # Python venv
-.venv
+.venv/
+venv/
 
 # OS/editor junk
 .DS_Store

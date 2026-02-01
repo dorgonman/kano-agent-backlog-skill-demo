@@ -54,6 +54,43 @@ This rule applies until the project reaches **v1.0.0**. At that point, semantic 
 
 ---
 
+## Python Environment (Use a venv)
+
+**CRITICAL**: Use a local Python virtual environment for all installs and tooling in this repo.
+
+Why:
+- Prevents global site-packages pollution (reduces "works on my machine" issues)
+- Keeps agent runs reproducible across machines
+- Avoids tool version drift (pyright/mypy/black/etc.)
+
+Rules:
+- Install Python tools (including `pyright`) inside `.venv/`.
+- Run `kano-backlog` from the venv.
+- Do not rely on global `pip install` unless a human explicitly asks.
+
+Commands:
+
+PowerShell:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install -e skills/kano-agent-backlog-skill[dev]
+python -m pip install pyright
+```
+
+bash:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e 'skills/kano-agent-backlog-skill[dev]'
+python -m pip install pyright
+```
+
+Say to your agent:
+"Create a .venv, install the skill editable, install pyright, then run diagnostics on changed files."
+
 ## Repo purpose
 This repo is a demo showing how to use `kano-agent-backlog-skill` to turn agent collaboration
 into a durable, local-first backlog with an auditable decision trail (instead of losing context in chat).
