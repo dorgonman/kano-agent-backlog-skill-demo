@@ -1,0 +1,12 @@
+# Local baseline profile (no network, no heavy deps)
+embedding_provider = "noop"
+embedding_model = "noop-embedding"
+embedding_dimension = 1536
+
+tokenizer_adapter = "heuristic"
+tokenizer_model = "text-embedding-3-small"
+
+chunking_target_tokens = 512
+chunking_max_tokens = 2048
+
+vector_enabled = true

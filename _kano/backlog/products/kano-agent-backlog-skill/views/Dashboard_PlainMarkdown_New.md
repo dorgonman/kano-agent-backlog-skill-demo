@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 152
-vcs.hash: 87b2c758543f8f4b8a52380f02ffe3210e3944e9
+vcs.revno: 154
+vcs.hash: 43a3d1ccaf3b0faaf154a180aafb1c87c5af4e15
 vcs.dirty: true
 -->
 
@@ -172,6 +172,8 @@ Agent: opencode
 - [KABSD-TSK-0325 Document new project-level config system](../items/task/0300/KABSD-TSK-0325_document-new-project-level-config-system.md)
 - [KABSD-TSK-0326 驗證破壞性重構完成](../items/task/0300/KABSD-TSK-0326_untitled.md)
 - [KABSD-TSK-0330 Test correct ID after full fix](../items/task/0300/KABSD-TSK-0330_test-correct-id-after-full-fix.md)
+- [KABSD-TSK-0349 Benchmark paid OpenAI embeddings vs local sentence-transformers](../items/task/0300/KABSD-TSK-0349_benchmark-paid-openai-embeddings-vs-local-sentence-transformers.md)
+- [KABSD-TSK-0350 Add HuggingFace embedding provider (sentence-transformers) for local vectors](../items/task/0300/KABSD-TSK-0350_add-huggingface-embedding-provider-sentence-transformers-for-local-vectors.md)
 
 ### Bug
 

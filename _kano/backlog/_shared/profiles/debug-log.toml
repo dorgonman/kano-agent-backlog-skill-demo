@@ -1,0 +1,3 @@
+# Turn on verbose logging for troubleshooting
+log_debug = true
+log_verbosity = "debug"

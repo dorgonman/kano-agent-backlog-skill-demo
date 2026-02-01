@@ -59,6 +59,10 @@ _trash
 # Topic raw materials (cache, not source-of-truth)
 _kano/backlog/topics/**/materials/
 
+# Derived LLM analysis outputs (snapshots)
+_kano/backlog/products/**/views/snapshots/_analysis/
+_kano/backlog/products/**/views/_analysis/
+
 # Obsidian workspace
 /.obsidian/workspace.json
 
