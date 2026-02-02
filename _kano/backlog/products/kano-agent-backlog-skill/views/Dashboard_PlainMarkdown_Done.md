@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 156
-vcs.hash: f514b7e3cbd9ce02e2e35e4b6fb24ac9244fe438
+vcs.revno: 157
+vcs.hash: 786d0f2a79f5d6e0b86ce723ecc527eec409357f
 vcs.dirty: true
 -->
 
@@ -328,6 +328,7 @@ Agent: opencode
 - [KABSD-TSK-0352 Move config profiles next to .kano/backlog_config.toml](../items/task/0300/KABSD-TSK-0352_move-config-profiles-next-to-kano-backlog-config-toml.md)
 - [KABSD-TSK-0353 Allow --profile to accept path or shorthand](../items/task/0300/KABSD-TSK-0353_allow-profile-to-accept-path-or-shorthand.md)
 - [KABSD-TSK-0354 Make --profile path-first with shorthand fallback](../items/task/0300/KABSD-TSK-0354_make-profile-path-first-with-shorthand-fallback.md)
+- [KABSD-TSK-0355 Document Docker/agent prerequisites for admin init](../items/task/0300/KABSD-TSK-0355_document-docker-agent-prerequisites-for-admin-init.md)
 
 ### Bug
 

@@ -97,3 +97,5 @@ Thumbs.db
 /.cache/
 /.local/
 /.opencode/oh-my-opencode.json.bak.2026-01-24T23-47-15-587Z
+# Local config backups
+.kano/backlog_config.toml.bak
