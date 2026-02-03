@@ -1,15 +1,15 @@
 # Release Check (phase2)
 
 - version: 0.0.3
-- generated_at: 2026-02-03T15:40:15.289247Z
-- result: PASS
+- generated_at: 2026-02-03T18:40:10.671200Z
+- result: FAIL
 
 ## Checks
 
 - [PASS] phase2:doctor: exit=0
 - [PASS] phase2:pytest: exit=0
 - [PASS] phase2:sandbox-init: exit=1
-  details: Note: sandbox currently creates a single-product layout under _kano/backlog_sandbox/<name>/; topic commands operate on _kano/backlog/topics, so topic smoke is run against the main backlog.
+  details: Note: sandbox creates an isolated layout under _kano/backlog_sandbox/<name>/; Phase2 topic smoke is executed against that sandbox root via --backlog-root-override.
 - [PASS] phase2:smoke:topic-create-a-template: exit=2
 - [PASS] phase2:smoke:topic-create-b: exit=1
 - [PASS] phase2:smoke:topic-add-reference: exit=0
@@ -17,7 +17,7 @@
 - [PASS] phase2:smoke:topic-snapshot-list: exit=0
 - [PASS] phase2:smoke:topic-snapshot-restore: exit=0
 - [PASS] phase2:smoke:topic-snapshot-cleanup-dry: exit=0
-- [PASS] phase2:smoke:topic-merge-dry: exit=0
+- [FAIL] phase2:smoke:topic-merge-dry: exit=1
 - [PASS] phase2:smoke:topic-split-dry: exit=0
 
 ## Artifacts
