@@ -7,9 +7,9 @@
 
 > **AI Agent Skills** for **Spec-Driven Agentic Programming** | File-based backlog management | Multi-agent collaboration | Local-first architecture
 
-⚠️ **VERSION 0.0.2 - TOPICS + STORAGE OPTIMIZATION + BACKLOG DISCIPLINE** ⚠️
+⚠️ **VERSION 0.0.3 - PROFILES + CONFIG ARTIFACTS + RELEASE GATE HARDENING** ⚠️
 
-This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
+This is the **0.0.3 release** of the **kano-agent-backlog-skill-demo** - an experimental local-first, file-based backlog management system for AI agent collaboration.
 
 **IMPORTANT DISCLAIMERS:**
 - 🚧 **Rapid Development**: System architecture is changing frequently
@@ -18,12 +18,12 @@ This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an expe
 - ❌ **No Guarantees**: No stability, compatibility, or support guarantees
 - 📝 **Documentation Lag**: Documentation may not reflect current implementation
 
-**What's New in 0.0.2:**
-- ✅ **74.5% Storage Savings**: Binary vector format (struct.pack) reduces storage from 30KB to 6KB per chunk
-- ✅ **Human-Readable Metadata**: `.meta.json` files for vector indexes allow debugging without SQL
-- ✅ **vLLM Support**: Self-hosted embedding services via OpenAI-compatible API (`base_url support)
-- ✅ **Backlog Discipline**: Soft git hooks (orphan commit detection) with gentle reminders
-- ✅ **Orphan Check**: CLI commands to detect and suggest ticket types for commits
+**What's New in 0.0.3:**
+- ✅ **Profiles as first-class overlays**: `--profile` shorthand prefers `.kano/backlog_config/<ref>.toml`
+- ✅ **Stable vs runtime effective config artifacts**: `.kano/cache/effective_backlog_config.toml` and `.kano/cache/effective_runtime_backlog_config.toml`
+- ✅ **Local env auto-load**: default `env/local.secrets.env`, override via `--env-file` / `KANO_ENV_FILE`
+- ✅ **Gemini embeddings (google-genai)**: provider support + profile for `gemini-embedding-001`
+- ✅ **Release check Phase2 hardening**: `doctor` + `pytest` + topic smoke produces pinned reports under `_kano/backlog/topics/release-0-0-3/publish/`
 - ✅ Core backlog item management (Epic, Feature, UserStory, Task, Bug)
 - ✅ Workset execution cache for per-item context
 - ✅ Topic-based context switching and grouping
@@ -40,11 +40,11 @@ This is the **0.0.2 release** of the **kano-agent-backlog-skill-demo** - an expe
 
 ## Overview
 
-**Current Status: Version 0.0.2**
+**Current Status: Version 0.0.3**
 
 This repository demonstrates an evolving approach to transform agent collaboration into a durable, auditable backlog system. The core concept is to persist planning, decisions, and work items as structured markdown files rather than losing context in chat conversations.
 
-**What's Working in 0.0.2:**
+**What's Working in 0.0.3:**
 - ✅ **Binary Vector Storage**: Efficient storage for AAA-scale codebases
 - ✅ **Backlog Discipline**: Git hooks and CLI tools to enforce process gently
 - ✅ Markdown-based work item storage with frontmatter metadata
