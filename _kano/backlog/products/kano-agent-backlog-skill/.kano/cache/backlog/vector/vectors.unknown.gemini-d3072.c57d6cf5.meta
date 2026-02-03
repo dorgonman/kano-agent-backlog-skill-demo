@@ -1,0 +1,18 @@
+{
+  "database": "vectors.unknown.gemini-d3072.c57d6cf5.db",
+  "collection": "backlog",
+  "embedding_space_id": "emb:gemini:gemini-embedding-001:d3072|tok:auto:text-embedding-3-small:max8192|chunk:chunk-v1|metric:cosine",
+  "hash": "c57d6cf5",
+  "created_at": "2026-02-03T05:43:53.823527Z",
+  "config": {
+    "dimensions": 3072,
+    "metric": "cosine",
+    "storage_format": "binary"
+  },
+  "components": {
+    "emb": "gemini:gemini-embedding-001:d3072",
+    "tok": "auto:text-embedding-3-small:max8192",
+    "chunk": "chunk-v1",
+    "metric": "cosine"
+  }
+}

@@ -12,7 +12,7 @@ links:
   blocks: []
   relates: []
 owner: None
-parent: KABSD-FTR-0030
+parent: KABSD-EPIC-0010
 priority: P1
 state: Proposed
 tags:
@@ -24,7 +24,7 @@ tags:
 title: Search across hot + archived by default for agents (scope=all)
 type: UserStory
 uid: 019bd4b8-1b11-7475-94e5-a712448b52ba
-updated: '2026-01-19'
+updated: 2026-02-03
 ---
 
 # Context
@@ -50,3 +50,4 @@ Merging from two backends needs stable ranking and tie-breakers; avoid nondeterm
 # Worklog
 
 2026-01-19 13:26 [agent=opencode] [model=unknown] Created item
+2026-02-03 18:49 [agent=opencode] [model=openai/gpt-5.2] Parent updated: KABSD-FTR-0030 -> KABSD-EPIC-0010.

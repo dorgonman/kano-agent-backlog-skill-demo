@@ -1,0 +1,97 @@
+........................................................................ [  9%]
+........................................................................ [ 18%]
+........................................................................ [ 27%]
+...ss..................ss......s....s................................... [ 37%]
+...........................ss........................................... [ 46%]
+........................................................................ [ 55%]
+.........................................s.............................. [ 65%]
+........................................................................ [ 74%]
+.....sssssss............................................................ [ 83%]
+........................................................................ [ 93%]
+.....................................................                    [100%]
+============================== warnings summary ===============================
+skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:87
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:87: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    @validator('name')
+
+skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:93
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:93: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    @validator('prefix')
+
+skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:103
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:103: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    @validator('backlog_root')
+
+skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:119
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\project_config.py:119: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    @validator('products')
+
+tests/test_chunks_db.py: 2 warnings
+tests/test_cli_check_ready.py: 8 warnings
+tests/test_hybrid_search.py: 1 warning
+tests/test_index_status.py: 1 warning
+tests/test_integrated_workflow.py: 8 warnings
+tests/test_integration_workflow_compatibility.py: 1 warning
+tests/test_vector_index_incremental.py: 2 warnings
+tests/test_workitem_ops.py: 37 warnings
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\frontmatter\__init__.py:161: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+    with codecs.open(fd, "r", encoding) as f:
+
+tests/test_config_migration.py::test_migrate_json_dry_run_leaves_files_untouched
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_dry_run_leav0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_dry_run_leaves_files_untouched
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_dry_run_leav0\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_writes_toml_and_backup
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_writes_toml_0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_writes_toml_and_backup
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_writes_toml_0\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[True]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_skips_when_t0\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[False]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_skips_when_t1\_kano\backlog\_shared\defaults.json
+    return callback(**use_params)
+
+tests/test_config_migration.py::test_migrate_json_skips_when_toml_exists[False]
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\.venv\Lib\site-packages\typer\main.py:706: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_migrate_json_skips_when_t1\_kano\backlog\products\demo\_config\config.json
+    return callback(**use_params)
+
+tests/test_config_toml.py::test_json_loads_when_no_toml
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\config.py:616: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_json_loads_when_no_toml0\_kano\backlog\_shared\defaults.json
+    return ConfigLoader._read_config_optional(backlog_root / "_shared", "defaults")
+
+tests/test_config_toml.py::test_deep_merge_toml_and_json
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\config.py:297: DeprecationWarning: JSON config is deprecated; migrate to TOML: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog\_tmp_tests\pytest\basetemp\test_deep_merge_toml_and_json0\_kano\backlog\topics\test-topic\config.json
+    return ConfigLoader._read_config_optional(ConfigLoader.get_topic_path(backlog_root, topic_name), "config")
+
+tests/test_hybrid_search.py::test_hybrid_search_end_to_end
+tests/test_hybrid_search.py::test_hybrid_search_end_to_end
+tests/test_integrated_workflow.py::test_integrated_index_and_search_workflow
+tests/test_integrated_workflow.py::test_integrated_index_and_search_workflow
+tests/test_integrated_workflow.py::test_integrated_index_and_search_workflow
+tests/test_vector_index.py::TestIndexDocument::test_index_document_with_sqlite_backend
+tests/test_vector_index_incremental.py::test_vector_index_incremental_and_prune
+tests/test_vector_index_incremental.py::test_vector_index_incremental_and_prune
+tests/test_vector_index_incremental.py::test_vector_index_incremental_and_prune
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\vector\sqlite_backend.py:99: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat() + "Z",
+
+tests/test_tokenizer_config_validation_comprehensive.py::TestConfigurationMigrationEdgeCases::test_migration_file_operations
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\tests\test_tokenizer_config_validation_comprehensive.py:618: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\tmp3qp77qm8.json
+    TokenizerConfigMigrator.migrate_file(Path(input_file.name), Path(output_file.name))
+
+tests/test_tokenizer_config_validation_comprehensive.py::TestConfigurationLoadingIntegration::test_load_config_with_environment_integration
+  D:\_work\_Kano\kano-agent-backlog-skill-demo\skills\kano-agent-backlog-skill\src\kano_backlog_core\tokenizer_config.py:497: DeprecationWarning: JSON config is deprecated; migrate to TOML: C:\Users\User\AppData\Local\Temp\tmp3cdn9dqf.json
+    return TokenizerConfigLoader.load_from_file(config_path)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+757 passed, 17 skipped, 84 warnings in 148.14s (0:02:28)

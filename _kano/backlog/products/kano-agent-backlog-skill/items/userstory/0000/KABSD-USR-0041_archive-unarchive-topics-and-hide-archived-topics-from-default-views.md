@@ -12,7 +12,7 @@ links:
   blocks: []
   relates: []
 owner: None
-parent: KABSD-FTR-0030
+parent: KABSD-EPIC-0010
 priority: P1
 state: Proposed
 tags:
@@ -22,7 +22,7 @@ tags:
 title: Archive/unarchive topics and hide archived topics from default views
 type: UserStory
 uid: 019bd4b8-14c0-7446-ac02-8cf5bf6b0340
-updated: '2026-01-19'
+updated: 2026-02-03
 ---
 
 # Context
@@ -48,3 +48,4 @@ Topic folder moves can break references; start with DB materialization first.
 # Worklog
 
 2026-01-19 13:26 [agent=opencode] [model=unknown] Created item
+2026-02-03 18:49 [agent=opencode] [model=openai/gpt-5.2] Parent updated: KABSD-FTR-0030 -> KABSD-EPIC-0010.

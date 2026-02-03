@@ -12,7 +12,7 @@ links:
   blocks: []
   relates: []
 owner: None
-parent: KABSD-FTR-0030
+parent: KABSD-EPIC-0010
 priority: P1
 state: Proposed
 tags:
@@ -22,7 +22,7 @@ tags:
 title: Archive/unarchive work items with experimental gating
 type: UserStory
 uid: 019bd4b8-0eba-7674-8968-0861b1c63107
-updated: '2026-01-19'
+updated: 2026-02-03
 ---
 
 # Context
@@ -44,3 +44,4 @@ Provide workitem archive/unarchive commands that physically archive items into a
 # Worklog
 
 2026-01-19 13:26 [agent=opencode] [model=unknown] Created item
+2026-02-03 18:48 [agent=opencode] [model=openai/gpt-5.2] Parent updated: KABSD-FTR-0030 -> KABSD-EPIC-0010.

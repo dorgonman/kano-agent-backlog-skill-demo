@@ -630,7 +630,7 @@ The backlog skill stores cache files in `.kano/cache/backlog/`:
 
 ## Contributing (Pre-Alpha)
 
-**Current Status**: This is version 0.0.2 - an experimental demo repository in rapid development.
+**Current Status**: This is version 0.0.3 - an experimental demo repository in rapid development.
 
 **Before Contributing:**
 - Expect frequent breaking changes
@@ -657,7 +657,7 @@ For the main skill development, see [kano-agent-backlog-skill](https://github.co
 - ✅ Storage optimization (Binary vectors)
 - ✅ Backlog discipline (Git hooks)
 
-**Future Versions:**
+**Future Versions (Planned):**
 - 🔮 Stable file format schema
 - 🔮 Enhanced SQLite indexing
 - 🔮 Production-ready embedding search

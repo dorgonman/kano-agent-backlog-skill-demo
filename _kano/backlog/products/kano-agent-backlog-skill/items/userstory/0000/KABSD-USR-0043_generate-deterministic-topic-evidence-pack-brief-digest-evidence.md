@@ -12,7 +12,7 @@ links:
   blocks: []
   relates: []
 owner: None
-parent: KABSD-FTR-0031
+parent: KABSD-EPIC-0010
 priority: P1
 state: Proposed
 tags:
@@ -24,7 +24,7 @@ tags:
 title: Generate deterministic topic evidence pack (brief/digest/evidence)
 type: UserStory
 uid: 019bd4b8-218c-7195-822b-2eb74356e7aa
-updated: '2026-01-19'
+updated: 2026-02-03
 ---
 
 # Context
@@ -50,3 +50,4 @@ Evidence packs can grow; enforce size limits and allow pruning policies.
 # Worklog
 
 2026-01-19 13:26 [agent=opencode] [model=unknown] Created item
+2026-02-03 18:49 [agent=opencode] [model=openai/gpt-5.2] Parent updated: KABSD-FTR-0031 -> KABSD-EPIC-0010.

@@ -1,0 +1,15 @@
+{
+  "topic": "release-0-0-3-smoke-b",
+  "agent": "opencode",
+  "seed_items": [],
+  "pinned_docs": [],
+  "snippet_refs": [],
+  "related_topics": [
+    "release-0-0-3-smoke-a"
+  ],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "2026-02-03T14:27:27.579096Z",
+  "updated_at": "2026-02-03T14:27:30.347531Z",
+  "has_spec": false
+}

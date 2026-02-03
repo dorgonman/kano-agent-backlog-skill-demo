@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 157
-vcs.hash: 786d0f2a79f5d6e0b86ce723ecc527eec409357f
+vcs.revno: 159
+vcs.hash: b0af3ccadd93e75046acba4dbf7add3f85471d8e
 vcs.dirty: true
 -->
 
@@ -329,6 +329,9 @@ Agent: opencode
 - [KABSD-TSK-0353 Allow --profile to accept path or shorthand](../items/task/0300/KABSD-TSK-0353_allow-profile-to-accept-path-or-shorthand.md)
 - [KABSD-TSK-0354 Make --profile path-first with shorthand fallback](../items/task/0300/KABSD-TSK-0354_make-profile-path-first-with-shorthand-fallback.md)
 - [KABSD-TSK-0355 Document Docker/agent prerequisites for admin init](../items/task/0300/KABSD-TSK-0355_document-docker-agent-prerequisites-for-admin-init.md)
+- [KABSD-TSK-0356 Make shorthand profiles prefer .kano/backlog_config](../items/task/0300/KABSD-TSK-0356_make-shorthand-profiles-prefer-kano-backlog-config.md)
+- [KABSD-TSK-0358 Auto-load local.secrets.env with override env file](../items/task/0300/KABSD-TSK-0358_auto-load-local-secrets-env-with-override-env-file.md)
+- [KABSD-TSK-0360 Add stable vs runtime effective config artifacts + mtime cache](../items/task/0300/KABSD-TSK-0360_add-stable-vs-runtime-effective-config-artifacts-mtime-cache.md)
 
 ### Bug
 

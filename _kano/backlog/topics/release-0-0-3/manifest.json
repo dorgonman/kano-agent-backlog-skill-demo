@@ -1,0 +1,16 @@
+{
+  "topic": "release-0-0-3",
+  "agent": "opencode",
+  "seed_items": [],
+  "pinned_docs": [
+    "_kano/backlog/topics/release-0-0-3/publish/release_check_0.0.3_phase1.md",
+    "_kano/backlog/topics/release-0-0-3/publish/release_check_0.0.3_phase2.md"
+  ],
+  "snippet_refs": [],
+  "related_topics": [],
+  "status": "open",
+  "closed_at": null,
+  "created_at": "",
+  "updated_at": "2026-02-03T14:27:46.980662Z",
+  "has_spec": false
+}

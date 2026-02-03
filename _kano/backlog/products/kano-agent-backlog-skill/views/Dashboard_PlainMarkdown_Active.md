@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 157
-vcs.hash: 786d0f2a79f5d6e0b86ce723ecc527eec409357f
+vcs.revno: 159
+vcs.hash: b0af3ccadd93e75046acba4dbf7add3f85471d8e
 vcs.dirty: true
 -->
 
@@ -215,4 +215,5 @@ Agent: opencode
 - [KABSD-TSK-0270 Skillify release check workflow (0.0.2)](../items/task/0200/KABSD-TSK-0270_skillify-release-check-workflow-0-0-2.md)
 - [KABSD-TSK-0299 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0332 Separate repo and backlog corpus into different cache folders](../items/task/0300/KABSD-TSK-0332_separate-repo-and-backlog-corpus-into-different-cache-folders.md)
+- [KABSD-TSK-0357 Add Gemini embedding provider (gemini-embedding-001)](../items/task/0300/KABSD-TSK-0357_add-gemini-embedding-provider-gemini-embedding-001.md)
 
