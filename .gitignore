@@ -37,6 +37,9 @@ _kano/backlog/.cache/
 # Legacy per-product caches (derived; should not be committed)
 _kano/backlog/products/**/.cache/
 
+# Derived per-product cache (accidental; prefer repo-root .kano/cache/)
+_kano/backlog/products/**/.kano/
+
 # Derived index (never ignore canonical.db)
 _kano/backlog/**/_index/
 

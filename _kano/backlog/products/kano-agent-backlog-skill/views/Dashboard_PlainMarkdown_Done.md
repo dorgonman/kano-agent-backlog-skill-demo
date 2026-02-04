@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 159
-vcs.hash: b0af3ccadd93e75046acba4dbf7add3f85471d8e
+vcs.revno: 165
+vcs.hash: 5fe3580960303222318fb63755dc821583bec03f
 vcs.dirty: true
 -->
 
@@ -332,6 +332,9 @@ Agent: opencode
 - [KABSD-TSK-0356 Make shorthand profiles prefer .kano/backlog_config](../items/task/0300/KABSD-TSK-0356_make-shorthand-profiles-prefer-kano-backlog-config.md)
 - [KABSD-TSK-0358 Auto-load local.secrets.env with override env file](../items/task/0300/KABSD-TSK-0358_auto-load-local-secrets-env-with-override-env-file.md)
 - [KABSD-TSK-0360 Add stable vs runtime effective config artifacts + mtime cache](../items/task/0300/KABSD-TSK-0360_add-stable-vs-runtime-effective-config-artifacts-mtime-cache.md)
+- [KABSD-TSK-0362 Add default profile guidance to project config template](../items/task/0300/KABSD-TSK-0362_add-default-profile-guidance-to-project-config-template.md)
+- [KABSD-TSK-0364 Benchmark embedding search: noop vs gemini vs huggingface](../items/task/0300/KABSD-TSK-0364_benchmark-embedding-search-noop-vs-gemini-vs-huggingface.md)
+- [KABSD-TSK-0365 Benchmark embedding search: noop vs gemini vs huggingface](../items/task/0300/KABSD-TSK-0365_benchmark-embedding-search-noop-vs-gemini-vs-huggingface.md)
 
 ### Bug
 

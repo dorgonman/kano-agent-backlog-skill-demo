@@ -3,8 +3,8 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 159
-vcs.hash: b0af3ccadd93e75046acba4dbf7add3f85471d8e
+vcs.revno: 165
+vcs.hash: 5fe3580960303222318fb63755dc821583bec03f
 vcs.dirty: true
 -->
 
@@ -216,4 +216,8 @@ Agent: opencode
 - [KABSD-TSK-0299 Introduce _shared/artifacts root for cross-product artifacts](../items/task/0100/KABSD-TSK-0132_introduce-shared-artifacts-root-for-cross-product.md)
 - [KABSD-TSK-0332 Separate repo and backlog corpus into different cache folders](../items/task/0300/KABSD-TSK-0332_separate-repo-and-backlog-corpus-into-different-cache-folders.md)
 - [KABSD-TSK-0357 Add Gemini embedding provider (gemini-embedding-001)](../items/task/0300/KABSD-TSK-0357_add-gemini-embedding-provider-gemini-embedding-001.md)
+
+### Bug
+
+- [KABSD-BUG-0011 Embedding build ignores gemini profile + --force unlink fails when DB in use](../items/bug/0000/KABSD-BUG-0011_embedding-build-ignores-gemini-profile-force-unlink-fails-when-db-in-use.md)
 

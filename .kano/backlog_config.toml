@@ -6,6 +6,21 @@
 skill_developer = true
 auto_refresh = true
 
+# Optional: default profile overlay (CLI --profile overrides this)
+# Examples:
+#   profile = "embedding/local-noop"
+#   profile = "embedding/gemini-embedding-001"
+#
+# Built-in profiles (repo):
+#   - skills/kano-agent-backlog-skill/profiles/embedding/local-noop.toml
+#   - skills/kano-agent-backlog-skill/profiles/embedding/gemini-embedding-001.toml
+#
+# If you prefer project-local profiles, place them under:
+#   .kano/backlog_config/embedding/<name>.toml
+# and use shorthand refs like: "embedding/<name>"
+#
+# profile = "embedding/local-noop"
+
 # Product definitions for this project
 [products.kano-agent-backlog-skill]
 name = "kano-agent-backlog-skill-demo"
