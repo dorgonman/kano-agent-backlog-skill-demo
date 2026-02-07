@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 165
-vcs.hash: 5fe3580960303222318fb63755dc821583bec03f
+vcs.revno: 166
+vcs.hash: cae516533820784a5084cbf6c5602873486353eb
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: copilot
 
 ## New
 
@@ -192,6 +192,7 @@ Agent: opencode
 
 - [KABSD-EPIC-0003 Milestone 0.0.2 (Indexing + Resolver)](../items/epic/0000/KABSD-EPIC-0003_milestone-0-0-2-indexing-resolver.md)
 - [KABSD-EPIC-0004 Roadmap](../items/epic/0000/KABSD-EPIC-0004_roadmap.md)
+- [KABSD-EPIC-0016 Milestone 0.1.0 Beta](../items/epic/0000/KABSD-EPIC-0016_milestone-0-1-0-beta.md)
 
 ### Feature
 
@@ -220,4 +221,6 @@ Agent: opencode
 ### Bug
 
 - [KABSD-BUG-0011 Embedding build ignores gemini profile + --force unlink fails when DB in use](../items/bug/0000/KABSD-BUG-0011_embedding-build-ignores-gemini-profile-force-unlink-fails-when-db-in-use.md)
+- [KABSD-BUG-0014 Release check Phase2: topic-merge-dry fails due to missing smoke topic release-0-0-3-smoke-a](../items/bug/0000/KABSD-BUG-0014_release-check-phase2-topic-merge-dry-fails-due-to-missing-smoke-topic-release-0-0-3-smoke-a.md)
+- [KABSD-BUG-0015 Docs: README references non-existent 'kano-backlog item list' command](../items/bug/0000/KABSD-BUG-0015_docs-readme-references-non-existent-kano-backlog-item-list-command.md)
 

@@ -1,19 +1,19 @@
 # Release Check (phase2)
 
 - version: 0.0.3
-- generated_at: 2026-02-03T18:40:10.671200Z
+- generated_at: 2026-02-07T11:07:23.977725Z
 - result: FAIL
 
 ## Checks
 
 - [PASS] phase2:doctor: exit=0
-- [PASS] phase2:pytest: exit=0
+- [FAIL] phase2:pytest: exit=1
 - [PASS] phase2:sandbox-init: exit=1
   details: Note: sandbox creates an isolated layout under _kano/backlog_sandbox/<name>/; Phase2 topic smoke is executed against that sandbox root via --backlog-root-override.
-- [PASS] phase2:smoke:topic-create-a-template: exit=2
-- [PASS] phase2:smoke:topic-create-b: exit=1
+- [PASS] phase2:smoke:topic-create-a-template: exit=0
+- [PASS] phase2:smoke:topic-create-b: exit=0
 - [PASS] phase2:smoke:topic-add-reference: exit=0
-- [PASS] phase2:smoke:topic-snapshot-create: exit=1
+- [PASS] phase2:smoke:topic-snapshot-create: exit=0
 - [PASS] phase2:smoke:topic-snapshot-list: exit=0
 - [PASS] phase2:smoke:topic-snapshot-restore: exit=0
 - [PASS] phase2:smoke:topic-snapshot-cleanup-dry: exit=0

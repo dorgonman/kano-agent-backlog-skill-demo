@@ -1,1 +1,2 @@
-Reference already exists: 'release-0-0-3-smoke-a' ? 'release-0-0-3-smoke-b'
+? Added reference: 'release-0-0-3-smoke-a' ? 'release-0-0-3-smoke-b'
+  Bidirectional linking applied automatically

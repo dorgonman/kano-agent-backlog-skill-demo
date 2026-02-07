@@ -157,8 +157,8 @@ kano-backlog --help
 
 **5. Explore the demo backlog:**
 ```bash
-# List work items
-kano-backlog item list --product kano-agent-backlog-skill
+# Refresh views (lists items in dashboards)
+kano-backlog view refresh --product kano-agent-backlog-skill --agent demo
 
 # View dashboard
 kano-backlog view refresh --product kano-agent-backlog-skill --agent demo

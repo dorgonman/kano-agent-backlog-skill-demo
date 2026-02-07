@@ -1,7 +1,7 @@
 Snapshots for topic 'release-0-0-3-smoke-a' (1 total):
 
   ? smoke
-     Created: 2026-02-03T17:49:02.215702Z
-     By: opencode
+     Created: 2026-02-07T11:06:56.878679Z
+     By: copilot
      Description: release check smoke snapshot
 

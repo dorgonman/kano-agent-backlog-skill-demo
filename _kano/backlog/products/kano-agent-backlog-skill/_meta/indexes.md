@@ -20,3 +20,4 @@ Epic-level index only; lower-level items rely on the Epic MOC tree.
 - [Inspector Pattern: External Agent Query Surface](../items/epic/0000/KABSD-EPIC-0011_inspector-pattern-external-agent-query-surface.index.md) (ID: KABSD-EPIC-0011)
 - [Official Documentation Website with GitHub Pages](../items/epic/0000/KABSD-EPIC-0012_official-documentation-website-with-github-pages.index.md) (ID: KABSD-EPIC-0012)
 - [kano-agent-backlog-skill v0.0.3 - Configuration System Refactor](KABSD-EPIC-0014_kano-agent-backlog-skill-v0-0-3-configuration-system-refactor.index.md) (ID: KABSD-EPIC-0014)
+- [Milestone 0.1.0 Beta](KABSD-EPIC-0016_milestone-0-1-0-beta.index.md) (ID: KABSD-EPIC-0016)

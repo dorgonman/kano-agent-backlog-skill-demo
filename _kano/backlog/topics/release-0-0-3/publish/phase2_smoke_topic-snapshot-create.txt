@@ -1,2 +1,3 @@
-
-? Snapshot 'smoke' already exists
+? Created snapshot 'smoke' for topic 'release-0-0-3-smoke-a'
+  Created at: 2026-02-07T11:06:56.878679Z
+  Path: D:\_work\_Kano\kano-agent-backlog-skill-demo\_kano\backlog_sandbox\release-0-0-3-smoke\topics\release-0-0-3-smoke-a\snapshots\20260207T110656_smoke.json

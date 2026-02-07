@@ -3,13 +3,13 @@
 <!-- kano:build
 vcs.provider: git
 vcs.branch: main
-vcs.revno: 165
-vcs.hash: 5fe3580960303222318fb63755dc821583bec03f
+vcs.revno: 166
+vcs.hash: cae516533820784a5084cbf6c5602873486353eb
 vcs.dirty: true
 -->
 
 Source: items
-Agent: opencode
+Agent: copilot
 
 ## Done
 
@@ -335,6 +335,7 @@ Agent: opencode
 - [KABSD-TSK-0362 Add default profile guidance to project config template](../items/task/0300/KABSD-TSK-0362_add-default-profile-guidance-to-project-config-template.md)
 - [KABSD-TSK-0364 Benchmark embedding search: noop vs gemini vs huggingface](../items/task/0300/KABSD-TSK-0364_benchmark-embedding-search-noop-vs-gemini-vs-huggingface.md)
 - [KABSD-TSK-0365 Benchmark embedding search: noop vs gemini vs huggingface](../items/task/0300/KABSD-TSK-0365_benchmark-embedding-search-noop-vs-gemini-vs-huggingface.md)
+- [KABSD-TSK-0367 Fix Phase2 smoke sandbox root mismatch for topic merge](../items/task/0300/KABSD-TSK-0367_fix-phase2-smoke-sandbox-root-mismatch-for-topic-merge.md)
 
 ### Bug
 
@@ -345,4 +346,5 @@ Agent: opencode
 - [KABSD-BUG-0005 Views: dashboards emit VCS metadata per FTR-0039](../items/bug/0000/KABSD-BUG-0005_views-dashboards-emit-vcs-metadata-per-ftr-0039.md)
 - [KABSD-BUG-0006 CLI: avoid Windows UnicodeEncodeError on non-UTF8 terminals](../items/bug/0000/KABSD-BUG-0006_cli-avoid-windows-unicodeencodeerror-on-non-utf8-terminals.md)
 - [KABSD-BUG-0007 Core: accept Planned as a valid ItemState](../items/bug/0000/KABSD-BUG-0007_core-accept-planned-as-a-valid-itemstate.md)
+- [KABSD-BUG-0013 workitem set-ready command missing --agent option](../items/bug/0000/KABSD-BUG-0013_workitem-set-ready-command-missing-agent-option.md)
 
