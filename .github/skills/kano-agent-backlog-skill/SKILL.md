@@ -1,3 +1,8 @@
+---
+name: kano-agent-backlog-skill
+description: Local-first, multi-product backlog management with agent collaboration discipline.
+---
+
 # kano-agent-backlog-skill
 
 **GitHub Copilot Skill Adapter** - This is a thin wrapper that points to the canonical skill documentation.

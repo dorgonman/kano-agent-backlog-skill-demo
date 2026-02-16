@@ -1,3 +1,8 @@
+---
+name: kano-commit-convention-skill
+description: Commit convention linting and changelog automation following the Kano commit format.
+---
+
 # kano-commit-convention-skill
 
 **GitHub Copilot Skill Adapter** - This is a thin wrapper that points to the canonical skill documentation.
